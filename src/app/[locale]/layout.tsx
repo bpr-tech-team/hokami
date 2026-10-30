@@ -1,5 +1,6 @@
 import "../globals.css";
 import "@/components/cookie-consent/cookie-consent.css";
+import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -8,6 +9,12 @@ import { SiteFooter } from "@/components/site-footer/site-footer";
 import { SiteMeasurement } from "@/components/site-measurement";
 import { SiteCookieConsent } from "@/components/cookie-consent/cookie-consent";
 import { ibmPlexMono, ibmPlexSans, saira } from "../fonts";
+
+export const metadata: Metadata = {
+  appleWebApp: {
+    title: "Hokami",
+  },
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
