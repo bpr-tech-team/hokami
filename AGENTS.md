@@ -7,3 +7,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## UI implementation
+
+Use shadcn/ui for most of the graphical interface wherever possible. Prefer
+adapting and composing suitable shadcn/ui components before creating custom UI.
+Check the official documentation at https://ui.shadcn.com/docs before adding or
+configuring components. Initialize shadcn before adding the first component;
+installing the CLI alone does not configure the UI.

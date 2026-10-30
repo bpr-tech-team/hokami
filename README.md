@@ -43,6 +43,17 @@ You can start editing the page by modifying `src/app/[locale]/page.tsx`. The pag
 Uses `next-intl` with Czech (`cs`) as the default language. Supported locales:
 `cs`, `en`, `de`, `fi`, `pl`. Translation catalogs are in `messages/`.
 
+## UI components
+
+Use [shadcn/ui](https://ui.shadcn.com/docs) for most of the project's graphical
+interface wherever suitable components are available. Prefer adapting and
+composing its components before building custom UI from scratch.
+
+The `shadcn` CLI is installed with `npm i shadcn`. Before adding the first
+component, initialize the project with `npx shadcn init`, following the
+[official setup guide](https://ui.shadcn.com/docs/installation/next).
+Then add components as needed with `npx shadcn add <component>`.
+
 ## Code quality
 
 Run `npm install` (or `npm ci` after cloning) to install dependencies and activate
