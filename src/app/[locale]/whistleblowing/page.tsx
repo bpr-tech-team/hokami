@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 import { WhistleblowingContent } from "@/content/legal/whistleblowing";
+import { getPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Whistleblowing | HOKAMI",
-};
+export function generateMetadata() {
+  return getPageMetadata("whistleblowing");
+}
 
 export default function WhistleblowingPage() {
   return (

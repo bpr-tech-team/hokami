@@ -47,5 +47,31 @@
     "consentPurpose": "Pamatuje si Vaše nastavení cookies pro příští návštěvu.",
     "moreTitle": "Více informací",
     "moreDescription": "Nastavení můžete kdykoli změnit pomocí odkazu v patičce webu. Jak nakládáme s Vašimi údaji, se dozvíte zde:"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Výroba elektroniky a osazování DPS",
+      "description": "Komplexní EMS služby HOKAMI: nákup materiálu, SMT a THT osazování, testování a finální montáž elektroniky od prototypů po sériovou výrobu."
+    },
+    "quality": {
+      "title": "Kvalita a testování elektroniky",
+      "description": "Kvalita výroby elektroniky v HOKAMI: kontrola osazování desek plošných spojů a testování elektronických sestav před dodáním zákazníkovi."
+    },
+    "about": {
+      "title": "O nás",
+      "description": "HOKAMI CZ vyrábí elektroniku od roku 1997. Poznejte českou společnost, její historii a zázemí pro výrobu a osazování desek plošných spojů."
+    },
+    "careers": {
+      "title": "Kariéra ve výrobě elektroniky",
+      "description": "Kariéra v HOKAMI: práce ve výrobě elektroniky v Liberci, moderní technologie, profesní rozvoj a zázemí české společnosti s dlouholetou tradicí."
+    },
+    "gdpr": {
+      "title": "Ochrana osobních údajů (GDPR)",
+      "description": "Informace společnosti HOKAMI CZ o zpracování a ochraně osobních údajů, právech subjektů údajů a kontaktech pro dotazy k GDPR."
+    },
+    "whistleblowing": {
+      "title": "Whistleblowing",
+      "description": "Informace o vnitřním oznamovacím systému HOKAMI CZ, možnostech podání oznámení a ochraně oznamovatelů. Dokument je v češtině."
+    }
   }
 }

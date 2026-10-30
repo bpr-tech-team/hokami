@@ -1,4 +1,22 @@
 {
+  "Header": {
+    "navigation": "Main navigation",
+    "home": "HOKAMI — home",
+    "skip": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "request": "Request production",
+    "requestShort": "Enquire",
+    "items": {
+      "industries": "Industries",
+      "capabilities": "Capabilities",
+      "process": "Process",
+      "quality": "Quality",
+      "about": "About us",
+      "careers": "Careers"
+    }
+  },
   "Footer": {
     "home": "HOKAMI — home",
     "legal": "Legal information",
@@ -29,5 +47,31 @@
     "consentPurpose": "Remembers your cookie preferences for your next visit.",
     "moreTitle": "Learn more",
     "moreDescription": "You can change your settings at any time using the link in the website footer. Find out how we handle your data here:"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Electronics manufacturing & PCB assembly",
+      "description": "HOKAMI provides complete EMS services: material sourcing, SMT and THT PCB assembly, testing and final assembly, from prototypes to series production."
+    },
+    "quality": {
+      "title": "Electronics quality & testing",
+      "description": "Quality in electronics manufacturing at HOKAMI: inspection of PCB assembly and testing of electronic assemblies before delivery to customers."
+    },
+    "about": {
+      "title": "About us",
+      "description": "HOKAMI CZ has manufactured electronics since 1997. Discover our Czech company, its history and its facilities for electronics manufacturing and PCB assembly."
+    },
+    "careers": {
+      "title": "Careers in electronics manufacturing",
+      "description": "Careers at HOKAMI: work in electronics manufacturing in Liberec, modern technology, professional development and an established Czech company."
+    },
+    "gdpr": {
+      "title": "Privacy policy (GDPR)",
+      "description": "HOKAMI CZ information on personal data processing, privacy rights and GDPR contacts. The full privacy policy is available in Czech."
+    },
+    "whistleblowing": {
+      "title": "Whistleblowing",
+      "description": "Information on the HOKAMI CZ internal reporting system, how to submit a report and whistleblower protection. The full document is available in Czech."
+    }
   }
 }

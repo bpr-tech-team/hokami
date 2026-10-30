@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 import { GdprContent } from "@/content/legal/gdpr";
+import { getPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "GDPR | HOKAMI",
-};
+export function generateMetadata() {
+  return getPageMetadata("gdpr");
+}
 
 export default function GdprPage() {
   return (

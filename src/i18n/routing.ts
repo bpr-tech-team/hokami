@@ -6,4 +6,6 @@ export const routing = defineRouting({
   localePrefix: "always",
   localeDetection: false,
   localeCookie: false,
+  // Page metadata and sitemap provide alternates for available content only.
+  alternateLinks: false,
 });

@@ -8,9 +8,14 @@ import { SiteHeader } from "@/components/site-header/site-header";
 import { SiteFooter } from "@/components/site-footer/site-footer";
 import { SiteMeasurement } from "@/components/site-measurement";
 import { SiteCookieConsent } from "@/components/cookie-consent/cookie-consent";
+import { site } from "@/lib/site";
 import { ibmPlexMono, ibmPlexSans, saira } from "../fonts";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  applicationName: site.name,
+  title: site.name,
+  robots: { index: true, follow: true },
   appleWebApp: {
     title: "Hokami",
   },

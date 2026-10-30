@@ -85,48 +85,6 @@ added by the CLI. Local inverse sections such as the footer use the existing
 `surface-inverse` and `text-on-inverse` tokens within the same theme.
 See the [shadcn theming documentation](https://ui.shadcn.com/docs/theming).
 
-### Button
-
-The HOKAMI Button keeps the shadcn variant API and Base UI behavior:
-
-- `variant="default"`: Primary with an orange fill and a dark signal trace.
-- `variant="outline"`: Secondary with a transparent fill, a strong border, and
-  an orange signal trace. The filled shadcn `secondary` variant remains available.
-- `size="default"`: 48 px high with 24 px horizontal padding; `size="lg"`: 56 px
-  high with 32 px padding. Both use IBM Plex Mono, 12 px, regular weight, 0.16em
-  letter spacing, and CSS uppercase. Corners remain square in every state.
-- Primary and outline buttons include the original 20 px Figma arrow by default.
-  Use `showIcon={false}` to hide it or `icon={<CustomIcon />}` to replace it.
-  Icon-only sizes accept the icon as children and need an accessible label.
-- Signal traces close on hover, press, and keyboard focus. Transitions take
-  250 ms on hover and 100 ms on press; reduced-motion preferences are respected.
-  Keyboard focus also has a visible 2 px outline with a 2 px offset.
-
-Pass `loading` from the caller's submission state. While loading, Base UI blocks
-activation and keeps the button focusable, and `aria-busy` identifies the pending
-state. Pass a translated `loadingLabel` in both states so both labels reserve
-their maximum width from the first render. If omitted, the original label stays.
-Use `type="submit"` explicitly for form submission:
-
-```tsx
-<Button type="submit" loading={isSubmitting} loadingLabel="Odesílám…" size="lg">
-  Odeslat poptávku
-</Button>
-```
-
-The example uses Czech; pass the active locale's translated text in application
-code. Labels stay in normal case in the source; CSS renders them in uppercase.
-
-SVG arrows and contact points are exported from Figma into
-`public/images/ui/button/`. Button styling is defined in Tailwind/CVA variants
-in `src/components/ui/button-variants.ts`; the shared artwork and labels use
-utilities in `src/components/ui/button-content.tsx`. The `ui-enabled` and
-`ui-disabled` Tailwind variants cover native, Base UI, and semantic-link states.
-Server Components can import `buttonVariants`
-from `@/components/ui/button-variants` to style semantic links without passing
-them through Base UI Button. Keep native link semantics for navigation, as
-described in the [Base UI Button documentation](https://base-ui.com/react/components/button).
-
 ### Header and navigation
 
 The shared locale layout includes the Figma header on every page. It uses the

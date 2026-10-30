@@ -1,4 +1,22 @@
 {
+  "Header": {
+    "navigation": "Päänavigaatio",
+    "home": "HOKAMI — etusivu",
+    "skip": "Siirry sisältöön",
+    "openMenu": "Avaa valikko",
+    "closeMenu": "Sulje valikko",
+    "language": "Kieli",
+    "request": "Pyydä tuotantotarjous",
+    "requestShort": "Pyydä tarjous",
+    "items": {
+      "industries": "Toimialat",
+      "capabilities": "Tuotantokapasiteetti",
+      "process": "Prosessi",
+      "quality": "Laatu",
+      "about": "Tietoa meistä",
+      "careers": "Ura"
+    }
+  },
   "Footer": {
     "home": "HOKAMI — etusivu",
     "legal": "Oikeudelliset tiedot",
@@ -29,5 +47,31 @@
     "consentPurpose": "Muistaa evästeasetuksesi seuraavaa vierailua varten.",
     "moreTitle": "Lisätietoja",
     "moreDescription": "Voit muuttaa asetuksiasi milloin tahansa sivuston alatunnisteen linkistä. Lisätietoja siitä, miten käsittelemme tietojasi, löydät täältä:"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Elektroniikan valmistus ja piirilevykokoonpano",
+      "description": "HOKAMIn EMS-palvelut kattavat materiaalihankinnat, SMT- ja THT-ladonnan, testauksen ja loppukokoonpanon prototyypeistä sarjatuotantoon."
+    },
+    "quality": {
+      "title": "Elektroniikan laatu ja testaus",
+      "description": "HOKAMIn elektroniikkavalmistuksen laatu: piirilevykokoonpanon tarkastus ja elektroniikkakokoonpanojen testaus ennen toimitusta asiakkaalle."
+    },
+    "about": {
+      "title": "Tietoa meistä",
+      "description": "HOKAMI CZ on valmistanut elektroniikkaa vuodesta 1997. Tutustu tšekkiläisen yrityksemme historiaan sekä elektroniikan ja piirilevyjen tuotantoon."
+    },
+    "careers": {
+      "title": "Ura elektroniikan valmistuksessa",
+      "description": "Ura HOKAMIlla: elektroniikan valmistusta Liberecissä, nykyaikaista teknologiaa ja ammatillista kehittymistä vakiintuneessa tšekkiläisessä yrityksessä."
+    },
+    "gdpr": {
+      "title": "Tietosuoja (GDPR)",
+      "description": "HOKAMI CZ:n tietoa henkilötietojen käsittelystä, rekisteröityjen oikeuksista ja tietosuojan yhteystiedoista. Koko teksti on saatavilla tšekiksi."
+    },
+    "whistleblowing": {
+      "title": "Väärinkäytösten ilmoittaminen",
+      "description": "Tietoa HOKAMI CZ:n sisäisestä ilmoituskanavasta, ilmoituksen tekemisestä ja ilmoittajan suojelusta. Koko asiakirja on saatavilla tšekiksi."
+    }
   }
 }

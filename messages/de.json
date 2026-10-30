@@ -1,4 +1,22 @@
 {
+  "Header": {
+    "navigation": "Hauptnavigation",
+    "home": "HOKAMI — Startseite",
+    "skip": "Zum Inhalt springen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "language": "Sprache",
+    "request": "Fertigung anfragen",
+    "requestShort": "Anfragen",
+    "items": {
+      "industries": "Branchen",
+      "capabilities": "Kapazitäten",
+      "process": "Prozess",
+      "quality": "Qualität",
+      "about": "Über uns",
+      "careers": "Karriere"
+    }
+  },
   "Footer": {
     "home": "HOKAMI — Startseite",
     "legal": "Rechtliche Informationen",
@@ -29,5 +47,31 @@
     "consentPurpose": "Speichert Ihre Cookie-Einstellungen für den nächsten Besuch.",
     "moreTitle": "Weitere Informationen",
     "moreDescription": "Sie können Ihre Einstellungen jederzeit über den Link im Footer ändern. Wie wir mit Ihren Daten umgehen, erfahren Sie hier:"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Elektronikfertigung & Leiterplattenbestückung",
+      "description": "EMS von HOKAMI: Materialbeschaffung, SMT- und THT-Bestückung, Prüfung und Endmontage elektronischer Produkte vom Prototyp bis zur Serienfertigung."
+    },
+    "quality": {
+      "title": "Qualität und Elektronikprüfung",
+      "description": "Qualität in der Elektronikfertigung bei HOKAMI: Kontrolle der Leiterplattenbestückung und Prüfung elektronischer Baugruppen vor der Auslieferung."
+    },
+    "about": {
+      "title": "Über uns",
+      "description": "HOKAMI CZ fertigt Elektronik seit 1997. Lernen Sie unser tschechisches Unternehmen, seine Geschichte und seine Standorte für Fertigung und Bestückung kennen."
+    },
+    "careers": {
+      "title": "Karriere in der Elektronikfertigung",
+      "description": "Karriere bei HOKAMI: Elektronikfertigung in Liberec, moderne Technologien und berufliche Entwicklung in einem etablierten tschechischen Unternehmen."
+    },
+    "gdpr": {
+      "title": "Datenschutz (DSGVO)",
+      "description": "Informationen von HOKAMI CZ zur Verarbeitung personenbezogener Daten, Ihren Rechten und Datenschutzkontakten. Der vollständige Text ist auf Tschechisch."
+    },
+    "whistleblowing": {
+      "title": "Hinweisgeberschutz",
+      "description": "Das interne Meldesystem von HOKAMI CZ: Meldewege und Schutz von Hinweisgebern. Das vollständige Dokument steht auf Tschechisch zur Verfügung."
+    }
   }
 }

@@ -1,4 +1,22 @@
 {
+  "Header": {
+    "navigation": "Nawigacja główna",
+    "home": "HOKAMI — strona główna",
+    "skip": "Przejdź do treści",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "language": "Język",
+    "request": "Zapytaj o produkcję",
+    "requestShort": "Zapytaj",
+    "items": {
+      "industries": "Branże",
+      "capabilities": "Możliwości",
+      "process": "Proces",
+      "quality": "Jakość",
+      "about": "O nas",
+      "careers": "Kariera"
+    }
+  },
   "Footer": {
     "home": "HOKAMI — strona główna",
     "legal": "Informacje prawne",
@@ -29,5 +47,31 @@
     "consentPurpose": "Zapamiętuje Państwa ustawienia cookies na kolejną wizytę.",
     "moreTitle": "Więcej informacji",
     "moreDescription": "Ustawienia można zmienić w dowolnym momencie za pomocą linku w stopce strony. Informacje o tym, jak przetwarzamy Państwa dane, są dostępne tutaj:"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Produkcja elektroniki i montaż PCB",
+      "description": "Kompleksowe usługi EMS HOKAMI: zakup materiałów, montaż SMT i THT, testowanie i montaż końcowy elektroniki, od prototypów po produkcję seryjną."
+    },
+    "quality": {
+      "title": "Jakość i testowanie elektroniki",
+      "description": "Jakość produkcji elektroniki w HOKAMI: kontrola montażu płytek drukowanych i testowanie zespołów elektronicznych przed dostawą do klienta."
+    },
+    "about": {
+      "title": "O nas",
+      "description": "HOKAMI CZ produkuje elektronikę od 1997 roku. Poznaj naszą czeską firmę, jej historię oraz zaplecze do produkcji elektroniki i montażu płytek PCB."
+    },
+    "careers": {
+      "title": "Kariera w produkcji elektroniki",
+      "description": "Kariera w HOKAMI: praca przy produkcji elektroniki w Libercu, nowoczesne technologie i rozwój zawodowy w czeskiej firmie z wieloletnim doświadczeniem."
+    },
+    "gdpr": {
+      "title": "Ochrona danych osobowych (RODO)",
+      "description": "Informacje HOKAMI CZ o przetwarzaniu danych osobowych, prawach osób i kontakcie w sprawach RODO. Pełny dokument jest dostępny w języku czeskim."
+    },
+    "whistleblowing": {
+      "title": "Ochrona sygnalistów",
+      "description": "Informacje o wewnętrznym systemie zgłoszeń HOKAMI CZ, sposobach zgłaszania naruszeń i ochronie sygnalistów. Pełny dokument jest w języku czeskim."
+    }
   }
 }
