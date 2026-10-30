@@ -130,5 +130,85 @@
       "title": "Whistleblowing",
       "description": "Information on the HOKAMI CZ internal reporting system, how to submit a report and whistleblower protection. The full document is available in Czech."
     }
+  },
+  "RequesForQuote": {
+    "eyebrow": "Enquiry",
+    "title": "Contact us",
+    "description": "We will respond with a manufacturability assessment and a quote prepared by a process engineer, not a template.",
+    "assurance": "NDA on request · Data stored in the EU · No intermediaries",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Jane Smith"
+      },
+      "company": {
+        "label": "Company",
+        "placeholder": "Company name"
+      },
+      "email": {
+        "label": "Work email",
+        "placeholder": "name@company.com"
+      },
+      "country": {
+        "label": "Country",
+        "placeholder": "Germany"
+      },
+      "industry": {
+        "label": "Industry",
+        "placeholder": "Select an industry",
+        "other": "Other industry"
+      },
+      "volume": {
+        "label": "Annual volume",
+        "placeholder": "Select a volume",
+        "options": {
+          "prototype": "Prototype only",
+          "under100": "Up to 100 units",
+          "under1000": "100–1,000 units",
+          "under10000": "1,000–10,000 units",
+          "over10000": "Over 10,000 units",
+          "unsure": "Not sure yet"
+        }
+      },
+      "project": {
+        "label": "Project",
+        "placeholder": "Board complexity, testing requirements, target date"
+      }
+    },
+    "upload": {
+      "label": "Attach files",
+      "hint": "BOM, Gerber, placement data. Up to 50 MB total, 10 files.",
+      "choose": "Choose files",
+      "selected": "Attached files",
+      "remove": "Remove file {name}",
+      "uploaded": "Uploaded",
+      "uploading": "Uploading {progress}%"
+    },
+    "submit": "Send enquiry",
+    "sending": "Sending…",
+    "retry": "Try again",
+    "errors": {
+      "nameRequired": "Please enter your name.",
+      "companyRequired": "Please enter your company name.",
+      "emailRequired": "Please enter your work email.",
+      "emailInvalid": "Enter a valid email address, such as name@company.com.",
+      "tooLong": "Please shorten the text in this field.",
+      "invalidOption": "Please select one of the available options.",
+      "filesSize": "The total file size must not exceed 50 MB.",
+      "filesCount": "Attach no more than 10 files.",
+      "filesEmpty": "Empty files cannot be attached. Choose a file with content.",
+      "fileName": "Shorten the file name and remove any slashes."
+    },
+    "failure": {
+      "title": "Your enquiry could not be sent",
+      "send": "Your details and files have been kept. Please try sending again.",
+      "captcha": "Spam verification failed. Check your connection and try again.",
+      "unavailable": "The form is temporarily unavailable. Please contact info@hokami.cz."
+    },
+    "success": {
+      "title": "Enquiry sent",
+      "description": "Thank you. A process engineer will review your documentation and respond with a manufacturability assessment and a quote.",
+      "again": "Send another enquiry"
+    }
   }
 }

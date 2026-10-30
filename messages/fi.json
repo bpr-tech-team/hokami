@@ -130,5 +130,85 @@
       "title": "Väärinkäytösten ilmoittaminen",
       "description": "Tietoa HOKAMI CZ:n sisäisestä ilmoituskanavasta, ilmoituksen tekemisestä ja ilmoittajan suojelusta. Koko asiakirja on saatavilla tšekiksi."
     }
+  },
+  "RequesForQuote": {
+    "eyebrow": "Tarjouspyyntö",
+    "title": "Ota yhteyttä",
+    "description": "Saat valmistettavuusarvion ja tarjouksen, jonka on laatinut prosessi-insinööri, ei valmis mallipohja.",
+    "assurance": "NDA pyynnöstä · Tiedot tallennetaan EU:ssa · Ei välikäsiä",
+    "fields": {
+      "name": {
+        "label": "Nimi",
+        "placeholder": "Anna Virtanen"
+      },
+      "company": {
+        "label": "Yritys",
+        "placeholder": "Yrityksen nimi"
+      },
+      "email": {
+        "label": "Työsähköposti",
+        "placeholder": "nimi@yritys.fi"
+      },
+      "country": {
+        "label": "Maa",
+        "placeholder": "Saksa"
+      },
+      "industry": {
+        "label": "Toimiala",
+        "placeholder": "Valitse toimiala",
+        "other": "Muu toimiala"
+      },
+      "volume": {
+        "label": "Vuosimäärä",
+        "placeholder": "Valitse määrä",
+        "options": {
+          "prototype": "Vain prototyyppi",
+          "under100": "Enintään 100 kpl",
+          "under1000": "100–1 000 kpl",
+          "under10000": "1 000–10 000 kpl",
+          "over10000": "Yli 10 000 kpl",
+          "unsure": "Ei vielä tiedossa"
+        }
+      },
+      "project": {
+        "label": "Projekti",
+        "placeholder": "Piirilevyn vaativuus, testausvaatimukset, tavoiteaikataulu"
+      }
+    },
+    "upload": {
+      "label": "Liitä tiedostoja",
+      "hint": "BOM, Gerber, ladontatiedot. Yhteensä enintään 50 Mt, 10 tiedostoa.",
+      "choose": "Valitse tiedostot",
+      "selected": "Liitetyt tiedostot",
+      "remove": "Poista tiedosto {name}",
+      "uploaded": "Ladattu",
+      "uploading": "Ladataan {progress} %"
+    },
+    "submit": "Lähetä tarjouspyyntö",
+    "sending": "Lähetetään…",
+    "retry": "Yritä uudelleen",
+    "errors": {
+      "nameRequired": "Kirjoita nimesi.",
+      "companyRequired": "Kirjoita yrityksesi nimi.",
+      "emailRequired": "Kirjoita työsähköpostiosoitteesi.",
+      "emailInvalid": "Kirjoita kelvollinen sähköpostiosoite, esimerkiksi nimi@yritys.fi.",
+      "tooLong": "Lyhennä tämän kentän tekstiä.",
+      "invalidOption": "Valitse jokin annetuista vaihtoehdoista.",
+      "filesSize": "Tiedostojen yhteiskoko saa olla enintään 50 Mt.",
+      "filesCount": "Liitä enintään 10 tiedostoa.",
+      "filesEmpty": "Tyhjää tiedostoa ei voi liittää. Valitse tiedosto, jossa on sisältöä.",
+      "fileName": "Lyhennä tiedostonimeä ja poista vinoviivat."
+    },
+    "failure": {
+      "title": "Tarjouspyynnön lähetys epäonnistui",
+      "send": "Tietosi ja tiedostosi on säilytetty. Yritä lähettää uudelleen.",
+      "captcha": "Roskapostitarkistus epäonnistui. Tarkista yhteys ja yritä uudelleen.",
+      "unavailable": "Lomake ei ole tilapäisesti käytettävissä. Ota yhteyttä: info@hokami.cz."
+    },
+    "success": {
+      "title": "Tarjouspyyntö lähetetty",
+      "description": "Kiitos. Prosessi-insinööri tarkistaa dokumentaatiosi ja ottaa yhteyttä valmistettavuusarvion ja tarjouksen kanssa.",
+      "again": "Lähetä uusi tarjouspyyntö"
+    }
   }
 }

@@ -11,13 +11,13 @@ type ButtonContentProps = VariantProps<typeof buttonVariants> & {
   children: ReactNode;
   icon?: ReactNode;
   showIcon?: boolean;
+  showTraceDots?: boolean;
   loading?: boolean;
   loadingLabel?: ReactNode;
   labelId?: string;
   loadingLabelId?: string;
 };
 
-/** Shared by action buttons and navigation links, including the Figma artwork. */
 function ButtonContent({
   children,
   variant = "default",
@@ -25,6 +25,7 @@ function ButtonContent({
   icon,
   showIcon = !size?.startsWith("icon") &&
     (variant === "default" || variant === "outline"),
+  showTraceDots = true,
   loading = false,
   loadingLabel,
   labelId,
@@ -37,6 +38,7 @@ function ButtonContent({
       {(variant === "default" || variant === "outline") && (
         <ButtonTrace
           variant={variant === "outline" ? "secondary" : "primary"}
+          showDots={showTraceDots}
         />
       )}
       {/* Reserve both labels' widths before submission starts. */}

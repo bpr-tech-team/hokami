@@ -28,6 +28,8 @@ type SectionProps = Omit<ComponentPropsWithoutRef<"section">, "title"> &
     descriptionTone?: TextProps["tone"];
     descriptionClassName?: string;
     contentClassName?: string;
+    layout?: "stack" | "split";
+    metadata?: ReactNode;
   };
 
 export function Section({
@@ -38,6 +40,8 @@ export function Section({
   descriptionTone,
   descriptionClassName,
   contentClassName,
+  layout = "stack",
+  metadata,
   tone,
   className,
   children,
@@ -53,11 +57,23 @@ export function Section({
       className={cn(sectionVariants({ tone }), className)}
     >
       <Container
-        className={cn("flex flex-col gap-6 desktop:gap-8", contentClassName)}
+        className={cn(
+          "flex flex-col gap-6 desktop:gap-8",
+          layout === "split" &&
+            "gap-8 desktop:grid desktop:grid-cols-[minmax(0,508fr)_minmax(0,622fr)] desktop:items-start desktop:gap-[70px]",
+          contentClassName,
+        )}
       >
-        <header className="flex flex-col gap-6 desktop:gap-8">
-          <MonoText variant="eyebrow">{eyebrow}</MonoText>
-          <Heading id={headingId}>{title}</Heading>
+        <header
+          className={cn(
+            "flex min-w-0 flex-col gap-6 desktop:gap-8",
+            layout === "split" && "gap-5 desktop:gap-5",
+          )}
+        >
+          <div className="flex flex-col gap-6 desktop:gap-8">
+            <MonoText variant="eyebrow">{eyebrow}</MonoText>
+            <Heading id={headingId}>{title}</Heading>
+          </div>
           <Text
             variant="lead"
             tone={descriptionTone}
@@ -65,6 +81,7 @@ export function Section({
           >
             {description}
           </Text>
+          {metadata}
         </header>
         {children}
       </Container>

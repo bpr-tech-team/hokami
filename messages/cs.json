@@ -130,5 +130,85 @@
       "title": "Whistleblowing",
       "description": "Informace o vnitřním oznamovacím systému HOKAMI CZ, možnostech podání oznámení a ochraně oznamovatelů. Dokument je v češtině."
     }
+  },
+  "RequesForQuote": {
+    "eyebrow": "Poptávka",
+    "title": "Kontaktujte nás",
+    "description": "Vrátíme se s posouzením vyrobitelnosti a cenou, kterou zpracoval procesní inženýr, ne šablona.",
+    "assurance": "NDA na vyžádání · Data uložena v EU · Bez zprostředkovatelů",
+    "fields": {
+      "name": {
+        "label": "Jméno",
+        "placeholder": "Jana Nováková"
+      },
+      "company": {
+        "label": "Firma",
+        "placeholder": "Název firmy"
+      },
+      "email": {
+        "label": "Pracovní e-mail",
+        "placeholder": "jmeno@firma.cz"
+      },
+      "country": {
+        "label": "Země",
+        "placeholder": "Německo"
+      },
+      "industry": {
+        "label": "Obor",
+        "placeholder": "Vyberte obor",
+        "other": "Jiný obor"
+      },
+      "volume": {
+        "label": "Roční objem",
+        "placeholder": "Vyberte objem",
+        "options": {
+          "prototype": "Pouze prototyp",
+          "under100": "Do 100 kusů",
+          "under1000": "100–1 000 kusů",
+          "under10000": "1 000–10 000 kusů",
+          "over10000": "Více než 10 000 kusů",
+          "unsure": "Zatím nevím"
+        }
+      },
+      "project": {
+        "label": "Projekt",
+        "placeholder": "Složitost desky, požadavky na testování, cílový termín"
+      }
+    },
+    "upload": {
+      "label": "Přiložit soubory",
+      "hint": "BOM, Gerber, osazovací data. Max 50 MB celkem, 10 souborů.",
+      "choose": "Vybrat soubory",
+      "selected": "Přiložené soubory",
+      "remove": "Odebrat soubor {name}",
+      "uploaded": "Nahráno",
+      "uploading": "Nahrávám {progress} %"
+    },
+    "submit": "Odeslat poptávku",
+    "sending": "Odesílám…",
+    "retry": "Zkusit znovu",
+    "errors": {
+      "nameRequired": "Zadejte prosím své jméno.",
+      "companyRequired": "Zadejte prosím název firmy.",
+      "emailRequired": "Zadejte prosím pracovní e-mail.",
+      "emailInvalid": "Zadejte platnou e-mailovou adresu, například jmeno@firma.cz.",
+      "tooLong": "Zkraťte prosím text v tomto poli.",
+      "invalidOption": "Vyberte prosím jednu z nabízených možností.",
+      "filesSize": "Celková velikost souborů nesmí překročit 50 MB.",
+      "filesCount": "Přiložte nejvýše 10 souborů.",
+      "filesEmpty": "Prázdný soubor nelze přiložit. Vyberte soubor s obsahem.",
+      "fileName": "Zkraťte název souboru a odstraňte lomítka."
+    },
+    "failure": {
+      "title": "Poptávku se nepodařilo odeslat",
+      "send": "Údaje i soubory zůstaly zachovány. Zkuste odeslání znovu.",
+      "captcha": "Ověření proti spamu se nezdařilo. Zkontrolujte připojení a zkuste to znovu.",
+      "unavailable": "Formulář je dočasně nedostupný. Kontaktujte nás na info@hokami.cz."
+    },
+    "success": {
+      "title": "Poptávka odeslána",
+      "description": "Děkujeme. Dokumentaci posoudí procesní inženýr a ozveme se s posouzením vyrobitelnosti a cenou.",
+      "again": "Odeslat další poptávku"
+    }
   }
 }

@@ -23,7 +23,11 @@ export function HeaderRequestLink({
   return (
     <ButtonLink
       {...props}
-      href={getHeaderAnchorHref("/#rfq", locale, location.pathname)}
+      href={getHeaderAnchorHref(
+        "/#reques-for-quote",
+        locale,
+        location.pathname,
+      )}
       className={cn(compact && "px-6 max-[23rem]:px-3", className)}
     />
   );

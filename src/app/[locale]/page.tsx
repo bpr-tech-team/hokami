@@ -1,6 +1,7 @@
 import { PageMain } from "@/components/layout/page-main";
 import { Capabilities } from "@/components/sections/home/capabilities/capabilities";
 import { Industries } from "@/components/sections/home/industries/industries";
+import { RequesForQuote } from "@/components/sections/home/reques-for-quote/reques-for-quote";
 import { getPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -42,6 +43,7 @@ export default function Home() {
       />
       <Capabilities />
       <Industries />
+      <RequesForQuote />
     </PageMain>
   );
 }

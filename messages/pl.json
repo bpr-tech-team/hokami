@@ -130,5 +130,85 @@
       "title": "Ochrona sygnalistów",
       "description": "Informacje o wewnętrznym systemie zgłoszeń HOKAMI CZ, sposobach zgłaszania naruszeń i ochronie sygnalistów. Pełny dokument jest w języku czeskim."
     }
+  },
+  "RequesForQuote": {
+    "eyebrow": "Zapytanie",
+    "title": "Skontaktuj się z nami",
+    "description": "Otrzymasz ocenę wykonalności i wycenę przygotowaną przez inżyniera procesu, a nie na podstawie szablonu.",
+    "assurance": "NDA na życzenie · Dane przechowywane w UE · Bez pośredników",
+    "fields": {
+      "name": {
+        "label": "Imię i nazwisko",
+        "placeholder": "Anna Kowalska"
+      },
+      "company": {
+        "label": "Firma",
+        "placeholder": "Nazwa firmy"
+      },
+      "email": {
+        "label": "Służbowy e-mail",
+        "placeholder": "imie@firma.pl"
+      },
+      "country": {
+        "label": "Kraj",
+        "placeholder": "Niemcy"
+      },
+      "industry": {
+        "label": "Branża",
+        "placeholder": "Wybierz branżę",
+        "other": "Inna branża"
+      },
+      "volume": {
+        "label": "Wolumen roczny",
+        "placeholder": "Wybierz wolumen",
+        "options": {
+          "prototype": "Tylko prototyp",
+          "under100": "Do 100 sztuk",
+          "under1000": "100–1 000 sztuk",
+          "under10000": "1 000–10 000 sztuk",
+          "over10000": "Ponad 10 000 sztuk",
+          "unsure": "Jeszcze nie wiem"
+        }
+      },
+      "project": {
+        "label": "Projekt",
+        "placeholder": "Złożoność płytki, wymagania testowe, termin docelowy"
+      }
+    },
+    "upload": {
+      "label": "Załącz pliki",
+      "hint": "BOM, Gerber, dane montażowe. Maks. 50 MB łącznie, 10 plików.",
+      "choose": "Wybierz pliki",
+      "selected": "Załączone pliki",
+      "remove": "Usuń plik {name}",
+      "uploaded": "Przesłano",
+      "uploading": "Przesyłanie {progress}%"
+    },
+    "submit": "Wyślij zapytanie",
+    "sending": "Wysyłanie…",
+    "retry": "Spróbuj ponownie",
+    "errors": {
+      "nameRequired": "Podaj imię i nazwisko.",
+      "companyRequired": "Podaj nazwę firmy.",
+      "emailRequired": "Podaj służbowy adres e-mail.",
+      "emailInvalid": "Podaj poprawny adres e-mail, np. imie@firma.pl.",
+      "tooLong": "Skróć tekst w tym polu.",
+      "invalidOption": "Wybierz jedną z dostępnych opcji.",
+      "filesSize": "Łączny rozmiar plików nie może przekraczać 50 MB.",
+      "filesCount": "Załącz maksymalnie 10 plików.",
+      "filesEmpty": "Nie można załączyć pustego pliku. Wybierz plik z zawartością.",
+      "fileName": "Skróć nazwę pliku i usuń ukośniki."
+    },
+    "failure": {
+      "title": "Nie udało się wysłać zapytania",
+      "send": "Twoje dane i pliki zostały zachowane. Spróbuj wysłać ponownie.",
+      "captcha": "Weryfikacja antyspamowa nie powiodła się. Sprawdź połączenie i spróbuj ponownie.",
+      "unavailable": "Formularz jest chwilowo niedostępny. Skontaktuj się z info@hokami.cz."
+    },
+    "success": {
+      "title": "Zapytanie wysłane",
+      "description": "Dziękujemy. Inżynier procesu przeanalizuje dokumentację i skontaktuje się z oceną wykonalności oraz wyceną.",
+      "again": "Wyślij kolejne zapytanie"
+    }
   }
 }

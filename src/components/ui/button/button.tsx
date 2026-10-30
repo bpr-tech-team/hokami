@@ -11,6 +11,7 @@ type ButtonProps = ButtonPrimitive.Props &
   VariantProps<typeof buttonVariants> & {
     icon?: ReactNode;
     showIcon?: boolean;
+    showTraceDots?: boolean;
     loading?: boolean;
     /** Pass a translated label, e.g. "Odesílám…". Defaults to children. */
     loadingLabel?: ReactNode;
@@ -24,6 +25,7 @@ function Button({
   icon,
   showIcon = !size?.startsWith("icon") &&
     (variant === "default" || variant === "outline"),
+  showTraceDots = true,
   disabled = false,
   focusableWhenDisabled = false,
   loading = false,
@@ -62,6 +64,7 @@ function Button({
         size={size}
         icon={icon}
         showIcon={showIcon}
+        showTraceDots={showTraceDots}
         loading={loading}
         loadingLabel={loadingLabel}
         labelId={labelId}

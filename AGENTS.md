@@ -56,7 +56,7 @@ belong in `src/i18n/languages.ts`, and shared URL state in
 ## Navigation
 
 Header navigation uses homepage anchors `industries`, `capabilities`, `process`,
-and the enquiry target `rfq`. Add these IDs when implementing those sections.
+and the enquiry target `reques-for-quote`. Add these IDs when implementing those sections.
 Quality, about, and careers have separate localized routes `/quality`, `/about`,
 and `/careers`. Use `ButtonLink` for navigation CTAs; it shares the existing
 Button styling and decoration while preserving native link semantics.

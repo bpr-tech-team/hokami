@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
@@ -17,7 +17,7 @@ const headingVariants = cva("font-display font-semibold", {
   defaultVariants: { variant: "section" },
 });
 
-type HeadingProps = ComponentPropsWithoutRef<"h2"> &
+type HeadingProps = ComponentPropsWithRef<"h2"> &
   VariantProps<typeof headingVariants> & {
     as?: "h1" | "h2" | "h3" | "h4" | "span";
   };

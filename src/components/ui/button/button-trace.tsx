@@ -32,7 +32,13 @@ function TraceEdge({
   );
 }
 
-export function ButtonTrace({ variant }: { variant: "primary" | "secondary" }) {
+export function ButtonTrace({
+  variant,
+  showDots = true,
+}: {
+  variant: "primary" | "secondary";
+  showDots?: boolean;
+}) {
   return (
     <span
       data-slot="button-trace"
@@ -64,16 +70,20 @@ export function ButtonTrace({ variant }: { variant: "primary" | "secondary" }) {
         orientation="vertical"
         className="-right-px bottom-0"
       />
-      <TraceDot
-        data-corner="top-left"
-        variant={variant}
-        className="-top-[4.5px] -left-[4.5px] group-focus-visible/button:invisible"
-      />
-      <TraceDot
-        data-corner="bottom-right"
-        variant={variant}
-        className="-right-[4.5px] -bottom-[4.5px] group-focus-visible/button:invisible"
-      />
+      {showDots && (
+        <TraceDot
+          data-corner="top-left"
+          variant={variant}
+          className="-top-[4.5px] -left-[4.5px] group-focus-visible/button:invisible"
+        />
+      )}
+      {showDots && (
+        <TraceDot
+          data-corner="bottom-right"
+          variant={variant}
+          className="-right-[4.5px] -bottom-[4.5px] group-focus-visible/button:invisible"
+        />
+      )}
     </span>
   );
 }

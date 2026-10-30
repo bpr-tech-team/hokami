@@ -130,5 +130,85 @@
       "title": "Hinweisgeberschutz",
       "description": "Das interne Meldesystem von HOKAMI CZ: Meldewege und Schutz von Hinweisgebern. Das vollständige Dokument steht auf Tschechisch zur Verfügung."
     }
+  },
+  "RequesForQuote": {
+    "eyebrow": "Anfrage",
+    "title": "Kontaktieren Sie uns",
+    "description": "Sie erhalten eine Machbarkeitsbewertung und ein Angebot, das von einem Prozessingenieur erstellt wurde, nicht aus einer Vorlage.",
+    "assurance": "NDA auf Anfrage · Daten in der EU gespeichert · Keine Vermittler",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Erika Mustermann"
+      },
+      "company": {
+        "label": "Unternehmen",
+        "placeholder": "Firmenname"
+      },
+      "email": {
+        "label": "Geschäftliche E-Mail",
+        "placeholder": "name@firma.de"
+      },
+      "country": {
+        "label": "Land",
+        "placeholder": "Deutschland"
+      },
+      "industry": {
+        "label": "Branche",
+        "placeholder": "Branche wählen",
+        "other": "Andere Branche"
+      },
+      "volume": {
+        "label": "Jahresvolumen",
+        "placeholder": "Menge wählen",
+        "options": {
+          "prototype": "Nur Prototyp",
+          "under100": "Bis zu 100 Stück",
+          "under1000": "100–1.000 Stück",
+          "under10000": "1.000–10.000 Stück",
+          "over10000": "Über 10.000 Stück",
+          "unsure": "Noch unklar"
+        }
+      },
+      "project": {
+        "label": "Projekt",
+        "placeholder": "Leiterplattenkomplexität, Prüfanforderungen, Zieltermin"
+      }
+    },
+    "upload": {
+      "label": "Dateien anhängen",
+      "hint": "BOM, Gerber, Bestückungsdaten. Max. 50 MB insgesamt, 10 Dateien.",
+      "choose": "Dateien wählen",
+      "selected": "Angehängte Dateien",
+      "remove": "Datei {name} entfernen",
+      "uploaded": "Hochgeladen",
+      "uploading": "Hochladen {progress} %"
+    },
+    "submit": "Anfrage senden",
+    "sending": "Wird gesendet…",
+    "retry": "Erneut versuchen",
+    "errors": {
+      "nameRequired": "Bitte geben Sie Ihren Namen ein.",
+      "companyRequired": "Bitte geben Sie Ihren Firmennamen ein.",
+      "emailRequired": "Bitte geben Sie Ihre geschäftliche E-Mail-Adresse ein.",
+      "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein, z. B. name@firma.de.",
+      "tooLong": "Bitte kürzen Sie den Text in diesem Feld.",
+      "invalidOption": "Bitte wählen Sie eine der verfügbaren Optionen.",
+      "filesSize": "Die Gesamtgröße der Dateien darf 50 MB nicht überschreiten.",
+      "filesCount": "Hängen Sie höchstens 10 Dateien an.",
+      "filesEmpty": "Leere Dateien können nicht angehängt werden. Wählen Sie eine Datei mit Inhalt.",
+      "fileName": "Kürzen Sie den Dateinamen und entfernen Sie Schrägstriche."
+    },
+    "failure": {
+      "title": "Die Anfrage konnte nicht gesendet werden",
+      "send": "Ihre Angaben und Dateien wurden beibehalten. Bitte versuchen Sie es erneut.",
+      "captcha": "Die Spamprüfung ist fehlgeschlagen. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+      "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie info@hokami.cz."
+    },
+    "success": {
+      "title": "Anfrage gesendet",
+      "description": "Vielen Dank. Ein Prozessingenieur prüft Ihre Unterlagen und meldet sich mit einer Machbarkeitsbewertung und einem Angebot.",
+      "again": "Weitere Anfrage senden"
+    }
   }
 }

@@ -33,6 +33,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
+      data-scroll-behavior="smooth"
       className={`${saira.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased`}
     >
       <body className="flex min-h-dvh flex-col">
