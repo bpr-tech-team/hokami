@@ -1,1 +1,33 @@
-{}
+{
+  "Footer": {
+    "home": "HOKAMI — etusivu",
+    "legal": "Oikeudelliset tiedot",
+    "privacy": "GDPR",
+    "whistleblowing": "Whistleblowing",
+    "language": "Alatunnisteen kieli"
+  },
+  "Cookies": {
+    "title": "Evästeasetukset",
+    "bannerTitle": "Evästeet sivustollamme",
+    "bannerDescription": "Haluamme, että sivustomme palvelee sinua hyvin. Välttämättömät evästeet muistavat asetuksesi. Luvallasi kävijämäärien ja latausnopeuden tilastot auttavat meitä kehittämään sivustoa. Sinä päätät, mitä sallit.",
+    "acceptAll": "Hyväksy kaikki",
+    "necessaryOnly": "Vain välttämättömät",
+    "customize": "Mukauta asetuksia",
+    "save": "Tallenna asetukset",
+    "close": "Sulje asetukset",
+    "privacy": "Tietosuojaseloste",
+    "preferencesDescription": "Valitse, mitä palveluja saamme käyttää vierailusi aikana. Valinnaiset palvelut käynnistyvät vain luvallasi. Voit muuttaa valintojasi myöhemmin.",
+    "necessaryTitle": "Välttämättömät evästeet",
+    "necessaryDescription": "Nämä muistavat valintasi seuraavilla vierailuilla ja kieltä vaihtaessasi. Niitä tarvitaan asetustesi tallentamiseen, joten ne ovat aina käytössä.",
+    "analyticsTitle": "Sivuston tilastot ja suorituskyky",
+    "analyticsDescription": "Nämä kertovat meille sivuston kävijämääristä ja latausnopeudesta. Niiden avulla voimme parantaa sivuston sisältöä ja toimintaa. Voit sallia kummankin palvelun erikseen.",
+    "cookieTableCaption": "Evästeasetuksesi",
+    "cookieName": "Nimi",
+    "cookieDuration": "Säilytysaika",
+    "cookiePurpose": "Tarkoitus",
+    "consentDuration": "180 päivää",
+    "consentPurpose": "Muistaa evästeasetuksesi seuraavaa vierailua varten.",
+    "moreTitle": "Lisätietoja",
+    "moreDescription": "Voit muuttaa asetuksiasi milloin tahansa sivuston alatunnisteen linkistä. Lisätietoja siitä, miten käsittelemme tietojasi, löydät täältä:"
+  }
+}

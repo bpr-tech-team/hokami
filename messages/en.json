@@ -1,1 +1,33 @@
-{}
+{
+  "Footer": {
+    "home": "HOKAMI — home",
+    "legal": "Legal information",
+    "privacy": "GDPR",
+    "whistleblowing": "Whistleblowing",
+    "language": "Footer language"
+  },
+  "Cookies": {
+    "title": "Cookie settings",
+    "bannerTitle": "Cookies on our website",
+    "bannerDescription": "We want our website to work well for you. Necessary cookies remember your preferences. With your permission, traffic and performance statistics help us improve the site. Choose what you would like to allow.",
+    "acceptAll": "Allow all",
+    "necessaryOnly": "Necessary only",
+    "customize": "Customize settings",
+    "save": "Save settings",
+    "close": "Close settings",
+    "privacy": "Privacy policy",
+    "preferencesDescription": "Choose which services we may use during your visit. Optional services start only with your permission. You can change your choices later.",
+    "necessaryTitle": "Necessary cookies",
+    "necessaryDescription": "These remember your choices on future visits and when you switch languages. They are needed to save your settings, so they always stay active.",
+    "analyticsTitle": "Website statistics and performance",
+    "analyticsDescription": "These show us how much our website is used and how quickly it loads. They help us improve its content and how it works. You can allow each service separately.",
+    "cookieTableCaption": "Your cookie preferences",
+    "cookieName": "Name",
+    "cookieDuration": "Storage period",
+    "cookiePurpose": "Purpose",
+    "consentDuration": "180 days",
+    "consentPurpose": "Remembers your cookie preferences for your next visit.",
+    "moreTitle": "Learn more",
+    "moreDescription": "You can change your settings at any time using the link in the website footer. Find out how we handle your data here:"
+  }
+}

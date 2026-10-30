@@ -16,5 +16,36 @@
       "about": "O nás",
       "careers": "Kariéra"
     }
+  },
+  "Footer": {
+    "home": "HOKAMI — úvodní stránka",
+    "legal": "Právní informace",
+    "privacy": "GDPR",
+    "whistleblowing": "Whistleblowing",
+    "language": "Jazyk patičky"
+  },
+  "Cookies": {
+    "title": "Nastavení cookies",
+    "bannerTitle": "Cookies na našem webu",
+    "bannerDescription": "Chceme, aby Vám náš web dobře sloužil. Nezbytné cookies si pamatují Vaše nastavení. S Vaším souhlasem nám statistiky návštěvnosti a rychlosti pomohou web dále zlepšovat. Vyberte si, co nám povolíte.",
+    "acceptAll": "Povolit vše",
+    "necessaryOnly": "Pouze nezbytné",
+    "customize": "Upravit nastavení",
+    "save": "Uložit nastavení",
+    "close": "Zavřít nastavení",
+    "privacy": "Ochrana osobních údajů",
+    "preferencesDescription": "Zvolte, které služby můžeme při Vaší návštěvě používat. Volitelné služby spustíme až s Vaším souhlasem. Svou volbu můžete později změnit.",
+    "necessaryTitle": "Nezbytné cookies",
+    "necessaryDescription": "Pamatují si Vaši volbu při dalších návštěvách i při změně jazyka. Pro uložení nastavení jsou nezbytné, a proto zůstávají vždy aktivní.",
+    "analyticsTitle": "Statistiky a výkon webu",
+    "analyticsDescription": "Ukazují nám návštěvnost webu a rychlost jeho načítání. Pomáhají nám tak zlepšovat jeho obsah i fungování. Jednotlivé služby můžete povolit samostatně.",
+    "cookieTableCaption": "Vaše nastavení cookies",
+    "cookieName": "Název",
+    "cookieDuration": "Doba uložení",
+    "cookiePurpose": "Účel",
+    "consentDuration": "180 dní",
+    "consentPurpose": "Pamatuje si Vaše nastavení cookies pro příští návštěvu.",
+    "moreTitle": "Více informací",
+    "moreDescription": "Nastavení můžete kdykoli změnit pomocí odkazu v patičce webu. Jak nakládáme s Vašimi údaji, se dozvíte zde:"
   }
 }

@@ -1,1 +1,33 @@
-{}
+{
+  "Footer": {
+    "home": "HOKAMI — strona główna",
+    "legal": "Informacje prawne",
+    "privacy": "RODO",
+    "whistleblowing": "Whistleblowing",
+    "language": "Język w stopce"
+  },
+  "Cookies": {
+    "title": "Ustawienia cookies",
+    "bannerTitle": "Pliki cookies na naszej stronie",
+    "bannerDescription": "Zależy nam, aby nasza strona dobrze Państwu służyła. Niezbędne pliki cookies zapamiętują Państwa ustawienia. Za Państwa zgodą statystyki odwiedzin i szybkości pomogą nam dalej rozwijać stronę. Wybór należy do Państwa.",
+    "acceptAll": "Zezwól na wszystkie",
+    "necessaryOnly": "Tylko niezbędne",
+    "customize": "Dostosuj ustawienia",
+    "save": "Zapisz ustawienia",
+    "close": "Zamknij ustawienia",
+    "privacy": "Polityka prywatności",
+    "preferencesDescription": "Prosimy wybrać usługi, z których możemy korzystać podczas Państwa wizyty. Usługi opcjonalne uruchomimy dopiero za Państwa zgodą. Wybór można później zmienić.",
+    "necessaryTitle": "Niezbędne pliki cookies",
+    "necessaryDescription": "Zapamiętują Państwa wybór podczas kolejnych wizyt i przy zmianie języka. Są potrzebne do zapisania ustawień, dlatego pozostają zawsze aktywne.",
+    "analyticsTitle": "Statystyki i wydajność strony",
+    "analyticsDescription": "Pokazują nam liczbę odwiedzin i szybkość ładowania strony. Pomagają nam ulepszać jej treści i działanie. Na każdą usługę można zezwolić osobno.",
+    "cookieTableCaption": "Państwa ustawienia cookies",
+    "cookieName": "Nazwa",
+    "cookieDuration": "Okres przechowywania",
+    "cookiePurpose": "Cel",
+    "consentDuration": "180 dni",
+    "consentPurpose": "Zapamiętuje Państwa ustawienia cookies na kolejną wizytę.",
+    "moreTitle": "Więcej informacji",
+    "moreDescription": "Ustawienia można zmienić w dowolnym momencie za pomocą linku w stopce strony. Informacje o tym, jak przetwarzamy Państwa dane, są dostępne tutaj:"
+  }
+}

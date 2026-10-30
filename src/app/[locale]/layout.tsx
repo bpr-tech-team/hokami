@@ -1,10 +1,12 @@
 import "../globals.css";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import "@/components/cookie-consent/cookie-consent.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { SiteHeader } from "@/components/site-header/site-header";
+import { SiteFooter } from "@/components/site-footer/site-footer";
+import { SiteMeasurement } from "@/components/site-measurement";
+import { SiteCookieConsent } from "@/components/cookie-consent/cookie-consent";
 import { ibmPlexMono, ibmPlexSans, saira } from "../fonts";
 
 export function generateStaticParams() {
@@ -21,13 +23,14 @@ export default async function RootLayout({
       lang={locale}
       className={`${saira.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased`}
     >
-      <body>
+      <body className="flex min-h-dvh flex-col">
         <NextIntlClientProvider>
+          <SiteCookieConsent />
           <SiteHeader locale={locale} />
-          {children}
+          <div className="flex-1">{children}</div>
+          <SiteFooter locale={locale} />
         </NextIntlClientProvider>
-        <Analytics />
-        <SpeedInsights />
+        <SiteMeasurement />
       </body>
     </html>
   );
