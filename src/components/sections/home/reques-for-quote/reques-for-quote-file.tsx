@@ -4,9 +4,16 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useFormatter, useTranslations } from "next-intl";
 import { cn } from "cn";
-import { Button } from "@/components/ui/button";
-import { MonoText } from "@/components/typography/mono-text";
-import { Text } from "@/components/typography/text";
+import {
+  Attachment,
+  AttachmentAction,
+  AttachmentActions,
+  AttachmentContent,
+  AttachmentDescription,
+  AttachmentMedia,
+  AttachmentTitle,
+} from "@/components/ui/attachment";
+import { Progress } from "@/components/ui/progress";
 
 type FileProgress = { percentage: number; uploaded: boolean };
 
@@ -67,66 +74,56 @@ export function RequesForQuoteFile({
   const unit = file.size >= 1024 * 1024 ? "MB" : file.size >= 1024 ? "KB" : "B";
 
   return (
-    <li className="flex min-w-0 items-center gap-3 overflow-hidden border border-border-subtle py-3 pr-2 pl-3.5">
-      <Image
-        src="/images/reques-for-quote/file.svg"
-        width={20}
-        height={20}
-        alt=""
-        className="shrink-0"
-      />
-      <div className="flex min-w-0 flex-1 flex-col gap-1">
-        <Text variant="small" className="truncate" title={file.name}>
-          {file.name}
-        </Text>
-        <MonoText
-          variant="meta"
-          tone="tertiary"
-          className="flex flex-wrap items-center gap-x-1.5"
-        >
-          <span className="whitespace-nowrap">
-            {format.number(file.size / divisor, { maximumFractionDigits: 1 })}{" "}
-            {unit}
-          </span>
-          <span aria-hidden="true">·</span>
-          <span className="whitespace-nowrap">
-            {uploading
-              ? t("uploading", { progress: current.percentage })
-              : t("uploaded")}
-          </span>
-        </MonoText>
-        <div
-          role={uploading ? "progressbar" : undefined}
-          aria-label={uploading ? file.name : undefined}
-          aria-valuemin={uploading ? 0 : undefined}
-          aria-valuemax={uploading ? 100 : undefined}
-          aria-valuenow={uploading ? current.percentage : undefined}
-          className={cn(
-            "h-0.5 w-full overflow-hidden bg-border-subtle",
-            !uploading && "invisible",
-          )}
-        >
-          <div
-            className="h-full bg-action-primary transition-[width] duration-100 ease-linear"
-            style={{ width: `${current?.percentage ?? 100}%` }}
+    <li className="min-w-0">
+      <Attachment state={uploading ? "uploading" : "done"}>
+        <AttachmentMedia>
+          <Image
+            src="/images/reques-for-quote/file.svg"
+            width={20}
+            height={20}
+            alt=""
+            className="shrink-0"
           />
-        </div>
-      </div>
-      <Button
-        type="button"
-        variant="ghost"
-        size="icon-sm"
-        disabled={disabled}
-        aria-label={t("remove", { name: file.name })}
-        onClick={onRemove}
-      >
-        <Image
-          src="/images/reques-for-quote/remove.svg"
-          width={20}
-          height={20}
-          alt=""
-        />
-      </Button>
+        </AttachmentMedia>
+        <AttachmentContent>
+          <AttachmentTitle title={file.name}>{file.name}</AttachmentTitle>
+          <AttachmentDescription>
+            <span className="whitespace-nowrap">
+              {format.number(file.size / divisor, { maximumFractionDigits: 1 })}{" "}
+              {unit}
+            </span>
+            <span aria-hidden="true">·</span>
+            <span className="whitespace-nowrap">
+              {uploading
+                ? t("uploading", { progress: current.percentage })
+                : t("uploaded")}
+            </span>
+          </AttachmentDescription>
+          <Progress
+            value={current?.percentage ?? 100}
+            aria-label={file.name}
+            aria-hidden={!uploading}
+            className={cn("h-0.5 w-full", !uploading && "invisible")}
+          />
+        </AttachmentContent>
+        <AttachmentActions>
+          <AttachmentAction
+            type="button"
+            variant="ghost"
+            size="icon-sm"
+            disabled={disabled}
+            aria-label={t("remove", { name: file.name })}
+            onClick={onRemove}
+          >
+            <Image
+              src="/images/reques-for-quote/remove.svg"
+              width={20}
+              height={20}
+              alt=""
+            />
+          </AttachmentAction>
+        </AttachmentActions>
+      </Attachment>
     </li>
   );
 }

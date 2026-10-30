@@ -5,6 +5,7 @@ import { useRef, useState, type FocusEvent, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import { FieldGroup, FieldLegend, FieldSet } from "@/components/ui/field";
 import { loadRecaptcha } from "@/lib/recaptcha/client";
 import {
   getFieldErrors,
@@ -158,13 +159,13 @@ export function RequesForQuoteForm({
         if (siteKey) void loadRecaptcha(siteKey).catch(() => {});
       }}
     >
-      <fieldset
+      <FieldSet
         key={formVersion}
         disabled={sending}
         className="flex min-w-0 flex-col gap-6"
       >
-        <legend className="sr-only">{t("title")}</legend>
-        <div className="grid min-w-0 grid-cols-1 gap-6 tablet:grid-cols-2">
+        <FieldLegend className="sr-only mb-0">{t("title")}</FieldLegend>
+        <FieldGroup className="grid min-w-0 grid-cols-1 gap-6 tablet:grid-cols-2">
           <RequesForQuoteField
             name="name"
             label={t("fields.name.label")}
@@ -228,7 +229,7 @@ export function RequesForQuoteForm({
               label: t(`fields.volume.options.${value}`),
             }))}
           />
-        </div>
+        </FieldGroup>
         <RequesForQuoteField
           name="project"
           label={t("fields.project.label")}
@@ -259,7 +260,7 @@ export function RequesForQuoteForm({
         >
           {submitError ? t("retry") : t("submit")}
         </Button>
-      </fieldset>
+      </FieldSet>
       {submitError && (
         <Alert
           variant="destructive"
