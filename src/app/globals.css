@@ -1,18 +1,63 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-surface-default: #ffffff;
+  --color-surface-subtle: #f5f4f2;
+  --color-surface-inverse: #11100e;
+  --color-surface-accent-subtle: #fff1eb;
+  --color-text-primary: #11100e;
+  --color-text-secondary: #4a4741;
+  --color-text-tertiary: #6a665f;
+  --color-text-accent: #cc3700;
+  --color-text-accent-hover: #ad2e00;
+  --color-text-on-action: #ffffff;
+  --color-text-on-inverse: #ffffff;
+  --color-border-subtle: #e2dfda;
+  --color-border-strong: #8a8680;
+  --color-border-strong-hover: #4a4741;
+  --color-action-primary: #cc3700;
+  --color-action-primary-hover: #ad2e00;
+  --color-action-primary-pressed: #852400;
+  --color-brand-identity: #fe4704;
+  --color-focus-ring: #cc3700;
+
+  --breakpoint-tablet: 47.5rem;
+  --breakpoint-desktop: 67.5rem;
+  --container-content: 75rem;
+  --container-copy: 42.5rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-ibm-plex-sans), Arial, sans-serif;
+  --font-display: var(--font-saira), Arial, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), "Courier New", monospace;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-surface-default font-sans text-base text-text-primary;
+    line-height: 1.6;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-delay: 0ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
