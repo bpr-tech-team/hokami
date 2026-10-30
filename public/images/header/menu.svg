@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Burger icon">
+<rect id="Line top" x="3" y="5" width="20" height="2" rx="1" fill="#11100E"/>
+<rect id="Line middle" x="3" y="11" width="20" height="2" rx="1" fill="#11100E"/>
+<rect id="Line bottom" x="3" y="17" width="20" height="2" rx="1" fill="#11100E"/>
+<path id="Dot top" d="M5.25 6C5.25 7.24264 4.24264 8.25 3 8.25C1.75736 8.25 0.75 7.24264 0.75 6C0.75 4.75736 1.75736 3.75 3 3.75C4.24264 3.75 5.25 4.75736 5.25 6Z" fill="white" stroke-width="1.5" stroke="#FE4704"/>
+<path id="Dot middle" d="M15.25 12C15.25 13.2426 14.2426 14.25 13 14.25C11.7574 14.25 10.75 13.2426 10.75 12C10.75 10.7574 11.7574 9.75 13 9.75C14.2426 9.75 15.25 10.7574 15.25 12Z" fill="white" stroke-width="1.5" stroke="#FE4704"/>
+<path id="Dot bottom" d="M25.25 18C25.25 19.2426 24.2426 20.25 23 20.25C21.7574 20.25 20.75 19.2426 20.75 18C20.75 16.7574 21.7574 15.75 23 15.75C24.2426 15.75 25.25 16.7574 25.25 18Z" fill="white" stroke-width="1.5" stroke="#FE4704"/>
+</g>
+</svg>

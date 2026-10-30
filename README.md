@@ -49,10 +49,149 @@ Use [shadcn/ui](https://ui.shadcn.com/docs) for most of the project's graphical
 interface wherever suitable components are available. Prefer adapting and
 composing its components before building custom UI from scratch.
 
-The `shadcn` CLI is installed with `npm i shadcn`. Before adding the first
-component, initialize the project with `npx shadcn init`, following the
-[official setup guide](https://ui.shadcn.com/docs/installation/next).
-Then add components as needed with `npx shadcn add <component>`.
+Use Tailwind utilities for styling, layout, breakpoints, interactions, and
+decoration. Define reusable variants with CVA in the shadcn components. Extend
+Tailwind v4 through `@theme` and `@custom-variant`; keep `globals.css` limited to
+shared tokens, states, and base styles. Keep component-specific styling and
+motion in Tailwind class strings or CVA definitions beside the component. Use
+standard utilities and arbitrary values for one-off settings; avoid component-only
+theme aliases and stylesheets. Add colocated custom CSS only when utilities
+cannot express the required behavior. Prefer suitable shadcn components.
+
+shadcn/ui is initialized with the `base-nova` style, Base UI primitives, Lucide
+icons, and Tailwind CSS v4. Configuration is in `components.json`, UI components
+are in `src/components/ui/`, and the shared `cn` utility is in `src/lib/utils.ts`.
+The initial `Button` component is available at `@/components/ui/button`.
+
+Add components as needed with the installed CLI:
+
+```bash
+npx shadcn add <component>
+```
+
+Keep the project's existing fonts and design tokens in `src/app/globals.css`
+when updating the theme. The project has one light HOKAMI theme; it does not
+switch with system appearance. shadcn variables in `:root` reference HOKAMI tokens
+rather than a separate palette:
+
+- Primary actions: `action-primary` (`#CC3700`), with the existing hover and pressed
+  tokens. `brand-identity` (`#FE4704`) is reserved for brand graphics.
+- Surfaces and text: warm neutral HOKAMI tokens; errors use `feedback-error-text`
+  (`#B42318`), inputs use `border-strong`, and focus uses `focus-ring`.
+- Heading font: Saira. The base corner radius is zero, as defined in the design.
+
+The dark palette is removed, and the `dark:` variant is disabled for components
+added by the CLI. Local inverse sections such as the footer use the existing
+`surface-inverse` and `text-on-inverse` tokens within the same theme.
+See the [shadcn theming documentation](https://ui.shadcn.com/docs/theming).
+
+### Button
+
+The HOKAMI Button keeps the shadcn variant API and Base UI behavior:
+
+- `variant="default"`: Primary with an orange fill and a dark signal trace.
+- `variant="outline"`: Secondary with a transparent fill, a strong border, and
+  an orange signal trace. The filled shadcn `secondary` variant remains available.
+- `size="default"`: 48 px high with 24 px horizontal padding; `size="lg"`: 56 px
+  high with 32 px padding. Both use IBM Plex Mono, 12 px, regular weight, 0.16em
+  letter spacing, and CSS uppercase. Corners remain square in every state.
+- Primary and outline buttons include the original 20 px Figma arrow by default.
+  Use `showIcon={false}` to hide it or `icon={<CustomIcon />}` to replace it.
+  Icon-only sizes accept the icon as children and need an accessible label.
+- Signal traces close on hover, press, and keyboard focus. Transitions take
+  250 ms on hover and 100 ms on press; reduced-motion preferences are respected.
+  Keyboard focus also has a visible 2 px outline with a 2 px offset.
+
+Pass `loading` from the caller's submission state. While loading, Base UI blocks
+activation and keeps the button focusable, and `aria-busy` identifies the pending
+state. Pass a translated `loadingLabel` in both states so both labels reserve
+their maximum width from the first render. If omitted, the original label stays.
+Use `type="submit"` explicitly for form submission:
+
+```tsx
+<Button type="submit" loading={isSubmitting} loadingLabel="Odesílám…" size="lg">
+  Odeslat poptávku
+</Button>
+```
+
+The example uses Czech; pass the active locale's translated text in application
+code. Labels stay in normal case in the source; CSS renders them in uppercase.
+
+SVG arrows and contact points are exported from Figma into
+`public/images/ui/button/`. Button styling is defined in Tailwind/CVA variants
+in `src/components/ui/button-variants.ts`; the shared artwork and labels use
+utilities in `src/components/ui/button-content.tsx`. The `ui-enabled` and
+`ui-disabled` Tailwind variants cover native, Base UI, and semantic-link states.
+Server Components can import `buttonVariants`
+from `@/components/ui/button-variants` to style semantic links without passing
+them through Base UI Button. Keep native link semantics for navigation, as
+described in the [Base UI Button documentation](https://base-ui.com/react/components/button).
+
+### Header and navigation
+
+The shared locale layout includes the Figma header on every page. It uses the
+original SVG wordmark and menu icons from `public/images/header/`. The bar is
+sticky, 72 px high on desktop and 64 px in the compact layout. After scrolling it
+uses the Figma translucent white background, 15 px blur, and subtle shadow.
+The header and its mobile-menu bar have no bottom border.
+Full navigation is shown from 1280 px; narrower screens use the compact header to
+leave room for all five locales' labels. At 1440 px, content aligns to the
+1200 px page container and the gaps match the desktop Figma layout.
+
+Navigation uses shadcn NavigationMenu, NavigationMenuList, NavigationMenuItem,
+and NavigationMenuLink, with `header` and `mobile` CVA variants. The desktop
+divider uses shadcn Separator. Responsive layout and appearance use Tailwind
+utilities, including the standard `xl:` breakpoint (80rem / 1280 px). Background,
+blur, shadow, and motion are expressed in the header components with Tailwind
+utilities and arbitrary values. The header needs no separate stylesheet or global
+theme aliases.
+
+`SiteHeaderClient` composes the shared bar, logo, `HeaderDesktopNav`, and
+`HeaderMobileMenu`. The mobile component owns its Sheet state, focus restoration,
+and desktop-resize dismissal. Shared links and the language switch are in
+`header-links.tsx`; URL state is isolated in `useHeaderLocation`.
+
+Menu entry/exit use 350/300 ms transitions with `ease`, driven by the Sheet's
+Base UI `data-starting-style` and `data-ending-style` attributes. Its frame
+reveals via a `clip-path` transition over 350 ms after a 350 ms delay; it hides
+immediately on closing. The shared reduced-motion rules remove transition delays
+and shorten durations. Follow the same approach for component-only styling and
+simple entry/exit motion; see the [Base UI animation guide](https://base-ui.com/react/handbook/animation).
+
+The mobile menu uses the standard shadcn SheetContent / Base UI Dialog for scroll locking, focus
+containment, Escape dismissal, and focus restoration. It closes after choosing
+a link or expanding the viewport to desktop. Its content scrolls independently
+on short screens. The labels and accessibility text are in `messages/` for all
+five locales. Language links retain the pathname, complete query string
+(including repeated keys and encoded values), and hash. For example,
+`/cs/quality?tag=a&tag=b#details` switches to `/de/quality?tag=a&tag=b#details`.
+Homepage anchors and enquiry CTAs use native fragment links on the homepage,
+preserving its query string; links from other pages target the localized homepage.
+Active navigation compares the pathname and hash independently of query params.
+
+`useHeaderLocation` combines the localized `usePathname` with Next.js
+`useSearchParams` and a `useSyncExternalStore` subscription to `hashchange` and
+`popstate`. Its snapshot reader also checks the hash after App Router commits a
+new URL, since client navigation can change it without firing `hashchange`.
+Keep query updates reactive through the router APIs, and preserve
+search-param multiplicity with `toString()`. A local `Suspense` boundary renders
+the same header shell while query params are unavailable during prerendering.
+See the [Next.js search params documentation](https://nextjs.org/docs/app/api-reference/functions/use-search-params)
+and [next-intl navigation APIs](https://next-intl.dev/docs/routing/navigation).
+
+Navigation destinations are defined in `src/components/site-header/navigation.ts`:
+
+- Industries, capabilities, and process link to `/#industries`, `/#capabilities`,
+  and `/#process` on the localized homepage.
+- Quality, about, and careers use `/quality`, `/about`, and `/careers`. These
+  routes currently contain only localized page headings, ready for their content.
+- The enquiry CTA links to `/#rfq`. Homepage sections and the enquiry form have
+  not been implemented yet; add those IDs when building the corresponding content.
+
+Header CTAs use `ButtonLink`, which shares `ButtonContent`, the original Figma
+decoration, and `buttonVariants` with Button. Navigation remains a native link
+rather than a Base UI button with an anchor tag. The bar CTAs hide the arrow as
+in Figma; the large CTA in the mobile menu keeps it.
 
 ## Code quality
 

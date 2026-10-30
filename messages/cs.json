@@ -1,1 +1,20 @@
-{}
+{
+  "Header": {
+    "navigation": "Hlavní navigace",
+    "home": "HOKAMI — úvodní stránka",
+    "skip": "Přejít na obsah",
+    "openMenu": "Otevřít menu",
+    "closeMenu": "Zavřít menu",
+    "language": "Jazyk",
+    "request": "Poptat výrobu",
+    "requestShort": "Poptat",
+    "items": {
+      "industries": "Obory",
+      "capabilities": "Kapacity",
+      "process": "Proces",
+      "quality": "Kvalita",
+      "about": "O nás",
+      "careers": "Kariéra"
+    }
+  }
+}
