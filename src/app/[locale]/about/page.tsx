@@ -1,4 +1,4 @@
-import { InfoPage } from "@/components/info-page";
+import { InfoPage } from "@/components/pages/info-page";
 import { getPageMetadata } from "@/lib/seo";
 
 export function generateMetadata() {

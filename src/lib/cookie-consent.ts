@@ -3,7 +3,7 @@
 import { useSyncExternalStore } from "react";
 import type { Locale } from "next-intl";
 import * as CookieConsent from "vanilla-cookieconsent";
-import { createConsentConfig } from "@/components/cookie-consent/config";
+import { createConsentConfig } from "@/components/integrations/cookie-consent/config";
 
 export type MeasurementService = "vercelAnalytics" | "speedInsights";
 

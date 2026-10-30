@@ -1,11 +1,14 @@
+import { LegalHeading } from "@/components/pages/legal/legal-heading";
+import { LegalParagraph } from "@/components/pages/legal/legal-paragraph";
+
 // Czech source: https://hokami.cz/cs/whistleblowing/
 // Shared verbatim across all locales; source wording and link targets are preserved.
 export function WhistleblowingContent() {
   return (
     <>
-      <p>Ochrana oznamovatelů (Whistleblowing)</p>
+      <LegalParagraph>Ochrana oznamovatelů (Whistleblowing)</LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Ochrana oznamovatelů je s účinností od 17. 12. 2021 poskytována na
         základě směrnice Evropského parlamentu a Rady (EU) 2019/1937, o ochraně
         osob, které oznamují porušení práva Unie. Tato směrnice rámcově vymezuje
@@ -13,24 +16,24 @@ export function WhistleblowingContent() {
         českého právního řádu byla transponována Zákonem č. 171/2023 Sb., o
         ochraně oznamovatelů (dále jen „ZOO“) a souvisejícím změnovým zákonem s
         účinností k 1. 8. 2023.
-      </p>
+      </LegalParagraph>
 
-      <h2>I. Definice oznámení</h2>
+      <LegalHeading>I. Definice oznámení</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Oznámením se rozumí oznámení fyzické osoby (dále „Oznamovatel“)
         obsahující informace o možném protiprávním jednání, které má znaky
         trestného činu nebo přestupku nebo porušuje právní předpis, o jehož
         spáchání se Oznamovatel dozvěděl v souvislosti s výkonem své práce či
         jiné činnosti pro společnost <strong>HOKAMI CZ</strong> (dále jen
         „Společnost“).
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Oznámení musí obsahovat informace o možném protiprávním jednání. Pro
         účely řádného posouzení a prošetření oznámení je dále vhodné v oznámení
         uvést alespoň tyto informace:
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>
@@ -57,15 +60,15 @@ export function WhistleblowingContent() {
         </li>
       </ul>
 
-      <h2>II. Kdo může podat oznámení</h2>
+      <LegalHeading>II. Kdo může podat oznámení</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Oznámení mohou podat fyzické osoby, které se o protiprávním jednání
         dozvěděly v souvislosti se svou prací nebo jinou obdobnou činností pro
         Společnost.
-      </p>
+      </LegalParagraph>
 
-      <p>Mezi tyto osoby patří:</p>
+      <LegalParagraph>Mezi tyto osoby patří:</LegalParagraph>
 
       <ul>
         <li>
@@ -86,23 +89,23 @@ export function WhistleblowingContent() {
         </li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         Pakliže se na Společnost obrátí s oznámením osoba, jež ve Společnosti
         nikterak nepůsobí a nemá s ní žádnou prokazatelnou „pracovní“
         souvislost, postup (viz níže) se neuplatní, a to mj. z povahy věci.
         Oznamovatel může zůstat anonymní, nebo v oznámení uvést své kontaktní
         údaje, kterými jsou jméno a příjmení, datum narození a kontaktní adresa.
-      </p>
+      </LegalParagraph>
 
-      <h2>III. Jaká protiprávní jednání lze oznamovat</h2>
+      <LegalHeading>III. Jaká protiprávní jednání lze oznamovat</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Obsahem oznámení jsou informace o možném protiprávním jednání, které má
         znaky trestného činu; má znaky přestupku, za který zákon stanoví sazbu
         pokuty, jejíž horní hranice je alespoň 100 000 Kč; porušuje zákon o
         ochraně oznamovatelů nebo porušuje jiný právní předpis nebo předpis
         Evropské unie v oblasti:
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>
@@ -150,11 +153,11 @@ export function WhistleblowingContent() {
         </li>
       </ul>
 
-      <h2>IV. Vnitřní oznamovací systém</h2>
+      <LegalHeading>IV. Vnitřní oznamovací systém</LegalHeading>
 
-      <h3>Elektronicky</h3>
+      <LegalHeading level={3}>Elektronicky</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Oznámení lze zaslat ve formě e-mailové zprávy na e-mail:{" "}
         <strong>
           <strong>
@@ -162,50 +165,50 @@ export function WhistleblowingContent() {
           </strong>
         </strong>{" "}
         nebo využít kontaktního formuláře níže.
-      </p>
+      </LegalParagraph>
 
-      <h3>Telefonicky</h3>
+      <LegalHeading level={3}>Telefonicky</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Telefonicky lze podat oznámení na čísle: 
         <strong>
           <a href="tel:+420482425984">[</a>doplnit číslo]
         </strong>
         .
-      </p>
+      </LegalParagraph>
 
-      <h3>Písemně</h3>
+      <LegalHeading level={3}>Písemně</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Oznámení v listinné podobě lze podat v uzavřené obálce označené slovy 
         <em>„NEOTVÍRAT – WHISTLEBLOWING – Pouze k rukám příslušné osoby“</em> na
         adresu: <strong>HOKAMI CZ</strong> Whistleblowing – ochrana
         oznamovatelů Ampérova 464 Liberec XXIII – Doubí 463 12 Liberec Česká
         republika
-      </p>
+      </LegalParagraph>
 
-      <h3>Osobně</h3>
+      <LegalHeading level={3}>Osobně</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Skrze všechny výše uvedené kanály je možné si dohodnout též osobní
         jednání s Příslušnou osobou. Z jednání je pořizován záznam, který věrně
         zachycuje podstatu ústního oznámení. Oznamovateli je umožněno se k
         záznamu vyjádřit. Toto vyjádření je k záznamu přiloženo.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         ZOO stanoví, že do 7 kalendářních dnů oznamovatel musí obdržet potvrzení
         o tom, že oznámení bylo přijato, a nejpozději do 30 dnů od přijetí
         oznámení by oznamovatel měl obdržet vyrozumění o tom, jakým způsobem
         bylo oznámení posouzeno. Lhůta na prošetření může být ve složitých
         případech dvakrát prodloužena o 30 dnů (celkem tedy na 90 dnů).
-      </p>
+      </LegalParagraph>
 
-      <h2>V. Příslušná osoba a kontakty</h2>
+      <LegalHeading>V. Příslušná osoba a kontakty</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         <strong>Příslušná osoba:</strong>
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>
@@ -222,16 +225,16 @@ export function WhistleblowingContent() {
         </li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         <em>
           (Volitelné: Příslušná osoba je zároveň kontaktní osobou v oblasti
           protikorupce.)
         </em>
-      </p>
+      </LegalParagraph>
 
-      <h2>VI. Vnější oznamovací systém</h2>
+      <LegalHeading>VI. Vnější oznamovací systém</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Oznamovatel, který z jakéhokoliv důvodu nechce učinit oznámení
         prostřednictvím vnitřního oznamovacího systému Společnosti dle výše
         uvedených pravidel, je oprávněn učinit oznámení prostřednictvím
@@ -244,20 +247,20 @@ export function WhistleblowingContent() {
         >
           https://oznamovatel.justice.cz/chci-podat-oznameni/
         </a>
-      </p>
+      </LegalParagraph>
 
-      <h2>VII. Ochrana oznamovatele</h2>
+      <LegalHeading>VII. Ochrana oznamovatele</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Přístup k oznámením má pouze příslušná osoba – tedy osoba pověřená
         přijímáním a vyřizováním oznámení podaných prostřednictvím vnitřního
         oznamovacího systému. Ve vztahu k oznámením podávaným u Ministerstva
         spravedlnosti (tedy prostřednictvím tzv. externího oznamovacího systému)
         je do ohlašovacích systémů přístup umožněn pouze speciálně pověřeným
         zaměstnancům.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         ZOO zakazuje příslušným osobám i pověřeným zaměstnancům komukoliv
         poskytovat informace, které by mohly zmařit nebo ohrozit účel podávání
         oznámení. Totožnost oznamovatele ani jiné osoby chráněné před odvetnými
@@ -266,23 +269,23 @@ export function WhistleblowingContent() {
         představuje pouze situace, kdy je příslušná osoba nebo pověřený
         zaměstnanec ze zákona povinen tyto informace poskytnout příslušným
         orgánům veřejné moci.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Povinnost zachovávat důvěrnost se netýká pouze totožnosti, ale vztahuje
         se i na jakékoli další informace, z nichž by bylo možné přímo či
         nepřímo určit identitu oznamovatele nebo jiných chráněných osob (a tím
         zmařit nebo ohrozit účel podávání oznámení).
-      </p>
+      </LegalParagraph>
 
-      <h2>VIII. Poučení o vědomě nepravdivém oznámení</h2>
+      <LegalHeading>VIII. Poučení o vědomě nepravdivém oznámení</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Fyzické osobě, která podá vědomě nepravdivé oznámení, nenáleží ochrana
         před odvetnými opatřeními. Oznamovatel se dopustí přestupku tím, že podá
         vědomě nepravdivé oznámení, za což lze podle zákona uložit pokutu
         do výše 50 000 Kč.
-      </p>
+      </LegalParagraph>
     </>
   );
 }

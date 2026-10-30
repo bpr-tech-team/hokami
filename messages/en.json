@@ -36,6 +36,44 @@
       }
     }
   },
+  "Industries": {
+    "eyebrow": "Industries",
+    "title": "Six worlds, one standard",
+    "description": "Every industry defines defects differently. Select yours to see the certifications, documentation and processes that apply.",
+    "imageAlt": "Electronics example: {industry}",
+    "items": {
+      "aero": {
+        "name": "Aviation and New Space",
+        "description": "Assemblies for environments where servicing is not an option.",
+        "certification": "EN 9100"
+      },
+      "auto": {
+        "name": "Automotive",
+        "description": "Series production with full traceability and PPAP-level documentation.",
+        "certification": "IATF 16949"
+      },
+      "med": {
+        "name": "Medical devices",
+        "description": "Traceability down to each component and records that meet notified body requirements.",
+        "certification": "ISO 13485"
+      },
+      "def": {
+        "name": "Defence and security",
+        "description": "A controlled supply chain, secure documentation and a European manufacturing base.",
+        "certification": "AQAP"
+      },
+      "ind": {
+        "name": "Industrial machinery",
+        "description": "Full lifecycle support, obsolescence management and repeat production runs over ten years.",
+        "certification": "ISO 9001"
+      },
+      "cons": {
+        "name": "Consumer electronics",
+        "description": "Cost-optimised high-volume production without relaxing process controls.",
+        "certification": "Focus on unit cost"
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — home",
     "legal": "Legal information",

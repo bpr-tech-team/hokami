@@ -36,6 +36,44 @@
       }
     }
   },
+  "Industries": {
+    "eyebrow": "Obory",
+    "title": "Šest světů, jeden standard",
+    "description": "Každý obor má vlastní definici vady. Vyberte ten svůj a uvidíte certifikace, dokumentaci i proces, které k němu patří.",
+    "imageAlt": "Ukázka elektroniky: {industry}",
+    "items": {
+      "aero": {
+        "name": "Letectví a New Space",
+        "description": "Sestavy pro prostředí, kde servisní zásah není možný.",
+        "certification": "EN 9100"
+      },
+      "auto": {
+        "name": "Automotive",
+        "description": "Sériová výroba s plnou dohledatelností a dokumentací na úrovni PPAP.",
+        "certification": "IATF 16949"
+      },
+      "med": {
+        "name": "Zdravotnické prostředky",
+        "description": "Dohledatelnost až na jednotlivou součástku a záznamy, které projdou notifikovanou osobou.",
+        "certification": "ISO 13485"
+      },
+      "def": {
+        "name": "Obrana a bezpečnost",
+        "description": "Kontrolovaný dodavatelský řetězec, zabezpečená dokumentace, evropská výrobní základna.",
+        "certification": "AQAP"
+      },
+      "ind": {
+        "name": "Průmyslové stroje",
+        "description": "Podpora po celý životní cyklus, řízení obsolescence, opakované série po deset let.",
+        "certification": "ISO 9001"
+      },
+      "cons": {
+        "name": "Spotřební elektronika",
+        "description": "Nákladově optimalizovaná velkosériová výroba bez uvolnění procesu.",
+        "certification": "Důraz na cenu za kus"
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — úvodní stránka",
     "legal": "Právní informace",

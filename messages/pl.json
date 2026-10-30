@@ -36,6 +36,44 @@
       }
     }
   },
+  "Industries": {
+    "eyebrow": "Branże",
+    "title": "Sześć światów, jeden standard",
+    "description": "Każda branża inaczej definiuje wady. Wybierz swoją, aby poznać odpowiednie certyfikacje, dokumentację i procesy.",
+    "imageAlt": "Przykład elektroniki: {industry}",
+    "items": {
+      "aero": {
+        "name": "Lotnictwo i New Space",
+        "description": "Zespoły do środowisk, w których interwencja serwisowa nie jest możliwa.",
+        "certification": "EN 9100"
+      },
+      "auto": {
+        "name": "Motoryzacja",
+        "description": "Produkcja seryjna z pełną identyfikowalnością i dokumentacją na poziomie PPAP.",
+        "certification": "IATF 16949"
+      },
+      "med": {
+        "name": "Wyroby medyczne",
+        "description": "Identyfikowalność aż do pojedynczego komponentu oraz zapisy spełniające wymagania jednostki notyfikowanej.",
+        "certification": "ISO 13485"
+      },
+      "def": {
+        "name": "Obronność i bezpieczeństwo",
+        "description": "Kontrolowany łańcuch dostaw, zabezpieczona dokumentacja i europejska baza produkcyjna.",
+        "certification": "AQAP"
+      },
+      "ind": {
+        "name": "Maszyny przemysłowe",
+        "description": "Wsparcie przez cały cykl życia, zarządzanie starzeniem się komponentów i powtarzane serie przez dziesięć lat.",
+        "certification": "ISO 9001"
+      },
+      "cons": {
+        "name": "Elektronika użytkowa",
+        "description": "Zoptymalizowana kosztowo produkcja wielkoseryjna bez osłabiania kontroli procesu.",
+        "certification": "Nacisk na cenę jednostkową"
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — strona główna",
     "legal": "Informacje prawne",

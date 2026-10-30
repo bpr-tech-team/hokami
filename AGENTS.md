@@ -38,6 +38,21 @@ Use action-primary for primary actions and its hover/pressed tokens for their
 states; reserve brand-identity for graphics. Use existing inverse tokens for local
 dark surfaces. Keep the default corner radius at zero, following the design.
 
+## Component reuse and organization
+
+If the same UI pattern or typography is used in at least two places, extract and
+reuse a component. Use `Heading`, `Text`, and `MonoText` from
+`src/components/typography` for shared interface typography; use `Section`,
+`Container`, and `PageMain` from `src/components/layout` for shared layout.
+Keep the semantic HTML element independent of its visual variant.
+
+Group components by responsibility: `layout/header`, `layout/footer`,
+`sections/home/<section>`, `navigation`, `pages`, `integrations`, and `ui`.
+Keep section-specific cards, images, interactive controls, and types beside the
+section. Keep the button family together in `ui/button`. Shared locale options
+belong in `src/i18n/languages.ts`, and shared URL state in
+`src/hooks/use-site-location.ts`. See README for the component map.
+
 ## Navigation
 
 Header navigation uses homepage anchors `industries`, `capabilities`, `process`,
@@ -52,7 +67,7 @@ Keep the menu's entry/exit transitions at 350/300 ms with `ease`; reveal its
 frame over 350 ms after a 350 ms delay. Respect reduced-motion preferences.
 
 Keep the header shell, `HeaderDesktopNav`, and `HeaderMobileMenu` separate; the
-mobile component owns modal state and focus behavior. Use `useHeaderLocation` for
+mobile component owns modal state and focus behavior. Use `useSiteLocation` for
 pathname, query, and hash. Language switching must preserve all three, including
 duplicate query keys and encoded values. Use native fragment links for anchors
 on the current page so query params survive hash navigation. Keep URL-dependent

@@ -36,6 +36,44 @@
       }
     }
   },
+  "Industries": {
+    "eyebrow": "Branchen",
+    "title": "Sechs Welten, ein Standard",
+    "description": "Jede Branche definiert Fehler anders. Wählen Sie Ihre Branche und erfahren Sie, welche Zertifizierungen, Dokumentation und Prozesse dafür gelten.",
+    "imageAlt": "Elektronikbeispiel: {industry}",
+    "items": {
+      "aero": {
+        "name": "Luftfahrt und New Space",
+        "description": "Baugruppen für Umgebungen, in denen ein Serviceeinsatz nicht möglich ist.",
+        "certification": "EN 9100"
+      },
+      "auto": {
+        "name": "Automotive",
+        "description": "Serienfertigung mit vollständiger Rückverfolgbarkeit und Dokumentation auf PPAP-Niveau.",
+        "certification": "IATF 16949"
+      },
+      "med": {
+        "name": "Medizinprodukte",
+        "description": "Rückverfolgbarkeit bis zum einzelnen Bauteil und Nachweise, die den Anforderungen einer benannten Stelle entsprechen.",
+        "certification": "ISO 13485"
+      },
+      "def": {
+        "name": "Verteidigung und Sicherheit",
+        "description": "Eine kontrollierte Lieferkette, geschützte Dokumentation und eine europäische Fertigungsbasis.",
+        "certification": "AQAP"
+      },
+      "ind": {
+        "name": "Industriemaschinen",
+        "description": "Unterstützung über den gesamten Lebenszyklus, Obsoleszenzmanagement und wiederkehrende Serien über zehn Jahre.",
+        "certification": "ISO 9001"
+      },
+      "cons": {
+        "name": "Unterhaltungselektronik",
+        "description": "Kostenoptimierte Großserienfertigung ohne Abstriche bei der Prozesskontrolle.",
+        "certification": "Fokus auf Stückkosten"
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — Startseite",
     "legal": "Rechtliche Informationen",

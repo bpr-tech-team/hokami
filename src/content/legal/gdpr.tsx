@@ -1,13 +1,16 @@
+import { LegalHeading } from "@/components/pages/legal/legal-heading";
+import { LegalParagraph } from "@/components/pages/legal/legal-paragraph";
+
 // Czech source: https://hokami.cz/cs/gdpr/
 // Shared verbatim across all locales; link targets match the visible HOKAMI addresses.
 export function GdprContent() {
   return (
     <>
-      <h2>Podmínky GDPR</h2>
+      <LegalHeading>Podmínky GDPR</LegalHeading>
 
-      <p>Vážení návštěvníci webových stránek,</p>
+      <LegalParagraph>Vážení návštěvníci webových stránek,</LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         tento dokument obsahuje základní informace o zpracovávání Vašich
         osobních údajů v naší společnosti Hokami CZ s. r. o. Vážíme si toho, že
         nám umožňujete práci s Vašimi osobními údaji a děláme vše proto, aby
@@ -15,9 +18,9 @@ export function GdprContent() {
         co nejvíce transparentní, abyste měli přehled o tom, co s Vašimi údaji
         děláme a na co máte v souvislosti se zpracováním Vašich osobních údajů
         právo.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Informační memorandum bylo vytvořeno v souladu s Nařízením Evropského
         parlamentu a Rady (EU) 2016/679 ze dne 27. dubna 2016 o ochraně
         fyzických osob v souvislosti se zpracováním osobních údajů a o volném
@@ -26,9 +29,11 @@ export function GdprContent() {
           <em>Nařízení GDPR</em>
         </strong>
         ) a dalšími právními předpisy, které upravují zpracování osobních údajů.
-      </p>
+      </LegalParagraph>
 
-      <p>V tomto informačním memorandu naleznete následující informace:</p>
+      <LegalParagraph>
+        V tomto informačním memorandu naleznete následující informace:
+      </LegalParagraph>
 
       <ul>
         <li>kdo je správce osobních údajů,</li>
@@ -52,27 +57,29 @@ export function GdprContent() {
         <li>zda dochází k automatizovanému rozhodování.</li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         V tomto informačním memorandu jsou k nalezení základní informace, které
         musí správce poskytnout subjektu údajů podle <em>Nařízení GDPR</em>.
         Informační memorandum je dostupné na webových stránkách společnosti: 
         <a href="https://www.hokami.cz/">www.hokami.cz</a>.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         V případě jakýchkoliv dotazů ohledně zpracování Vašich osobních údajů
         nás neváhejte kontaktovat na e-mailové adrese 
         <a href="mailto:gdpr@hokami.cz">gdpr@hokami.cz</a>.
-      </p>
+      </LegalParagraph>
 
-      <h2>ÚVODNÍ USTANOVENÍ</h2>
+      <LegalHeading>ÚVODNÍ USTANOVENÍ</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Cílem tohoto informačního memoranda je poskytnout Subjektům údajů
         základní informace ohledně zpracování Osobních údajů.
-      </p>
+      </LegalParagraph>
 
-      <p>Pro potřeby tohoto informačního memoranda se rozumí:</p>
+      <LegalParagraph>
+        Pro potřeby tohoto informačního memoranda se rozumí:
+      </LegalParagraph>
 
       <ul>
         <li>
@@ -80,16 +87,16 @@ export function GdprContent() {
         </li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         správcem je společnost Hokami CZ s. r. o., se sídlem Ampérova 464,
         Liberec 23, 463 12, IČO 25024981, zapsaná v obchodním rejstříku vedeném
         Krajským soudem v Ústí nad Labem, spisová značka 
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         C12746, zastoupená Ing. Josefem Suskou (dále jen 
         <strong>Správce</strong>),
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>
@@ -97,23 +104,23 @@ export function GdprContent() {
         </li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         subjektem údajů jste Vy, tedy fyzická osoba, o které jsou zpracovávané
         Osobní údaje – návštěvník webových stránek společnosti Hokami CZ s. r.
         o. (dále jen <strong>Subjekt údajů</strong>).
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Správce Osobních údajů tímto informuje o způsobu a rozsahu zpracování
         Osobních údajů, včetně rozsahu Vašich práv souvisejících se zpracováním
         Osobních údajů.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Správce je poskytovatel stravovacích služeb a za tímto účelem provozuje
         kavárnu Dolicafe. V rámci této činnosti jsou Správcem zpracovávány
         Osobní údaje:
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>
@@ -125,65 +132,69 @@ export function GdprContent() {
         <li>za účely uvedenými v článku 3 tohoto informačního memoranda.</li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         Osobní údaje nejsou zpracovávány žádným jiným subjektem. Ke
         zpracovávaným Osobním údajům bude mít přístup pouze Správce.
-      </p>
+      </LegalParagraph>
 
-      <h2>OCHRANA OSOBNÍCH ÚDAJŮ A INFORMACE O ZPRACOVÁNÍ</h2>
+      <LegalHeading>
+        OCHRANA OSOBNÍCH ÚDAJŮ A INFORMACE O ZPRACOVÁNÍ
+      </LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Na Subjekty údajů se vztahuje zákon č. 110/2019 Sb., o zpracování
         osobních údajů, ve znění pozdějších předpisů a další příslušné právní
         předpisy.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Subjekt údajů bere na vědomí, že odesláním vyplněného kontaktního
         formuláře započne zpracovávání Osobních údajů Správcem.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Pokud Subjekt údajů neposkytne své Osobní údaje není možné mu poskytnout
         službu kontaktování Správce pomocí kontaktního formuláře na webových
         stránkách. Osobní údaje jsou v této souvislosti nezbytné pro poskytnutí
         konkrétní služby či produktu Správce.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Poskytování Osobních údajů Správci je obecně smluvní a zákonný
         požadavek. Ohledně poskytování Osobních údajů pro marketingové účely,
         což nepředstavuje plnění smluvní a zákonné povinnosti správce, je od
         Subjektu údajů vyžadován souhlas.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Subjekt údajů je povinen Správci poskytnout pouze pravdivé a přesné
         Osobní údaje.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Správce vynaloží maximální úsilí, aby nedošlo k neoprávněnému zpracování
         Osobních údajů.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Osobní údaje jsou a budou zpracovávány v elektronické podobě
         automatizovaným i neautomatizovaným způsobem.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Subjekt údajů bere na vědomí, že může docházet k ukládání cookies
         společností na jeho zařízení při návštěvě webových stránek 
         <a href="https://www.hokami.cz/">www.hokami.cz</a>. Informace o cookies
         jsou dostupné na webových stránkách správce.
-      </p>
+      </LegalParagraph>
 
-      <h2>INFORMACE O JEDNOTLIVÝCH ZPRACOVÁNÍ OSOBNÍCH ÚDAJŮ</h2>
+      <LegalHeading>
+        INFORMACE O JEDNOTLIVÝCH ZPRACOVÁNÍ OSOBNÍCH ÚDAJŮ
+      </LegalHeading>
 
-      <p>
+      <LegalParagraph>
         <strong>Webové stránky – komunikace</strong>
-      </p>
+      </LegalParagraph>
 
       <figure>
         <table>
@@ -267,51 +278,55 @@ export function GdprContent() {
         </table>
       </figure>
 
-      <p>
+      <LegalParagraph>
         Správce nevyžaduje, aby byly vyplněny dobrovolné údaje. Je pouze na
         úvaze subjektu údajů, zda a v jakém rozsahu dobrovolné údaje uvede.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Zadáním dobrovolných údajů subjekt údajů povoluje jejich zpracování.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Správce nevyžaduje, aby text e-mailové a jiné komunikace obsahoval
         jakékoliv osobní údaje subjektu údajů. Je pouze na úvaze subjektu údajů,
         zda a v jakém rozsahu své osobní údaje uvede.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Uvedením osobních údajů v textu e-mailové a jiné komunikace subjekt
         údajů povoluje jejich zpracování.
-      </p>
+      </LegalParagraph>
 
-      <p>Poskytování Osobních údajů není zákonným ani smluvním požadavkem.</p>
+      <LegalParagraph>
+        Poskytování Osobních údajů není zákonným ani smluvním požadavkem.
+      </LegalParagraph>
 
-      <p>Subjekt údajů nemá povinnost Osobní údaje poskytnout.</p>
+      <LegalParagraph>
+        Subjekt údajů nemá povinnost Osobní údaje poskytnout.
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Možné důsledky neposkytnutí jsou: Subjektu údajů nebude moci být zaslána
         odpověď na vznesený dotaz pomocí kontaktního formuláře.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Osobní údaje nebudou nikdy ukládané déle, než je zákonem stanovená
         maximální lhůta. Po uplynutí této lhůty budou Osobní údaje v souladu s 
         <em>Nařízením GDPR</em> bezpečně a nenávratně zničeny, aby nemohlo dojít
         k jejich zneužití.
-      </p>
+      </LegalParagraph>
 
-      <h2>PRÁVA SUBJEKTU ÚDAJŮ</h2>
+      <LegalHeading>PRÁVA SUBJEKTU ÚDAJŮ</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Správce pracuje s Vašimi Osobními údaji vždy tak, aby zpracování
         probíhalo správně a bezpečně. Práva pro Subjekt údajů jsou Vám
         garantována a můžete je u Správce uplatnit.
-      </p>
+      </LegalParagraph>
 
-      <p>Svá práva může Subjekt údajů uplatnit:</p>
+      <LegalParagraph>Svá práva může Subjekt údajů uplatnit:</LegalParagraph>
 
       <ul>
         <li>
@@ -320,35 +335,37 @@ export function GdprContent() {
         </li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         Další možností je odeslání písemné žádosti na adresu: Popzor, s.r.o.,
         Hokami CZ 464, Liberec 23.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Vyjádření a další informace o přijatých opatřeních budou Subjektu údajů
         poskytnuty co nejdříve, nejpozději do jednoho měsíce od podání jeho
         žádosti. Tato lhůta může být prodloužena až o dva měsíce s ohledem na
         složitost a počet žádostí. Správce bude Subjekt údajů informovat o
         případném prodloužení a důvodech, které k němu vedly.
-      </p>
+      </LegalParagraph>
 
-      <p>Uplatnění práv poskytuje Správce bezplatně.</p>
+      <LegalParagraph>
+        Uplatnění práv poskytuje Správce bezplatně.
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Přiměřený poplatek zohledňující administrativní náklady spojené s
         poskytnutím požadovaných informací může být účtován v případě, že by
         žádost byla zjevně nedůvodná nebo nepřiměřená, zejména pro své
         opakování.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         V případě, že by se Subjekt údajů domníval, že Správce provádí
         zpracování jeho Osobních údajů, které je v rozporu s ochranou jeho
         soukromého a osobního života nebo v rozporu s příslušnými právními
         předpisy, zejména jsou-li Osobní údaje nepřesné s ohledem na účel jejich
         zpracování, může:
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>
@@ -369,16 +386,16 @@ export function GdprContent() {
         </li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         <strong>Právo na přístup:</strong>
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo získat od Správce potvrzení, zda Osobní údaje, které se Vás
         týkají, jsou nebo nejsou zpracovávány. Pokud jsou zpracovávány, máte
         právo získat přístup k těmto údajů a k následujícím informacím (které
         jsou součástí tohoto informačního memoranda):
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>účely zpracování,</li>
@@ -420,13 +437,13 @@ export function GdprContent() {
         </li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         Pokud se Osobní údaje předávají do třetí země nebo mezinárodní
         organizaci, má Subjekt údajů právo být informován o vhodných zárukách,
         které se vztahují na předání.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo požadovat, aby Vám Správce poskytl kopii zpracovávaných
         Osobních údajů. Za další kopie na Vaši žádost může Správce účtovat
         přiměřený poplatek na základě administrativních nákladů. Jestliže
@@ -434,28 +451,28 @@ export function GdprContent() {
         elektronické formě, která se běžně používá, pokud nepožádáte o jiný
         způsob. Právem získat kopii nesmí být nepříznivě dotčena práva a svobody
         jiných osob.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         <strong>Právo na opravu:</strong>
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo požadovat, aby Správce bez zbytečného odkladu opravil Vaše
         nepřesné Osobní údaje. S přihlédnutím k účelům zpracování máte právo na
         doplnění neúplných Osobních údajů, a to i poskytnutím dodatečného
         prohlášení.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         <strong>Právo na výmaz:</strong>
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo požadovat, aby Správce bez zbytečného odkladu vymazal Vaše
         Osobní údaje a Správce má povinnost Osobní údaje bez zbytečného odkladu
         vymazat, pokud je dán jeden z těchto důvodů:
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>
@@ -489,23 +506,23 @@ export function GdprContent() {
         </li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         Po uplynutí doby určené pro zpracování Osobních údajů maže Správce
         Osobní údaje vždy a automaticky. S žádostí na výmaz se můžete na Správce
         kdykoliv obrátit. Po obdržení takové žádosti Správce posoudí oprávněnost
         Vašeho práva (Správce může mít právní povinnosti nebo oprávněný zájem
         pro zpracování Osobních údajů, na základě kterých může Vaše Osobní údaje
         dál zpracovávat) a o jeho vyřízení Vás bude informovat.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         <strong>Právo na omezení zpracování:</strong>
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo požadovat, aby Správce omezil zpracování Vašich Osobních
         údajů, v kterémkoli z těchto případů:
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>
@@ -531,30 +548,30 @@ export function GdprContent() {
         </li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         Pokud bylo zpracování omezeno, mohou být tyto Osobní údaje, s výjimkou
         jejich uložení, zpracovány pouze s Vaším souhlasem, nebo z důvodu
         určení, výkonu nebo obhajoby právních nároků, z důvodu ochrany práv jiné
         fyzické nebo právnické osoby nebo z důvodů důležitého veřejného zájmu
         Unie nebo některého členského státu.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Pokud má být omezení zpracování Vašich Osobních údajů zrušeno, budete o
         tom předem informováni ze strany Správce.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         <strong>Právo na přenositelnost:</strong>
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo získat Osobní údaje, které se Vás týkají a které byly
         poskytnuty Správci, ve strukturovaném, běžně používaném a strojově
         čitelném formátu, a právo předat tyto údaje jinému správci, aniž by tomu
         Správce, kterému byly Osobní údaje poskytnuty, bránil, a to v případě,
         že:
-      </p>
+      </LegalParagraph>
 
       <ul>
         <li>zpracování je založeno na souhlasu nebo na smlouvě, a zároveň</li>
@@ -562,65 +579,67 @@ export function GdprContent() {
         <li>zpracování se provádí automatizovaně.</li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         Při výkonu tohoto práva můžete od Správce požadovat, aby byly Osobní
         údaje předány přímo jedním Správcem druhému správci, pokud je to
         technicky proveditelné.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Toto právo nelze uplatnit, pokud je zpracování nezbytné pro splnění
         úkolu prováděného ve veřejném zájmu nebo při výkonu veřejné moci, kterým
         je Správce pověřen.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         <strong>Právo vznést námitku:</strong>
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo kdykoli vznést námitku proti zpracování Vašich Osobních
         údajů, které jsou zpracovávány na základě veřejného zájmu a výkonu
         veřejné moci nebo oprávněných zájmů Správce, včetně profilování. Správce
         Osobní údaje dále nezpracovává, pokud neprokáže závažné oprávněné důvody
         pro zpracování, které převažují nad Vašimi zájmy nebo právy a svobodami,
         nebo pro určení, výkon nebo obhajobu právních nároků.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Pokud se Osobní údaje zpracovávají pro účely přímého marketingu, máte
         právo vznést kdykoli námitku proti zpracování Vašich Osobních údajů pro
         tento marketing, což zahrnuje i profilování, pokud se týká tohoto
         přímého marketingu.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Pokud jsou Vaše Osobní údaje zpracovávány pro účely vědeckého či
         historického výzkumu nebo pro statistické účely, máte právo, z důvodů
         týkajících se Vaší konkrétní situace, vznést námitku proti zpracování
         Vašich Osobních údajů. To neplatí v případě, že je zpracování nezbytné
         pro splnění úkolu prováděného z důvodů veřejného zájmu.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Podle požadavků v <em>Nařízení GDPR</em>, bylo toto právo výslovně
         zmíněno a je uvedeno zřetelně a odděleně od jakýchkoli jiných informací.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         <strong>
           Právo nebýt předmětem automatizovaného rozhodování, včetně
           profilování:
         </strong>
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo nebýt předmětem žádného rozhodnutí založeného výhradně na
         automatizovaném zpracování, včetně profilování, které má pro Vás právní
         účinky nebo se Vás obdobným způsobem významně dotýká.
-      </p>
+      </LegalParagraph>
 
-      <p>Právo nelze využít v případech, kdy je rozhodnutí:</p>
+      <LegalParagraph>
+        Právo nelze využít v případech, kdy je rozhodnutí:
+      </LegalParagraph>
 
       <ul>
         <li>nezbytné k uzavření nebo plnění smlouvy,</li>
@@ -634,71 +653,79 @@ export function GdprContent() {
         <li>založeno na Vašem výslovném souhlasu.</li>
       </ul>
 
-      <p>
+      <LegalParagraph>
         Pokud je zpracování Osobních údajů založeno na smlouvě nebo výslovném
         souhlasu, provede Správce údajů vhodná opatření na ochranu Vašich práv a
         svobod a oprávněných zájmů, alespoň práva na lidský zásah ze strany
         Správce, práva vyjádřit svůj názor, práva získat vysvětlení o učiněném
         rozhodnutí a práva napadnout rozhodnutí.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         <strong>Právo odvolat souhlas:</strong>
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo udělený souhlas (nebo konkludentní souhlas) se zpracováním
         Vašich Osobních údajů kdykoliv odvolat. Odvolání je možné provést pomocí
         zaslání odvolání souhlasu na následující e-mail: 
         <a href="mailto:gdpr@hokami.cz">gdpr@hokami.cz</a>.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         <strong>Právo podat stížnost u dozorového úřadu:</strong>
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Máte právo podat stížnost u některého dozorového úřadu, zejména v
         členském státě svého obvyklého bydliště, místa výkonu zaměstnání nebo
         místa, kde došlo k údajnému porušení, pokud se domníváte, že zpracováním
         Vašich Osobních údajů je porušeno <em>Nařízení GDPR</em>.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Dozorovým úřadem je v České republice Úřad pro ochranu osobních údajů,
         který je možné kontaktovat na adrese Pplk. Sochora 27, 170 00 Praha 7,
         telefonním čísle +420 234 665 111 (ústředna) nebo e-mailu 
         <a href="mailto:posta@uoou.cz">posta@uoou.cz</a>. Další informace
         získáte na adrese 
         <a href="https://www.uoou.cz/">https://www.uoou.cz/</a>.
-      </p>
+      </LegalParagraph>
 
-      <h2>AUTOMATIZOVANÉ ROZHODOVÁNÍ</h2>
+      <LegalHeading>AUTOMATIZOVANÉ ROZHODOVÁNÍ</LegalHeading>
 
-      <p>Zpracování Osobních údajů nezahrnuje profilování.</p>
+      <LegalParagraph>
+        Zpracování Osobních údajů nezahrnuje profilování.
+      </LegalParagraph>
 
-      <p>Zpracování Osobních údajů nezahrnuje automatizované rozhodování.</p>
+      <LegalParagraph>
+        Zpracování Osobních údajů nezahrnuje automatizované rozhodování.
+      </LegalParagraph>
 
-      <h2>ZÁVĚREČNÁ USTANOVENÍ</h2>
+      <LegalHeading>ZÁVĚREČNÁ USTANOVENÍ</LegalHeading>
 
-      <p>
+      <LegalParagraph>
         Veškeré právní vztahy vznikající v souvislosti se zpracováváním Osobních
         údajů se řídí právním řádem České republiky, a to bez ohledu na to,
         odkud byl přístup k nim realizován. K řešení případných sporů vzniklých
         v souvislosti s ochranou soukromí mezi Subjektem údajů a Správcem jsou
         příslušné české soudy.
-      </p>
+      </LegalParagraph>
 
-      <p>
+      <LegalParagraph>
         Subjekty údajů, kteří prostřednictvím kontaktního formuláře poskytnou
         své Osobní údaje za účelem komunikace se Správcem či poskytnou souhlas
         se zpracováním Osobních údajů, tak činí dobrovolně, svým jménem a
         Správce jejich činnost nijak neřídí.
-      </p>
+      </LegalParagraph>
 
-      <p>Znění informačního memoranda může Správce změnit či doplňovat.</p>
+      <LegalParagraph>
+        Znění informačního memoranda může Správce změnit či doplňovat.
+      </LegalParagraph>
 
-      <p>Toto informační memorandum je účinné od 18. ledna 2022.</p>
+      <LegalParagraph>
+        Toto informační memorandum je účinné od 18. ledna 2022.
+      </LegalParagraph>
     </>
   );
 }

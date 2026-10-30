@@ -1,13 +1,13 @@
 import "../globals.css";
-import "@/components/cookie-consent/cookie-consent.css";
+import "@/components/integrations/cookie-consent/cookie-consent.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { SiteHeader } from "@/components/site-header/site-header";
-import { SiteFooter } from "@/components/site-footer/site-footer";
-import { SiteMeasurement } from "@/components/site-measurement";
-import { SiteCookieConsent } from "@/components/cookie-consent/cookie-consent";
+import { SiteHeader } from "@/components/layout/header/site-header";
+import { SiteFooter } from "@/components/layout/footer/site-footer";
+import { SiteMeasurement } from "@/components/integrations/analytics/site-measurement";
+import { SiteCookieConsent } from "@/components/integrations/cookie-consent/cookie-consent";
 import { site } from "@/lib/site";
 import { ibmPlexMono, ibmPlexSans, saira } from "../fonts";
 

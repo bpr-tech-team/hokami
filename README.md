@@ -63,6 +63,33 @@ icons, and Tailwind CSS v4. Configuration is in `components.json`, UI components
 are in `src/components/ui/`, and the shared `cn` utility is in `src/lib/utils.ts`.
 The initial `Button` component is available at `@/components/ui/button`.
 
+### Component organization
+
+Extract a shared component when the same UI pattern or typography is used in
+two places. Reuse the existing components when adding sections:
+
+- `components/typography/`: `Heading` for section, item, and page titles; `Text`
+  for body, lead, and small text; `MonoText` for eyebrows, labels, and metadata.
+  Choose the HTML element with `as` independently of its visual variant.
+- `components/layout/`: `Section` composes the shared eyebrow, H2, introduction,
+  container, and responsive section spacing. `Container` and `PageMain` provide
+  shared page layout. Header and footer components live in their own subfolders.
+- `components/sections/home/`: homepage sections grouped by feature. Each folder
+  keeps its cards, accordion, images, and related types together.
+- `components/navigation/`: the shared language switch. Locale options are in
+  `i18n/languages.ts`; `hooks/use-site-location.ts` preserves pathname, query,
+  and hash for both header and footer.
+- `components/pages/`: shared layouts for information and legal pages.
+  `pages/legal/` also contains `LegalHeading` and `LegalParagraph`, which apply
+  shared typography and document spacing to the legal content.
+- `components/integrations/`: analytics and cookie-consent components.
+- `components/ui/`: shadcn primitives, with the button, link, variants, and
+  decoration grouped in `ui/button/`.
+
+Import feature components from their own files. Keep typography styles and
+reusable visual variants in their components, and pass page-specific layout
+adjustments through `className` rather than duplicating whole style strings.
+
 Add components as needed with the installed CLI:
 
 ```bash

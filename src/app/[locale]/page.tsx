@@ -1,4 +1,6 @@
-import { Capabilities } from "@/components/home/capabilities";
+import { PageMain } from "@/components/layout/page-main";
+import { Capabilities } from "@/components/sections/home/capabilities/capabilities";
+import { Industries } from "@/components/sections/home/industries/industries";
 import { getPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -31,7 +33,7 @@ const structuredData = {
 
 export default function Home() {
   return (
-    <main id="main-content" tabIndex={-1}>
+    <PageMain>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -39,6 +41,7 @@ export default function Home() {
         }}
       />
       <Capabilities />
-    </main>
+      <Industries />
+    </PageMain>
   );
 }

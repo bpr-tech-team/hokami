@@ -1,4 +1,4 @@
-import { LegalPage } from "@/components/legal-page";
+import { LegalPage } from "@/components/pages/legal/legal-page";
 import { GdprContent } from "@/content/legal/gdpr";
 import { getPageMetadata } from "@/lib/seo";
 

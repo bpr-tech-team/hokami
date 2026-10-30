@@ -36,6 +36,44 @@
       }
     }
   },
+  "Industries": {
+    "eyebrow": "Toimialat",
+    "title": "Kuusi maailmaa, yksi standardi",
+    "description": "Jokainen toimiala määrittelee virheet omalla tavallaan. Valitse omasi ja tutustu sitä koskeviin sertifiointeihin, dokumentaatioon ja prosesseihin.",
+    "imageAlt": "Elektroniikkaesimerkki: {industry}",
+    "items": {
+      "aero": {
+        "name": "Ilmailu ja New Space",
+        "description": "Kokoonpanoja ympäristöihin, joissa huoltotoimenpiteet eivät ole mahdollisia.",
+        "certification": "EN 9100"
+      },
+      "auto": {
+        "name": "Autoteollisuus",
+        "description": "Sarjatuotantoa täydellä jäljitettävyydellä ja PPAP-tason dokumentaatiolla.",
+        "certification": "IATF 16949"
+      },
+      "med": {
+        "name": "Lääkinnälliset laitteet",
+        "description": "Jäljitettävyys yksittäiseen komponenttiin asti sekä ilmoitetun laitoksen vaatimukset täyttävät asiakirjat.",
+        "certification": "ISO 13485"
+      },
+      "def": {
+        "name": "Puolustus ja turvallisuus",
+        "description": "Hallittu toimitusketju, suojattu dokumentaatio ja eurooppalainen tuotantopohja.",
+        "certification": "AQAP"
+      },
+      "ind": {
+        "name": "Teollisuuskoneet",
+        "description": "Tuki koko elinkaaren ajan, komponenttien vanhenemisen hallinta ja toistuvat tuotantosarjat kymmenen vuoden ajan.",
+        "certification": "ISO 9001"
+      },
+      "cons": {
+        "name": "Kulutuselektroniikka",
+        "description": "Kustannusoptimoitu suurten sarjojen tuotanto tinkimättä prosessinhallinnasta.",
+        "certification": "Painopiste yksikköhinnassa"
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — etusivu",
     "legal": "Oikeudelliset tiedot",
