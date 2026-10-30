@@ -17,6 +17,25 @@
       "careers": "Kariéra"
     }
   },
+  "Capabilities": {
+    "eyebrow": "Kapacity",
+    "title": "Jeden partner od dokumentace k výrobku",
+    "description": "Pošlete dokumentaci. Nakoupíme součástky, osadíme, otestujeme a odešleme hotový výrobek. Žádné předávání, žádný druhý dodavatel, žádné mezery v odpovědnosti.",
+    "cards": {
+      "assembly": {
+        "title": "Kompletní osazování DPS",
+        "description": "Osazování SMT i THT, nákup součástek, finální montáž a logistika. Až pět milionů součástek měsíčně."
+      },
+      "production": {
+        "title": "Od prototypu po sérii",
+        "description": "Jeden validační kus i série půl milionu běží na stejných linkách, se stejným řízením procesu a stejným standardem dokumentace."
+      },
+      "testing": {
+        "title": "Vlastní testovací engineering",
+        "description": "AOI, rentgen, ICT i funkční testy. Testovací přípravky navrhujeme a vyrábíme na míru vašemu produktu, ne naopak."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — úvodní stránka",
     "legal": "Právní informace",

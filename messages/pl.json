@@ -17,6 +17,25 @@
       "careers": "Kariera"
     }
   },
+  "Capabilities": {
+    "eyebrow": "Możliwości",
+    "title": "Jeden partner od dokumentacji do gotowego produktu",
+    "description": "Prześlij dokumentację. Kupimy komponenty, zmontujemy, przetestujemy i wyślemy gotowy produkt. Bez przekazywania prac, bez drugiego dostawcy, bez luk w odpowiedzialności.",
+    "cards": {
+      "assembly": {
+        "title": "Kompleksowy montaż PCB",
+        "description": "Montaż SMT i THT, zakup komponentów, montaż końcowy i logistyka. Do pięciu milionów komponentów miesięcznie."
+      },
+      "production": {
+        "title": "Od prototypu do serii",
+        "description": "Pojedynczy egzemplarz walidacyjny i seria pół miliona sztuk powstają na tych samych liniach, z taką samą kontrolą procesu i według tych samych standardów dokumentacji."
+      },
+      "testing": {
+        "title": "Własna inżynieria testowa",
+        "description": "AOI, rentgen, ICT i testy funkcjonalne. Projektujemy i wykonujemy przyrządy testowe dopasowane do Twojego produktu, nie odwrotnie."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — strona główna",
     "legal": "Informacje prawne",

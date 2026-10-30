@@ -17,6 +17,25 @@
       "careers": "Careers"
     }
   },
+  "Capabilities": {
+    "eyebrow": "Capabilities",
+    "title": "One partner from documentation to finished product",
+    "description": "Send us your documentation. We source components, assemble, test and ship the finished product. No handovers, no second supplier, no gaps in responsibility.",
+    "cards": {
+      "assembly": {
+        "title": "Complete PCB assembly",
+        "description": "SMT and THT assembly, component sourcing, final assembly and logistics. Up to five million components per month."
+      },
+      "production": {
+        "title": "From prototype to series production",
+        "description": "A single validation unit and a run of half a million use the same production lines, process controls and documentation standards."
+      },
+      "testing": {
+        "title": "In-house test engineering",
+        "description": "AOI, X-ray, ICT and functional testing. We design and build test fixtures around your product, not the other way around."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — home",
     "legal": "Legal information",

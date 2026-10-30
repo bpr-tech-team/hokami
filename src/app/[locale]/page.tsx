@@ -1,3 +1,4 @@
+import { Capabilities } from "@/components/home/capabilities";
 import { getPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -37,6 +38,7 @@ export default function Home() {
           __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
         }}
       />
+      <Capabilities />
     </main>
   );
 }

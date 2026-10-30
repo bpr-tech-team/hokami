@@ -17,6 +17,25 @@
       "careers": "Ura"
     }
   },
+  "Capabilities": {
+    "eyebrow": "Tuotantokapasiteetti",
+    "title": "Yksi kumppani dokumentaatiosta valmiiseen tuotteeseen",
+    "description": "Lähetä meille dokumentaatio. Hankimme komponentit, kalustamme piirilevyt, testaamme ja toimitamme valmiin tuotteen. Ei siirtoja toimittajalta toiselle, ei toista toimittajaa, ei aukkoja vastuissa.",
+    "cards": {
+      "assembly": {
+        "title": "Piirilevyjen kokonaisvaltainen kalustus",
+        "description": "SMT- ja THT-kalustus, komponenttien hankinta, loppukokoonpano ja logistiikka. Jopa viisi miljoonaa komponenttia kuukaudessa."
+      },
+      "production": {
+        "title": "Prototyypistä sarjatuotantoon",
+        "description": "Yksi validointikappale ja puolen miljoonan kappaleen sarja valmistetaan samoilla linjoilla, samalla prosessinohjauksella ja samojen dokumentointivaatimusten mukaisesti."
+      },
+      "testing": {
+        "title": "Oma testaussuunnittelu",
+        "description": "AOI, röntgen, ICT ja toiminnallinen testaus. Suunnittelemme ja valmistamme testauslaitteet tuotteesi tarpeisiin, ei päinvastoin."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — etusivu",
     "legal": "Oikeudelliset tiedot",

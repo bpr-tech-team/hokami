@@ -17,6 +17,25 @@
       "careers": "Karriere"
     }
   },
+  "Capabilities": {
+    "eyebrow": "Kapazitäten",
+    "title": "Ein Partner von der Dokumentation bis zum fertigen Produkt",
+    "description": "Senden Sie uns Ihre Dokumentation. Wir beschaffen Bauteile, bestücken, testen und versenden das fertige Produkt. Keine Übergaben, kein zweiter Lieferant, keine Lücken in der Verantwortung.",
+    "cards": {
+      "assembly": {
+        "title": "Komplette Leiterplattenbestückung",
+        "description": "SMT- und THT-Bestückung, Bauteilbeschaffung, Endmontage und Logistik. Bis zu fünf Millionen Bauteile pro Monat."
+      },
+      "production": {
+        "title": "Vom Prototyp zur Serie",
+        "description": "Ein einzelnes Validierungsmuster und eine Serie von einer halben Million Stück durchlaufen dieselben Linien, mit derselben Prozesssteuerung und denselben Dokumentationsstandards."
+      },
+      "testing": {
+        "title": "Eigene Testentwicklung",
+        "description": "AOI, Röntgen, ICT und Funktionstests. Wir entwickeln und fertigen Prüfvorrichtungen passend zu Ihrem Produkt, nicht umgekehrt."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — Startseite",
     "legal": "Rechtliche Informationen",
