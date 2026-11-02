@@ -24,6 +24,24 @@
     "contact": "Contact us",
     "production": "Our production"
   },
+  "TrustStrip": {
+    "label": "HOKAMI in numbers",
+    "years": {
+      "label": "In business",
+      "suffix": "{count, plural, one { year} other { years}}"
+    },
+    "specialists": {
+      "label": "{count, plural, one {Specialist} other {Specialists}}",
+      "suffix": "+"
+    },
+    "turnover": {
+      "label": "Turnover in EUR",
+      "suffix": "+"
+    },
+    "export": {
+      "label": "Export"
+    }
+  },
   "Capabilities": {
     "eyebrow": "Capabilities",
     "title": "One partner from documentation to finished product",

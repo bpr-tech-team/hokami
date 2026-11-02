@@ -24,6 +24,24 @@
     "contact": "Kontaktujte nás",
     "production": "Naše výroba"
   },
+  "TrustStrip": {
+    "label": "HOKAMI v číslech",
+    "years": {
+      "label": "Na trhu",
+      "suffix": "{count, plural, one { rok} few { roky} many { roku} other { let}}"
+    },
+    "specialists": {
+      "label": "{count, plural, one {Specialista} few {Specialisté} other {Specialistů}}",
+      "suffix": "+"
+    },
+    "turnover": {
+      "label": "Obrat v EUR",
+      "suffix": "+"
+    },
+    "export": {
+      "label": "Export"
+    }
+  },
   "Capabilities": {
     "eyebrow": "Kapacity",
     "title": "Jeden partner od dokumentace k výrobku",

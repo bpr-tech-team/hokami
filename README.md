@@ -82,6 +82,18 @@ two places. Reuse the existing components when adding sections:
   The background uses local Figma SVGs and a 30-second CSS timeline. Its small
   client wrapper pauses motion outside the viewport, in hidden tabs, and under
   reduced motion; without browser support it keeps a static background.
+- `components/sections/trust-strip/`: shared statistics strip. Pass an `items`
+  array and the current `locale`; `home/trust-strip/` supplies homepage content.
+  Values stay numeric, with `Intl.NumberFormatOptions` controlling precision,
+  compact notation, currencies, and percentages (`0.85` means 85%). Translated
+  `prefix`/`suffix` strings support surrounding words and qualifiers; resolve
+  plural forms against the final value before passing them. `accessibleValue`
+  optionally provides a more descriptive spoken value. Rows balance automatically
+  for any item count, adapt to container width, and reduce their column count for
+  long numbers. Empty arrays render nothing. NumberFlow runs once per visible
+  number, with final server-rendered text for reduced motion and without JS.
+  Formats unsupported by NumberFlow (scientific/engineering notation, non-Latin
+  digits, and RTL locales) retain their localized static value.
 - `components/navigation/`: the shared language switch. Locale options are in
   `i18n/languages.ts`; `hooks/use-site-location.ts` preserves pathname, query,
   and hash for both header and footer.

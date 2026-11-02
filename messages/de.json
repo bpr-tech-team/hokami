@@ -24,6 +24,24 @@
     "contact": "Kontaktieren Sie uns",
     "production": "Unsere Fertigung"
   },
+  "TrustStrip": {
+    "label": "HOKAMI in Zahlen",
+    "years": {
+      "label": "Am Markt",
+      "suffix": "{count, plural, one { Jahr} other { Jahre}}"
+    },
+    "specialists": {
+      "label": "{count, plural, one {Spezialist} other {Spezialisten}}",
+      "suffix": "+"
+    },
+    "turnover": {
+      "label": "Umsatz in EUR",
+      "suffix": "+"
+    },
+    "export": {
+      "label": "Export"
+    }
+  },
   "Capabilities": {
     "eyebrow": "Kapazitäten",
     "title": "Ein Partner von der Dokumentation bis zum fertigen Produkt",

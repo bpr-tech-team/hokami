@@ -24,6 +24,24 @@
     "contact": "Ota yhteyttä",
     "production": "Tuotantomme"
   },
+  "TrustStrip": {
+    "label": "HOKAMI lukuina",
+    "years": {
+      "label": "Markkinoilla",
+      "suffix": "{count, plural, one { vuosi} other { vuotta}}"
+    },
+    "specialists": {
+      "label": "{count, plural, one {Asiantuntija} other {Asiantuntijaa}}",
+      "suffix": "+"
+    },
+    "turnover": {
+      "label": "Liikevaihto, EUR",
+      "suffix": "+"
+    },
+    "export": {
+      "label": "Vienti"
+    }
+  },
   "Capabilities": {
     "eyebrow": "Tuotantokapasiteetti",
     "title": "Yksi kumppani dokumentaatiosta valmiiseen tuotteeseen",

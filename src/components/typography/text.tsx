@@ -10,6 +10,7 @@ const textVariants = cva("font-sans font-normal", {
       body: "text-base leading-[1.6]",
       lead: "text-lg leading-[1.6]",
       small: "text-sm leading-[1.55]",
+      stat: "font-display text-[28px] leading-[28px] font-semibold tracking-[-0.01em]",
       article: "text-base leading-relaxed",
     },
     tone: {
