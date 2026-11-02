@@ -1,0 +1,25 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="593" height="593" viewBox="0 0 593 593" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Horizon glow" filter="url(#filter0_f_0_226)">
+<circle cx="296.5" cy="296.5" r="292.5" fill="url(#paint0_radial_0_226)"/>
+<circle cx="296.5" cy="296.5" r="292" stroke="url(#paint1_linear_0_226)"/>
+</g>
+<defs>
+<filter id="filter0_f_0_226" x="0" y="0" width="593" height="593" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_0_226"/>
+</filter>
+<radialGradient id="paint0_radial_0_226" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(296.5 74.2) scale(592.094)">
+<stop stop-color="#FE4704" stop-opacity="0.22"/>
+<stop offset="0.32" stop-color="#FE8C5A" stop-opacity="0.16"/>
+<stop offset="0.58" stop-color="#FFECE2" stop-opacity="0.95"/>
+<stop offset="0.7" stop-color="#FFECE2" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint1_linear_0_226" x1="296.5" y1="4" x2="296.5" y2="589" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FE4704" stop-opacity="0.5"/>
+<stop offset="0.12" stop-color="#FE4704" stop-opacity="0.5"/>
+<stop offset="0.22" stop-color="#FE4704" stop-opacity="0"/>
+<stop offset="1" stop-color="#FE4704" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

@@ -17,6 +17,13 @@
       "careers": "Kariéra"
     }
   },
+  "Hero": {
+    "eyebrow": "Zakázková výroba elektroniky od roku 1997",
+    "title": "Elektronika, která funguje.",
+    "description": "Špičková výroba elektroniky od vývoje až po finální produkt. Naše technologická řešení nacházejí uplatnění v širokém spektru aplikací v železničním průmyslu, zdravotnictví, průmyslové automatizaci či energetice.",
+    "contact": "Kontaktujte nás",
+    "production": "Naše výroba"
+  },
   "Capabilities": {
     "eyebrow": "Kapacity",
     "title": "Jeden partner od dokumentace k výrobku",

@@ -17,6 +17,13 @@
       "careers": "Karriere"
     }
   },
+  "Hero": {
+    "eyebrow": "Elektronikfertigung nach Maß seit 1997",
+    "title": "Elektronik, die funktioniert.",
+    "description": "Erstklassige Elektronikfertigung von der Entwicklung bis zum fertigen Produkt. Unsere technologischen Lösungen kommen in vielfältigen Anwendungen in der Bahnindustrie, Medizintechnik, Industrieautomation und Energietechnik zum Einsatz.",
+    "contact": "Kontaktieren Sie uns",
+    "production": "Unsere Fertigung"
+  },
   "Capabilities": {
     "eyebrow": "Kapazitäten",
     "title": "Ein Partner von der Dokumentation bis zum fertigen Produkt",

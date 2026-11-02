@@ -5,6 +5,8 @@ import { cn } from "cn";
 const textVariants = cva("font-sans font-normal", {
   variants: {
     variant: {
+      quote:
+        "font-display text-[22px] leading-[29px] tablet:text-[28px] tablet:leading-[36px] desktop:text-[34px] desktop:leading-[43px]",
       body: "text-base leading-[1.6]",
       lead: "text-lg leading-[1.6]",
       small: "text-sm leading-[1.55]",

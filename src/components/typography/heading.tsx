@@ -5,6 +5,7 @@ import { cn } from "cn";
 const headingVariants = cva("font-display font-semibold", {
   variants: {
     variant: {
+      hero: "text-[44px] leading-[46px] tracking-[-0.01em] text-text-primary uppercase tablet:text-[56px] tablet:leading-[56px] tablet:tracking-[-0.015em] desktop:text-[66px] desktop:leading-[62px] desktop:tracking-[-0.02em]",
       section:
         "text-[32px] leading-[35px] tracking-[-0.01em] text-text-primary uppercase tablet:text-[40px] tablet:leading-[42px] desktop:text-[52px] desktop:leading-[53px]",
       item: "text-base leading-[19px] tracking-[0.06em] uppercase tablet:text-lg tablet:leading-[22px]",

@@ -17,6 +17,13 @@
       "careers": "Careers"
     }
   },
+  "Hero": {
+    "eyebrow": "Custom electronics manufacturing since 1997",
+    "title": "Electronics that work.",
+    "description": "Advanced electronics manufacturing, from development to the finished product. Our technological solutions serve a wide range of applications in the railway industry, healthcare, industrial automation and energy.",
+    "contact": "Contact us",
+    "production": "Our production"
+  },
   "Capabilities": {
     "eyebrow": "Capabilities",
     "title": "One partner from documentation to finished product",

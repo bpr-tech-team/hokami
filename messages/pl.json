@@ -17,6 +17,13 @@
       "careers": "Kariera"
     }
   },
+  "Hero": {
+    "eyebrow": "Produkcja elektroniki na zamówienie od 1997 roku",
+    "title": "Elektronika, która działa.",
+    "description": "Najwyższej jakości produkcja elektroniki od projektowania po gotowy produkt. Nasze rozwiązania technologiczne znajdują zastosowanie w szerokim zakresie aplikacji w przemyśle kolejowym, ochronie zdrowia, automatyce przemysłowej i energetyce.",
+    "contact": "Skontaktuj się z nami",
+    "production": "Nasza produkcja"
+  },
   "Capabilities": {
     "eyebrow": "Możliwości",
     "title": "Jeden partner od dokumentacji do gotowego produktu",

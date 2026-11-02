@@ -76,6 +76,12 @@ two places. Reuse the existing components when adding sections:
   shared page layout. Header and footer components live in their own subfolders.
 - `components/sections/home/`: homepage sections grouped by feature. Each folder
   keeps its cards, accordion, images, and related types together.
+- `components/sections/hero/`: shared `HeroSection` and independent
+  `HeroBackground`. The section accepts translated content, actions, a heading
+  element, and an optional background. `home/hero/` supplies homepage content.
+  The background uses local Figma SVGs and a 30-second CSS timeline. Its small
+  client wrapper pauses motion outside the viewport, in hidden tabs, and under
+  reduced motion; without browser support it keeps a static background.
 - `components/navigation/`: the shared language switch. Locale options are in
   `i18n/languages.ts`; `hooks/use-site-location.ts` preserves pathname, query,
   and hash for both header and footer.

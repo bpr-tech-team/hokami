@@ -17,6 +17,13 @@
       "careers": "Ura"
     }
   },
+  "Hero": {
+    "eyebrow": "Elektroniikan sopimusvalmistusta vuodesta 1997",
+    "title": "Elektroniikkaa, joka toimii.",
+    "description": "Korkealaatuista elektroniikan valmistusta tuotekehityksestä valmiiseen tuotteeseen. Teknologisia ratkaisujamme käytetään monipuolisesti raideliikenteessä, terveydenhuollossa, teollisuusautomaatiossa ja energia-alalla.",
+    "contact": "Ota yhteyttä",
+    "production": "Tuotantomme"
+  },
   "Capabilities": {
     "eyebrow": "Tuotantokapasiteetti",
     "title": "Yksi kumppani dokumentaatiosta valmiiseen tuotteeseen",
