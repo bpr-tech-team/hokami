@@ -14,6 +14,7 @@ import {
   AttachmentTitle,
 } from "@/components/ui/attachment";
 import { Progress } from "@/components/ui/progress";
+import { CloseIcon } from "@/components/ui/icons/close-icon";
 
 type FileProgress = { percentage: number; uploaded: boolean };
 
@@ -115,12 +116,7 @@ export function RequesForQuoteFile({
             aria-label={t("remove", { name: file.name })}
             onClick={onRemove}
           >
-            <Image
-              src="/images/reques-for-quote/remove.svg"
-              width={20}
-              height={20}
-              alt=""
-            />
+            <CloseIcon className="text-text-secondary" />
           </AttachmentAction>
         </AttachmentActions>
       </Attachment>

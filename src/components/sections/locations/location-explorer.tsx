@@ -110,7 +110,7 @@ export function LocationExplorer({
 
     return (
       <Tooltip
-        open={!tapInput && previewId === location.id}
+        open={(tapInput ? selectedId : previewId) === location.id}
         onOpenChange={(open, details) => {
           if (!open && details.reason === "escape-key") clearLocation();
         }}
@@ -121,7 +121,6 @@ export function LocationExplorer({
           anchor={() => points.current[location.id] ?? null}
           side={location.tooltipSide ?? "top"}
           sideOffset={14}
-          className="hidden desktop:flex"
         >
           <MonoText
             as="span"

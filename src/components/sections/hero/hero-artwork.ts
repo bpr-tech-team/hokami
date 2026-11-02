@@ -22,7 +22,7 @@ export type HeroArtwork = {
   height: number;
   bases: readonly HeroImagePlacement[];
   pulses: readonly HeroPulsePlacement[];
-  via: Omit<HeroImagePlacement, "x" | "y">;
+  via: { width: number; height: number; stroke: string };
   vias: readonly { x: number; y: number }[];
 };
 
@@ -164,7 +164,7 @@ export const desktopArtwork = {
     },
   ],
   via: {
-    src: "/images/hero/desktop-via1.svg",
+    stroke: "var(--color-brand-identity)",
     width: 9.0,
     height: 9.0,
   },
@@ -173,29 +173,7 @@ export const desktopArtwork = {
 export const mobileArtwork = {
   width: 390,
   height: 489,
-  bases: [
-    {
-      src: "/images/hero/mobile-trace1-base.svg",
-      x: -10,
-      y: 36.955318450927734,
-      width: 410.0,
-      height: 25.9702,
-    },
-    {
-      src: "/images/hero/mobile-trace2-base.svg",
-      x: -10,
-      y: 438.5595703125,
-      width: 410.0,
-      height: 25.9702,
-    },
-    {
-      src: "/images/hero/mobile-trace3-base.svg",
-      x: 351.5,
-      y: -10.404254913330078,
-      width: 21.0,
-      height: 509.809,
-    },
-  ],
+  bases: [],
   pulses: [
     {
       x: -15,
@@ -282,7 +260,7 @@ export const mobileArtwork = {
     },
   ],
   via: {
-    src: "/images/hero/mobile-via1.svg",
+    stroke: "var(--color-action-primary)",
     width: 7.0,
     height: 7.24255,
   },

@@ -3,6 +3,7 @@ import type { VariantProps } from "class-variance-authority";
 import { buttonVariants } from "./button-variants";
 import { cn } from "cn";
 import { ButtonTrace } from "./button-trace";
+import { ButtonArrow } from "./button-arrow";
 
 const label =
   "col-start-1 row-start-1 inline-flex items-center justify-center gap-3";
@@ -66,17 +67,7 @@ function ButtonContent({
           className="relative inline-flex size-5 flex-none"
           aria-hidden="true"
         >
-          {icon ?? (
-            <span
-              data-slot="button-arrow"
-              className={cn(
-                "relative inline-flex size-5 flex-none bg-contain bg-center bg-no-repeat group-ui-disabled/button:bg-[url('/images/ui/button/arrow-disabled.svg')]",
-                variant === "default"
-                  ? "bg-[url('/images/ui/button/arrow-primary.svg')]"
-                  : "bg-[url('/images/ui/button/arrow-secondary.svg')]",
-              )}
-            />
-          )}
+          {icon ?? <ButtonArrow />}
         </span>
       )}
     </>

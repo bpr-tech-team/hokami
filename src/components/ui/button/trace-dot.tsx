@@ -3,12 +3,13 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
 const traceDotVariants = cva(
-  "absolute size-[9px] bg-contain bg-center bg-no-repeat",
+  // An inset circle preserves the 1.5 px ring at every device pixel ratio.
+  "absolute size-[9px] rounded-[50%] before:absolute before:inset-[1.5px] before:rounded-[50%] before:bg-surface-default",
   {
     variants: {
       variant: {
-        primary: "bg-[url('/images/ui/button/dot-primary.svg')]",
-        secondary: "bg-[url('/images/ui/button/dot-secondary.svg')]",
+        primary: "bg-action-primary-trace",
+        secondary: "bg-brand-identity",
       },
     },
     defaultVariants: { variant: "secondary" },
@@ -21,6 +22,10 @@ export function TraceDot({
   ...props
 }: ComponentProps<"span"> & VariantProps<typeof traceDotVariants>) {
   return (
-    <span {...props} className={cn(traceDotVariants({ variant }), className)} />
+    <span
+      aria-hidden="true"
+      {...props}
+      className={cn(traceDotVariants({ variant }), className)}
+    />
   );
 }

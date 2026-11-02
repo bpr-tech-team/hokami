@@ -1,5 +1,4 @@
 import { useId } from "react";
-import Image from "next/image";
 import { cn } from "cn";
 import {
   desktopArtwork,
@@ -7,6 +6,7 @@ import {
   type HeroArtwork,
 } from "./hero-artwork";
 import { HeroMotion } from "./hero-motion";
+import { HeroHorizonGlow } from "./hero-horizon-glow";
 import "./hero-motion.css";
 
 type HeroBackgroundProps = {
@@ -16,14 +16,12 @@ type HeroBackgroundProps = {
 
 // Keep each mobile trace, its pulse and its two contacts in one coordinate space.
 const mobileTraces = mobileArtwork.pulses.map((pulse, index) => {
-  const base = mobileArtwork.bases[index];
-
   return {
     id: pulse.nodeId,
     artwork: {
       width: pulse.width,
       height: pulse.height,
-      bases: [{ ...base, x: base.x - pulse.x, y: base.y - pulse.y }],
+      bases: [],
       pulses: [{ ...pulse, x: 0, y: 0 }],
       via: mobileArtwork.via,
       vias: mobileArtwork.vias.slice(index * 2, index * 2 + 2).map((via) => ({
@@ -136,13 +134,14 @@ function Artwork({
         );
       })}
       {artwork.vias.map(({ x, y }) => (
-        <image
+        <ellipse
           key={`${x}:${y}`}
-          href={artwork.via.src}
-          x={x}
-          y={y}
-          width={artwork.via.width}
-          height={artwork.via.height}
+          cx={x + artwork.via.width / 2}
+          cy={y + artwork.via.height / 2}
+          rx={(artwork.via.width - 1) / 2}
+          ry={(artwork.via.height - 1) / 2}
+          fill="var(--color-surface-default)"
+          stroke={artwork.via.stroke}
         />
       ))}
     </svg>
@@ -162,30 +161,7 @@ export function HeroBackground({
       className={cn("hokami-hero-background", className)}
     >
       {/* Keep the large, unchanging blur outside the animated SVG paint surface. */}
-      <div className="absolute inset-0 hidden tablet:block">
-        <Image
-          src="/images/hero/desktop-horizon-glow.svg"
-          alt=""
-          width={2168}
-          height={2168}
-          unoptimized
-          loading="eager"
-          draggable={false}
-          className="absolute bottom-[-839.2px] left-1/2 max-w-none -translate-x-1/2"
-        />
-      </div>
-      <div className="absolute inset-0 tablet:hidden">
-        <Image
-          src="/images/hero/mobile-horizon-glow.svg"
-          alt=""
-          width={593}
-          height={593}
-          unoptimized
-          loading="eager"
-          draggable={false}
-          className="absolute bottom-[-230.2px] left-1/2 max-w-none -translate-x-1/2"
-        />
-      </div>
+      <HeroHorizonGlow />
       <Artwork
         artwork={desktopArtwork}
         prefix={`${id}-desktop`}

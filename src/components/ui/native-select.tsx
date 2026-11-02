@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "cn";
-import Image from "next/image";
 import { formControlVariants } from "./form-control-variants";
+import { ChevronIcon } from "./icons/chevron-icon";
 
 type NativeSelectProps = Omit<React.ComponentProps<"select">, "size"> & {
   size?: "sm" | "default";
@@ -27,13 +27,8 @@ function NativeSelect({
         )}
         {...props}
       />
-      <Image
-        src="/images/reques-for-quote/chevron.svg"
-        width={20}
-        height={20}
-        alt=""
-        className="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2"
-        aria-hidden="true"
+      <ChevronIcon
+        className="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 text-text-secondary"
         data-slot="native-select-icon"
       />
     </div>

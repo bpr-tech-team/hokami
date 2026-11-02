@@ -34,16 +34,10 @@ export function IndustryImage({
           tone="inverse"
           className="absolute bottom-8 left-8 flex items-center gap-2.5 border border-action-primary bg-surface-inverse px-3 py-2 backdrop-blur-sm"
         >
-          <span className="relative size-1.5 shrink-0" aria-hidden="true">
-            <Image
-              src="/images/industries/dot.svg"
-              alt=""
-              width={22}
-              height={22}
-              unoptimized
-              className="absolute -top-2 -left-2 max-w-none"
-            />
-          </span>
+          <span
+            className="size-1.5 shrink-0 rounded-[50%] bg-action-primary shadow-[0_0_8px_rgb(254_71_4/0.8)]"
+            aria-hidden="true"
+          />
           {industry.code}
         </MonoText>
       )}

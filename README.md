@@ -79,7 +79,8 @@ two places. Reuse the existing components when adding sections:
 - `components/sections/hero/`: shared `HeroSection` and independent
   `HeroBackground`. The section accepts translated content, actions, a heading
   element, and an optional background. `home/hero/` supplies homepage content.
-  The background uses local Figma SVGs and a 30-second CSS timeline. Its small
+  The background uses CSS horizon gradients, inline SVG contacts, local Figma
+  trace SVGs, and a 30-second CSS timeline. Its small
   client wrapper pauses motion outside the viewport, in hidden tabs, and under
   reduced motion; without browser support it keeps a static background.
 - `components/sections/trust-strip/`: shared statistics strip. Pass an `items`
@@ -122,6 +123,10 @@ two places. Reuse the existing components when adding sections:
 - `components/navigation/`: the shared language switch. Locale options are in
   `i18n/languages.ts`; `hooks/use-site-location.ts` preserves pathname, query,
   and hash for both header and footer.
+- `components/ui/icons/`: decorative CSS icons. `ChevronIcon` is shared by the
+  industry accordion and both select controls; `CloseIcon` marks file removal.
+  Button arrows and trace dots stay in `components/ui/button/`, inherit the
+  existing colors, and share the same CSS rendering across buttons and links.
 - `components/pages/`: shared layouts for information and legal pages.
   `pages/legal/` also contains `LegalHeading` and `LegalParagraph`, which apply
   shared typography and document spacing to the legal content.

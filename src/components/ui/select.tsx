@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Select as SelectPrimitive } from "@base-ui/react/select";
 import { cn } from "cn";
 import { formControlVariants } from "./form-control-variants";
+import { ChevronIcon } from "./icons/chevron-icon";
 
 const Select = SelectPrimitive.Root;
 
@@ -46,12 +47,7 @@ function SelectTrigger({
     >
       {children}
       <SelectPrimitive.Icon className="pointer-events-none flex size-5 shrink-0 items-center justify-center transition-transform duration-250 group-data-popup-open/select:rotate-180">
-        <Image
-          src="/images/reques-for-quote/chevron.svg"
-          width={20}
-          height={20}
-          alt=""
-        />
+        <ChevronIcon className="text-text-secondary" />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   );
