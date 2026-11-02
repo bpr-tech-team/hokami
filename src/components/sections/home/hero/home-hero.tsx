@@ -13,7 +13,7 @@ export async function HomeHero() {
       descriptionVisibility="tablet"
       actions={[
         { label: t("contact"), href: "#reques-for-quote" },
-        { label: t("production"), href: "#capabilities" },
+        { label: t("production"), href: "#industries" },
       ]}
     />
   );
