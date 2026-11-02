@@ -99,6 +99,29 @@
       }
     }
   },
+  "Process": {
+    "eyebrow": "Prozess",
+    "title": "Vier Schritte von den Unterlagen zur Serie",
+    "step": "Schritt {number}",
+    "steps": {
+      "documentation": {
+        "title": "Unterlagen senden",
+        "description": "Stückliste und Gerber-Daten. Auf Wunsch unterzeichnen wir vor der Prüfung eine NDA."
+      },
+      "assessment": {
+        "title": "Bewertung und DFM",
+        "description": "Wir prüfen Fertigbarkeit, Bauteilrisiken und Kostentreiber und erstellen anschließend ein Angebot."
+      },
+      "prototype": {
+        "title": "Prototyp und Validierung",
+        "description": "Erste Muster, Entwicklung der Prüfvorrichtung und Prozessfreigabe gemeinsam mit Ihren Technikern."
+      },
+      "production": {
+        "title": "Serie und langfristige Lieferung",
+        "description": "Planung, Obsoleszenzmanagement und Lagerstrategie für den gesamten Produktlebenszyklus."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — Startseite",
     "legal": "Rechtliche Informationen",

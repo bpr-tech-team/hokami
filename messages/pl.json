@@ -99,6 +99,29 @@
       }
     }
   },
+  "Process": {
+    "eyebrow": "Proces",
+    "title": "Cztery kroki od dokumentacji do produkcji seryjnej",
+    "step": "Krok {number}",
+    "steps": {
+      "documentation": {
+        "title": "Prześlij dokumentację",
+        "description": "Lista BOM i pliki Gerber. Na życzenie podpiszemy NDA przed przeglądem dokumentacji."
+      },
+      "assessment": {
+        "title": "Ocena i DFM",
+        "description": "Sprawdzimy wykonalność, ryzyka związane z komponentami i czynniki kosztowe, a następnie przygotujemy wycenę."
+      },
+      "prototype": {
+        "title": "Prototyp i walidacja",
+        "description": "Pierwsze sztuki, projekt przyrządu testowego i zatwierdzenie procesu wspólnie z Państwa inżynierami."
+      },
+      "production": {
+        "title": "Seria i stałe dostawy",
+        "description": "Planowanie, zarządzanie wycofywaniem komponentów i strategia zapasów na cały cykl życia produktu."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — strona główna",
     "legal": "Informacje prawne",

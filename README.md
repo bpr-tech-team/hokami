@@ -94,6 +94,18 @@ two places. Reuse the existing components when adding sections:
   number, with final server-rendered text for reduced motion and without JS.
   Formats unsupported by NumberFlow (scientific/engineering notation, non-Latin
   digits, and RTL locales) retain their localized static value.
+- `components/sections/process/`: reusable `ProcessSection` with a translated
+  `steps` array (`id`, `label`, `title`, `description`).
+  Nodes are distributed around the ring for any small step count, with four
+  seconds per step. Motion plays once when visible and pauses offscreen or in
+  hidden tabs, independently of reduced-motion preferences. The completed ring
+  and last step remain visible; scrolling back does not replay the animation.
+  Without JavaScript all steps remain a readable list. Empty sections are omitted
+  and a single step stays static. The diagram uses CSS circles, shadows and an
+  animated conic mask; background glows use radial gradients. No process image assets or
+  SVG filters are loaded. A registered angle property keeps the progress mask
+  synchronized with the orbit; browsers without this API retain the readable
+  list. `home/process/` supplies the homepage's four steps.
 - `components/navigation/`: the shared language switch. Locale options are in
   `i18n/languages.ts`; `hooks/use-site-location.ts` preserves pathname, query,
   and hash for both header and footer.

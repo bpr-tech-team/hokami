@@ -24,7 +24,7 @@ type SectionProps = Omit<ComponentPropsWithoutRef<"section">, "title"> &
     id: string;
     eyebrow: ReactNode;
     title: ReactNode;
-    description: ReactNode;
+    description?: ReactNode;
     descriptionTone?: TextProps["tone"];
     descriptionClassName?: string;
     contentClassName?: string;
@@ -74,13 +74,15 @@ export function Section({
             <MonoText variant="eyebrow">{eyebrow}</MonoText>
             <Heading id={headingId}>{title}</Heading>
           </div>
-          <Text
-            variant="lead"
-            tone={descriptionTone}
-            className={descriptionClassName}
-          >
-            {description}
-          </Text>
+          {description != null && (
+            <Text
+              variant="lead"
+              tone={descriptionTone}
+              className={descriptionClassName}
+            >
+              {description}
+            </Text>
+          )}
           {metadata}
         </header>
         {children}

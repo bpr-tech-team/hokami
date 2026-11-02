@@ -99,6 +99,29 @@
       }
     }
   },
+  "Process": {
+    "eyebrow": "Proces",
+    "title": "Čtyři kroky od dokumentace k sérii",
+    "step": "Krok {number}",
+    "steps": {
+      "documentation": {
+        "title": "Pošlete dokumentaci",
+        "description": "BOM a Gerber data. Před revizí podepíšeme NDA, pokud si to přejete."
+      },
+      "assessment": {
+        "title": "Posouzení a DFM",
+        "description": "Prověříme vyrobitelnost, rizika součástkové základny a nákladové faktory, pak naceníme."
+      },
+      "prototype": {
+        "title": "Prototyp a validace",
+        "description": "První kusy, návrh testovacího přípravku, uvolnění procesu společně s vašimi techniky."
+      },
+      "production": {
+        "title": "Série a dlouhodobé dodávky",
+        "description": "Plánování, řízení obsolescence a skladová strategie na celý životní cyklus produktu."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — úvodní stránka",
     "legal": "Právní informace",

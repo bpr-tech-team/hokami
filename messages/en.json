@@ -99,6 +99,29 @@
       }
     }
   },
+  "Process": {
+    "eyebrow": "Process",
+    "title": "Four steps from documentation to production",
+    "step": "Step {number}",
+    "steps": {
+      "documentation": {
+        "title": "Send documentation",
+        "description": "BOM and Gerber files. We can sign an NDA before reviewing your documentation."
+      },
+      "assessment": {
+        "title": "Assessment and DFM",
+        "description": "We assess manufacturability, component risks and cost drivers, then prepare a quote."
+      },
+      "prototype": {
+        "title": "Prototype and validation",
+        "description": "First units, test fixture design and production process approval together with your engineers."
+      },
+      "production": {
+        "title": "Production and long-term supply",
+        "description": "Planning, obsolescence management and an inventory strategy for the entire product lifecycle."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — home",
     "legal": "Legal information",

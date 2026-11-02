@@ -99,6 +99,29 @@
       }
     }
   },
+  "Process": {
+    "eyebrow": "Prosessi",
+    "title": "Neljä vaihetta dokumentaatiosta sarjatuotantoon",
+    "step": "Vaihe {number}",
+    "steps": {
+      "documentation": {
+        "title": "Lähetä dokumentaatio",
+        "description": "Osaluettelo ja Gerber-tiedostot. Allekirjoitamme pyynnöstä salassapitosopimuksen ennen tarkastusta."
+      },
+      "assessment": {
+        "title": "Arviointi ja DFM",
+        "description": "Arvioimme valmistettavuuden, komponenttiriskit ja kustannustekijät ja laadimme tarjouksen."
+      },
+      "prototype": {
+        "title": "Prototyyppi ja validointi",
+        "description": "Ensimmäiset kappaleet, testauslaitteen suunnittelu ja prosessin hyväksyntä yhdessä insinöörienne kanssa."
+      },
+      "production": {
+        "title": "Sarjatuotanto ja jatkuvat toimitukset",
+        "description": "Suunnittelu, komponenttien vanhenemisen hallinta ja varastostrategia tuotteen koko elinkaarelle."
+      }
+    }
+  },
   "Footer": {
     "home": "HOKAMI — etusivu",
     "legal": "Oikeudelliset tiedot",
