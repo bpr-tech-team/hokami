@@ -99,6 +99,24 @@
       }
     }
   },
+  "Locations": {
+    "eyebrow": "Locations",
+    "title": "Here for you around the world",
+    "description": "Three manufacturing and sales hubs, one network. Choose your region — we’ll connect you with a dedicated contact, not a switchboard.",
+    "mapLabel": "Our locations in Europe",
+    "regionCode": "REGION {code}",
+    "branches": {
+      "liberec": "HQ · Sales & Manufacturing",
+      "zawidow": "Sales & Manufacturing",
+      "helsinki": "Sales"
+    },
+    "regions": {
+      "west": "Czechia & Western Europe",
+      "east": "Poland & Eastern Europe",
+      "north": "Scandinavia & the Baltic States",
+      "global": "Rest of the world"
+    }
+  },
   "Process": {
     "eyebrow": "Process",
     "title": "Four steps from documentation to production",

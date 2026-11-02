@@ -99,6 +99,24 @@
       }
     }
   },
+  "Locations": {
+    "eyebrow": "Standorte",
+    "title": "Weltweit für Sie da",
+    "description": "Drei Produktions- und Vertriebsstandorte, ein Netzwerk. Wählen Sie Ihre Region — wir verbinden Sie mit einer persönlichen Ansprechperson statt mit einer Zentrale.",
+    "mapLabel": "Unsere Standorte in Europa",
+    "regionCode": "REGION {code}",
+    "branches": {
+      "liberec": "HQ · Vertrieb & Produktion",
+      "zawidow": "Vertrieb & Produktion",
+      "helsinki": "Vertrieb"
+    },
+    "regions": {
+      "west": "Tschechien & Westeuropa",
+      "east": "Polen & Osteuropa",
+      "north": "Skandinavien & Baltikum",
+      "global": "Rest der Welt"
+    }
+  },
   "Process": {
     "eyebrow": "Prozess",
     "title": "Vier Schritte von den Unterlagen zur Serie",

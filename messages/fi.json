@@ -99,6 +99,24 @@
       }
     }
   },
+  "Locations": {
+    "eyebrow": "Toimipisteet",
+    "title": "Palvelemme sinua kaikkialla maailmassa",
+    "description": "Kolme tuotannon ja myynnin toimipistettä, yksi verkosto. Valitse alueesi — yhdistämme sinut suoraan yhteyshenkilöön, emme puhelinvaihteeseen.",
+    "mapLabel": "Toimipisteemme Euroopassa",
+    "regionCode": "ALUE {code}",
+    "branches": {
+      "liberec": "HQ · Myynti & Tuotanto",
+      "zawidow": "Myynti & Tuotanto",
+      "helsinki": "Myynti"
+    },
+    "regions": {
+      "west": "Tšekki & Länsi-Eurooppa",
+      "east": "Puola & Itä-Eurooppa",
+      "north": "Skandinavia & Baltian maat",
+      "global": "Muu maailma"
+    }
+  },
   "Process": {
     "eyebrow": "Prosessi",
     "title": "Neljä vaihetta dokumentaatiosta sarjatuotantoon",

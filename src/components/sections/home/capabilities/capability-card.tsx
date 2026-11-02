@@ -20,7 +20,7 @@ export function CapabilityCard({
   description,
 }: CapabilityCardProps) {
   return (
-    <Card variant="capability" className="h-full">
+    <Card variant="feature" className="h-full">
       <CardHeader className="flex flex-col gap-[22px] px-0">
         <Image src={icon} alt="" width={32} height={32} unoptimized />
         <div className="flex w-full flex-col gap-3.5">

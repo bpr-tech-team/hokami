@@ -99,6 +99,24 @@
       }
     }
   },
+  "Locations": {
+    "eyebrow": "Oddziały",
+    "title": "Jesteśmy do Twojej dyspozycji na całym świecie",
+    "description": "Trzy ośrodki produkcji i sprzedaży, jedna sieć. Wybierz region — połączymy Cię z konkretną osobą, a nie z centralą.",
+    "mapLabel": "Nasze oddziały w Europie",
+    "regionCode": "REGION {code}",
+    "branches": {
+      "liberec": "HQ · Sprzedaż i produkcja",
+      "zawidow": "Sprzedaż i produkcja",
+      "helsinki": "Sprzedaż"
+    },
+    "regions": {
+      "west": "Czechy i Europa Zachodnia",
+      "east": "Polska i Europa Wschodnia",
+      "north": "Skandynawia i kraje bałtyckie",
+      "global": "Reszta świata"
+    }
+  },
   "Process": {
     "eyebrow": "Proces",
     "title": "Cztery kroki od dokumentacji do produkcji seryjnej",

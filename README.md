@@ -94,6 +94,19 @@ two places. Reuse the existing components when adding sections:
   number, with final server-rendered text for reduced motion and without JS.
   Formats unsupported by NumberFlow (scientific/engineering notation, non-Latin
   digits, and RTL locales) retain their localized static value.
+- `components/sections/locations/`: reusable locations section. Use `Locations`
+  on any localized page for the same branch and regional contact data; `home/locations/`
+  connects it to the homepage. `LocationsSection` accepts translated content when
+  composing it separately. The map and legend share hover, keyboard-focus, and
+  touch selection with the regional cards, using each region's `locationId`.
+  The Czech/Western Europe and global cards map to Liberec, Eastern Europe to
+  Zawidów, and Scandinavia/the Baltics to Helsinki. Contact links remain native
+  links in server-rendered HTML. The pixel map is the only external SVG; exact
+  Figma path geometry shares one inline SVG, with CSS dots, halo, vias and label
+  leaders. The original 30-second CSS timeline is preserved. `hooks/use-motion-visibility.ts`
+  pauses ambient motion in both the map and hero outside the viewport, in hidden
+  tabs, and under reduced motion. The map keeps a static fallback without JavaScript
+  and for reduced motion. Country labels use ISO 3166-1 alpha-2 codes.
 - `components/sections/process/`: reusable `ProcessSection` with a translated
   `steps` array (`id`, `label`, `title`, `description`).
   Nodes are distributed around the ring for any small step count, with four

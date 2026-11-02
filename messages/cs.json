@@ -99,6 +99,24 @@
       }
     }
   },
+  "Locations": {
+    "eyebrow": "Lokality",
+    "title": "Jsme tu pro vás po celém světě",
+    "description": "Tři výrobní a obchodní uzly, jedna síť. Vyberte region — spojíme vás s konkrétním člověkem, ne s centrálou.",
+    "mapLabel": "Naše pobočky v Evropě",
+    "regionCode": "REGION {code}",
+    "branches": {
+      "liberec": "HQ · Obchod & Výroba",
+      "zawidow": "Obchod & Výroba",
+      "helsinki": "Obchod"
+    },
+    "regions": {
+      "west": "Česko & Západní Evropa",
+      "east": "Polsko & Východní Evropa",
+      "north": "Skandinávie & Pobaltské země",
+      "global": "Zbytek světa"
+    }
+  },
   "Process": {
     "eyebrow": "Proces",
     "title": "Čtyři kroky od dokumentace k sérii",

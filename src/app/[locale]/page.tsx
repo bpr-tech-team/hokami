@@ -1,6 +1,7 @@
 import { PageMain } from "@/components/layout/page-main";
 import { Capabilities } from "@/components/sections/home/capabilities/capabilities";
 import { Industries } from "@/components/sections/home/industries/industries";
+import { HomeLocations } from "@/components/sections/home/locations/home-locations";
 import { HomeHero } from "@/components/sections/home/hero/home-hero";
 import { HomeTrustStrip } from "@/components/sections/home/trust-strip/home-trust-strip";
 import { HomeProcess } from "@/components/sections/home/process/home-process";
@@ -49,6 +50,7 @@ export default function Home() {
       <Capabilities />
       <Industries />
       <HomeProcess />
+      <HomeLocations />
       <RequesForQuote />
     </PageMain>
   );
