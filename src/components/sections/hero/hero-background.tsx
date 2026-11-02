@@ -14,28 +14,57 @@ type HeroBackgroundProps = {
   className?: string;
 };
 
+// Keep each mobile trace, its pulse and its two contacts in one coordinate space.
+const mobileTraces = mobileArtwork.pulses.map((pulse, index) => {
+  const base = mobileArtwork.bases[index];
+
+  return {
+    id: pulse.nodeId,
+    artwork: {
+      width: pulse.width,
+      height: pulse.height,
+      bases: [{ ...base, x: base.x - pulse.x, y: base.y - pulse.y }],
+      pulses: [{ ...pulse, x: 0, y: 0 }],
+      via: mobileArtwork.via,
+      vias: mobileArtwork.vias.slice(index * 2, index * 2 + 2).map((via) => ({
+        x: via.x - pulse.x,
+        y: via.y - pulse.y,
+      })),
+    } satisfies HeroArtwork,
+  };
+});
+
+const mobileTraceLayouts = [
+  "absolute top-[31.7553px] -left-[15px] h-auto w-[calc(100%+30px)] max-w-none",
+  "absolute bottom-[19.2702px] -left-[15px] h-auto w-[calc(100%+30px)] max-w-none",
+  "absolute top-[-15.4043px] right-[12.3px] h-[calc(100%+30.808px)] w-auto max-w-none",
+] as const;
+
 function Artwork({
   artwork,
   prefix,
   className,
+  baseStrokeWidth,
 }: {
   artwork: HeroArtwork;
   prefix: string;
   className: string;
+  baseStrokeWidth?: number;
 }) {
   return (
     <svg
       width={artwork.width}
       height={artwork.height}
       viewBox={`0 0 ${artwork.width} ${artwork.height}`}
-      preserveAspectRatio="none"
+      preserveAspectRatio="xMidYMid meet"
       fill="none"
       focusable="false"
       className={className}
     >
-      {artwork.bases.map(({ src, ...placement }) => (
-        <image key={src} href={src} {...placement} />
-      ))}
+      {baseStrokeWidth == null &&
+        artwork.bases.map(({ src, ...placement }) => (
+          <image key={src} href={src} {...placement} />
+        ))}
       {artwork.pulses.map((pulse, index) => {
         const filterId = `${prefix}-pulse-${index}`;
 
@@ -82,6 +111,15 @@ function Artwork({
                 <feBlend mode="normal" in="SourceGraphic" in2="pulseGlow" />
               </filter>
             </defs>
+            {baseStrokeWidth != null && (
+              <path
+                data-slot="hero-trace-base"
+                d={pulse.d}
+                stroke="var(--color-brand-identity)"
+                strokeOpacity="0.5"
+                strokeWidth={baseStrokeWidth}
+              />
+            )}
             <g filter={`url(#${filterId})`}>
               <path
                 data-node-id={pulse.nodeId}
@@ -153,11 +191,17 @@ export function HeroBackground({
         prefix={`${id}-desktop`}
         className="absolute top-1/2 left-1/2 hidden h-[900px] w-[1440px] max-w-none -translate-1/2 tablet:block"
       />
-      <Artwork
-        artwork={mobileArtwork}
-        prefix={`${id}-mobile`}
-        className="absolute inset-0 size-full tablet:hidden"
-      />
+      <div className="absolute inset-0 tablet:hidden">
+        {mobileTraces.map((trace, index) => (
+          <Artwork
+            key={trace.id}
+            artwork={trace.artwork}
+            prefix={`${id}-mobile-${index}`}
+            className={mobileTraceLayouts[index]}
+            baseStrokeWidth={1.4}
+          />
+        ))}
+      </div>
     </HeroMotion>
   );
 }
