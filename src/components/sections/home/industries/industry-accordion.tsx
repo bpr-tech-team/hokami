@@ -16,7 +16,7 @@ export function IndustryAccordion({ items }: { items: Industry[] }) {
   }
 
   return (
-    <div className="py-6 desktop:border-y desktop:border-border-brand-subtle">
+    <div className="py-6">
       <div className="desktop:grid desktop:grid-cols-[5fr_7fr]">
         <Accordion
           value={[items[activeIndex].id]}
