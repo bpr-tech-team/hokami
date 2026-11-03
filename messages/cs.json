@@ -31,6 +31,12 @@
     "contact": "Kontaktovat",
     "history": "Prohlédnout historii"
   },
+  "AboutCampus": {
+    "eyebrow": "Kampus",
+    "title": "Kampus",
+    "description": "Součástí Hokami Campusu jsou také další společnosti a služby, které společně vytvářejí moderní prostředí pro práci i každodenní život. V areálu naleznete technologickou společnost Cleartex, zubní kliniku Dolident, kavárnu Dolicafe a pražírnu kávy DoodleBeans.",
+    "opensInNewTab": "otevře se v nové kartě"
+  },
   "AboutHistory": {
     "eyebrow": "Historie",
     "title": "Od roku 1997 do současnosti",

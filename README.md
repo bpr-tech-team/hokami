@@ -85,11 +85,17 @@ two places. Reuse the existing components when adding sections:
   `about/hero/` shares the homepage background, minimum heights, and section padding,
   owns the About content layout, typography, and actions,
   supplies content in each locale, links contact to the homepage enquiry form and
-  links `#history` to the history section immediately below it.
+  links `#history` to the history section.
   The background uses CSS horizon gradients, inline SVG contacts, local Figma
   trace SVGs, and a 30-second CSS timeline. Its small
   client wrapper pauses motion outside the viewport, in hidden tabs, and under
   reduced motion; without browser support it keeps a static background.
+- `components/sections/about/campus/`: server-rendered campus introduction in all
+  five locales, placed between the About hero and history. A centered CSS grid
+  stacks company logos below `desktop` and arranges them in one row above it.
+  Local Figma PNGs retain their proportions at a shared spacing-based height;
+  intrinsic image dimensions reserve their space while loading. Native company
+  links open in new tabs and include a translated screen-reader announcement.
 - `components/sections/about/history/`: localized company history with 16
   server-rendered milestones. Cards alternate at the `desktop` breakpoint and
   form one column below it. CSS contacts and leaders follow each card; one

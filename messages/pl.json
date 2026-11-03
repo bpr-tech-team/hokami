@@ -31,6 +31,12 @@
     "contact": "Skontaktuj się",
     "history": "Poznaj historię"
   },
+  "AboutCampus": {
+    "eyebrow": "Kampus",
+    "title": "Kampus",
+    "description": "Na terenie kampusu Hokami działają również inne firmy i punkty usługowe, które wspólnie tworzą nowoczesne środowisko do pracy i codziennego życia. Znajdują się tu firma technologiczna Cleartex, klinika stomatologiczna Dolident, kawiarnia Dolicafe oraz palarnia kawy DoodleBeans.",
+    "opensInNewTab": "otwiera się w nowej karcie"
+  },
   "AboutHistory": {
     "eyebrow": "Historia",
     "title": "Od 1997 roku do dziś",

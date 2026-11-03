@@ -31,6 +31,12 @@
     "contact": "Contact us",
     "history": "Explore our history"
   },
+  "AboutCampus": {
+    "eyebrow": "Campus",
+    "title": "Campus",
+    "description": "Hokami Campus is also home to other companies and services that together create a modern environment for work and everyday life. The campus includes technology company Cleartex, dental clinic Dolident, café Dolicafe and coffee roastery DoodleBeans.",
+    "opensInNewTab": "opens in a new tab"
+  },
   "AboutHistory": {
     "eyebrow": "History",
     "title": "From 1997 to the present",

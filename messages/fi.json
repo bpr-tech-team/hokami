@@ -31,6 +31,12 @@
     "contact": "Ota yhteyttä",
     "history": "Tutustu historiaamme"
   },
+  "AboutCampus": {
+    "eyebrow": "Kampus",
+    "title": "Kampus",
+    "description": "Hokamin kampuksella toimii myös muita yrityksiä ja palveluita, jotka yhdessä luovat modernin ympäristön työlle ja arjelle. Alueella sijaitsevat teknologiayritys Cleartex, hammasklinikka Dolident, kahvila Dolicafe ja kahvipaahtimo DoodleBeans.",
+    "opensInNewTab": "avautuu uuteen välilehteen"
+  },
   "AboutHistory": {
     "eyebrow": "Historia",
     "title": "Vuodesta 1997 nykypäivään",
