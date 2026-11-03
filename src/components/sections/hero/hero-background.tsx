@@ -14,7 +14,7 @@ type HeroBackgroundProps = {
   className?: string;
 };
 
-// Keep each mobile trace, its pulse and its two contacts in one coordinate space.
+// Contact positions follow each trace; their diameter stays fixed in CSS pixels.
 const mobileTraces = mobileArtwork.pulses.map((pulse, index) => {
   return {
     id: pulse.nodeId,
@@ -24,11 +24,12 @@ const mobileTraces = mobileArtwork.pulses.map((pulse, index) => {
       bases: [],
       pulses: [{ ...pulse, x: 0, y: 0 }],
       via: mobileArtwork.via,
-      vias: mobileArtwork.vias.slice(index * 2, index * 2 + 2).map((via) => ({
-        x: via.x - pulse.x,
-        y: via.y - pulse.y,
-      })),
+      vias: [],
     } satisfies HeroArtwork,
+    contacts: mobileArtwork.vias.slice(index * 2, index * 2 + 2).map((via) => ({
+      left: `${((via.x - pulse.x + mobileArtwork.via.width / 2) / pulse.width) * 100}%`,
+      top: `${((via.y - pulse.y + mobileArtwork.via.height / 2) / pulse.height) * 100}%`,
+    })),
   };
 });
 
@@ -43,12 +44,16 @@ function Artwork({
   prefix,
   className,
   baseStrokeWidth,
+  nonScalingStroke = false,
 }: {
   artwork: HeroArtwork;
   prefix: string;
   className: string;
   baseStrokeWidth?: number;
+  nonScalingStroke?: boolean;
 }) {
+  const vectorEffect = nonScalingStroke ? "non-scaling-stroke" : undefined;
+
   return (
     <svg
       width={artwork.width}
@@ -116,6 +121,8 @@ function Artwork({
                 stroke="var(--color-brand-identity)"
                 strokeOpacity="0.5"
                 strokeWidth={baseStrokeWidth}
+                vectorEffect={vectorEffect}
+                shapeRendering={nonScalingStroke ? "crispEdges" : undefined}
               />
             )}
             <g filter={`url(#${filterId})`}>
@@ -126,6 +133,7 @@ function Artwork({
                 stroke={pulse.stroke}
                 strokeOpacity={pulse.strokeOpacity}
                 strokeWidth="1.4"
+                vectorEffect={vectorEffect}
                 shapeRendering={pulse.crispEdges ? "crispEdges" : undefined}
                 className={cn("hokami-hero-pulse", pulse.animation)}
               />
@@ -142,6 +150,7 @@ function Artwork({
           ry={(artwork.via.height - 1) / 2}
           fill="var(--color-surface-default)"
           stroke={artwork.via.stroke}
+          vectorEffect={vectorEffect}
         />
       ))}
     </svg>
@@ -169,13 +178,29 @@ export function HeroBackground({
       />
       <div className="absolute inset-0 tablet:hidden">
         {mobileTraces.map((trace, index) => (
-          <Artwork
+          <div
             key={trace.id}
-            artwork={trace.artwork}
-            prefix={`${id}-mobile-${index}`}
             className={mobileTraceLayouts[index]}
-            baseStrokeWidth={1.4}
-          />
+            style={{
+              aspectRatio: `${trace.artwork.width} / ${trace.artwork.height}`,
+            }}
+          >
+            <Artwork
+              artwork={trace.artwork}
+              prefix={`${id}-mobile-${index}`}
+              className="block size-full max-w-none"
+              baseStrokeWidth={1}
+              nonScalingStroke
+            />
+            {trace.contacts.map((position, contactIndex) => (
+              <span
+                key={contactIndex}
+                data-slot="hero-trace-contact"
+                className="absolute size-[7px] -translate-1/2 rounded-full border border-action-primary bg-surface-default"
+                style={position}
+              />
+            ))}
+          </div>
         ))}
       </div>
     </HeroMotion>
