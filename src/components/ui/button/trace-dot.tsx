@@ -3,13 +3,13 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
 const traceDotVariants = cva(
-  // An inset circle preserves the 1.5 px ring at every device pixel ratio.
-  "absolute size-[9px] rounded-[50%] before:absolute before:inset-[1.5px] before:rounded-[50%] before:bg-surface-default",
+  // Paint both edges together, with soft transitions for the tiny ring.
+  "absolute size-[9px] bg-[radial-gradient(circle_closest-side,var(--color-surface-default)_0_2.75px,currentColor_3.25px_4px,transparent_4.5px)]",
   {
     variants: {
       variant: {
-        primary: "bg-action-primary-trace",
-        secondary: "bg-brand-identity",
+        primary: "text-action-primary-trace",
+        secondary: "text-brand-identity",
       },
     },
     defaultVariants: { variant: "secondary" },
