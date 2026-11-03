@@ -62,6 +62,12 @@
       "czechLeader": "Das Unternehmen erhält die Auszeichnung „Tschechischer Marktführer“"
     }
   },
+  "AboutContact": {
+    "eyebrow": "Kontakt",
+    "title": "Suchen Sie einen Partner für die Elektronikfertigung?",
+    "description": "Senden Sie uns Ihre technischen Unterlagen und wir liefern fertige Produkte, die sofort einsatzbereit sind oder direkt integriert werden können.",
+    "contact": "Kontakt aufnehmen"
+  },
   "Video": {
     "title": "HOKAMI stellt sich vor",
     "caption": "HOKAMI · Video {duration}",

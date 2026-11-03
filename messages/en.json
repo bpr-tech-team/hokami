@@ -62,6 +62,12 @@
       "czechLeader": "The company receives the Czech Leader award"
     }
   },
+  "AboutContact": {
+    "eyebrow": "Contact",
+    "title": "Looking for an electronics manufacturing partner?",
+    "description": "Send us your technical documentation and we will deliver finished products ready for immediate use or integration.",
+    "contact": "Contact us"
+  },
   "Video": {
     "title": "Introducing HOKAMI",
     "caption": "HOKAMI · Video {duration}",

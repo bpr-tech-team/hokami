@@ -62,6 +62,12 @@
       "czechLeader": "Yritys saa Tšekin johtava yritys -palkinnon"
     }
   },
+  "AboutContact": {
+    "eyebrow": "Yhteystiedot",
+    "title": "Etsitkö kumppania elektroniikan valmistukseen?",
+    "description": "Lähetä meille tekninen dokumentaatiosi, niin toimitamme valmiit tuotteet, jotka ovat heti valmiita käyttöön tai integrointiin.",
+    "contact": "Ota yhteyttä"
+  },
   "Video": {
     "title": "HOKAMI esittelyssä",
     "caption": "HOKAMI · Video {duration}",

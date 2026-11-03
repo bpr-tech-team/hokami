@@ -62,6 +62,12 @@
       "czechLeader": "Firma otrzymuje wyróżnienie „Czeski Lider”"
     }
   },
+  "AboutContact": {
+    "eyebrow": "Kontakt",
+    "title": "Szukasz partnera do produkcji elektroniki?",
+    "description": "Prześlij nam dokumentację techniczną, a dostarczymy gotowe produkty przygotowane do natychmiastowego użycia lub integracji.",
+    "contact": "Skontaktuj się"
+  },
   "Video": {
     "title": "Poznaj HOKAMI",
     "caption": "HOKAMI · Wideo {duration}",

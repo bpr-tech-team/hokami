@@ -62,6 +62,12 @@
       "czechLeader": "Firma získává ocenění „Český lídr“"
     }
   },
+  "AboutContact": {
+    "eyebrow": "Kontakt",
+    "title": "Hledáte partnera pro výrobu elektroniky?",
+    "description": "Pošlete nám technickou dokumentaci a dodáme hotové produkty připravené k okamžitému použití nebo integraci.",
+    "contact": "Kontaktovat"
+  },
   "Video": {
     "title": "Představení HOKAMI",
     "caption": "HOKAMI · Video {duration}",
