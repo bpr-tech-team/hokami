@@ -84,11 +84,18 @@ two places. Reuse the existing components when adding sections:
   `HeroBackground` accepts desktop artwork and positioning through props.
   `about/hero/` owns the About layout, typography, actions and background settings,
   supplies content in each locale, links contact to the homepage enquiry form and
-  reserves `#history` for the future history section.
+  links `#history` to the history section immediately below it.
   The background uses CSS horizon gradients, inline SVG contacts, local Figma
   trace SVGs, and a 30-second CSS timeline. Its small
   client wrapper pauses motion outside the viewport, in hidden tabs, and under
   reduced motion; without browser support it keeps a static background.
+- `components/sections/about/history/`: localized company history with 16
+  server-rendered milestones. Cards alternate at the `desktop` breakpoint and
+  form one column below it. CSS contacts and leaders follow each card; one
+  inline SVG adapts to their measured positions on resize and font loading.
+  Its ambient pulse shares the hero's 30-second CSS timeline in
+  `components/ui/trace-pulse.css` and uses `useMotionVisibility` for visibility
+  and reduced-motion handling. Text remains available without JavaScript.
 - `components/sections/trust-strip/`: shared statistics strip. Pass an `items`
   array and the current `locale`; `home/trust-strip/` supplies homepage content.
   Values stay numeric, with `Intl.NumberFormatOptions` controlling precision,

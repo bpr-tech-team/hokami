@@ -31,6 +31,31 @@
     "contact": "Skontaktuj się",
     "history": "Poznaj historię"
   },
+  "AboutHistory": {
+    "eyebrow": "Historia",
+    "title": "Od 1997 roku do dziś",
+    "description": "Dzięki wieloletnim inwestycjom w najnowocześniejsze technologie produkcyjne, automatyzację i kontrolę jakości możemy przejąć pełną odpowiedzialność za produkcję wyrobów elektronicznych naszych klientów. Na podstawie dostarczonej dokumentacji technicznej dostarczamy gotowe produkty, przygotowane do natychmiastowego użycia lub integracji z urządzeniami końcowymi.",
+    "invitation": "Poznaj najważniejsze kamienie milowe, rozwój technologiczny i kluczowe momenty, które ukształtowały naszą firmę.",
+    "conclusion": "Elektronika produkowana w Hokami znajduje zastosowanie w wielu wymagających branżach, takich jak przemysł, technika medyczna, energetyka, transport kolejowy, elektronika użytkowa, motoryzacja, lotnictwo i technologie kosmiczne. Nasze rozwiązania są częścią urządzeń, na których klienci na całym świecie polegają każdego dnia.",
+    "milestones": {
+      "founding": "Josef Suska i Miloš Sváček zakładają Hokami CZ",
+      "production": "Rozpoczęcie produkcji",
+      "headquarters": "Pierwszy budynek produkcyjny w Libercu – główna siedziba firmy",
+      "secondBuilding": "Drugi budynek produkcyjny w Libercu",
+      "poland": "Rozpoczęcie produkcji w Polsce",
+      "entrepreneurAward": "Firma zdobywa nagrodę „Przedsiębiorca Roku”",
+      "cleartex": "Rozpoczęcie współpracy z firmą rozwojową Cleartex",
+      "testPlatform": "Powstaje platforma Hokami do testerów funkcjonalnych",
+      "thirdBuilding": "Trzeci budynek produkcyjny w Libercu",
+      "companyAward": "Firma zdobywa nagrodę „Firma Roku”",
+      "czechTop100": "Firma otrzymuje nagrodę „Czeskie Top 100”",
+      "secondGeneration": "Drugie pokolenie dołącza do kierownictwa firmy",
+      "quietCompany": "Firma otrzymuje wyróżnienie „Tichá firma”",
+      "innovationAward": "Projekt biznesowy roku – Innowacje",
+      "hallOfFame": "Diamenty czeskiego biznesu – Galeria Sław",
+      "czechLeader": "Firma otrzymuje wyróżnienie „Czeski Lider”"
+    }
+  },
   "Video": {
     "title": "Poznaj HOKAMI",
     "caption": "HOKAMI · Wideo {duration}",

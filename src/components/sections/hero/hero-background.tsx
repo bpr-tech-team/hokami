@@ -8,6 +8,7 @@ import {
 import { HeroMotion } from "./hero-motion";
 import { HeroHorizonGlow } from "./hero-horizon-glow";
 import "./hero-motion.css";
+import "@/components/ui/trace-pulse.css";
 
 type HeroBackgroundProps = {
   animated?: boolean;

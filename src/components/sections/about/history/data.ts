@@ -1,0 +1,18 @@
+export const historyMilestones = [
+  { id: "founding", year: "1997" },
+  { id: "production", year: "1998" },
+  { id: "headquarters", year: "2001" },
+  { id: "secondBuilding", year: "2005" },
+  { id: "poland", year: "2007" },
+  { id: "entrepreneurAward", year: "2007" },
+  { id: "cleartex", year: "2011" },
+  { id: "testPlatform", year: "2014" },
+  { id: "thirdBuilding", year: "2015" },
+  { id: "companyAward", year: "2016" },
+  { id: "czechTop100", year: "2017" },
+  { id: "secondGeneration", year: "2019" },
+  { id: "quietCompany", year: "2020" },
+  { id: "innovationAward", year: "2022" },
+  { id: "hallOfFame", year: "2024" },
+  { id: "czechLeader", year: "2025" },
+] as const;

@@ -31,6 +31,31 @@
     "contact": "Ota yhteyttä",
     "history": "Tutustu historiaamme"
   },
+  "AboutHistory": {
+    "eyebrow": "Historia",
+    "title": "Vuodesta 1997 nykypäivään",
+    "description": "Pitkäaikaiset investoinnit uusimpaan valmistusteknologiaan, automaatioon ja laadunvalvontaan mahdollistavat täyden valmistusvastuun ottamisen asiakkaidemme elektroniikkatuotteista. Toimitettujen teknisten asiakirjojen pohjalta toimitamme valmiita tuotteita, jotka ovat heti käyttövalmiita tai integroitavissa lopullisiin laitteisiin.",
+    "invitation": "Tutustu tärkeimpiin virstanpylväisiin, teknologiseen kehitykseen ja keskeisiin hetkiin, jotka ovat muovanneet yritystämme.",
+    "conclusion": "Hokamin valmistamaa elektroniikkaa käytetään monilla vaativilla aloilla, kuten teollisuudessa, lääketieteellisessä tekniikassa, energia-alalla, raideliikenteessä, kulutuselektroniikassa, autoteollisuudessa, ilmailussa ja avaruusteknologiassa. Ratkaisumme ovat osa laitteita, joihin asiakkaat ympäri maailman luottavat joka päivä.",
+    "milestones": {
+      "founding": "Josef Suska ja Miloš Sváček perustavat Hokami CZ:n",
+      "production": "Tuotanto käynnistyy",
+      "headquarters": "Ensimmäinen tuotantorakennus Liberecissä – yrityksen päätoimipaikka",
+      "secondBuilding": "Toinen tuotantorakennus Liberecissä",
+      "poland": "Tuotanto käynnistyy Puolassa",
+      "entrepreneurAward": "Yritys voittaa Vuoden yrittäjä -palkinnon",
+      "cleartex": "Yhteistyö kehitysyritys Cleartexin kanssa alkaa",
+      "testPlatform": "Hokamin toiminnallisten testauslaitteiden alusta kehitetään",
+      "thirdBuilding": "Kolmas tuotantorakennus Liberecissä",
+      "companyAward": "Yritys voittaa Vuoden yritys -palkinnon",
+      "czechTop100": "Yritys saa Tšekin Top 100 -palkinnon",
+      "secondGeneration": "Toinen sukupolvi liittyy yrityksen johtoon",
+      "quietCompany": "Yritys saa ”Tichá firma” -palkinnon",
+      "innovationAward": "Vuoden yrityshanke – Innovaatio",
+      "hallOfFame": "Tšekkiläisen liike-elämän timantit – Kunniagalleria",
+      "czechLeader": "Yritys saa Tšekin johtava yritys -palkinnon"
+    }
+  },
   "Video": {
     "title": "HOKAMI esittelyssä",
     "caption": "HOKAMI · Video {duration}",

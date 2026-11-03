@@ -1,0 +1,60 @@
+/* Figma: three normalized path pulses on one 30-second linear timeline. */
+/* Invisible resets are separated because duplicate CSS offsets cascade. */
+@keyframes hokami-trace-pulse {
+  0% {
+    stroke-dasharray: 0 1;
+    stroke-dashoffset: 0;
+  }
+  1.2% {
+    stroke-dasharray: 0.038 1;
+    stroke-dashoffset: 0;
+  }
+  32% {
+    stroke-dasharray: 0.038 1;
+    stroke-dashoffset: -0.962;
+  }
+  33.3% {
+    stroke-dasharray: 0 1;
+    stroke-dashoffset: -1;
+  }
+  33.3001% {
+    stroke-dasharray: 0 1;
+    stroke-dashoffset: 0;
+  }
+  34.6% {
+    stroke-dasharray: 0.038 1;
+    stroke-dashoffset: 0;
+  }
+  65.4% {
+    stroke-dasharray: 0.038 1;
+    stroke-dashoffset: -0.962;
+  }
+  66.6% {
+    stroke-dasharray: 0 1;
+    stroke-dashoffset: -1;
+  }
+  66.7% {
+    stroke-dasharray: 0 1;
+    stroke-dashoffset: 0;
+  }
+  67.9% {
+    stroke-dasharray: 0.038 1;
+    stroke-dashoffset: 0;
+  }
+  98.7% {
+    stroke-dasharray: 0.038 1;
+    stroke-dashoffset: -0.962;
+  }
+  99.9% {
+    stroke-dasharray: 0 1;
+    stroke-dashoffset: -1;
+  }
+  99.9999% {
+    stroke-dasharray: 0 1;
+    stroke-dashoffset: -1;
+  }
+  100% {
+    stroke-dasharray: 0 1;
+    stroke-dashoffset: 0;
+  }
+}

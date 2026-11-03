@@ -31,6 +31,31 @@
     "contact": "Kontaktovat",
     "history": "Prohlédnout historii"
   },
+  "AboutHistory": {
+    "eyebrow": "Historie",
+    "title": "Od roku 1997 do současnosti",
+    "description": "Díky dlouhodobým investicím do nejmodernějších výrobních technologií, automatizace a kontroly kvality jsme schopni převzít kompletní výrobní odpovědnost za elektronické výrobky našich zákazníků. Na základě dodané technické dokumentace dodáváme hotové produkty připravené k okamžitému použití nebo integraci do finálních zařízení.",
+    "invitation": "Prohlédněte si nejvýznamnější milníky, technologický rozvoj i klíčové okamžiky, které formovaly naši společnost.",
+    "conclusion": "Elektronika vyrobená ve společnosti Hokami nachází uplatnění v celé řadě náročných odvětví, jako jsou průmysl, zdravotnická technika, energetika, železniční doprava, spotřební elektronika, automobilový průmysl, letectví i kosmické technologie. Naše řešení jsou součástí zařízení, na která se zákazníci po celém světě spoléhají každý den.",
+    "milestones": {
+      "founding": "Josef Suska a Miloš Sváček zakládají společnost Hokami CZ",
+      "production": "Spuštění výrobního procesu",
+      "headquarters": "První výrobní budova v Liberci – hlavní sídlo firmy",
+      "secondBuilding": "Druhá výrobní budova v Liberci",
+      "poland": "Zahájení výroby v Polsku",
+      "entrepreneurAward": "Firma vyhrává cenu „Podnikatel roku“",
+      "cleartex": "Zahájení spolupráce s vývojovou firmou Cleartex",
+      "testPlatform": "Vytvořena Hokami platforma pro funkční testery",
+      "thirdBuilding": "Třetí výrobní budova v Liberci",
+      "companyAward": "Firma vyhrává cenu „Firma roku“",
+      "czechTop100": "Firma získává cenu „Českých 100 nejlepších“",
+      "secondGeneration": "Do vedení společnosti přichází druhá generace",
+      "quietCompany": "Firma získává ocenění „Tichá firma“",
+      "innovationAward": "Podnikatelský projekt roku – Inovace",
+      "hallOfFame": "Diamanty českého byznysu – Síň slávy",
+      "czechLeader": "Firma získává ocenění „Český lídr“"
+    }
+  },
   "Video": {
     "title": "Představení HOKAMI",
     "caption": "HOKAMI · Video {duration}",

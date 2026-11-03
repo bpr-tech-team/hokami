@@ -31,6 +31,31 @@
     "contact": "Contact us",
     "history": "Explore our history"
   },
+  "AboutHistory": {
+    "eyebrow": "History",
+    "title": "From 1997 to the present",
+    "description": "Through long-term investment in the latest manufacturing technologies, automation and quality control, we can take full manufacturing responsibility for our customers’ electronic products. Using the technical documentation provided, we deliver finished products ready for immediate use or integration into final equipment.",
+    "invitation": "Explore the major milestones, technological advances and key moments that have shaped our company.",
+    "conclusion": "Electronics manufactured by Hokami are used in a wide range of demanding sectors, including industry, medical technology, energy, rail transport, consumer electronics, the automotive industry, aviation and space technology. Our solutions are part of equipment that customers around the world rely on every day.",
+    "milestones": {
+      "founding": "Josef Suska and Miloš Sváček establish Hokami CZ",
+      "production": "Manufacturing operations begin",
+      "headquarters": "First manufacturing building in Liberec – the company headquarters",
+      "secondBuilding": "Second manufacturing building in Liberec",
+      "poland": "Manufacturing begins in Poland",
+      "entrepreneurAward": "The company wins the Entrepreneur of the Year award",
+      "cleartex": "Cooperation with development company Cleartex begins",
+      "testPlatform": "Hokami’s functional test platform is created",
+      "thirdBuilding": "Third manufacturing building in Liberec",
+      "companyAward": "The company wins the Company of the Year award",
+      "czechTop100": "The company receives the Czech Top 100 award",
+      "secondGeneration": "The second generation joins the company’s management",
+      "quietCompany": "The company receives the “Tichá firma” award",
+      "innovationAward": "Business Project of the Year – Innovation",
+      "hallOfFame": "Diamonds of Czech Business – Hall of Fame",
+      "czechLeader": "The company receives the Czech Leader award"
+    }
+  },
   "Video": {
     "title": "Introducing HOKAMI",
     "caption": "HOKAMI · Video {duration}",

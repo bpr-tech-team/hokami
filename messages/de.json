@@ -31,6 +31,31 @@
     "contact": "Kontakt aufnehmen",
     "history": "Geschichte entdecken"
   },
+  "AboutHistory": {
+    "eyebrow": "Geschichte",
+    "title": "Von 1997 bis heute",
+    "description": "Dank langfristiger Investitionen in modernste Fertigungstechnologien, Automatisierung und Qualitätskontrolle können wir die vollständige Fertigungsverantwortung für die Elektronikprodukte unserer Kunden übernehmen. Auf Grundlage der bereitgestellten technischen Dokumentation liefern wir fertige Produkte, die sofort eingesetzt oder in Endgeräte integriert werden können.",
+    "invitation": "Entdecken Sie die wichtigsten Meilensteine, technologischen Entwicklungen und entscheidenden Momente, die unser Unternehmen geprägt haben.",
+    "conclusion": "Die bei Hokami gefertigte Elektronik kommt in zahlreichen anspruchsvollen Branchen zum Einsatz, darunter Industrie, Medizintechnik, Energie, Schienenverkehr, Unterhaltungselektronik, Automobilindustrie, Luftfahrt und Raumfahrttechnologie. Unsere Lösungen sind Teil von Geräten, auf die sich Kunden auf der ganzen Welt täglich verlassen.",
+    "milestones": {
+      "founding": "Josef Suska und Miloš Sváček gründen Hokami CZ",
+      "production": "Aufnahme der Fertigung",
+      "headquarters": "Erstes Fertigungsgebäude in Liberec – der Hauptsitz des Unternehmens",
+      "secondBuilding": "Zweites Fertigungsgebäude in Liberec",
+      "poland": "Beginn der Fertigung in Polen",
+      "entrepreneurAward": "Das Unternehmen gewinnt die Auszeichnung „Unternehmer des Jahres“",
+      "cleartex": "Beginn der Zusammenarbeit mit dem Entwicklungsunternehmen Cleartex",
+      "testPlatform": "Die Hokami-Plattform für Funktionstester entsteht",
+      "thirdBuilding": "Drittes Fertigungsgebäude in Liberec",
+      "companyAward": "Das Unternehmen gewinnt die Auszeichnung „Unternehmen des Jahres“",
+      "czechTop100": "Das Unternehmen erhält die Auszeichnung „Tschechische Top 100“",
+      "secondGeneration": "Die zweite Generation tritt in die Unternehmensführung ein",
+      "quietCompany": "Das Unternehmen erhält die Auszeichnung „Tichá firma“",
+      "innovationAward": "Unternehmensprojekt des Jahres – Innovation",
+      "hallOfFame": "Diamanten der tschechischen Wirtschaft – Ruhmeshalle",
+      "czechLeader": "Das Unternehmen erhält die Auszeichnung „Tschechischer Marktführer“"
+    }
+  },
   "Video": {
     "title": "HOKAMI stellt sich vor",
     "caption": "HOKAMI · Video {duration}",
