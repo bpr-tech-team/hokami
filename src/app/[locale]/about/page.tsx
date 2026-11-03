@@ -1,4 +1,5 @@
-import { InfoPage } from "@/components/pages/info-page";
+import { PageMain } from "@/components/layout/page-main";
+import { AboutHero } from "@/components/sections/about/hero/about-hero";
 import { getPageMetadata } from "@/lib/seo";
 
 export function generateMetadata() {
@@ -6,5 +7,9 @@ export function generateMetadata() {
 }
 
 export default function AboutPage() {
-  return <InfoPage page="about" />;
+  return (
+    <PageMain>
+      <AboutHero />
+    </PageMain>
+  );
 }

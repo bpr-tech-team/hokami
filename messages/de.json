@@ -24,6 +24,13 @@
     "contact": "Kontaktieren Sie uns",
     "production": "Unsere Fertigung"
   },
+  "AboutHero": {
+    "eyebrow": "Unternehmen",
+    "title": "Ihr Partner für Elektronikfertigung und Entwicklung",
+    "description": "Hokami CZ s.r.o. zählt seit 1997 zu den führenden tschechischen Anbietern von Elektronikfertigungsdienstleistungen (EMS – Electronics Manufacturing Services). Wir bieten umfassende Lösungen von der Materialbeschaffung und Leiterplattenfertigung über SMT- und THT-Bestückung sowie Prüfung bis hin zu Endmontage, Programmierung, Schutzlackierung, Verguss und kompletter Logistik.",
+    "contact": "Kontakt aufnehmen",
+    "history": "Geschichte entdecken"
+  },
   "Video": {
     "title": "HOKAMI stellt sich vor",
     "caption": "HOKAMI · Video {duration}",

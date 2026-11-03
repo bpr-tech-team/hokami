@@ -24,6 +24,13 @@
     "contact": "Skontaktuj się z nami",
     "production": "Nasza produkcja"
   },
+  "AboutHero": {
+    "eyebrow": "Firma",
+    "title": "Partner w produkcji i rozwoju elektroniki",
+    "description": "Hokami CZ s.r.o. od 1997 roku należy do czołowych czeskich dostawców usług produkcji elektroniki (EMS – Electronics Manufacturing Services). Oferujemy kompleksowe rozwiązania: od zakupu materiałów i produkcji płytek drukowanych, przez montaż SMT i THT oraz testowanie, po montaż końcowy, programowanie, lakierowanie ochronne, zalewanie i pełną logistykę.",
+    "contact": "Skontaktuj się",
+    "history": "Poznaj historię"
+  },
   "Video": {
     "title": "Poznaj HOKAMI",
     "caption": "HOKAMI · Wideo {duration}",

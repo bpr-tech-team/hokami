@@ -24,6 +24,13 @@
     "contact": "Ota yhteyttä",
     "production": "Tuotantomme"
   },
+  "AboutHero": {
+    "eyebrow": "Yritys",
+    "title": "Kumppanisi elektroniikan valmistuksessa ja kehityksessä",
+    "description": "Hokami CZ s.r.o. on kuulunut Tšekin johtaviin elektroniikan valmistuspalvelujen (EMS – Electronics Manufacturing Services) tarjoajiin vuodesta 1997. Tarjoamme kokonaisratkaisuja materiaalihankinnasta ja piirilevyjen valmistuksesta SMT- ja THT-kalustukseen ja testaukseen sekä loppukokoonpanoon, ohjelmointiin, suojalakkaukseen, valamiseen ja kattavaan logistiikkaan.",
+    "contact": "Ota yhteyttä",
+    "history": "Tutustu historiaamme"
+  },
   "Video": {
     "title": "HOKAMI esittelyssä",
     "caption": "HOKAMI · Video {duration}",

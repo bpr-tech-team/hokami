@@ -24,6 +24,13 @@
     "contact": "Kontaktujte nás",
     "production": "Naše výroba"
   },
+  "AboutHero": {
+    "eyebrow": "Společnost",
+    "title": "Partner pro výrobu a vývoj elektroniky",
+    "description": "Společnost Hokami CZ s.r.o. patří již od roku 1997 mezi přední české poskytovatele služeb v oblasti výroby elektroniky (EMS – Electronics Manufacturing Services). Nabízíme komplexní řešení od nákupu materiálu a výroby desek plošných spojů přes osazování SMT a THT technologií, testování až po finální montáž, programování, lakování, zalévání a kompletní logistiku.",
+    "contact": "Kontaktovat",
+    "history": "Prohlédnout historii"
+  },
   "Video": {
     "title": "Představení HOKAMI",
     "caption": "HOKAMI · Video {duration}",

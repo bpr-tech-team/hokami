@@ -3,13 +3,15 @@ import { cn } from "cn";
 import { Container } from "@/components/layout/container";
 import { Heading } from "@/components/typography/heading";
 import { MonoText } from "@/components/typography/mono-text";
-import { Text } from "@/components/typography/text";
-import { ButtonLink } from "@/components/ui/button/button-link";
+import { Text, type TextProps } from "@/components/typography/text";
+import {
+  ButtonLink,
+  type ButtonLinkProps,
+} from "@/components/ui/button/button-link";
 import { HeroBackground } from "./hero-background";
 
-type HeroAction = {
+type HeroAction = Pick<ButtonLinkProps, "href" | "size" | "showIcon"> & {
   label: string;
-  href: string;
 };
 
 type HeroSectionProps = Omit<
@@ -21,8 +23,11 @@ type HeroSectionProps = Omit<
   title: ReactNode;
   headingAs?: "h1" | "h2";
   description?: ReactNode;
+  descriptionProps?: Omit<TextProps, "children">;
   descriptionVisibility?: "always" | "tablet";
+  contentClassName?: string;
   actions?: readonly HeroAction[];
+  actionsClassName?: string;
   background?: ReactNode;
 };
 
@@ -32,8 +37,11 @@ export function HeroSection({
   title,
   headingAs = "h1",
   description,
+  descriptionProps,
   descriptionVisibility = "always",
+  contentClassName,
   actions = [],
+  actionsClassName,
   background = <HeroBackground />,
   className,
   children,
@@ -52,7 +60,12 @@ export function HeroSection({
       )}
     >
       {background}
-      <Container className="relative flex flex-col items-start gap-6">
+      <Container
+        className={cn(
+          "relative flex flex-col items-start gap-6",
+          contentClassName,
+        )}
+      >
         <MonoText variant="eyebrow" className="max-w-[250px] tablet:max-w-none">
           {eyebrow}
         </MonoText>
@@ -68,21 +81,30 @@ export function HeroSection({
           <Text
             variant="quote"
             tone="black"
+            {...descriptionProps}
             className={cn(
               "max-w-[1000px]",
               descriptionVisibility === "tablet" && "hidden tablet:block",
+              descriptionProps?.className,
             )}
           >
             {description}
           </Text>
         )}
         {actions.length > 0 && (
-          <div className="flex max-w-full flex-col items-start gap-[25px] tablet:flex-row tablet:flex-wrap tablet:items-center">
+          <div
+            className={cn(
+              "flex max-w-full flex-col items-start gap-[25px] tablet:flex-row tablet:flex-wrap tablet:items-center",
+              actionsClassName,
+            )}
+          >
             {actions.map((action, index) => (
               <ButtonLink
                 key={action.href}
                 href={action.href}
                 variant={index === 0 ? "default" : "outline"}
+                size={action.size}
+                showIcon={action.showIcon}
               >
                 {action.label}
               </ButtonLink>

@@ -79,6 +79,12 @@ two places. Reuse the existing components when adding sections:
 - `components/sections/hero/`: shared `HeroSection` and independent
   `HeroBackground`. The section accepts translated content, actions, a heading
   element, and an optional background. `home/hero/` supplies homepage content.
+  Customize layout with `className`, `contentClassName`, and `actionsClassName`,
+  description typography with `descriptionProps`, and button size/icon per action.
+  `HeroBackground` accepts desktop artwork and positioning through props.
+  `about/hero/` owns the About layout, typography, actions and background settings,
+  supplies content in each locale, links contact to the homepage enquiry form and
+  reserves `#history` for the future history section.
   The background uses CSS horizon gradients, inline SVG contacts, local Figma
   trace SVGs, and a 30-second CSS timeline. Its small
   client wrapper pauses motion outside the viewport, in hidden tabs, and under

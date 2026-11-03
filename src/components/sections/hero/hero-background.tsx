@@ -1,7 +1,7 @@
 import { useId } from "react";
 import { cn } from "cn";
 import {
-  desktopArtwork,
+  desktopArtwork as defaultDesktopArtwork,
   mobileArtwork,
   type HeroArtwork,
 } from "./hero-artwork";
@@ -12,6 +12,8 @@ import "./hero-motion.css";
 type HeroBackgroundProps = {
   animated?: boolean;
   className?: string;
+  desktopArtwork?: HeroArtwork;
+  desktopClassName?: string;
 };
 
 // Contact positions follow each trace; their diameter stays fixed in CSS pixels.
@@ -161,6 +163,8 @@ function Artwork({
 export function HeroBackground({
   animated = true,
   className,
+  desktopArtwork = defaultDesktopArtwork,
+  desktopClassName,
 }: HeroBackgroundProps) {
   const id = useId();
 
@@ -174,7 +178,10 @@ export function HeroBackground({
       <Artwork
         artwork={desktopArtwork}
         prefix={`${id}-desktop`}
-        className="absolute top-1/2 left-1/2 hidden h-[900px] w-[1440px] max-w-none -translate-1/2 tablet:block"
+        className={cn(
+          "absolute top-1/2 left-1/2 hidden h-[900px] w-[1440px] max-w-none -translate-1/2 tablet:block",
+          desktopClassName,
+        )}
       />
       <div className="absolute inset-0 tablet:hidden">
         {mobileTraces.map((trace, index) => (
