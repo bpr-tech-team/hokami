@@ -40,10 +40,10 @@ function HeaderView({ locale, labels, items, location }: HeaderNavProps) {
         {labels.skip}
       </a>
       <header
-        className="sticky top-0 z-40 bg-surface-default transition-[background-color,box-shadow] duration-150 data-scrolled:bg-surface-default/50 data-scrolled:shadow-[0_1px_3px_rgb(17_16_14/4%),0_1px_2px_rgb(17_16_14/6%)] data-scrolled:backdrop-blur-[15px]"
+        className="sticky top-0 z-40 bg-surface-default transition-[background-color,box-shadow] duration-150 data-scrolled:bg-surface-default/50 data-scrolled:shadow-[0_1px_3px_rgb(from_var(--color-surface-inverse)_r_g_b/4%),0_1px_2px_rgb(from_var(--color-surface-inverse)_r_g_b/6%)] data-scrolled:backdrop-blur-[15px]"
         data-scrolled={scrolled || undefined}
       >
-        <HeaderBar className="h-16 xl:h-18 xl:gap-6 xl:px-20 min-[90rem]:gap-8">
+        <HeaderBar className="h-(--site-header-height) xl:gap-6 xl:px-20 min-[90rem]:gap-8">
           <HeaderLogo ref={desktopLogoRef} label={labels.home} />
           <HeaderDesktopNav {...navigationProps} />
           <HeaderMobileMenu

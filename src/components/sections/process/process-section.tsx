@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Section } from "@/components/layout/section";
 import { ProcessBackground } from "./process-background";
 import { ProcessRing } from "./process-ring";

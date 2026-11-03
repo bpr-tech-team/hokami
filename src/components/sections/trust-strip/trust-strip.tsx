@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Container } from "@/components/layout/container";
 import { prepareStatistic } from "./format-statistic";
 import { StatGrid } from "./stat-grid";

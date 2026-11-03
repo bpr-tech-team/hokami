@@ -90,7 +90,7 @@ export function HistoryTimeline({ children }: { children: ReactNode }) {
           strokeOpacity="0.5"
           strokeWidth="1.4"
           shapeRendering="crispEdges"
-          className="animate-[hokami-trace-pulse_30s_linear_infinite] [animation-play-state:paused] [filter:drop-shadow(0_0_3px_rgb(254_71_4_/_0.9))] group-data-[motion=running]/history:[animation-play-state:running] motion-reduce:hidden"
+          className="animate-[hokami-trace-pulse_30s_linear_infinite] [filter:drop-shadow(0_0_3px_rgb(from_var(--color-brand-identity)_r_g_b/0.9))] [animation-play-state:paused] group-data-[motion=running]/history:[animation-play-state:running] motion-reduce:hidden"
         />
       </svg>
       {children}

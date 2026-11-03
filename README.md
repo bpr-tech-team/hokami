@@ -205,6 +205,19 @@ Import feature components from their own files. Keep typography styles and
 reusable visual variants in their components, and pass page-specific layout
 adjustments through `className` rather than duplicating whole style strings.
 
+Import `cn` from `@/lib/utils`; its conflict groups include the shared
+`leading-body`, `leading-small`, and semantic tracking utilities. This preserves
+local typography overrides. Prettier sorts Tailwind classes in JSX and `cn`/`cva`
+calls using `src/app/globals.css` as the theme entry point.
+
+Shared layout measurements live in `globals.css`: `--site-header-height` scales
+with the spacing unit, while `--site-sticky-offset` preserves the original pixel
+offsets for video and process scenes. `--site-anchor-offset` keeps the separate
+88 px anchor offset. Process text
+motion parameters live in `process-scroll-layout.ts` and feed both the CSS
+timeline and JavaScript fallback. Keep artwork coordinates, gradient masks,
+CSS icon geometry, and animation keyframes unchanged during style cleanup.
+
 Add components as needed with the installed CLI:
 
 ```bash

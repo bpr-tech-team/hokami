@@ -33,7 +33,7 @@
   --cc-cookie-category-block-hover-border: var(--color-border-strong);
   --cc-cookie-category-expanded-block-bg: var(--color-surface-default);
   --cc-cookie-category-expanded-block-hover-bg: var(--color-border-subtle);
-  --cc-overlay-bg: rgb(17 16 14 / 60%);
+  --cc-overlay-bg: rgb(from var(--color-surface-inverse) r g b / 60%);
   --cc-footer-bg: var(--color-surface-subtle);
   --cc-footer-color: var(--color-text-secondary);
   --cc-footer-border-color: var(--color-border-subtle);
@@ -64,7 +64,7 @@
 #cc-main .cm__desc,
 #cc-main .pm__section-desc {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: var(--leading-body);
 }
 
 #cc-main .cm__btn,
@@ -73,8 +73,8 @@
   font-family: var(--font-ibm-plex-mono), "Courier New", monospace;
   font-size: 0.75rem;
   font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.12em;
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-meta);
   text-transform: uppercase;
   white-space: normal;
 }

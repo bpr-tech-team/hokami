@@ -1,4 +1,4 @@
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Heading } from "@/components/typography/heading";
 import { MonoText } from "@/components/typography/mono-text";
 import { Text } from "@/components/typography/text";
@@ -26,7 +26,7 @@ export function ProcessStep({
         variant="eyebrow"
         className={
           compact
-            ? "text-[clamp(10px,2cqw,12px)] leading-[1.3] tracking-[0.16em]"
+            ? "text-[clamp(10px,2cqw,12px)] leading-[1.3] tracking-label"
             : undefined
         }
       >

@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { MonoText } from "@/components/typography/mono-text";
 import { Text } from "@/components/typography/text";
 import { AnimatedNumber } from "./animated-number";

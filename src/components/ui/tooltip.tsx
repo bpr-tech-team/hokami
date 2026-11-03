@@ -1,17 +1,17 @@
 "use client";
 
 import { Tooltip as TooltipPrimitive } from "@base-ui/react/tooltip";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const tooltipVariants = cva(
-  "z-50 flex w-fit max-w-xs origin-(--transform-origin) rounded-none text-xs transition-[opacity,transform] duration-250 data-starting-style:scale-95 data-starting-style:opacity-0 data-ending-style:scale-95 data-ending-style:opacity-0",
+  "z-50 flex w-fit max-w-xs origin-(--transform-origin) rounded-none text-xs transition-[opacity,transform] duration-250 data-ending-style:scale-95 data-ending-style:opacity-0 data-starting-style:scale-95 data-starting-style:opacity-0",
   {
     variants: {
       variant: {
         default:
           "items-center gap-1.5 bg-foreground px-3 py-1.5 text-background",
-        map: "flex-col items-start gap-[3px] border border-border-brand-subtle bg-surface-subtle px-3.5 py-2.5 font-mono leading-[1.6] tracking-[0.12em] text-text-primary uppercase",
+        map: "flex-col items-start gap-[3px] border border-border-brand-subtle bg-surface-subtle px-3.5 py-2.5 font-mono leading-body tracking-meta text-text-primary uppercase",
       },
     },
     defaultVariants: { variant: "default" },
@@ -72,7 +72,13 @@ function TooltipContent({
         >
           {children}
           {variant !== "map" && (
-            <TooltipPrimitive.Arrow className="z-50 size-2.5 translate-y-[calc(-50%-2px)] rotate-45 bg-foreground fill-foreground data-[side=bottom]:top-1 data-[side=inline-end]:top-1/2! data-[side=inline-end]:-left-1 data-[side=inline-end]:-translate-y-1/2 data-[side=inline-start]:top-1/2! data-[side=inline-start]:-right-1 data-[side=inline-start]:-translate-y-1/2 data-[side=left]:top-1/2! data-[side=left]:-right-1 data-[side=left]:-translate-y-1/2 data-[side=right]:top-1/2! data-[side=right]:-left-1 data-[side=right]:-translate-y-1/2 data-[side=top]:-bottom-2.5" />
+            <TooltipPrimitive.Arrow className="group/tooltip-arrow z-50 size-2.5 data-[side=bottom]:top-1 data-[side=inline-end]:-left-1 data-[side=inline-start]:-right-1 data-[side=left]:-right-1 data-[side=right]:-left-1 data-[side=top]:-bottom-2.5">
+              {/* Base UI owns the anchor coordinates; only the decoration transforms. */}
+              <span
+                data-slot="tooltip-arrow-decoration"
+                className="absolute inset-0 rotate-45 bg-foreground group-data-[side=bottom]/tooltip-arrow:translate-y-[calc(-50%-2px)] group-data-[side=top]/tooltip-arrow:translate-y-[calc(-50%-2px)]"
+              />
+            </TooltipPrimitive.Arrow>
           )}
         </TooltipPrimitive.Popup>
       </TooltipPrimitive.Positioner>

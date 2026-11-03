@@ -1,5 +1,5 @@
 import type { Locale } from "next-intl";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import {
   ButtonLink,
   type ButtonLinkProps,

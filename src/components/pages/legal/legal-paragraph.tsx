@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Text } from "@/components/typography/text";
 
 export function LegalParagraph({

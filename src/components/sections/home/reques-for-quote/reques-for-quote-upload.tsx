@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { MonoText } from "@/components/typography/mono-text";
 import { Text } from "@/components/typography/text";
@@ -71,7 +71,7 @@ export function RequesForQuoteUpload({
           height={24}
           alt=""
         />
-        <div className="flex min-w-0 basis-[180px] flex-col gap-1 grow">
+        <div className="flex min-w-0 grow basis-[180px] flex-col gap-1">
           <MonoText
             id="reques-for-quote-files-label"
             tone="secondary"

@@ -1,4 +1,4 @@
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 
 function ProcessGlow({ className }: { className: string }) {
   return (

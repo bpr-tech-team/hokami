@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 
 const traceDotVariants = cva(
   // Paint both edges together, with soft transitions for the tiny ring.

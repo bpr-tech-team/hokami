@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { formControlVariants } from "./form-control-variants";
 import { ChevronIcon } from "./icons/chevron-icon";
 
@@ -40,7 +40,7 @@ function SelectTrigger({
       data-size={size}
       className={cn(
         formControlVariants(),
-        "group/select flex cursor-pointer items-center gap-2 text-left whitespace-nowrap select-none data-disabled:cursor-not-allowed data-placeholder:text-text-tertiary data-popup-open:border-border-strong-hover data-[size=sm]:h-10",
+        "group/select flex cursor-pointer items-center gap-2 text-left whitespace-nowrap select-none data-placeholder:text-text-tertiary data-popup-open:border-border-strong-hover data-[size=sm]:h-10 data-disabled:cursor-not-allowed",
         className,
       )}
       {...props}
@@ -80,12 +80,12 @@ function SelectContent({
         <SelectPrimitive.Popup
           data-slot="select-content"
           className={cn(
-            "relative w-(--anchor-width) origin-(--transform-origin) overflow-hidden rounded-none border border-border-subtle bg-surface-default py-1 text-text-primary shadow-[0_8px_24px_-4px_rgb(17_16_14/12%),0_2px_6px_rgb(17_16_14/6%)] outline-none transition-[opacity,translate] duration-250 ease-out data-starting-style:-translate-y-1 data-starting-style:opacity-0 data-ending-style:-translate-y-1 data-ending-style:opacity-0",
+            "relative w-(--anchor-width) origin-(--transform-origin) overflow-hidden rounded-none border border-border-subtle bg-surface-default py-1 text-text-primary shadow-[0_8px_24px_-4px_rgb(from_var(--color-surface-inverse)_r_g_b/12%),0_2px_6px_rgb(from_var(--color-surface-inverse)_r_g_b/6%)] transition-[opacity,translate] duration-250 ease-out outline-none data-ending-style:-translate-y-1 data-ending-style:opacity-0 data-starting-style:-translate-y-1 data-starting-style:opacity-0",
             className,
           )}
           {...props}
         >
-          <SelectPrimitive.List className="max-h-[min(264px,calc(var(--available-height)_-_10px))] overflow-y-auto overscroll-contain outline-none [scrollbar-width:thin]">
+          <SelectPrimitive.List className="max-h-[min(264px,calc(var(--available-height)_-_10px))] [scrollbar-width:thin] overflow-y-auto overscroll-contain outline-none">
             {children}
           </SelectPrimitive.List>
         </SelectPrimitive.Popup>
@@ -102,7 +102,7 @@ function SelectLabel({
     <SelectPrimitive.GroupLabel
       data-slot="select-label"
       className={cn(
-        "px-4 py-2 font-mono text-xs tracking-[0.16em] text-text-secondary uppercase",
+        "px-4 py-2 font-mono text-xs tracking-label text-text-secondary uppercase",
         className,
       )}
       {...props}
@@ -119,7 +119,7 @@ function SelectItem({
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        "relative flex h-11 w-full shrink-0 cursor-pointer items-center gap-2 px-4 font-sans text-base leading-[1.6] text-text-primary outline-none transition-colors duration-250 select-none after:absolute after:bottom-0 after:left-0 after:h-px after:w-[5%] after:bg-brand-identity after:transition-[width] after:duration-250 last:after:hidden data-disabled:pointer-events-none data-disabled:text-text-disabled data-highlighted:bg-surface-accent-subtle data-highlighted:after:w-1/4 data-selected:bg-surface-accent-subtle",
+        "relative flex h-11 w-full shrink-0 cursor-pointer items-center gap-2 px-4 font-sans text-base leading-body text-text-primary transition-colors duration-250 outline-none select-none after:absolute after:bottom-0 after:left-0 after:h-px after:w-[5%] after:bg-brand-identity after:transition-[width] after:duration-250 last:after:hidden data-highlighted:bg-surface-accent-subtle data-highlighted:after:w-1/4 data-selected:bg-surface-accent-subtle data-disabled:pointer-events-none data-disabled:text-text-disabled",
         className,
       )}
       {...props}

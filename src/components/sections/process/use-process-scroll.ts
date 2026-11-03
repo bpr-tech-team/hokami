@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, type RefObject } from "react";
+import { getProcessTextOffset } from "./process-scroll-layout";
 import {
   getProcessScrollProgress,
   getProcessScrollState,
@@ -41,7 +42,7 @@ export function useProcessScroll(
     let driver: "native" | "fallback" | "reduced";
     let start = 0;
     let distance = 0;
-    let textOffset = 18;
+    let textOffset = 0;
     let frame = 0;
     let measure = true;
     let disposed = false;
@@ -60,10 +61,7 @@ export function useProcessScroll(
             : 0;
         start = bounds.top + window.scrollY - top;
         distance = bounds.height - scene.getBoundingClientRect().height;
-        textOffset = Math.max(
-          0,
-          Math.min(18, (ring.getBoundingClientRect().width - 280) * 0.05),
-        );
+        textOffset = getProcessTextOffset(ring.getBoundingClientRect().width);
         // Keep the original section's background frame as the scene sticks.
         root.style.setProperty(
           "--process-heading-offset",

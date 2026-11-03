@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { PauseIcon, PlayIcon, XIcon } from "lucide-react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button/button";
 import { ButtonLink } from "@/components/ui/button/button-link";
 import { MonoText } from "@/components/typography/mono-text";
@@ -79,14 +79,14 @@ export function VideoSection({
       data-slot="video-section"
       data-active={active || undefined}
       className={cn(
-        "group/video relative z-10 scroll-mt-16 px-5 [overflow-anchor:none] [--video-gap:20px] [--video-height:max(320px,calc(100svh-var(--video-top)-var(--video-gap)))] [--video-top:64px] tablet:px-10 tablet:[--video-gap:40px] xl:scroll-mt-18 xl:[--video-top:72px]",
+        "group/video relative z-10 scroll-mt-(--site-header-height) px-5 [--video-gap:20px] [--video-height:max(320px,calc(100svh-var(--video-top)-var(--video-gap)))] [--video-top:var(--site-sticky-offset)] [overflow-anchor:none] tablet:px-10 tablet:[--video-gap:40px]",
         className,
       )}
     >
       <div data-video-slot className="relative h-0 w-full">
         <div
           data-video-stage
-          className="pointer-events-none invisible absolute inset-x-0 top-0 h-(--video-height) motion-reduce:aspect-video motion-reduce:h-auto group-data-ready/video:visible"
+          className="pointer-events-none invisible absolute inset-x-0 top-0 h-(--video-height) group-data-ready/video:visible motion-reduce:aspect-video motion-reduce:h-auto"
         >
           <div
             data-video-frame

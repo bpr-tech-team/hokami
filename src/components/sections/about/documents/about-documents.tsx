@@ -24,7 +24,7 @@ export async function AboutDocuments() {
             >
               {t(`groups.${id}`)}
             </Heading>
-            <ul className="desktop:grid desktop:auto-rows-fr desktop:flex-1">
+            <ul className="desktop:grid desktop:flex-1 desktop:auto-rows-fr">
               {items.map(({ id: documentId, href }) => {
                 const label = t(`items.${documentId}`);
 

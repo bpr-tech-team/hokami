@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, type ReactNode } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { useMotionVisibility } from "@/hooks/use-motion-visibility";
 
 type HeroMotionProps = {

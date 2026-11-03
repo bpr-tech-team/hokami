@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Container } from "@/components/layout/container";
 
 export function HeaderBar({ className, ...props }: ComponentProps<"div">) {
@@ -9,7 +9,7 @@ export function HeaderBar({ className, ...props }: ComponentProps<"div">) {
       {...props}
       data-slot="header-bar"
       className={cn(
-        "flex items-center justify-between gap-4 px-5 tablet:px-10 max-[23rem]:gap-2",
+        "flex items-center justify-between gap-4 px-5 max-[23rem]:gap-2 tablet:px-10",
         className,
       )}
     />

@@ -66,7 +66,7 @@ export const desktopArtwork = {
       width: 1422.5,
       height: 180,
       d: "M0 0L40.5 40.000003814697266H319.99993896484375L399.99993896484375 120H700.0000610351562L760.0000610351562 180H1180L1253.5 120H1338L1387.5 85L1422.5 60.000003814697266V0.000003814697265625",
-      stroke: "#FE4704",
+      stroke: "var(--color-brand-identity)",
       strokeOpacity: 0.5,
       crispEdges: true,
       filter: {
@@ -85,7 +85,7 @@ export const desktopArtwork = {
       width: 1419,
       height: 325,
       d: "M0 325L81.9934994582882 240.3697996918336H184.48537378114844L266.4788732394366 160.24653312788905H532.9577464788732L614.9512459371615 80.12326656394453H1004.4203683640304L1086.4138678223185 0H1340.0812567713976L1382.6153846153848 35.55469953775039L1419 65.10015408320493V324.49922958397536",
-      stroke: "#FE4704",
+      stroke: "var(--color-brand-identity)",
       strokeOpacity: 0.5,
       crispEdges: true,
       filter: {
@@ -104,7 +104,7 @@ export const desktopArtwork = {
       width: 93.4,
       height: 952.0,
       d: "M6.7 6V206L86.7 286V446L6.7 526V946",
-      stroke: "#FE4704",
+      stroke: "var(--color-brand-identity)",
       strokeOpacity: 0.5,
       crispEdges: true,
       filter: {
@@ -123,7 +123,7 @@ export const desktopArtwork = {
       width: 113.4,
       height: 952.0,
       d: "M106.7 6V266L6.7 366V586L86.7 666V946",
-      stroke: "#FE4704",
+      stroke: "var(--color-brand-identity)",
       strokeOpacity: 0.5,
       crispEdges: true,
       filter: {
@@ -189,7 +189,7 @@ export const mobileArtwork = {
       width: 420.0,
       height: 36.3702,
       d: "M5 5.7H135L159 30.6702H275L299 5.7H415",
-      stroke: "#CC3700",
+      stroke: "var(--color-action-primary)",
       strokeOpacity: 1.0,
       crispEdges: false,
       filter: {
@@ -208,7 +208,7 @@ export const mobileArtwork = {
       width: 420.0,
       height: 36.3702,
       d: "M5 30.6702H85L109 5.7H245L269 30.6702H415",
-      stroke: "#CC3700",
+      stroke: "var(--color-action-primary)",
       strokeOpacity: 1.0,
       crispEdges: false,
       filter: {
@@ -227,7 +227,7 @@ export const mobileArtwork = {
       width: 31.4,
       height: 519.808,
       d: "M5.7 5V115.285L25.7 136.094V327.532L5.7 348.34V514.809",
-      stroke: "#CC3700",
+      stroke: "var(--color-action-primary)",
       strokeOpacity: 1.0,
       crispEdges: false,
       filter: {

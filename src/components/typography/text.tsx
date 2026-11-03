@@ -1,15 +1,15 @@
 import type { ComponentPropsWithoutRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 
 const textVariants = cva("font-sans font-normal", {
   variants: {
     variant: {
       quote:
         "font-display text-[22px] leading-[29px] tablet:text-[28px] tablet:leading-[36px] desktop:text-[34px] desktop:leading-[43px]",
-      body: "text-base leading-[1.6]",
-      lead: "text-lg leading-[1.6]",
-      small: "text-sm leading-[1.55]",
+      body: "text-base leading-body",
+      lead: "text-lg leading-body",
+      small: "text-sm leading-small",
       stat: "font-display text-[28px] leading-[28px] font-semibold tracking-[-0.01em]",
       article: "text-base leading-relaxed",
     },

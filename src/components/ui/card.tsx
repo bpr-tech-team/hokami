@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 
 const featureCardBase =
   "gap-[22px] border border-brand-identity/50 px-[34px] pt-10 pb-11 transition-colors duration-500 before:pointer-events-none before:absolute before:-inset-x-px before:-top-px before:h-0.5 before:origin-left before:scale-x-0 before:bg-action-primary before:shadow-[0_0_14px_0] before:shadow-brand-identity/80 before:transition-transform before:duration-500 before:ease-out";
@@ -14,7 +14,7 @@ const cardVariants = cva(
           "gap-(--card-spacing) py-(--card-spacing) text-sm ring-1 ring-foreground/10 [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0",
         feature: cn(
           featureCardBase,
-          "hover:border-brand-identity hover:bg-surface-raised hover:before:scale-x-100 focus-within:border-brand-identity focus-within:bg-surface-raised focus-within:before:scale-x-100",
+          "focus-within:border-brand-identity focus-within:bg-surface-raised focus-within:before:scale-x-100 hover:border-brand-identity hover:bg-surface-raised hover:before:scale-x-100",
         ),
         location: cn(
           featureCardBase,

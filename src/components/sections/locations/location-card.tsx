@@ -43,13 +43,13 @@ export function LocationCard({
               aria-label={`${region.title} — ${locationLabel}`}
               aria-pressed={selected}
               onClick={onSelect}
-              className="cursor-pointer text-left uppercase after:absolute after:inset-0 focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-focus-ring focus-visible:after:outline-offset-2"
+              className="cursor-pointer text-left uppercase after:absolute after:inset-0 focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-focus-ring"
             >
               {region.title}
             </button>
           </Heading>
         </CardTitle>
-        <ul className="flex w-full min-w-0 flex-col gap-[9px] font-mono text-[13px] leading-[1.6] tracking-[0.04em] text-text-secondary">
+        <ul className="flex w-full min-w-0 flex-col gap-[9px] font-mono text-[13px] leading-body tracking-[0.04em] text-text-secondary">
           {region.contacts.map(({ label, href }) => (
             <li key={href} className="min-w-0">
               <a

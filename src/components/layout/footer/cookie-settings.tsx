@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { showCookiePreferences } from "@/lib/cookie-consent";
 import { footerLinkVariants } from "./footer-link";
 

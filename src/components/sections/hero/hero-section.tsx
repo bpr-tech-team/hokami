@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Container } from "@/components/layout/container";
 import { Heading } from "@/components/typography/heading";
 import { MonoText } from "@/components/typography/mono-text";

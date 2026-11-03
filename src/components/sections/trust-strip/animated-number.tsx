@@ -6,7 +6,7 @@ import NumberFlow, {
   useCanAnimate,
   type Format,
 } from "@number-flow/react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import type { PreparedStatistic } from "./types";
 
 type AnimatedNumberProps = Pick<
@@ -110,7 +110,7 @@ export function AnimatedNumber({
       <span
         aria-hidden="true"
         className={cn(
-          "whitespace-pre-wrap wrap-anywhere",
+          "wrap-anywhere whitespace-pre-wrap",
           started && canAnimate && "invisible",
         )}
       >

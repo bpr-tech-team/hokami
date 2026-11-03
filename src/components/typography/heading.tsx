@@ -1,6 +1,6 @@
 import type { ComponentPropsWithRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 
 const headingVariants = cva("font-display font-semibold", {
   variants: {

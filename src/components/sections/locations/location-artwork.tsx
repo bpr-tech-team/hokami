@@ -1,5 +1,5 @@
 import { useId } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import type { LocationId } from "./data";
 import { LocationDot } from "./location-dot";
 import { mapSites } from "./map-layout";
@@ -106,7 +106,7 @@ export function LocationArtwork({ activeId }: { activeId: LocationId | null }) {
       {vias.map((via) => (
         <span
           key={`${via.x}:${via.y}`}
-          className="absolute aspect-square w-[0.9%] -translate-1/2 rounded-[50%] bg-[radial-gradient(circle_closest-side,white_0_77.7778%,#fe4704_80%_97%,transparent_100%)]"
+          className="absolute aspect-square w-[0.9%] -translate-1/2 rounded-[50%] bg-[radial-gradient(circle_closest-side,var(--color-surface-default)_0_77.7778%,var(--color-brand-identity)_80%_97%,transparent_100%)]"
           style={{
             left: `${(via.x / 732) * 100}%`,
             top: `${(via.y / 556.32) * 100}%`,

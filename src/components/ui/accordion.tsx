@@ -2,7 +2,7 @@
 
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import type { ReactNode } from "react";
 
@@ -11,7 +11,7 @@ const itemVariants = cva("relative", {
     variant: {
       default: "not-last:border-b",
       industry:
-        "group/industry flex min-w-0 flex-col border-b border-border-brand-subtle bg-surface-default transition-[flex-grow,background-color] duration-500 ease-[cubic-bezier(.2,.7,.2,1)] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-10 before:h-0.5 before:origin-left before:scale-x-0 before:bg-action-primary before:shadow-[0_0_14px_0] before:shadow-brand-identity/80 before:transition-transform before:duration-500 before:ease-[cubic-bezier(.2,.7,.2,1)] hover:not-data-open:bg-surface-raised hover:not-data-open:before:scale-x-25 data-open:before:scale-x-100 desktop:flex-[0_0_auto] desktop:data-open:grow",
+        "group/industry flex min-w-0 flex-col border-b border-border-brand-subtle bg-surface-default transition-[flex-grow,background-color] duration-500 ease-[cubic-bezier(.2,.7,.2,1)] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-10 before:h-0.5 before:origin-left before:scale-x-0 before:bg-action-primary before:shadow-[0_0_14px_0] before:shadow-brand-identity/80 before:transition-transform before:duration-500 before:ease-[cubic-bezier(.2,.7,.2,1)] hover:not-data-open:bg-surface-raised hover:not-data-open:before:scale-x-25 desktop:flex-[0_0_auto] data-open:before:scale-x-100 desktop:data-open:grow",
     },
   },
   defaultVariants: { variant: "default" },
@@ -25,7 +25,7 @@ const triggerVariants = cva(
         default:
           "items-start justify-between rounded-lg border border-transparent py-2.5 text-sm font-medium transition-all hover:underline focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:after:border-ring **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-muted-foreground",
         industry:
-          "cursor-pointer items-center gap-4 p-5 transition-[padding] duration-500 ease-[cubic-bezier(.2,.7,.2,1)] focus-visible:z-20 focus-visible:outline-2 focus-visible:outline-focus-ring focus-visible:-outline-offset-2 aria-expanded:pb-4 desktop:p-6 desktop:aria-expanded:pb-4",
+          "cursor-pointer items-center gap-4 p-5 transition-[padding] duration-500 ease-[cubic-bezier(.2,.7,.2,1)] focus-visible:z-20 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus-ring aria-expanded:pb-4 desktop:p-6 desktop:aria-expanded:pb-4",
       },
     },
     defaultVariants: { variant: "default" },

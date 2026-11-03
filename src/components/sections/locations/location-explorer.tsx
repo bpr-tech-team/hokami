@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, type PointerEvent, type ReactNode } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Heading } from "@/components/typography/heading";
 import { MonoText } from "@/components/typography/mono-text";
 import {
@@ -229,7 +229,7 @@ export function LocationExplorer({
                   aria-hidden="true"
                   data-location-label={location.id}
                   className={cn(
-                    "pointer-events-none absolute -translate-y-1/2 font-mono text-xs leading-[1.6] tracking-[0.12em] whitespace-nowrap uppercase transition-[color,opacity] duration-250",
+                    "pointer-events-none absolute -translate-y-1/2 font-mono text-xs leading-body tracking-meta whitespace-nowrap uppercase transition-[color,opacity] duration-250",
                     calloutLayouts[location.id].label,
                     "text-text-secondary",
                     activeId === location.id && "opacity-0",

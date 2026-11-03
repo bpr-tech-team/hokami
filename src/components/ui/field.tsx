@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
@@ -106,7 +106,7 @@ function FieldLabel({
     <Label
       data-slot="field-label"
       className={cn(
-        "group/field-label peer/field-label flex w-fit gap-1 font-mono text-xs leading-[1.6] font-normal tracking-[0.16em] text-text-secondary uppercase group-data-[disabled=true]/field:opacity-50",
+        "group/field-label peer/field-label flex w-fit gap-1 font-mono text-xs leading-body font-normal tracking-label text-text-secondary uppercase group-data-[disabled=true]/field:opacity-50",
         "has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col",
         className,
       )}

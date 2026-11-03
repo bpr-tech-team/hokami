@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef } from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Heading } from "@/components/typography/heading";
 
 export function LegalHeading({

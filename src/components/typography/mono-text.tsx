@@ -1,15 +1,15 @@
 import type { ComponentPropsWithoutRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 
 const monoTextVariants = cva(
-  "font-mono text-xs leading-[1.6] font-normal uppercase",
+  "font-mono text-xs leading-body font-normal uppercase",
   {
     variants: {
       variant: {
-        eyebrow: "tracking-[0.22em]",
-        label: "tracking-[0.16em]",
-        meta: "tracking-[0.12em]",
+        eyebrow: "tracking-eyebrow",
+        label: "tracking-label",
+        meta: "tracking-meta",
       },
       tone: {
         accent: "text-text-accent",

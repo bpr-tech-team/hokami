@@ -30,7 +30,7 @@ function MenuFrame() {
   return (
     <div
       data-slot="header-menu-frame"
-      className="pointer-events-none absolute inset-2 z-1 border-2 border-brand-identity [clip-path:inset(-6px)] transition-[clip-path] delay-350 duration-350 ease-[ease] group-data-starting-style/sheet:[clip-path:inset(0_75%_50%_0)] group-data-ending-style/sheet:opacity-0 group-data-ending-style/sheet:transition-none"
+      className="pointer-events-none absolute inset-2 z-1 border-2 border-brand-identity transition-[clip-path] delay-350 duration-350 ease-[ease] [clip-path:inset(-6px)] group-data-ending-style/sheet:opacity-0 group-data-ending-style/sheet:transition-none group-data-starting-style/sheet:[clip-path:inset(0_75%_50%_0)]"
       aria-hidden="true"
     >
       <TraceDot className="-top-[5.5px] -left-[5.5px]" />
@@ -90,7 +90,7 @@ export function HeaderMobileMenu({
           side="top"
           showCloseButton={false}
           overlayClassName="hidden"
-          className="group/sheet z-60 gap-0 overflow-hidden bg-surface-default text-base leading-[1.6] text-text-primary shadow-none outline-none transition-opacity duration-350 ease-[ease] data-ending-style:duration-300 data-[side=top]:h-dvh data-[side=top]:border-0 data-[side=top]:data-ending-style:translate-y-0 data-[side=top]:data-starting-style:translate-y-0"
+          className="group/sheet z-60 gap-0 overflow-hidden bg-surface-default text-base leading-body text-text-primary shadow-none transition-opacity duration-350 ease-[ease] outline-none data-ending-style:duration-300 data-[side=top]:h-dvh data-[side=top]:border-0 data-[side=top]:data-ending-style:translate-y-0 data-[side=top]:data-starting-style:translate-y-0"
           initialFocus={firstLink}
           finalFocus={() =>
             window.matchMedia(HEADER_DESKTOP_QUERY).matches
@@ -133,7 +133,7 @@ export function HeaderMobileMenu({
             <MenuFrame />
             <div
               data-slot="header-menu-scroll"
-              className="flex h-full translate-y-0 flex-col overflow-y-auto overscroll-contain px-5 pt-6 pb-[calc(32px+env(safe-area-inset-bottom))] transition-[opacity,translate] duration-350 ease-[ease] group-data-starting-style/sheet:-translate-y-6 group-data-starting-style/sheet:opacity-0 group-data-ending-style/sheet:-translate-y-6 group-data-ending-style/sheet:opacity-0 group-data-ending-style/sheet:duration-300"
+              className="flex h-full translate-y-0 flex-col overflow-y-auto overscroll-contain px-5 pt-6 pb-[calc(32px+env(safe-area-inset-bottom))] transition-[opacity,translate] duration-350 ease-[ease] group-data-ending-style/sheet:-translate-y-6 group-data-ending-style/sheet:opacity-0 group-data-ending-style/sheet:duration-300 group-data-starting-style/sheet:-translate-y-6 group-data-starting-style/sheet:opacity-0"
             >
               <NavigationMenu
                 orientation="vertical"

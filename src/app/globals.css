@@ -47,6 +47,12 @@
   --breakpoint-desktop: 67.5rem;
   --container-content: 75rem;
   --container-copy: 42.5rem;
+
+  --leading-body: 1.6;
+  --leading-small: 1.55;
+  --tracking-eyebrow: 0.22em;
+  --tracking-label: 0.16em;
+  --tracking-meta: 0.12em;
 }
 
 @theme inline {
@@ -101,12 +107,12 @@
   }
 
   [id] {
-    scroll-margin-top: 88px;
+    scroll-margin-top: var(--site-anchor-offset);
   }
 
   body {
     @apply bg-surface-default font-sans text-base text-text-primary;
-    line-height: 1.6;
+    line-height: var(--leading-body);
   }
 
   :focus-visible {
@@ -131,8 +137,14 @@
   }
 }
 
-/* shadcn semantic roles reference the HOKAMI design tokens above. */
+/* Shared layout measurements and shadcn semantic roles. */
 :root {
+  --site-header-height: --spacing(16);
+  /* Sticky scenes keep their original pixel offsets when root text is resized. */
+  --site-sticky-offset: 64px;
+  /* Anchors keep the existing 88px offset at both header sizes. */
+  --site-anchor-offset: 88px;
+
   --background: var(--color-surface-default);
   --foreground: var(--color-text-primary);
   --card: var(--color-surface-default);
@@ -165,4 +177,11 @@
   --sidebar-accent-foreground: var(--color-text-accent);
   --sidebar-border: var(--color-border-subtle);
   --sidebar-ring: var(--color-focus-ring);
+}
+
+@media (width >= theme(--breakpoint-xl)) {
+  :root {
+    --site-header-height: --spacing(18);
+    --site-sticky-offset: 72px;
+  }
 }

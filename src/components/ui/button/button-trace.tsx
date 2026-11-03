@@ -1,4 +1,4 @@
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import { TraceDot } from "./trace-dot";
 
@@ -8,9 +8,9 @@ const edgeVariants = cva(
     variants: {
       orientation: {
         horizontal:
-          "h-0.5 w-1/4 group-hover/button:w-full group-active/button:w-full group-focus-visible/button:w-full",
+          "h-0.5 w-1/4 group-hover/button:w-full group-focus-visible/button:w-full group-active/button:w-full",
         vertical:
-          "w-0.5 h-1/2 group-hover/button:h-full group-active/button:h-full group-focus-visible/button:h-full",
+          "h-1/2 w-0.5 group-hover/button:h-full group-focus-visible/button:h-full group-active/button:h-full",
       },
     },
   },

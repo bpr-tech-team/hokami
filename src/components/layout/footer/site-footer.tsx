@@ -25,7 +25,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
   ]);
 
   return (
-    <footer className="bg-surface-inverse px-5 py-10 text-center text-sm leading-[1.55] text-text-on-inverse tablet:px-10 tablet:py-12 desktop:px-20 desktop:py-16">
+    <footer className="bg-surface-inverse px-5 py-10 text-center text-sm leading-small text-text-on-inverse tablet:px-10 tablet:py-12 desktop:px-20 desktop:py-16">
       <Container className="flex flex-col items-center gap-5">
         <FooterLogo label={t("home")} />
 

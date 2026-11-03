@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import type { VariantProps } from "class-variance-authority";
 import { buttonVariants } from "./button-variants";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { ButtonTrace } from "./button-trace";
 import { ButtonArrow } from "./button-arrow";
 

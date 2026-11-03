@@ -2,14 +2,14 @@ import { cva } from "class-variance-authority";
 
 // Kept separate from the client component so server-rendered links can reuse it.
 const buttonVariants = cva(
-  "group/button relative inline-flex shrink-0 cursor-pointer items-center justify-center gap-3 rounded-none font-mono text-xs leading-[1.6] font-normal tracking-[0.16em] whitespace-nowrap uppercase select-none transition-[background-color,border-color,color] duration-250 active:duration-100 focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-focus-ring focus-visible:outline-offset-2 ui-disabled:bg-surface-disabled ui-disabled:text-text-disabled ui-disabled:not-data-loading:cursor-not-allowed data-loading:cursor-wait [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-5",
+  "group/button relative inline-flex shrink-0 cursor-pointer items-center justify-center gap-3 rounded-none font-mono text-xs leading-body font-normal tracking-label whitespace-nowrap uppercase transition-[background-color,border-color,color] duration-250 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring focus-visible:outline-solid active:duration-100 data-loading:cursor-wait ui-disabled:bg-surface-disabled ui-disabled:text-text-disabled ui-disabled:not-data-loading:cursor-not-allowed [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-5",
   {
     variants: {
       variant: {
         default:
           "bg-primary text-primary-foreground ui-enabled:hover:bg-action-primary-hover ui-enabled:active:bg-action-primary-pressed",
         outline:
-          "border border-border-strong bg-transparent text-text-primary ui-enabled:hover:border-border-strong-hover ui-enabled:hover:bg-surface-subtle ui-enabled:active:border-border-strong-hover ui-enabled:active:bg-surface-raised ui-disabled:border-border-disabled ui-disabled:bg-transparent",
+          "border border-border-strong bg-transparent text-text-primary ui-disabled:border-border-disabled ui-disabled:bg-transparent ui-enabled:hover:border-border-strong-hover ui-enabled:hover:bg-surface-subtle ui-enabled:active:border-border-strong-hover ui-enabled:active:bg-surface-raised",
         secondary:
           "bg-secondary text-secondary-foreground ui-enabled:hover:bg-surface-raised",
         ghost:

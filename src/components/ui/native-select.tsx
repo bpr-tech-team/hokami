@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { formControlVariants } from "./form-control-variants";
 import { ChevronIcon } from "./icons/chevron-icon";
 

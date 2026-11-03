@@ -5,7 +5,13 @@
 }
 
 .hokami-process-scroll-step {
-  --process-text-offset: clamp(0px, calc((100cqw - 280px) * 0.05), 18px);
+  --process-text-offset: clamp(
+    0px,
+    calc(
+      (100cqw - var(--process-text-min-width)) * var(--process-text-offset-rate)
+    ),
+    var(--process-text-max-offset)
+  );
   display: none;
 }
 

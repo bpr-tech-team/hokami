@@ -13,6 +13,7 @@ import {
   getProcessNode,
   getProcessTimeline,
 } from "../src/components/sections/process/process-timeline";
+import { getProcessTextOffset } from "../src/components/sections/process/process-scroll-layout";
 import cs from "../messages/cs.json";
 import en from "../messages/en.json";
 import de from "../messages/de.json";
@@ -72,6 +73,20 @@ function getContent(locale: keyof typeof catalogs = "cs") {
 }
 
 const catalogs = { cs, en, de, fi, pl };
+
+test("scroll text offset keeps the original small-ring threshold and maximum travel", () => {
+  for (const [width, offset] of [
+    [200, 0],
+    [280, 0],
+    [300, 1],
+    [460, 9],
+    [620, 17],
+    [640, 18],
+    [800, 18],
+  ]) {
+    assert.equal(getProcessTextOffset(width), offset);
+  }
+});
 
 test("every step has four seconds and the animation finishes on the last step", () => {
   for (let count = 2; count <= 6; count++) {

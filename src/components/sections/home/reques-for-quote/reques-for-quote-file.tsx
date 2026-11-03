@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useFormatter, useTranslations } from "next-intl";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import {
   Attachment,
   AttachmentAction,

@@ -1,4 +1,4 @@
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
 
@@ -47,7 +47,7 @@ export function HistoryMilestone({
         <Text
           variant="small"
           tone="secondary"
-          className="leading-[22px] desktop:leading-[1.55]"
+          className="leading-[22px] desktop:leading-small"
         >
           {description}
         </Text>

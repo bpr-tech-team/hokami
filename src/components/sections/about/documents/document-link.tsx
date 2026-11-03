@@ -41,7 +41,7 @@ export function DocumentLink({
       href={href}
       download
       aria-label={downloadLabel}
-      className="group/document flex min-h-14 w-full min-w-0 items-center gap-3 border-b border-border-subtle px-2 py-4 transition-colors hover:border-brand-identity hover:bg-surface-raised focus-visible:outline-1 focus-visible:outline-focus-ring focus-visible:-outline-offset-1"
+      className="group/document flex min-h-14 w-full min-w-0 items-center gap-3 border-b border-border-subtle px-2 py-4 transition-colors hover:border-brand-identity hover:bg-surface-raised focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-focus-ring"
     >
       <DocumentIcon name="file-text" />
       <Text as="span" className="min-w-0 flex-1 wrap-anywhere">
