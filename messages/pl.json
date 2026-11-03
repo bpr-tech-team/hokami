@@ -62,6 +62,26 @@
       "czechLeader": "Firma otrzymuje wyróżnienie „Czeski Lider”"
     }
   },
+  "AboutDocuments": {
+    "eyebrow": "Dokumenty",
+    "title": "Certyfikaty i dotacje",
+    "groups": {
+      "certificates": "Certyfikaty",
+      "grants": "Dotacje"
+    },
+    "download": "Pobierz {document} (PDF)",
+    "items": {
+      "bisnodeAaa": "Certyfikat BISNODE z oceną AAA",
+      "ezuIso9001": "System zarządzania jakością zgodny z ČSN EN ISO 9001:2016",
+      "cqsIso9001": "CQS – ČSN EN ISO 9001:2016",
+      "iqnet": "IQNet",
+      "topRating": "Dun & Bradstreet – Top Rating",
+      "researchDevelopment": "Działalność badawczo-rozwojowa w HOKAMI CZ, s.r.o.",
+      "productInnovation": "Innowacje produktowe i procesowe unikalnych czujników kontrolujących parametry jakościowe włókien",
+      "employment": "Program Operacyjny Zatrudnienie",
+      "photovoltaic": "FVE HOKAMI CZ, s.r.o. – Doubí u Liberce CZ.31.3.0/0.0/0.0/22_001/0001120"
+    }
+  },
   "AboutContact": {
     "eyebrow": "Kontakt",
     "title": "Szukasz partnera do produkcji elektroniki?",

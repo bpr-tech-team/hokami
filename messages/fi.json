@@ -62,6 +62,26 @@
       "czechLeader": "Yritys saa Tšekin johtava yritys -palkinnon"
     }
   },
+  "AboutDocuments": {
+    "eyebrow": "Asiakirjat",
+    "title": "Sertifikaatit ja avustukset",
+    "groups": {
+      "certificates": "Sertifikaatit",
+      "grants": "Avustukset"
+    },
+    "download": "Lataa {document} (PDF)",
+    "items": {
+      "bisnodeAaa": "BISNODE-sertifikaatti AAA-luokituksella",
+      "ezuIso9001": "ČSN EN ISO 9001:2016 -standardin mukainen laadunhallintajärjestelmä",
+      "cqsIso9001": "CQS – ČSN EN ISO 9001:2016",
+      "iqnet": "IQNet",
+      "topRating": "Dun & Bradstreet – Top Rating",
+      "researchDevelopment": "Tutkimus- ja kehitystoiminta HOKAMI CZ, s.r.o. -yrityksessä",
+      "productInnovation": "Tuote- ja prosessi-innovaatio ainutlaatuisille kuitujen laatuparametreja valvoville antureille",
+      "employment": "Työllisyyden toimenpideohjelma",
+      "photovoltaic": "FVE HOKAMI CZ, s.r.o. – Doubí u Liberce CZ.31.3.0/0.0/0.0/22_001/0001120"
+    }
+  },
   "AboutContact": {
     "eyebrow": "Yhteystiedot",
     "title": "Etsitkö kumppania elektroniikan valmistukseen?",

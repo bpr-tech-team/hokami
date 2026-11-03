@@ -97,10 +97,17 @@ two places. Reuse the existing components when adding sections:
   intrinsic image dimensions reserve their space while loading. Native company
   links open in new tabs and include a translated screen-reader announcement.
 - `components/sections/about/contact/`: server-rendered closing contact section in
-  all five locales, placed after history and before the footer. Text and actions
+  all five locales, placed after documents and before the footer. Text and actions
   stack below `desktop`; the desktop action column is 384 px wide. Native phone
   and email links use local Figma icons. The contact CTA and About hero CTA link
   to the homepage enquiry form in the current locale.
+- `components/sections/about/documents/`: server-rendered certificates and grants
+  between history and contact in all five locales. The two lists stack below
+  `desktop`; above it, both groups stretch to the taller list and distribute their
+  rows evenly without a fixed height. Document names wrap without truncation. Each native link downloads
+  one of nine unchanged source PDFs from `public/documents/about/`, with translated
+  labels and an accessible download announcement. Local Figma SVGs provide the
+  default and hover states; downloads and keyboard navigation work without JavaScript.
 - `components/sections/about/history/`: localized company history with 16
   server-rendered milestones. Cards alternate at the `desktop` breakpoint and
   form one column below it. CSS contacts and leaders follow each card; one
