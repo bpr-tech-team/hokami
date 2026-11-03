@@ -82,7 +82,8 @@ two places. Reuse the existing components when adding sections:
   Customize layout with `className`, `contentClassName`, and `actionsClassName`,
   description typography with `descriptionProps`, and button size/icon per action.
   `HeroBackground` accepts desktop artwork and positioning through props.
-  `about/hero/` owns the About layout, typography, actions and background settings,
+  `about/hero/` shares the homepage background, minimum heights, and section padding,
+  owns the About content layout, typography, and actions,
   supplies content in each locale, links contact to the homepage enquiry form and
   links `#history` to the history section immediately below it.
   The background uses CSS horizon gradients, inline SVG contacts, local Figma
