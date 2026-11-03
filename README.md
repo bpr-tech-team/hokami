@@ -115,8 +115,10 @@ two places. Reuse the existing components when adding sections:
   remains available. `home/video/` supplies the homepage media and translations.
   Optimized media in `public/video/` is derived from `homepage.mp4`: H.264/yuv420p,
   `faststart`, no metadata/data streams; 1080p CRF 25 with 128 kbps AAC, 720p CRF 26
-  with 96 kbps AAC, and a silent 12-second 960×540 / 20 fps CRF 29 preview starting
-  at 4 seconds. The WebP poster is a 1280×720 frame from 22 seconds. The original
+  with 96 kbps AAC, and a silent 12-second 1920×1080 / 25 fps CRF 28 preview starting
+  at 4 seconds, encoded from the 4K original with `preset slow` and Lanczos scaling
+  (2.96 MB). The preview retains the source frame rate and enough detail for the
+  expanded frame. The WebP poster is a 1280×720 frame from 22 seconds. The original
   4K source is preserved and is not referenced by the page.
 - `components/sections/locations/`: reusable locations section. Use `Locations`
   on any localized page for the same branch and regional contact data; `home/locations/`
