@@ -1,6 +1,12 @@
 "use client";
 
-import { Fragment, useId, useRef, type CSSProperties } from "react";
+import {
+  Fragment,
+  useId,
+  useRef,
+  type CSSProperties,
+  type ReactNode,
+} from "react";
 import { cn } from "cn";
 import { ProcessDiagram } from "./process-diagram";
 import { ProcessStep } from "./process-step";
@@ -12,9 +18,11 @@ import "./process-scroll.css";
 export function ProcessScrollRing({
   steps,
   labelledBy,
+  background,
 }: {
   steps: readonly ProcessStepContent[];
   labelledBy: string;
+  background?: ReactNode;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const choiceId = useId();
@@ -34,8 +42,9 @@ export function ProcessScrollRing({
     >
       <div
         data-process-scroll-scene
-        className="sticky top-(--process-top) grid h-(--process-scene-height) place-items-center"
+        className="sticky top-(--process-top) isolate grid h-(--process-scene-height) place-items-center"
       >
+        {background}
         <fieldset
           data-process-scroll-ring
           aria-labelledby={labelledBy}

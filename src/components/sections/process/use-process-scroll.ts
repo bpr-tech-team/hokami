@@ -12,7 +12,7 @@ export function useProcessScroll(
 ) {
   useEffect(() => {
     const root = rootRef.current;
-    if (!root || count < 2) return;
+    if (!root || !count) return;
 
     const scene = root.querySelector<HTMLElement>(
       "[data-process-scroll-scene]",
@@ -53,15 +53,25 @@ export function useProcessScroll(
       if (measure) {
         const top = Number.parseFloat(getComputedStyle(scene).top) || 0;
         const bounds = root.getBoundingClientRect();
+        const container = root.parentElement;
+        const headingOffset =
+          container?.firstElementChild?.tagName === "HEADER"
+            ? bounds.top - container.getBoundingClientRect().top
+            : 0;
         start = bounds.top + window.scrollY - top;
         distance = bounds.height - scene.getBoundingClientRect().height;
         textOffset = Math.max(
           0,
           Math.min(18, (ring.getBoundingClientRect().width - 280) * 0.05),
         );
+        // Keep the original section's background frame as the scene sticks.
+        root.style.setProperty(
+          "--process-heading-offset",
+          `${headingOffset}px`,
+        );
         measure = false;
       }
-      if (driver === "native") return;
+      if (count < 2 || driver === "native") return;
 
       const position = getProcessScrollProgress(
         window.scrollY,
@@ -106,6 +116,10 @@ export function useProcessScroll(
       });
     };
     const configure = () => {
+      if (count < 2) {
+        resize();
+        return;
+      }
       driver = reducedMotion.matches
         ? "reduced"
         : native
@@ -123,6 +137,7 @@ export function useProcessScroll(
     const observer = new ResizeObserver(resize);
     observer.observe(root);
     observer.observe(scene);
+    if (root.parentElement) observer.observe(root.parentElement);
     // Content above the section can change its start without resizing the track.
     observer.observe(document.body);
     window.addEventListener("resize", resize);
@@ -142,6 +157,7 @@ export function useProcessScroll(
       reducedMotion.removeEventListener("change", configure);
       clear();
       delete root.dataset.driver;
+      root.style.removeProperty("--process-heading-offset");
     };
   }, [count, rootRef]);
 }

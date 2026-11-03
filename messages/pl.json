@@ -24,6 +24,16 @@
     "contact": "Skontaktuj się z nami",
     "production": "Nasza produkcja"
   },
+  "Video": {
+    "title": "Poznaj HOKAMI",
+    "caption": "HOKAMI · Wideo {duration}",
+    "play": "Odtwórz wideo",
+    "pausePreview": "Wstrzymaj podgląd wideo",
+    "resumePreview": "Wznów podgląd wideo",
+    "close": "Zamknij odtwarzacz",
+    "error": "Nie udało się załadować wideo.",
+    "openFile": "Otwórz wideo"
+  },
   "TrustStrip": {
     "label": "HOKAMI w liczbach",
     "years": {

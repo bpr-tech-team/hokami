@@ -24,6 +24,16 @@
     "contact": "Kontaktieren Sie uns",
     "production": "Unsere Fertigung"
   },
+  "Video": {
+    "title": "HOKAMI stellt sich vor",
+    "caption": "HOKAMI · Video {duration}",
+    "play": "Video abspielen",
+    "pausePreview": "Videovorschau pausieren",
+    "resumePreview": "Videovorschau fortsetzen",
+    "close": "Player schließen",
+    "error": "Das Video konnte nicht geladen werden.",
+    "openFile": "Video öffnen"
+  },
   "TrustStrip": {
     "label": "HOKAMI in Zahlen",
     "years": {

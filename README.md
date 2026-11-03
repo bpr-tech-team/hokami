@@ -95,6 +95,29 @@ two places. Reuse the existing components when adding sections:
   number, with final server-rendered text for reduced motion and without JS.
   Formats unsupported by NumberFlow (scientific/engineering notation, non-Latin
   digits, and RTL locales) retain their localized static value.
+- `components/sections/video/`: reusable `VideoSection`. Pass `src`, optional
+  `mobileSrc` and silent `previewSrc`, `poster`, translated `labels`, and optional
+  caption `tracks`. `motion="scroll"` reveals the video from the viewport's lower
+  left into its own section, then lets it scroll away normally; `motion="none"`
+  renders a static section. The scroll section starts at zero height and grows
+  with the video, pushing following content down without reserving the full
+  frame in advance. The hero is independent. Scroll uses paused Web
+  Animations driven by one scheduled frame per scroll event, with measurements
+  on resize rather than each frame. Its stable artwork stage is separate from
+  the growing layout slot, so resizing the slot cannot reset the timeline.
+  Scroll anchoring is suspended only during height changes, and native fragment
+  navigation accounts for the expanded slot. Artwork scales uniformly; controls and trace
+  thickness stay unchanged. Reduced motion and short viewports use a static
+  frame. Mobile, reduced motion, and data-saving connections keep a poster until
+  the user plays the video. Desktop preview playback pauses outside the viewport,
+  in hidden tabs, and while the full player is active. The full source is assigned
+  only on click and uses native controls inline. Without JS a direct video link
+  remains available. `home/video/` supplies the homepage media and translations.
+  Optimized media in `public/video/` is derived from `homepage.mp4`: H.264/yuv420p,
+  `faststart`, no metadata/data streams; 1080p CRF 25 with 128 kbps AAC, 720p CRF 26
+  with 96 kbps AAC, and a silent 12-second 960×540 / 20 fps CRF 29 preview starting
+  at 4 seconds. The WebP poster is a 1280×720 frame from 22 seconds. The original
+  4K source is preserved and is not referenced by the page.
 - `components/sections/locations/`: reusable locations section. Use `Locations`
   on any localized page for the same branch and regional contact data; `home/locations/`
   connects it to the homepage. `LocationsSection` accepts translated content when

@@ -24,6 +24,16 @@
     "contact": "Kontaktujte nás",
     "production": "Naše výroba"
   },
+  "Video": {
+    "title": "Představení HOKAMI",
+    "caption": "HOKAMI · Video {duration}",
+    "play": "Přehrát video",
+    "pausePreview": "Pozastavit náhled videa",
+    "resumePreview": "Pokračovat v náhledu videa",
+    "close": "Zavřít přehrávač",
+    "error": "Video se nepodařilo načíst.",
+    "openFile": "Otevřít video"
+  },
   "TrustStrip": {
     "label": "HOKAMI v číslech",
     "years": {

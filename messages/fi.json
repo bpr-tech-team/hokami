@@ -24,6 +24,16 @@
     "contact": "Ota yhteyttä",
     "production": "Tuotantomme"
   },
+  "Video": {
+    "title": "HOKAMI esittelyssä",
+    "caption": "HOKAMI · Video {duration}",
+    "play": "Toista video",
+    "pausePreview": "Keskeytä videon esikatselu",
+    "resumePreview": "Jatka videon esikatselua",
+    "close": "Sulje soitin",
+    "error": "Videota ei voitu ladata.",
+    "openFile": "Avaa video"
+  },
   "TrustStrip": {
     "label": "HOKAMI lukuina",
     "years": {

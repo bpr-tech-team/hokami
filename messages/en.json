@@ -24,6 +24,16 @@
     "contact": "Contact us",
     "production": "Our production"
   },
+  "Video": {
+    "title": "Introducing HOKAMI",
+    "caption": "HOKAMI · Video {duration}",
+    "play": "Play video",
+    "pausePreview": "Pause video preview",
+    "resumePreview": "Resume video preview",
+    "close": "Close player",
+    "error": "The video could not be loaded.",
+    "openFile": "Open video"
+  },
   "TrustStrip": {
     "label": "HOKAMI in numbers",
     "years": {
