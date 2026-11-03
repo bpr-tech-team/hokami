@@ -1,0 +1,148 @@
+@property --process-scroll-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.hokami-process-scroll-step {
+  --process-text-offset: clamp(0px, calc((100cqw - 280px) * 0.05), 18px);
+  display: none;
+}
+
+.hokami-process-scroll-choice:checked + .hokami-process-scroll-step {
+  display: grid;
+}
+
+.hokami-process-scroll-choice:checked
+  + .hokami-process-scroll-step
+  + .hokami-process-scroll-control {
+  border-color: var(--color-text-accent);
+  color: var(--color-text-accent);
+}
+
+.hokami-process-scroll-choice:focus-visible
+  + .hokami-process-scroll-step
+  + .hokami-process-scroll-control {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.hokami-process-scroll[data-driver="fallback"],
+.hokami-process-scroll[data-driver="reduced"] {
+  --process-distance: 150svh;
+  --process-controls-space: 0px;
+
+  .hokami-process-scroll-choice,
+  .hokami-process-scroll-control {
+    display: none;
+  }
+
+  .hokami-process-scroll-step {
+    display: grid;
+  }
+}
+
+@supports (animation-timeline: --process-scroll) and
+  (animation-range: contain 0% contain 100%) and (view-timeline-inset: 0px 0px) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hokami-process-scroll:not([data-static]):not([data-driver="fallback"]):not(
+        [data-driver="reduced"]
+      ) {
+      --process-distance: 150svh;
+      --process-controls-space: 0px;
+      view-timeline-name: --process-scroll;
+      view-timeline-axis: block;
+      view-timeline-inset: var(--process-top) var(--process-bottom);
+
+      .hokami-process-scroll-choice,
+      .hokami-process-scroll-control {
+        display: none;
+      }
+
+      [data-process-orbit] {
+        animation: hokami-process-scroll-orbit 1ms linear both;
+        animation-timeline: --process-scroll;
+        animation-range: contain 0% contain 100%;
+      }
+
+      [data-process-progress] {
+        animation: hokami-process-scroll-sweep 1ms linear both;
+        animation-timeline: --process-scroll;
+        animation-range: contain 0% contain 100%;
+      }
+
+      [data-process-node]:not([data-process-node-index="0"]) {
+        animation: hokami-process-scroll-node 1ms step-end both;
+        animation-timeline: --process-scroll;
+        animation-range: contain 0% contain var(--process-node-position);
+      }
+
+      .hokami-process-scroll-step {
+        display: grid;
+      }
+
+      .hokami-process-scroll-step:not([data-first]) {
+        animation: hokami-process-scroll-enter 1ms linear both;
+        animation-timeline: --process-scroll;
+        animation-range: contain var(--process-enter-start) contain
+          var(--process-enter-end);
+      }
+
+      .hokami-process-scroll-exit:not([data-last]) {
+        animation: hokami-process-scroll-exit 1ms linear forwards;
+        animation-timeline: --process-scroll;
+        animation-range: contain var(--process-exit-start) contain
+          var(--process-exit-end);
+      }
+    }
+  }
+}
+
+@keyframes hokami-process-scroll-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hokami-process-scroll-sweep {
+  from {
+    --process-scroll-angle: 0deg;
+  }
+  to {
+    --process-scroll-angle: 360deg;
+  }
+}
+
+@keyframes hokami-process-scroll-node {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hokami-process-scroll-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--process-text-offset));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hokami-process-scroll-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(var(--process-text-offset));
+  }
+}

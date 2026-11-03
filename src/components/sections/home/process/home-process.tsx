@@ -8,12 +8,17 @@ const stepIds = [
   "production",
 ] as const;
 
-export async function HomeProcess() {
+export async function HomeProcess({
+  motion = "time",
+}: {
+  motion?: "time" | "scroll";
+}) {
   const t = await getTranslations("Process");
 
   return (
     <ProcessSection
       id="process"
+      motion={motion}
       eyebrow={t("eyebrow")}
       title={t("title")}
       steps={stepIds.map((id, index) => ({

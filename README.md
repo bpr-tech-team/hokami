@@ -120,6 +120,16 @@ two places. Reuse the existing components when adding sections:
   SVG filters are loaded. A registered angle property keeps the progress mask
   synchronized with the orbit; browsers without this API retain the readable
   list. `home/process/` supplies the homepage's four steps.
+  `motion="scroll"` selects the homepage's scroll version, with a sticky ring
+  below the header and reversible progress over 150svh of native page scrolling.
+  `process-scroll.css` uses a local view timeline, a registered angle and shared
+  per-step ranges. `use-process-scroll.ts` only drives scroll frames when native
+  timelines are unavailable or reduced motion calls for discrete steps. All step
+  text stays inside the ring, including compact landscape layouts. Without JS,
+  supported browsers keep the CSS timeline; other browsers retain a native radio
+  choice of steps in the ring. The time version remains available through the
+  default `ProcessSection` variant, while the homepage renders only the scroll
+  version at `#process`.
 - `components/navigation/`: the shared language switch. Locale options are in
   `i18n/languages.ts`; `hooks/use-site-location.ts` preserves pathname, query,
   and hash for both header and footer.

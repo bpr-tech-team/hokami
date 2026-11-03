@@ -49,7 +49,7 @@ export default function Home() {
       <HomeTrustStrip />
       <Capabilities />
       <Industries />
-      <HomeProcess />
+      <HomeProcess motion="scroll" />
       <HomeLocations />
       <RequesForQuote />
     </PageMain>

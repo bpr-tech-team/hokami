@@ -2,10 +2,12 @@ import type { ComponentProps } from "react";
 import { cn } from "cn";
 import { Section } from "@/components/layout/section";
 import { ProcessRing } from "./process-ring";
+import { ProcessScrollRing } from "./process-scroll-ring";
 import type { ProcessStep } from "./types";
 
 type ProcessSectionProps = Omit<ComponentProps<typeof Section>, "children"> & {
   steps: readonly ProcessStep[];
+  motion?: "time" | "scroll";
 };
 
 function ProcessGlow({ className }: { className: string }) {
@@ -22,6 +24,7 @@ function ProcessGlow({ className }: { className: string }) {
 
 export function ProcessSection({
   steps,
+  motion = "time",
   className,
   contentClassName,
   ...props
@@ -41,7 +44,11 @@ export function ProcessSection({
         <ProcessGlow className="top-1/4 left-0 -translate-1/2 scale-55 opacity-30 tablet:scale-50 desktop:top-[290px] desktop:scale-75 desktop:opacity-100" />
         <ProcessGlow className="top-3/4 right-0 hidden translate-x-1/2 -translate-y-1/2 scale-35 tablet:scale-50 desktop:top-[682px] desktop:block desktop:scale-75" />
       </div>
-      <ProcessRing steps={steps} />
+      {motion === "scroll" ? (
+        <ProcessScrollRing steps={steps} labelledBy={`${props.id}-heading`} />
+      ) : (
+        <ProcessRing steps={steps} />
+      )}
     </Section>
   );
 }

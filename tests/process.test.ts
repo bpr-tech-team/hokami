@@ -1,9 +1,14 @@
 import assert from "node:assert/strict";
-import { test } from "node:test";
+import { before, test } from "node:test";
+import { registerHooks } from "node:module";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createTranslator } from "next-intl";
-import { ProcessSection } from "../src/components/sections/process/process-section";
+import {
+  getProcessScrollProgress,
+  getProcessScrollRange,
+  getProcessScrollState,
+} from "../src/components/sections/process/process-scroll-timeline";
 import {
   getProcessNode,
   getProcessTimeline,
@@ -13,6 +18,29 @@ import en from "../messages/en.json";
 import de from "../messages/de.json";
 import fi from "../messages/fi.json";
 import pl from "../messages/pl.json";
+
+let ProcessSection: typeof import("../src/components/sections/process/process-section").ProcessSection;
+
+before(async () => {
+  // Server markup checks do not execute the browser's CSS timeline.
+  const css = registerHooks({
+    load(url, context, nextLoad) {
+      return url.endsWith("/process-scroll.css")
+        ? {
+            format: "module",
+            source: "",
+            shortCircuit: true,
+          }
+        : nextLoad(url, context);
+    },
+  });
+  try {
+    ({ ProcessSection } =
+      await import("../src/components/sections/process/process-section"));
+  } finally {
+    css.deregister();
+  }
+});
 
 const stepIds = [
   "documentation",
@@ -173,4 +201,133 @@ test("empty, single-step and multiple independent process sections render safely
   );
   assert.equal(new Set(ids).size, ids.length);
   assert.equal((markup.match(/data-process-node=/g) ?? []).length, 8);
+});
+
+test("scroll progress is local to the track and clamps outside its sticky interval", () => {
+  assert.equal(getProcessScrollProgress(500, 1000, 1200), 0);
+  assert.equal(getProcessScrollProgress(1000, 1000, 1200), 0);
+  assert.equal(getProcessScrollProgress(1300, 1000, 1200), 0.25);
+  assert.equal(getProcessScrollProgress(1600, 1000, 1200), 0.5);
+  assert.equal(getProcessScrollProgress(2200, 1000, 1200), 1);
+  assert.equal(getProcessScrollProgress(3000, 1000, 1200), 1);
+  assert.equal(getProcessScrollProgress(3000, 1000, 0), 0);
+});
+
+test("scroll boundaries synchronize the text, orbit, progress and cumulative nodes", () => {
+  for (let count = 2; count <= 6; count++) {
+    for (let index = 0; index < count; index++) {
+      const state = getProcessScrollState(index / count, count);
+      assert.equal(state.active, index);
+      assert.equal(state.angle, (360 * index) / count);
+      assert.deepEqual(
+        state.nodes,
+        Array.from({ length: count }, (_, node) => (node <= index ? 1 : 0)),
+      );
+      state.steps.forEach((step, stepIndex) => {
+        assert.ok(
+          Math.abs(step.enter * step.exit - (stepIndex === index ? 1 : 0)) <
+            0.000001,
+        );
+      });
+    }
+    const end = getProcessScrollState(1, count);
+    assert.equal(end.angle, 360);
+    assert.equal(end.active, count - 1);
+    assert.ok(end.nodes.every((opacity) => opacity === 1));
+    assert.equal(end.steps.at(-1)?.enter, 1);
+    assert.equal(end.steps.at(-1)?.exit, 1);
+  }
+});
+
+test("scroll text crossfades only adjacent steps", () => {
+  for (let count = 2; count <= 6; count++) {
+    for (let index = 1; index < count; index++) {
+      const range = getProcessScrollRange(index, count);
+      const middle = (range.enterStart + range.enterEnd) / 2;
+      const state = getProcessScrollState(middle, count);
+      const opacities = state.steps.map((step) => step.enter * step.exit);
+      assert.ok(Math.abs(opacities[index - 1] - 0.5) < 0.000001);
+      assert.ok(Math.abs(opacities[index] - 0.5) < 0.000001);
+      assert.equal(opacities.filter((opacity) => opacity > 0).length, 2);
+    }
+  }
+});
+
+test("reduced motion switches complete steps without continuous movement or text offsets", () => {
+  for (const position of [0, 0.1, 0.235, 0.25, 0.49, 0.5, 0.75, 0.99, 1]) {
+    const state = getProcessScrollState(position, 4, true);
+    assert.equal(state.angle, Math.floor(position * 4) * 90);
+    state.steps.forEach((step, index) => {
+      assert.equal(step.enter, index === state.active ? 1 : 0);
+      assert.equal(step.exit, 1);
+      assert.equal(step.enterY, 0);
+      assert.equal(step.exitY, 0);
+    });
+  }
+});
+
+test("scroll sections render all translations inside the ring with a native no-JS step choice", () => {
+  for (const locale of Object.keys(catalogs) as (keyof typeof catalogs)[]) {
+    const props = getContent(locale);
+    const markup = renderToStaticMarkup(
+      createElement(ProcessSection, { ...props, motion: "scroll" }),
+    );
+    assert.ok(markup.includes('data-slot="process-scroll"'));
+    assert.ok(markup.includes('aria-labelledby="process-heading"'));
+    assert.equal((markup.match(/type="radio"/g) ?? []).length, 4);
+    assert.equal((markup.match(/data-process-scroll-step=/g) ?? []).length, 4);
+    assert.ok(!markup.includes("<ol"));
+    assert.ok(!markup.includes("<li>"));
+    assert.ok(!markup.includes('data-enhanced="true"'));
+    for (const step of props.steps) {
+      assert.ok(markup.includes(step.description));
+    }
+  }
+});
+
+test("scroll and time sections have independent IDs, including their native radio groups", () => {
+  const props = getContent();
+  const markup = renderToStaticMarkup(
+    createElement(
+      "div",
+      null,
+      createElement(ProcessSection, {
+        ...props,
+        id: "process-scroll",
+        motion: "scroll",
+      }),
+      createElement(ProcessSection, props),
+      createElement(ProcessSection, {
+        ...props,
+        id: "another-scroll",
+        motion: "scroll",
+      }),
+    ),
+  );
+  const ids = Array.from(
+    markup.matchAll(/\sid="([^"]+)"/g),
+    (match) => match[1],
+  );
+  assert.equal(new Set(ids).size, ids.length);
+  const radioGroups = Array.from(
+    markup.matchAll(/<input[^>]*type="radio"[^>]*>/g),
+    (match) => match[0].match(/\sname="([^"]+)"/)?.[1],
+  );
+  assert.equal(new Set(radioGroups).size, 2);
+
+  const single = renderToStaticMarkup(
+    createElement(ProcessSection, {
+      ...props,
+      motion: "scroll",
+      steps: props.steps.slice(0, 1),
+    }),
+  );
+  assert.ok(single.includes('data-static="true"'));
+  assert.ok(!single.includes("<label"));
+  assert.equal(
+    renderToStaticMarkup(
+      createElement(ProcessSection, { ...props, motion: "scroll", steps: [] }),
+    ),
+    "",
+  );
 });
