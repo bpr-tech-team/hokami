@@ -1,9 +1,11 @@
+import type { ComponentProps } from "react";
 import { Section } from "@/components/layout/section";
 import { LocationExplorer } from "./location-explorer";
 import type { Location, LocationRegion } from "./types";
 
 type LocationsSectionProps = {
   id?: string;
+  tone?: ComponentProps<typeof Section>["tone"];
   eyebrow: string;
   title: string;
   description: string;
@@ -14,6 +16,7 @@ type LocationsSectionProps = {
 
 export function LocationsSection({
   id = "locations",
+  tone = "subtle",
   eyebrow,
   title,
   description,
@@ -24,7 +27,7 @@ export function LocationsSection({
   return (
     <Section
       id={id}
-      tone="subtle"
+      tone={tone}
       eyebrow={eyebrow}
       title={title}
       description={description}

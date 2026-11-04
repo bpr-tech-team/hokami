@@ -84,15 +84,35 @@ two places. Reuse the existing components when adding sections:
   The list's minimum desktop height is configurable without fixing text height.
   `home/industries/` adapts the existing certification data to this shared view.
 - `components/sections/services/`: overview at `/[locale]/services` in all five
-  locales. `hero/` uses the shared animated background and links to the future
+  locales. `hero/` uses the shared animated background and links to the
   localized `/contact` page. `overview/` supplies eight services, original local
   Figma photographs, crop coordinates and stable service slugs. Translated text
   lives in `ServicesHero`, `Services` and `Metadata.services` in each locale's
-  messages. Service links target `/[locale]/services/{slug}`; detail and contact
-  pages are separate work. The page uses the existing metadata and sitemap helpers.
+  messages. Service links target `/[locale]/services/{slug}`; service detail
+  pages are separate work. Contact is documented below. The page uses the
+  existing metadata and sitemap helpers.
+- `components/sections/contact/`: contact page at `/[locale]/contact` in all five
+  locales, with the shared hero, directions, contact form, regional map and billing
+  details. The Google Maps iframe loads immediately from the verified HOKAMI place;
+  it needs no API key or map SDK. `content/company.ts` holds shared company details.
+  The contact form validates locally and shows the unavailable state without sending
+  or storing messages. Delivery is a separate integration. The shared header CTA
+  targets `/[locale]/contact#contact-form`, using a native fragment on Contact.
+- `components/forms/`: `TextFormField` and its `FormField` wrapper share labels,
+  inputs, textareas, traces and errors between the homepage enquiry and Contact.
+  `FormError` provides their common error feedback. The enquiry's Select keeps its
+  existing adapter. `sections/contact-links/` shares phone and email links with About.
 - `components/sections/hero/`: shared `HeroSection` and independent
   `HeroBackground`. The section accepts translated content, actions, a heading
   element, and an optional background. `home/hero/` supplies homepage content.
+  The default `size="viewport"` uses
+  `calc(100svh - var(--site-header-height))` from `2xl` (1536 px).
+  Below `2xl`, the original responsive minimum heights remain
+  (489 px on mobile and 740 px from `tablet` at 760 px).
+  The section grows with content when needed.
+  Contact uses `size="compact"` to keep its content-driven height.
+  Standard page heroes inherit the homepage's responsive top padding and
+  eyebrow-to-heading spacing so their content starts at the same vertical position.
   Customize layout with `className`, `contentClassName`, and `actionsClassName`,
   description typography with `descriptionProps`, and button size/icon per action.
   `HeroBackground` accepts desktop artwork and positioning through props.

@@ -19,6 +19,7 @@ import {
   type RequesForQuoteFieldName,
 } from "@/lib/reques-for-quote/validation";
 import { RequesForQuoteField } from "./reques-for-quote-field";
+import { FormError } from "@/components/forms/form-error";
 import { RequesForQuoteUpload } from "./reques-for-quote-upload";
 import {
   submitRequesForQuote,
@@ -262,26 +263,9 @@ export function RequesForQuoteForm({
         </Button>
       </FieldSet>
       {submitError && (
-        <Alert
-          variant="destructive"
-          className="flex items-start gap-3 rounded-none border-feedback-error-text bg-feedback-error-surface p-4"
-        >
-          <Image
-            src="/images/reques-for-quote/alert.svg"
-            width={20}
-            height={20}
-            alt=""
-            className="mt-0.5 shrink-0"
-          />
-          <div>
-            <AlertTitle className="font-display text-base font-semibold uppercase">
-              {t("failure.title")}
-            </AlertTitle>
-            <AlertDescription className="mt-1 text-feedback-error-text">
-              {t(`failure.${submitError}`)}
-            </AlertDescription>
-          </div>
-        </Alert>
+        <FormError title={t("failure.title")}>
+          {t(`failure.${submitError}`)}
+        </FormError>
       )}
       {success && (
         <Alert

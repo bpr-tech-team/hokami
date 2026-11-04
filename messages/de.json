@@ -298,6 +298,10 @@
     "services": {
       "title": "Dienstleistungen in der Elektronikfertigung",
       "description": "EMS-Leistungen von HOKAMI: SMT- und THT-Bestückung, Reinigung, Prüfung, Schutzlackierung, mechanische Montage, Leiterplatten und SMT-Schablonen."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Kontaktieren Sie HOKAMI CZ in Liberec. Adresse, Telefonnummer, Kontaktformular, regionale Vertriebskontakte und Rechnungsangaben des Unternehmens."
     }
   },
   "RequesForQuote": {
@@ -440,5 +444,65 @@
         "imageAlt": "Fertigung von Lötpastenschablonen bei HOKAMI."
       }
     }
+  },
+  "ContactHero": {
+    "title": "Kontakt",
+    "contact": "Kontakt aufnehmen"
+  },
+  "ContactDirections": {
+    "eyebrow": "Hier finden Sie uns",
+    "title": "So erreichen Sie uns",
+    "openMap": "In Google Maps öffnen",
+    "mapTitle": "HOKAMI auf der Karte – Ampérova 464, Liberec",
+    "opensInNewTab": "Wird in einem neuen Tab geöffnet."
+  },
+  "ContactForm": {
+    "eyebrow": "Formular",
+    "title": "Kontaktformular",
+    "required": "* Pflichtfelder",
+    "submit": "Nachricht senden",
+    "consent": "Mit dem Absenden stimmen Sie der <privacy>Verarbeitung Ihrer personenbezogenen Daten</privacy> zu.",
+    "noScript": "Aktivieren Sie JavaScript, um das Formular zu nutzen, oder schreiben Sie uns an <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Vor- und Nachname",
+        "placeholder": "Erika Mustermann"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "name@firma.de"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Ihre Nachricht",
+        "placeholder": "Wie können wir Ihnen helfen?"
+      }
+    },
+    "errors": {
+      "nameRequired": "Geben Sie Ihren Vor- und Nachnamen ein.",
+      "emailRequired": "Geben Sie Ihre E-Mail-Adresse ein.",
+      "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "messageRequired": "Geben Sie Ihre Nachricht ein.",
+      "tooLong": "Der Text ist zu lang. Bitte kürzen Sie ihn."
+    },
+    "failure": {
+      "title": "Die Nachricht konnte nicht gesendet werden",
+      "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie uns unter <email>{address}</email>."
+    }
+  },
+  "CompanyDetails": {
+    "eyebrow": "Unternehmen",
+    "title": "Rechnungsangaben",
+    "operator": "Betreiber der Website",
+    "registrationId": "Unternehmens-ID: {value}",
+    "vatId": "USt-IdNr.: {value}",
+    "address": "Adresse",
+    "country": "Tschechien",
+    "register": "Handelsregistereintrag",
+    "reference": "Aktenzeichen {value}",
+    "registration": "Die Gesellschaft ist im Handelsregister beim Kreisgericht in Ústí nad Labem unter dem Aktenzeichen {value} eingetragen."
   }
 }

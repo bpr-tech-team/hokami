@@ -298,6 +298,10 @@
     "services": {
       "title": "Electronics manufacturing services",
       "description": "HOKAMI EMS services: SMT and THT assembly, cleaning, testing, conformal coating, mechanical assembly, printed circuit boards and SMT stencils."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact HOKAMI CZ in Liberec. Find our address, phone number, contact form, regional sales contacts and company billing details."
     }
   },
   "RequesForQuote": {
@@ -440,5 +444,65 @@
         "imageAlt": "Production of solder paste stencils at HOKAMI."
       }
     }
+  },
+  "ContactHero": {
+    "title": "Contact",
+    "contact": "Contact us"
+  },
+  "ContactDirections": {
+    "eyebrow": "Find us",
+    "title": "How to get here",
+    "openMap": "Open in Google Maps",
+    "mapTitle": "HOKAMI map – Ampérova 464, Liberec",
+    "opensInNewTab": "Opens in a new tab."
+  },
+  "ContactForm": {
+    "eyebrow": "Form",
+    "title": "Contact form",
+    "required": "* required fields",
+    "submit": "Send message",
+    "consent": "By submitting, you agree to the <privacy>processing of your personal data</privacy>.",
+    "noScript": "Enable JavaScript to use the form, or email us at <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Full name",
+        "placeholder": "Jane Smith"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "name@company.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Your message",
+        "placeholder": "How can we help you?"
+      }
+    },
+    "errors": {
+      "nameRequired": "Enter your full name.",
+      "emailRequired": "Enter your email address.",
+      "emailInvalid": "Enter a valid email address.",
+      "messageRequired": "Enter your message.",
+      "tooLong": "This text is too long. Please shorten it."
+    },
+    "failure": {
+      "title": "Your message could not be sent",
+      "unavailable": "The form is temporarily unavailable. Please contact us at <email>{address}</email>."
+    }
+  },
+  "CompanyDetails": {
+    "eyebrow": "Company",
+    "title": "Billing details",
+    "operator": "Website operator",
+    "registrationId": "Company ID: {value}",
+    "vatId": "VAT ID: {value}",
+    "address": "Address",
+    "country": "Czech Republic",
+    "register": "Commercial register",
+    "reference": "File number {value}",
+    "registration": "The company is registered in the Commercial Register maintained by the Regional Court in Ústí nad Labem, file number {value}."
   }
 }

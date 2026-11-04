@@ -11,7 +11,6 @@ export async function AboutHero() {
   return (
     <HeroSection
       id="hero"
-      contentClassName="gap-8"
       eyebrow={t("eyebrow")}
       title={t("title")}
       description={t("description")}

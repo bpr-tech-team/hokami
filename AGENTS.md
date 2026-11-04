@@ -53,12 +53,23 @@ section. Keep the button family together in `ui/button`. Shared locale options
 belong in `src/i18n/languages.ts`, and shared URL state in
 `src/hooks/use-site-location.ts`. See README for the component map.
 
+## Standard hero alignment
+
+When a page uses the standard `HeroSection`, its content must begin at the same
+vertical position as the homepage at every breakpoint. Inherit the shared top
+padding and eyebrow-to-heading spacing; do not override them in page wrappers
+with local padding, margins, positioning, transforms, or vertical centering.
+Keep the starting position consistent even when the hero's content, total height,
+or background differs. Use a separate layout for a deliberately different hero
+composition.
+
 ## Navigation
 
 Desktop and mobile menus share the ordered links Company (`/about`), Services
 (`/services`), Careers (`/career`), Sustainability (`/sustainability`), and Contact
-(`/contact`). The four routes after Company are reserved for future pages.
-The enquiry CTA links to the homepage anchor `reques-for-quote`.
+(`/contact`). Careers and Sustainability are reserved for future pages.
+The enquiry CTA links to the contact page anchor `contact-form`; on Contact,
+use a native fragment so the current query string survives navigation.
 Use `ButtonLink` for navigation CTAs; it shares the existing
 Button styling and decoration while preserving native link semantics.
 The header has no bottom border or divider; keep the bar 72 px high on desktop

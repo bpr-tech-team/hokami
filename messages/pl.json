@@ -298,6 +298,10 @@
     "services": {
       "title": "Usługi produkcji elektroniki",
       "description": "Usługi EMS HOKAMI: montaż SMT i THT, czyszczenie, testowanie, lakierowanie ochronne, montaż mechaniczny, płytki drukowane i szablony SMT."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Skontaktuj się z HOKAMI CZ w Libercu. Adres, numer telefonu, formularz kontaktowy, regionalne kontakty handlowe i dane firmy do faktury."
     }
   },
   "RequesForQuote": {
@@ -440,5 +444,65 @@
         "imageAlt": "Produkcja szablonów do nakładania pasty lutowniczej w HOKAMI."
       }
     }
+  },
+  "ContactHero": {
+    "title": "Kontakt",
+    "contact": "Skontaktuj się"
+  },
+  "ContactDirections": {
+    "eyebrow": "Gdzie nas znaleźć",
+    "title": "Jak do nas dojechać?",
+    "openMap": "Otwórz w Mapach Google",
+    "mapTitle": "HOKAMI na mapie – Ampérova 464, Liberec",
+    "opensInNewTab": "Otwiera się w nowej karcie."
+  },
+  "ContactForm": {
+    "eyebrow": "Formularz",
+    "title": "Formularz kontaktowy",
+    "required": "* pola obowiązkowe",
+    "submit": "Wyślij wiadomość",
+    "consent": "Wysyłając formularz, wyrażasz zgodę na <privacy>przetwarzanie danych osobowych</privacy>.",
+    "noScript": "Włącz JavaScript, aby skorzystać z formularza, lub napisz do nas na <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Imię i nazwisko",
+        "placeholder": "Anna Kowalska"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "imie@firma.pl"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Twoja wiadomość",
+        "placeholder": "W czym możemy pomóc?"
+      }
+    },
+    "errors": {
+      "nameRequired": "Podaj imię i nazwisko.",
+      "emailRequired": "Podaj adres e-mail.",
+      "emailInvalid": "Podaj prawidłowy adres e-mail.",
+      "messageRequired": "Wpisz swoją wiadomość.",
+      "tooLong": "Tekst jest zbyt długi. Skróć go."
+    },
+    "failure": {
+      "title": "Nie udało się wysłać wiadomości",
+      "unavailable": "Formularz jest chwilowo niedostępny. Skontaktuj się z nami pod adresem <email>{address}</email>."
+    }
+  },
+  "CompanyDetails": {
+    "eyebrow": "Firma",
+    "title": "Dane do faktury",
+    "operator": "Operator strony internetowej",
+    "registrationId": "Numer rejestracyjny: {value}",
+    "vatId": "Numer VAT: {value}",
+    "address": "Adres",
+    "country": "Czechy",
+    "register": "Wpis do rejestru",
+    "reference": "Sygnatura akt {value}",
+    "registration": "Spółka jest wpisana do rejestru handlowego prowadzonego przez Sąd Okręgowy w Ústí nad Labem, sygnatura akt {value}."
   }
 }

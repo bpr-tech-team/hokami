@@ -24,7 +24,7 @@ export function HeaderRequestLink({
     <ButtonLink
       {...props}
       href={getHeaderAnchorHref(
-        "/#reques-for-quote",
+        "/contact#contact-form",
         locale,
         location.pathname,
       )}

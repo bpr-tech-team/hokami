@@ -298,6 +298,10 @@
     "services": {
       "title": "Služby výroby elektroniky",
       "description": "EMS služby HOKAMI: SMT a THT osazování, čištění, testování, lakování, mechanická montáž, desky plošných spojů a SMT šablony."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Kontaktujte HOKAMI CZ v Liberci. Adresa, telefon, kontaktní formulář, regionální obchodní kontakty a fakturační údaje společnosti."
     }
   },
   "RequesForQuote": {
@@ -440,5 +444,65 @@
         "imageAlt": "Výroba šablon pro nanášení pájecí pasty v HOKAMI."
       }
     }
+  },
+  "ContactHero": {
+    "title": "Kontakt",
+    "contact": "Kontaktovat"
+  },
+  "ContactDirections": {
+    "eyebrow": "Kde nás najdete",
+    "title": "Jak se k nám dostanete?",
+    "openMap": "Otevřít v Mapách Google",
+    "mapTitle": "Mapa HOKAMI – Ampérova 464, Liberec",
+    "opensInNewTab": "Otevře se na nové kartě."
+  },
+  "ContactForm": {
+    "eyebrow": "Formulář",
+    "title": "Kontaktní formulář",
+    "required": "* povinné údaje",
+    "submit": "Odeslat zprávu",
+    "consent": "Odesláním souhlasíte se <privacy>zpracováním osobních údajů</privacy>.",
+    "noScript": "Pro použití formuláře zapněte JavaScript nebo nám napište na <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Jméno a příjmení",
+        "placeholder": "Jana Nováková"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "jmeno@firma.cz"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Vaše zpráva",
+        "placeholder": "S čím vám můžeme pomoci?"
+      }
+    },
+    "errors": {
+      "nameRequired": "Zadejte své jméno a příjmení.",
+      "emailRequired": "Zadejte svůj e-mail.",
+      "emailInvalid": "Zadejte platnou e-mailovou adresu.",
+      "messageRequired": "Napište nám svou zprávu.",
+      "tooLong": "Text je příliš dlouhý. Zkraťte jej prosím."
+    },
+    "failure": {
+      "title": "Zprávu se nepodařilo odeslat",
+      "unavailable": "Formulář je dočasně nedostupný. Kontaktujte nás na <email>{address}</email>."
+    }
+  },
+  "CompanyDetails": {
+    "eyebrow": "Firma",
+    "title": "Fakturační údaje",
+    "operator": "Provozovatel webových stránek",
+    "registrationId": "IČ: {value}",
+    "vatId": "DIČ: {value}",
+    "address": "Adresa",
+    "country": "Česká republika",
+    "register": "Zápis v rejstříku",
+    "reference": "Spisová značka {value}",
+    "registration": "Společnost je zapsaná v obchodním rejstříku vedeném Krajským soudem v Ústí nad Labem, spisová značka {value}"
   }
 }

@@ -27,8 +27,9 @@ type SectionProps = Omit<ComponentPropsWithoutRef<"section">, "title"> &
     description?: ReactNode;
     descriptionTone?: TextProps["tone"];
     descriptionClassName?: string;
+    headingClassName?: string;
     contentClassName?: string;
-    layout?: "stack" | "split";
+    layout?: "stack" | "split" | "split-equal";
     metadata?: ReactNode;
   };
 
@@ -39,6 +40,7 @@ export function Section({
   description,
   descriptionTone,
   descriptionClassName,
+  headingClassName,
   contentClassName,
   layout = "stack",
   metadata,
@@ -61,6 +63,8 @@ export function Section({
           "flex flex-col gap-6 desktop:gap-8",
           layout === "split" &&
             "gap-8 desktop:grid desktop:grid-cols-[minmax(0,508fr)_minmax(0,622fr)] desktop:items-start desktop:gap-[70px]",
+          layout === "split-equal" &&
+            "desktop:grid desktop:grid-cols-2 desktop:items-start desktop:gap-6",
           contentClassName,
         )}
       >
@@ -68,9 +72,16 @@ export function Section({
           className={cn(
             "flex min-w-0 flex-col gap-6 desktop:gap-8",
             layout === "split" && "gap-5 desktop:gap-5",
+            layout === "split-equal" && "desktop:gap-6",
           )}
         >
-          <div className="flex flex-col gap-6 desktop:gap-8">
+          <div
+            className={cn(
+              "flex flex-col gap-6 desktop:gap-8",
+              layout === "split-equal" && "desktop:gap-6",
+              headingClassName,
+            )}
+          >
             <MonoText variant="eyebrow">{eyebrow}</MonoText>
             <Heading id={headingId}>{title}</Heading>
           </div>

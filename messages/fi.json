@@ -298,6 +298,10 @@
     "services": {
       "title": "Elektroniikan valmistuspalvelut",
       "description": "HOKAMIn EMS-palvelut: SMT- ja THT-kokoonpano, puhdistus, testaus, suojalakkaus, mekaaninen kokoonpano, piirilevyt ja SMT-stensiilit."
+    },
+    "contact": {
+      "title": "Yhteystiedot",
+      "description": "Ota yhteyttä HOKAMI CZ:hen Liberecissä. Osoite, puhelinnumero, yhteydenottolomake, alueelliset myyntiyhteystiedot ja yrityksen laskutustiedot."
     }
   },
   "RequesForQuote": {
@@ -440,5 +444,65 @@
         "imageAlt": "Juotospastastensiilien valmistus HOKAMIlla."
       }
     }
+  },
+  "ContactHero": {
+    "title": "Yhteystiedot",
+    "contact": "Ota yhteyttä"
+  },
+  "ContactDirections": {
+    "eyebrow": "Sijaintimme",
+    "title": "Näin löydät meille",
+    "openMap": "Avaa Google Mapsissa",
+    "mapTitle": "HOKAMI kartalla – Ampérova 464, Liberec",
+    "opensInNewTab": "Avautuu uuteen välilehteen."
+  },
+  "ContactForm": {
+    "eyebrow": "Lomake",
+    "title": "Yhteydenotto­lomake",
+    "required": "* pakolliset tiedot",
+    "submit": "Lähetä viesti",
+    "consent": "Lähettämällä lomakkeen hyväksyt <privacy>henkilötietojesi käsittelyn</privacy>.",
+    "noScript": "Ota JavaScript käyttöön käyttääksesi lomaketta tai lähetä sähköpostia osoitteeseen <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Etu- ja sukunimi",
+        "placeholder": "Maija Meikäläinen"
+      },
+      "email": {
+        "label": "Sähköposti",
+        "placeholder": "nimi@yritys.fi"
+      },
+      "phone": {
+        "label": "Puhelin",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Viestisi",
+        "placeholder": "Miten voimme auttaa?"
+      }
+    },
+    "errors": {
+      "nameRequired": "Kirjoita etu- ja sukunimesi.",
+      "emailRequired": "Kirjoita sähköpostiosoitteesi.",
+      "emailInvalid": "Kirjoita kelvollinen sähköpostiosoite.",
+      "messageRequired": "Kirjoita viestisi.",
+      "tooLong": "Teksti on liian pitkä. Lyhennä sitä."
+    },
+    "failure": {
+      "title": "Viestiä ei voitu lähettää",
+      "unavailable": "Lomake ei ole tilapäisesti käytettävissä. Ota yhteyttä osoitteeseen <email>{address}</email>."
+    }
+  },
+  "CompanyDetails": {
+    "eyebrow": "Yritys",
+    "title": "Laskutustiedot",
+    "operator": "Verkkosivuston ylläpitäjä",
+    "registrationId": "Rekisterinumero: {value}",
+    "vatId": "ALV-tunniste: {value}",
+    "address": "Osoite",
+    "country": "Tšekki",
+    "register": "Kaupparekisterimerkintä",
+    "reference": "Rekisteriviite {value}",
+    "registration": "Yhtiö on merkitty Ústí nad Labemin alueoikeuden ylläpitämään kaupparekisteriin rekisteriviitteellä {value}."
   }
 }
