@@ -294,6 +294,10 @@
     "whistleblowing": {
       "title": "Ochrona sygnalistów",
       "description": "Informacje o wewnętrznym systemie zgłoszeń HOKAMI CZ, sposobach zgłaszania naruszeń i ochronie sygnalistów. Pełny dokument jest w języku czeskim."
+    },
+    "services": {
+      "title": "Usługi produkcji elektroniki",
+      "description": "Usługi EMS HOKAMI: montaż SMT i THT, czyszczenie, testowanie, lakierowanie ochronne, montaż mechaniczny, płytki drukowane i szablony SMT."
     }
   },
   "RequesForQuote": {
@@ -374,6 +378,67 @@
       "title": "Zapytanie wysłane",
       "description": "Dziękujemy. Inżynier procesu przeanalizuje dokumentację i skontaktuje się z oceną wykonalności oraz wyceną.",
       "again": "Wyślij kolejne zapytanie"
+    }
+  },
+  "ServicesHero": {
+    "eyebrow": "Usługi",
+    "title": "Kompleksowe usługi EMS dla Twoich projektów",
+    "description": "Zapewniamy kompleksowe rozwiązania EMS dla klientów z wielu sektorów przemysłu.",
+    "contact": "Skontaktuj się z nami"
+  },
+  "Services": {
+    "eyebrow": "Oferta",
+    "title": "Przegląd usług",
+    "description": "Dzięki nowoczesnym technologiom, doświadczonemu zespołowi i elastycznemu podejściu realizujemy zarówno produkcję prototypową, jak i seryjną, w tym zamówienia ekspresowe.",
+    "items": {
+      "smt": {
+        "name": "SMT",
+        "description": "Montaż SMT jest jedną z kluczowych technologii firmy Hokami i stanowi podstawę nowoczesnej produkcji elektroniki.",
+        "link": "Poznaj montaż SMT",
+        "imageAlt": "Urządzenie do montażu SMT w HOKAMI."
+      },
+      "tht": {
+        "name": "THT",
+        "description": "Lutowanie THT jest nieodłączną częścią produkcji zespołów elektronicznych, zwłaszcza tam, gdzie wymagana jest wysoka wytrzymałość mechaniczna połączeń, niezawodność i długa żywotność produktów.",
+        "link": "Poznaj montaż THT",
+        "imageAlt": "Lutowanie komponentów THT w HOKAMI."
+      },
+      "cleaning": {
+        "name": "Czyszczenie",
+        "description": "Czystość płytek drukowanych jest ważnym czynnikiem wpływającym na jakość produktu końcowego.",
+        "link": "Poznaj czyszczenie płytek",
+        "imageAlt": "Czyszczenie płytek drukowanych w HOKAMI."
+      },
+      "testing": {
+        "name": "Testowanie i jakość",
+        "description": "W firmie Hokami jakość jest nieodłącznym elementem każdego procesu produkcyjnego.",
+        "link": "Poznaj testowanie i jakość",
+        "imageAlt": "Urządzenie do automatycznej inspekcji optycznej w HOKAMI."
+      },
+      "coating": {
+        "name": "Lakierowanie ochronne",
+        "description": "Lakierowanie zespołów elektronicznych skutecznie chroni płytki drukowane i komponenty elektroniczne przed wpływem środowiska.",
+        "link": "Poznaj lakierowanie ochronne",
+        "imageAlt": "Lakierowanie ochronne zespołów elektronicznych w HOKAMI."
+      },
+      "assembly": {
+        "name": "Montaż mechaniczny",
+        "description": "W firmie Hokami produkcja nie kończy się na montażu komponentów na płytce drukowanej.",
+        "link": "Poznaj montaż mechaniczny",
+        "imageAlt": "Końcowy montaż zespołów elektronicznych w HOKAMI."
+      },
+      "pcb": {
+        "name": "Płytki drukowane",
+        "description": "Wysokiej jakości płytka drukowana stanowi podstawę każdego niezawodnego produktu elektronicznego.",
+        "link": "Poznaj płytki drukowane",
+        "imageAlt": "Płytki drukowane w HOKAMI."
+      },
+      "stencils": {
+        "name": "Szablony SMT",
+        "description": "Wysokiej jakości szablon SMT jest jednym z kluczowych warunków precyzyjnego nakładania pasty lutowniczej i uzyskania wysokiej jakości montażu SMT.",
+        "link": "Poznaj szablony SMT",
+        "imageAlt": "Produkcja szablonów do nakładania pasty lutowniczej w HOKAMI."
+      }
     }
   }
 }

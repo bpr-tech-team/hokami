@@ -10,6 +10,7 @@ export const sitePages = {
   home: { path: "", locales: routing.locales },
   quality: { path: "/quality", locales: routing.locales },
   about: { path: "/about", locales: routing.locales },
+  services: { path: "/services", locales: routing.locales },
   careers: { path: "/careers", locales: routing.locales },
   // Legal articles currently have Czech content in every language section.
   gdpr: { path: "/gdpr", locales: [routing.defaultLocale] },

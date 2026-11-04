@@ -294,6 +294,10 @@
     "whistleblowing": {
       "title": "Hinweisgeberschutz",
       "description": "Das interne Meldesystem von HOKAMI CZ: Meldewege und Schutz von Hinweisgebern. Das vollständige Dokument steht auf Tschechisch zur Verfügung."
+    },
+    "services": {
+      "title": "Dienstleistungen in der Elektronikfertigung",
+      "description": "EMS-Leistungen von HOKAMI: SMT- und THT-Bestückung, Reinigung, Prüfung, Schutzlackierung, mechanische Montage, Leiterplatten und SMT-Schablonen."
     }
   },
   "RequesForQuote": {
@@ -374,6 +378,67 @@
       "title": "Anfrage gesendet",
       "description": "Vielen Dank. Ein Prozessingenieur prüft Ihre Unterlagen und meldet sich mit einer Machbarkeitsbewertung und einem Angebot.",
       "again": "Weitere Anfrage senden"
+    }
+  },
+  "ServicesHero": {
+    "eyebrow": "Leistungen",
+    "title": "Umfassende EMS-Leistungen für Ihre Projekte",
+    "description": "Wir bieten umfassende EMS-Lösungen für Kunden aus einem breiten Spektrum von Industriezweigen.",
+    "contact": "Kontaktieren Sie uns"
+  },
+  "Services": {
+    "eyebrow": "Angebot",
+    "title": "Unsere Leistungen im Überblick",
+    "description": "Mit moderner Technologie, einem erfahrenen Team und einem flexiblen Ansatz realisieren wir sowohl Prototypen als auch Serienfertigung, einschließlich Expressaufträgen.",
+    "items": {
+      "smt": {
+        "name": "SMT",
+        "description": "Die SMT-Bestückung gehört zu den Schlüsseltechnologien von Hokami und bildet die Grundlage der modernen Elektronikfertigung.",
+        "link": "SMT-Bestückung entdecken",
+        "imageAlt": "SMT-Bestückungsanlage bei HOKAMI."
+      },
+      "tht": {
+        "name": "THT",
+        "description": "Das THT-Löten ist ein fester Bestandteil der Fertigung elektronischer Baugruppen, insbesondere bei hohen Anforderungen an die mechanische Festigkeit der Verbindungen, Zuverlässigkeit und lange Produktlebensdauer.",
+        "link": "THT-Bestückung entdecken",
+        "imageAlt": "Löten von THT-Bauteilen bei HOKAMI."
+      },
+      "cleaning": {
+        "name": "Reinigung",
+        "description": "Die Sauberkeit von Leiterplatten ist ein wichtiger Faktor für die Qualität des Endprodukts.",
+        "link": "Leiterplattenreinigung entdecken",
+        "imageAlt": "Reinigung von Leiterplatten bei HOKAMI."
+      },
+      "testing": {
+        "name": "Prüfung und Qualität",
+        "description": "Bei Hokami ist Qualität ein fester Bestandteil jedes Fertigungsprozesses.",
+        "link": "Prüfung und Qualität entdecken",
+        "imageAlt": "Anlage zur automatischen optischen Inspektion bei HOKAMI."
+      },
+      "coating": {
+        "name": "Schutzlackierung",
+        "description": "Die Schutzlackierung elektronischer Baugruppen schützt Leiterplatten und elektronische Bauteile wirksam vor Umwelteinflüssen.",
+        "link": "Schutzlackierung entdecken",
+        "imageAlt": "Schutzlackierung elektronischer Baugruppen bei HOKAMI."
+      },
+      "assembly": {
+        "name": "Mechanische Montage",
+        "description": "Bei Hokami endet die Fertigung nicht mit der Bestückung der Leiterplatte.",
+        "link": "Mechanische Montage entdecken",
+        "imageAlt": "Endmontage elektronischer Baugruppen bei HOKAMI."
+      },
+      "pcb": {
+        "name": "Leiterplatten",
+        "description": "Eine hochwertige Leiterplatte ist die Grundlage jedes zuverlässigen elektronischen Produkts.",
+        "link": "Leiterplatten entdecken",
+        "imageAlt": "Leiterplatten bei HOKAMI."
+      },
+      "stencils": {
+        "name": "SMT-Schablonen",
+        "description": "Eine hochwertige SMT-Schablone ist eine wesentliche Voraussetzung für den präzisen Auftrag von Lötpaste und eine hohe Qualität der SMT-Bestückung.",
+        "link": "SMT-Schablonen entdecken",
+        "imageAlt": "Fertigung von Lötpastenschablonen bei HOKAMI."
+      }
     }
   }
 }

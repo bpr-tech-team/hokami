@@ -294,6 +294,10 @@
     "whistleblowing": {
       "title": "Väärinkäytösten ilmoittaminen",
       "description": "Tietoa HOKAMI CZ:n sisäisestä ilmoituskanavasta, ilmoituksen tekemisestä ja ilmoittajan suojelusta. Koko asiakirja on saatavilla tšekiksi."
+    },
+    "services": {
+      "title": "Elektroniikan valmistuspalvelut",
+      "description": "HOKAMIn EMS-palvelut: SMT- ja THT-kokoonpano, puhdistus, testaus, suojalakkaus, mekaaninen kokoonpano, piirilevyt ja SMT-stensiilit."
     }
   },
   "RequesForQuote": {
@@ -374,6 +378,67 @@
       "title": "Tarjouspyyntö lähetetty",
       "description": "Kiitos. Prosessi-insinööri tarkistaa dokumentaatiosi ja ottaa yhteyttä valmistettavuusarvion ja tarjouksen kanssa.",
       "again": "Lähetä uusi tarjouspyyntö"
+    }
+  },
+  "ServicesHero": {
+    "eyebrow": "Palvelut",
+    "title": "Kattavat EMS-palvelut projekteihisi",
+    "description": "Tarjoamme kattavia elektroniikan sopimusvalmistuksen ratkaisuja monien eri teollisuudenalojen asiakkaille.",
+    "contact": "Ota yhteyttä"
+  },
+  "Services": {
+    "eyebrow": "Tarjonta",
+    "title": "Palvelumme",
+    "description": "Nykyaikaisen teknologian, kokeneen tiimin ja joustavan toimintatavan ansiosta toteutamme sekä prototyyppi- että sarjatuotantoa, myös pikatoimituksina.",
+    "items": {
+      "smt": {
+        "name": "SMT",
+        "description": "SMT-kokoonpano on yksi Hokamin keskeisistä teknologioista ja nykyaikaisen elektroniikkavalmistuksen perusta.",
+        "link": "Tutustu SMT-kokoonpanoon",
+        "imageAlt": "SMT-ladontalaitteisto HOKAMIn tuotannossa."
+      },
+      "tht": {
+        "name": "THT",
+        "description": "THT-juottaminen on olennainen osa elektroniikkakokoonpanojen valmistusta erityisesti silloin, kun liitosten mekaaniselle lujuudelle, luotettavuudelle ja tuotteiden pitkälle käyttöiälle asetetaan korkeita vaatimuksia.",
+        "link": "Tutustu THT-kokoonpanoon",
+        "imageAlt": "THT-komponenttien juottaminen HOKAMIlla."
+      },
+      "cleaning": {
+        "name": "Puhdistus",
+        "description": "Piirilevyjen puhtaus on tärkeä lopputuotteen laatuun vaikuttava tekijä.",
+        "link": "Tutustu piirilevyjen puhdistukseen",
+        "imageAlt": "Piirilevyjen puhdistus HOKAMIlla."
+      },
+      "testing": {
+        "name": "Testaus ja laatu",
+        "description": "Hokamilla laatu on olennainen osa jokaista valmistusprosessia.",
+        "link": "Tutustu testaukseen ja laatuun",
+        "imageAlt": "Automaattisen optisen tarkastuksen laitteisto HOKAMIlla."
+      },
+      "coating": {
+        "name": "Suojalakkaus",
+        "description": "Elektroniikkakokoonpanojen suojalakkaus suojaa piirilevyjä ja elektronisia komponentteja tehokkaasti ympäristön vaikutuksilta.",
+        "link": "Tutustu suojalakkaukseen",
+        "imageAlt": "Elektroniikkakokoonpanojen suojalakkaus HOKAMIlla."
+      },
+      "assembly": {
+        "name": "Mekaaninen kokoonpano",
+        "description": "Hokamilla valmistus ei pääty piirilevyn komponenttien ladontaan.",
+        "link": "Tutustu mekaaniseen kokoonpanoon",
+        "imageAlt": "Elektroniikkatuotteiden loppukokoonpano HOKAMIlla."
+      },
+      "pcb": {
+        "name": "Piirilevyt",
+        "description": "Laadukas piirilevy on jokaisen luotettavan elektroniikkatuotteen perusta.",
+        "link": "Tutustu piirilevyihin",
+        "imageAlt": "Piirilevyjä HOKAMIlla."
+      },
+      "stencils": {
+        "name": "SMT-stensiilit",
+        "description": "Laadukas SMT-stensiili on yksi keskeisistä edellytyksistä juotospastan tarkalle levitykselle ja laadukkaalle SMT-kokoonpanolle.",
+        "link": "Tutustu SMT-stensiileihin",
+        "imageAlt": "Juotospastastensiilien valmistus HOKAMIlla."
+      }
     }
   }
 }

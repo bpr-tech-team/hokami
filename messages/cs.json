@@ -294,6 +294,10 @@
     "whistleblowing": {
       "title": "Whistleblowing",
       "description": "Informace o vnitřním oznamovacím systému HOKAMI CZ, možnostech podání oznámení a ochraně oznamovatelů. Dokument je v češtině."
+    },
+    "services": {
+      "title": "Služby výroby elektroniky",
+      "description": "EMS služby HOKAMI: SMT a THT osazování, čištění, testování, lakování, mechanická montáž, desky plošných spojů a SMT šablony."
     }
   },
   "RequesForQuote": {
@@ -374,6 +378,67 @@
       "title": "Poptávka odeslána",
       "description": "Děkujeme. Dokumentaci posoudí procesní inženýr a ozveme se s posouzením vyrobitelnosti a cenou.",
       "again": "Odeslat další poptávku"
+    }
+  },
+  "ServicesHero": {
+    "eyebrow": "Služby",
+    "title": "Komplexní EMS služby pro vaše projekty",
+    "description": "Poskytujeme komplexní EMS řešení pro zákazníky z širokého spektra průmyslových odvětví.",
+    "contact": "Kontaktujte nás"
+  },
+  "Services": {
+    "eyebrow": "Nabídka",
+    "title": "Přehled služeb",
+    "description": "Díky moderním technologiím, zkušenému týmu a flexibilnímu přístupu dokážeme realizovat jak prototypovou, tak sériovou výrobu, včetně expresních zakázek.",
+    "items": {
+      "smt": {
+        "name": "SMT",
+        "description": "SMT osazování představuje jednu z klíčových technologií společnosti Hokami a tvoří základ moderní výroby elektroniky.",
+        "link": "Prozkoumat službu SMT",
+        "imageAlt": "Osazovací zařízení SMT ve výrobě HOKAMI."
+      },
+      "tht": {
+        "name": "THT",
+        "description": "THT pájení je nedílnou součástí výroby elektronických sestav, zejména tam, kde jsou kladeny vysoké požadavky na mechanickou pevnost spojů, spolehlivost a dlouhou životnost výrobků.",
+        "link": "Prozkoumat službu THT",
+        "imageAlt": "Pájení součástek technologií THT v HOKAMI."
+      },
+      "cleaning": {
+        "name": "Čištění",
+        "description": "Čistota plošných spojů je důležitým faktorem ovlivňujícím kvalitu koncového produktu.",
+        "link": "Prozkoumat službu Čištění",
+        "imageAlt": "Čištění desek plošných spojů v HOKAMI."
+      },
+      "testing": {
+        "name": "Testování a kvalita",
+        "description": "Ve společnosti Hokami je kvalita nedílnou součástí každého výrobního procesu.",
+        "link": "Prozkoumat službu Testování a kvalita",
+        "imageAlt": "Zařízení pro automatickou optickou kontrolu elektroniky v HOKAMI."
+      },
+      "coating": {
+        "name": "Lakování",
+        "description": "Lakování elektronických sestav představuje účinnou ochranu desek plošných spojů a elektronických komponentů před vlivy prostředí.",
+        "link": "Prozkoumat službu Lakování",
+        "imageAlt": "Lakování elektronických sestav v HOKAMI."
+      },
+      "assembly": {
+        "name": "Mechanická montáž",
+        "description": "Ve společnosti Hokami nekončí výroba osazením desky plošných spojů.",
+        "link": "Prozkoumat službu Mechanická montáž",
+        "imageAlt": "Kompletace elektronických sestav v HOKAMI."
+      },
+      "pcb": {
+        "name": "DPS",
+        "description": "Kvalitní deska plošných spojů představuje základ každého spolehlivého elektronického výrobku.",
+        "link": "Prozkoumat službu DPS",
+        "imageAlt": "Desky plošných spojů v HOKAMI."
+      },
+      "stencils": {
+        "name": "SMT šablony",
+        "description": "Kvalitní SMT šablona je jedním z klíčových předpokladů pro přesné nanesení pájecí pasty a dosažení vysoké kvality SMT osazování.",
+        "link": "Prozkoumat službu SMT šablony",
+        "imageAlt": "Výroba šablon pro nanášení pájecí pasty v HOKAMI."
+      }
     }
   }
 }

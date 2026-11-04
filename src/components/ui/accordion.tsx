@@ -116,7 +116,7 @@ function AccordionContent({
       <div
         className={cn(
           variant === "industry"
-            ? "flex h-full flex-col gap-4 px-5 pb-5 desktop:justify-between desktop:pr-6 desktop:pb-6 desktop:pl-[136px]"
+            ? "flex min-h-full flex-col gap-4 px-5 pb-5 desktop:justify-between desktop:pr-6 desktop:pb-6 desktop:pl-[136px]"
             : "h-(--accordion-panel-height) pt-0 pb-2.5 data-ending-style:h-0 data-starting-style:h-0 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
           className,
         )}

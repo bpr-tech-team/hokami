@@ -76,6 +76,20 @@ two places. Reuse the existing components when adding sections:
   shared page layout. Header and footer components live in their own subfolders.
 - `components/sections/home/`: homepage sections grouped by feature. Each folder
   keeps its cards, accordion, images, and related types together.
+- `components/sections/image-accordion/`: shared single-open accordion and photo
+  gallery for Industries and Services. Each entry supplies its translated name,
+  description, image and optional metadata or native action link. The desktop
+  gallery and compact inline photos share one selection. Optional Figma crop
+  coordinates scale uniformly with the image frame using CSS container units.
+  The list's minimum desktop height is configurable without fixing text height.
+  `home/industries/` adapts the existing certification data to this shared view.
+- `components/sections/services/`: overview at `/[locale]/services` in all five
+  locales. `hero/` uses the shared animated background and links to the future
+  localized `/contact` page. `overview/` supplies eight services, original local
+  Figma photographs, crop coordinates and stable service slugs. Translated text
+  lives in `ServicesHero`, `Services` and `Metadata.services` in each locale's
+  messages. Service links target `/[locale]/services/{slug}`; detail and contact
+  pages are separate work. The page uses the existing metadata and sitemap helpers.
 - `components/sections/hero/`: shared `HeroSection` and independent
   `HeroBackground`. The section accepts translated content, actions, a heading
   element, and an optional background. `home/hero/` supplies homepage content.
