@@ -302,6 +302,10 @@
     "contact": {
       "title": "Kontakt",
       "description": "Kontaktujte HOKAMI CZ v Liberci. Adresa, telefon, kontaktní formulář, regionální obchodní kontakty a fakturační údaje společnosti."
+    },
+    "sustainability": {
+      "title": "Udržitelnost",
+      "description": "Udržitelná výroba elektroniky v HOKAMI: energetická efektivita, vlastní fotovoltaika, odpovědné nakládání s materiály a odpady a neustálé zlepšování."
     }
   },
   "RequesForQuote": {
@@ -504,5 +508,46 @@
     "register": "Zápis v rejstříku",
     "reference": "Spisová značka {value}",
     "registration": "Společnost je zapsaná v obchodním rejstříku vedeném Krajským soudem v Ústí nad Labem, spisová značka {value}"
+  },
+  "SustainabilityHero": {
+    "eyebrow": "Životní prostředí",
+    "title": "Udržitelnost",
+    "description": "Ve společnosti Hokami vnímáme udržitelnost jako přirozenou součást moderní výroby elektroniky a dlouhodobého rozvoje společnosti. Odpovědný přístup k životnímu prostředí, efektivní využívání zdrojů a neustálé zlepšování výrobních procesů jsou pevně zakotveny v našem každodenním fungování i strategických rozhodnutích. Naším cílem je vyrábět elektroniku s maximálním důrazem na kvalitu, efektivitu a minimalizaci dopadů na životní prostředí."
+  },
+  "SustainabilityEnergy": {
+    "eyebrow": "Energie",
+    "title": "Energetická efektivita a moderní technologie",
+    "technology": "Průběžně investujeme do moderních výrobních technologií, které přispívají ke snižování spotřeby energií, optimalizaci výrobních procesů a efektivnějšímu využívání materiálů. Součástí našich investic je také pravidelná modernizace výrobního vybavení, využívání energeticky úsporných zařízení, inteligentní řízení spotřeby energií a rozsáhlé využití LED osvětlení v našich provozech.",
+    "photovoltaics": "Významnou část elektrické energie spotřebované ve společnosti pokrývá naše vlastní fotovoltaická elektrárna, která dnes zajišťuje více než 60 % celkové spotřeby. Díky kombinaci vlastní výroby energie a moderních technologií dlouhodobě snižujeme energetickou náročnost výroby a podporujeme udržitelný rozvoj společnosti."
+  },
+  "SustainabilityProduction": {
+    "eyebrow": "Výroba",
+    "title": "Odpovědná výroba",
+    "processes": "Naše výrobní procesy jsou navrženy tak, aby splňovaly nejvyšší požadavky na kvalitu, bezpečnost i ochranu životního prostředí. Důraz klademe na efektivní využívání materiálů, minimalizaci výrobních ztrát a odpovědné nakládání se vznikajícími odpady.",
+    "materials": "Samozřejmostí je využívání bezolovnatých výrobních procesů, dodržování požadavků evropských směrnic RoHS a REACH a bezpečné nakládání s chemickými látkami v souladu s platnou legislativou. Veškeré odpady jsou důsledně tříděny a předávány autorizovaným partnerům k recyklaci nebo ekologické likvidaci."
+  },
+  "SustainabilityResponsibility": {
+    "eyebrow": "Přístup",
+    "title": "Odpovědnost v celé firmě",
+    "cards": {
+      "supplyChain": {
+        "title": "Odpovědný dodavatelský řetězec",
+        "description": "Udržitelnost nekončí uvnitř výrobního závodu. Spolupracujeme s prověřenými dodavateli, kteří sdílejí naše požadavky na kvalitu, transparentnost a odpovědný přístup k podnikání. Při plánování výroby a logistiky usilujeme o efektivní využívání přepravních kapacit, optimalizaci dodavatelského řetězce a snižování zbytečných přepravních operací."
+      },
+      "people": {
+        "title": "Lidé a firemní kultura",
+        "description": "Klíčovou součástí našeho přístupu jsou zaměstnanci. Podporujeme prostředí, ve kterém je odpovědné chování přirozenou součástí každodenní práce. Zaměstnance pravidelně školíme v oblasti bezpečnosti práce, ochrany životního prostředí i správného nakládání s materiály a odpady. Současně podporujeme iniciativu zaměstnanců vedoucí ke zlepšování výrobních procesů, vyšší efektivitě a snižování environmentálních dopadů."
+      },
+      "improvement": {
+        "title": "Neustálé zlepšování",
+        "description": "Udržitelnost vnímáme jako dlouhodobý proces, nikoliv jednorázový projekt. Proto průběžně vyhodnocujeme naše výrobní procesy, investujeme do inovací a hledáme nové příležitosti ke snižování energetické náročnosti, efektivnějšímu využívání zdrojů a dalšímu rozvoji odpovědné výroby."
+      }
+    }
+  },
+  "SustainabilityContact": {
+    "eyebrow": "Kontakt",
+    "title": "Hledáte partnera pro výrobu elektroniky?",
+    "description": "Naším cílem je být spolehlivým partnerem pro zákazníky z celého světa a současně společností, která přispívá k odpovědnému rozvoji elektronického průmyslu. Jsme přesvědčeni, že vysoká kvalita výroby, technologické inovace a odpovědný přístup k životnímu prostředí tvoří základ dlouhodobě udržitelného podnikání.",
+    "contact": "Kontaktovat"
   }
 }

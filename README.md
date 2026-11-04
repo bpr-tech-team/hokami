@@ -76,6 +76,22 @@ two places. Reuse the existing components when adding sections:
   shared page layout. Header and footer components live in their own subfolders.
 - `components/sections/home/`: homepage sections grouped by feature. Each folder
   keeps its cards, accordion, images, and related types together.
+- `components/sections/feature-cards/`: shared icon, title and description cards
+  and their responsive grid for Capabilities and Sustainability. Cards use the
+  existing shadcn `feature` variant; one, two and three columns follow the shared
+  mobile, tablet and desktop breakpoints. Heights grow with translated content.
+- `components/sections/contact-cta/`: shared closing contact section for About
+  and Sustainability. Page wrappers supply translated copy and the action URL;
+  `ContactLinks` supplies the shared company phone and email.
+- `components/sections/sustainability/`: sustainability page at
+  `/[locale]/sustainability` in all five locales. The content-driven hero uses the
+  shared animated background and the explicitly different `layout="section"`.
+  Energy and responsible production reuse `Section` with equal columns. Energy
+  supplies the original local forest photo, a responsive 3:2 crop and static
+  `PhotoTrace` decoration. Responsibility reuses `FeatureCardGrid` with three
+  original Figma icons. The closing CTA links to localized `/contact`.
+  Translated copy lives in the five `Sustainability*` namespaces and
+  `Metadata.sustainability`. Metadata and sitemap use the shared site registry.
 - `components/sections/image-accordion/`: shared single-open accordion and photo
   gallery for Industries and Services. Each entry supplies its translated name,
   description, image and optional metadata or native action link. The desktop
@@ -105,12 +121,14 @@ two places. Reuse the existing components when adding sections:
 - `components/sections/hero/`: shared `HeroSection` and independent
   `HeroBackground`. The section accepts translated content, actions, a heading
   element, and an optional background. `home/hero/` supplies homepage content.
-  The default `size="viewport"` uses
-  `calc(100svh - var(--site-header-height))` from `2xl` (1536 px).
-  Below `2xl`, the original responsive minimum heights remain
-  (489 px on mobile and 740 px from `tablet` at 760 px).
-  The section grows with content when needed.
+  The default `size="default"` uses the original responsive minimum heights
+  (489 px on mobile and 740 px from `tablet` at 760 px), independent of viewport
+  height. The section grows with content when needed.
   Contact uses `size="compact"` to keep its content-driven height.
+  Sustainability also uses compact sizing with `layout="section"`: shared
+  section spacing (128 px above the content on desktop) and a 32 px desktop
+  content gap, following its approved design. Standard heroes keep their
+  existing alignment.
   Standard page heroes inherit the homepage's responsive top padding and
   eyebrow-to-heading spacing so their content starts at the same vertical position.
   Customize layout with `className`, `contentClassName`, and `actionsClassName`,
@@ -137,9 +155,10 @@ two places. Reuse the existing components when adding sections:
   intrinsic image dimensions reserve their space while loading. Native company
   links open in new tabs and include a translated screen-reader announcement.
 - `components/sections/about/contact/`: server-rendered closing contact section in
-  all five locales, placed after documents and before the footer. Text and actions
-  stack below `desktop`; the desktop action column is 384 px wide. Native phone
-  and email links use local Figma icons. The contact CTA and About hero CTA link
+  all five locales, placed after documents and before the footer. Its wrapper
+  supplies content to `ContactCta`. Text and actions stack below `desktop`; the
+  desktop action column is 384 px wide. Native phone and email links use local
+  Figma icons. The contact CTA and About hero CTA link
   to the homepage enquiry form in the current locale.
 - `components/sections/about/documents/`: server-rendered certificates and grants
   between press and contact in all five locales. The two lists stack below

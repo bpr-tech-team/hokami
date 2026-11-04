@@ -302,6 +302,10 @@
     "contact": {
       "title": "Kontakt",
       "description": "Kontaktieren Sie HOKAMI CZ in Liberec. Adresse, Telefonnummer, Kontaktformular, regionale Vertriebskontakte und Rechnungsangaben des Unternehmens."
+    },
+    "sustainability": {
+      "title": "Nachhaltigkeit",
+      "description": "Nachhaltige Elektronikfertigung bei HOKAMI: Energieeffizienz, eigene Photovoltaik, verantwortungsvoller Umgang mit Materialien und Abfällen und kontinuierliche Verbesserung."
     }
   },
   "RequesForQuote": {
@@ -504,5 +508,46 @@
     "register": "Handelsregistereintrag",
     "reference": "Aktenzeichen {value}",
     "registration": "Die Gesellschaft ist im Handelsregister beim Kreisgericht in Ústí nad Labem unter dem Aktenzeichen {value} eingetragen."
+  },
+  "SustainabilityHero": {
+    "eyebrow": "Umwelt",
+    "title": "Nachhaltigkeit",
+    "description": "Bei Hokami verstehen wir Nachhaltigkeit als selbstverständlichen Bestandteil einer modernen Elektronikfertigung und der langfristigen Entwicklung unseres Unternehmens. Ein verantwortungsvoller Umgang mit der Umwelt, der effiziente Einsatz von Ressourcen und die kontinuierliche Verbesserung unserer Fertigungsprozesse sind fest in unserem Arbeitsalltag und unseren strategischen Entscheidungen verankert. Unser Ziel ist es, Elektronik mit höchstem Anspruch an Qualität, Effizienz und möglichst geringen Umweltauswirkungen herzustellen."
+  },
+  "SustainabilityEnergy": {
+    "eyebrow": "Energie",
+    "title": "Energieeffizienz und moderne Technologien",
+    "technology": "Wir investieren kontinuierlich in moderne Fertigungstechnologien, die den Energieverbrauch senken, Produktionsprozesse optimieren und einen effizienteren Materialeinsatz ermöglichen. Dazu gehören auch die regelmäßige Modernisierung unserer Fertigungsanlagen, der Einsatz energieeffizienter Geräte, ein intelligentes Energiemanagement und die umfassende Nutzung von LED-Beleuchtung in unseren Betrieben.",
+    "photovoltaics": "Einen erheblichen Teil des im Unternehmen verbrauchten Stroms deckt unsere eigene Photovoltaikanlage ab. Sie liefert heute mehr als 60 % des gesamten Strombedarfs. Durch die Kombination eigener Energieerzeugung mit modernen Technologien senken wir langfristig den Energiebedarf der Fertigung und fördern die nachhaltige Entwicklung unseres Unternehmens."
+  },
+  "SustainabilityProduction": {
+    "eyebrow": "Fertigung",
+    "title": "Verantwortungsvolle Fertigung",
+    "processes": "Unsere Fertigungsprozesse sind so gestaltet, dass sie höchste Anforderungen an Qualität, Sicherheit und Umweltschutz erfüllen. Dabei legen wir Wert auf einen effizienten Materialeinsatz, die Minimierung von Produktionsverlusten und einen verantwortungsvollen Umgang mit den anfallenden Abfällen.",
+    "materials": "Bleifreie Fertigungsverfahren, die Einhaltung der Anforderungen der europäischen Richtlinien RoHS und REACH sowie der sichere Umgang mit Chemikalien gemäß den geltenden gesetzlichen Vorschriften sind für uns selbstverständlich. Sämtliche Abfälle werden sorgfältig getrennt und autorisierten Partnern zum Recycling oder zur umweltgerechten Entsorgung übergeben."
+  },
+  "SustainabilityResponsibility": {
+    "eyebrow": "Unser Ansatz",
+    "title": "Verantwortung im gesamten Unternehmen",
+    "cards": {
+      "supplyChain": {
+        "title": "Verantwortungsvolle Lieferkette",
+        "description": "Nachhaltigkeit endet nicht am Werkstor. Wir arbeiten mit bewährten Lieferanten zusammen, die unsere Anforderungen an Qualität, Transparenz und verantwortungsvolles unternehmerisches Handeln teilen. Bei der Produktions- und Logistikplanung streben wir eine effiziente Nutzung der Transportkapazitäten, eine Optimierung der Lieferkette und die Reduzierung unnötiger Transporte an."
+      },
+      "people": {
+        "title": "Menschen und Unternehmenskultur",
+        "description": "Unsere Beschäftigten sind ein wesentlicher Bestandteil unseres Ansatzes. Wir fördern ein Arbeitsumfeld, in dem verantwortungsvolles Handeln selbstverständlich zum Alltag gehört. Wir schulen unsere Beschäftigten regelmäßig in Arbeitssicherheit, Umweltschutz und dem richtigen Umgang mit Materialien und Abfällen. Gleichzeitig unterstützen wir ihre Initiativen zur Verbesserung der Fertigungsprozesse, zur Steigerung der Effizienz und zur Verringerung der Umweltauswirkungen."
+      },
+      "improvement": {
+        "title": "Kontinuierliche Verbesserung",
+        "description": "Wir verstehen Nachhaltigkeit als langfristigen Prozess und nicht als einmaliges Projekt. Deshalb bewerten wir unsere Fertigungsprozesse laufend, investieren in Innovationen und suchen nach neuen Möglichkeiten, den Energiebedarf zu senken, Ressourcen effizienter zu nutzen und eine verantwortungsvolle Fertigung weiterzuentwickeln."
+      }
+    }
+  },
+  "SustainabilityContact": {
+    "eyebrow": "Kontakt",
+    "title": "Suchen Sie einen Partner für die Elektronikfertigung?",
+    "description": "Unser Ziel ist es, ein zuverlässiger Partner für Kunden auf der ganzen Welt zu sein und zugleich zur verantwortungsvollen Entwicklung der Elektronikindustrie beizutragen. Wir sind überzeugt, dass hohe Fertigungsqualität, technologische Innovationen und ein verantwortungsvoller Umgang mit der Umwelt die Grundlage für langfristig nachhaltiges Wirtschaften bilden.",
+    "contact": "Kontakt aufnehmen"
   }
 }

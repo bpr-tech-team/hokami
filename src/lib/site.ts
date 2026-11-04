@@ -11,6 +11,7 @@ export const sitePages = {
   quality: { path: "/quality", locales: routing.locales },
   about: { path: "/about", locales: routing.locales },
   services: { path: "/services", locales: routing.locales },
+  sustainability: { path: "/sustainability", locales: routing.locales },
   contact: { path: "/contact", locales: routing.locales },
   careers: { path: "/careers", locales: routing.locales },
   // Legal articles currently have Czech content in every language section.

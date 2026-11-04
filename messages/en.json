@@ -302,6 +302,10 @@
     "contact": {
       "title": "Contact",
       "description": "Contact HOKAMI CZ in Liberec. Find our address, phone number, contact form, regional sales contacts and company billing details."
+    },
+    "sustainability": {
+      "title": "Sustainability",
+      "description": "Sustainable electronics manufacturing at HOKAMI: energy efficiency, our own solar power, responsible handling of materials and waste, and continuous improvement."
     }
   },
   "RequesForQuote": {
@@ -504,5 +508,46 @@
     "register": "Commercial register",
     "reference": "File number {value}",
     "registration": "The company is registered in the Commercial Register maintained by the Regional Court in Ústí nad Labem, file number {value}."
+  },
+  "SustainabilityHero": {
+    "eyebrow": "Environment",
+    "title": "Sustainability",
+    "description": "At Hokami, we see sustainability as a natural part of modern electronics manufacturing and the long-term development of our company. Environmental responsibility, efficient use of resources and continuous improvement of manufacturing processes are firmly embedded in our day-to-day operations and strategic decisions. Our goal is to manufacture electronics with the utmost emphasis on quality, efficiency and minimising environmental impact."
+  },
+  "SustainabilityEnergy": {
+    "eyebrow": "Energy",
+    "title": "Energy efficiency and modern technology",
+    "technology": "We continuously invest in modern manufacturing technologies that help reduce energy consumption, optimise production processes and use materials more efficiently. Our investments also include regular upgrades to manufacturing equipment, the use of energy-efficient machinery, intelligent energy management and extensive use of LED lighting across our facilities.",
+    "photovoltaics": "Our own photovoltaic power plant supplies a significant share of the electricity consumed by the company, currently covering more than 60% of total consumption. By combining our own energy generation with modern technologies, we reduce the energy intensity of production over the long term and support the company's sustainable development."
+  },
+  "SustainabilityProduction": {
+    "eyebrow": "Production",
+    "title": "Responsible manufacturing",
+    "processes": "Our manufacturing processes are designed to meet the highest standards of quality, safety and environmental protection. We focus on efficient use of materials, minimising production losses and responsible handling of the waste we generate.",
+    "materials": "Lead-free manufacturing processes, compliance with the requirements of the European RoHS and REACH directives, and safe handling of chemicals in accordance with applicable legislation are standard practice for us. All waste is carefully sorted and handed over to authorised partners for recycling or environmentally sound disposal."
+  },
+  "SustainabilityResponsibility": {
+    "eyebrow": "Our approach",
+    "title": "Responsibility throughout the company",
+    "cards": {
+      "supplyChain": {
+        "title": "A responsible supply chain",
+        "description": "Sustainability extends beyond the factory. We work with trusted suppliers who share our requirements for quality, transparency and responsible business practices. When planning production and logistics, we strive to use transport capacity efficiently, optimise the supply chain and reduce unnecessary transport operations."
+      },
+      "people": {
+        "title": "People and company culture",
+        "description": "Employees are a key part of our approach. We promote an environment in which responsible behaviour is a natural part of everyday work. We regularly train employees in occupational safety, environmental protection and the proper handling of materials and waste. We also encourage employee initiatives that improve manufacturing processes, increase efficiency and reduce environmental impact."
+      },
+      "improvement": {
+        "title": "Continuous improvement",
+        "description": "We see sustainability as a long-term process rather than a one-off project. We therefore continually assess our manufacturing processes, invest in innovation and seek new opportunities to reduce energy intensity, use resources more efficiently and further develop responsible manufacturing."
+      }
+    }
+  },
+  "SustainabilityContact": {
+    "eyebrow": "Contact",
+    "title": "Looking for an electronics manufacturing partner?",
+    "description": "Our goal is to be a reliable partner for customers around the world and a company that contributes to the responsible development of the electronics industry. We believe that high manufacturing quality, technological innovation and environmental responsibility form the foundation of a sustainable business over the long term.",
+    "contact": "Contact us"
   }
 }

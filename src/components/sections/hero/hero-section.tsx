@@ -15,13 +15,16 @@ const heroSectionVariants = cva(
   "relative isolate bg-surface-default px-5 py-18 wrap-anywhere tablet:bg-surface-accent-subtle tablet:px-10 tablet:py-24 desktop:px-20 desktop:pt-[84px] desktop:pb-32",
   {
     variants: {
+      layout: {
+        standard: "",
+        section: "desktop:pt-32",
+      },
       size: {
-        viewport:
-          "min-h-[489px] tablet:min-h-[740px] 2xl:min-h-[calc(100svh-var(--site-header-height))]",
+        default: "min-h-[489px] tablet:min-h-[740px]",
         compact: "min-h-0",
       },
     },
-    defaultVariants: { size: "viewport" },
+    defaultVariants: { layout: "standard", size: "default" },
   },
 );
 
@@ -59,6 +62,7 @@ export function HeroSection({
   actions = [],
   actionsClassName,
   background = <HeroBackground />,
+  layout,
   size,
   className,
   children,
@@ -71,12 +75,13 @@ export function HeroSection({
       {...props}
       id={id}
       aria-labelledby={headingId}
-      className={cn(heroSectionVariants({ size }), className)}
+      className={cn(heroSectionVariants({ layout, size }), className)}
     >
       {background}
       <Container
         className={cn(
           "relative flex flex-col items-start gap-6",
+          layout === "section" && "desktop:gap-8",
           contentClassName,
         )}
       >

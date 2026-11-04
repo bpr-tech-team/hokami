@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Section } from "@/components/layout/section";
-import { CapabilityCard } from "./capability-card";
+import { FeatureCardGrid } from "@/components/sections/feature-cards/feature-card-grid";
 
 const capabilities = [
   { id: "assembly", icon: "/images/capabilities/cpu.svg" },
@@ -21,17 +21,14 @@ export async function Capabilities() {
       descriptionClassName="desktop:min-h-[87px]"
       contentClassName="desktop:min-h-[538px]"
     >
-      <ul className="grid bg-border-brand-subtle p-px tablet:grid-cols-2 desktop:grid-cols-3 desktop:p-0">
-        {capabilities.map(({ id, icon }) => (
-          <li key={id} className="min-w-0">
-            <CapabilityCard
-              icon={icon}
-              title={t(`cards.${id}.title`)}
-              description={t(`cards.${id}.description`)}
-            />
-          </li>
-        ))}
-      </ul>
+      <FeatureCardGrid
+        items={capabilities.map(({ id, icon }) => ({
+          id,
+          icon,
+          title: t(`cards.${id}.title`),
+          description: t(`cards.${id}.description`),
+        }))}
+      />
     </Section>
   );
 }

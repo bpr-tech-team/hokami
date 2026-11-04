@@ -1,9 +1,6 @@
-import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
-import { Section } from "@/components/layout/section";
-import { ButtonLink } from "@/components/ui/button/button-link";
+import { ContactCta } from "@/components/sections/contact-cta/contact-cta";
 import { getPathname } from "@/i18n/navigation";
-import { ContactLinks } from "@/components/sections/contact-links/contact-links";
 
 export async function AboutContact() {
   const [locale, t] = await Promise.all([
@@ -12,35 +9,15 @@ export async function AboutContact() {
   ]);
 
   return (
-    <Section
+    <ContactCta
       id="contact"
       eyebrow={t("eyebrow")}
       title={t("title")}
       description={t("description")}
-      descriptionTone="secondary"
-      descriptionClassName="max-w-copy"
-      className="bg-surface-accent-subtle"
-      contentClassName="desktop:grid desktop:grid-cols-[minmax(0,1fr)_384px] desktop:items-end desktop:gap-6"
-    >
-      <div className="flex min-w-0 flex-col gap-4">
-        <ButtonLink
-          href={getPathname({ locale, href: "/#reques-for-quote" })}
-          size="lg"
-          className="w-full"
-          icon={
-            <Image
-              src="/images/about/contact/arrow-right.svg"
-              alt=""
-              width={20}
-              height={20}
-              unoptimized
-            />
-          }
-        >
-          {t("contact")}
-        </ButtonLink>
-        <ContactLinks />
-      </div>
-    </Section>
+      action={{
+        label: t("contact"),
+        href: getPathname({ locale, href: "/#reques-for-quote" }),
+      }}
+    />
   );
 }

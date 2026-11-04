@@ -8,17 +8,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-type CapabilityCardProps = {
+export type FeatureCardProps = {
   icon: string;
   title: string;
   description: string;
 };
 
-export function CapabilityCard({
-  icon,
-  title,
-  description,
-}: CapabilityCardProps) {
+export function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <Card variant="feature" className="h-full">
       <CardHeader className="flex flex-col gap-[22px] px-0">

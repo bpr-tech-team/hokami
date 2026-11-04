@@ -302,6 +302,10 @@
     "contact": {
       "title": "Yhteystiedot",
       "description": "Ota yhteyttä HOKAMI CZ:hen Liberecissä. Osoite, puhelinnumero, yhteydenottolomake, alueelliset myyntiyhteystiedot ja yrityksen laskutustiedot."
+    },
+    "sustainability": {
+      "title": "Vastuullisuus",
+      "description": "HOKAMIn vastuullinen elektroniikan valmistus: energiatehokkuus, oma aurinkovoima, materiaalien ja jätteiden vastuullinen käsittely sekä jatkuva parantaminen."
     }
   },
   "RequesForQuote": {
@@ -504,5 +508,46 @@
     "register": "Kaupparekisterimerkintä",
     "reference": "Rekisteriviite {value}",
     "registration": "Yhtiö on merkitty Ústí nad Labemin alueoikeuden ylläpitämään kaupparekisteriin rekisteriviitteellä {value}."
+  },
+  "SustainabilityHero": {
+    "eyebrow": "Ympäristö",
+    "title": "Vastuullisuus",
+    "description": "Hokamilla vastuullisuus on luonnollinen osa nykyaikaista elektroniikan valmistusta ja yrityksen pitkäjänteistä kehittämistä. Ympäristövastuu, resurssien tehokas käyttö ja tuotantoprosessien jatkuva parantaminen ovat kiinteä osa päivittäistä toimintaamme ja strategisia päätöksiämme. Tavoitteenamme on valmistaa elektroniikkaa painottaen korkeaa laatua, tehokkuutta ja mahdollisimman vähäisiä ympäristövaikutuksia."
+  },
+  "SustainabilityEnergy": {
+    "eyebrow": "Energia",
+    "title": "Energiatehokkuus ja nykyaikainen teknologia",
+    "technology": "Investoimme jatkuvasti nykyaikaisiin tuotantoteknologioihin, jotka auttavat vähentämään energiankulutusta, optimoimaan tuotantoprosesseja ja tehostamaan materiaalien käyttöä. Investointeihimme kuuluvat myös tuotantolaitteiden säännöllinen uudistaminen, energiatehokkaat laitteet, älykäs energiankulutuksen hallinta ja LED-valaistuksen laaja käyttö toimitiloissamme.",
+    "photovoltaics": "Oma aurinkovoimalamme kattaa merkittävän osan yrityksemme sähkönkulutuksesta, nykyisin yli 60 % kokonaiskulutuksesta. Yhdistämällä oman energiantuotannon nykyaikaiseen teknologiaan vähennämme tuotannon energiantarvetta pitkäjänteisesti ja tuemme yrityksen kestävää kehitystä."
+  },
+  "SustainabilityProduction": {
+    "eyebrow": "Tuotanto",
+    "title": "Vastuullinen valmistus",
+    "processes": "Tuotantoprosessimme on suunniteltu täyttämään korkeimmat laatua, turvallisuutta ja ympäristönsuojelua koskevat vaatimukset. Painotamme materiaalien tehokasta käyttöä, tuotantohävikin vähentämistä ja syntyvän jätteen vastuullista käsittelyä.",
+    "materials": "Lyijyttömät valmistusprosessit, Euroopan RoHS- ja REACH-direktiivien vaatimusten noudattaminen sekä kemikaalien turvallinen käsittely voimassa olevan lainsäädännön mukaisesti ovat meille itsestäänselvyyksiä. Kaikki jätteet lajitellaan huolellisesti ja luovutetaan valtuutetuille kumppaneille kierrätystä tai ympäristöä säästävää loppukäsittelyä varten."
+  },
+  "SustainabilityResponsibility": {
+    "eyebrow": "Toimintatapamme",
+    "title": "Vastuullisuus koko yrityksessä",
+    "cards": {
+      "supplyChain": {
+        "title": "Vastuullinen toimitusketju",
+        "description": "Vastuullisuus ulottuu tuotantolaitoksen ulkopuolelle. Teemme yhteistyötä luotettavien toimittajien kanssa, jotka jakavat laatua, läpinäkyvyyttä ja vastuullista liiketoimintaa koskevat vaatimuksemme. Tuotannon ja logistiikan suunnittelussa pyrimme käyttämään kuljetuskapasiteettia tehokkaasti, optimoimaan toimitusketjua ja vähentämään tarpeettomia kuljetuksia."
+      },
+      "people": {
+        "title": "Ihmiset ja yrityskulttuuri",
+        "description": "Työntekijät ovat keskeinen osa toimintatapaamme. Edistämme työympäristöä, jossa vastuullinen toiminta on luonnollinen osa jokapäiväistä työtä. Koulutamme henkilöstöämme säännöllisesti työturvallisuudessa, ympäristönsuojelussa sekä materiaalien ja jätteiden asianmukaisessa käsittelyssä. Kannustamme myös työntekijöiden aloitteita, joilla parannetaan tuotantoprosesseja, lisätään tehokkuutta ja vähennetään ympäristövaikutuksia."
+      },
+      "improvement": {
+        "title": "Jatkuva parantaminen",
+        "description": "Näemme vastuullisuuden pitkäjänteisenä prosessina, emme yksittäisenä hankkeena. Arvioimme siksi tuotantoprosessejamme jatkuvasti, investoimme innovaatioihin ja etsimme uusia mahdollisuuksia vähentää energiantarvetta, tehostaa resurssien käyttöä ja kehittää vastuullista valmistusta."
+      }
+    }
+  },
+  "SustainabilityContact": {
+    "eyebrow": "Yhteystiedot",
+    "title": "Etsitkö kumppania elektroniikan valmistukseen?",
+    "description": "Tavoitteenamme on olla luotettava kumppani asiakkaille kaikkialla maailmassa ja samalla yritys, joka edistää elektroniikkateollisuuden vastuullista kehitystä. Uskomme, että korkea valmistuksen laatu, teknologiset innovaatiot ja ympäristövastuu muodostavat perustan pitkäjänteiselle ja kestävälle liiketoiminnalle.",
+    "contact": "Ota yhteyttä"
   }
 }

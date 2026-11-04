@@ -27,6 +27,7 @@ type SectionProps = Omit<ComponentPropsWithoutRef<"section">, "title"> &
     description?: ReactNode;
     descriptionTone?: TextProps["tone"];
     descriptionClassName?: string;
+    headerClassName?: string;
     headingClassName?: string;
     contentClassName?: string;
     layout?: "stack" | "split" | "split-equal";
@@ -40,6 +41,7 @@ export function Section({
   description,
   descriptionTone,
   descriptionClassName,
+  headerClassName,
   headingClassName,
   contentClassName,
   layout = "stack",
@@ -73,6 +75,7 @@ export function Section({
             "flex min-w-0 flex-col gap-6 desktop:gap-8",
             layout === "split" && "gap-5 desktop:gap-5",
             layout === "split-equal" && "desktop:gap-6",
+            headerClassName,
           )}
         >
           <div

@@ -302,6 +302,10 @@
     "contact": {
       "title": "Kontakt",
       "description": "Skontaktuj się z HOKAMI CZ w Libercu. Adres, numer telefonu, formularz kontaktowy, regionalne kontakty handlowe i dane firmy do faktury."
+    },
+    "sustainability": {
+      "title": "Zrównoważony rozwój",
+      "description": "Zrównoważona produkcja elektroniki w HOKAMI: efektywność energetyczna, własna fotowoltaika, odpowiedzialne gospodarowanie materiałami i odpadami oraz ciągłe doskonalenie."
     }
   },
   "RequesForQuote": {
@@ -504,5 +508,46 @@
     "register": "Wpis do rejestru",
     "reference": "Sygnatura akt {value}",
     "registration": "Spółka jest wpisana do rejestru handlowego prowadzonego przez Sąd Okręgowy w Ústí nad Labem, sygnatura akt {value}."
+  },
+  "SustainabilityHero": {
+    "eyebrow": "Środowisko",
+    "title": "Zrównoważony rozwój",
+    "description": "W Hokami postrzegamy zrównoważony rozwój jako naturalną część nowoczesnej produkcji elektroniki i długofalowego rozwoju firmy. Odpowiedzialne podejście do środowiska, efektywne wykorzystanie zasobów i ciągłe doskonalenie procesów produkcyjnych są trwale wpisane w naszą codzienną działalność oraz decyzje strategiczne. Naszym celem jest produkcja elektroniki z najwyższą dbałością o jakość, efektywność i minimalizację wpływu na środowisko."
+  },
+  "SustainabilityEnergy": {
+    "eyebrow": "Energia",
+    "title": "Efektywność energetyczna i nowoczesne technologie",
+    "technology": "Stale inwestujemy w nowoczesne technologie produkcyjne, które przyczyniają się do zmniejszenia zużycia energii, optymalizacji procesów produkcyjnych i efektywniejszego wykorzystania materiałów. Nasze inwestycje obejmują również regularną modernizację wyposażenia produkcyjnego, stosowanie energooszczędnych urządzeń, inteligentne zarządzanie zużyciem energii oraz szerokie wykorzystanie oświetlenia LED w naszych zakładach.",
+    "photovoltaics": "Znaczną część energii elektrycznej zużywanej przez firmę zapewnia nasza własna elektrownia fotowoltaiczna, która obecnie pokrywa ponad 60 % całkowitego zużycia. Dzięki połączeniu własnej produkcji energii z nowoczesnymi technologiami długofalowo zmniejszamy energochłonność produkcji i wspieramy zrównoważony rozwój firmy."
+  },
+  "SustainabilityProduction": {
+    "eyebrow": "Produkcja",
+    "title": "Odpowiedzialna produkcja",
+    "processes": "Nasze procesy produkcyjne są zaprojektowane tak, aby spełniać najwyższe wymagania dotyczące jakości, bezpieczeństwa i ochrony środowiska. Kładziemy nacisk na efektywne wykorzystanie materiałów, minimalizację strat produkcyjnych i odpowiedzialne gospodarowanie powstającymi odpadami.",
+    "materials": "Stosowanie bezołowiowych procesów produkcyjnych, przestrzeganie wymagań europejskich dyrektyw RoHS i REACH oraz bezpieczne postępowanie z substancjami chemicznymi zgodnie z obowiązującymi przepisami to dla nas standard. Wszystkie odpady są starannie segregowane i przekazywane uprawnionym partnerom do recyklingu lub unieszkodliwiania w sposób bezpieczny dla środowiska."
+  },
+  "SustainabilityResponsibility": {
+    "eyebrow": "Nasze podejście",
+    "title": "Odpowiedzialność w całej firmie",
+    "cards": {
+      "supplyChain": {
+        "title": "Odpowiedzialny łańcuch dostaw",
+        "description": "Zrównoważony rozwój nie kończy się wewnątrz zakładu produkcyjnego. Współpracujemy ze sprawdzonymi dostawcami, którzy podzielają nasze wymagania dotyczące jakości, przejrzystości i odpowiedzialnego prowadzenia działalności. Planując produkcję i logistykę, dążymy do efektywnego wykorzystania zdolności przewozowych, optymalizacji łańcucha dostaw i ograniczania zbędnych operacji transportowych."
+      },
+      "people": {
+        "title": "Ludzie i kultura firmy",
+        "description": "Kluczową częścią naszego podejścia są pracownicy. Wspieramy środowisko, w którym odpowiedzialne zachowanie jest naturalną częścią codziennej pracy. Regularnie szkolimy pracowników w zakresie bezpieczeństwa pracy, ochrony środowiska oraz właściwego postępowania z materiałami i odpadami. Wspieramy również ich inicjatywy służące doskonaleniu procesów produkcyjnych, zwiększaniu efektywności i ograniczaniu wpływu na środowisko."
+      },
+      "improvement": {
+        "title": "Ciągłe doskonalenie",
+        "description": "Postrzegamy zrównoważony rozwój jako proces długofalowy, a nie jednorazowy projekt. Dlatego na bieżąco oceniamy nasze procesy produkcyjne, inwestujemy w innowacje i szukamy nowych możliwości zmniejszania energochłonności, efektywniejszego wykorzystania zasobów i dalszego rozwoju odpowiedzialnej produkcji."
+      }
+    }
+  },
+  "SustainabilityContact": {
+    "eyebrow": "Kontakt",
+    "title": "Szukasz partnera do produkcji elektroniki?",
+    "description": "Naszym celem jest bycie niezawodnym partnerem dla klientów z całego świata, a jednocześnie firmą, która przyczynia się do odpowiedzialnego rozwoju przemysłu elektronicznego. Wierzymy, że wysoka jakość produkcji, innowacje technologiczne i odpowiedzialne podejście do środowiska stanowią podstawę długofalowego, zrównoważonego prowadzenia działalności.",
+    "contact": "Skontaktuj się"
   }
 }
