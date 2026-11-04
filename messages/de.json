@@ -9,12 +9,12 @@
     "request": "Fertigung anfragen",
     "requestShort": "Anfragen",
     "items": {
-      "industries": "Branchen",
-      "capabilities": "Kapazitäten",
-      "process": "Prozess",
-      "quality": "Qualität",
-      "about": "Über uns",
-      "careers": "Karriere"
+      "about": "Unternehmen",
+      "services": "Leistungen",
+      "careers": "Karriere",
+      "sustainability": "Nachhaltigkeit",
+      "contact": "Kontakt",
+      "quality": "Qualität"
     }
   },
   "Hero": {

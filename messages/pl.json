@@ -9,12 +9,12 @@
     "request": "Zapytaj o produkcję",
     "requestShort": "Zapytaj",
     "items": {
-      "industries": "Branże",
-      "capabilities": "Możliwości",
-      "process": "Proces",
-      "quality": "Jakość",
-      "about": "O nas",
-      "careers": "Kariera"
+      "about": "Firma",
+      "services": "Usługi",
+      "careers": "Kariera",
+      "sustainability": "Zrównoważony rozwój",
+      "contact": "Kontakt",
+      "quality": "Jakość"
     }
   },
   "Hero": {

@@ -2,12 +2,11 @@ import type { Locale } from "next-intl";
 import type { SiteLocation } from "@/hooks/use-site-location";
 
 export const headerNavigation = [
-  { key: "industries", href: "/#industries" },
-  { key: "capabilities", href: "/#capabilities" },
-  { key: "process", href: "/#process" },
-  { key: "quality", href: "/quality" },
   { key: "about", href: "/about" },
-  { key: "careers", href: "/careers" },
+  { key: "services", href: "/services" },
+  { key: "careers", href: "/career" },
+  { key: "sustainability", href: "/sustainability" },
+  { key: "contact", href: "/contact" },
 ] as const;
 
 // Matches Tailwind's default xl breakpoint used by the header components.

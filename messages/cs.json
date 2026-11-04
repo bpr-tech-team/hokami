@@ -9,12 +9,12 @@
     "request": "Poptat výrobu",
     "requestShort": "Poptat",
     "items": {
-      "industries": "Obory",
-      "capabilities": "Kapacity",
-      "process": "Proces",
-      "quality": "Kvalita",
-      "about": "O nás",
-      "careers": "Kariéra"
+      "about": "Společnost",
+      "services": "Služby",
+      "careers": "Kariéra",
+      "sustainability": "Udržitelnost",
+      "contact": "Kontakt",
+      "quality": "Kvalita"
     }
   },
   "Hero": {

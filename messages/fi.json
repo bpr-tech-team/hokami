@@ -9,12 +9,12 @@
     "request": "Pyydä tuotantotarjous",
     "requestShort": "Pyydä tarjous",
     "items": {
-      "industries": "Toimialat",
-      "capabilities": "Tuotantokapasiteetti",
-      "process": "Prosessi",
-      "quality": "Laatu",
-      "about": "Tietoa meistä",
-      "careers": "Ura"
+      "about": "Yritys",
+      "services": "Palvelut",
+      "careers": "Ura",
+      "sustainability": "Vastuullisuus",
+      "contact": "Yhteystiedot",
+      "quality": "Laatu"
     }
   },
   "Hero": {

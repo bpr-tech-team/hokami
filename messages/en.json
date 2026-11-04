@@ -9,12 +9,12 @@
     "request": "Request production",
     "requestShort": "Enquire",
     "items": {
-      "industries": "Industries",
-      "capabilities": "Capabilities",
-      "process": "Process",
-      "quality": "Quality",
-      "about": "About us",
-      "careers": "Careers"
+      "about": "Company",
+      "services": "Services",
+      "careers": "Careers",
+      "sustainability": "Sustainability",
+      "contact": "Contact",
+      "quality": "Quality"
     }
   },
   "Hero": {

@@ -55,10 +55,11 @@ belong in `src/i18n/languages.ts`, and shared URL state in
 
 ## Navigation
 
-Header navigation uses homepage anchors `industries`, `capabilities`, `process`,
-and the enquiry target `reques-for-quote`. Add these IDs when implementing those sections.
-Quality, about, and careers have separate localized routes `/quality`, `/about`,
-and `/careers`. Use `ButtonLink` for navigation CTAs; it shares the existing
+Desktop and mobile menus share the ordered links Company (`/about`), Services
+(`/services`), Careers (`/career`), Sustainability (`/sustainability`), and Contact
+(`/contact`). The four routes after Company are reserved for future pages.
+The enquiry CTA links to the homepage anchor `reques-for-quote`.
+Use `ButtonLink` for navigation CTAs; it shares the existing
 Button styling and decoration while preserving native link semantics.
 The header has no bottom border or divider; keep the bar 72 px high on desktop
 and 64 px high in the compact layout.

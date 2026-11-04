@@ -28,7 +28,11 @@ export function HeaderRequestLink({
         locale,
         location.pathname,
       )}
-      className={cn(compact && "px-6 max-[23rem]:px-3", className)}
+      className={cn(
+        compact &&
+          "min-w-0 shrink px-6 text-center whitespace-normal max-[23rem]:px-3",
+        className,
+      )}
     />
   );
 }
