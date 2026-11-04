@@ -72,6 +72,21 @@
       "eyTop100": "Award logos: EY Technologický podnikatel roku, winner in 2006 and 2007, and the gold “100” emblem with Per aspera ad astra."
     }
   },
+  "AboutPress": {
+    "eyebrow": "Media",
+    "title": "In the press",
+    "opensInNewTab": "Opens in a new tab",
+    "publishers": {
+      "denik": "Read article in Deník",
+      "hn": "Read article in HN",
+      "echo24": "Read article on Echo24"
+    },
+    "articles": {
+      "denikBestCompany": "Wanting to work there isn’t enough… You have to earn your place at the best company!",
+      "hnSpace": "Circuit boards from Liberec are heading into space. They are also in satellites and a Mars rover",
+      "echoCompany2016": "Electronics manufacturer Hokami CZ named Company of the Year 2016"
+    }
+  },
   "AboutDocuments": {
     "eyebrow": "Documents",
     "title": "Certificates and grants",

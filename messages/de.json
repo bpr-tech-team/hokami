@@ -72,6 +72,21 @@
       "eyTop100": "Logos der Auszeichnung EY Technologický podnikatel roku, Sieger 2006 und 2007, und das goldene „100“-Emblem mit Per aspera ad astra."
     }
   },
+  "AboutPress": {
+    "eyebrow": "Medien",
+    "title": "Presseberichte über uns",
+    "opensInNewTab": "Öffnet sich in einem neuen Tab",
+    "publishers": {
+      "denik": "Artikel im Deník lesen",
+      "hn": "Artikel in HN lesen",
+      "echo24": "Artikel auf Echo24 lesen"
+    },
+    "articles": {
+      "denikBestCompany": "Der Wunsch allein reicht nicht… Einen Arbeitsplatz beim besten Unternehmen muss man sich verdienen!",
+      "hnSpace": "Leiterplatten aus Liberec fliegen ins All. Sie stecken auch in Satelliten und einem Marsrover",
+      "echoCompany2016": "Elektronikhersteller Hokami CZ ist Unternehmen des Jahres 2016"
+    }
+  },
   "AboutDocuments": {
     "eyebrow": "Dokumente",
     "title": "Zertifikate und Förderungen",

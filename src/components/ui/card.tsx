@@ -10,6 +10,7 @@ const cardVariants = cva(
   {
     variants: {
       variant: {
+        press: "gap-0 border border-border-subtle",
         default:
           "gap-(--card-spacing) py-(--card-spacing) text-sm ring-1 ring-foreground/10 [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0",
         feature: cn(

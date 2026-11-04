@@ -5,6 +5,7 @@ import { AboutContact } from "@/components/sections/about/contact/about-contact"
 import { AboutDocuments } from "@/components/sections/about/documents/about-documents";
 import { AboutHero } from "@/components/sections/about/hero/about-hero";
 import { AboutHistory } from "@/components/sections/about/history/about-history";
+import { AboutPress } from "@/components/sections/about/press/about-press";
 import { getPageMetadata } from "@/lib/seo";
 
 export function generateMetadata() {
@@ -18,6 +19,7 @@ export default function AboutPage() {
       <AboutCampus />
       <AboutHistory />
       <AboutAwards />
+      <AboutPress />
       <AboutDocuments />
       <AboutContact />
     </PageMain>

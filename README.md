@@ -91,7 +91,7 @@ two places. Reuse the existing components when adding sections:
   client wrapper pauses motion outside the viewport, in hidden tabs, and under
   reduced motion; without browser support it keeps a static background.
 - `components/sections/about/awards/`: static, server-rendered awards between
-  history and documents in all five locales. Two original diplomas sit above
+  history and press in all five locales. Two original diplomas sit above
   two logo groups in a two-column desktop grid; below `desktop` they stack in
   reading order. Local JPEG and SVG sources preserve their proportions and
   have translated alternative text. Intrinsic dimensions reserve image space;
@@ -108,12 +108,26 @@ two places. Reuse the existing components when adding sections:
   and email links use local Figma icons. The contact CTA and About hero CTA link
   to the homepage enquiry form in the current locale.
 - `components/sections/about/documents/`: server-rendered certificates and grants
-  between awards and contact in all five locales. The two lists stack below
+  between press and contact in all five locales. The two lists stack below
   `desktop`; above it, both groups stretch to the taller list and distribute their
   rows evenly without a fixed height. Document names wrap without truncation. Each native link downloads
   one of nine unchanged source PDFs from `public/documents/about/`, with translated
   labels and an accessible download announcement. Local Figma SVGs provide the
   default and hover states; downloads and keyboard navigation work without JavaScript.
+- `components/sections/about/press/`: server-rendered media articles between
+  awards and documents in all five locales. The grid shows every article in one,
+  two or three columns at the existing mobile, tablet and desktop breakpoints.
+  From tablet upward, article links align along the bottom of each row; mobile
+  cards keep their natural content height.
+  Each whole card is one native external link, with a visible keyboard focus and
+  a translated new-tab announcement. Headlines and link labels are translated;
+  publisher names and original local Figma logos stay unchanged. Logo slots
+  reserve their height and load lazily, without recompressing the small PNGs.
+  Add entries to `pressArticles` in `data.ts` and add the same article ID under
+  `AboutPress.articles` in each locale's messages. Array order is display order;
+  new publishers also need an entry in `pressPublishers`, a local logo and a
+  translated link label under `AboutPress.publishers`. Articles from the same
+  publisher reuse its logo. An empty article list hides the section.
 - `components/sections/about/history/`: localized company history with 16
   server-rendered milestones. Cards alternate at the `desktop` breakpoint and
   form one column below it. CSS contacts and leaders follow each card; one

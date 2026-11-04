@@ -72,6 +72,21 @@
       "eyTop100": "Logotypy nagrody EY Technologický podnikatel roku, zwycięzca w latach 2006 i 2007, oraz złoty znak „100” z napisem Per aspera ad astra."
     }
   },
+  "AboutPress": {
+    "eyebrow": "Media",
+    "title": "Napisali o nas",
+    "opensInNewTab": "Otwiera się w nowej karcie",
+    "publishers": {
+      "denik": "Przeczytaj artykuł w Deníku",
+      "hn": "Przeczytaj artykuł w HN",
+      "echo24": "Przeczytaj artykuł w Echo24"
+    },
+    "articles": {
+      "denikBestCompany": "Same chęci nie wystarczą… Na pracę w najlepszej firmie trzeba zasłużyć!",
+      "hnSpace": "Płytki drukowane z Liberca trafiają także w kosmos. Są w satelitach i łaziku na Marsie",
+      "echoCompany2016": "Producent elektroniki Hokami CZ Firmą Roku 2016"
+    }
+  },
   "AboutDocuments": {
     "eyebrow": "Dokumenty",
     "title": "Certyfikaty i dotacje",

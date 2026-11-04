@@ -72,6 +72,21 @@
       "eyTop100": "Palkintologot: EY Technologický podnikatel roku, voittaja vuosina 2006 ja 2007, sekä kultainen 100-tunnus tekstillä Per aspera ad astra."
     }
   },
+  "AboutPress": {
+    "eyebrow": "Media",
+    "title": "Meistä mediassa",
+    "opensInNewTab": "Avautuu uuteen välilehteen",
+    "publishers": {
+      "denik": "Lue artikkeli Deníkissä",
+      "hn": "Lue artikkeli HN:ssä",
+      "echo24": "Lue artikkeli Echo24:ssä"
+    },
+    "articles": {
+      "denikBestCompany": "Pelkkä halu ei riitä… Paikka parhaassa yrityksessä on ansaittava!",
+      "hnSpace": "Liberecin piirilevyt päätyvät avaruuteen. Niitä on myös satelliiteissa ja Mars-mönkijässä",
+      "echoCompany2016": "Elektroniikkavalmistaja Hokami CZ on Vuoden yritys 2016"
+    }
+  },
   "AboutDocuments": {
     "eyebrow": "Asiakirjat",
     "title": "Sertifikaatit ja avustukset",

@@ -72,6 +72,21 @@
       "eyTop100": "Loga ocenění EY Technologický podnikatel roku, vítěz 2006 a 2007, a zlatý znak „100“ s nápisem Per aspera ad astra."
     }
   },
+  "AboutPress": {
+    "eyebrow": "Média",
+    "title": "Napsali o nás",
+    "opensInNewTab": "Otevře se v nové kartě",
+    "publishers": {
+      "denik": "Číst článek v Deníku",
+      "hn": "Číst článek v HN",
+      "echo24": "Číst článek na Echo24"
+    },
+    "articles": {
+      "denikBestCompany": "Nestačí jen chtít… Pracovat v nejlepší firmě si musíte zasloužit!",
+      "hnSpace": "Plošné spoje z Liberce míří i do vesmíru. Jsou i v satelitech a vozítku na Marsu",
+      "echoCompany2016": "Firmou roku 2016 je výrobce elektroniky Hokami CZ"
+    }
+  },
   "AboutDocuments": {
     "eyebrow": "Dokumenty",
     "title": "Certifikáty a granty",
