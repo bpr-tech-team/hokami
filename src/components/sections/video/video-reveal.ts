@@ -8,6 +8,28 @@ type RevealDimensions = {
   compact: boolean;
 };
 
+export type VideoRevealMeasurement = RevealDimensions & {
+  reducedMotion: boolean;
+};
+
+export function hasVideoRevealLayoutChanged(
+  previous: VideoRevealMeasurement | undefined,
+  next: VideoRevealMeasurement,
+) {
+  // The svh-sized stage stays fixed when mobile browser toolbars move. A change
+  // to innerHeight alone must not collapse the slot or rebuild its animations.
+  return (
+    !previous ||
+    previous.top !== next.top ||
+    previous.width !== next.width ||
+    previous.height !== next.height ||
+    previous.viewportWidth !== next.viewportWidth ||
+    previous.bottomGap !== next.bottomGap ||
+    previous.compact !== next.compact ||
+    previous.reducedMotion !== next.reducedMotion
+  );
+}
+
 export function getVideoRevealGeometry({
   top,
   width,

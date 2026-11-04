@@ -1,7 +1,12 @@
 "use client";
 
 import { useLayoutEffect, useRef, type RefObject } from "react";
-import { getVideoRevealGeometry, getVideoRevealPosition } from "./video-reveal";
+import {
+  getVideoRevealGeometry,
+  getVideoRevealPosition,
+  hasVideoRevealLayoutChanged,
+  type VideoRevealMeasurement,
+} from "./video-reveal";
 
 const duration = 1000;
 const easing = "cubic-bezier(0.4, 0, 0.2, 1)";
@@ -53,6 +58,7 @@ export function useVideoReveal(
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const compact = window.matchMedia("(max-width: 47.499rem)");
     let geometry: ReturnType<typeof getVideoRevealGeometry> | undefined;
+    let measurement: VideoRevealMeasurement | undefined;
     let animations: Animation[] = [];
     let request = 0;
     let anchorRequest = 0;
@@ -115,14 +121,29 @@ export function useVideoReveal(
     };
     const measure = () => {
       if (disposed) return;
-      holdAnchoring();
-      reset();
       // This stage has final artwork dimensions even while its layout slot is
       // zero-height. Measuring it cannot create a height/progress feedback loop.
       const bounds = stage.getBoundingClientRect();
       const gap = parseFloat(
         getComputedStyle(root).getPropertyValue("--video-gap"),
       );
+      const nextMeasurement = {
+        top: bounds.top + window.scrollY,
+        width: bounds.width,
+        height: bounds.height,
+        viewportHeight: innerHeight,
+        viewportWidth: innerWidth,
+        bottomGap: gap,
+        compact: compact.matches,
+        reducedMotion: reducedMotion.matches,
+      };
+      if (!hasVideoRevealLayoutChanged(measurement, nextMeasurement)) {
+        schedule();
+        return;
+      }
+      holdAnchoring();
+      reset();
+      measurement = nextMeasurement;
       root.dataset.ready = "true";
       if (
         !enabled ||
@@ -141,15 +162,7 @@ export function useVideoReveal(
         restoreAnchoring();
         return;
       }
-      geometry = getVideoRevealGeometry({
-        top: bounds.top + window.scrollY,
-        width: bounds.width,
-        height: bounds.height,
-        viewportHeight: innerHeight,
-        viewportWidth: innerWidth,
-        bottomGap: gap,
-        compact: compact.matches,
-      });
+      geometry = getVideoRevealGeometry(nextMeasurement);
       media.style.height = `${bounds.width * (9 / 16)}px`;
       const animate = (element: HTMLElement, keyframes: Keyframe[]) => {
         const animation = element.animate(keyframes, {

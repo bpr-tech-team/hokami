@@ -1,4 +1,5 @@
 import { PageMain } from "@/components/layout/page-main";
+import { AboutAwards } from "@/components/sections/about/awards/about-awards";
 import { AboutCampus } from "@/components/sections/about/campus/about-campus";
 import { AboutContact } from "@/components/sections/about/contact/about-contact";
 import { AboutDocuments } from "@/components/sections/about/documents/about-documents";
@@ -16,6 +17,7 @@ export default function AboutPage() {
       <AboutHero />
       <AboutCampus />
       <AboutHistory />
+      <AboutAwards />
       <AboutDocuments />
       <AboutContact />
     </PageMain>

@@ -38,7 +38,7 @@ export function ProcessScrollRing({
       data-static={steps.length === 1 ? "true" : undefined}
       style={processScrollLayoutStyle}
       className={cn(
-        "hokami-process-scroll relative h-[calc(var(--process-scene-height)+var(--process-distance,0px)+var(--process-controls-space))] w-full [--process-bottom:max(var(--process-gap),env(safe-area-inset-bottom))] [--process-controls-space:64px] [--process-gap:clamp(8px,2dvh,16px)] [--process-scene-height:calc(100dvh-var(--process-top)-var(--process-bottom))] [--process-top:calc(var(--site-sticky-offset)+var(--process-gap))]",
+        "hokami-process-scroll relative h-[calc(var(--process-scene-height)+var(--process-distance,0px)+var(--process-controls-space))] w-full [--process-bottom:max(var(--process-gap),env(safe-area-inset-bottom))] [--process-controls-space:64px] [--process-gap:clamp(8px,2svh,16px)] [--process-scene-height:calc(100svh-var(--process-top)-var(--process-bottom))] [--process-top:calc(var(--site-sticky-offset)+var(--process-gap))]",
         steps.length === 1 && "[--process-controls-space:0px]",
       )}
     >

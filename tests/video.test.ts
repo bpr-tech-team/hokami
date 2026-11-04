@@ -12,6 +12,7 @@ import pl from "../messages/pl.json";
 import {
   getVideoRevealGeometry,
   getVideoRevealPosition,
+  hasVideoRevealLayoutChanged,
 } from "../src/components/sections/video/video-reveal";
 
 const desktop = {
@@ -23,6 +24,45 @@ const desktop = {
   bottomGap: 40,
   compact: false,
 };
+
+test("moving mobile browser toolbars does not rebuild an unchanged video stage", () => {
+  const initial = {
+    top: 553,
+    width: 350,
+    height: 760,
+    viewportHeight: 844,
+    viewportWidth: 390,
+    bottomGap: 20,
+    compact: true,
+    reducedMotion: false,
+  };
+  assert.equal(hasVideoRevealLayoutChanged(undefined, initial), true);
+  for (const viewportHeight of [800, 844, 900, 928, 844]) {
+    assert.equal(
+      hasVideoRevealLayoutChanged(initial, { ...initial, viewportHeight }),
+      false,
+    );
+  }
+});
+
+test("video layout still refreshes for real resizing, content and motion changes", () => {
+  const initial = { ...desktop, reducedMotion: false };
+  for (const change of [
+    { width: 1280 },
+    { height: 688, viewportHeight: 800 },
+    { viewportWidth: 1360 },
+    { width: 824, height: 306, viewportWidth: 844, viewportHeight: 390 },
+    { top: 900 },
+    { bottomGap: 20 },
+    { compact: true },
+    { reducedMotion: true },
+  ]) {
+    assert.equal(
+      hasVideoRevealLayoutChanged(initial, { ...initial, ...change }),
+      true,
+    );
+  }
+});
 
 test("desktop preview starts 40 px above the viewport bottom without changing the hero", () => {
   const geometry = getVideoRevealGeometry(desktop);

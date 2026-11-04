@@ -62,6 +62,16 @@
       "czechLeader": "Das Unternehmen erhält die Auszeichnung „Tschechischer Marktführer“"
     }
   },
+  "AboutAwards": {
+    "eyebrow": "Auszeichnungen",
+    "title": "Auszeichnungen",
+    "images": {
+      "exportersPotential": "Urkunde für HOKAMI CZ: Cena za největší potenciál 2022, Ocenění českých exportérů.",
+      "czechLeader": "Urkunde für HOKAMI CZ: Český lídr 2022, erster Platz in Liberecký kraj.",
+      "leaderCompany": "Logos der Auszeichnungen Český lídr 2018 für Liberecký kraj und Vodafone Company of the Year 2016.",
+      "eyTop100": "Logos der Auszeichnung EY Technologický podnikatel roku, Sieger 2006 und 2007, und das goldene „100“-Emblem mit Per aspera ad astra."
+    }
+  },
   "AboutDocuments": {
     "eyebrow": "Dokumente",
     "title": "Zertifikate und Förderungen",

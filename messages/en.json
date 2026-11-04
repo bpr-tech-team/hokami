@@ -62,6 +62,16 @@
       "czechLeader": "The company receives the Czech Leader award"
     }
   },
+  "AboutAwards": {
+    "eyebrow": "Awards",
+    "title": "Awards",
+    "images": {
+      "exportersPotential": "HOKAMI CZ diploma for Cena za největší potenciál 2022 in Ocenění českých exportérů.",
+      "czechLeader": "HOKAMI CZ diploma: Český lídr 2022, first place in Liberecký kraj.",
+      "leaderCompany": "Award logos: Český lídr 2018 for Liberecký kraj and Vodafone Company of the Year 2016.",
+      "eyTop100": "Award logos: EY Technologický podnikatel roku, winner in 2006 and 2007, and the gold “100” emblem with Per aspera ad astra."
+    }
+  },
   "AboutDocuments": {
     "eyebrow": "Documents",
     "title": "Certificates and grants",
