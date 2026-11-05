@@ -4,7 +4,7 @@ import type { SiteLocation } from "@/hooks/use-site-location";
 export const headerNavigation = [
   { key: "about", href: "/about" },
   { key: "services", href: "/services" },
-  { key: "careers", href: "/career" },
+  { key: "careers", href: "/jobs" },
   { key: "sustainability", href: "/sustainability" },
   { key: "contact", href: "/contact" },
 ] as const;

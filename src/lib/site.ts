@@ -14,7 +14,7 @@ export const sitePages = {
   smt: { path: "/services/smt", locales: routing.locales },
   sustainability: { path: "/sustainability", locales: routing.locales },
   contact: { path: "/contact", locales: routing.locales },
-  careers: { path: "/careers", locales: routing.locales },
+  careers: { path: "/jobs", locales: routing.locales },
   // Legal articles currently have Czech content in every language section.
   gdpr: { path: "/gdpr", locales: [routing.defaultLocale] },
   whistleblowing: { path: "/whistleblowing", locales: [routing.defaultLocale] },

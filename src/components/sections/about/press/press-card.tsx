@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Heading } from "@/components/typography/heading";
 import { MonoText } from "@/components/typography/mono-text";
 import { Card, CardContent } from "@/components/ui/card";
+import { CardLinkLabel } from "@/components/ui/card-link-label";
 import type { PressPublisher } from "./data";
 
 type PressCardProps = {
@@ -32,9 +33,9 @@ export function PressCard({
       rel="noopener noreferrer"
       aria-labelledby={`${titleId} ${publisherId}`}
       aria-describedby={announcementId}
-      className="group/press block h-full min-w-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
+      className="group/card-link block h-full min-w-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
     >
-      <Card variant="press" className="h-full">
+      <Card variant="outlined" className="h-full">
         <Image
           src={publisher.logo}
           alt=""
@@ -51,21 +52,7 @@ export function PressCard({
           <Heading id={titleId} as="h3" variant="item">
             {title}
           </Heading>
-          <MonoText
-            as="span"
-            className="relative flex min-h-11 max-w-full items-center gap-2 py-3 transition-colors duration-250 group-hover/press:text-text-accent-hover group-focus-visible/press:text-text-accent-hover after:absolute after:bottom-[6.5px] after:left-0 after:h-[1.5px] after:w-[5%] after:bg-current after:transition-[width] after:duration-250 group-hover/press:after:w-full group-focus-visible/press:after:w-full tablet:mt-auto"
-          >
-            <span className="min-w-0">{linkLabel}</span>
-            <Image
-              src="/images/about/press/external-link.svg"
-              alt=""
-              aria-hidden="true"
-              width={16}
-              height={16}
-              unoptimized
-              className="shrink-0"
-            />
-          </MonoText>
+          <CardLinkLabel className="tablet:mt-auto">{linkLabel}</CardLinkLabel>
           <span id={announcementId} className="sr-only">
             {opensInNewTab}
           </span>

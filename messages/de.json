@@ -624,5 +624,44 @@
       "description": "Durch die Kombination moderner SMT-Technologien, präzise gesteuerter Reflow-Lötprozesse, eines erfahrenen Teams und konsequenter Qualitätskontrolle bieten wir unseren Kunden umfassende Lösungen für die Elektronikfertigung mit Schwerpunkt auf höchster Zuverlässigkeit, Flexibilität und langfristiger Qualität der Endprodukte.",
       "action": "Kontakt aufnehmen"
     }
+  },
+  "Jobs": {
+    "hero": {
+      "eyebrow": "Arbeiten bei Hokami",
+      "title": "Karriere",
+      "description": "Bei Hokami erwartet Sie die Sicherheit eines tschechischen Unternehmens mit fast dreißigjähriger Tradition, die Möglichkeit zur beruflichen Weiterentwicklung und die Arbeit mit modernen Technologien. Attraktive Zusatzleistungen, ein freundliches Team und langfristige Perspektiven sind für uns selbstverständlich.",
+      "positions": "Stellen ansehen",
+      "resume": "Lebenslauf senden"
+    },
+    "positions": {
+      "eyebrow": "Werden Sie Teil unseres Teams",
+      "title": "Offene Stellen",
+      "items": {
+        "buyer": {
+          "department": "Kaufmännisches Team",
+          "title": "Einkäufer / Einkäuferin",
+          "description": "Für unser kaufmännisches Team suchen wir einen neuen Kollegen oder eine neue Kollegin im Einkauf. Wenn Sie sich für Handel, Verhandlungen und eine Tätigkeit interessieren, die den Unternehmensalltag maßgeblich mitgestaltet, könnte diese Stelle zu Ihnen passen. Ein sofortiger Einstieg ist möglich, eine Einarbeitung ist selbstverständlich.",
+          "link": "Mehr erfahren: Einkauf"
+        },
+        "testEngineer": {
+          "department": "Technische Abteilung",
+          "title": "Konstruktion elektronischer Prüfgeräte / Entwicklung von Softwareanwendungen",
+          "description": "Für unsere technische Abteilung suchen wir eine geeignete Fachkraft für die Konstruktion elektronischer Prüfgeräte und die Entwicklung von Softwareanwendungen. Ein sofortiger Einstieg ist möglich. Eine Einarbeitung ist selbstverständlich.",
+          "link": "Mehr erfahren: Konstruktion"
+        },
+        "production": {
+          "department": "Produktion",
+          "title": "Mitarbeiter / Mitarbeiterin in der Elektronikfertigung",
+          "description": "Zur Verstärkung unseres Produktionsteams suchen wir einen neuen Mitarbeiter oder eine neue Mitarbeiterin in der Elektronikfertigung.",
+          "link": "Mehr erfahren: Fertigung"
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "Lebenslauf",
+      "title": "Interessieren Sie sich für eine unserer Stellen?",
+      "description": "Senden Sie Ihren Lebenslauf an prace@hokami.cz. Wir freuen uns darauf, Sie persönlich kennenzulernen und Ihnen unsere Arbeitsweise zu zeigen.",
+      "action": "Lebenslauf senden"
+    }
   }
 }

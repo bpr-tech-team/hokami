@@ -84,8 +84,15 @@ two places. Reuse the existing components when adding sections:
   existing shadcn `feature` variant; one, two and three columns follow the shared
   mobile, tablet and desktop breakpoints. Heights grow with translated content.
 - `components/sections/contact-cta/`: shared closing contact section for About,
-  Sustainability and service details. Page wrappers supply translated copy and the action URL;
-  `ContactLinks` supplies the shared company phone and email.
+  Sustainability, Jobs and service details. Page wrappers supply translated copy,
+  the action URL and optional contacts; the default is the company phone and email.
+- `components/sections/jobs/`: careers page at `/[locale]/jobs` in all five locales.
+  `JobsHero` uses the standard hero and animated background; `JobsPositions`
+  composes three `JobCard` links from stable data and translated `Jobs` messages.
+  Card links temporarily lead to the localized homepage until job details exist.
+  `JobsContact` passes only the recruitment email to the shared contact CTA.
+  Navigation and `sitePages.careers` use `/jobs`; old `/career` and `/careers`
+  paths redirect permanently, preserving locale and query parameters.
 - `components/sections/sustainability/`: sustainability page at
   `/[locale]/sustainability` in all five locales. The content-driven hero uses the
   shared animated background and the explicitly different `layout="section"`.
@@ -250,7 +257,11 @@ two places. Reuse the existing components when adding sections:
   the user plays the video. Desktop preview playback pauses outside the viewport,
   in hidden tabs, and while the full player is active. The full source is assigned
   only on click and uses native controls inline. Without JS a direct video link
-  remains available. `home/video/` supplies the homepage media and translations.
+  remains available. `CompanyVideo` supplies the shared company media and translations
+  for Home and Jobs. Both pages render `<CompanyVideo />` with identical media,
+  geometry and motion. The expanded frame has 20 px mobile and 40 px tablet/desktop
+  gutters, without the content container's maximum width. The Jobs hero reserves
+  space for the viewport-based preview so it cannot cover its actions or job cards.
   Optimized media in `public/video/` is derived from `homepage.mp4`: H.264/yuv420p,
   `faststart`, no metadata/data streams; 1080p CRF 25 with 128 kbps AAC, 720p CRF 26
   with 96 kbps AAC, and a silent 12-second 1920×1080 / 25 fps CRF 28 preview starting

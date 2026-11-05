@@ -66,8 +66,9 @@ composition.
 ## Navigation
 
 Desktop and mobile menus share the ordered links Company (`/about`), Services
-(`/services`), Careers (`/career`), Sustainability (`/sustainability`), and Contact
-(`/contact`). Careers and Sustainability are reserved for future pages.
+(`/services`), Careers (`/jobs`), Sustainability (`/sustainability`), and Contact
+(`/contact`). Legacy `/career` and `/careers` URLs permanently redirect to `/jobs`,
+preserving the locale and query string.
 The enquiry CTA links to the contact page anchor `contact-form`; on Contact,
 use a native fragment so the current query string survives navigation.
 Use `ButtonLink` for navigation CTAs; it shares the existing

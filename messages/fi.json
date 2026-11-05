@@ -624,5 +624,44 @@
       "description": "Yhdistämällä nykyaikaiset SMT-teknologiat, tarkasti ohjatun reflow-juottamisen, kokeneen tiimin ja huolellisen laadunvalvonnan tarjoamme asiakkaillemme kattavia elektroniikan valmistusratkaisuja, joissa painottuvat luotettavuus, joustavuus ja lopputuotteiden pitkäaikainen laatu.",
       "action": "Ota yhteyttä"
     }
+  },
+  "Jobs": {
+    "hero": {
+      "eyebrow": "Töissä Hokamilla",
+      "title": "Ura",
+      "description": "Hokamilla saat vakaan työpaikan tšekkiläisessä yrityksessä, jolla on lähes kolmenkymmenen vuoden perinteet, mahdollisuuden ammatilliseen kasvuun ja työtä modernin teknologian parissa. Tarjoamme myös houkuttelevat henkilöstöedut, ystävällisen työyhteisön ja pitkäaikaiset uranäkymät.",
+      "positions": "Katso työpaikat",
+      "resume": "Lähetä ansioluettelo"
+    },
+    "positions": {
+      "eyebrow": "Liity joukkoomme",
+      "title": "Avoimet työpaikat",
+      "items": {
+        "buyer": {
+          "department": "Kaupallinen tiimi",
+          "title": "Ostaja",
+          "description": "Etsimme kaupalliseen tiimiimme uutta kollegaa ostajan tehtävään. Jos sinua kiinnostavat kaupankäynti, neuvottelut ja työ, jolla on todellinen vaikutus yrityksen toimintaan, tämä tehtävä voi sopia sinulle. Voit aloittaa heti, ja perehdytys kuuluu luonnollisesti tehtävään.",
+          "link": "Lue lisää: Ostaja"
+        },
+        "testEngineer": {
+          "department": "Tekninen osasto",
+          "title": "Elektroniikan testilaitteiden suunnittelija / ohjelmistokehittäjä",
+          "description": "Etsimme tekniselle osastollemme sopivaa henkilöä elektroniikan testilaitteiden suunnittelijan ja ohjelmistokehittäjän tehtävään. Voit aloittaa heti. Perehdytys kuuluu luonnollisesti tehtävään.",
+          "link": "Lue lisää: Suunnittelija"
+        },
+        "production": {
+          "department": "Tuotanto",
+          "title": "Elektroniikan tuotantotyöntekijä",
+          "description": "Etsimme tuotantotiimiimme uutta kollegaa elektroniikan tuotantotyöntekijän tehtävään.",
+          "link": "Lue lisää: Tuotantotyöntekijä"
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "Ansioluettelo",
+      "title": "Kiinnostuitko avoimesta työpaikasta?",
+      "description": "Lähetä ansioluettelosi osoitteeseen prace@hokami.cz. Tapaamme sinut mielellämme henkilökohtaisesti ja esittelemme toimintaamme.",
+      "action": "Lähetä ansioluettelo"
+    }
   }
 }

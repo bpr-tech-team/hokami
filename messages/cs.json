@@ -624,5 +624,44 @@
       "description": "Díky kombinaci moderních SMT technologií, přesně řízeného reflow pájení, zkušeného týmu a důsledné kontroly kvality nabízíme zákazníkům komplexní řešení výroby elektroniky s důrazem na maximální spolehlivost, flexibilitu a dlouhodobou kvalitu finálních výrobků.",
       "action": "Kontaktovat"
     }
+  },
+  "Jobs": {
+    "hero": {
+      "eyebrow": "Práce v Hokami",
+      "title": "Kariéra",
+      "description": "V Hokami získáte stabilní zázemí české společnosti s téměř třicetiletou tradicí, možnost profesního růstu a práci s moderními technologiemi. Samozřejmostí jsou atraktivní zaměstnanecké benefity, přátelský kolektiv a dlouhodobá perspektiva.",
+      "positions": "Zobrazit pozice",
+      "resume": "Poslat životopis"
+    },
+    "positions": {
+      "eyebrow": "Přidejte se k nám",
+      "title": "Volné pozice",
+      "items": {
+        "buyer": {
+          "department": "Obchodní tým",
+          "title": "Nákupčí",
+          "description": "Do našeho obchodního týmu hledáme nového kolegu/kolegyni na pozici Nákupčí. Pokud tě láká prostředí obchodu, vyjednávání a práce, která má reálný dopad na fungování firmy, může to být role pro tebe. Nástup možný ihned, zaškolení je samozřejmostí.",
+          "link": "Číst dále: Nákupčí"
+        },
+        "testEngineer": {
+          "department": "Technické oddělení",
+          "title": "Konstruktér testerů elektroniky / vývoj SW aplikací",
+          "description": "Do našeho pracovního týmu hledáme vhodného uchazeče do technického oddělení na pozici Konstruktér testerů elektroniky / vývoj SW aplikací. Nástup možný ihned. Zaškolení je samozřejmostí.",
+          "link": "Číst dále: Konstruktér"
+        },
+        "production": {
+          "department": "Výroba",
+          "title": "Dělník / dělnice v elektronice",
+          "description": "Do našeho pracovního výrobního týmu přijmeme nového kolegu / kolegyni na pozici dělník / dělnice v elektronice.",
+          "link": "Číst dále: Dělník / dělnice"
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "Životopis",
+      "title": "Zaujala vás některá z pozic?",
+      "description": "Pošlete nám svůj životopis na adresu prace@hokami.cz. Rádi vás poznáme osobně a ukážeme vám, jak to u nás funguje.",
+      "action": "Poslat životopis"
+    }
   }
 }

@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
-import { VideoSection } from "@/components/sections/video/video-section";
+import { VideoSection } from "./video-section";
 
-export async function HomeVideo() {
+export async function CompanyVideo() {
   const t = await getTranslations("Video");
 
   return (

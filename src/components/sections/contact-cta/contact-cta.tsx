@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ComponentProps } from "react";
 import { Section } from "@/components/layout/section";
 import { ContactLinks } from "@/components/sections/contact-links/contact-links";
 import { ButtonLink } from "@/components/ui/button/button-link";
@@ -9,6 +10,7 @@ type ContactCtaProps = {
   title: string;
   description: string;
   action: { label: string; href: string };
+  contacts?: ComponentProps<typeof ContactLinks>["contacts"];
 };
 
 export function ContactCta({
@@ -17,6 +19,7 @@ export function ContactCta({
   title,
   description,
   action,
+  contacts,
 }: ContactCtaProps) {
   return (
     <Section
@@ -46,7 +49,7 @@ export function ContactCta({
         >
           {action.label}
         </ButtonLink>
-        <ContactLinks />
+        <ContactLinks contacts={contacts} />
       </div>
     </Section>
   );

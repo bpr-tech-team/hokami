@@ -624,5 +624,44 @@
       "description": "By combining modern SMT technologies, precisely controlled reflow soldering, an experienced team and rigorous quality control, we offer customers comprehensive electronics manufacturing solutions focused on maximum reliability, flexibility and the long-term quality of finished products.",
       "action": "Contact us"
     }
+  },
+  "Jobs": {
+    "hero": {
+      "eyebrow": "Working at Hokami",
+      "title": "Careers",
+      "description": "At Hokami, you will find the stability of a Czech company with almost thirty years of experience, opportunities for professional growth and work with modern technologies. Attractive employee benefits, a friendly team and long-term prospects come as standard.",
+      "positions": "View vacancies",
+      "resume": "Send your CV"
+    },
+    "positions": {
+      "eyebrow": "Join our team",
+      "title": "Current vacancies",
+      "items": {
+        "buyer": {
+          "department": "Commercial team",
+          "title": "Buyer",
+          "description": "We are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.",
+          "link": "Read more: Buyer"
+        },
+        "testEngineer": {
+          "department": "Technical department",
+          "title": "Electronics test equipment designer / software application developer",
+          "description": "We are looking for a suitable candidate to join our technical department as an Electronics Test Equipment Designer / Software Application Developer. An immediate start is possible. Training is provided.",
+          "link": "Read more: Designer"
+        },
+        "production": {
+          "department": "Production",
+          "title": "Electronics production worker",
+          "description": "We are looking for a new colleague to join our production team as an electronics production worker.",
+          "link": "Read more: Production worker"
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "Your CV",
+      "title": "Interested in one of our vacancies?",
+      "description": "Send your CV to prace@hokami.cz. We would be happy to meet you in person and show you how we work.",
+      "action": "Send your CV"
+    }
   }
 }

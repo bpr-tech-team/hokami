@@ -624,5 +624,44 @@
       "description": "Łącząc nowoczesne technologie SMT, precyzyjnie kontrolowane lutowanie rozpływowe, doświadczony zespół i rygorystyczną kontrolę jakości, oferujemy klientom kompleksowe rozwiązania produkcji elektroniki z naciskiem na niezawodność, elastyczność i długotrwałą jakość gotowych produktów.",
       "action": "Skontaktuj się"
     }
+  },
+  "Jobs": {
+    "hero": {
+      "eyebrow": "Praca w Hokami",
+      "title": "Kariera",
+      "description": "W Hokami zyskasz stabilne zatrudnienie w czeskiej firmie z niemal trzydziestoletnią tradycją, możliwość rozwoju zawodowego i pracę z nowoczesnymi technologiami. Oferujemy atrakcyjne benefity pracownicze, przyjazny zespół i długoterminowe perspektywy.",
+      "positions": "Zobacz oferty",
+      "resume": "Wyślij CV"
+    },
+    "positions": {
+      "eyebrow": "Dołącz do nas",
+      "title": "Oferty pracy",
+      "items": {
+        "buyer": {
+          "department": "Zespół handlowy",
+          "title": "Specjalista / specjalistka ds. zakupów",
+          "description": "Do naszego zespołu handlowego szukamy nowej osoby na stanowisko specjalisty lub specjalistki ds. zakupów. Jeśli interesują Cię handel, negocjacje i praca, która ma realny wpływ na funkcjonowanie firmy, ta rola może być dla Ciebie. Możliwość rozpoczęcia pracy od zaraz, zapewniamy wdrożenie.",
+          "link": "Czytaj dalej: Zakupy"
+        },
+        "testEngineer": {
+          "department": "Dział techniczny",
+          "title": "Konstruktor testerów elektroniki / programista aplikacji",
+          "description": "Do naszego działu technicznego szukamy odpowiedniego kandydata na stanowisko konstruktora testerów elektroniki / programisty aplikacji. Możliwość rozpoczęcia pracy od zaraz. Zapewniamy wdrożenie.",
+          "link": "Czytaj dalej: Konstruktor"
+        },
+        "production": {
+          "department": "Produkcja",
+          "title": "Pracownik / pracownica produkcji elektroniki",
+          "description": "Do naszego zespołu produkcyjnego przyjmiemy nowego kolegę lub koleżankę na stanowisko pracownika lub pracownicy produkcji elektroniki.",
+          "link": "Czytaj dalej: Produkcja"
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "CV",
+      "title": "Zainteresowała Cię jedna z ofert?",
+      "description": "Wyślij nam swoje CV na adres prace@hokami.cz. Chętnie poznamy Cię osobiście i pokażemy, jak u nas wygląda praca.",
+      "action": "Wyślij CV"
+    }
   }
 }
