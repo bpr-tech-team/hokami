@@ -19,7 +19,7 @@
   },
   "Hero": {
     "eyebrow": "Produkcja elektroniki na zamówienie od 1997 roku",
-    "title": "Elektronika, która działa.",
+    "title": "Elektronika, która <accent>nie zawodzi.</accent>",
     "description": "Najwyższej jakości produkcja elektroniki od projektowania po gotowy produkt. Nasze rozwiązania technologiczne znajdują zastosowanie w szerokim zakresie aplikacji w przemyśle kolejowym, ochronie zdrowia, automatyce przemysłowej i energetyce.",
     "contact": "Skontaktuj się z nami",
     "production": "Nasza produkcja"
@@ -390,7 +390,7 @@
   },
   "ServicesHero": {
     "eyebrow": "Usługi",
-    "title": "Kompleksowe usługi EMS dla Twoich projektów",
+    "title": "Kompleksowe usługi EMS",
     "description": "Zapewniamy kompleksowe rozwiązania EMS dla klientów z wielu sektorów przemysłu.",
     "contact": "Skontaktuj się z nami"
   },

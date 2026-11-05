@@ -19,7 +19,7 @@
   },
   "Hero": {
     "eyebrow": "Custom electronics manufacturing since 1997",
-    "title": "Electronics that work.",
+    "title": "Electronics that <accent>never fail.</accent>",
     "description": "Advanced electronics manufacturing, from development to the finished product. Our technological solutions serve a wide range of applications in the railway industry, healthcare, industrial automation and energy.",
     "contact": "Contact us",
     "production": "Our production"
@@ -390,7 +390,7 @@
   },
   "ServicesHero": {
     "eyebrow": "Services",
-    "title": "Comprehensive EMS services for your projects",
+    "title": "Comprehensive EMS services",
     "description": "We provide comprehensive EMS solutions for customers across a wide range of industries.",
     "contact": "Contact us"
   },

@@ -19,7 +19,7 @@
   },
   "Hero": {
     "eyebrow": "Elektronikfertigung nach Maß seit 1997",
-    "title": "Elektronik, die funktioniert.",
+    "title": "Elektronik, die <accent>nicht versagt.</accent>",
     "description": "Erstklassige Elektronikfertigung von der Entwicklung bis zum fertigen Produkt. Unsere technologischen Lösungen kommen in vielfältigen Anwendungen in der Bahnindustrie, Medizintechnik, Industrieautomation und Energietechnik zum Einsatz.",
     "contact": "Kontaktieren Sie uns",
     "production": "Unsere Fertigung"
@@ -390,7 +390,7 @@
   },
   "ServicesHero": {
     "eyebrow": "Leistungen",
-    "title": "Umfassende EMS-Leistungen für Ihre Projekte",
+    "title": "Umfassende EMS-Leistungen",
     "description": "Wir bieten umfassende EMS-Lösungen für Kunden aus einem breiten Spektrum von Industriezweigen.",
     "contact": "Kontaktieren Sie uns"
   },

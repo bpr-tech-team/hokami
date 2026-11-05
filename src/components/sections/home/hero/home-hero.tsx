@@ -8,9 +8,12 @@ export async function HomeHero() {
     <HeroSection
       id="hero"
       eyebrow={t("eyebrow")}
-      title={t("title")}
+      title={t.rich("title", {
+        accent: (chunks) => (
+          <span className="text-brand-identity">{chunks}</span>
+        ),
+      })}
       description={t("description")}
-      descriptionVisibility="tablet"
       actions={[
         { label: t("contact"), href: "#reques-for-quote" },
         { label: t("production"), href: "#industries" },

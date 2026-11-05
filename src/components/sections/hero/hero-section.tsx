@@ -98,11 +98,11 @@ export function HeroSection({
         </Heading>
         {description != null && (
           <Text
-            variant="quote"
+            variant="lead"
             tone="black"
             {...descriptionProps}
             className={cn(
-              "max-w-[1000px]",
+              "w-full max-w-[1000px]",
               descriptionVisibility === "tablet" && "hidden tablet:block",
               descriptionProps?.className,
             )}

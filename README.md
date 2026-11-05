@@ -121,6 +121,17 @@ two places. Reuse the existing components when adding sections:
 - `components/sections/hero/`: shared `HeroSection` and independent
   `HeroBackground`. The section accepts translated content, actions, a heading
   element, and an optional background. `home/hero/` supplies homepage content.
+  All hero headings use the shared `Heading` hero variant: Saira SemiBold with
+  size/tracking of 40/−0.44 px on mobile, 56/−0.84 px on tablet,
+  and 104/−1.32 px on desktop, matching Figma's `type/hero/*` modes.
+  A shared unitless line-height of 1.15 keeps diacritics and punctuation clear
+  of adjacent lines when headings wrap at any breakpoint.
+  The homepage title uses `t.rich` and a translated `<accent>` range in the
+  existing `brand-identity` color so each locale controls its emphasis.
+  Hero descriptions default to the shared `Text` lead variant (IBM Plex Sans,
+  18 px with 1.6 line-height); the homepage description is also visible on mobile.
+  Desktop font families are shared across breakpoints, including Services.
+  Descriptions retain their translated content and width constraints.
   The default `size="default"` uses the original responsive minimum heights
   (489 px on mobile and 740 px from `tablet` at 760 px), independent of viewport
   height. The section grows with content when needed.

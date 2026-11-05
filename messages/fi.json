@@ -19,7 +19,7 @@
   },
   "Hero": {
     "eyebrow": "Elektroniikan sopimusvalmistusta vuodesta 1997",
-    "title": "Elektroniikkaa, joka toimii.",
+    "title": "Elektroniikkaa, joka <accent>ei petä.</accent>",
     "description": "Korkealaatuista elektroniikan valmistusta tuotekehityksestä valmiiseen tuotteeseen. Teknologisia ratkaisujamme käytetään monipuolisesti raideliikenteessä, terveydenhuollossa, teollisuusautomaatiossa ja energia-alalla.",
     "contact": "Ota yhteyttä",
     "production": "Tuotantomme"
@@ -390,7 +390,7 @@
   },
   "ServicesHero": {
     "eyebrow": "Palvelut",
-    "title": "Kattavat EMS-palvelut projekteihisi",
+    "title": "Kattavat EMS-palvelut",
     "description": "Tarjoamme kattavia elektroniikan sopimusvalmistuksen ratkaisuja monien eri teollisuudenalojen asiakkaille.",
     "contact": "Ota yhteyttä"
   },

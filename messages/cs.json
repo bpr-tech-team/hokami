@@ -19,7 +19,7 @@
   },
   "Hero": {
     "eyebrow": "Zakázková výroba elektroniky od roku 1997",
-    "title": "Elektronika, která funguje.",
+    "title": "Elektronika, která <accent>neselže.</accent>",
     "description": "Špičková výroba elektroniky od vývoje až po finální produkt. Naše technologická řešení nacházejí uplatnění v širokém spektru aplikací v železničním průmyslu, zdravotnictví, průmyslové automatizaci či energetice.",
     "contact": "Kontaktujte nás",
     "production": "Naše výroba"
@@ -390,7 +390,7 @@
   },
   "ServicesHero": {
     "eyebrow": "Služby",
-    "title": "Komplexní EMS služby pro vaše projekty",
+    "title": "Komplexní EMS služby",
     "description": "Poskytujeme komplexní EMS řešení pro zákazníky z širokého spektra průmyslových odvětví.",
     "contact": "Kontaktujte nás"
   },
