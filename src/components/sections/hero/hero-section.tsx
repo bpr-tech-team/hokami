@@ -28,7 +28,10 @@ const heroSectionVariants = cva(
   },
 );
 
-type HeroAction = Pick<ButtonLinkProps, "href" | "size" | "showIcon"> & {
+type HeroAction = Pick<
+  ButtonLinkProps,
+  "href" | "size" | "showIcon" | "icon" | "className"
+> & {
   label: string;
 };
 
@@ -41,6 +44,8 @@ type HeroSectionProps = Omit<
     eyebrow: ReactNode;
     title: ReactNode;
     headingAs?: "h1" | "h2";
+    headingClassName?: string;
+    backLink?: { label: string; href: string };
     description?: ReactNode;
     descriptionProps?: Omit<TextProps, "children">;
     descriptionVisibility?: "always" | "tablet";
@@ -55,6 +60,8 @@ export function HeroSection({
   eyebrow,
   title,
   headingAs = "h1",
+  headingClassName,
+  backLink,
   description,
   descriptionProps,
   descriptionVisibility = "always",
@@ -85,6 +92,14 @@ export function HeroSection({
           contentClassName,
         )}
       >
+        {backLink && (
+          <a
+            href={backLink.href}
+            className="relative inline-flex min-h-11 max-w-full items-center py-3 text-text-accent after:absolute after:bottom-[6.5px] after:left-0 after:h-[1.5px] after:w-[5%] after:bg-current after:transition-[width] after:duration-250 hover:text-text-accent-hover hover:after:w-full focus-visible:after:w-full"
+          >
+            <MonoText as="span">{backLink.label}</MonoText>
+          </a>
+        )}
         <MonoText variant="eyebrow" className="max-w-[250px] tablet:max-w-none">
           {eyebrow}
         </MonoText>
@@ -92,7 +107,7 @@ export function HeroSection({
           as={headingAs}
           id={headingId}
           variant="hero"
-          className="w-full"
+          className={cn("w-full", headingClassName)}
         >
           {title}
         </Heading>
@@ -124,6 +139,8 @@ export function HeroSection({
                 variant={index === 0 ? "default" : "outline"}
                 size={action.size}
                 showIcon={action.showIcon}
+                icon={action.icon}
+                className={action.className}
               >
                 {action.label}
               </ButtonLink>

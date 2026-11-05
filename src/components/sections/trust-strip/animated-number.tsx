@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import NumberFlow, {
+  NumberFlowGroup,
   continuous,
   useCanAnimate,
   type Format,
@@ -18,6 +19,7 @@ type AnimatedNumberProps = Pick<
   | "formattedValue"
   | "accessibleValue"
   | "supportsAnimation"
+  | "additionalValues"
 > & {
   locale: string;
 };
@@ -37,6 +39,48 @@ function supportsRolling(
   );
 }
 
+type RollingNumberProps = Pick<
+  AnimatedNumberProps,
+  "value" | "locale" | "prefix" | "suffix"
+> & {
+  format?: Format;
+  started: boolean;
+  isolate?: boolean;
+  className?: string;
+};
+
+function RollingNumber({
+  value,
+  locale,
+  prefix,
+  suffix,
+  format,
+  started,
+  isolate,
+  className,
+}: RollingNumberProps) {
+  return (
+    <NumberFlow
+      aria-hidden="true"
+      value={started ? value : 0}
+      locales={locale}
+      format={format}
+      prefix={prefix}
+      suffix={suffix}
+      trend={Math.sign(value) || 1}
+      plugins={plugins}
+      spinTiming={spinTiming}
+      transformTiming={transformTiming}
+      opacityTiming={{ duration: 200, easing: "ease-out" }}
+      isolate={isolate}
+      className={cn(
+        "[--number-flow-mask-height:0px] [--number-flow-mask-width:0px]",
+        className,
+      )}
+    />
+  );
+}
+
 export function AnimatedNumber({
   value,
   format,
@@ -45,12 +89,15 @@ export function AnimatedNumber({
   formattedValue,
   accessibleValue = formattedValue,
   supportsAnimation,
+  additionalValues,
   locale,
 }: AnimatedNumberProps) {
   const rootRef = useRef<HTMLSpanElement>(null);
   const [started, setStarted] = useState(false);
   const motionAllowed = useCanAnimate();
   const canAnimate = motionAllowed && supportsAnimation;
+  const hasNonZeroValue =
+    value !== 0 || Boolean(additionalValues?.some((part) => part.value !== 0));
 
   useEffect(() => {
     const root = rootRef.current;
@@ -58,7 +105,7 @@ export function AnimatedNumber({
       !root ||
       !canAnimate ||
       started ||
-      value === 0 ||
+      !hasNonZeroValue ||
       typeof IntersectionObserver !== "function"
     ) {
       return;
@@ -97,7 +144,7 @@ export function AnimatedNumber({
       observer.disconnect();
       clearTimeout(timer);
     };
-  }, [canAnimate, started, value]);
+  }, [canAnimate, started, hasNonZeroValue]);
 
   return (
     <span
@@ -124,24 +171,52 @@ export function AnimatedNumber({
         {formattedValue}
       </span>
       {supportsAnimation && supportsRolling(format) ? (
-        <NumberFlow
-          aria-hidden="true"
-          value={started ? value : 0}
-          locales={locale}
-          format={format}
-          prefix={prefix}
-          suffix={suffix}
-          trend={Math.sign(value) || 1}
-          plugins={plugins}
-          spinTiming={spinTiming}
-          transformTiming={transformTiming}
-          opacityTiming={{ duration: 200, easing: "ease-out" }}
-          isolate
-          className={cn(
-            "pointer-events-none absolute inset-0 [--number-flow-mask-height:0px] [--number-flow-mask-width:0px]",
-            started && canAnimate ? "visible" : "invisible",
-          )}
-        />
+        additionalValues?.length ? (
+          <span
+            aria-hidden="true"
+            data-slot="animated-number-parts"
+            className={cn(
+              "pointer-events-none absolute inset-0 inline-flex items-start whitespace-pre",
+              started && canAnimate ? "visible" : "invisible",
+            )}
+          >
+            {prefix && <span>{prefix}</span>}
+            <NumberFlowGroup>
+              <RollingNumber
+                value={value}
+                locale={locale}
+                format={format}
+                started={started}
+              />
+              {additionalValues.map((part) => (
+                <Fragment key={part.id}>
+                  <span>{part.prefix}</span>
+                  <RollingNumber
+                    value={part.value}
+                    locale={locale}
+                    format={format}
+                    started={started}
+                  />
+                </Fragment>
+              ))}
+            </NumberFlowGroup>
+            {suffix && <span>{suffix}</span>}
+          </span>
+        ) : (
+          <RollingNumber
+            value={value}
+            locale={locale}
+            format={format}
+            prefix={prefix}
+            suffix={suffix}
+            started={started}
+            isolate
+            className={cn(
+              "pointer-events-none absolute inset-0",
+              started && canAnimate ? "visible" : "invisible",
+            )}
+          />
+        )
       ) : null}
     </span>
   );

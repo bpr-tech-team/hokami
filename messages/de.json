@@ -306,6 +306,10 @@
     "sustainability": {
       "title": "Nachhaltigkeit",
       "description": "Nachhaltige Elektronikfertigung bei HOKAMI: Energieeffizienz, eigene Photovoltaik, verantwortungsvoller Umgang mit Materialien und Abfällen und kontinuierliche Verbesserung."
+    },
+    "smt": {
+      "title": "SMT-Bestückung",
+      "description": "SMT-Bestückung bei HOKAMI: vier automatisierte Linien, über 40 Mio. Bestückungen pro Monat, Leiterplatten bis 810 × 480 mm und Expressstart innerhalb von 24 Stunden."
     }
   },
   "RequesForQuote": {
@@ -549,5 +553,76 @@
     "title": "Suchen Sie einen Partner für die Elektronikfertigung?",
     "description": "Unser Ziel ist es, ein zuverlässiger Partner für Kunden auf der ganzen Welt zu sein und zugleich zur verantwortungsvollen Entwicklung der Elektronikindustrie beizutragen. Wir sind überzeugt, dass hohe Fertigungsqualität, technologische Innovationen und ein verantwortungsvoller Umgang mit der Umwelt die Grundlage für langfristig nachhaltiges Wirtschaften bilden.",
     "contact": "Kontakt aufnehmen"
+  },
+  "ServiceDetail": {
+    "eyebrow": "Leistungen",
+    "back": "Zurück zu allen Leistungen",
+    "equipment": "Ausstattung ansehen"
+  },
+  "Smt": {
+    "hero": {
+      "title": "SMT",
+      "description": "SMT (Surface Mount Technology) bildet die Grundlage der modernen Elektronikfertigung und gehört zu den Schlüsseltechnologien von Hokami. Dank langjähriger Erfahrung, modernster technischer Ausstattung und konsequent gesteuerter Fertigungsprozesse produzieren wir elektronische Baugruppen vom Prototyp bis zur Großserie. Unser Ziel ist es, unseren Kunden zuverlässige, flexible und hochwertige Fertigungslösungen zu bieten, die den Anforderungen unterschiedlichster Branchen gerecht werden."
+    },
+    "statistics": {
+      "label": "SMT-Fertigungskapazitäten",
+      "lines": {
+        "label": "vollautomatisiert",
+        "suffix": " {count, plural, one {Linie} other {Linien}}"
+      },
+      "placements": {
+        "label": "SMT-Bestückungen pro Monat"
+      },
+      "dimensions": {
+        "label": "max. Leiterplattenformat",
+        "compactLabel": "mm, max. Leiterplattenformat",
+        "accessible": "{width} mal {height} Millimeter"
+      },
+      "express": {
+        "label": "Start der Expressfertigung"
+      }
+    },
+    "production": {
+      "eyebrow": "Fertigung",
+      "title": "Vier automatisierte SMT-Linien",
+      "description": "Die Fertigung erfolgt auf vier vollautomatisierten SMT-Linien mit moderner Bestückungstechnik von Yamaha und Assembleon. Der Fertigungsprozess wird mit besonderem Augenmerk auf höchste Präzision, Wiederholgenauigkeit und die Qualität jeder bestückten Verbindung gesteuert. Wir verarbeiten standardmäßig die vom Kunden bereitgestellten Fertigungsunterlagen und unterstützen bei Bedarf auch technisch bei der Optimierung des Produktdesigns für die Serienfertigung (DFM).",
+      "imageAlt": "Ein Mitarbeiter bedient eine Maschine an einer SMT-Fertigungslinie von HOKAMI."
+    },
+    "reflow": {
+      "eyebrow": "Löten",
+      "title": "Reflow-Löten",
+      "description": "Nach der Bestückung mit SMD-Bauteilen folgt das Reflow-Löten, das hochwertige und dauerhaft zuverlässige Lötverbindungen gewährleistet. Unsere Reflow-Öfen ermöglichen eine präzise Steuerung der Temperaturprofile für bleifreies und bleihaltiges Löten. So erzielen wir auch bei technologisch anspruchsvollen elektronischen Baugruppen eine hohe Fertigungsqualität. Dank moderner Löttechnologien können wir ein breites Produktspektrum verarbeiten: von üblichen Industrieanwendungen bis hin zu Elektronik mit hohen Anforderungen an Qualität und Zuverlässigkeit.",
+      "imageAlt": "Detail einer Leiterplatte und der Bauteilzuführungen in einem Bestückungsautomaten."
+    },
+    "cards": {
+      "dimensions": {
+        "title": "Leiterplattenformat",
+        "description": "Wir verfügen über Technologien zur Bestückung von Leiterplatten mit Abmessungen bis zu 810 × 480 mm. Durch regelmäßige Investitionen in Fertigungstechnologien und Automatisierung können wir flexibel auf individuelle Kundenanforderungen reagieren und technisch anspruchsvolle Projekte umsetzen."
+      },
+      "capacity": {
+        "title": "Fertigungskapazität",
+        "description": "Unsere aktuelle Fertigungskapazität liegt bei über 40 Millionen SMT-Bestückungen pro Monat. Dadurch können wir Prototypen, mittlere Serien und Großaufträge effizient bearbeiten und zugleich hohe Qualität und kurze Lieferzeiten gewährleisten."
+      },
+      "express": {
+        "title": "Expressfertigung",
+        "description": "Für zeitkritische Projekte bieten wir auch eine Expressfertigung an. Die Produktion kann bereits innerhalb von 24 Stunden nach Eingang der vollständigen Fertigungsunterlagen beginnen."
+      }
+    },
+    "equipment": {
+      "eyebrow": "Ausstattung",
+      "title": "Technologische Ausstattung",
+      "placement": "SMT-Bestückungstechnik",
+      "reflow": "Reflow-Löten",
+      "bonding": {
+        "title": "Drahtbonden",
+        "description": "Zu unseren technologischen Möglichkeiten gehören auch das Bonden mit Gold- und Aluminiumdraht sowie die Glob-Top-Technologie. Damit lassen sich spezielle Anwendungen realisieren, die fortschrittliche Verfahren zur Verbindung von Halbleiterbauteilen erfordern."
+      }
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Suchen Sie einen Partner für die Elektronikfertigung?",
+      "description": "Durch die Kombination moderner SMT-Technologien, präzise gesteuerter Reflow-Lötprozesse, eines erfahrenen Teams und konsequenter Qualitätskontrolle bieten wir unseren Kunden umfassende Lösungen für die Elektronikfertigung mit Schwerpunkt auf höchster Zuverlässigkeit, Flexibilität und langfristiger Qualität der Endprodukte.",
+      "action": "Kontakt aufnehmen"
+    }
   }
 }

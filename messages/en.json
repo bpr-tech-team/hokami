@@ -306,6 +306,10 @@
     "sustainability": {
       "title": "Sustainability",
       "description": "Sustainable electronics manufacturing at HOKAMI: energy efficiency, our own solar power, responsible handling of materials and waste, and continuous improvement."
+    },
+    "smt": {
+      "title": "SMT assembly",
+      "description": "HOKAMI SMT assembly: four automated lines, over 40 million placements per month, boards up to 810 × 480 mm and express production starts within 24 hours."
     }
   },
   "RequesForQuote": {
@@ -549,5 +553,76 @@
     "title": "Looking for an electronics manufacturing partner?",
     "description": "Our goal is to be a reliable partner for customers around the world and a company that contributes to the responsible development of the electronics industry. We believe that high manufacturing quality, technological innovation and environmental responsibility form the foundation of a sustainable business over the long term.",
     "contact": "Contact us"
+  },
+  "ServiceDetail": {
+    "eyebrow": "Services",
+    "back": "Back to all services",
+    "equipment": "View equipment"
+  },
+  "Smt": {
+    "hero": {
+      "title": "SMT",
+      "description": "SMT (Surface Mount Technology) forms the foundation of modern electronics manufacturing and is one of Hokami’s key technologies. Drawing on many years of experience, advanced equipment and carefully controlled manufacturing processes, we produce electronic assemblies from prototypes to high-volume production. Our aim is to provide customers with reliable, flexible and high-quality manufacturing solutions that meet the requirements of a wide range of industries."
+    },
+    "statistics": {
+      "label": "SMT manufacturing capabilities",
+      "lines": {
+        "label": "fully automated",
+        "suffix": " {count, plural, one {line} other {lines}}"
+      },
+      "placements": {
+        "label": "SMT placements per month"
+      },
+      "dimensions": {
+        "label": "max. board dimensions",
+        "compactLabel": "mm, max. board dimensions",
+        "accessible": "{width} by {height} millimetres"
+      },
+      "express": {
+        "label": "express production start"
+      }
+    },
+    "production": {
+      "eyebrow": "Manufacturing",
+      "title": "Four automated SMT lines",
+      "description": "Production runs on four fully automated SMT lines using modern Yamaha and Assembleon placement technologies. The manufacturing process is controlled with an emphasis on maximum precision, repeatability and the quality of every assembled joint. We routinely work with manufacturing documentation supplied by the customer and, when needed, provide technical support to optimise product designs for series production (DFM).",
+      "imageAlt": "An operator working at a machine on a HOKAMI SMT production line."
+    },
+    "reflow": {
+      "eyebrow": "Soldering",
+      "title": "Reflow soldering",
+      "description": "After the SMD components have been placed, reflow soldering creates high-quality solder joints with lasting reliability. Our reflow ovens allow precise control of temperature profiles for both lead-free and leaded soldering, ensuring high manufacturing quality even for technologically demanding electronic assemblies. Our modern soldering technologies enable us to process a wide range of products, from standard industrial applications to electronics with stringent quality and reliability requirements.",
+      "imageAlt": "A close-up of a printed circuit board and component feeders in a placement machine."
+    },
+    "cards": {
+      "dimensions": {
+        "title": "Board dimensions",
+        "description": "Our equipment can assemble printed circuit boards measuring up to 810 × 480 mm. Regular investment in manufacturing technology and automation enables us to respond flexibly to individual customer requirements and deliver technically demanding projects."
+      },
+      "capacity": {
+        "title": "Production capacity",
+        "description": "Our current production capacity exceeds 40 million SMT placements per month, allowing us to handle prototypes, medium-sized series and high-volume orders efficiently while maintaining high quality and short lead times."
+      },
+      "express": {
+        "title": "Express production",
+        "description": "For time-critical projects, we also offer an express manufacturing service, with production able to start within 24 hours of receiving the complete manufacturing documentation."
+      }
+    },
+    "equipment": {
+      "eyebrow": "Equipment",
+      "title": "Manufacturing equipment",
+      "placement": "SMT placement technology",
+      "reflow": "Reflow soldering",
+      "bonding": {
+        "title": "Wire bonding",
+        "description": "Our technological capabilities also include gold-wire bonding, aluminium-wire bonding and Glob Top technology, enabling specialised applications that require advanced methods of interconnecting semiconductor components."
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Looking for an electronics manufacturing partner?",
+      "description": "By combining modern SMT technologies, precisely controlled reflow soldering, an experienced team and rigorous quality control, we offer customers comprehensive electronics manufacturing solutions focused on maximum reliability, flexibility and the long-term quality of finished products.",
+      "action": "Contact us"
+    }
   }
 }

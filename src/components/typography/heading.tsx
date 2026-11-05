@@ -9,6 +9,8 @@ const headingVariants = cva("font-display font-semibold", {
       section:
         "text-[32px] leading-[35px] tracking-[-0.01em] text-text-primary uppercase tablet:text-[40px] tablet:leading-[42px] desktop:text-[52px] desktop:leading-[53px]",
       item: "text-base leading-[19px] tracking-[0.06em] uppercase tablet:text-lg tablet:leading-[22px]",
+      subsection:
+        "text-[22px] leading-[25px] tracking-[0.01em] text-text-primary uppercase tablet:text-2xl tablet:leading-[29px] desktop:text-[28px] desktop:leading-[34px]",
       page: "text-4xl uppercase",
       legal: "text-4xl leading-tight wrap-anywhere uppercase tablet:text-5xl",
       article: "text-2xl leading-snug",

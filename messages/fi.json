@@ -306,6 +306,10 @@
     "sustainability": {
       "title": "Vastuullisuus",
       "description": "HOKAMIn vastuullinen elektroniikan valmistus: energiatehokkuus, oma aurinkovoima, materiaalien ja jätteiden vastuullinen käsittely sekä jatkuva parantaminen."
+    },
+    "smt": {
+      "title": "SMT-ladonta",
+      "description": "HOKAMIn SMT-ladonta: neljä automatisoitua linjaa, yli 40 miljoonaa ladontaa kuukaudessa, piirilevyt kokoon 810 × 480 mm ja pikatuotannon aloitus 24 tunnissa."
     }
   },
   "RequesForQuote": {
@@ -549,5 +553,76 @@
     "title": "Etsitkö kumppania elektroniikan valmistukseen?",
     "description": "Tavoitteenamme on olla luotettava kumppani asiakkaille kaikkialla maailmassa ja samalla yritys, joka edistää elektroniikkateollisuuden vastuullista kehitystä. Uskomme, että korkea valmistuksen laatu, teknologiset innovaatiot ja ympäristövastuu muodostavat perustan pitkäjänteiselle ja kestävälle liiketoiminnalle.",
     "contact": "Ota yhteyttä"
+  },
+  "ServiceDetail": {
+    "eyebrow": "Palvelut",
+    "back": "Takaisin kaikkiin palveluihin",
+    "equipment": "Tutustu laitteistoon"
+  },
+  "Smt": {
+    "hero": {
+      "title": "SMT",
+      "description": "SMT (Surface Mount Technology) eli pintaliitostekniikka on nykyaikaisen elektroniikkavalmistuksen perusta ja yksi Hokamin keskeisistä teknologioista. Pitkä kokemuksemme, huipputason laitteistomme ja tarkasti ohjatut valmistusprosessimme mahdollistavat elektroniikkakokoonpanojen valmistuksen prototyypeistä suuriin tuotantosarjoihin. Tavoitteenamme on tarjota asiakkaille luotettavia, joustavia ja laadukkaita valmistusratkaisuja, jotka täyttävät eri teollisuudenalojen vaatimukset."
+    },
+    "statistics": {
+      "label": "SMT-tuotantokapasiteetti",
+      "lines": {
+        "label": "täysin automatisoitua",
+        "suffix": " {count, plural, one {linja} other {linjaa}}"
+      },
+      "placements": {
+        "label": "SMT-ladontaa kuukaudessa"
+      },
+      "dimensions": {
+        "label": "piirilevyn enimmäiskoko",
+        "compactLabel": "mm, piirilevyn enimmäiskoko",
+        "accessible": "{width} kertaa {height} millimetriä"
+      },
+      "express": {
+        "label": "pikatuotannon aloitus"
+      }
+    },
+    "production": {
+      "eyebrow": "Tuotanto",
+      "title": "Neljä automatisoitua SMT-linjaa",
+      "description": "Tuotanto tapahtuu neljällä täysin automatisoidulla SMT-linjalla, joissa käytetään Yamahan ja Assembleonin nykyaikaista ladontatekniikkaa. Valmistusprosessia ohjataan painottaen mahdollisimman suurta tarkkuutta, toistettavuutta ja jokaisen liitoksen laatua. Käsittelemme tavallisesti asiakkaan toimittamat valmistusasiakirjat ja tarjoamme tarvittaessa myös teknistä tukea tuotteiden suunnittelun optimoimiseksi sarjatuotantoa varten (DFM).",
+      "imageAlt": "Työntekijä käyttää konetta HOKAMIn SMT-tuotantolinjalla."
+    },
+    "reflow": {
+      "eyebrow": "Juottaminen",
+      "title": "Reflow-juottaminen",
+      "description": "SMD-komponenttien ladonnan jälkeen reflow-juottaminen varmistaa laadukkaat ja pitkäikäiset juotosliitokset. Reflow-uunimme mahdollistavat lämpötilaprofiilien tarkan ohjauksen sekä lyijyttömässä että lyijyllisessä juottamisessa. Näin saavutamme korkean valmistuslaadun myös teknisesti vaativissa elektroniikkakokoonpanoissa. Nykyaikaisilla juotostekniikoilla voimme valmistaa laajan valikoiman tuotteita tavallisista teollisuussovelluksista elektroniikkaan, jolta edellytetään erityisen korkeaa laatua ja luotettavuutta.",
+      "imageAlt": "Lähikuva piirilevystä ja komponenttisyöttimistä ladontakoneessa."
+    },
+    "cards": {
+      "dimensions": {
+        "title": "Piirilevyjen mitat",
+        "description": "Laitteistomme soveltuu jopa 810 × 480 mm:n kokoisten piirilevyjen ladontaan. Säännölliset investoinnit valmistustekniikkaan ja automaatioon auttavat meitä vastaamaan joustavasti asiakkaiden yksilöllisiin vaatimuksiin ja toteuttamaan teknisesti vaativia hankkeita."
+      },
+      "capacity": {
+        "title": "Tuotantokapasiteetti",
+        "description": "Nykyinen tuotantokapasiteettimme ylittää 40 miljoonaa SMT-ladontaa kuukaudessa. Sen ansiosta pystymme valmistamaan tehokkaasti prototyyppejä, keskisuuria sarjoja ja suuria tilauksia säilyttäen korkean laadun ja lyhyet toimitusajat."
+      },
+      "express": {
+        "title": "Pikatuotanto",
+        "description": "Aikakriittisiin hankkeisiin tarjoamme myös pikatuotantoa. Tuotanto voidaan aloittaa jo 24 tunnin kuluessa täydellisten valmistusasiakirjojen vastaanottamisesta."
+      }
+    },
+    "equipment": {
+      "eyebrow": "Laitteisto",
+      "title": "Tuotantolaitteisto",
+      "placement": "SMT-ladontatekniikka",
+      "reflow": "Reflow-juottaminen",
+      "bonding": {
+        "title": "Lankaliittäminen",
+        "description": "Teknologisiin valmiuksiimme kuuluvat myös kulta- ja alumiinilangalla tehtävä lankaliittäminen sekä Glob Top -tekniikka. Ne mahdollistavat erikoissovellukset, joissa puolijohdekomponenttien yhdistäminen edellyttää edistyneitä menetelmiä."
+      }
+    },
+    "contact": {
+      "eyebrow": "Yhteystiedot",
+      "title": "Etsitkö kumppania elektroniikan valmistukseen?",
+      "description": "Yhdistämällä nykyaikaiset SMT-teknologiat, tarkasti ohjatun reflow-juottamisen, kokeneen tiimin ja huolellisen laadunvalvonnan tarjoamme asiakkaillemme kattavia elektroniikan valmistusratkaisuja, joissa painottuvat luotettavuus, joustavuus ja lopputuotteiden pitkäaikainen laatu.",
+      "action": "Ota yhteyttä"
+    }
   }
 }

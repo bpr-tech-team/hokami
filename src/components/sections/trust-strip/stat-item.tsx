@@ -31,7 +31,7 @@ export function StatItem({ statistic, locale, layouts }: StatItemProps) {
         "[--stat-bottom:var(--stat-bottom-1)] [--stat-right:var(--stat-right-1)] [--stat-span:var(--stat-span-1)]",
         "@min-[320px]/trust-grid:[--stat-bottom:var(--stat-bottom-2)] @min-[320px]/trust-grid:[--stat-right:var(--stat-right-2)] @min-[320px]/trust-grid:[--stat-span:var(--stat-span-2)]",
         "@min-[672px]/trust-grid:[--stat-bottom:var(--stat-bottom-3)] @min-[672px]/trust-grid:[--stat-right:var(--stat-right-3)] @min-[672px]/trust-grid:[--stat-span:var(--stat-span-3)]",
-        "@min-[896px]/trust-grid:items-start @min-[896px]/trust-grid:px-10 @min-[896px]/trust-grid:text-left @min-[896px]/trust-grid:[--stat-bottom:var(--stat-bottom-4)] @min-[896px]/trust-grid:[--stat-right:var(--stat-right-4)] @min-[896px]/trust-grid:[--stat-span:var(--stat-span-4)]",
+        "@min-[896px]/trust-grid:px-10 @min-[896px]/trust-grid:[--stat-bottom:var(--stat-bottom-4)] @min-[896px]/trust-grid:[--stat-right:var(--stat-right-4)] @min-[896px]/trust-grid:[--stat-span:var(--stat-span-4)]",
         "group-data-[columns=1]/stat-grid:[--stat-bottom:var(--stat-bottom-1)] group-data-[columns=1]/stat-grid:[--stat-right:var(--stat-right-1)] group-data-[columns=1]/stat-grid:[--stat-span:var(--stat-span-1)]",
         "group-data-[columns=2]/stat-grid:[--stat-bottom:var(--stat-bottom-2)] group-data-[columns=2]/stat-grid:[--stat-right:var(--stat-right-2)] group-data-[columns=2]/stat-grid:[--stat-span:var(--stat-span-2)]",
         "group-data-[columns=3]/stat-grid:[--stat-bottom:var(--stat-bottom-3)] group-data-[columns=3]/stat-grid:[--stat-right:var(--stat-right-3)] group-data-[columns=3]/stat-grid:[--stat-span:var(--stat-span-3)]",
@@ -39,7 +39,20 @@ export function StatItem({ statistic, locale, layouts }: StatItemProps) {
       )}
     >
       <dt className="order-2 w-full wrap-anywhere">
-        <MonoText tone="tertiary">{statistic.label}</MonoText>
+        <MonoText tone="tertiary">
+          {statistic.compact ? (
+            <>
+              <span className="@min-[672px]/trust-grid:hidden">
+                {statistic.compact.label}
+              </span>
+              <span className="hidden @min-[672px]/trust-grid:inline">
+                {statistic.label}
+              </span>
+            </>
+          ) : (
+            statistic.label
+          )}
+        </MonoText>
       </dt>
       <dd className="max-w-full min-w-0">
         <Text
@@ -47,7 +60,26 @@ export function StatItem({ statistic, locale, layouts }: StatItemProps) {
           variant="stat"
           className="block @min-[672px]/trust-grid:text-[32px] @min-[672px]/trust-grid:leading-[32px]"
         >
-          <AnimatedNumber {...statistic} locale={locale} />
+          {statistic.compact ? (
+            <>
+              <span className="@min-[672px]/trust-grid:hidden">
+                <AnimatedNumber
+                  {...statistic}
+                  suffix={statistic.compact.suffix}
+                  formattedValue={statistic.compact.formattedValue}
+                  accessibleValue={
+                    statistic.accessibleValue ?? statistic.formattedValue
+                  }
+                  locale={locale}
+                />
+              </span>
+              <span className="hidden @min-[672px]/trust-grid:inline">
+                <AnimatedNumber {...statistic} locale={locale} />
+              </span>
+            </>
+          ) : (
+            <AnimatedNumber {...statistic} locale={locale} />
+          )}
         </Text>
       </dd>
     </div>

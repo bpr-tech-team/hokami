@@ -306,6 +306,10 @@
     "sustainability": {
       "title": "Udržitelnost",
       "description": "Udržitelná výroba elektroniky v HOKAMI: energetická efektivita, vlastní fotovoltaika, odpovědné nakládání s materiály a odpady a neustálé zlepšování."
+    },
+    "smt": {
+      "title": "SMT osazování",
+      "description": "SMT osazování HOKAMI: čtyři automatizované linky, více než 40 milionů osazení měsíčně, desky do 810 × 480 mm a expresní zahájení výroby do 24 hodin."
     }
   },
   "RequesForQuote": {
@@ -549,5 +553,76 @@
     "title": "Hledáte partnera pro výrobu elektroniky?",
     "description": "Naším cílem je být spolehlivým partnerem pro zákazníky z celého světa a současně společností, která přispívá k odpovědnému rozvoji elektronického průmyslu. Jsme přesvědčeni, že vysoká kvalita výroby, technologické inovace a odpovědný přístup k životnímu prostředí tvoří základ dlouhodobě udržitelného podnikání.",
     "contact": "Kontaktovat"
+  },
+  "ServiceDetail": {
+    "eyebrow": "Služby",
+    "back": "Zpět na všechny služby",
+    "equipment": "Zobrazit vybavení"
+  },
+  "Smt": {
+    "hero": {
+      "title": "SMT",
+      "description": "SMT (Surface Mount Technology) představuje základ moderní výroby elektroniky a je jednou z klíčových technologií společnosti Hokami. Díky dlouholetým zkušenostem, špičkovému technologickému vybavení a důsledně řízeným výrobním procesům realizujeme výrobu elektronických sestav od prototypů až po velkosériovou produkci. Naším cílem je poskytovat zákazníkům spolehlivá, flexibilní a vysoce kvalitní výrobní řešení splňující požadavky nejrůznějších průmyslových odvětví."
+    },
+    "statistics": {
+      "label": "SMT výrobní kapacity",
+      "lines": {
+        "label": "plně automatizované",
+        "suffix": " {count, plural, one {linka} few {linky} other {linek}}"
+      },
+      "placements": {
+        "label": "SMT osazení měsíčně"
+      },
+      "dimensions": {
+        "label": "max. rozměr desky",
+        "compactLabel": "mm, max. rozměr desky",
+        "accessible": "{width} krát {height} milimetrů"
+      },
+      "express": {
+        "label": "start expresní výroby"
+      }
+    },
+    "production": {
+      "eyebrow": "Výroba",
+      "title": "Čtyři automatizované SMT linky",
+      "description": "Výroba probíhá na čtyřech plně automatizovaných SMT linkách využívajících moderní osazovací technologie Yamaha a Assembleon. Výrobní proces je řízen s důrazem na maximální přesnost, opakovatelnost a kvalitu každého osazeného spoje. Standardně zpracováváme výrobní dokumentaci dodanou zákazníkem a v případě potřeby poskytujeme také technickou podporu při optimalizaci návrhu výrobků z hlediska sériové výroby (DFM).",
+      "imageAlt": "Pracovník obsluhuje výrobní zařízení na SMT lince HOKAMI."
+    },
+    "reflow": {
+      "eyebrow": "Pájení",
+      "title": "Reflow pájení",
+      "description": "Po osazení SMD součástek následuje reflow pájení, které zajišťuje vytvoření kvalitních a dlouhodobě spolehlivých pájených spojů. Naše reflow pece umožňují přesné řízení teplotních profilů pro bezolovnaté i olovnaté pájení, čímž dosahujeme vysoké kvality výroby i u technologicky náročných elektronických sestav. Díky moderním pájecím technologiím jsme schopni zpracovávat široké spektrum výrobků od běžných průmyslových aplikací až po elektroniku s vysokými nároky na kvalitu a spolehlivost.",
+      "imageAlt": "Detail desky plošných spojů a podavačů součástek v osazovacím zařízení."
+    },
+    "cards": {
+      "dimensions": {
+        "title": "Rozměry desek",
+        "description": "Disponujeme technologiemi pro osazování desek plošných spojů o rozměrech až 810 × 480 mm. Díky pravidelným investicím do výrobních technologií a automatizace jsme schopni pružně reagovat na individuální požadavky zákazníků i realizovat technicky náročné projekty."
+      },
+      "capacity": {
+        "title": "Výrobní kapacita",
+        "description": "Současná výrobní kapacita přesahuje 40 milionů SMT osazení měsíčně, což nám umožňuje efektivně zvládat prototypovou výrobu, střední série i velkoobjemové zakázky při zachování vysoké kvality a krátkých dodacích termínů."
+      },
+      "express": {
+        "title": "Expresní výroba",
+        "description": "Pro časově kritické projekty nabízíme také expresní výrobní režim s možností zahájení výroby již do 24 hodin od dodání kompletních výrobních podkladů."
+      }
+    },
+    "equipment": {
+      "eyebrow": "Vybavení",
+      "title": "Technologické vybavení",
+      "placement": "SMT osazovací technologie",
+      "reflow": "Reflow pájení",
+      "bonding": {
+        "title": "Bondování",
+        "description": "Součástí našeho technologického zázemí je také bondování pomocí zlatého drátu, hliníkového drátu a technologie Glob Top, které umožňuje realizaci specifických aplikací vyžadujících pokročilé metody propojení polovodičových součástek."
+      }
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Hledáte partnera pro výrobu elektroniky?",
+      "description": "Díky kombinaci moderních SMT technologií, přesně řízeného reflow pájení, zkušeného týmu a důsledné kontroly kvality nabízíme zákazníkům komplexní řešení výroby elektroniky s důrazem na maximální spolehlivost, flexibilitu a dlouhodobou kvalitu finálních výrobků.",
+      "action": "Kontaktovat"
+    }
   }
 }

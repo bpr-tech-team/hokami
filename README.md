@@ -73,15 +73,18 @@ two places. Reuse the existing components when adding sections:
   Choose the HTML element with `as` independently of its visual variant.
 - `components/layout/`: `Section` composes the shared eyebrow, H2, introduction,
   container, and responsive section spacing. `Container` and `PageMain` provide
-  shared page layout. Header and footer components live in their own subfolders.
+  shared page layout. `SectionHeader` and `sectionVariants` share heading groups
+  and outer spacing with grouped content. Header and footer components live in
+  their own subfolders. Parent navigation sections remain active on nested routes
+  without marking the parent URL as the current page.
 - `components/sections/home/`: homepage sections grouped by feature. Each folder
   keeps its cards, accordion, images, and related types together.
 - `components/sections/feature-cards/`: shared icon, title and description cards
-  and their responsive grid for Capabilities and Sustainability. Cards use the
+  and their responsive grid for Capabilities, Sustainability and SMT. Cards use the
   existing shadcn `feature` variant; one, two and three columns follow the shared
   mobile, tablet and desktop breakpoints. Heights grow with translated content.
-- `components/sections/contact-cta/`: shared closing contact section for About
-  and Sustainability. Page wrappers supply translated copy and the action URL;
+- `components/sections/contact-cta/`: shared closing contact section for About,
+  Sustainability and service details. Page wrappers supply translated copy and the action URL;
   `ContactLinks` supplies the shared company phone and email.
 - `components/sections/sustainability/`: sustainability page at
   `/[locale]/sustainability` in all five locales. The content-driven hero uses the
@@ -104,9 +107,18 @@ two places. Reuse the existing components when adding sections:
   localized `/contact` page. `overview/` supplies eight services, original local
   Figma photographs, crop coordinates and stable service slugs. Translated text
   lives in `ServicesHero`, `Services` and `Metadata.services` in each locale's
-  messages. Service links target `/[locale]/services/{slug}`; service detail
-  pages are separate work. Contact is documented below. The page uses the
-  existing metadata and sitemap helpers.
+  messages. Service links target `/[locale]/services/{slug}`. The SMT detail at
+  `/[locale]/services/smt` is available in all five locales; other service details
+  remain separate work. `detail/` provides `ServiceHero`, a content-driven
+  `ServiceEquipmentSection` and `EquipmentList` for future services. `smt/` supplies
+  SMT content, equipment models and wrappers for the shared statistics, cards and
+  contact CTA. Its hero action uses `#equipment`; the closing CTA uses localized
+  `/contact#contact-form`. Translations live in `ServiceDetail`, `Smt` and
+  `Metadata.smt`. Both routes use the existing metadata and sitemap helpers.
+- `components/sections/media-text/`: reusable `MediaTextBlock` combines
+  `SectionHeader`, an adaptive 3:2 photo and `PhotoTrace`. Desktop photos can sit
+  on either side; compact layouts always show text before the photo. The parent
+  group owns outer section spacing. SMT uses it for production and reflow.
 - `components/sections/contact/`: contact page at `/[locale]/contact` in all five
   locales, with the shared hero, directions, contact form, regional map and billing
   details. The Google Maps iframe loads immediately from the verified HOKAMI place;
@@ -120,12 +132,14 @@ two places. Reuse the existing components when adding sections:
   existing adapter. `sections/contact-links/` shares phone and email links with About.
 - `components/sections/hero/`: shared `HeroSection` and independent
   `HeroBackground`. The section accepts translated content, actions, a heading
-  element, and an optional background. `home/hero/` supplies homepage content.
+  element, an optional `backLink` before the eyebrow, and an optional background.
+  Actions can pass a local icon and responsive width. `home/hero/` supplies homepage content.
   All hero headings use the shared `Heading` hero variant: Saira SemiBold with
   size/tracking of 40/−0.44 px on mobile, 56/−0.84 px on tablet,
   and 104/−1.32 px on desktop, matching Figma's `type/hero/*` modes.
   A shared unitless line-height of 1.15 keeps diacritics and punctuation clear
-  of adjacent lines when headings wrap at any breakpoint.
+  of adjacent lines when headings wrap at any breakpoint. Service details use
+  `headingClassName` for Figma's 42/58/100 px mobile/tablet/desktop line heights.
   The homepage title uses `t.rich` and a translated `<accent>` range in the
   existing `brand-identity` color so each locale controls its emphasis.
   Hero descriptions default to the shared `Text` lead variant (IBM Plex Sans,
@@ -205,8 +219,16 @@ two places. Reuse the existing components when adding sections:
   compact notation, currencies, and percentages (`0.85` means 85%). Translated
   `prefix`/`suffix` strings support surrounding words and qualifiers; resolve
   plural forms against the final value before passing them. `accessibleValue`
-  optionally provides a more descriptive spoken value. Rows balance automatically
-  for any item count, adapt to container width, and reduce their column count for
+  optionally provides a more descriptive spoken value.
+  `additionalValues: [{id, value, prefix}]` appends numeric parts, using the same
+  locale and format. One visibility trigger starts all parts together, and
+  `NumberFlowGroup` synchronizes their animations. Separators and the final
+  suffix remain text. SMT board dimensions use this for both 810 and 480.
+  Optional `compact: {label, suffix}` moves units into the label below 672 px of
+  container width. Its visible number alone participates in width measurement;
+  both representations retain the complete accessible value.
+  Values and labels stay centered within their cells at every column count.
+  Rows balance for any item count, adapt to container width, and reduce their column count for
   long numbers. Empty arrays render nothing. NumberFlow runs once per visible
   number, with final server-rendered text for reduced motion and without JS.
   Formats unsupported by NumberFlow (scientific/engineering notation, non-Latin

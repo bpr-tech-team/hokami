@@ -4,7 +4,7 @@ import { Link, getPathname } from "@/i18n/navigation";
 import { NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { LanguageSwitch } from "@/components/navigation/language-switch";
 import type { SiteLocation } from "@/hooks/use-site-location";
-import { type HeaderItem } from "./navigation";
+import { getHeaderLinkState, type HeaderItem } from "./navigation";
 
 export function getHeaderAnchorHref(
   href: string,
@@ -34,17 +34,13 @@ export function HeaderNavLink({
   location,
   ...props
 }: HeaderNavLinkProps) {
-  const [pathname, hash] = item.href.split("#");
-  let current: "page" | "location" | undefined;
-  if (location.pathname === pathname) {
-    if (!hash) current = "page";
-    else if (location.hash === `#${hash}`) current = "location";
-  }
+  const [, hash] = item.href.split("#");
+  const { active, current } = getHeaderLinkState(item.href, location);
 
   return (
     <NavigationMenuLink
       {...props}
-      active={Boolean(current)}
+      active={active}
       aria-current={current}
       render={
         hash ? (

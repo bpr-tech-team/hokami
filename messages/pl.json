@@ -306,6 +306,10 @@
     "sustainability": {
       "title": "Zrównoważony rozwój",
       "description": "Zrównoważona produkcja elektroniki w HOKAMI: efektywność energetyczna, własna fotowoltaika, odpowiedzialne gospodarowanie materiałami i odpadami oraz ciągłe doskonalenie."
+    },
+    "smt": {
+      "title": "Montaż SMT",
+      "description": "Montaż SMT w HOKAMI: cztery zautomatyzowane linie, ponad 40 mln osadzeń miesięcznie, płytki do 810 × 480 mm i ekspresowe rozpoczęcie produkcji w ciągu 24 godzin."
     }
   },
   "RequesForQuote": {
@@ -549,5 +553,76 @@
     "title": "Szukasz partnera do produkcji elektroniki?",
     "description": "Naszym celem jest bycie niezawodnym partnerem dla klientów z całego świata, a jednocześnie firmą, która przyczynia się do odpowiedzialnego rozwoju przemysłu elektronicznego. Wierzymy, że wysoka jakość produkcji, innowacje technologiczne i odpowiedzialne podejście do środowiska stanowią podstawę długofalowego, zrównoważonego prowadzenia działalności.",
     "contact": "Skontaktuj się"
+  },
+  "ServiceDetail": {
+    "eyebrow": "Usługi",
+    "back": "Powrót do wszystkich usług",
+    "equipment": "Zobacz wyposażenie"
+  },
+  "Smt": {
+    "hero": {
+      "title": "SMT",
+      "description": "SMT (Surface Mount Technology), czyli montaż powierzchniowy, stanowi podstawę nowoczesnej produkcji elektroniki i jest jedną z kluczowych technologii firmy Hokami. Dzięki wieloletniemu doświadczeniu, zaawansowanemu wyposażeniu i ściśle kontrolowanym procesom wytwarzamy zespoły elektroniczne od prototypów po produkcję wielkoseryjną. Naszym celem jest dostarczanie klientom niezawodnych, elastycznych i wysokiej jakości rozwiązań produkcyjnych, które spełniają wymagania różnych branż przemysłu."
+    },
+    "statistics": {
+      "label": "Możliwości produkcyjne SMT",
+      "lines": {
+        "label": "w pełni zautomatyzowane",
+        "suffix": " {count, plural, one {linia} few {linie} many {linii} other {linii}}"
+      },
+      "placements": {
+        "label": "osadzeń SMT miesięcznie"
+      },
+      "dimensions": {
+        "label": "maks. wymiary płytki",
+        "compactLabel": "mm, maks. wymiary płytki",
+        "accessible": "{width} na {height} milimetrów"
+      },
+      "express": {
+        "label": "start produkcji ekspresowej"
+      }
+    },
+    "production": {
+      "eyebrow": "Produkcja",
+      "title": "Cztery zautomatyzowane linie SMT",
+      "description": "Produkcja odbywa się na czterech w pełni zautomatyzowanych liniach SMT wykorzystujących nowoczesne technologie montażowe Yamaha i Assembleon. Proces jest kontrolowany z naciskiem na maksymalną precyzję, powtarzalność i jakość każdego połączenia. Standardowo pracujemy z dokumentacją produkcyjną dostarczoną przez klienta, a w razie potrzeby zapewniamy również wsparcie techniczne przy optymalizacji konstrukcji produktów pod kątem produkcji seryjnej (DFM).",
+      "imageAlt": "Pracownik obsługuje maszynę na linii produkcyjnej SMT w HOKAMI."
+    },
+    "reflow": {
+      "eyebrow": "Lutowanie",
+      "title": "Lutowanie rozpływowe",
+      "description": "Po osadzeniu komponentów SMD następuje lutowanie rozpływowe, które zapewnia wysoką jakość i długotrwałą niezawodność połączeń lutowanych. Nasze piece umożliwiają precyzyjną kontrolę profili temperaturowych zarówno dla lutowania bezołowiowego, jak i ołowiowego. Dzięki temu osiągamy wysoką jakość produkcji także w przypadku wymagających technologicznie zespołów elektronicznych. Nowoczesne technologie lutowania pozwalają nam wytwarzać szeroką gamę produktów, od typowych zastosowań przemysłowych po elektronikę o wysokich wymaganiach dotyczących jakości i niezawodności.",
+      "imageAlt": "Zbliżenie płytki drukowanej i podajników komponentów w automacie montażowym."
+    },
+    "cards": {
+      "dimensions": {
+        "title": "Wymiary płytek",
+        "description": "Dysponujemy technologiami montażu płytek drukowanych o wymiarach do 810 × 480 mm. Regularne inwestycje w technologie produkcyjne i automatyzację pozwalają nam elastycznie odpowiadać na indywidualne wymagania klientów i realizować wymagające technicznie projekty."
+      },
+      "capacity": {
+        "title": "Zdolność produkcyjna",
+        "description": "Nasza obecna zdolność produkcyjna przekracza 40 milionów osadzeń SMT miesięcznie. Pozwala to sprawnie realizować prototypy, średnie serie i zamówienia wielkoseryjne przy zachowaniu wysokiej jakości i krótkich terminów dostaw."
+      },
+      "express": {
+        "title": "Produkcja ekspresowa",
+        "description": "W przypadku projektów wymagających szybkiej realizacji oferujemy również produkcję ekspresową. Możemy rozpocząć ją już w ciągu 24 godzin od otrzymania kompletnej dokumentacji produkcyjnej."
+      }
+    },
+    "equipment": {
+      "eyebrow": "Wyposażenie",
+      "title": "Wyposażenie technologiczne",
+      "placement": "Technologie montażu SMT",
+      "reflow": "Lutowanie rozpływowe",
+      "bonding": {
+        "title": "Bonding drutowy",
+        "description": "Nasze zaplecze technologiczne obejmuje również bonding drutem złotym i aluminiowym oraz technologię Glob Top. Umożliwiają one realizację specjalistycznych zastosowań wymagających zaawansowanych metod łączenia elementów półprzewodnikowych."
+      }
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Szukasz partnera do produkcji elektroniki?",
+      "description": "Łącząc nowoczesne technologie SMT, precyzyjnie kontrolowane lutowanie rozpływowe, doświadczony zespół i rygorystyczną kontrolę jakości, oferujemy klientom kompleksowe rozwiązania produkcji elektroniki z naciskiem na niezawodność, elastyczność i długotrwałą jakość gotowych produktów.",
+      "action": "Skontaktuj się"
+    }
   }
 }

@@ -12,6 +12,96 @@ import de from "../messages/de.json";
 import fi from "../messages/fi.json";
 import pl from "../messages/pl.json";
 
+test("compact statistics retain their numeric value while moving units into the label", () => {
+  const statistic = {
+    id: "dimensions",
+    value: 810,
+    label: "Maximum board dimensions",
+    additionalValues: [{ id: "height", value: 480, prefix: " × " }],
+    suffix: " mm",
+    accessibleValue: "810 by 480 millimetres",
+    compact: { label: "mm, maximum board dimensions", suffix: "" },
+  };
+  for (const locale of ["cs", "en", "de", "fi", "pl"]) {
+    const prepared = prepareStatistic(statistic, locale);
+    assert.equal(prepared.value, 810);
+    assert.equal(prepared.formattedValue, "810 × 480 mm");
+    assert.equal(prepared.compact?.formattedValue, "810 × 480");
+    assert.equal(prepared.compact?.label, "mm, maximum board dimensions");
+    assert.equal(prepared.accessibleValue, "810 by 480 millimetres");
+    assert.equal(prepared.supportsAnimation, true);
+  }
+  assert.equal(statistic.suffix, " mm");
+  assert.equal(
+    prepareStatistic({ id: "plain", value: 4, label: "Lines" }, "en").compact,
+    undefined,
+  );
+});
+
+test("compound statistics localize every numeric part and reject non-finite parts", () => {
+  const statistic = {
+    id: "dimensions",
+    value: 1234.5,
+    label: "Dimensions",
+    format: { minimumFractionDigits: 1 },
+    additionalValues: [
+      { id: "height", value: -2500.5, prefix: " × " },
+      { id: "depth", value: 0, prefix: " × " },
+    ],
+    suffix: " mm",
+  };
+  for (const locale of ["cs", "en", "de", "fi", "pl"]) {
+    const formatter = new Intl.NumberFormat(locale, statistic.format);
+    assert.equal(
+      prepareStatistic(statistic, locale).formattedValue,
+      `${formatter.format(1234.5)} × ${formatter.format(-2500.5)} × ${formatter.format(0)} mm`,
+    );
+  }
+  for (const value of [NaN, Infinity, -Infinity]) {
+    assert.throws(
+      () =>
+        prepareStatistic(
+          {
+            ...statistic,
+            additionalValues: [{ id: "invalid", value, prefix: " × " }],
+          },
+          "en",
+        ),
+      RangeError,
+    );
+  }
+});
+
+test("compound statistics render separate rolling numbers with one accessible value", () => {
+  const statistic = {
+    id: "dimensions",
+    value: 810,
+    label: "Dimensions",
+    additionalValues: [{ id: "height", value: 480, prefix: " × " }],
+    suffix: " mm",
+    accessibleValue: "810 by 480 millimetres",
+  };
+  const props = { "aria-label": "Statistics", locale: "en" };
+  const markup = renderToStaticMarkup(
+    createElement(TrustStrip, { ...props, items: [statistic] }),
+  );
+  assert.equal((markup.match(/<number-flow-react[ >]/g) ?? []).length, 2);
+  assert.equal(
+    (markup.match(/class="sr-only">810 by 480 millimetres<\/span>/g) ?? [])
+      .length,
+    1,
+  );
+  assert.ok(markup.includes("810 × 480 mm"));
+  const unsupported = renderToStaticMarkup(
+    createElement(TrustStrip, {
+      ...props,
+      items: [{ ...statistic, format: { notation: "scientific" } }],
+    }),
+  );
+  assert.ok(!unsupported.includes("<number-flow-react"));
+  assert.ok(unsupported.includes("8.1E2 × 4.8E2 mm"));
+});
+
 test("statistics balance arbitrary item counts and fill every row", () => {
   for (const columns of [1, 2, 3, 4] as const) {
     for (let count = 0; count <= 100; count++) {

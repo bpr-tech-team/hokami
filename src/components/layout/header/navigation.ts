@@ -12,6 +12,22 @@ export const headerNavigation = [
 // Matches Tailwind's default xl breakpoint used by the header components.
 export const HEADER_DESKTOP_QUERY = "(min-width: 80rem)";
 
+export function getHeaderLinkState(
+  href: string,
+  location: Pick<SiteLocation, "pathname" | "hash">,
+): { active: boolean; current?: "page" | "location" } {
+  const [pathname, hash] = href.split("#");
+  if (location.pathname === pathname) {
+    if (!hash) return { active: true, current: "page" };
+    if (location.hash === `#${hash}`)
+      return { active: true, current: "location" };
+  }
+  return {
+    active:
+      !hash && pathname !== "/" && location.pathname.startsWith(`${pathname}/`),
+  };
+}
+
 export type HeaderItem = {
   key: (typeof headerNavigation)[number]["key"];
   href: string;
