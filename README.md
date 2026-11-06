@@ -67,6 +67,8 @@ no theme picker. This bridge targets Keystar 0.10; visually check forms, menus,
 focus, validation feedback and the editor when updating Keystatic dependencies.
 
 The `jobs` collection stores one `src/content/jobs/{slug}/index.json` per vacancy.
+Keystatic owns these files' JSON formatting, so Prettier leaves them untouched.
+`npm run content:check` still validates every record and image before the build.
 Its required English fields are title, department and short description. Each
 language also has a WYSIWYG main text, stored as inline Markdoc. Existing main
 texts start empty; they are editable but are not rendered until job detail pages
