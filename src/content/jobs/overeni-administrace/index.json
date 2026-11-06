@@ -1,9 +1,9 @@
 {
   "title": "Ověření administrace",
   "department": "Test Cloud",
-  "description": "Dočasná kontrola ukládání přes Keystatic Cloud.",
+  "description": "Kontrola aktualizace a českého fallbacku přes Keystatic Cloud.",
   "content": "Test hlavního textu.![](/images/jobs/overeni-administrace/ae221641-701d-436f-ac15-293131e523dc.png)\n",
-  "status": "draft",
+  "status": "published",
   "order": 100,
   "translations": {
     "en": {
