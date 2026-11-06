@@ -636,7 +636,7 @@
     "positions": {
       "eyebrow": "Přidejte se k nám",
       "title": "Volné pozice",
-      "readMore": "Číst dále: {title}",
+      "readMore": "Číst dále",
       "empty": "Momentálně nemáme žádné otevřené pozice. Svůj životopis nám přesto můžete poslat."
     },
     "contact": {
@@ -644,6 +644,64 @@
       "title": "Zaujala vás některá z pozic?",
       "description": "Pošlete nám svůj životopis na adresu prace@hokami.cz. Rádi vás poznáme osobně a ukážeme vám, jak to u nás funguje.",
       "action": "Poslat životopis"
+    }
+  },
+  "JobApplication": {
+    "title": "Zaujala Vás tato nabídka?",
+    "description": "Pošlete nám svůj životopis na adresu prace@hokami.cz.",
+    "submit": "Odeslat přihlášku",
+    "required": "* povinné údaje",
+    "consent": "Odesláním souhlasíte se <privacy>zpracováním osobních údajů</privacy>.",
+    "noScript": "Pro použití formuláře zapněte JavaScript nebo nám napište na <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Jméno a příjmení",
+        "placeholder": "Jana Nováková"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "jmeno@email.cz"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Průvodní zpráva",
+        "placeholder": "Proč vás pozice zaujala a co nabízíte"
+      },
+      "job": {
+        "label": "Pozice",
+        "placeholder": "Vyberte pozici"
+      },
+      "start": {
+        "label": "Možný nástup",
+        "placeholder": "Ihned nebo datum"
+      }
+    },
+    "errors": {
+      "nameRequired": "Zadejte své jméno a příjmení.",
+      "emailRequired": "Zadejte svůj e-mail.",
+      "emailInvalid": "Zadejte platnou e-mailovou adresu.",
+      "tooLong": "Text je příliš dlouhý. Zkraťte jej prosím.",
+      "phoneRequired": "Zadejte své telefonní číslo.",
+      "phoneInvalid": "Zadejte platné telefonní číslo.",
+      "jobInvalid": "Vyberte dostupnou pozici.",
+      "fileFormat": "Vyberte soubory PDF nebo DOCX.",
+      "fileEmpty": "Soubor je prázdný. Vyberte jiný soubor.",
+      "filesTooLarge": "Celková velikost souborů nesmí překročit 4,5 MB."
+    },
+    "upload": {
+      "label": "Přiložit životopis",
+      "hint": "PDF nebo DOCX. Celkem max. 4,5 MB.",
+      "choose": "Vybrat soubory",
+      "selected": "Vybrané soubory",
+      "ready": "Vybráno",
+      "remove": "Odebrat soubor {name}"
+    },
+    "failure": {
+      "title": "Přihlášku zatím nelze odeslat",
+      "unavailable": "Formulář je dočasně nedostupný. Kontaktujte nás na <email>{address}</email>."
     }
   }
 }

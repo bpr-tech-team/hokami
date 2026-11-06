@@ -10,6 +10,7 @@ type JobCardProps = {
   title: string;
   description: string;
   linkLabel: string;
+  linkLocale: string;
   href: string;
   contentLocale: string;
 };
@@ -20,6 +21,7 @@ export function JobCard({
   title,
   description,
   linkLabel,
+  linkLocale,
   href,
   contentLocale,
 }: JobCardProps) {
@@ -31,10 +33,13 @@ export function JobCard({
       href={href}
       lang={contentLocale}
       aria-labelledby={`${titleId} ${departmentId}`}
-      className="group/card-link block h-full min-w-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
+      className="group/card-link row-span-4 grid min-w-0 grid-rows-subgrid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
     >
-      <Card variant="outlined" className="h-full">
-        <CardContent className="flex min-w-0 flex-col items-start gap-3 px-6 pt-6 pb-4">
+      <Card
+        variant="outlined"
+        className="row-span-4 grid grid-rows-subgrid items-start justify-items-start gap-3 px-6 pt-6 pb-4"
+      >
+        <CardContent className="contents">
           <MonoText id={departmentId} variant="meta" tone="tertiary">
             {department}
           </MonoText>
@@ -44,7 +49,7 @@ export function JobCard({
           <Text variant="small" tone="secondary">
             {description}
           </Text>
-          <CardLinkLabel>{linkLabel}</CardLinkLabel>
+          <CardLinkLabel lang={linkLocale}>{linkLabel}</CardLinkLabel>
         </CardContent>
       </Card>
     </a>

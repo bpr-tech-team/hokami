@@ -636,7 +636,7 @@
     "positions": {
       "eyebrow": "Liity joukkoomme",
       "title": "Avoimet työpaikat",
-      "readMore": "Lue lisää: {title}",
+      "readMore": "Lue lisää",
       "empty": "Meillä ei tällä hetkellä ole avoimia työpaikkoja. Voit silti lähettää meille ansioluettelosi."
     },
     "contact": {
@@ -644,6 +644,64 @@
       "title": "Kiinnostuitko avoimesta työpaikasta?",
       "description": "Lähetä ansioluettelosi osoitteeseen prace@hokami.cz. Tapaamme sinut mielellämme henkilökohtaisesti ja esittelemme toimintaamme.",
       "action": "Lähetä ansioluettelo"
+    }
+  },
+  "JobApplication": {
+    "title": "Kiinnostuitko tästä tehtävästä?",
+    "description": "Lähetä ansioluettelosi osoitteeseen prace@hokami.cz.",
+    "submit": "Lähetä hakemus",
+    "required": "* pakolliset tiedot",
+    "consent": "Lähettämällä lomakkeen hyväksyt <privacy>henkilötietojesi käsittelyn</privacy>.",
+    "noScript": "Ota JavaScript käyttöön käyttääksesi lomaketta tai lähetä sähköpostia osoitteeseen <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Etu- ja sukunimi",
+        "placeholder": "Maija Meikäläinen"
+      },
+      "email": {
+        "label": "Sähköposti",
+        "placeholder": "nimi@email.fi"
+      },
+      "phone": {
+        "label": "Puhelin",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Saateviesti",
+        "placeholder": "Miksi tehtävä kiinnostaa sinua ja mitä voit tarjota?"
+      },
+      "job": {
+        "label": "Tehtävä",
+        "placeholder": "Valitse tehtävä"
+      },
+      "start": {
+        "label": "Mahdollinen aloitus",
+        "placeholder": "Heti tai päivämäärä"
+      }
+    },
+    "errors": {
+      "nameRequired": "Kirjoita etu- ja sukunimesi.",
+      "emailRequired": "Kirjoita sähköpostiosoitteesi.",
+      "emailInvalid": "Kirjoita kelvollinen sähköpostiosoite.",
+      "tooLong": "Teksti on liian pitkä. Lyhennä sitä.",
+      "phoneRequired": "Kirjoita puhelinnumerosi.",
+      "phoneInvalid": "Kirjoita kelvollinen puhelinnumero.",
+      "jobInvalid": "Valitse avoin tehtävä.",
+      "fileFormat": "Valitse PDF- tai DOCX-tiedostoja.",
+      "fileEmpty": "Tiedosto on tyhjä. Valitse toinen tiedosto.",
+      "filesTooLarge": "Tiedostojen yhteiskoko saa olla enintään 4,5 Mt."
+    },
+    "upload": {
+      "label": "Liitä ansioluettelo",
+      "hint": "PDF tai DOCX. Yhteensä enintään 4,5 Mt.",
+      "choose": "Valitse tiedostot",
+      "selected": "Valitut tiedostot",
+      "ready": "Valittu",
+      "remove": "Poista tiedosto {name}"
+    },
+    "failure": {
+      "title": "Hakemuksia ei voi vielä lähettää",
+      "unavailable": "Lomake ei ole tilapäisesti käytettävissä. Ota yhteyttä osoitteeseen <email>{address}</email>."
     }
   }
 }

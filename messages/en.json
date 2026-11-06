@@ -636,7 +636,7 @@
     "positions": {
       "eyebrow": "Join our team",
       "title": "Current vacancies",
-      "readMore": "Read more: {title}",
+      "readMore": "Read more",
       "empty": "We currently have no open vacancies. You are still welcome to send us your CV."
     },
     "contact": {
@@ -644,6 +644,64 @@
       "title": "Interested in one of our vacancies?",
       "description": "Send your CV to prace@hokami.cz. We would be happy to meet you in person and show you how we work.",
       "action": "Send your CV"
+    }
+  },
+  "JobApplication": {
+    "title": "Interested in this opportunity?",
+    "description": "Send your CV to prace@hokami.cz.",
+    "submit": "Submit application",
+    "required": "* required fields",
+    "consent": "By submitting, you agree to the <privacy>processing of your personal data</privacy>.",
+    "noScript": "Enable JavaScript to use the form, or email us at <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Full name",
+        "placeholder": "Jane Smith"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "name@email.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Cover message",
+        "placeholder": "Why are you interested in this role and what can you offer?"
+      },
+      "job": {
+        "label": "Position",
+        "placeholder": "Select a position"
+      },
+      "start": {
+        "label": "Available start date",
+        "placeholder": "Immediately or a date"
+      }
+    },
+    "errors": {
+      "nameRequired": "Enter your full name.",
+      "emailRequired": "Enter your email address.",
+      "emailInvalid": "Enter a valid email address.",
+      "tooLong": "This text is too long. Please shorten it.",
+      "phoneRequired": "Enter your phone number.",
+      "phoneInvalid": "Enter a valid phone number.",
+      "jobInvalid": "Select an available position.",
+      "fileFormat": "Choose PDF or DOCX files.",
+      "fileEmpty": "The file is empty. Choose another file.",
+      "filesTooLarge": "The total file size must not exceed 4.5 MB."
+    },
+    "upload": {
+      "label": "Attach your CV",
+      "hint": "PDF or DOCX. Maximum 4.5 MB in total.",
+      "choose": "Choose files",
+      "selected": "Selected files",
+      "ready": "Selected",
+      "remove": "Remove file {name}"
+    },
+    "failure": {
+      "title": "Applications cannot be sent yet",
+      "unavailable": "The form is temporarily unavailable. Please contact us at <email>{address}</email>."
     }
   }
 }

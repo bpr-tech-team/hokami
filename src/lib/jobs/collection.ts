@@ -25,6 +25,8 @@ function translationFields(label: string) {
       }),
       linkLabel: fields.text({
         label: "Text odkazu (nepovinný)",
+        description:
+          "Pole se zachovává pro starší obsah. Odkaz na webu se nyní překládá automaticky podle jazyka stránky.",
         validation: { length: { max: 200 } },
       }),
       content: jobContentField(),
@@ -32,7 +34,7 @@ function translationFields(label: string) {
     {
       label,
       description:
-        "Karta použije překlad, až vyplníte název, oddělení a krátký text. Jinak se celá zobrazí anglicky. Vyplnění překladu nemění výběr jazykových verzí. Hlavní text je zatím nepovinný.",
+        "Karta použije překlad, až vyplníte název, oddělení a krátký text. Jinak se celá zobrazí anglicky. Vyplnění překladu nemění výběr jazykových verzí. Prázdný hlavní text se nahradí anglickým textem, bez změny jazyka úvodu.",
     },
   );
 }
@@ -71,10 +73,11 @@ export const jobsCollection = collection({
     }),
     linkLabel: fields.text({
       label: "Text odkazu (nepovinný)",
-      description: "Prázdný text se doplní podle názvu pozice.",
+      description:
+        "Pole se zachovává pro starší obsah. Odkaz na webu se nyní překládá automaticky podle jazyka stránky.",
       validation: { length: { max: 200 } },
     }),
-    content: jobContentField(),
+    content: jobContentField({ required: true }),
     status: fields.select({
       label: "Stav",
       options: [

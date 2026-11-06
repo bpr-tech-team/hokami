@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useSyncExternalStore, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
+import { useHydrated } from "@/hooks/use-hydrated";
 import { useTranslations } from "next-intl";
 import { TextFormField } from "@/components/forms/text-form-field";
 import { FormError } from "@/components/forms/form-error";
@@ -18,19 +19,11 @@ import {
   type ContactErrorKey,
 } from "@/lib/contact/validation";
 
-const subscribe = () => () => {};
-const getClientSnapshot = () => true;
-const getServerSnapshot = () => false;
-
 export function ContactForm() {
   const t = useTranslations("ContactForm");
   // Without JS, only the contact links are usable; never submit personal data
   // through the browser's native POST while delivery is unconnected.
-  const interactive = useSyncExternalStore(
-    subscribe,
-    getClientSnapshot,
-    getServerSnapshot,
-  );
+  const interactive = useHydrated();
   const [errors, setErrors] = useState<ContactFieldErrors>({});
   const [unavailable, setUnavailable] = useState(false);
   const email = companyContacts[1];

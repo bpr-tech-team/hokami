@@ -636,7 +636,7 @@
     "positions": {
       "eyebrow": "Dołącz do nas",
       "title": "Oferty pracy",
-      "readMore": "Czytaj dalej: {title}",
+      "readMore": "Czytaj dalej",
       "empty": "Obecnie nie mamy otwartych ofert pracy. Nadal możesz przesłać nam swoje CV."
     },
     "contact": {
@@ -644,6 +644,64 @@
       "title": "Zainteresowała Cię jedna z ofert?",
       "description": "Wyślij nam swoje CV na adres prace@hokami.cz. Chętnie poznamy Cię osobiście i pokażemy, jak u nas wygląda praca.",
       "action": "Wyślij CV"
+    }
+  },
+  "JobApplication": {
+    "title": "Zainteresowała Cię ta oferta?",
+    "description": "Wyślij swoje CV na adres prace@hokami.cz.",
+    "submit": "Wyślij zgłoszenie",
+    "required": "* pola obowiązkowe",
+    "consent": "Wysyłając formularz, wyrażasz zgodę na <privacy>przetwarzanie danych osobowych</privacy>.",
+    "noScript": "Włącz JavaScript, aby skorzystać z formularza, lub napisz do nas na <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Imię i nazwisko",
+        "placeholder": "Anna Kowalska"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "imie@email.pl"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Wiadomość do zgłoszenia",
+        "placeholder": "Dlaczego interesuje Cię to stanowisko i co możesz zaoferować?"
+      },
+      "job": {
+        "label": "Stanowisko",
+        "placeholder": "Wybierz stanowisko"
+      },
+      "start": {
+        "label": "Możliwy termin rozpoczęcia",
+        "placeholder": "Od zaraz lub data"
+      }
+    },
+    "errors": {
+      "nameRequired": "Podaj imię i nazwisko.",
+      "emailRequired": "Podaj adres e-mail.",
+      "emailInvalid": "Podaj prawidłowy adres e-mail.",
+      "tooLong": "Tekst jest zbyt długi. Skróć go.",
+      "phoneRequired": "Podaj numer telefonu.",
+      "phoneInvalid": "Podaj prawidłowy numer telefonu.",
+      "jobInvalid": "Wybierz dostępne stanowisko.",
+      "fileFormat": "Wybierz pliki PDF lub DOCX.",
+      "fileEmpty": "Plik jest pusty. Wybierz inny plik.",
+      "filesTooLarge": "Łączny rozmiar plików nie może przekroczyć 4,5 MB."
+    },
+    "upload": {
+      "label": "Dołącz CV",
+      "hint": "PDF lub DOCX. Łącznie maks. 4,5 MB.",
+      "choose": "Wybierz pliki",
+      "selected": "Wybrane pliki",
+      "ready": "Wybrano",
+      "remove": "Usuń plik {name}"
+    },
+    "failure": {
+      "title": "Nie można jeszcze wysyłać zgłoszeń",
+      "unavailable": "Formularz jest chwilowo niedostępny. Skontaktuj się z nami pod adresem <email>{address}</email>."
     }
   }
 }

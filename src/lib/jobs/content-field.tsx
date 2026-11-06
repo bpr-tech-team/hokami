@@ -1,11 +1,12 @@
 import { fields } from "@keystatic/core";
 import { JobContentInput } from "@/components/integrations/keystatic/job-content-input";
 import { JOB_IMAGE_HELP, validateContentImages } from "./image-validation";
+import { assertJobContent } from "./content";
 
-export function jobContentField() {
+export function jobContentField({ required = false } = {}) {
   const field = fields.markdoc.inline({
-    label: "Hlavní text",
-    description: `Podrobný popis pro budoucí stránku pozice. Zatím se na webu nezobrazuje. ${JOB_IMAGE_HELP}`,
+    label: required ? "Hlavní text (anglicky) *" : "Hlavní text",
+    description: `Podrobný popis na stránce pozice. ${required ? "Anglický text je povinný." : "Prázdný překlad se nahradí anglickým textem."} ${JOB_IMAGE_HELP}`,
     options: {
       heading: [2, 3, 4],
       image: {
@@ -27,12 +28,20 @@ export function jobContentField() {
   return {
     ...field,
     Input(props: Parameters<typeof field.Input>[0]) {
-      return <JobContentInput {...props} field={field} />;
+      return <JobContentInput {...props} field={field} required={required} />;
     },
     validate(value: Parameters<typeof field.validate>[0]) {
       const validated = field.validate(value);
-      validateContentImages(field.serialize(validated, { slug: undefined }));
+      const serialized = field.serialize(validated, { slug: undefined });
+      if (required) assertJobContent(String(serialized.value ?? ""));
+      validateContentImages(serialized);
       return validated;
+    },
+    reader: {
+      parse(value: Parameters<typeof field.reader.parse>[0]) {
+        if (required) assertJobContent(typeof value === "string" ? value : "");
+        return field.reader.parse(value);
+      },
     },
   };
 }

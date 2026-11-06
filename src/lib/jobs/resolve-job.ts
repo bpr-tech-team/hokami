@@ -23,6 +23,13 @@ export type ResolvedJobCard = JobCardText & {
   contentLocale: Locale;
 };
 
+export function isJobAvailable(
+  entry: Pick<JobEntry, "status" | "visibleLocales">,
+  locale: Locale,
+) {
+  return entry.status === "published" && entry.visibleLocales.includes(locale);
+}
+
 function isCompleteTranslation(text: JobCardText) {
   return [text.title, text.department, text.description].every(
     (value) => value.trim().length > 0,
@@ -52,10 +59,7 @@ export function getPublishedJobCards(
   locale: Locale,
 ) {
   return records
-    .filter(
-      ({ entry }) =>
-        entry.status === "published" && entry.visibleLocales.includes(locale),
-    )
+    .filter(({ entry }) => isJobAvailable(entry, locale))
     .sort(
       (a, b) =>
         a.entry.order - b.entry.order ||

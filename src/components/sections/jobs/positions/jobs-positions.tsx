@@ -4,24 +4,14 @@ import { getPathname } from "@/i18n/navigation";
 import { Text } from "@/components/typography/text";
 import { getJobCards } from "@/lib/jobs/reader";
 import { JobCard } from "./job-card";
+import { getJobPath } from "@/lib/jobs/urls";
 
 export async function JobsPositions() {
   const [locale, t] = await Promise.all([
     getLocale(),
     getTranslations("Jobs.positions"),
   ]);
-  const jobs = await Promise.all(
-    (await getJobCards(locale)).map(async (job) => {
-      const contentT = await getTranslations({
-        locale: job.contentLocale,
-        namespace: "Jobs.positions",
-      });
-      return {
-        ...job,
-        linkLabel: job.linkLabel || contentT("readMore", { title: job.title }),
-      };
-    }),
-  );
+  const jobs = await getJobCards(locale);
 
   return (
     <Section
@@ -33,11 +23,13 @@ export async function JobsPositions() {
       {jobs.length > 0 ? (
         <ul className="grid min-w-0 grid-cols-1 gap-4 tablet:grid-cols-2 tablet:gap-6 desktop:grid-cols-3">
           {jobs.map(({ id, ...job }) => (
-            <li key={id} className="min-w-0">
+            <li key={id} className="row-span-4 grid min-w-0 grid-rows-subgrid">
               <JobCard
                 id={id}
                 {...job}
-                href={getPathname({ locale, href: "/" })}
+                linkLabel={t("readMore")}
+                linkLocale={locale}
+                href={getPathname({ locale, href: getJobPath(id) })}
               />
             </li>
           ))}

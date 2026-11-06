@@ -7,13 +7,16 @@ import { cn } from "@/lib/utils";
 export function CardLinkLabel({
   children,
   className,
+  lang,
 }: {
   children: ReactNode;
   className?: string;
+  lang?: string;
 }) {
   return (
     <MonoText
       as="span"
+      lang={lang}
       className={cn(
         "relative flex min-h-11 max-w-full items-center gap-2 py-3 transition-colors duration-250 group-hover/card-link:text-text-accent-hover group-focus-visible/card-link:text-text-accent-hover after:absolute after:bottom-[6.5px] after:left-0 after:h-[1.5px] after:w-[5%] after:bg-current after:transition-[width] after:duration-250 group-hover/card-link:after:w-full group-focus-visible/card-link:after:w-full",
         className,

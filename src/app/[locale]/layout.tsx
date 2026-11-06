@@ -10,6 +10,8 @@ import { SiteMeasurement } from "@/components/integrations/analytics/site-measur
 import { SiteCookieConsent } from "@/components/integrations/cookie-consent/cookie-consent";
 import { site } from "@/lib/site";
 import { ibmPlexMono, ibmPlexSans, saira } from "../fonts";
+import { getJobLanguages } from "@/lib/jobs/reader";
+import { JobLanguageProvider } from "@/components/navigation/job-language-provider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -28,7 +30,7 @@ export function generateStaticParams() {
 export default async function RootLayout({
   children,
 }: LayoutProps<"/[locale]">) {
-  const locale = await getLocale();
+  const [locale, jobs] = await Promise.all([getLocale(), getJobLanguages()]);
 
   return (
     <html
@@ -38,10 +40,12 @@ export default async function RootLayout({
     >
       <body className="flex min-h-dvh flex-col">
         <NextIntlClientProvider>
-          <SiteCookieConsent />
-          <SiteHeader locale={locale} />
-          <div className="flex-1">{children}</div>
-          <SiteFooter locale={locale} />
+          <JobLanguageProvider jobs={jobs}>
+            <SiteCookieConsent />
+            <SiteHeader locale={locale} />
+            <div className="flex-1">{children}</div>
+            <SiteFooter locale={locale} />
+          </JobLanguageProvider>
         </NextIntlClientProvider>
         <SiteMeasurement />
       </body>

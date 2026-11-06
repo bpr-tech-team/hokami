@@ -636,7 +636,7 @@
     "positions": {
       "eyebrow": "Werden Sie Teil unseres Teams",
       "title": "Offene Stellen",
-      "readMore": "Mehr erfahren: {title}",
+      "readMore": "Mehr erfahren",
       "empty": "Derzeit haben wir keine offenen Stellen. Sie können uns dennoch gerne Ihren Lebenslauf senden."
     },
     "contact": {
@@ -644,6 +644,64 @@
       "title": "Interessieren Sie sich für eine unserer Stellen?",
       "description": "Senden Sie Ihren Lebenslauf an prace@hokami.cz. Wir freuen uns darauf, Sie persönlich kennenzulernen und Ihnen unsere Arbeitsweise zu zeigen.",
       "action": "Lebenslauf senden"
+    }
+  },
+  "JobApplication": {
+    "title": "Interessiert Sie dieses Angebot?",
+    "description": "Senden Sie Ihren Lebenslauf an prace@hokami.cz.",
+    "submit": "Bewerbung senden",
+    "required": "* Pflichtfelder",
+    "consent": "Mit dem Absenden stimmen Sie der <privacy>Verarbeitung Ihrer personenbezogenen Daten</privacy> zu.",
+    "noScript": "Aktivieren Sie JavaScript, um das Formular zu nutzen, oder schreiben Sie uns an <email>{address}</email>.",
+    "fields": {
+      "name": {
+        "label": "Vor- und Nachname",
+        "placeholder": "Erika Mustermann"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "name@email.de"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+420 000 000 000"
+      },
+      "message": {
+        "label": "Begleitnachricht",
+        "placeholder": "Warum interessiert Sie die Stelle und was bringen Sie mit?"
+      },
+      "job": {
+        "label": "Stelle",
+        "placeholder": "Stelle auswählen"
+      },
+      "start": {
+        "label": "Möglicher Eintritt",
+        "placeholder": "Sofort oder Datum"
+      }
+    },
+    "errors": {
+      "nameRequired": "Geben Sie Ihren Vor- und Nachnamen ein.",
+      "emailRequired": "Geben Sie Ihre E-Mail-Adresse ein.",
+      "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "tooLong": "Der Text ist zu lang. Bitte kürzen Sie ihn.",
+      "phoneRequired": "Geben Sie Ihre Telefonnummer ein.",
+      "phoneInvalid": "Geben Sie eine gültige Telefonnummer ein.",
+      "jobInvalid": "Wählen Sie eine verfügbare Stelle.",
+      "fileFormat": "Wählen Sie PDF- oder DOCX-Dateien.",
+      "fileEmpty": "Die Datei ist leer. Wählen Sie eine andere Datei.",
+      "filesTooLarge": "Die Gesamtgröße der Dateien darf 4,5 MB nicht überschreiten."
+    },
+    "upload": {
+      "label": "Lebenslauf anhängen",
+      "hint": "PDF oder DOCX. Insgesamt max. 4,5 MB.",
+      "choose": "Dateien auswählen",
+      "selected": "Ausgewählte Dateien",
+      "ready": "Ausgewählt",
+      "remove": "Datei {name} entfernen"
+    },
+    "failure": {
+      "title": "Bewerbungen können noch nicht gesendet werden",
+      "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie uns unter <email>{address}</email>."
     }
   }
 }

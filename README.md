@@ -69,11 +69,11 @@ focus, validation feedback and the editor when updating Keystatic dependencies.
 The `jobs` collection stores one `src/content/jobs/{slug}/index.json` per vacancy.
 Keystatic owns these files' JSON formatting, so Prettier leaves them untouched.
 `npm run content:check` still validates every record and image before the build.
-Its required English fields are title, department and short description. Each
-language also has a WYSIWYG main text, stored as inline Markdoc. Existing main
-texts start empty; they are editable but are not rendered until job detail pages
-are implemented. The title's slug is the stable entry identity: do not regenerate
-it when editing an existing vacancy.
+Its required English fields are title, department, short description and main
+text. Each language has a WYSIWYG main text, stored as inline Markdoc and rendered
+on `/[locale]/jobs/{slug}`. Empty or whitespace-only English main texts cannot be
+saved or built, including drafts. The title's slug is the stable entry identity:
+do not regenerate it when editing an existing vacancy.
 
 Cards use a translation only when its title, department and short description are
 all present. Otherwise the entire card falls back to English and uses `lang="en"`.
@@ -83,8 +83,30 @@ languages are selected by default. An empty selection hides the vacancy everywhe
 English content is required even when the English site version is not selected.
 Draft entries are omitted. Published entries in the selected language versions
 sort by ascending `order`, then slug.
-Generic interface copy stays in the `messages/` catalogs. The card links still
-point to the localized homepage until detail pages are added.
+Generic interface copy stays in the `messages/` catalogs. Cards link to their
+localized detail page. Their Read more label always uses the page locale, even
+when the vacancy text falls back to English; stored legacy `linkLabel` values
+do not override it. Four shared subgrid rows align departments, titles,
+descriptions and links across neighboring cards without truncating content.
+A missing main-text translation independently falls back
+to English with `lang="en"`, keeping the translated hero and interface. A disabled
+locale, draft or missing entry returns not-found; switching to a disabled locale
+from either language menu opens that locale's jobs list, preserving query params
+and clearing the detail-page fragment. Only published, enabled URLs appear in SEO
+alternates and the sitemap.
+
+Proxy checks only a vacancy's publication metadata before rendering and rewrites
+unavailable versions to the localized static not-found route. This preserves a
+real HTTP 404 despite App Router streaming. The detail route allows blocking
+navigation while resolving URL data; all known published jobs are prerendered.
+
+Detail pages share the standard hero and footer, render rich content at the
+site's 1200 px content width and link to the application form via a native anchor.
+The form validates locally and retains values when displaying the unavailable
+delivery message with the recruitment email. Several optional PDF/DOCX files can
+be selected or dropped, up to 4,500,000 bytes in total. Files stay in browser
+memory; delivery is not connected. The three original jobs' English main texts
+were seeded from their existing English descriptions without adding job claims.
 
 Images can be inserted into the WYSIWYG text. Only PNG, JPG/JPEG and WEBP files
 are accepted, each at most **500,000 bytes (0.5 MB)**. Type is checked against the
@@ -156,7 +178,9 @@ two places. Reuse the existing components when adding sections:
 - `components/sections/jobs/`: careers page at `/[locale]/jobs` in all five locales.
   `JobsHero` uses the standard hero and animated background; `JobsPositions`
   composes `JobCard` links from the Keystatic collection in `src/content/jobs/`.
-  Card links temporarily lead to the localized homepage until job details exist.
+  `detail/` renders individual jobs; `application/` owns the application form.
+  The detail reader caches serializable content and restores Markdoc ASTs only
+  during server rendering. `sharp` supplies intrinsic CMS image dimensions.
   `JobsContact` passes only the recruitment email to the shared contact CTA.
   Navigation and `sitePages.careers` use `/jobs`; old `/career` and `/careers`
   paths redirect permanently, preserving locale and query parameters.

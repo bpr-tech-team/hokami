@@ -3,7 +3,7 @@
   "department": "Production",
   "description": "We are looking for a new colleague to join our production team as an electronics production worker.",
   "linkLabel": "Read more: Production worker",
-  "content": "",
+  "content": "We are looking for a new colleague to join our production team as an electronics production worker.\n",
   "status": "published",
   "visibleLocales": ["cs", "en", "de", "fi", "pl"],
   "order": 30,

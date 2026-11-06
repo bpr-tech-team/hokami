@@ -9,7 +9,7 @@ import { sectionVariants } from "./section-variants";
 type SectionProps = Omit<ComponentPropsWithoutRef<"section">, "title"> &
   VariantProps<typeof sectionVariants> & {
     id: string;
-    eyebrow: ReactNode;
+    eyebrow?: ReactNode;
     title: ReactNode;
     description?: ReactNode;
     descriptionTone?: TextProps["tone"];

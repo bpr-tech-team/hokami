@@ -6,7 +6,7 @@ import { Text, type TextProps } from "@/components/typography/text";
 
 type SectionHeaderProps = {
   headingId: string;
-  eyebrow: ReactNode;
+  eyebrow?: ReactNode;
   title: ReactNode;
   description?: ReactNode;
   descriptionTone?: TextProps["tone"];
@@ -34,7 +34,7 @@ export function SectionHeader({
       <div
         className={cn("flex flex-col gap-6 desktop:gap-8", headingClassName)}
       >
-        <MonoText variant="eyebrow">{eyebrow}</MonoText>
+        {eyebrow != null && <MonoText variant="eyebrow">{eyebrow}</MonoText>}
         <Heading id={headingId}>{title}</Heading>
       </div>
       {description != null && (

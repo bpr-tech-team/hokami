@@ -22,12 +22,37 @@ export async function getPageMetadata(page: SitePage): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Metadata" });
   const title = t(`${page}.title`);
   const description = t(`${page}.description`);
-  const fullTitle = `${title} | ${site.name}`;
   const contentLocales: readonly Locale[] = sitePages[page].locales;
   const contentLocale = contentLocales.includes(locale)
     ? locale
     : contentLocales[0];
   const url = getPageUrl(page, contentLocale);
+  return createPageMetadata({
+    title,
+    description,
+    url,
+    locale: contentLocale,
+    locales: contentLocales,
+    languages: getPageLanguages(page),
+  });
+}
+
+export function createPageMetadata({
+  title,
+  description,
+  url,
+  locale,
+  locales,
+  languages,
+}: {
+  title: string;
+  description: string;
+  url: string;
+  locale: Locale;
+  locales: readonly Locale[];
+  languages?: Record<string, string>;
+}): Metadata {
+  const fullTitle = `${title} | ${site.name}`;
   const image = {
     url: "/images/social/og.png",
     width: 1200,
@@ -40,7 +65,7 @@ export async function getPageMetadata(page: SitePage): Promise<Metadata> {
     description,
     alternates: {
       canonical: url,
-      languages: getPageLanguages(page),
+      languages,
     },
     openGraph: {
       type: "website",
@@ -48,9 +73,9 @@ export async function getPageMetadata(page: SitePage): Promise<Metadata> {
       title: fullTitle,
       description,
       url,
-      locale: openGraphLocales[contentLocale],
-      alternateLocale: contentLocales
-        .filter((alternate) => alternate !== contentLocale)
+      locale: openGraphLocales[locale],
+      alternateLocale: locales
+        .filter((alternate) => alternate !== locale)
         .map((alternate) => openGraphLocales[alternate]),
       images: [image],
     },

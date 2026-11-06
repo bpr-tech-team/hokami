@@ -2,6 +2,8 @@ import type { Locale } from "next-intl";
 import { cva, type VariantProps } from "class-variance-authority";
 import { languages } from "@/i18n/languages";
 import { Link } from "@/i18n/navigation";
+import { getJobLanguageHref } from "@/lib/jobs/urls";
+import { useJobLanguages } from "./job-language-provider";
 
 const switchVariants = cva("flex", {
   variants: {
@@ -39,6 +41,7 @@ export function LanguageSwitch({
   variant,
   onNavigate,
 }: LanguageSwitchProps) {
+  const jobs = useJobLanguages();
   return (
     <nav
       data-slot="language-switch"
@@ -48,7 +51,7 @@ export function LanguageSwitch({
       {languages.map((language) => (
         <Link
           key={language.locale}
-          href={href}
+          href={getJobLanguageHref(href, language.locale, jobs)}
           locale={language.locale}
           lang={language.locale}
           hrefLang={language.locale}

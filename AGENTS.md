@@ -86,3 +86,8 @@ duplicate query keys and encoded values. Use native fragment links for anchors
 on the current page so query params survive hash navigation. Keep URL-dependent
 active states independent of query params. `useSearchParams` requires the header's
 local `Suspense` boundary with the existing header shell as its prerender fallback.
+
+On job detail pages, a language disabled in the vacancy's `visibleLocales` opens
+that locale's `/jobs` list instead. Preserve query parameters and clear the detail
+fragment in this case, in both header and footer. The publication check in Proxy
+keeps missing, draft and disabled job URLs at HTTP 404 before streaming starts.
