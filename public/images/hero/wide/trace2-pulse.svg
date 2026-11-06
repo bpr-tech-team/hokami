@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1432.2" height="1836.7" viewBox="0 0 1432.2 1836.7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Trace 2 / pulse" filter="url(#filter0_d_0_107)">
+<path d="M6.50274 331.7L88.4962 247.07H190.988L272.982 166.947H539.461L621.454 86.8233H1010.92L1092.92 6.7H1346.58L1389.12 42.2547L1425.5 71.8002V640.7L1345.5 720.7V1110.7L1425.5 1190.7V1490.7L1345.5 1570.7V1830.7" stroke-width="1.4" stroke="#FE4704" stroke-opacity="0.5" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_0_107" x="2.38419e-07" y="-1.78814e-07" width="1432.2" height="1836.7" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="3"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.996078 0 0 0 0 0.278431 0 0 0 0 0.0156863 0 0 0 0.9 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_107"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_107" result="shape"/>
+</filter>
+</defs>
+</svg>

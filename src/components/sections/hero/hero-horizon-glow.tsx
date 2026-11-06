@@ -3,7 +3,7 @@ export function HeroHorizonGlow() {
     <div
       aria-hidden="true"
       data-slot="hero-horizon-glow"
-      className="absolute bottom-[-230.2px] left-1/2 size-[593px] -translate-x-1/2 overflow-hidden [--glow-center-y:70.2px] [--glow-radius:592.094px] tablet:bottom-[-839.2px] tablet:size-[2168px] tablet:[--glow-center-y:259.2px] tablet:[--glow-radius:2186.19px]"
+      className="absolute bottom-[-230.2px] left-1/2 size-[593px] -translate-x-1/2 overflow-hidden [--glow-center-y:70.2px] [--glow-radius:592.094px] tablet:hidden"
     >
       {/* SVG interpolates color and opacity separately; keep that behavior with a mask.
           The 4 px inset leaves the original room for blur. */}

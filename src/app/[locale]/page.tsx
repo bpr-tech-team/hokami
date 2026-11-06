@@ -3,7 +3,6 @@ import { Capabilities } from "@/components/sections/home/capabilities/capabiliti
 import { Industries } from "@/components/sections/home/industries/industries";
 import { HomeLocations } from "@/components/sections/home/locations/home-locations";
 import { HomeHero } from "@/components/sections/home/hero/home-hero";
-import { CompanyVideo } from "@/components/sections/video/company-video";
 import { HomeTrustStrip } from "@/components/sections/home/trust-strip/home-trust-strip";
 import { HomeProcess } from "@/components/sections/home/process/home-process";
 import { RequesForQuote } from "@/components/sections/home/reques-for-quote/reques-for-quote";
@@ -48,7 +47,6 @@ export default function Home() {
       />
       <HomeHero />
       <HomeTrustStrip />
-      <CompanyVideo />
       <Capabilities />
       <Industries />
       <HomeProcess motion="scroll" />

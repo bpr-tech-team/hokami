@@ -12,7 +12,7 @@ import {
 import { HeroBackground } from "./hero-background";
 
 const heroSectionVariants = cva(
-  "relative isolate bg-surface-default px-5 py-18 wrap-anywhere tablet:bg-surface-accent-subtle tablet:px-10 tablet:py-24 desktop:px-20 desktop:pt-[84px] desktop:pb-32",
+  "relative isolate bg-surface-default px-5 py-18 wrap-anywhere tablet:bg-surface-accent-subtle tablet:px-10 tablet:py-24 desktop:px-20 desktop:pt-[84px] desktop:pb-24",
   {
     variants: {
       layout: {
@@ -53,6 +53,7 @@ type HeroSectionProps = Omit<
     actions?: readonly HeroAction[];
     actionsClassName?: string;
     background?: ReactNode;
+    media?: ReactNode;
   };
 
 export function HeroSection({
@@ -69,6 +70,7 @@ export function HeroSection({
   actions = [],
   actionsClassName,
   background = <HeroBackground />,
+  media,
   layout,
   size,
   className,
@@ -82,7 +84,11 @@ export function HeroSection({
       {...props}
       id={id}
       aria-labelledby={headingId}
-      className={cn(heroSectionVariants({ layout, size }), className)}
+      className={cn(
+        heroSectionVariants({ layout, size }),
+        media && "pb-0 tablet:pb-0 desktop:pb-0",
+        className,
+      )}
     >
       {background}
       <Container
@@ -149,6 +155,11 @@ export function HeroSection({
         )}
         {children}
       </Container>
+      {media && (
+        <div className="relative -mx-5 py-10 tablet:-mx-10 tablet:py-12 desktop:-mx-20">
+          {media}
+        </div>
+      )}
     </section>
   );
 }

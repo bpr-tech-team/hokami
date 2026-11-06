@@ -5,7 +5,7 @@ export function VideoFrame({ children }: { children: ReactNode }) {
   return (
     <div
       data-video-decoration
-      className="pointer-events-none absolute bottom-0 left-0 size-full"
+      className="pointer-events-none absolute top-0 left-0 size-full"
     >
       <div
         aria-hidden="true"

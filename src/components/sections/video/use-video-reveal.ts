@@ -3,7 +3,7 @@
 import { useLayoutEffect, useRef, type RefObject } from "react";
 import {
   getVideoRevealGeometry,
-  getVideoRevealPosition,
+  getVideoRevealProgress,
   hasVideoRevealLayoutChanged,
   type VideoRevealMeasurement,
 } from "./video-reveal";
@@ -34,7 +34,7 @@ function suspendScrollAnchoring() {
   };
 }
 
-/** A stable artwork stage drives a separate layout slot from zero to full size. */
+/** A stable artwork stage grows its layout slot from the inline preview to full size. */
 export function useVideoReveal(
   rootRef: RefObject<HTMLElement | null>,
   expanded: boolean,
@@ -49,10 +49,22 @@ export function useVideoReveal(
     const frame = root?.querySelector<HTMLElement>("[data-video-frame]");
     const clip = root?.querySelector<HTMLElement>("[data-video-clip]");
     const media = root?.querySelector<HTMLElement>("[data-video-media]");
+    const previewAnchor = root?.querySelector<HTMLElement>(
+      "[data-video-preview-anchor]",
+    );
     const decoration = root?.querySelector<HTMLElement>(
       "[data-video-decoration]",
     );
-    if (!root || !slot || !stage || !frame || !clip || !media || !decoration)
+    if (
+      !root ||
+      !slot ||
+      !stage ||
+      !frame ||
+      !clip ||
+      !media ||
+      !previewAnchor ||
+      !decoration
+    )
       return;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -64,7 +76,6 @@ export function useVideoReveal(
     let anchorRequest = 0;
     let releaseAnchoring: (() => void) | undefined;
     let previousProgress = -1;
-    let previousTranslate = NaN;
     let disposed = false;
 
     const holdAnchoring = () => {
@@ -85,34 +96,20 @@ export function useVideoReveal(
       animations.forEach((animation) => animation.cancel());
       animations = [];
       slot.style.removeProperty("height");
-      root.style.removeProperty("padding-bottom");
-      frame.style.removeProperty("transform");
-      frame.style.removeProperty("will-change");
       media.style.removeProperty("height");
       geometry = undefined;
       previousProgress = -1;
-      previousTranslate = NaN;
     };
     const update = () => {
       request = 0;
       if (!geometry) return;
-      const { progress, translateY } = getVideoRevealPosition(
-        geometry,
-        window.scrollY,
-      );
-      if (progress === previousProgress && translateY === previousTranslate)
-        return;
+      const progress = getVideoRevealProgress(geometry, window.scrollY);
+      if (progress === previousProgress) return;
       holdAnchoring();
       animations.forEach((animation) => {
         animation.currentTime = progress * duration;
       });
-      frame.style.transform = translateY
-        ? `translateY(${translateY}px)`
-        : "none";
-      frame.style.willChange =
-        progress > 0 && progress < 1 ? "transform" : "auto";
       previousProgress = progress;
-      previousTranslate = translateY;
       restoreAnchoring();
     };
     const schedule = () => {
@@ -122,7 +119,7 @@ export function useVideoReveal(
     const measure = () => {
       if (disposed) return;
       // This stage has final artwork dimensions even while its layout slot is
-      // zero-height. Measuring it cannot create a height/progress feedback loop.
+      // preview-sized. Measuring it cannot create a height/progress feedback loop.
       const bounds = stage.getBoundingClientRect();
       const gap = parseFloat(
         getComputedStyle(root).getPropertyValue("--video-gap"),
@@ -134,7 +131,11 @@ export function useVideoReveal(
         viewportHeight: innerHeight,
         viewportWidth: innerWidth,
         bottomGap: gap,
+        topOffset: parseFloat(
+          getComputedStyle(root).getPropertyValue("--video-top"),
+        ),
         compact: compact.matches,
+        previewInset: previewAnchor.getBoundingClientRect().left - bounds.left,
         reducedMotion: reducedMotion.matches,
       };
       if (!hasVideoRevealLayoutChanged(measurement, nextMeasurement)) {
@@ -154,7 +155,6 @@ export function useVideoReveal(
         typeof ResizeObserver !== "function"
       ) {
         slot.style.height = `${bounds.height}px`;
-        root.style.paddingBottom = `${gap}px`;
         restoreAnchoring();
         return;
       }
@@ -173,8 +173,10 @@ export function useVideoReveal(
         animation.pause();
         animations.push(animation);
       };
-      animate(slot, [{ height: "0px" }, { height: `${bounds.height}px` }]);
-      animate(root, [{ paddingBottom: "0px" }, { paddingBottom: `${gap}px` }]);
+      animate(slot, [
+        { height: `${geometry.previewHeight}px` },
+        { height: `${bounds.height}px` },
+      ]);
       animate(clip, [
         { clipPath: geometry.clip },
         { clipPath: "inset(0px 0px 0px 0px)" },
@@ -187,8 +189,13 @@ export function useVideoReveal(
         {
           width: `${geometry.previewWidth}px`,
           height: `${geometry.previewHeight}px`,
+          left: `${geometry.previewInset}px`,
         },
-        { width: `${bounds.width}px`, height: `${bounds.height}px` },
+        {
+          width: `${bounds.width}px`,
+          height: `${bounds.height}px`,
+          left: "0px",
+        },
       ]);
       root
         .querySelectorAll<HTMLElement>("[data-video-trace]")
@@ -226,7 +233,6 @@ export function useVideoReveal(
       animations.forEach((animation) => {
         animation.currentTime = duration;
       });
-      frame.style.transform = "none";
       previousProgress = -1;
       return true;
     };
@@ -270,13 +276,24 @@ export function useVideoReveal(
         ? new ResizeObserver(measure)
         : undefined;
     observer?.observe(stage);
-    // Do not observe the growing slot or its parent: those change every frame.
+    // Observe preceding content at each nesting level, including hero copy.
+    // The slot and its ancestors grow every frame and must not be observed.
     for (
-      let sibling = root.previousElementSibling;
-      sibling;
-      sibling = sibling.previousElementSibling
-    )
-      observer?.observe(sibling);
+      let ancestor: HTMLElement | null = root;
+      ancestor && ancestor !== document.body;
+      ancestor = ancestor.parentElement
+    ) {
+      for (
+        let sibling = ancestor.previousElementSibling;
+        sibling;
+        sibling = sibling.previousElementSibling
+      ) {
+        const position = getComputedStyle(sibling).position;
+        // Absolute hero backgrounds resize with the slot but do not move it.
+        if (position !== "absolute" && position !== "fixed")
+          observer?.observe(sibling);
+      }
+    }
     document.fonts.ready.then(() => {
       if (disposed) return;
       measure();

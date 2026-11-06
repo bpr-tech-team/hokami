@@ -79,15 +79,20 @@ export function VideoSection({
       data-slot="video-section"
       data-active={active || undefined}
       className={cn(
-        "group/video relative z-10 scroll-mt-(--site-header-height) px-5 [--video-gap:20px] [--video-height:max(320px,calc(100svh-var(--video-top)-var(--video-gap)))] [--video-top:var(--site-sticky-offset)] [overflow-anchor:none] tablet:px-10 tablet:[--video-gap:40px]",
+        "group/video relative z-10 w-full scroll-mt-(--site-header-height) px-5 [--video-gap:20px] [--video-top:var(--site-sticky-offset)] [overflow-anchor:none] tablet:px-10 tablet:[--video-gap:40px]",
         className,
       )}
     >
-      <div data-video-slot className="relative h-0 w-full">
+      <div data-video-slot className="relative h-[min(180px,45vw)] w-full">
         <div
           data-video-stage
-          className="pointer-events-none invisible absolute inset-x-0 top-0 h-(--video-height) group-data-ready/video:visible motion-reduce:aspect-video motion-reduce:h-auto"
+          className="pointer-events-none invisible absolute inset-x-0 top-0 aspect-video group-data-ready/video:visible"
         >
+          <div
+            data-video-preview-anchor
+            aria-hidden="true"
+            className="absolute top-0 left-[var(--video-preview-inset,0px)]"
+          />
           <div
             data-video-frame
             className="pointer-events-none absolute inset-0"
@@ -98,13 +103,14 @@ export function VideoSection({
             >
               <div
                 data-video-media
-                className="absolute bottom-0 left-0 size-full origin-bottom-left group-data-active/video:invisible"
+                className="absolute top-0 left-0 size-full origin-top-left group-data-active/video:invisible"
               >
                 <Image
                   src={poster}
                   alt=""
                   fill
                   sizes="(max-width: 759px) 100vw, 1440px"
+                  loading="eager"
                   unoptimized
                   className="object-cover"
                 />
@@ -212,7 +218,7 @@ export function VideoSection({
         </div>
       </div>
       <noscript>
-        <div className="relative aspect-video w-full">
+        <div className="relative -mt-[min(180px,45vw)] aspect-video w-full">
           <Image
             src={poster}
             alt=""

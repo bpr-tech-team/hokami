@@ -5,7 +5,9 @@ type RevealDimensions = {
   viewportHeight: number;
   viewportWidth: number;
   bottomGap: number;
+  topOffset: number;
   compact: boolean;
+  previewInset?: number;
 };
 
 export type VideoRevealMeasurement = RevealDimensions & {
@@ -16,7 +18,7 @@ export function hasVideoRevealLayoutChanged(
   previous: VideoRevealMeasurement | undefined,
   next: VideoRevealMeasurement,
 ) {
-  // The svh-sized stage stays fixed when mobile browser toolbars move. A change
+  // The aspect-ratio stage stays fixed when mobile browser toolbars move. A change
   // to innerHeight alone must not collapse the slot or rebuild its animations.
   return (
     !previous ||
@@ -25,7 +27,9 @@ export function hasVideoRevealLayoutChanged(
     previous.height !== next.height ||
     previous.viewportWidth !== next.viewportWidth ||
     previous.bottomGap !== next.bottomGap ||
+    previous.topOffset !== next.topOffset ||
     previous.compact !== next.compact ||
+    previous.previewInset !== next.previewInset ||
     previous.reducedMotion !== next.reducedMotion
   );
 }
@@ -37,7 +41,9 @@ export function getVideoRevealGeometry({
   viewportHeight,
   viewportWidth,
   bottomGap,
+  topOffset,
   compact,
+  previewInset = 0,
 }: RevealDimensions) {
   const previewWidth = Math.min(
     width,
@@ -45,8 +51,8 @@ export function getVideoRevealGeometry({
     compact ? viewportWidth * 0.8 : 320,
   );
   const previewHeight = previewWidth * (9 / 16);
-  const start = Math.max(0, top - viewportHeight);
-  const end = Math.max(start + 1, top + height - viewportHeight + bottomGap);
+  const start = Math.max(0, top + previewHeight + bottomGap - viewportHeight);
+  const end = Math.max(start + 1, top - topOffset);
   const mediaHeight = width * (9 / 16);
   const mediaScale = Math.max(1, height / mediaHeight);
 
@@ -55,23 +61,20 @@ export function getVideoRevealGeometry({
     end,
     previewWidth,
     previewHeight,
-    clip: `inset(${height - previewHeight}px ${width - previewWidth}px 0px 0px)`,
-    mediaStart: `translate(0px, 0px) scale(${previewWidth / width})`,
-    // Uniform scaling preserves the video's aspect ratio, including the tall
-    // mobile frame. Only the surrounding viewport changes shape.
-    mediaEnd: `translate(${(width - width * mediaScale) / 2}px, ${(mediaHeight * mediaScale - height) / 2}px) scale(${mediaScale})`,
+    previewInset,
+    clip: `inset(0px ${width - previewInset - previewWidth}px ${height - previewHeight}px ${previewInset}px)`,
+    mediaStart: `translate(${previewInset}px, 0px) scale(${previewWidth / width})`,
+    // Uniform scaling preserves the source proportions throughout the reveal.
+    mediaEnd: `translate(${(width - width * mediaScale) / 2}px, ${(height - mediaHeight * mediaScale) / 2}px) scale(${mediaScale})`,
   };
 }
 
-export function getVideoRevealPosition(
+export function getVideoRevealProgress(
   {
     start,
     end,
   }: Pick<ReturnType<typeof getVideoRevealGeometry>, "start" | "end">,
   scrollY: number,
 ) {
-  return {
-    progress: Math.max(0, Math.min(1, (scrollY - start) / (end - start))),
-    translateY: Math.min(0, Math.max(start, scrollY) - end),
-  };
+  return Math.max(0, Math.min(1, (scrollY - start) / (end - start)));
 }

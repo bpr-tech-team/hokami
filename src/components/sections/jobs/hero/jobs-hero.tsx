@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { HeroSection } from "@/components/sections/hero/hero-section";
+import { CompanyVideo } from "@/components/sections/video/company-video";
 import { recruitmentContact } from "../data";
 
 export async function JobsHero() {
@@ -12,7 +13,6 @@ export async function JobsHero() {
       title={t("title")}
       description={t("description")}
       descriptionProps={{ tone: "secondary", className: "max-w-copy" }}
-      className="min-h-[max(489px,calc(100svh-var(--site-header-height)))] pb-60 tablet:min-h-[max(740px,calc(100svh-var(--site-header-height)))] tablet:pb-60 desktop:pb-60"
       actionsClassName="mt-4 w-full gap-4 desktop:mt-10"
       actions={[
         {
@@ -29,6 +29,7 @@ export async function JobsHero() {
           className: "w-full tablet:w-auto",
         },
       ]}
+      media={<CompanyVideo />}
     />
   );
 }

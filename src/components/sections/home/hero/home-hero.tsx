@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { HeroSection } from "@/components/sections/hero/hero-section";
+import { CompanyVideo } from "@/components/sections/video/company-video";
 
 export async function HomeHero() {
   const t = await getTranslations("Hero");
@@ -18,6 +19,7 @@ export async function HomeHero() {
         { label: t("contact"), href: "#reques-for-quote" },
         { label: t("production"), href: "#industries" },
       ]}
+      media={<CompanyVideo />}
     />
   );
 }

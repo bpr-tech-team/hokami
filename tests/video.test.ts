@@ -11,28 +11,31 @@ import fi from "../messages/fi.json";
 import pl from "../messages/pl.json";
 import {
   getVideoRevealGeometry,
-  getVideoRevealPosition,
+  getVideoRevealProgress,
   hasVideoRevealLayoutChanged,
 } from "../src/components/sections/video/video-reveal";
 
 const desktop = {
-  top: 812,
+  top: 640,
   width: 1360,
-  height: 788,
+  height: 765,
   viewportHeight: 900,
   viewportWidth: 1440,
   bottomGap: 40,
+  topOffset: 72,
   compact: false,
+  previewInset: 80,
 };
 
 test("moving mobile browser toolbars does not rebuild an unchanged video stage", () => {
   const initial = {
     top: 553,
     width: 350,
-    height: 760,
+    height: 196.875,
     viewportHeight: 844,
     viewportWidth: 390,
     bottomGap: 20,
+    topOffset: 64,
     compact: true,
     reducedMotion: false,
   };
@@ -54,7 +57,9 @@ test("video layout still refreshes for real resizing, content and motion changes
     { width: 824, height: 306, viewportWidth: 844, viewportHeight: 390 },
     { top: 900 },
     { bottomGap: 20 },
+    { topOffset: 64 },
     { compact: true },
+    { previewInset: 40 },
     { reducedMotion: true },
   ]) {
     assert.equal(
@@ -64,68 +69,62 @@ test("video layout still refreshes for real resizing, content and motion changes
   }
 });
 
-test("desktop preview starts 40 px above the viewport bottom without changing the hero", () => {
+test("desktop preview occupies its own slot below the hero actions and aligns with the text", () => {
   const geometry = getVideoRevealGeometry(desktop);
-  const position = getVideoRevealPosition(geometry, 0);
   assert.equal(geometry.previewWidth, 320);
   assert.equal(geometry.previewHeight, 180);
+  assert.equal(geometry.previewInset, 80);
+  assert.equal(geometry.clip, "inset(0px 960px 585px 80px)");
   assert.equal(
-    desktop.top + desktop.height + position.translateY - geometry.previewHeight,
-    680,
+    geometry.mediaStart,
+    "translate(80px, 0px) scale(0.23529411764705882)",
   );
-  assert.equal(position.progress, 0);
+  assert.equal(getVideoRevealProgress(geometry, 0), 0);
 });
 
 test("the expanded frame reaches the header then scrolls away in normal flow", () => {
   const geometry = getVideoRevealGeometry(desktop);
-  const expanded = getVideoRevealPosition(geometry, geometry.end);
-  assert.equal(expanded.progress, 1);
-  assert.equal(expanded.translateY, 0);
+  assert.equal(getVideoRevealProgress(geometry, geometry.end), 1);
   assert.equal(desktop.top - geometry.end, 72);
-  const after = getVideoRevealPosition(geometry, geometry.end + 200);
-  assert.equal(after.translateY, 0);
-  assert.equal(after.progress, 1);
+  assert.equal(getVideoRevealProgress(geometry, geometry.end + 200), 1);
   assert.equal(desktop.top - (geometry.end + 200), -128);
 });
 
-test("mobile preview keeps 16:9 and unfolds into its own tall slot", () => {
+test("mobile preview stays below the actions and unfolds into a 16:9 hero slot", () => {
   const geometry = getVideoRevealGeometry({
     top: 553,
     width: 350,
-    height: 760,
+    height: 196.875,
     viewportHeight: 844,
     viewportWidth: 390,
     bottomGap: 20,
+    topOffset: 64,
     compact: true,
   });
   assert.equal(geometry.previewWidth, 312);
   assert.equal(geometry.previewHeight, 175.5);
-  const initial = getVideoRevealPosition(geometry, 0);
-  assert.equal(553 + 760 + initial.translateY - geometry.previewHeight, 648.5);
+  assert.equal(geometry.previewInset, 0);
+  assert.equal(geometry.clip, "inset(0px 38px 21.375px 0px)");
+  assert.equal(getVideoRevealProgress(geometry, 0), 0);
   assert.equal(553 - geometry.end, 64);
-  assert.match(geometry.mediaEnd, /scale\(3\.860/);
+  assert.equal(geometry.mediaEnd, "translate(0px, 0px) scale(1)");
 });
 
 test("a reused section further down the page stays below the viewport until approached", () => {
   const geometry = getVideoRevealGeometry({ ...desktop, top: 3000 });
-  const initial = getVideoRevealPosition(geometry, 0);
-  assert.ok(
-    3000 + desktop.height + initial.translateY - geometry.previewHeight >
-      desktop.viewportHeight,
-  );
-  assert.equal(getVideoRevealPosition(geometry, geometry.start).progress, 0);
+  assert.equal(getVideoRevealProgress(geometry, 0), 0);
+  assert.equal(geometry.start, 2320);
+  assert.equal(3000 - geometry.start + geometry.previewHeight, 860);
+  assert.equal(getVideoRevealProgress(geometry, geometry.start), 0);
 });
 
 test("progress reverses with scrolling and clamps at the bounds", () => {
   const geometry = getVideoRevealGeometry(desktop);
-  const halfway = getVideoRevealPosition(geometry, geometry.end / 2);
-  assert.equal(halfway.progress, 0.5);
-  assert.equal(getVideoRevealPosition(geometry, -30).progress, 0);
-  assert.deepEqual(getVideoRevealPosition(geometry, 0), {
-    progress: 0,
-    translateY: -740,
-  });
-  assert.equal(getVideoRevealPosition(geometry, 10000).progress, 1);
+  const halfway = (geometry.start + geometry.end) / 2;
+  assert.equal(getVideoRevealProgress(geometry, halfway), 0.5);
+  assert.equal(getVideoRevealProgress(geometry, -30), 0);
+  assert.equal(getVideoRevealProgress(geometry, 0), 0);
+  assert.equal(getVideoRevealProgress(geometry, 10000), 1);
 });
 
 test("all locales have accessible video controls and no initial video downloads in server HTML", () => {

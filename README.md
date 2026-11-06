@@ -140,6 +140,8 @@ two places. Reuse the existing components when adding sections:
 - `components/sections/hero/`: shared `HeroSection` and independent
   `HeroBackground`. The section accepts translated content, actions, a heading
   element, an optional `backLink` before the eyebrow, and an optional background.
+  The optional `media` slot follows the content and actions, spans the hero width,
+  and stays in normal flow so expanding media increases the hero's height.
   Actions can pass a local icon and responsive width. `home/hero/` supplies homepage content.
   All hero headings use the shared `Heading` hero variant: Saira SemiBold with
   size/tracking of 40/−0.44 px on mobile, 56/−0.84 px on tablet,
@@ -170,8 +172,13 @@ two places. Reuse the existing components when adding sections:
   owns the About content layout, typography, and actions,
   supplies content in each locale, links contact to the homepage enquiry form and
   links `#history` to the history section.
-  The background uses CSS horizon gradients, inline SVG contacts, local Figma
-  trace SVGs, and a 30-second CSS timeline. Its small
+  From the `tablet` breakpoint (760 px), the background follows Figma `751:11080`:
+  six traces and seventeen contacts in a centered 1440 × 2320 px artwork stage,
+  shifted 30 px above the hero's vertical center, with the original horizon SVG.
+  Local assets live in `public/images/hero/wide/`. Smaller screens retain the
+  existing three traces, contacts and CSS horizon glow. The desktop path geometry
+  and exact keyframes come from the Figma SVGs and motion context; both variants
+  use a 30-second CSS timeline. Its small
   client wrapper pauses motion outside the viewport, in hidden tabs, and under
   reduced motion; without browser support it keeps a static background.
 - `components/sections/about/awards/`: static, server-rendered awards between
@@ -242,11 +249,12 @@ two places. Reuse the existing components when adding sections:
   digits, and RTL locales) retain their localized static value.
 - `components/sections/video/`: reusable `VideoSection`. Pass `src`, optional
   `mobileSrc` and silent `previewSrc`, `poster`, translated `labels`, and optional
-  caption `tracks`. `motion="scroll"` reveals the video from the viewport's lower
-  left into its own section, then lets it scroll away normally; `motion="none"`
-  renders a static section. The scroll section starts at zero height and grows
-  with the video, pushing following content down without reserving the full
-  frame in advance. The hero is independent. Scroll uses paused Web
+  caption `tracks`. `motion="scroll"` reveals the video from an inline 16:9
+  preview, then lets it scroll away normally; `motion="none"` renders a static
+  section. The layout slot starts at the preview's height and grows with the
+  video, pushing following content down without reserving the full frame in
+  advance. The preview stays below the preceding content throughout the reveal.
+  Scroll uses paused Web
   Animations driven by one scheduled frame per scroll event, with measurements
   on resize rather than each frame. Its stable artwork stage is separate from
   the growing layout slot, so resizing the slot cannot reset the timeline.
@@ -258,10 +266,15 @@ two places. Reuse the existing components when adding sections:
   in hidden tabs, and while the full player is active. The full source is assigned
   only on click and uses native controls inline. Without JS a direct video link
   remains available. `CompanyVideo` supplies the shared company media and translations
-  for Home and Jobs. Both pages render `<CompanyVideo />` with identical media,
-  geometry and motion. The expanded frame has 20 px mobile and 40 px tablet/desktop
-  gutters, without the content container's maximum width. The Jobs hero reserves
-  space for the viewport-based preview so it cannot cover its actions or job cards.
+  for Home and Jobs. Both heroes render `<CompanyVideo />` in the shared `media`
+  slot, with identical media, geometry and motion. The preview aligns with the
+  hero actions, separated by 40 px on mobile and 48 px from tablet. The media
+  wrapper uses the same spacing below the video, replacing the hero's bottom
+  padding when media is present. The expanded
+  frame has 20 px mobile and 40 px tablet/desktop gutters, with a maximum media
+  width of 1440 px centered on wider screens. The expanded frame stays 16:9 at
+  every breakpoint, including during playback; its height follows its width. Expanding the video grows the hero itself; neither
+  hero needs an empty spacer for an overlapping preview.
   Optimized media in `public/video/` is derived from `homepage.mp4`: H.264/yuv420p,
   `faststart`, no metadata/data streams; 1080p CRF 25 with 128 kbps AAC, 720p CRF 26
   with 96 kbps AAC, and a silent 12-second 1920×1080 / 25 fps CRF 28 preview starting

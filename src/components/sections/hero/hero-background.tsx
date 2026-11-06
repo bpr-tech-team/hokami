@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useId } from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -144,18 +145,29 @@ function Artwork({
           </svg>
         );
       })}
-      {artwork.vias.map(({ x, y }) => (
-        <ellipse
-          key={`${x}:${y}`}
-          cx={x + artwork.via.width / 2}
-          cy={y + artwork.via.height / 2}
-          rx={(artwork.via.width - 1) / 2}
-          ry={(artwork.via.height - 1) / 2}
-          fill="var(--color-surface-default)"
-          stroke={artwork.via.stroke}
-          vectorEffect={vectorEffect}
-        />
-      ))}
+      {artwork.vias.map(({ x, y }) =>
+        artwork.via.src ? (
+          <image
+            key={`${x}:${y}`}
+            href={artwork.via.src}
+            x={x}
+            y={y}
+            width={artwork.via.width}
+            height={artwork.via.height}
+          />
+        ) : (
+          <ellipse
+            key={`${x}:${y}`}
+            cx={x + artwork.via.width / 2}
+            cy={y + artwork.via.height / 2}
+            rx={(artwork.via.width - 1) / 2}
+            ry={(artwork.via.height - 1) / 2}
+            fill="var(--color-surface-default)"
+            stroke={artwork.via.stroke}
+            vectorEffect={vectorEffect}
+          />
+        ),
+      )}
     </svg>
   );
 }
@@ -176,11 +188,20 @@ export function HeroBackground({
     >
       {/* Keep the large, unchanging blur outside the animated SVG paint surface. */}
       <HeroHorizonGlow />
+      <Image
+        src="/images/hero/wide/horizon-glow.svg"
+        alt=""
+        width={3468}
+        height={3468}
+        unoptimized
+        data-slot="hero-desktop-glow"
+        className="absolute bottom-[-1068px] left-[calc(50%-10px)] hidden max-w-none -translate-x-1/2 tablet:block"
+      />
       <Artwork
         artwork={desktopArtwork}
         prefix={`${id}-desktop`}
         className={cn(
-          "absolute top-1/2 left-1/2 hidden h-[900px] w-[1440px] max-w-none -translate-1/2 tablet:block",
+          "absolute top-[calc(50%-30px)] left-1/2 hidden h-[2320px] w-[1440px] max-w-none -translate-1/2 tablet:block",
           desktopClassName,
         )}
       />

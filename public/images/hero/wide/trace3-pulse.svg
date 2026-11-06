@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="93.4" height="2352" viewBox="0 0 93.4 2352" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Trace 3 / pulse" filter="url(#filter0_d_0_169)">
+<path d="M6.7 6V206L86.7 286V446L6.7 526V906L86.7 986V1326L6.7 1406V1806L86.7 1886V2076L6.7 2156V2346" stroke-width="1.4" stroke="#FE4704" stroke-opacity="0.5" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_0_169" x="-1.78814e-07" y="0" width="93.4" height="2352" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="3"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.996078 0 0 0 0 0.278431 0 0 0 0 0.0156863 0 0 0 0.9 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_169"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_169" result="shape"/>
+</filter>
+</defs>
+</svg>
