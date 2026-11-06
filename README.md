@@ -175,6 +175,15 @@ two places. Reuse the existing components when adding sections:
   From the `tablet` breakpoint (760 px), the background follows Figma `751:11080`:
   six traces and seventeen contacts in a centered 1440 × 2320 px artwork stage,
   shifted 30 px above the hero's vertical center, with the original horizon SVG.
+  Heroes with media use `sizing="artwork"`: a top-anchored 2220 px desktop canvas
+  keeps traces and glow stationary relative to the hero while video expansion
+  grows its outer clipping area. On mobile, `useVideoReveal` publishes the fully
+  expanded hero height as `--hero-expanded-height`, measured from the stable
+  final video stage and section padding. The mobile lines extend beyond the
+  hero boundaries without following scroll progress; text and width changes
+  refresh the measurement. Before hydration, mobile artwork fills the section.
+  Heroes without media retain
+  section-based sizing.
   Local assets live in `public/images/hero/wide/`. Smaller screens retain the
   existing three traces, contacts and CSS horizon glow. The desktop path geometry
   and exact keyframes come from the Figma SVGs and motion context; both variants

@@ -13,6 +13,8 @@ import "@/components/ui/trace-pulse.css";
 
 type HeroBackgroundProps = {
   animated?: boolean;
+  /** Keep the canvas independent of the animated media slot. */
+  sizing?: "section" | "artwork";
   className?: string;
   desktopArtwork?: HeroArtwork;
   desktopClassName?: string;
@@ -175,6 +177,7 @@ function Artwork({
 /** The parent supplies a positioned box; this background also works without HeroSection. */
 export function HeroBackground({
   animated = true,
+  sizing = "section",
   className,
   desktopArtwork = defaultDesktopArtwork,
   desktopClassName,
@@ -186,51 +189,60 @@ export function HeroBackground({
       animated={animated}
       className={cn("hokami-hero-background", className)}
     >
-      {/* Keep the large, unchanging blur outside the animated SVG paint surface. */}
-      <HeroHorizonGlow />
-      <Image
-        src="/images/hero/wide/horizon-glow.svg"
-        alt=""
-        width={3468}
-        height={3468}
-        unoptimized
-        data-slot="hero-desktop-glow"
-        className="absolute bottom-[-1068px] left-[calc(50%-10px)] hidden max-w-none -translate-x-1/2 tablet:block"
-      />
-      <Artwork
-        artwork={desktopArtwork}
-        prefix={`${id}-desktop`}
+      <div
+        data-slot="hero-background-stage"
         className={cn(
-          "absolute top-[calc(50%-30px)] left-1/2 hidden h-[2320px] w-[1440px] max-w-none -translate-1/2 tablet:block",
-          desktopClassName,
+          "absolute inset-0",
+          sizing === "artwork" &&
+            "bottom-auto h-[var(--hero-expanded-height,100%)] tablet:h-[2220px]",
         )}
-      />
-      <div className="absolute inset-0 tablet:hidden">
-        {mobileTraces.map((trace, index) => (
-          <div
-            key={trace.id}
-            className={mobileTraceLayouts[index]}
-            style={{
-              aspectRatio: `${trace.artwork.width} / ${trace.artwork.height}`,
-            }}
-          >
-            <Artwork
-              artwork={trace.artwork}
-              prefix={`${id}-mobile-${index}`}
-              className="block size-full max-w-none"
-              baseStrokeWidth={1}
-              nonScalingStroke
-            />
-            {trace.contacts.map((position, contactIndex) => (
-              <span
-                key={contactIndex}
-                data-slot="hero-trace-contact"
-                className="absolute size-[7px] -translate-1/2 rounded-full border border-action-primary bg-surface-default"
-                style={position}
+      >
+        {/* Keep the large, unchanging blur outside the animated SVG paint surface. */}
+        <HeroHorizonGlow />
+        <Image
+          src="/images/hero/wide/horizon-glow.svg"
+          alt=""
+          width={3468}
+          height={3468}
+          unoptimized
+          data-slot="hero-desktop-glow"
+          className="absolute bottom-[-1068px] left-[calc(50%-10px)] hidden max-w-none -translate-x-1/2 tablet:block"
+        />
+        <Artwork
+          artwork={desktopArtwork}
+          prefix={`${id}-desktop`}
+          className={cn(
+            "absolute top-[calc(50%-30px)] left-1/2 hidden h-[2320px] w-[1440px] max-w-none -translate-1/2 tablet:block",
+            desktopClassName,
+          )}
+        />
+        <div className="absolute inset-0 tablet:hidden">
+          {mobileTraces.map((trace, index) => (
+            <div
+              key={trace.id}
+              className={mobileTraceLayouts[index]}
+              style={{
+                aspectRatio: `${trace.artwork.width} / ${trace.artwork.height}`,
+              }}
+            >
+              <Artwork
+                artwork={trace.artwork}
+                prefix={`${id}-mobile-${index}`}
+                className="block size-full max-w-none"
+                baseStrokeWidth={1}
+                nonScalingStroke
               />
-            ))}
-          </div>
-        ))}
+              {trace.contacts.map((position, contactIndex) => (
+                <span
+                  key={contactIndex}
+                  data-slot="hero-trace-contact"
+                  className="absolute size-[7px] -translate-1/2 rounded-full border border-action-primary bg-surface-default"
+                  style={position}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </HeroMotion>
   );

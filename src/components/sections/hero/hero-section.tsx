@@ -69,8 +69,8 @@ export function HeroSection({
   contentClassName,
   actions = [],
   actionsClassName,
-  background = <HeroBackground />,
   media,
+  background = <HeroBackground sizing={media ? "artwork" : "section"} />,
   layout,
   size,
   className,
@@ -84,6 +84,7 @@ export function HeroSection({
       {...props}
       id={id}
       aria-labelledby={headingId}
+      data-hero-media={media ? true : undefined}
       className={cn(
         heroSectionVariants({ layout, size }),
         media && "pb-0 tablet:pb-0 desktop:pb-0",

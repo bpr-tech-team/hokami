@@ -67,6 +67,11 @@ export function useVideoReveal(
     )
       return;
 
+    const hero = root.closest<HTMLElement>("[data-hero-media]");
+    const mediaContainer = root.parentElement;
+    const previousHeroHeight = hero?.style.getPropertyValue(
+      "--hero-expanded-height",
+    );
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const compact = window.matchMedia("(max-width: 47.499rem)");
     let geometry: ReturnType<typeof getVideoRevealGeometry> | undefined;
@@ -141,6 +146,19 @@ export function useVideoReveal(
       if (!hasVideoRevealLayoutChanged(measurement, nextMeasurement)) {
         schedule();
         return;
+      }
+      if (hero && mediaContainer && bounds.width && bounds.height) {
+        // The final stage is stable while the layout slot grows. Use its bottom
+        // to size mobile artwork beyond the hero, without following scroll.
+        const heroStyle = getComputedStyle(hero);
+        const expandedHeight = Math.max(
+          parseFloat(heroStyle.minHeight) || 0,
+          bounds.bottom -
+            hero.getBoundingClientRect().top +
+            parseFloat(getComputedStyle(mediaContainer).paddingBottom) +
+            parseFloat(heroStyle.paddingBottom),
+        );
+        hero.style.setProperty("--hero-expanded-height", `${expandedHeight}px`);
       }
       holdAnchoring();
       reset();
@@ -326,6 +344,11 @@ export function useVideoReveal(
       compact.removeEventListener("change", measure);
       reset();
       delete root.dataset.ready;
+      if (hero) {
+        if (previousHeroHeight)
+          hero.style.setProperty("--hero-expanded-height", previousHeroHeight);
+        else hero.style.removeProperty("--hero-expanded-height");
+      }
       releaseAnchoring?.();
     };
   }, [enabled, expanded, rootRef]);
