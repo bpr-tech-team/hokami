@@ -636,26 +636,8 @@
     "positions": {
       "eyebrow": "Werden Sie Teil unseres Teams",
       "title": "Offene Stellen",
-      "items": {
-        "buyer": {
-          "department": "Kaufmännisches Team",
-          "title": "Einkäufer / Einkäuferin",
-          "description": "Für unser kaufmännisches Team suchen wir einen neuen Kollegen oder eine neue Kollegin im Einkauf. Wenn Sie sich für Handel, Verhandlungen und eine Tätigkeit interessieren, die den Unternehmensalltag maßgeblich mitgestaltet, könnte diese Stelle zu Ihnen passen. Ein sofortiger Einstieg ist möglich, eine Einarbeitung ist selbstverständlich.",
-          "link": "Mehr erfahren: Einkauf"
-        },
-        "testEngineer": {
-          "department": "Technische Abteilung",
-          "title": "Konstruktion elektronischer Prüfgeräte / Entwicklung von Softwareanwendungen",
-          "description": "Für unsere technische Abteilung suchen wir eine geeignete Fachkraft für die Konstruktion elektronischer Prüfgeräte und die Entwicklung von Softwareanwendungen. Ein sofortiger Einstieg ist möglich. Eine Einarbeitung ist selbstverständlich.",
-          "link": "Mehr erfahren: Konstruktion"
-        },
-        "production": {
-          "department": "Produktion",
-          "title": "Mitarbeiter / Mitarbeiterin in der Elektronikfertigung",
-          "description": "Zur Verstärkung unseres Produktionsteams suchen wir einen neuen Mitarbeiter oder eine neue Mitarbeiterin in der Elektronikfertigung.",
-          "link": "Mehr erfahren: Fertigung"
-        }
-      }
+      "readMore": "Mehr erfahren: {title}",
+      "empty": "Derzeit haben wir keine offenen Stellen. Sie können uns dennoch gerne Ihren Lebenslauf senden."
     },
     "contact": {
       "eyebrow": "Lebenslauf",

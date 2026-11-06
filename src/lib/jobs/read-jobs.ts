@@ -1,0 +1,40 @@
+import { createReader } from "@keystatic/core/reader";
+import { jobsReaderConfig } from "./collection";
+import type { JobCardRecord, JobCardText } from "./resolve-job";
+
+export const jobsReader = createReader(process.cwd(), jobsReaderConfig);
+
+function cardText(entry: JobCardText): JobCardText {
+  return {
+    title: entry.title,
+    department: entry.department,
+    description: entry.description,
+    linkLabel: entry.linkLabel,
+  };
+}
+
+export async function readJobCardRecords(): Promise<JobCardRecord[]> {
+  const records = await jobsReader.collections.jobs.all();
+
+  // Keep WYSIWYG ASTs out of the card cache and the public React payload.
+  return records.map(({ slug, entry }) => {
+    if (entry.order === null) {
+      throw new Error(`Job ${slug} must have an order.`);
+    }
+
+    return {
+      slug,
+      entry: {
+        ...cardText(entry),
+        status: entry.status,
+        order: entry.order,
+        translations: {
+          en: cardText(entry.translations.en),
+          de: cardText(entry.translations.de),
+          fi: cardText(entry.translations.fi),
+          pl: cardText(entry.translations.pl),
+        },
+      },
+    };
+  });
+}

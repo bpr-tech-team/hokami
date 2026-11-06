@@ -11,6 +11,7 @@ type JobCardProps = {
   description: string;
   linkLabel: string;
   href: string;
+  contentLocale: string;
 };
 
 export function JobCard({
@@ -20,6 +21,7 @@ export function JobCard({
   description,
   linkLabel,
   href,
+  contentLocale,
 }: JobCardProps) {
   const titleId = `job-${id}-title`;
   const departmentId = `job-${id}-department`;
@@ -27,6 +29,7 @@ export function JobCard({
   return (
     <a
       href={href}
+      lang={contentLocale}
       aria-labelledby={`${titleId} ${departmentId}`}
       className="group/card-link block h-full min-w-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
     >

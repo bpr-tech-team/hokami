@@ -37,7 +37,7 @@ jobs:
       - name: Check code
         run: npm run check
 
-      - name: Test enquiry validation and protection
+      - name: Test application
         run: npm test
 
       - name: Build application

@@ -1,0 +1,39 @@
+{
+  "title": "Dělník / dělnice v elektronice",
+  "department": "Výroba",
+  "description": "Do našeho pracovního výrobního týmu přijmeme nového kolegu / kolegyni na pozici dělník / dělnice v elektronice.",
+  "linkLabel": "Číst dále: Dělník / dělnice",
+  "content": "",
+  "status": "published",
+  "order": 30,
+  "translations": {
+    "en": {
+      "title": "Electronics production worker",
+      "department": "Production",
+      "description": "We are looking for a new colleague to join our production team as an electronics production worker.",
+      "linkLabel": "Read more: Production worker",
+      "content": ""
+    },
+    "de": {
+      "title": "Mitarbeiter / Mitarbeiterin in der Elektronikfertigung",
+      "department": "Produktion",
+      "description": "Zur Verstärkung unseres Produktionsteams suchen wir einen neuen Mitarbeiter oder eine neue Mitarbeiterin in der Elektronikfertigung.",
+      "linkLabel": "Mehr erfahren: Fertigung",
+      "content": ""
+    },
+    "fi": {
+      "title": "Elektroniikan tuotantotyöntekijä",
+      "department": "Tuotanto",
+      "description": "Etsimme tuotantotiimiimme uutta kollegaa elektroniikan tuotantotyöntekijän tehtävään.",
+      "linkLabel": "Lue lisää: Tuotantotyöntekijä",
+      "content": ""
+    },
+    "pl": {
+      "title": "Pracownik / pracownica produkcji elektroniki",
+      "department": "Produkcja",
+      "description": "Do naszego zespołu produkcyjnego przyjmiemy nowego kolegę lub koleżankę na stanowisko pracownika lub pracownicy produkcji elektroniki.",
+      "linkLabel": "Czytaj dalej: Produkcja",
+      "content": ""
+    }
+  }
+}

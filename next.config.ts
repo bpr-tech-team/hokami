@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   cacheComponents: true,
   partialPrefetching: true,
+  // Keystatic uses the OAuth loopback host in development.
+  allowedDevOrigins: ["127.0.0.1"],
+  outputFileTracingIncludes: {
+    "/*/jobs": ["./src/content/jobs/**/*"],
+  },
   redirects() {
     return ["career", "careers"].flatMap((path) => [
       {
