@@ -27,9 +27,10 @@ export async function readJobCardRecords(): Promise<JobCardRecord[]> {
       entry: {
         ...cardText(entry),
         status: entry.status,
+        visibleLocales: entry.visibleLocales,
         order: entry.order,
         translations: {
-          en: cardText(entry.translations.en),
+          cs: cardText(entry.translations.cs),
           de: cardText(entry.translations.de),
           fi: cardText(entry.translations.fi),
           pl: cardText(entry.translations.pl),

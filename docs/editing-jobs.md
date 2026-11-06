@@ -6,7 +6,7 @@ nové větve ani pull requesty vytvářet nemusíte.
 
 ## Přidání a úpravy
 
-Vyberte **Přidat**, nebo otevřete existující pozici. Vyplňte český název,
+Vyberte **Přidat**, nebo otevřete existující pozici. Vyplňte anglický název,
 oddělení a krátký text. Identifikátor se vytvoří automaticky; u existující pozice
 ho neměňte. Hlavní text upravujte jako v textovém editoru: můžete používat nadpisy,
 seznamy, tučné písmo, odkazy, tabulky a obrázky. Hlavní text zatím na webu není
@@ -17,9 +17,15 @@ JPG/JPEG a WEBP**, nejvýše **0,5 MB na každý soubor**. Větší obrázek nej
 zmenšete nebo komprimujte. Nepodporovaný či příliš velký soubor se nevloží a
 editor zobrazí chybu. U obrázků doplňujte výstižný alternativní text.
 
-Překlady jsou nepovinné. Karta použije překlad, až v daném jazyce vyplníte název,
-oddělení a krátký text. Do té doby se celá karta zobrazuje česky. Práci na
-neúplném překladu můžete uložit.
+Český, německý, finský a polský překlad jsou nepovinné. Karta použije překlad,
+až v daném jazyce vyplníte název, oddělení a krátký text. Do té doby se celá
+karta zobrazuje anglicky. Práci na neúplném překladu můžete uložit.
+
+V poli **Zobrazit v jazykových verzích** zaškrtněte, na kterých verzích webu má
+pozice být vidět. Zpočátku jsou vybrány všechny jazyky; bez výběru se pozice
+nezobrazí nikde. Tento výběr je nezávislý na překladech: vyplněný překlad sám
+pozici nezveřejní, chybějící překlad se nahradí angličtinou. Anglická pole jsou
+povinná i tehdy, když anglickou verzi webu nevyberete.
 
 **Pořadí** určuje umístění na webu: nižší číslo je dříve. Nová pozice má stav
 **Skrytá**. Pro zveřejnění vyberte **Zveřejněná** a uložte. Změny zveřejněné

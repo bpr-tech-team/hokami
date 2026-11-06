@@ -1,17 +1,18 @@
 {
-  "title": "Nákupčí",
-  "department": "Obchodní tým",
-  "description": "Do našeho obchodního týmu hledáme nového kolegu/kolegyni na pozici Nákupčí. Pokud tě láká prostředí obchodu, vyjednávání a práce, která má reálný dopad na fungování firmy, může to být role pro tebe. Nástup možný ihned, zaškolení je samozřejmostí.",
-  "linkLabel": "Číst dále: Nákupčí",
+  "title": "Buyer",
+  "department": "Commercial team",
+  "description": "We are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.",
+  "linkLabel": "Read more: Buyer",
   "content": "",
   "status": "published",
+  "visibleLocales": ["cs", "en", "de", "fi", "pl"],
   "order": 10,
   "translations": {
-    "en": {
-      "title": "Buyer",
-      "department": "Commercial team",
-      "description": "We are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.",
-      "linkLabel": "Read more: Buyer",
+    "cs": {
+      "title": "Nákupčí",
+      "department": "Obchodní tým",
+      "description": "Do našeho obchodního týmu hledáme nového kolegu/kolegyni na pozici Nákupčí. Pokud tě láká prostředí obchodu, vyjednávání a práce, která má reálný dopad na fungování firmy, může to být role pro tebe. Nástup možný ihned, zaškolení je samozřejmostí.",
+      "linkLabel": "Číst dále: Nákupčí",
       "content": ""
     },
     "de": {

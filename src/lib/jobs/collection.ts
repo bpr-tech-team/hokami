@@ -1,4 +1,5 @@
 import { collection, config, fields } from "@keystatic/core";
+import { languages } from "@/i18n/languages";
 import { jobContentField } from "./content-field";
 
 const requiredText = {
@@ -31,7 +32,7 @@ function translationFields(label: string) {
     {
       label,
       description:
-        "Karta použije překlad, až vyplníte název, oddělení a krátký text. Jinak se celá zobrazí česky. Hlavní text je zatím nepovinný.",
+        "Karta použije překlad, až vyplníte název, oddělení a krátký text. Jinak se celá zobrazí anglicky. Vyplnění překladu nemění výběr jazykových verzí. Hlavní text je zatím nepovinný.",
     },
   );
 }
@@ -45,7 +46,7 @@ export const jobsCollection = collection({
   schema: {
     title: fields.slug({
       name: {
-        label: "Název pozice (česky)",
+        label: "Název pozice (anglicky)",
         validation: { ...requiredText, length: { max: 200 } },
       },
       slug: {
@@ -60,11 +61,11 @@ export const jobsCollection = collection({
       },
     }),
     department: fields.text({
-      label: "Oddělení (česky)",
+      label: "Oddělení (anglicky)",
       validation: { ...requiredText, length: { max: 120 } },
     }),
     description: fields.text({
-      label: "Krátký text (česky)",
+      label: "Krátký text (anglicky)",
       multiline: true,
       validation: { ...requiredText, length: { max: 2000 } },
     }),
@@ -82,6 +83,16 @@ export const jobsCollection = collection({
       ],
       defaultValue: "draft",
     }),
+    visibleLocales: fields.multiselect({
+      label: "Zobrazit v jazykových verzích",
+      description:
+        "Vyberte, kde se má zveřejněná pozice zobrazit. Bez výběru se nezobrazí nikde. Chybějící překlad se nahradí angličtinou.",
+      options: languages.map(({ locale, name }) => ({
+        label: name,
+        value: locale,
+      })),
+      defaultValue: languages.map(({ locale }) => locale),
+    }),
     order: fields.integer({
       label: "Pořadí",
       description: "Nižší číslo se zobrazí dříve.",
@@ -90,7 +101,7 @@ export const jobsCollection = collection({
     }),
     translations: fields.object(
       {
-        en: translationFields("English"),
+        cs: translationFields("Čeština"),
         de: translationFields("Deutsch"),
         fi: translationFields("Suomi"),
         pl: translationFields("Polski"),

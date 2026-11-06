@@ -38,16 +38,17 @@ function record(
   return {
     slug,
     entry: {
-      ...czech,
+      ...english,
       status: "published",
+      visibleLocales: ["cs", "en", "de", "fi", "pl"],
       order: 10,
-      translations: { en: english, de: empty, fi: empty, pl: empty },
+      translations: { cs: czech, de: empty, fi: empty, pl: empty },
       ...overrides,
     },
   };
 }
 
-test("jobs use the complete requested translation and keep Czech as the base", () => {
+test("jobs use the complete requested translation and keep English as the base", () => {
   assert.deepEqual(resolveJobCard(record(), "cs"), {
     ...czech,
     id: "buyer",
@@ -60,9 +61,9 @@ test("jobs use the complete requested translation and keep Czech as the base", (
   });
   for (const locale of ["de", "fi", "pl"] as const) {
     assert.deepEqual(resolveJobCard(record(), locale), {
-      ...czech,
+      ...english,
       id: "buyer",
-      contentLocale: "cs",
+      contentLocale: "en",
     });
   }
 });
@@ -70,12 +71,38 @@ test("jobs use the complete requested translation and keep Czech as the base", (
 test("an incomplete or whitespace-only translation falls back as a whole card", () => {
   for (const field of ["title", "department", "description"] as const) {
     const job = record();
-    job.entry.translations.en = { ...english, [field]: "  \n " };
-    assert.deepEqual(resolveJobCard(job, "en"), {
-      ...czech,
+    job.entry.translations.cs = { ...czech, [field]: "  \n " };
+    assert.deepEqual(resolveJobCard(job, "cs"), {
+      ...english,
       id: "buyer",
-      contentLocale: "cs",
+      contentLocale: "en",
     });
+  }
+});
+
+test("visibility uses selected site languages independently of completed translations", () => {
+  const job = record("buyer", { visibleLocales: ["cs", "de"] });
+  assert.equal(getPublishedJobCards([job], "cs")[0].title, czech.title);
+  for (const locale of ["en", "fi", "pl"] as const) {
+    assert.deepEqual(getPublishedJobCards([job], locale), []);
+  }
+});
+
+test("selected versions can use English fallback while the English version is disabled", () => {
+  const job = record("buyer", { visibleLocales: ["de", "pl"] });
+  for (const locale of ["de", "pl"] as const) {
+    assert.deepEqual(getPublishedJobCards([job], locale), [
+      { ...english, id: "buyer", contentLocale: "en" },
+    ]);
+  }
+  assert.deepEqual(getPublishedJobCards([job], "en"), []);
+  assert.deepEqual(getPublishedJobCards([job], "cs"), []);
+});
+
+test("an empty language selection hides a published vacancy everywhere", () => {
+  const job = record("buyer", { visibleLocales: [] });
+  for (const locale of ["cs", "en", "de", "fi", "pl"] as const) {
+    assert.deepEqual(getPublishedJobCards([job], locale), []);
   }
 });
 
@@ -99,12 +126,12 @@ test("hidden jobs are omitted and ties have stable order without mutating input"
 });
 
 test("editing a title keeps the entry's stable identity", () => {
-  const job = record("buyer", { title: "Senior nákupčí" });
-  assert.equal(resolveJobCard(job, "cs").id, "buyer");
-  assert.equal(resolveJobCard(job, "cs").title, "Senior nákupčí");
+  const job = record("buyer", { title: "Senior buyer" });
+  assert.equal(resolveJobCard(job, "en").id, "buyer");
+  assert.equal(resolveJobCard(job, "en").title, "Senior buyer");
 });
 
-test("the native reader validates mandatory Czech fields and preserves WYSIWYG content", async () => {
+test("the native reader validates mandatory English fields and preserves language selection and WYSIWYG", async () => {
   const repoPath = await mkdtemp(join(tmpdir(), "hokami-jobs-"));
   const directory = join(repoPath, "src/content/jobs/example");
   const entry = JSON.parse(
@@ -114,8 +141,9 @@ test("the native reader validates mandatory Czech fields and preserves WYSIWYG c
     ),
   );
   entry.content =
-    "## Náplň práce\n\n- **Nákup** materiálu\n- [Kontakt](mailto:prace@hokami.cz)\n";
-  entry.translations.en.description = "";
+    "## Responsibilities\n\n- **Purchasing** materials\n- [Contact](mailto:prace@hokami.cz)\n";
+  entry.translations.cs.description = "";
+  entry.visibleLocales = ["fi"];
   try {
     await mkdir(directory, { recursive: true });
     const file = join(directory, "index.json");
@@ -123,7 +151,25 @@ test("the native reader validates mandatory Czech fields and preserves WYSIWYG c
     await writeFile(file, JSON.stringify(entry));
     const saved = await reader.collections.jobs.readOrThrow("example");
     assert.ok(saved.content.node.children.length > 0);
-    assert.equal(saved.translations.en.description, "");
+    assert.equal(saved.translations.cs.description, "");
+    assert.deepEqual(saved.visibleLocales, ["fi"]);
+
+    await writeFile(file, JSON.stringify({ ...entry, visibleLocales: [] }));
+    assert.deepEqual(
+      (
+        await createReader(
+          repoPath,
+          jobsReaderConfig,
+        ).collections.jobs.readOrThrow("example")
+      ).visibleLocales,
+      [],
+    );
+    await writeFile(file, JSON.stringify({ ...entry, visibleLocales: ["fr"] }));
+    await assert.rejects(
+      createReader(repoPath, jobsReaderConfig).collections.jobs.readOrThrow(
+        "example",
+      ),
+    );
 
     for (const field of ["title", "department", "description"] as const) {
       await writeFile(file, JSON.stringify({ ...entry, [field]: "  " }));

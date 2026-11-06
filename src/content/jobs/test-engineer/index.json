@@ -1,17 +1,18 @@
 {
-  "title": "Konstruktér testerů elektroniky / vývoj SW aplikací",
-  "department": "Technické oddělení",
-  "description": "Do našeho pracovního týmu hledáme vhodného uchazeče do technického oddělení na pozici Konstruktér testerů elektroniky / vývoj SW aplikací. Nástup možný ihned. Zaškolení je samozřejmostí.",
-  "linkLabel": "Číst dále: Konstruktér",
+  "title": "Electronics test equipment designer / software application developer",
+  "department": "Technical department",
+  "description": "We are looking for a suitable candidate to join our technical department as an Electronics Test Equipment Designer / Software Application Developer. An immediate start is possible. Training is provided.",
+  "linkLabel": "Read more: Designer",
   "content": "",
   "status": "published",
+  "visibleLocales": ["cs", "en", "de", "fi", "pl"],
   "order": 20,
   "translations": {
-    "en": {
-      "title": "Electronics test equipment designer / software application developer",
-      "department": "Technical department",
-      "description": "We are looking for a suitable candidate to join our technical department as an Electronics Test Equipment Designer / Software Application Developer. An immediate start is possible. Training is provided.",
-      "linkLabel": "Read more: Designer",
+    "cs": {
+      "title": "Konstruktér testerů elektroniky / vývoj SW aplikací",
+      "department": "Technické oddělení",
+      "description": "Do našeho pracovního týmu hledáme vhodného uchazeče do technického oddělení na pozici Konstruktér testerů elektroniky / vývoj SW aplikací. Nástup možný ihned. Zaškolení je samozřejmostí.",
+      "linkLabel": "Číst dále: Konstruktér",
       "content": ""
     },
     "de": {

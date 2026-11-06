@@ -59,15 +59,20 @@ The loopback origin is allowed for Next.js dev resources. Keep the public site's
 locale root layout separate from the admin root layout.
 
 The `jobs` collection stores one `src/content/jobs/{slug}/index.json` per vacancy.
-Its required Czech fields are title, department and short description. Each
+Its required English fields are title, department and short description. Each
 language also has a WYSIWYG main text, stored as inline Markdoc. Existing main
 texts start empty; they are editable but are not rendered until job detail pages
 are implemented. The title's slug is the stable entry identity: do not regenerate
 it when editing an existing vacancy.
 
 Cards use a translation only when its title, department and short description are
-all present. Otherwise the entire card falls back to Czech and uses `lang="cs"`.
-Draft entries are omitted. Published entries sort by ascending `order`, then slug.
+all present. Otherwise the entire card falls back to English and uses `lang="en"`.
+`visibleLocales` independently selects which language versions show the vacancy;
+completed translations never enable a language version automatically. All five
+languages are selected by default. An empty selection hides the vacancy everywhere.
+English content is required even when the English site version is not selected.
+Draft entries are omitted. Published entries in the selected language versions
+sort by ascending `order`, then slug.
 Generic interface copy stays in the `messages/` catalogs. The card links still
 point to the localized homepage until detail pages are added.
 

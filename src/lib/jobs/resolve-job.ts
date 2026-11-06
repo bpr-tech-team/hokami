@@ -7,12 +7,12 @@ export type JobCardText = Pick<
   JobEntry,
   "title" | "department" | "description" | "linkLabel"
 >;
-export type JobTranslationLocale = Exclude<Locale, "cs">;
+export type JobTranslationLocale = Exclude<Locale, "en">;
 
 export type JobCardRecord = {
   slug: string;
   entry: JobCardText &
-    Pick<JobEntry, "status"> & {
+    Pick<JobEntry, "status" | "visibleLocales"> & {
       order: number;
       translations: Record<JobTranslationLocale, JobCardText>;
     };
@@ -33,13 +33,13 @@ export function resolveJobCard(
   { slug, entry }: JobCardRecord,
   locale: Locale,
 ): ResolvedJobCard {
-  const translation = locale === "cs" ? null : entry.translations[locale];
+  const translation = locale === "en" ? null : entry.translations[locale];
   const useTranslation = translation && isCompleteTranslation(translation);
   const text = useTranslation ? translation : entry;
 
   return {
     id: slug,
-    contentLocale: useTranslation ? locale : "cs",
+    contentLocale: useTranslation ? locale : "en",
     title: text.title.trim(),
     department: text.department.trim(),
     description: text.description.trim(),
@@ -52,7 +52,10 @@ export function getPublishedJobCards(
   locale: Locale,
 ) {
   return records
-    .filter(({ entry }) => entry.status === "published")
+    .filter(
+      ({ entry }) =>
+        entry.status === "published" && entry.visibleLocales.includes(locale),
+    )
     .sort(
       (a, b) =>
         a.entry.order - b.entry.order ||
