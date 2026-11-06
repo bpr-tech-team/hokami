@@ -1,0 +1,12 @@
+{
+  "eyebrow": "Technická stránka",
+  "home": "Zpět na hlavní stránku",
+  "notFound": {
+    "title": "Tady spojení končí",
+    "description": "Požadovanou stránku se nepodařilo najít. Možná byla přesunuta nebo už neexistuje. Pokračujte na hlavní stránku."
+  },
+  "serverError": {
+    "title": "Spojení se přerušilo",
+    "description": "Tuto stránku se nepodařilo načíst. Zkuste to prosím později nebo pokračujte na hlavní stránku."
+  }
+}

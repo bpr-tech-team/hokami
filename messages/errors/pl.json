@@ -1,0 +1,12 @@
+{
+  "eyebrow": "Strona techniczna",
+  "home": "Wróć na stronę główną",
+  "notFound": {
+    "title": "Tu kończy się połączenie",
+    "description": "Nie znaleźliśmy żądanej strony. Mogła zostać przeniesiona lub usunięta. Przejdź na stronę główną."
+  },
+  "serverError": {
+    "title": "Połączenie przerwane",
+    "description": "Nie udało się wczytać tej strony. Spróbuj ponownie później lub przejdź na stronę główną."
+  }
+}

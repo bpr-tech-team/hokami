@@ -1,0 +1,12 @@
+{
+  "eyebrow": "Technische Seite",
+  "home": "Zur Startseite",
+  "notFound": {
+    "title": "Hier endet die Verbindung",
+    "description": "Die angeforderte Seite wurde nicht gefunden. Möglicherweise wurde sie verschoben oder ist nicht mehr verfügbar. Gehen Sie zur Startseite."
+  },
+  "serverError": {
+    "title": "Verbindung unterbrochen",
+    "description": "Diese Seite konnte nicht geladen werden. Bitte versuchen Sie es später erneut oder gehen Sie zur Startseite."
+  }
+}

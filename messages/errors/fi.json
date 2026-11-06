@@ -1,0 +1,12 @@
+{
+  "eyebrow": "Tekninen sivu",
+  "home": "Takaisin etusivulle",
+  "notFound": {
+    "title": "Yhteys päättyy tähän",
+    "description": "Pyytämääsi sivua ei löytynyt. Se on ehkä siirretty tai poistettu. Voit jatkaa etusivulle."
+  },
+  "serverError": {
+    "title": "Yhteys katkesi",
+    "description": "Sivua ei voitu ladata. Yritä myöhemmin uudelleen tai jatka etusivulle."
+  }
+}

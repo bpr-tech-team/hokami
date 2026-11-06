@@ -1,0 +1,12 @@
+{
+  "eyebrow": "Technical page",
+  "home": "Back to homepage",
+  "notFound": {
+    "title": "This connection ends here",
+    "description": "We couldn’t find the page you requested. It may have moved or no longer exist. Continue to our homepage."
+  },
+  "serverError": {
+    "title": "Connection interrupted",
+    "description": "We couldn’t load this page. Please try again later or continue to our homepage."
+  }
+}
