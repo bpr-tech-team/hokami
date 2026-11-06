@@ -636,26 +636,8 @@
     "positions": {
       "eyebrow": "Join our team",
       "title": "Current vacancies",
-      "items": {
-        "buyer": {
-          "department": "Commercial team",
-          "title": "Buyer",
-          "description": "We are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.",
-          "link": "Read more: Buyer"
-        },
-        "testEngineer": {
-          "department": "Technical department",
-          "title": "Electronics test equipment designer / software application developer",
-          "description": "We are looking for a suitable candidate to join our technical department as an Electronics Test Equipment Designer / Software Application Developer. An immediate start is possible. Training is provided.",
-          "link": "Read more: Designer"
-        },
-        "production": {
-          "department": "Production",
-          "title": "Electronics production worker",
-          "description": "We are looking for a new colleague to join our production team as an electronics production worker.",
-          "link": "Read more: Production worker"
-        }
-      }
+      "readMore": "Read more: {title}",
+      "empty": "We currently have no open vacancies. You are still welcome to send us your CV."
     },
     "contact": {
       "eyebrow": "Your CV",

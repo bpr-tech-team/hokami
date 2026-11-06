@@ -43,6 +43,73 @@ You can start editing the page by modifying `src/app/[locale]/page.tsx`. The pag
 Uses `next-intl` with Czech (`cs`) as the default language. Supported locales:
 `cs`, `en`, `de`, `fi`, `pl`. Translation catalogs are in `messages/`.
 
+## Job administration
+
+`/keystatic` manages vacancies with **Keystatic Cloud Free** (up to three team
+members, including the technical administrator). Pro, Cloud Images and multiplayer
+editing are not used. Configure the public project ID from Cloud settings as
+`NEXT_PUBLIC_KEYSTATIC_CLOUD_PROJECT=hokami/hokami` in the hosting environment.
+An unconfigured deployment shows a setup
+notice and its Keystatic API returns 503; it never enables filesystem writes.
+
+For local editing, add `NEXT_PUBLIC_KEYSTATIC_LOCAL_MODE=true` to `.env.local`
+and run `npm run dev`. Open `http://127.0.0.1:3000/keystatic`. This explicit local
+writer is only enabled in development, even if the variable is set in production.
+The loopback origin is allowed for Next.js dev resources. Keep the public site's
+locale root layout separate from the admin root layout.
+
+The admin uses the shared HOKAMI wordmark, self-hosted IBM Plex Sans / Mono and
+Saira fonts, and the palette in `src/app/brand-theme.css`. The website's existing
+Tailwind color names map to this palette. `src/app/keystatic/keystatic.css` maps it
+to Keystar's tokens and scopes overrides to `data-hokami-admin`, including portal
+providers. It keeps the native forms and WYSIWYG, with a fixed light palette and
+no theme picker. This bridge targets Keystar 0.10; visually check forms, menus,
+focus, validation feedback and the editor when updating Keystatic dependencies.
+
+The `jobs` collection stores one `src/content/jobs/{slug}/index.json` per vacancy.
+Keystatic owns these files' JSON formatting, so Prettier leaves them untouched.
+`npm run content:check` still validates every record and image before the build.
+Its required English fields are title, department and short description. Each
+language also has a WYSIWYG main text, stored as inline Markdoc. Existing main
+texts start empty; they are editable but are not rendered until job detail pages
+are implemented. The title's slug is the stable entry identity: do not regenerate
+it when editing an existing vacancy.
+
+Cards use a translation only when its title, department and short description are
+all present. Otherwise the entire card falls back to English and uses `lang="en"`.
+`visibleLocales` independently selects which language versions show the vacancy;
+completed translations never enable a language version automatically. All five
+languages are selected by default. An empty selection hides the vacancy everywhere.
+English content is required even when the English site version is not selected.
+Draft entries are omitted. Published entries in the selected language versions
+sort by ascending `order`, then slug.
+Generic interface copy stays in the `messages/` catalogs. The card links still
+point to the localized homepage until detail pages are added.
+
+Images can be inserted into the WYSIWYG text. Only PNG, JPG/JPEG and WEBP files
+are accepted, each at most **500,000 bytes (0.5 MB)**. Type is checked against the
+file signature as well as the extension. Uploaded images get unique filenames
+under `public/images/jobs/` and are stored in GitHub, without paid image hosting.
+Invalid uploads are rejected by the editor; `npm run content:check` also checks
+the image directory to catch files added directly to Git.
+
+Cloud saves commit to the connected GitHub repository. Use its default `main`
+branch for normal editing; Vercel's Git integration deploys that branch. A save
+reaches the public site after a successful deployment. `npm run build` runs content
+validation before Next.js. CI remains a separate process from Vercel deployments.
+Before enabling production editing, check the Cloud account's repository access,
+branch rules, Vercel commit-author permissions and the project's production branch
+with a real save. Keep Cloud within the free three-user limit.
+
+On another Node.js host, preserve the repository content, Cloud project ID and
+automatic rebuilds from `main`, and update the authorized site domain in Cloud.
+The public website reads its deployed checkout, not the Cloud API. Job files are
+included in server traces, and local saves invalidate the job cache. Restore
+deleted content from Git history and deploy it again; rolling back only the live
+deployment does not restore the source content.
+
+The short [editor guide](docs/editing-jobs.md) covers the day-to-day workflow.
+
 ## UI components
 
 Use [shadcn/ui](https://ui.shadcn.com/docs) for most of the project's graphical
@@ -88,7 +155,7 @@ two places. Reuse the existing components when adding sections:
   the action URL and optional contacts; the default is the company phone and email.
 - `components/sections/jobs/`: careers page at `/[locale]/jobs` in all five locales.
   `JobsHero` uses the standard hero and animated background; `JobsPositions`
-  composes three `JobCard` links from stable data and translated `Jobs` messages.
+  composes `JobCard` links from the Keystatic collection in `src/content/jobs/`.
   Card links temporarily lead to the localized homepage until job details exist.
   `JobsContact` passes only the recruitment email to the shared contact CTA.
   Navigation and `sitePages.careers` use `/jobs`; old `/career` and `/careers`
@@ -416,6 +483,7 @@ It uses Node.js from `.nvmrc` and the npm version from `packageManager` in
 ```bash
 npm ci
 npm run check
+npm test
 npm run build
 ```
 

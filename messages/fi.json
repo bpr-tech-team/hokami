@@ -636,26 +636,8 @@
     "positions": {
       "eyebrow": "Liity joukkoomme",
       "title": "Avoimet työpaikat",
-      "items": {
-        "buyer": {
-          "department": "Kaupallinen tiimi",
-          "title": "Ostaja",
-          "description": "Etsimme kaupalliseen tiimiimme uutta kollegaa ostajan tehtävään. Jos sinua kiinnostavat kaupankäynti, neuvottelut ja työ, jolla on todellinen vaikutus yrityksen toimintaan, tämä tehtävä voi sopia sinulle. Voit aloittaa heti, ja perehdytys kuuluu luonnollisesti tehtävään.",
-          "link": "Lue lisää: Ostaja"
-        },
-        "testEngineer": {
-          "department": "Tekninen osasto",
-          "title": "Elektroniikan testilaitteiden suunnittelija / ohjelmistokehittäjä",
-          "description": "Etsimme tekniselle osastollemme sopivaa henkilöä elektroniikan testilaitteiden suunnittelijan ja ohjelmistokehittäjän tehtävään. Voit aloittaa heti. Perehdytys kuuluu luonnollisesti tehtävään.",
-          "link": "Lue lisää: Suunnittelija"
-        },
-        "production": {
-          "department": "Tuotanto",
-          "title": "Elektroniikan tuotantotyöntekijä",
-          "description": "Etsimme tuotantotiimiimme uutta kollegaa elektroniikan tuotantotyöntekijän tehtävään.",
-          "link": "Lue lisää: Tuotantotyöntekijä"
-        }
-      }
+      "readMore": "Lue lisää: {title}",
+      "empty": "Meillä ei tällä hetkellä ole avoimia työpaikkoja. Voit silti lähettää meille ansioluettelosi."
     },
     "contact": {
       "eyebrow": "Ansioluettelo",

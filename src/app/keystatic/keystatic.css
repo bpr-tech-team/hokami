@@ -1,0 +1,159 @@
+@import "../brand-theme.css";
+
+/*
+ * Keystar 0.10 token bridge. Apply to every provider, including portal roots.
+ * Keystatic owns the controls and editor; no generated Emotion classes are used.
+ * Keep the palette light even when an earlier Keystatic session selected dark.
+ */
+html[data-hokami-admin],
+html[data-hokami-admin] .kui-theme {
+  color-scheme: light;
+
+  --kui-typography-font-family-base:
+    var(--font-ibm-plex-sans), Arial, sans-serif;
+  --kui-typography-font-family-code:
+    var(--font-ibm-plex-mono), "Courier New", monospace;
+
+  --kui-color-scale-white: var(--hokami-color-surface-default);
+  --kui-color-scale-black: var(--hokami-color-text-primary);
+  --kui-color-scale-slate1: var(--hokami-color-surface-default);
+  --kui-color-scale-slate2: var(--hokami-color-surface-default);
+  --kui-color-scale-slate3: var(--hokami-color-surface-subtle);
+  --kui-color-scale-slate4: var(--hokami-color-surface-raised);
+  --kui-color-scale-slate5: var(--hokami-color-border-subtle);
+  --kui-color-scale-slate6: var(--hokami-color-border-disabled);
+  --kui-color-scale-slate7: var(--hokami-color-text-disabled);
+  --kui-color-scale-slate8: var(--hokami-color-border-strong);
+  --kui-color-scale-slate9: var(--hokami-color-text-tertiary);
+  --kui-color-scale-slate10: var(--hokami-color-text-secondary);
+  --kui-color-scale-slate11: var(--hokami-color-text-primary);
+
+  --kui-color-scale-indigo1: var(--hokami-color-surface-default);
+  --kui-color-scale-indigo2: color-mix(
+    in srgb,
+    white,
+    var(--hokami-color-action-primary) 4%
+  );
+  --kui-color-scale-indigo3: var(--hokami-color-surface-accent-subtle);
+  --kui-color-scale-indigo4: var(--hokami-color-border-brand-subtle);
+  --kui-color-scale-indigo5: color-mix(
+    in srgb,
+    white,
+    var(--hokami-color-action-primary) 24%
+  );
+  --kui-color-scale-indigo6: color-mix(
+    in srgb,
+    white,
+    var(--hokami-color-action-primary) 35%
+  );
+  --kui-color-scale-indigo7: color-mix(
+    in srgb,
+    white,
+    var(--hokami-color-action-primary) 50%
+  );
+  --kui-color-scale-indigo8: color-mix(
+    in srgb,
+    white,
+    var(--hokami-color-action-primary) 70%
+  );
+  --kui-color-scale-indigo9: var(--hokami-color-action-primary);
+  --kui-color-scale-indigo10: var(--hokami-color-action-primary-hover);
+  --kui-color-scale-indigo11: var(--hokami-color-action-primary-pressed);
+
+  --kui-color-foreground-neutral: var(--hokami-color-text-primary);
+  --kui-color-foreground-neutral-emphasis: var(--hokami-color-text-primary);
+  --kui-color-foreground-neutral-secondary: var(--hokami-color-text-secondary);
+  --kui-color-foreground-neutral-tertiary: var(--hokami-color-text-tertiary);
+  --kui-color-foreground-accent: var(--hokami-color-text-accent);
+  --kui-color-alias-foreground-selected: var(--hokami-color-text-accent);
+  --kui-color-alias-foreground-focused: var(--hokami-color-text-accent);
+  --kui-color-alias-focus-ring: var(--hokami-color-focus-ring);
+  --kui-color-alias-border-idle: var(--hokami-color-border-strong);
+  --kui-color-alias-border-hovered: var(--hokami-color-border-strong-hover);
+  --kui-color-alias-border-disabled: var(--hokami-color-border-disabled);
+  --kui-color-alias-background-idle: color-mix(
+    in srgb,
+    transparent,
+    var(--hokami-color-text-primary) 3%
+  );
+  --kui-color-shadow-emphasis: color-mix(
+    in srgb,
+    transparent,
+    var(--hokami-color-text-primary) 20%
+  );
+  --kui-color-shadow-regular: color-mix(
+    in srgb,
+    transparent,
+    var(--hokami-color-text-primary) 15%
+  );
+  --kui-color-shadow-muted: color-mix(
+    in srgb,
+    transparent,
+    var(--hokami-color-text-primary) 5%
+  );
+
+  /* Keep feedback readable on light surfaces in every saved vendor scheme. */
+  --kui-color-background-critical: var(--hokami-color-feedback-error-surface);
+  --kui-color-background-critical-emphasis: var(
+    --hokami-color-feedback-error-text
+  );
+  --kui-color-foreground-critical: var(--hokami-color-feedback-error-text);
+  --kui-color-border-critical: color-mix(
+    in srgb,
+    white,
+    var(--hokami-color-feedback-error-text) 30%
+  );
+  --kui-color-scale-red3: var(--hokami-color-feedback-error-surface);
+  --kui-color-scale-red4: color-mix(
+    in srgb,
+    white,
+    var(--hokami-color-feedback-error-text) 12%
+  );
+  --kui-color-scale-red9: var(--hokami-color-feedback-error-text);
+  --kui-color-scale-red10: #8f1c13;
+  --kui-color-scale-red11: #7a180f;
+  --kui-color-background-positive: #e9f9ee;
+  --kui-color-background-positive-emphasis: #30a46c;
+  --kui-color-foreground-positive: #18794e;
+  --kui-color-border-positive: #b4dfc4;
+  --kui-color-background-caution: #fff4d5;
+  --kui-color-background-caution-emphasis: #ffb224;
+  --kui-color-foreground-caution: #ad5700;
+  --kui-color-border-caution: #ffd386;
+  --kui-color-background-pending: #f9f1fe;
+  --kui-color-background-pending-emphasis: #8e4ec6;
+  --kui-color-foreground-pending: #793aaf;
+  --kui-color-border-pending: #e3ccf4;
+  --kui-color-background-highlight: #feeef8;
+  --kui-color-background-highlight-emphasis: #d6409f;
+  --kui-color-foreground-highlight: #cd1d8d;
+  --kui-color-border-highlight: #f3c6e2;
+
+  --kui-size-radius-xsmall: 0px;
+  --kui-size-radius-small: 0px;
+  --kui-size-radius-regular: 0px;
+  --kui-size-radius-medium: 0px;
+  --kui-size-radius-large: 0px;
+  --kui-size-radius-xlarge: 0px;
+}
+
+html[data-hokami-admin] body {
+  margin: 0;
+  background: var(--hokami-color-surface-default);
+  color: var(--hokami-color-text-primary);
+  font-family: var(--font-ibm-plex-sans), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[data-hokami-admin] :is(h1, h2, h3, h4, h5, h6, [role="heading"]) {
+  font-family: var(--font-saira), Arial, sans-serif;
+}
+
+html[data-hokami-admin] :is(button, a[role="button"]) {
+  border-radius: 0;
+}
+
+/* HOKAMI uses a single light theme, so the vendor theme picker is redundant. */
+html[data-hokami-admin] [aria-label="theme"] {
+  display: none;
+}

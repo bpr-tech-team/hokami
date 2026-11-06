@@ -1,0 +1,40 @@
+{
+  "title": "Electronics test equipment designer / software application developer",
+  "department": "Technical department",
+  "description": "We are looking for a suitable candidate to join our technical department as an Electronics Test Equipment Designer / Software Application Developer. An immediate start is possible. Training is provided.",
+  "linkLabel": "Read more: Designer",
+  "content": "",
+  "status": "published",
+  "visibleLocales": ["cs", "en", "de", "fi", "pl"],
+  "order": 20,
+  "translations": {
+    "cs": {
+      "title": "Konstruktér testerů elektroniky / vývoj SW aplikací",
+      "department": "Technické oddělení",
+      "description": "Do našeho pracovního týmu hledáme vhodného uchazeče do technického oddělení na pozici Konstruktér testerů elektroniky / vývoj SW aplikací. Nástup možný ihned. Zaškolení je samozřejmostí.",
+      "linkLabel": "Číst dále: Konstruktér",
+      "content": ""
+    },
+    "de": {
+      "title": "Konstruktion elektronischer Prüfgeräte / Entwicklung von Softwareanwendungen",
+      "department": "Technische Abteilung",
+      "description": "Für unsere technische Abteilung suchen wir eine geeignete Fachkraft für die Konstruktion elektronischer Prüfgeräte und die Entwicklung von Softwareanwendungen. Ein sofortiger Einstieg ist möglich. Eine Einarbeitung ist selbstverständlich.",
+      "linkLabel": "Mehr erfahren: Konstruktion",
+      "content": ""
+    },
+    "fi": {
+      "title": "Elektroniikan testilaitteiden suunnittelija / ohjelmistokehittäjä",
+      "department": "Tekninen osasto",
+      "description": "Etsimme tekniselle osastollemme sopivaa henkilöä elektroniikan testilaitteiden suunnittelijan ja ohjelmistokehittäjän tehtävään. Voit aloittaa heti. Perehdytys kuuluu luonnollisesti tehtävään.",
+      "linkLabel": "Lue lisää: Suunnittelija",
+      "content": ""
+    },
+    "pl": {
+      "title": "Konstruktor testerów elektroniki / programista aplikacji",
+      "department": "Dział techniczny",
+      "description": "Do naszego działu technicznego szukamy odpowiedniego kandydata na stanowisko konstruktora testerów elektroniki / programisty aplikacji. Możliwość rozpoczęcia pracy od zaraz. Zapewniamy wdrożenie.",
+      "linkLabel": "Czytaj dalej: Konstruktor",
+      "content": ""
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import type { Ref } from "react";
+import { HokamiWordmark } from "@/components/brand/hokami-wordmark";
 import { Link } from "@/i18n/navigation";
 
 export function HeaderLogo({
@@ -20,15 +20,7 @@ export function HeaderLogo({
       aria-label={label}
       onClick={onNavigate}
     >
-      <Image
-        src="/images/header/wordmark.svg"
-        alt="HOKAMI"
-        width={103.615}
-        height={18.304}
-        className="h-[18.304px] w-[103.615px]"
-        unoptimized
-        loading="eager"
-      />
+      <HokamiWordmark className="h-[18.304px] w-[103.615px]" />
     </Link>
   );
 }
