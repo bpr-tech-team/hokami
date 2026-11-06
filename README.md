@@ -58,6 +58,14 @@ writer is only enabled in development, even if the variable is set in production
 The loopback origin is allowed for Next.js dev resources. Keep the public site's
 locale root layout separate from the admin root layout.
 
+The admin uses the shared HOKAMI wordmark, self-hosted IBM Plex Sans / Mono and
+Saira fonts, and the palette in `src/app/brand-theme.css`. The website's existing
+Tailwind color names map to this palette. `src/app/keystatic/keystatic.css` maps it
+to Keystar's tokens and scopes overrides to `data-hokami-admin`, including portal
+providers. It keeps the native forms and WYSIWYG, with a fixed light palette and
+no theme picker. This bridge targets Keystar 0.10; visually check forms, menus,
+focus, validation feedback and the editor when updating Keystatic dependencies.
+
 The `jobs` collection stores one `src/content/jobs/{slug}/index.json` per vacancy.
 Its required English fields are title, department and short description. Each
 language also has a WYSIWYG main text, stored as inline Markdoc. Existing main

@@ -1,5 +1,7 @@
+import "./keystatic.css";
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { ibmPlexMono, ibmPlexSans, saira } from "../fonts";
 import KeystaticApp from "./keystatic";
 
 export const metadata: Metadata = {
@@ -13,7 +15,11 @@ export default function KeystaticLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="cs">
+    <html
+      lang="cs"
+      data-hokami-admin
+      className={`${saira.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
+    >
       <body>
         <Suspense fallback={<p>Načítání administrace…</p>}>
           <KeystaticApp />

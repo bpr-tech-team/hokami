@@ -1,0 +1,30 @@
+/* Shared HOKAMI palette for the website and Keystatic. No element resets. */
+:root {
+  --hokami-color-surface-default: #ffffff;
+  --hokami-color-surface-subtle: #f5f4f2;
+  --hokami-color-surface-raised: #eeece8;
+  --hokami-color-surface-disabled: #eeece8;
+  --hokami-color-surface-inverse: #11100e;
+  --hokami-color-surface-accent-subtle: #fff1eb;
+  --hokami-color-text-primary: #11100e;
+  --hokami-color-text-secondary: #4a4741;
+  --hokami-color-text-tertiary: #6a665f;
+  --hokami-color-text-accent: #cc3700;
+  --hokami-color-text-accent-hover: #ad2e00;
+  --hokami-color-text-on-action: #ffffff;
+  --hokami-color-text-on-inverse: #ffffff;
+  --hokami-color-text-disabled: #ada9a2;
+  --hokami-color-border-subtle: #e2dfda;
+  --hokami-color-border-brand-subtle: #ffe0d3;
+  --hokami-color-border-strong: #8a8680;
+  --hokami-color-border-strong-hover: #4a4741;
+  --hokami-color-border-disabled: #cfcbc5;
+  --hokami-color-action-primary: #cc3700;
+  --hokami-color-action-primary-hover: #ad2e00;
+  --hokami-color-action-primary-pressed: #852400;
+  --hokami-color-action-primary-trace: #5c1900;
+  --hokami-color-brand-identity: #fe4704;
+  --hokami-color-focus-ring: #cc3700;
+  --hokami-color-feedback-error-text: #b42318;
+  --hokami-color-feedback-error-surface: #fdecea;
+}

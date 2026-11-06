@@ -1,4 +1,5 @@
 import { config } from "@keystatic/core";
+import { KeystaticBrandMark } from "./src/components/integrations/keystatic/brand-mark";
 import { jobsCollection } from "./src/lib/jobs/collection";
 
 const cloudProject = process.env.NEXT_PUBLIC_KEYSTATIC_CLOUD_PROJECT?.trim();
@@ -9,7 +10,10 @@ export const isLocalKeystatic =
 
 const common = {
   locale: "cs-CZ" as const,
-  ui: { brand: { name: "HOKAMI" }, navigation: ["jobs" as const] },
+  ui: {
+    brand: { name: "Administrace", mark: KeystaticBrandMark },
+    navigation: ["jobs" as const],
+  },
   collections: { jobs: jobsCollection },
 };
 
