@@ -20,14 +20,14 @@
   "Hero": {
     "eyebrow": "Elektronikfertigung nach Maß seit 1997",
     "title": "Elektronik, die <accent>nicht versagt.</accent>",
-    "description": "Erstklassige Elektronikfertigung von der Entwicklung bis zum fertigen Produkt. Unsere technologischen Lösungen kommen in vielfältigen Anwendungen in der Bahnindustrie, Medizintechnik, Industrieautomation und Energietechnik zum Einsatz.",
+    "description": "Erstklassige Elektronikfertigung von der Entwicklung bis zum fertigen Produkt. Unsere technologischen Lösungen kommen in vielfältigen Anwendungen in der Bahnindustrie, Medizintechnik, Industrieautomation und Energietechnik zum Einsatz. Ein Familienunternehmen mit Fertigung in Tschechien und Polen. Von der Leiterplattenbestückung bis zur kompletten Gerätemontage, für Kunden in mehr als 30 Ländern.",
     "contact": "Kontaktieren Sie uns",
     "production": "Unsere Fertigung"
   },
   "AboutHero": {
     "eyebrow": "Unternehmen",
     "title": "Ihr Partner für Elektronikfertigung und Entwicklung",
-    "description": "Hokami CZ s.r.o. zählt seit 1997 zu den führenden tschechischen Anbietern von Elektronikfertigungsdienstleistungen (EMS – Electronics Manufacturing Services). Wir bieten umfassende Lösungen von der Materialbeschaffung und Leiterplattenfertigung über SMT- und THT-Bestückung sowie Prüfung bis hin zu Endmontage, Programmierung, Schutzlackierung, Verguss und kompletter Logistik.",
+    "description": "Hokami CZ s.r.o. zählt seit 1997 zu den führenden tschechischen Anbietern von Elektronikfertigungsdienstleistungen (EMS – Electronics Manufacturing Services). Wir bieten umfassende Lösungen von der Materialbeschaffung und Leiterplattenfertigung über SMT- und THT-Bestückung sowie Prüfung bis hin zu Endmontage, Programmierung, Schutzlackierung, Verguss und kompletter Logistik. Mehr als 60 % unseres Stroms stammen aus unserer eigenen Solaranlage.",
     "contact": "Kontakt aufnehmen",
     "history": "Geschichte entdecken"
   },
@@ -59,17 +59,17 @@
       "quietCompany": "Das Unternehmen erhält die Auszeichnung „Tichá firma“",
       "innovationAward": "Unternehmensprojekt des Jahres – Innovation",
       "hallOfFame": "Diamanten der tschechischen Wirtschaft – Ruhmeshalle",
-      "czechLeader": "Das Unternehmen erhält die Auszeichnung „Tschechischer Marktführer“"
+      "czechLeader": "Das Unternehmen erhält die Auszeichnung „Český lídr“"
     }
   },
   "AboutAwards": {
     "eyebrow": "Auszeichnungen",
     "title": "Auszeichnungen",
     "images": {
-      "exportersPotential": "Urkunde für HOKAMI CZ: Cena za největší potenciál 2022, Ocenění českých exportérů.",
-      "czechLeader": "Urkunde für HOKAMI CZ: Český lídr 2022, erster Platz in Liberecký kraj.",
-      "leaderCompany": "Logos der Auszeichnungen Český lídr 2018 für Liberecký kraj und Vodafone Company of the Year 2016.",
-      "eyTop100": "Logos der Auszeichnung EY Technologický podnikatel roku, Sieger 2006 und 2007, und das goldene „100“-Emblem mit Per aspera ad astra."
+      "exportersPotential": "Urkunde für HOKAMI CZ: Auszeichnung für das größte Potenzial bei den tschechischen Exporteurspreisen 2022.",
+      "czechLeader": "Urkunde für HOKAMI CZ: Český lídr 2022, erster Platz in der Region Liberec.",
+      "leaderCompany": "Logos der Auszeichnungen Český lídr 2018 für die Region Liberec und Vodafone Unternehmen des Jahres 2016.",
+      "eyTop100": "Logos der Auszeichnung EY Technologieunternehmer des Jahres, Sieger 2006 und 2007, und das goldene „100“-Emblem mit dem Motto Per aspera ad astra."
     }
   },
   "AboutPress": {
@@ -127,18 +127,20 @@
     "label": "HOKAMI in Zahlen",
     "years": {
       "label": "Am Markt",
-      "suffix": "{count, plural, one { Jahr} other { Jahre}}"
+      "suffix": "{count, plural, one { Jahr} other { Jahre}}",
+      "prefix": "Fast "
     },
     "specialists": {
       "label": "{count, plural, one {Spezialist} other {Spezialisten}}",
       "suffix": "+"
     },
-    "turnover": {
-      "label": "Umsatz in EUR",
-      "suffix": "+"
-    },
     "export": {
       "label": "Export"
+    },
+    "area": {
+      "label": "Fertigungsfläche",
+      "suffix": " m²",
+      "compactLabel": "m² Fertigungsfläche"
     }
   },
   "Capabilities": {
@@ -148,7 +150,7 @@
     "cards": {
       "assembly": {
         "title": "Komplette Leiterplattenbestückung",
-        "description": "SMT- und THT-Bestückung, Bauteilbeschaffung, Endmontage und Logistik. Bis zu fünf Millionen Bauteile pro Monat."
+        "description": "SMT- und THT-Bestückung, Bauteilbeschaffung, Endmontage und Logistik. Über 40 Millionen Bauteile pro Monat."
       },
       "production": {
         "title": "Vom Prototyp zur Serie",
@@ -166,35 +168,35 @@
     "description": "Jede Branche definiert Fehler anders. Wählen Sie Ihre Branche und erfahren Sie, welche Zertifizierungen, Dokumentation und Prozesse dafür gelten.",
     "imageAlt": "Elektronikbeispiel: {industry}",
     "items": {
-      "aero": {
-        "name": "Luftfahrt und New Space",
-        "description": "Baugruppen für Umgebungen, in denen ein Serviceeinsatz nicht möglich ist.",
-        "certification": "EN 9100"
-      },
-      "auto": {
-        "name": "Automotive",
-        "description": "Serienfertigung mit vollständiger Rückverfolgbarkeit und Dokumentation auf PPAP-Niveau.",
-        "certification": "IATF 16949"
+      "ind": {
+        "name": "Industrie",
+        "description": "Unterstützung über den gesamten Lebenszyklus, Obsoleszenzmanagement und wiederkehrende Serien über zehn Jahre.",
+        "focus": "ISO 9001"
       },
       "med": {
-        "name": "Medizinprodukte",
+        "name": "Medizintechnik",
         "description": "Rückverfolgbarkeit bis zum einzelnen Bauteil und Nachweise, die den Anforderungen einer benannten Stelle entsprechen.",
-        "certification": "ISO 13485"
+        "focus": "ISO 13485"
       },
-      "def": {
-        "name": "Verteidigung und Sicherheit",
-        "description": "Eine kontrollierte Lieferkette, geschützte Dokumentation und eine europäische Fertigungsbasis.",
-        "certification": "AQAP"
+      "rail": {
+        "name": "Schienenverkehr",
+        "description": "Elektronische Baugruppen für den Schienenverkehr mit Schwerpunkt auf Zuverlässigkeit und Rückverfolgbarkeit der Fertigung.",
+        "focus": "100 % Rückverfolgbarkeit"
       },
-      "ind": {
-        "name": "Industriemaschinen",
-        "description": "Unterstützung über den gesamten Lebenszyklus, Obsoleszenzmanagement und wiederkehrende Serien über zehn Jahre.",
-        "certification": "ISO 9001"
+      "energy": {
+        "name": "Energietechnik",
+        "description": "Elektronikfertigung für die Energietechnik, einschließlich Bestückung, Prüfung und Endmontage.",
+        "focus": "IPC-Standards"
       },
       "cons": {
         "name": "Unterhaltungselektronik",
         "description": "Kostenoptimierte Großserienfertigung ohne Abstriche bei der Prozesskontrolle.",
-        "certification": "Fokus auf Stückkosten"
+        "focus": "Fokus auf Stückkosten"
+      },
+      "auto": {
+        "name": "Automobilindustrie",
+        "description": "Serienfertigung mit vollständiger Rückverfolgbarkeit und Dokumentation auf PPAP-Niveau.",
+        "focus": "IATF 16949"
       }
     }
   },
@@ -205,14 +207,14 @@
     "mapLabel": "Unsere Standorte in Europa",
     "regionCode": "REGION {code}",
     "branches": {
-      "liberec": "HQ · Vertrieb & Produktion",
-      "zawidow": "Vertrieb & Produktion",
+      "liberec": "Hauptsitz · Vertrieb und Fertigung",
+      "zawidow": "Vertrieb und Fertigung",
       "helsinki": "Vertrieb"
     },
     "regions": {
-      "west": "Tschechien & Westeuropa",
-      "east": "Polen & Osteuropa",
-      "north": "Skandinavien & Baltikum",
+      "west": "Tschechien und Westeuropa",
+      "east": "Polen und Osteuropa",
+      "north": "Skandinavien und Baltikum",
       "global": "Rest der Welt"
     }
   },
@@ -309,7 +311,7 @@
     },
     "smt": {
       "title": "SMT-Bestückung",
-      "description": "SMT-Bestückung bei HOKAMI: vier automatisierte Linien, über 40 Mio. Bestückungen pro Monat, Leiterplatten bis 810 × 480 mm und Expressstart innerhalb von 24 Stunden."
+      "description": "SMT-Bestückung bei HOKAMI: vier automatisierte Linien, Kapazität für über 40 Mio. Bauteilplatzierungen pro Monat, Leiterplatten bis 810 × 480 mm und möglicher Expressstart innerhalb von 24 Stunden."
     }
   },
   "RequesForQuote": {
@@ -345,8 +347,8 @@
         "options": {
           "prototype": "Nur Prototyp",
           "under100": "Bis zu 100 Stück",
-          "under1000": "100–1.000 Stück",
-          "under10000": "1.000–10.000 Stück",
+          "under1000": "101–1.000 Stück",
+          "under10000": "1.001–10.000 Stück",
           "over10000": "Über 10.000 Stück",
           "unsure": "Noch unklar"
         }
@@ -358,7 +360,7 @@
     },
     "upload": {
       "label": "Dateien anhängen",
-      "hint": "BOM, Gerber, Bestückungsdaten. Max. 50 MB insgesamt, 10 Dateien.",
+      "hint": "Stückliste (BOM), Gerber- und Bestückungsdaten. Insgesamt max. 50 MB und 10 Dateien.",
       "choose": "Dateien wählen",
       "selected": "Angehängte Dateien",
       "remove": "Datei {name} entfernen",
@@ -384,7 +386,7 @@
       "title": "Die Anfrage konnte nicht gesendet werden",
       "send": "Ihre Angaben und Dateien wurden beibehalten. Bitte versuchen Sie es erneut.",
       "captcha": "Die Spamprüfung ist fehlgeschlagen. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
-      "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie info@hokami.cz."
+      "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Schreiben Sie uns an info@hokami.cz."
     },
     "success": {
       "title": "Anfrage gesendet",
@@ -528,7 +530,7 @@
     "eyebrow": "Fertigung",
     "title": "Verantwortungsvolle Fertigung",
     "processes": "Unsere Fertigungsprozesse sind so gestaltet, dass sie höchste Anforderungen an Qualität, Sicherheit und Umweltschutz erfüllen. Dabei legen wir Wert auf einen effizienten Materialeinsatz, die Minimierung von Produktionsverlusten und einen verantwortungsvollen Umgang mit den anfallenden Abfällen.",
-    "materials": "Bleifreie Fertigungsverfahren, die Einhaltung der Anforderungen der europäischen Richtlinien RoHS und REACH sowie der sichere Umgang mit Chemikalien gemäß den geltenden gesetzlichen Vorschriften sind für uns selbstverständlich. Sämtliche Abfälle werden sorgfältig getrennt und autorisierten Partnern zum Recycling oder zur umweltgerechten Entsorgung übergeben."
+    "materials": "Wir nutzen bleifreie Fertigungsverfahren und halten die Anforderungen der RoHS-Richtlinie und der REACH-Verordnung ein. Chemikalien handhaben wir sicher und gemäß den geltenden gesetzlichen Vorschriften. Sämtliche Abfälle werden getrennt und autorisierten Partnern zum Recycling oder zur umweltgerechten Entsorgung übergeben."
   },
   "SustainabilityResponsibility": {
     "eyebrow": "Unser Ansatz",
@@ -571,7 +573,7 @@
         "suffix": " {count, plural, one {Linie} other {Linien}}"
       },
       "placements": {
-        "label": "SMT-Bestückungen pro Monat"
+        "label": "SMT-Bauteilplatzierungen pro Monat"
       },
       "dimensions": {
         "label": "max. Leiterplattenformat",
@@ -601,7 +603,7 @@
       },
       "capacity": {
         "title": "Fertigungskapazität",
-        "description": "Unsere aktuelle Fertigungskapazität liegt bei über 40 Millionen SMT-Bestückungen pro Monat. Dadurch können wir Prototypen, mittlere Serien und Großaufträge effizient bearbeiten und zugleich hohe Qualität und kurze Lieferzeiten gewährleisten."
+        "description": "Unsere aktuelle Fertigungskapazität liegt bei über 40 Millionen SMT-Bauteilplatzierungen pro Monat. Dadurch können wir Prototypen, mittlere Serien und Großaufträge effizient bearbeiten und zugleich hohe Qualität und kurze Lieferzeiten gewährleisten."
       },
       "express": {
         "title": "Expressfertigung",
@@ -675,8 +677,8 @@
         "placeholder": "Stelle auswählen"
       },
       "start": {
-        "label": "Möglicher Eintritt",
-        "placeholder": "Sofort oder Datum"
+        "label": "Möglicher Eintrittstermin",
+        "placeholder": "Ab sofort oder Datum angeben"
       }
     },
     "errors": {
@@ -700,7 +702,7 @@
       "remove": "Datei {name} entfernen"
     },
     "failure": {
-      "title": "Bewerbungen können noch nicht gesendet werden",
+      "title": "Die Bewerbung konnte nicht gesendet werden",
       "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie uns unter <email>{address}</email>."
     }
   }

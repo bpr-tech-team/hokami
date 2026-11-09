@@ -280,14 +280,16 @@ test("all five catalogs provide complete translations and pluralized years", () 
     for (const key of [
       "label",
       "years.label",
-      "turnover.label",
+      "years.prefix",
+      "area.label",
+      "area.compactLabel",
       "export.label",
     ] as const) {
       assert.ok(t(key).length > 0);
     }
     assert.ok(t("specialists.label", { count: 300 }).length > 0);
     assert.equal(t("specialists.suffix"), "+");
-    assert.equal(t("turnover.suffix"), "+");
+    assert.equal(t("area.suffix"), " m²");
   }
 });
 

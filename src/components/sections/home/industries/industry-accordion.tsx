@@ -4,9 +4,9 @@ import type { Industry } from "./types";
 export function IndustryAccordion({ items }: { items: Industry[] }) {
   return (
     <ImageAccordion
-      items={items.map(({ certification, ...item }) => ({
+      items={items.map(({ focus, ...item }) => ({
         ...item,
-        metadata: certification,
+        metadata: focus,
       }))}
     />
   );

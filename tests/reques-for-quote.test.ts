@@ -35,6 +35,29 @@ test("accepts Unicode names, trims fields, and allows an enquiry without optiona
   assert.equal(result.email, "jana@example.cz");
 });
 
+test("enquiries accept the client's six industries and reject retired sectors", () => {
+  for (const industry of [
+    "ind",
+    "med",
+    "rail",
+    "energy",
+    "cons",
+    "auto",
+    "other",
+  ]) {
+    assert.equal(
+      requesForQuoteSchema.parse({ ...values, industry }).industry,
+      industry,
+    );
+  }
+  for (const industry of ["aero", "def"]) {
+    const result = requesForQuoteSchema.safeParse({ ...values, industry });
+    assert.equal(result.success, false);
+    if (!result.success)
+      assert.equal(getFieldErrors(result.error).industry, "invalidOption");
+  }
+});
+
 test("rejects blank required fields and malformed email with field-specific errors", () => {
   const result = requesForQuoteSchema.safeParse({
     ...values,

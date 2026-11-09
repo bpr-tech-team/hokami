@@ -2,7 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { TrustStrip } from "@/components/sections/trust-strip/trust-strip";
 import type { TrustStatistic } from "@/components/sections/trust-strip/types";
 
-const years = 35;
+const years = 30;
 const specialists = 300;
 
 export async function HomeTrustStrip() {
@@ -16,6 +16,7 @@ export async function HomeTrustStrip() {
       id: "years",
       value: years,
       label: t("years.label"),
+      prefix: t("years.prefix"),
       suffix: t("years.suffix", { count: years }),
     },
     {
@@ -25,11 +26,11 @@ export async function HomeTrustStrip() {
       suffix: t("specialists.suffix"),
     },
     {
-      id: "turnover",
-      value: 30000000,
-      label: t("turnover.label"),
-      format: { notation: "compact", maximumFractionDigits: 0 },
-      suffix: t("turnover.suffix"),
+      id: "area",
+      value: 9000,
+      label: t("area.label"),
+      suffix: t("area.suffix"),
+      compact: { label: t("area.compactLabel"), suffix: "" },
     },
     {
       id: "export",

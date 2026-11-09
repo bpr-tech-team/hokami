@@ -146,10 +146,15 @@ function isUiMessage(node, message = node.text) {
  * @param {string} locale
  */
 function translateSource(source, locale, runtime = false) {
-  const dictionary = JSON.parse(readFileSync(messagesPath, "utf8"))[locale];
-  if (!dictionary)
-    throw new Error(`Unsupported Keystatic UI locale: ${locale}`);
-  if (locale === "en" && !runtime) return source;
+  const catalog = JSON.parse(readFileSync(messagesPath, "utf8"))[locale];
+  if (!catalog) throw new Error(`Unsupported Keystatic UI locale: ${locale}`);
+  // Apply English copy corrections too, leaving unchanged source messages intact.
+  const dictionary =
+    locale === "en" && !runtime
+      ? Object.fromEntries(
+          Object.entries(catalog).filter(([key, value]) => key !== value),
+        )
+      : catalog;
   const file = ts.createSourceFile(
     "keystatic.js",
     source,

@@ -4,6 +4,6 @@ export type Industry = {
   image: string;
   name: string;
   description: string;
-  certification: string;
+  focus: string;
   imageAlt: string;
 };

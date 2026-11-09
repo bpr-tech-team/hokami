@@ -1,12 +1,8 @@
 import { z } from "zod";
+import { industries } from "@/content/industries";
 
 export const industryOptions = [
-  "aero",
-  "auto",
-  "med",
-  "def",
-  "ind",
-  "cons",
+  ...industries.map(({ id }) => id),
   "other",
 ] as const;
 export const volumeOptions = [

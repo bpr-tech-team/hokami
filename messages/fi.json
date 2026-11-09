@@ -20,14 +20,14 @@
   "Hero": {
     "eyebrow": "Elektroniikan sopimusvalmistusta vuodesta 1997",
     "title": "Elektroniikkaa, joka <accent>ei petä.</accent>",
-    "description": "Korkealaatuista elektroniikan valmistusta tuotekehityksestä valmiiseen tuotteeseen. Teknologisia ratkaisujamme käytetään monipuolisesti raideliikenteessä, terveydenhuollossa, teollisuusautomaatiossa ja energia-alalla.",
+    "description": "Korkealaatuista elektroniikan valmistusta tuotekehityksestä valmiiseen tuotteeseen. Teknologisia ratkaisujamme käytetään monipuolisesti raideliikenteessä, terveydenhuollossa, teollisuusautomaatiossa ja energia-alalla. Perheyritys, jolla on tuotantoa Tšekissä ja Puolassa. Piirilevyjen ladonnasta valmiiden laitteiden kokoonpanoon, asiakkaille yli 30 maassa.",
     "contact": "Ota yhteyttä",
     "production": "Tuotantomme"
   },
   "AboutHero": {
     "eyebrow": "Yritys",
-    "title": "Kumppanisi elektroniikan valmistuksessa ja kehityksessä",
-    "description": "Hokami CZ s.r.o. on kuulunut Tšekin johtaviin elektroniikan valmistuspalvelujen (EMS – Electronics Manufacturing Services) tarjoajiin vuodesta 1997. Tarjoamme kokonaisratkaisuja materiaalihankinnasta ja piirilevyjen valmistuksesta SMT- ja THT-kalustukseen ja testaukseen sekä loppukokoonpanoon, ohjelmointiin, suojalakkaukseen, valamiseen ja kattavaan logistiikkaan.",
+    "title": "Kumppanisi elektroniikan valmistuksessa ja tuotekehityksessä",
+    "description": "Hokami CZ s.r.o. on kuulunut Tšekin johtaviin elektroniikan valmistuspalvelujen (EMS – Electronics Manufacturing Services) tarjoajiin vuodesta 1997. Tarjoamme kokonaisratkaisuja materiaalihankinnasta ja piirilevyjen valmistuksesta SMT- ja THT-ladontaan, testaukseen, loppukokoonpanoon, ohjelmointiin, suojalakkaukseen, suojavaluihin ja logistiikkaan. Yli 60 % sähköstämme tulee omasta aurinkovoimalastamme.",
     "contact": "Ota yhteyttä",
     "history": "Tutustu historiaamme"
   },
@@ -59,17 +59,17 @@
       "quietCompany": "Yritys saa ”Tichá firma” -palkinnon",
       "innovationAward": "Vuoden yrityshanke – Innovaatio",
       "hallOfFame": "Tšekkiläisen liike-elämän timantit – Kunniagalleria",
-      "czechLeader": "Yritys saa Tšekin johtava yritys -palkinnon"
+      "czechLeader": "Yritys saa ”Český lídr” -palkinnon"
     }
   },
   "AboutAwards": {
     "eyebrow": "Palkinnot",
     "title": "Palkinnot",
     "images": {
-      "exportersPotential": "HOKAMI CZ:n kunniakirja: Cena za největší potenciál 2022, Ocenění českých exportérů.",
-      "czechLeader": "HOKAMI CZ:n kunniakirja: Český lídr 2022, ensimmäinen sija Liberecký krajin alueella.",
-      "leaderCompany": "Palkintologot: Český lídr 2018 Liberecký krajin alueella ja Vodafone Company of the Year 2016.",
-      "eyTop100": "Palkintologot: EY Technologický podnikatel roku, voittaja vuosina 2006 ja 2007, sekä kultainen 100-tunnus tekstillä Per aspera ad astra."
+      "exportersPotential": "HOKAMI CZ:n kunniakirja: suurimman potentiaalin palkinto Tšekin vientiyritysten palkintokilpailussa 2022.",
+      "czechLeader": "HOKAMI CZ:n kunniakirja: Český lídr 2022, ensimmäinen sija Liberecin alueella.",
+      "leaderCompany": "Palkintologot: Český lídr 2018 Liberecin alueella ja Vodafone Vuoden yritys 2016.",
+      "eyTop100": "Palkintologot: EY Vuoden teknologiayrittäjä, voittaja vuosina 2006 ja 2007, sekä kultainen 100-tunnus, jossa on tunnuslause Per aspera ad astra."
     }
   },
   "AboutPress": {
@@ -127,28 +127,30 @@
     "label": "HOKAMI lukuina",
     "years": {
       "label": "Markkinoilla",
-      "suffix": "{count, plural, one { vuosi} other { vuotta}}"
+      "suffix": "{count, plural, one { vuosi} other { vuotta}}",
+      "prefix": "Lähes "
     },
     "specialists": {
       "label": "{count, plural, one {Asiantuntija} other {Asiantuntijaa}}",
       "suffix": "+"
     },
-    "turnover": {
-      "label": "Liikevaihto, EUR",
-      "suffix": "+"
-    },
     "export": {
       "label": "Vienti"
+    },
+    "area": {
+      "label": "Tuotantotilaa",
+      "suffix": " m²",
+      "compactLabel": "m² tuotantotilaa"
     }
   },
   "Capabilities": {
     "eyebrow": "Tuotantokapasiteetti",
     "title": "Yksi kumppani dokumentaatiosta valmiiseen tuotteeseen",
-    "description": "Lähetä meille dokumentaatio. Hankimme komponentit, kalustamme piirilevyt, testaamme ja toimitamme valmiin tuotteen. Ei siirtoja toimittajalta toiselle, ei toista toimittajaa, ei aukkoja vastuissa.",
+    "description": "Lähetä meille dokumentaatio. Hankimme komponentit, ladomme piirilevyt, testaamme ja toimitamme valmiin tuotteen. Ei siirtoja toimittajalta toiselle, ei toista toimittajaa, ei aukkoja vastuissa.",
     "cards": {
       "assembly": {
-        "title": "Piirilevyjen kokonaisvaltainen kalustus",
-        "description": "SMT- ja THT-kalustus, komponenttien hankinta, loppukokoonpano ja logistiikka. Jopa viisi miljoonaa komponenttia kuukaudessa."
+        "title": "Piirilevyjen kokonaisvaltainen ladonta",
+        "description": "SMT- ja THT-ladonta, komponenttien hankinta, loppukokoonpano ja logistiikka. Yli 40 miljoonaa komponenttia kuukaudessa."
       },
       "production": {
         "title": "Prototyypistä sarjatuotantoon",
@@ -166,35 +168,35 @@
     "description": "Jokainen toimiala määrittelee virheet omalla tavallaan. Valitse omasi ja tutustu sitä koskeviin sertifiointeihin, dokumentaatioon ja prosesseihin.",
     "imageAlt": "Elektroniikkaesimerkki: {industry}",
     "items": {
-      "aero": {
-        "name": "Ilmailu ja New Space",
-        "description": "Kokoonpanoja ympäristöihin, joissa huoltotoimenpiteet eivät ole mahdollisia.",
-        "certification": "EN 9100"
-      },
-      "auto": {
-        "name": "Autoteollisuus",
-        "description": "Sarjatuotantoa täydellä jäljitettävyydellä ja PPAP-tason dokumentaatiolla.",
-        "certification": "IATF 16949"
+      "ind": {
+        "name": "Teollisuus",
+        "description": "Tuki koko elinkaaren ajan, komponenttien vanhenemisen hallinta ja toistuvat tuotantosarjat kymmenen vuoden ajan.",
+        "focus": "ISO 9001"
       },
       "med": {
-        "name": "Lääkinnälliset laitteet",
+        "name": "Lääketieteellinen tekniikka",
         "description": "Jäljitettävyys yksittäiseen komponenttiin asti sekä ilmoitetun laitoksen vaatimukset täyttävät asiakirjat.",
-        "certification": "ISO 13485"
+        "focus": "ISO 13485"
       },
-      "def": {
-        "name": "Puolustus ja turvallisuus",
-        "description": "Hallittu toimitusketju, suojattu dokumentaatio ja eurooppalainen tuotantopohja.",
-        "certification": "AQAP"
+      "rail": {
+        "name": "Raideliikenne",
+        "description": "Elektroniikkakokoonpanoja raideliikenteeseen, painottaen luotettavuutta ja tuotannon jäljitettävyyttä.",
+        "focus": "100 % jäljitettävyys"
       },
-      "ind": {
-        "name": "Teollisuuskoneet",
-        "description": "Tuki koko elinkaaren ajan, komponenttien vanhenemisen hallinta ja toistuvat tuotantosarjat kymmenen vuoden ajan.",
-        "certification": "ISO 9001"
+      "energy": {
+        "name": "Energia-ala",
+        "description": "Elektroniikan valmistusta energia-alalle, mukaan lukien piirilevyjen ladonta, testaus ja loppukokoonpano.",
+        "focus": "IPC-standardit"
       },
       "cons": {
         "name": "Kulutuselektroniikka",
         "description": "Kustannusoptimoitu suurten sarjojen tuotanto tinkimättä prosessinhallinnasta.",
-        "certification": "Painopiste yksikköhinnassa"
+        "focus": "Painopiste yksikköhinnassa"
+      },
+      "auto": {
+        "name": "Autoteollisuus",
+        "description": "Sarjatuotantoa täydellä jäljitettävyydellä ja PPAP-tason dokumentaatiolla.",
+        "focus": "IATF 16949"
       }
     }
   },
@@ -205,14 +207,14 @@
     "mapLabel": "Toimipisteemme Euroopassa",
     "regionCode": "ALUE {code}",
     "branches": {
-      "liberec": "HQ · Myynti & Tuotanto",
-      "zawidow": "Myynti & Tuotanto",
+      "liberec": "Päätoimipaikka · Myynti ja tuotanto",
+      "zawidow": "Myynti ja tuotanto",
       "helsinki": "Myynti"
     },
     "regions": {
-      "west": "Tšekki & Länsi-Eurooppa",
-      "east": "Puola & Itä-Eurooppa",
-      "north": "Skandinavia & Baltian maat",
+      "west": "Tšekki ja Länsi-Eurooppa",
+      "east": "Puola ja Itä-Eurooppa",
+      "north": "Skandinavia ja Baltian maat",
       "global": "Muu maailma"
     }
   },
@@ -260,7 +262,7 @@
     "necessaryTitle": "Välttämättömät evästeet",
     "necessaryDescription": "Nämä muistavat valintasi seuraavilla vierailuilla ja kieltä vaihtaessasi. Niitä tarvitaan asetustesi tallentamiseen, joten ne ovat aina käytössä.",
     "analyticsTitle": "Sivuston tilastot ja suorituskyky",
-    "analyticsDescription": "Nämä kertovat meille sivuston kävijämääristä ja latausnopeudesta. Niiden avulla voimme parantaa sivuston sisältöä ja toimintaa. Voit sallia kummankin palvelun erikseen.",
+    "analyticsDescription": "Nämä kertovat meille sivuston kävijämääristä ja latausnopeudesta. Niiden avulla voimme parantaa sivuston sisältöä ja toimintaa. Voit sallia kunkin palvelun erikseen.",
     "cookieTableCaption": "Evästeasetuksesi",
     "cookieName": "Nimi",
     "cookieDuration": "Säilytysaika",
@@ -272,12 +274,12 @@
   },
   "Metadata": {
     "home": {
-      "title": "Elektroniikan valmistus ja piirilevykokoonpano",
+      "title": "Elektroniikan valmistus ja piirilevyjen ladonta",
       "description": "HOKAMIn EMS-palvelut kattavat materiaalihankinnat, SMT- ja THT-ladonnan, testauksen ja loppukokoonpanon prototyypeistä sarjatuotantoon."
     },
     "quality": {
       "title": "Elektroniikan laatu ja testaus",
-      "description": "HOKAMIn elektroniikkavalmistuksen laatu: piirilevykokoonpanon tarkastus ja elektroniikkakokoonpanojen testaus ennen toimitusta asiakkaalle."
+      "description": "HOKAMIn elektroniikkavalmistuksen laatu: piirilevyjen ladonnan tarkastus ja elektroniikkakokoonpanojen testaus ennen toimitusta asiakkaalle."
     },
     "about": {
       "title": "Tietoa meistä",
@@ -297,7 +299,7 @@
     },
     "services": {
       "title": "Elektroniikan valmistuspalvelut",
-      "description": "HOKAMIn EMS-palvelut: SMT- ja THT-kokoonpano, puhdistus, testaus, suojalakkaus, mekaaninen kokoonpano, piirilevyt ja SMT-stensiilit."
+      "description": "HOKAMIn EMS-palvelut: SMT- ja THT-ladonta, puhdistus, testaus, suojalakkaus, mekaaninen kokoonpano, piirilevyt ja SMT-stensiilit."
     },
     "contact": {
       "title": "Yhteystiedot",
@@ -309,7 +311,7 @@
     },
     "smt": {
       "title": "SMT-ladonta",
-      "description": "HOKAMIn SMT-ladonta: neljä automatisoitua linjaa, yli 40 miljoonaa ladontaa kuukaudessa, piirilevyt kokoon 810 × 480 mm ja pikatuotannon aloitus 24 tunnissa."
+      "description": "HOKAMIn SMT-ladonta: neljä automatisoitua linjaa, kapasiteetti yli 40 miljoonaa komponenttia kuukaudessa, piirilevyt enintään 810 × 480 mm ja mahdollisuus aloittaa pikatuotanto 24 tunnissa."
     }
   },
   "RequesForQuote": {
@@ -345,8 +347,8 @@
         "options": {
           "prototype": "Vain prototyyppi",
           "under100": "Enintään 100 kpl",
-          "under1000": "100–1 000 kpl",
-          "under10000": "1 000–10 000 kpl",
+          "under1000": "101–1 000 kpl",
+          "under10000": "1 001–10 000 kpl",
           "over10000": "Yli 10 000 kpl",
           "unsure": "Ei vielä tiedossa"
         }
@@ -358,7 +360,7 @@
     },
     "upload": {
       "label": "Liitä tiedostoja",
-      "hint": "BOM, Gerber, ladontatiedot. Yhteensä enintään 50 Mt, 10 tiedostoa.",
+      "hint": "Osaluettelo (BOM), Gerber-tiedostot ja ladontatiedot. Yhteensä enintään 50 Mt ja 10 tiedostoa.",
       "choose": "Valitse tiedostot",
       "selected": "Liitetyt tiedostot",
       "remove": "Poista tiedosto {name}",
@@ -405,14 +407,14 @@
     "items": {
       "smt": {
         "name": "SMT",
-        "description": "SMT-kokoonpano on yksi Hokamin keskeisistä teknologioista ja nykyaikaisen elektroniikkavalmistuksen perusta.",
-        "link": "Tutustu SMT-kokoonpanoon",
+        "description": "SMT-ladonta on yksi Hokamin keskeisistä teknologioista ja nykyaikaisen elektroniikkavalmistuksen perusta.",
+        "link": "Tutustu SMT-ladontaan",
         "imageAlt": "SMT-ladontalaitteisto HOKAMIn tuotannossa."
       },
       "tht": {
         "name": "THT",
         "description": "THT-juottaminen on olennainen osa elektroniikkakokoonpanojen valmistusta erityisesti silloin, kun liitosten mekaaniselle lujuudelle, luotettavuudelle ja tuotteiden pitkälle käyttöiälle asetetaan korkeita vaatimuksia.",
-        "link": "Tutustu THT-kokoonpanoon",
+        "link": "Tutustu THT-ladontaan",
         "imageAlt": "THT-komponenttien juottaminen HOKAMIlla."
       },
       "cleaning": {
@@ -447,7 +449,7 @@
       },
       "stencils": {
         "name": "SMT-stensiilit",
-        "description": "Laadukas SMT-stensiili on yksi keskeisistä edellytyksistä juotospastan tarkalle levitykselle ja laadukkaalle SMT-kokoonpanolle.",
+        "description": "Laadukas SMT-stensiili on yksi keskeisistä edellytyksistä juotospastan tarkalle levitykselle ja laadukkaalle SMT-ladonnalle.",
         "link": "Tutustu SMT-stensiileihin",
         "imageAlt": "Juotospastastensiilien valmistus HOKAMIlla."
       }
@@ -466,7 +468,7 @@
   },
   "ContactForm": {
     "eyebrow": "Lomake",
-    "title": "Yhteydenotto­lomake",
+    "title": "Yhteydenottolomake",
     "required": "* pakolliset tiedot",
     "submit": "Lähetä viesti",
     "consent": "Lähettämällä lomakkeen hyväksyt <privacy>henkilötietojesi käsittelyn</privacy>.",
@@ -528,7 +530,7 @@
     "eyebrow": "Tuotanto",
     "title": "Vastuullinen valmistus",
     "processes": "Tuotantoprosessimme on suunniteltu täyttämään korkeimmat laatua, turvallisuutta ja ympäristönsuojelua koskevat vaatimukset. Painotamme materiaalien tehokasta käyttöä, tuotantohävikin vähentämistä ja syntyvän jätteen vastuullista käsittelyä.",
-    "materials": "Lyijyttömät valmistusprosessit, Euroopan RoHS- ja REACH-direktiivien vaatimusten noudattaminen sekä kemikaalien turvallinen käsittely voimassa olevan lainsäädännön mukaisesti ovat meille itsestäänselvyyksiä. Kaikki jätteet lajitellaan huolellisesti ja luovutetaan valtuutetuille kumppaneille kierrätystä tai ympäristöä säästävää loppukäsittelyä varten."
+    "materials": "Käytämme lyijyttömiä valmistusprosesseja ja noudatamme RoHS-direktiivin sekä REACH-asetuksen vaatimuksia. Käsittelemme kemikaaleja turvallisesti ja voimassa olevan lainsäädännön mukaisesti. Kaikki jätteet lajitellaan ja luovutetaan valtuutetuille kumppaneille kierrätystä tai ympäristöä säästävää loppukäsittelyä varten."
   },
   "SustainabilityResponsibility": {
     "eyebrow": "Toimintatapamme",
@@ -571,7 +573,7 @@
         "suffix": " {count, plural, one {linja} other {linjaa}}"
       },
       "placements": {
-        "label": "SMT-ladontaa kuukaudessa"
+        "label": "SMT-komponentin ladontaa kuukaudessa"
       },
       "dimensions": {
         "label": "piirilevyn enimmäiskoko",
@@ -601,7 +603,7 @@
       },
       "capacity": {
         "title": "Tuotantokapasiteetti",
-        "description": "Nykyinen tuotantokapasiteettimme ylittää 40 miljoonaa SMT-ladontaa kuukaudessa. Sen ansiosta pystymme valmistamaan tehokkaasti prototyyppejä, keskisuuria sarjoja ja suuria tilauksia säilyttäen korkean laadun ja lyhyet toimitusajat."
+        "description": "Nykyinen tuotantokapasiteettimme ylittää 40 miljoonaa SMT-komponentin ladontaa kuukaudessa. Sen ansiosta pystymme valmistamaan tehokkaasti prototyyppejä, keskisuuria sarjoja ja suuria tilauksia säilyttäen korkean laadun ja lyhyet toimitusajat."
       },
       "express": {
         "title": "Pikatuotanto",
@@ -675,8 +677,8 @@
         "placeholder": "Valitse tehtävä"
       },
       "start": {
-        "label": "Mahdollinen aloitus",
-        "placeholder": "Heti tai päivämäärä"
+        "label": "Mahdollinen aloituspäivä",
+        "placeholder": "Heti tai ilmoita päivämäärä"
       }
     },
     "errors": {
@@ -700,7 +702,7 @@
       "remove": "Poista tiedosto {name}"
     },
     "failure": {
-      "title": "Hakemuksia ei voi vielä lähettää",
+      "title": "Hakemusta ei voitu lähettää",
       "unavailable": "Lomake ei ole tilapäisesti käytettävissä. Ota yhteyttä osoitteeseen <email>{address}</email>."
     }
   }
