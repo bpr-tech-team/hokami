@@ -1,0 +1,31 @@
+diff --git a/node_modules/@keystatic/core/dist/keystatic-core-ui.js b/node_modules/@keystatic/core/dist/keystatic-core-ui.js
+index 2f8809b..98c81a0 100644
+--- a/node_modules/@keystatic/core/dist/keystatic-core-ui.js
++++ b/node_modules/@keystatic/core/dist/keystatic-core-ui.js
+@@ -1856,13 +1856,25 @@ function serializeEntryToFiles(args) {
+     assert(contents !== undefined, 'Expected content field to be present');
+     dataContent = combineFrontmatterAndContents(dataContent, contents);
+   }
+-  return [{
++  const files = [{
+     path: getEntryDataFilepath(args.basePath, args.format),
+     contents: dataContent
+   }, ...extraFiles.map(file => ({
+     path: `${file.parent ? args.slug ? `${file.parent}/${args.slug.value}` : file.parent : args.basePath}/${file.path}`,
+     contents: file.contents
+   }))];
++  const filesByPath = new Map();
++  for (const file of files) {
++    const existing = filesByPath.get(file.path);
++    if (existing) {
++      if (existing.contents.length !== file.contents.length || existing.contents.some((byte, index) => byte !== file.contents[index])) {
++        throw new Error(`Conflicting contents for file: ${file.path}`);
++      }
++    } else {
++      filesByPath.set(file.path, file);
++    }
++  }
++  return [...filesByPath.values()];
+ }
+ function useUpsertItem(args) {
+   const [state, setState] = useState({

@@ -72,6 +72,9 @@ ID, production admin is disabled.
 English content is required. Missing translations fall back to English;
 publication status and visible languages are set per vacancy.
 
+Keystatic's shared-image save fix is maintained as a versioned dependency patch.
+See [dependency patches](docs/dependency-patches.md) before upgrading Keystatic.
+
 ## Forms
 
 Contact, enquiry and job application forms validate input, but delivery is not
