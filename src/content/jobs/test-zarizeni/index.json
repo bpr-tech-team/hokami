@@ -1,0 +1,32 @@
+{
+  "status": "draft",
+  "order": 40,
+  "visibleLocales": [
+    "cs",
+    "en",
+    "de",
+    "fi",
+    "pl"
+  ],
+  "title": "test zarizeni",
+  "department": "Test",
+  "description": "Lorem Ipsum is dumm text.",
+  "content": "**Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in Londo\n\n---\n\nn, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.\n\n{% table %}\n- asdasd\n- wd\n- \n---\n- dad\n- awda\n- awda\n---\n- awdf\n- awd\n- wd\n{% /table %}\n\n{% JobPhoto\n   src=\"/images/jobs/test-zarizeni/b2def7fe-6d94-42ea-ad68-fbe56e5ee185.png\"\n   alt=\"test\" /%}\n",
+  "translations": {
+    "cs": {
+      "title": "test",
+      "department": "test",
+      "description": "test",
+      "content": "**Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in Londo\n\n---\n\nn, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.\n\n{% table %}\n- asdasd\n- wd\n- \n---\n- dad\n- awda\n- awda\n---\n- awdf\n- awd\n- wd\n{% /table %}\n\n{% JobPhoto\n   src=\"/images/jobs/test-zarizeni/b2def7fe-6d94-42ea-ad68-fbe56e5ee185.png\"\n   alt=\"test\" /%}\n"
+    },
+    "de": {
+      "content": ""
+    },
+    "fi": {
+      "content": ""
+    },
+    "pl": {
+      "content": ""
+    }
+  }
+}
