@@ -5,7 +5,7 @@ import type { jobsCollection } from "./collection";
 type JobEntry = Entry<typeof jobsCollection>;
 export type JobCardText = Pick<
   JobEntry,
-  "title" | "department" | "description" | "linkLabel"
+  "title" | "department" | "description"
 >;
 export type JobTranslationLocale = Exclude<Locale, "en">;
 
@@ -50,7 +50,6 @@ export function resolveJobCard(
     title: text.title.trim(),
     department: text.department.trim(),
     description: text.description.trim(),
-    linkLabel: text.linkLabel.trim(),
   };
 }
 

@@ -42,7 +42,6 @@ function cardText(entry: JobCardText): JobCardText {
     title: entry.title,
     department: entry.department,
     description: entry.description,
-    linkLabel: entry.linkLabel,
   };
 }
 

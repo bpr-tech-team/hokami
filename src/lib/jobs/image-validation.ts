@@ -1,6 +1,8 @@
+import { keystaticUiText } from "@/i18n/keystatic-ui";
 export const JOB_IMAGE_MAX_BYTES = 500_000;
-export const JOB_IMAGE_HELP =
-  "PNG, JPG, JPEG nebo WEBP; nejvýše 0,5 MB na obrázek.";
+export const JOB_IMAGE_HELP = keystaticUiText(
+  "PNG, JPG, JPEG or WEBP; at most 0.5 MB per image.",
+);
 
 const extensions = new Set(["png", "jpg", "jpeg", "webp"]);
 
@@ -18,13 +20,13 @@ export function validateJobImage(filename: string, data: Uint8Array) {
   if (!extensions.has(extension)) {
     throw new JobImageError(
       filename,
-      "Povolené formáty jsou PNG, JPG, JPEG a WEBP.",
+      keystaticUiText("Allowed formats are PNG, JPG, JPEG and WEBP."),
     );
   }
   if (data.byteLength === 0 || data.byteLength > JOB_IMAGE_MAX_BYTES) {
     throw new JobImageError(
       filename,
-      "Obrázek musí mít velikost od 1 B do 0,5 MB.",
+      keystaticUiText("The image size must be between 1 B and 0.5 MB."),
     );
   }
 
@@ -43,7 +45,7 @@ export function validateJobImage(filename: string, data: Uint8Array) {
   )) {
     throw new JobImageError(
       filename,
-      "Obsah souboru neodpovídá formátu obrázku.",
+      keystaticUiText("The file contents do not match the image format."),
     );
   }
 }

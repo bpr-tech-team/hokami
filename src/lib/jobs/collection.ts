@@ -1,117 +1,164 @@
-import { collection, config, fields } from "@keystatic/core";
+import { keystaticUiText } from "@/i18n/keystatic-ui";
+import { createElement } from "react";
+import {
+  collection,
+  config,
+  fields,
+  type ComponentSchema,
+} from "@keystatic/core";
 import { languages } from "@/i18n/languages";
 import { jobContentField } from "./content-field";
+import { jobTextField, jobIntegerField, jobSelectField } from "./editor-fields";
+import { withJobFieldLayout } from "@/components/integrations/keystatic/job-admin-field";
+import { JobLanguagesInput } from "@/components/integrations/keystatic/job-languages-input";
+import {
+  JobTranslationsInput,
+  type JobTranslationsInputProps,
+} from "@/components/integrations/keystatic/job-translations-input";
 
 const requiredText = {
   isRequired: true,
-  pattern: { regex: /\S/, message: "Vyplňte prosím text, nejen mezery." },
+  pattern: {
+    regex: /\S/,
+    message: keystaticUiText("Please enter text, not just spaces."),
+  },
 };
 
 function translationFields(label: string) {
   return fields.object(
     {
-      title: fields.text({
-        label: "Název pozice",
+      title: jobTextField({
+        label: keystaticUiText("Job title"),
         validation: { length: { max: 200 } },
       }),
-      department: fields.text({
-        label: "Oddělení",
+      department: jobTextField({
+        label: keystaticUiText("Department"),
         validation: { length: { max: 120 } },
       }),
-      description: fields.text({
-        label: "Krátký text",
+      description: jobTextField({
+        label: keystaticUiText("Short description"),
         multiline: true,
         validation: { length: { max: 2000 } },
-      }),
-      linkLabel: fields.text({
-        label: "Text odkazu (nepovinný)",
-        description:
-          "Pole se zachovává pro starší obsah. Odkaz na webu se nyní překládá automaticky podle jazyka stránky.",
-        validation: { length: { max: 200 } },
       }),
       content: jobContentField(),
     },
     {
       label,
-      description:
-        "Karta použije překlad, až vyplníte název, oddělení a krátký text. Jinak se celá zobrazí anglicky. Vyplnění překladu nemění výběr jazykových verzí. Prázdný hlavní text se nahradí anglickým textem, bez změny jazyka úvodu.",
+      description: keystaticUiText(
+        "The card uses the translation once the title, department and short description are complete. Otherwise, the whole card uses English. Completing a translation does not change the published languages. An empty main description falls back to English, independently of the introduction.",
+      ),
     },
   );
 }
 
-export const jobsCollection = collection({
-  label: "Volné pozice",
-  path: "src/content/jobs/*/",
-  slugField: "title",
-  format: { data: "json" },
-  columns: ["title", "status", "order"],
-  schema: {
-    title: fields.slug({
+export type JobTranslationField = ReturnType<typeof translationFields>;
+
+export const jobTranslationsField = fields.object(
+  {
+    cs: translationFields("Čeština"),
+    de: translationFields("Deutsch"),
+    fi: translationFields("Suomi"),
+    pl: translationFields("Polski"),
+  },
+  { label: keystaticUiText("Translations") },
+);
+
+const visibleLocalesField = fields.multiselect({
+  label: keystaticUiText("Show in language versions"),
+  description: keystaticUiText(
+    "Choose where the published job is shown. Disabled translations stay saved. The English original is always required.",
+  ),
+  options: languages.map(({ locale, name }) => ({
+    label: name,
+    value: locale,
+  })),
+  defaultValue: languages.map(({ locale }) => locale),
+});
+
+const jobSchema = {
+  status: withJobFieldLayout(
+    jobSelectField({
+      label: keystaticUiText("Status"),
+      options: [
+        { label: keystaticUiText("Hidden"), value: "draft" },
+        { label: keystaticUiText("Published"), value: "published" },
+      ],
+      defaultValue: "draft",
+    }),
+    "status",
+  ),
+  order: withJobFieldLayout(
+    jobIntegerField({
+      label: keystaticUiText("Order"),
+      description: keystaticUiText("Lower numbers are displayed first."),
+      defaultValue: 100,
+      validation: { isRequired: true, min: 0 },
+    }),
+    "order",
+  ),
+  visibleLocales: {
+    ...visibleLocalesField,
+    Input(props: Parameters<typeof visibleLocalesField.Input>[0]) {
+      return createElement(JobLanguagesInput, {
+        ...props,
+        field: visibleLocalesField,
+      });
+    },
+  },
+  title: withJobFieldLayout(
+    fields.slug({
       name: {
-        label: "Název pozice (anglicky)",
+        label: keystaticUiText("Job title (English)"),
         validation: { ...requiredText, length: { max: 200 } },
       },
       slug: {
-        label: "Identifikátor",
-        description: "Po vytvoření neměňte.",
+        label: keystaticUiText("Identifier"),
         validation: {
           pattern: {
             regex: /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
-            message: "Použijte malá písmena bez diakritiky, číslice a pomlčky.",
+            message: keystaticUiText(
+              "Use lowercase letters without accents, numbers and hyphens.",
+            ),
           },
         },
       },
     }),
-    department: fields.text({
-      label: "Oddělení (anglicky)",
+    "title",
+  ),
+  department: withJobFieldLayout(
+    jobTextField({
+      label: keystaticUiText("Department (English)"),
       validation: { ...requiredText, length: { max: 120 } },
     }),
-    description: fields.text({
-      label: "Krátký text (anglicky)",
+    "department",
+  ),
+  description: withJobFieldLayout(
+    jobTextField({
+      label: keystaticUiText("Short description (English)"),
       multiline: true,
       validation: { ...requiredText, length: { max: 2000 } },
     }),
-    linkLabel: fields.text({
-      label: "Text odkazu (nepovinný)",
-      description:
-        "Pole se zachovává pro starší obsah. Odkaz na webu se nyní překládá automaticky podle jazyka stránky.",
-      validation: { length: { max: 200 } },
-    }),
-    content: jobContentField({ required: true }),
-    status: fields.select({
-      label: "Stav",
-      options: [
-        { label: "Skrytá", value: "draft" },
-        { label: "Zveřejněná", value: "published" },
-      ],
-      defaultValue: "draft",
-    }),
-    visibleLocales: fields.multiselect({
-      label: "Zobrazit v jazykových verzích",
-      description:
-        "Vyberte, kde se má zveřejněná pozice zobrazit. Bez výběru se nezobrazí nikde. Chybějící překlad se nahradí angličtinou.",
-      options: languages.map(({ locale, name }) => ({
-        label: name,
-        value: locale,
-      })),
-      defaultValue: languages.map(({ locale }) => locale),
-    }),
-    order: fields.integer({
-      label: "Pořadí",
-      description: "Nižší číslo se zobrazí dříve.",
-      defaultValue: 100,
-      validation: { isRequired: true, min: 0 },
-    }),
-    translations: fields.object(
-      {
-        cs: translationFields("Čeština"),
-        de: translationFields("Deutsch"),
-        fi: translationFields("Suomi"),
-        pl: translationFields("Polski"),
-      },
-      { label: "Překlady" },
-    ),
+    "description",
+  ),
+  content: withJobFieldLayout(jobContentField({ required: true }), "content"),
+  translations: {
+    ...jobTranslationsField,
+    Input(props: unknown) {
+      return createElement(
+        JobTranslationsInput,
+        props as JobTranslationsInputProps,
+      );
+    },
   },
+} satisfies Record<string, ComponentSchema>;
+
+export const jobsCollection = collection({
+  label: keystaticUiText("Job vacancies"),
+  path: "src/content/jobs/*/",
+  slugField: "title",
+  format: { data: "json" },
+  columns: ["title", "status", "order"],
+  schema: jobSchema,
 });
 
 // Reading the checkout never needs Cloud credentials or write access.

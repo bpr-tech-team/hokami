@@ -4,41 +4,101 @@ Otevřete `/keystatic` na webu HOKAMI a přihlaste se přes Keystatic Cloud.
 V levém menu vyberte **Volné pozice**. Běžná práce probíhá v hlavní větvi `main`;
 nové větve ani pull requesty vytvářet nemusíte.
 
+Jazyk rozhraní přepnete tlačítkem s ikonou jazyků vpravo v horní liště, vedle
+tlačítka **Uložit**. Nabídka obsahuje češtinu, angličtinu, němčinu, finštinu a
+polštinu. Volba se v prohlížeči pamatuje a nemění jazyk textů pozice. Před
+přepnutím uložte nebo zahoďte rozpracované změny; stránka se při přepnutí znovu načte.
+
 ## Přidání a úpravy
 
 Vyberte **Přidat**, nebo otevřete existující pozici. Vyplňte anglický název,
-oddělení, krátký text a hlavní text. Všechna čtyři anglická pole jsou povinná,
+oddělení, krátký text a hlavní popis. Všechna čtyři anglická pole jsou povinná,
 i u skryté pozice. Identifikátor se vytvoří automaticky; u existující pozice
-ho neměňte. Hlavní text upravujte jako v textovém editoru: můžete používat nadpisy,
-seznamy, tučné písmo, odkazy, tabulky a obrázky. Hlavní text se zobrazí na stránce
+ho neměňte. Hlavní popis upravujte jako v textovém editoru: můžete používat nadpisy,
+seznamy, tučné písmo, odkazy, tabulky a obrázky. Hlavní popis se zobrazí na stránce
 `/[jazyk]/jobs/[identifikátor]`. Prázdný anglický text, samotné mezery nebo prázdné
 nadpisy nelze uložit. Původní tři pozice začínají existujícím anglickým krátkým
 popisem; můžete ho rozšířit o schválený podrobný obsah.
 
-Obrázek vložíte tlačítkem **Image** v editoru. Povolené formáty jsou **PNG,
+Na začátku formuláře jsou **Stav** a **Pořadí**; na širší obrazovce vedle sebe.
+**Pořadí** určuje umístění na webu: nižší číslo je dříve. Nová pozice má stav
+**Skrytá**. Pro zveřejnění vyberte **Zveřejněná** a uložte. Změny zveřejněné
+pozice se po uložení také publikují.
+
+## Sekce a sloupce
+
+V hlavním popisu otevřete nabídku **+** a vyberte **Jeden sloupec** nebo **Dva sloupce**. Nová sekce se vloží
+na pozici kurzoru. Pokud je kurzor uvnitř sloupce, nová sekce se přidá za jeho
+celou sekci. Náplň práce s fotografií nebo požadavky s nabídkou sestavte
+z běžných bloků: do jednoho sloupce vložte text a do druhého obrázek nebo další text.
+Jeden a dva sloupce jsou první; ostatní položky jsou seřazené podle abecedy.
+Označený blok nebrání vložení dalšího stejného bloku: nová sekce, seznam,
+citace, obrázek nebo vložený obsah se přidá za něj.
+
+Každý sloupec upravujte přímo v editoru. Můžete kombinovat nadpisy, odstavce,
+odrážkové a číslované seznamy, obrázky, tabulky, citace a oddělovací linky.
+Citaci vložte přes **+ → Citace**, oddělovací linku přes **+ → Oddělovací čára**.
+Po vložení citace můžete rovnou psát do jejího prvního odstavce.
+Přes nabídku vložení jsou dostupné také **Seznam s fajfkami** a
+**Obrázek**. Seznam s fajfkami rovnou vytvoří první bod:
+pište přímo do něj, klávesou Enter přidáte další bod.
+U fotografie použijte tlačítko úpravy bloku k výběru souboru a vyplnění
+alternativního textu; nevyplněnou fotografii nelze uložit.
+
+Lišta sekce přepíná počet sloupců a bílé nebo jemné pozadí. Při změně ze dvou
+sloupců na jeden se obsah spojí: nejprve levý, potom pravý. Při opětovném
+rozdělení zůstane spojený obsah vlevo a pravý sloupec je prázdný. Šipky
+přesouvají celou sekci nahoru a dolů; koš ji odstraní. Jednotlivé části obsahu
+lze označit, vyjmout a vložit na jiné místo nebo do druhého sloupce.
+
+Sekce zůstávají na nejvyšší úrovni dokumentu; nevnořují se do jiných sekcí.
+V každé jazykové verzi můžete použít jinou strukturu. Starší texty lze nadále
+upravovat bez převodu na sekce. V úzkém editoru a na menších obrazovkách se
+sloupce zobrazují pod sebou. Rozměry, barvy a písmo určuje společný design webu.
+
+Sekce neobsahují schválené pracovní podmínky ani požadavky. Doplňte skutečné
+údaje konkrétní pozice a text před zveřejněním zkontrolujte.
+
+Obrázek vložíte přes **+ → Obrázek**, tabulku přes **+ → Tabulka**.
+Povolené formáty obrázků jsou **PNG,
 JPG/JPEG a WEBP**, nejvýše **0,5 MB na každý soubor**. Větší obrázek nejprve
 zmenšete nebo komprimujte. Nepodporovaný či příliš velký soubor se nevloží a
 editor zobrazí chybu. U obrázků doplňujte výstižný alternativní text.
 
+Video, mapu nebo jiný iframe vložte přes **+ → Vložený obsah**. Tlačítkem
+**Upravit** otevřete blok, vložte HTTPS adresu určenou pro vložení nebo celý kód
+iframe a doplňte název obsahu. U videa použijte adresu pro vložení, například
+YouTube `/embed/…`. Editor zobrazuje název a zdroj; samotný obsah se zobrazí na
+webu. Tlačítka Code a Code block slouží k formátování textu kódu, proto jsou
+z panelu odstraněná.
+
 Český, německý, finský a polský překlad jsou nepovinné. Karta použije překlad,
 až v daném jazyce vyplníte název, oddělení a krátký text. Do té doby se celá
 karta zobrazuje anglicky. Práci na neúplném překladu můžete uložit. Chybějící
-překlad hlavního textu se samostatně nahradí anglickým textem; přeložený název
+překlad hlavního popisu se samostatně nahradí anglickým popisem; přeložený název
 a úvod zůstávají ve zvoleném jazyce.
 
-Popisek odkazu **Číst dále** se překládá automaticky podle jazyka stránky,
-i když se text pozice zobrazí anglicky. Starší pole **Text odkazu** už popisek
-na webu nemění.
+Tlačítkem **Kopírovat obsah** uvnitř editoru vedle **+** zkopírujete celý jeho obsah
+včetně sekcí, formátování, tabulek a obrázků. V pravé nabídce přejděte na cílový
+jazyk, klikněte do jeho editoru a vložte obsah pomocí **Ctrl+V** nebo **⌘V**.
+Chcete-li nahradit existující popis, nejprve označte jeho obsah. Kopírování
+zdrojový popis nemění; vložený text pak přeložte. Prohlížeč může požádat
+o povolení přístupu ke schránce.
 
-V poli **Zobrazit v jazykových verzích** zaškrtněte, na kterých verzích webu má
-pozice být vidět. Zpočátku jsou vybrány všechny jazyky; bez výběru se pozice
+Popisek odkazu **Číst dále** se překládá automaticky podle jazyka stránky,
+i když se text pozice zobrazí anglicky. Samostatné pole pro tento popisek není.
+
+V pravém panelu **Zobrazit v jazykových verzích** zaškrtněte, na kterých verzích
+webu má pozice být vidět. Panel při posouvání stránky zůstává po ruce a nabízí
+odkazy na jednotlivé popisy. Na menších obrazovkách je nad anglickými poli.
+Přechody na popisy používají plynulé posouvání; při omezení animací v systému
+se stránka přesune okamžitě.
+Vypnutý překlad se ve formuláři skryje, jeho obsah zůstane uložený. Po opětovném
+zaškrtnutí se znovu zobrazí. Anglický originál zůstává vždy dostupný.
+Zpočátku jsou vybrány všechny jazyky; bez výběru se pozice
 nezobrazí nikde. Tento výběr je nezávislý na překladech: vyplněný překlad sám
 pozici nezveřejní, chybějící překlad se nahradí angličtinou. Anglická pole jsou
 povinná i tehdy, když anglickou verzi webu nevyberete.
-
-**Pořadí** určuje umístění na webu: nižší číslo je dříve. Nová pozice má stav
-**Skrytá**. Pro zveřejnění vyberte **Zveřejněná** a uložte. Změny zveřejněné
-pozice se po uložení také publikují.
 
 ## Skrytí a odstranění
 

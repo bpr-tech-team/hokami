@@ -7,3 +7,7 @@ export const languages: { locale: Locale; code: string; name: string }[] = [
   { locale: "fi", code: "FI", name: "Suomi" },
   { locale: "pl", code: "PL", name: "Polski" },
 ];
+
+export const adminLanguages = [...languages].sort(
+  (a, b) => Number(b.locale === "en") - Number(a.locale === "en"),
+);

@@ -2,7 +2,6 @@
   "title": "Buyer",
   "department": "Commercial team",
   "description": "We are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.",
-  "linkLabel": "Read more: Buyer",
   "content": "{% JobPhoto\n   src=\"/images/jobs/buyer/7a2e1447-0c1e-4b76-a02f-9cd7ca3e5cd2.jpg\"\n   alt=\"Alternativní text must not be empty\" /%}\n\nWe are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.\n\nWe are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.\n\nWe are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.\n\nWe are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.\n\nWe are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.\n\nWe are looking for a new colleague to join our commercial team as a Buyer. If you enjoy business, negotiation and work that makes a real difference to how a company operates, this could be the role for you. An immediate start is possible, and training is provided.\n",
   "status": "published",
   "visibleLocales": [
@@ -18,28 +17,24 @@
       "title": "Nákupčí",
       "department": "Obchodní tým",
       "description": "Do našeho obchodního týmu hledáme nového kolegu/kolegyni na pozici Nákupčí. Pokud tě láká prostředí obchodu, vyjednávání a práce, která má reálný dopad na fungování firmy, může to být role pro tebe. Nástup možný ihned, zaškolení je samozřejmostí.",
-      "linkLabel": "Číst dále: Nákupčí",
       "content": ""
     },
     "de": {
       "title": "Einkäufer / Einkäuferin",
       "department": "Kaufmännisches Team",
       "description": "Für unser kaufmännisches Team suchen wir einen neuen Kollegen oder eine neue Kollegin im Einkauf. Wenn Sie sich für Handel, Verhandlungen und eine Tätigkeit interessieren, die den Unternehmensalltag maßgeblich mitgestaltet, könnte diese Stelle zu Ihnen passen. Ein sofortiger Einstieg ist möglich, eine Einarbeitung ist selbstverständlich.",
-      "linkLabel": "Mehr erfahren: Einkauf",
       "content": ""
     },
     "fi": {
       "title": "Ostaja",
       "department": "Kaupallinen tiimi",
       "description": "Etsimme kaupalliseen tiimiimme uutta kollegaa ostajan tehtävään. Jos sinua kiinnostavat kaupankäynti, neuvottelut ja työ, jolla on todellinen vaikutus yrityksen toimintaan, tämä tehtävä voi sopia sinulle. Voit aloittaa heti, ja perehdytys kuuluu luonnollisesti tehtävään.",
-      "linkLabel": "Lue lisää: Ostaja",
       "content": ""
     },
     "pl": {
       "title": "Specjalista / specjalistka ds. zakupów",
       "department": "Zespół handlowy",
       "description": "Do naszego zespołu handlowego szukamy nowej osoby na stanowisko specjalisty lub specjalistki ds. zakupów. Jeśli interesują Cię handel, negocjacje i praca, która ma realny wpływ na funkcjonowanie firmy, ta rola może być dla Ciebie. Możliwość rozpoczęcia pracy od zaraz, zapewniamy wdrożenie.",
-      "linkLabel": "Czytaj dalej: Zakupy",
       "content": ""
     }
   }

@@ -34,8 +34,8 @@ test("the mandatory English body rejects empty documents through shared validati
   const required = jobContentField({ required: true });
   const optional = jobContentField();
   for (const text of ["", " \n\t", "## \n\n- \n", "---"]) {
-    assert.throws(() => assertJobContent(text), /hlavní text/);
-    assert.throws(() => required.reader.parse(text), /hlavní text/);
+    assert.throws(() => assertJobContent(text), /hlavní popis/);
+    assert.throws(() => required.reader.parse(text), /hlavní popis/);
     assert.doesNotThrow(() => optional.reader.parse(text));
   }
   assert.doesNotThrow(() =>

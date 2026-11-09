@@ -9,6 +9,12 @@ import { RichText } from "@/components/typography/rich-text";
 import { Container } from "@/components/layout/container";
 import { sectionVariants } from "@/components/layout/section-variants";
 import { deserializeJobContent } from "@/lib/jobs/content";
+import { isJobImagePath } from "@/lib/jobs/content-layout";
+import { FactList } from "@/components/sections/fact-list/fact-list";
+import { JobColumn, jobColumnsVariants } from "./content-layout";
+import { JobPhoto } from "./job-photo";
+import { ContentEmbed } from "./content-embed";
+import { readIframeEmbed } from "@/lib/jobs/embed";
 
 export function safeContentHref(href: string) {
   try {
@@ -33,8 +39,12 @@ function ContentHeading({
   return (
     <Heading
       as={as}
-      variant={level === 2 ? "article" : "article-subheading"}
-      className={level === 2 ? "mt-12 mb-5 first:mt-0" : "mt-8 mb-3"}
+      variant={level === 2 ? "section" : level === 3 ? "subsection" : "item"}
+      className={
+        level === 2
+          ? "mt-12 mb-6 first:mt-0 desktop:mb-8"
+          : "mt-8 mb-3 first:mt-0"
+      }
     >
       {children}
     </Heading>
@@ -42,9 +52,15 @@ function ContentHeading({
 }
 
 function ContentParagraph(props: ComponentProps<"p">) {
-  return (
-    <Text {...props} variant="article" className="my-5 first:mt-0 last:mb-0" />
-  );
+  return <Text {...props} className="my-5 first:mt-0 last:mb-0" />;
+}
+
+function paragraphText(node: Node): string | null {
+  if (node.type === "text") return String(node.attributes.content ?? "");
+  if (node.type === "softbreak") return "\n";
+  if (!["paragraph", "inline"].includes(node.type)) return null;
+  const parts = node.children.map(paragraphText);
+  return parts.some((part) => part === null) ? null : parts.join("");
 }
 
 function ContentTable(props: ComponentProps<"table">) {
@@ -64,8 +80,7 @@ async function ContentImage({
   alt: string;
   title?: string;
 }) {
-  if (!/^\/images\/jobs\/[a-z0-9/_-]+\.(png|jpe?g|webp)$/i.test(src))
-    return null;
+  if (!isJobImagePath(src)) return null;
   const metadata = await sharp(join(process.cwd(), "public", src)).metadata();
   const { width, height } = metadata.autoOrient ?? metadata;
   if (!width || !height) return null;
@@ -82,7 +97,60 @@ async function ContentImage({
   );
 }
 
+function ContentSection({
+  tone = "default",
+  children,
+}: {
+  tone?: "default" | "subtle";
+  children: ReactNode;
+}) {
+  const columns = React.Children.count(children) === 2 ? 2 : 1;
+  return (
+    <section className={sectionVariants({ tone })}>
+      <Container className={jobColumnsVariants({ columns })}>
+        {children}
+      </Container>
+    </section>
+  );
+}
+
+function ContentPhoto({ src, alt }: { src: string; alt: string }) {
+  if (!isJobImagePath(src)) return null;
+  return <JobPhoto src={src} alt={alt} />;
+}
+
 const config: Config = {
+  tags: {
+    JobEmbed: {
+      render: "ContentEmbed",
+      selfClosing: true,
+      attributes: {
+        src: { type: String, required: true },
+        title: { type: String, required: true },
+      },
+    },
+    JobSection: {
+      render: "ContentSection",
+      attributes: {
+        id: { type: String },
+        tone: {
+          type: String,
+          default: "default",
+          matches: ["default", "subtle"],
+        },
+      },
+    },
+    JobColumn: { render: "JobColumn" },
+    JobChecklist: { render: "FactList" },
+    JobPhoto: {
+      render: "ContentPhoto",
+      selfClosing: true,
+      attributes: {
+        src: { type: String, required: true },
+        alt: { type: String, required: true },
+      },
+    },
+  },
   nodes: {
     document: { ...Markdoc.nodes.document, render: "ContentFragment" },
     heading: {
@@ -95,7 +163,19 @@ const config: Config = {
         );
       },
     },
-    paragraph: { ...Markdoc.nodes.paragraph, render: "ContentParagraph" },
+    paragraph: {
+      ...Markdoc.nodes.paragraph,
+      transform(node: Node, config: Config) {
+        const embed = readIframeEmbed(paragraphText(node) ?? "");
+        return embed
+          ? new Markdoc.Tag("ContentEmbed", embed)
+          : new Markdoc.Tag(
+              "ContentParagraph",
+              {},
+              node.transformChildren(config),
+            );
+      },
+    },
     table: { ...Markdoc.nodes.table, render: "ContentTable" },
     image: { ...Markdoc.nodes.image, render: "ContentImage" },
     fence: {
@@ -129,28 +209,54 @@ const config: Config = {
   },
 };
 
-export function renderJobContent(body: string) {
-  return Markdoc.renderers.react(
-    Markdoc.transform(deserializeJobContent(body), config),
-    React,
-    {
-      components: {
-        ContentFragment: React.Fragment,
-        ContentHeading,
-        ContentParagraph,
-        ContentTable,
-        ContentImage,
-      },
+function renderDocument(document: Node) {
+  return Markdoc.renderers.react(Markdoc.transform(document, config), React, {
+    components: {
+      ContentFragment: React.Fragment,
+      ContentHeading,
+      ContentParagraph,
+      ContentTable,
+      ContentImage,
+      ContentSection,
+      JobColumn,
+      FactList,
+      ContentPhoto,
+      ContentEmbed,
     },
-  );
+  });
+}
+
+export function renderJobContent(body: string) {
+  return renderDocument(deserializeJobContent(body));
 }
 
 export function JobContent({ body, locale }: { body: string; locale: string }) {
+  const root = deserializeJobContent(body);
+  const groups: Node[][] = [];
+  for (const node of root.children) {
+    if (
+      node.tag === "JobSection" ||
+      groups.at(-1)?.[0]?.tag === "JobSection" ||
+      !groups.length
+    )
+      groups.push([node]);
+    else groups.at(-1)!.push(node);
+  }
   return (
-    <section className={sectionVariants()}>
-      <Container>
-        <RichText lang={locale}>{renderJobContent(body)}</RichText>
-      </Container>
-    </section>
+    <div lang={locale}>
+      {groups.map((nodes, index) => {
+        const document = new Markdoc.Ast.Node("document", {}, nodes);
+        const rendered = renderDocument(document);
+        return nodes[0].tag === "JobSection" ? (
+          <React.Fragment key={index}>{rendered}</React.Fragment>
+        ) : (
+          <section key={index} className={sectionVariants()}>
+            <Container>
+              <RichText className="leading-body">{rendered}</RichText>
+            </Container>
+          </section>
+        );
+      })}
+    </div>
   );
 }

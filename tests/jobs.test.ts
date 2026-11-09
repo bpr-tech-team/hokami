@@ -16,19 +16,16 @@ const czech: JobCardText = {
   title: "Nákupčí",
   department: "Obchodní tým",
   description: "Hledáme nového kolegu.",
-  linkLabel: "Číst dále: Nákupčí",
 };
 const english: JobCardText = {
   title: "Buyer",
   department: "Commercial team",
   description: "We are looking for a new colleague.",
-  linkLabel: "",
 };
 const empty: JobCardText = {
   title: "",
   department: "",
   description: "",
-  linkLabel: "",
 };
 
 function record(

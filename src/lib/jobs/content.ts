@@ -1,20 +1,27 @@
+import { keystaticUiText } from "@/i18n/keystatic-ui";
 import Markdoc from "@markdoc/markdoc";
 
 // Keystatic ships its own Markdoc version. Only share data across that boundary.
 type ContentNode = {
   type: string;
+  tag?: string;
   attributes: Record<string, unknown>;
   children: readonly ContentNode[];
 };
 
-export const REQUIRED_JOB_CONTENT = "Vyplňte prosím hlavní text v angličtině.";
+export const REQUIRED_JOB_CONTENT = keystaticUiText(
+  "Please enter the main description in English.",
+);
 
 export function hasJobContent(node: ContentNode): boolean {
   return (
     (["text", "code", "fence"].includes(node.type) &&
       typeof node.attributes.content === "string" &&
       node.attributes.content.trim().length > 0) ||
-    (node.type === "image" && Boolean(node.attributes.src)) ||
+    ((node.type === "image" ||
+      (node.type === "tag" &&
+        ["JobPhoto", "JobEmbed"].includes(node.tag ?? ""))) &&
+      Boolean(node.attributes.src)) ||
     node.children.some(hasJobContent)
   );
 }

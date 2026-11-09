@@ -1,6 +1,11 @@
 import { config } from "@keystatic/core";
 import { KeystaticBrandMark } from "./src/components/integrations/keystatic/brand-mark";
 import { jobsCollection } from "./src/lib/jobs/collection";
+import {
+  getKeystaticUiLocale,
+  keystaticUiLocales,
+  keystaticUiText,
+} from "./src/i18n/keystatic-ui";
 
 const cloudProject = process.env.NEXT_PUBLIC_KEYSTATIC_CLOUD_PROJECT?.trim();
 
@@ -9,9 +14,12 @@ export const isLocalKeystatic =
   process.env.NEXT_PUBLIC_KEYSTATIC_LOCAL_MODE === "true";
 
 const common = {
-  locale: "cs-CZ" as const,
+  locale: keystaticUiLocales[getKeystaticUiLocale()],
   ui: {
-    brand: { name: "Administrace", mark: KeystaticBrandMark },
+    brand: {
+      name: keystaticUiText("Administration"),
+      mark: KeystaticBrandMark,
+    },
     navigation: ["jobs" as const],
   },
   collections: { jobs: jobsCollection },

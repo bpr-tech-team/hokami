@@ -1,4 +1,10 @@
-@import "../brand-theme.css";
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "../theme.css";
+
+@layer utilities {
+  @tailwind utilities;
+}
 
 /*
  * Keystar 0.10 token bridge. Apply to every provider, including portal roots.
@@ -13,6 +19,17 @@ html[data-hokami-admin] .kui-theme {
     var(--font-ibm-plex-sans), Arial, sans-serif;
   --kui-typography-font-family-code:
     var(--font-ibm-plex-mono), "Courier New", monospace;
+
+  /* Vendor leading trims were measured for its original font, not IBM Plex.
+     Keep native labels and help text in normal flow alongside shadcn fields. */
+  --kui-typography-text-small-baseline-trim: 0px;
+  --kui-typography-text-small-capheight-trim: 0px;
+  --kui-typography-text-regular-baseline-trim: 0px;
+  --kui-typography-text-regular-capheight-trim: 0px;
+  --kui-typography-text-medium-baseline-trim: 0px;
+  --kui-typography-text-medium-capheight-trim: 0px;
+  --kui-typography-text-large-baseline-trim: 0px;
+  --kui-typography-text-large-capheight-trim: 0px;
 
   --kui-color-scale-white: var(--hokami-color-surface-default);
   --kui-color-scale-black: var(--hokami-color-text-primary);
