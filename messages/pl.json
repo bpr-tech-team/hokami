@@ -312,6 +312,34 @@
     "smt": {
       "title": "Montaż SMT",
       "description": "Montaż SMT w HOKAMI: cztery zautomatyzowane linie, zdolność ponad 40 mln umieszczeń komponentów miesięcznie, płytki do 810 × 480 mm i możliwość rozpoczęcia produkcji ekspresowej w ciągu 24 godzin."
+    },
+    "pcb": {
+      "title": "Płytki drukowane",
+      "description": "Wysokiej jakości płytka drukowana stanowi podstawę każdego niezawodnego produktu elektronicznego."
+    },
+    "tht": {
+      "title": "THT",
+      "description": "Lutowanie THT jest nieodłączną częścią produkcji zespołów elektronicznych, zwłaszcza tam, gdzie wymagana jest wysoka wytrzymałość mechaniczna połączeń, niezawodność i długa żywotność produktów."
+    },
+    "cleaning": {
+      "title": "Czyszczenie",
+      "description": "Czystość płytek drukowanych jest ważnym czynnikiem wpływającym na jakość produktu końcowego."
+    },
+    "testing": {
+      "title": "Testowanie i jakość",
+      "description": "W firmie Hokami jakość jest nieodłącznym elementem każdego procesu produkcyjnego."
+    },
+    "coating": {
+      "title": "Lakierowanie ochronne",
+      "description": "Lakierowanie zespołów elektronicznych skutecznie chroni płytki drukowane i komponenty elektroniczne przed wpływem środowiska."
+    },
+    "mechanicalAssembly": {
+      "title": "Montaż mechaniczny",
+      "description": "W firmie Hokami produkcja nie kończy się na montażu komponentów na płytce drukowanej."
+    },
+    "smtStencils": {
+      "title": "Szablony SMT",
+      "description": "Wysokiej jakości szablon SMT jest jednym z kluczowych warunków precyzyjnego nakładania pasty lutowniczej i uzyskania wysokiej jakości montażu SMT."
     }
   },
   "RequesForQuote": {
@@ -559,7 +587,15 @@
   "ServiceDetail": {
     "eyebrow": "Usługi",
     "back": "Powrót do wszystkich usług",
-    "equipment": "Zobacz wyposażenie"
+    "equipment": "Zobacz wyposażenie",
+    "possibilities": "Zobacz możliwości",
+    "checks": "Zobacz kontrole",
+    "includedServices": "Zobacz usługi",
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Szukasz partnera do produkcji elektroniki?",
+      "action": "Skontaktuj się"
+    }
   },
   "Smt": {
     "hero": {
@@ -704,6 +740,368 @@
     "failure": {
       "title": "Nie udało się wysłać zgłoszenia",
       "unavailable": "Formularz jest chwilowo niedostępny. Skontaktuj się z nami pod adresem <email>{address}</email>."
+    }
+  },
+  "Pcb": {
+    "hero": {
+      "title": "Płytki drukowane",
+      "description": "Wysokiej jakości płytka drukowana stanowi podstawę każdego niezawodnego produktu elektronicznego. Hokami zapewnia produkcję płytek drukowanych za pośrednictwem sprawdzonej sieci wieloletnich partnerów. Dzięki temu oferujemy szeroki zakres technologii, wysoką jakość wykonania i krótkie terminy dostaw zarówno dla prototypów, jak i produkcji seryjnej."
+    },
+    "first": {
+      "eyebrow": "Kompleksowość",
+      "title": "Kompleksowa obsługa",
+      "p1": "Dostarczamy jednostronne, dwustronne i wielowarstwowe płytki drukowane produkowane dokładnie według wymagań klienta. Zapewniamy wsparcie techniczne przy wyborze odpowiedniego materiału, wykończenia powierzchni i technologii produkcji, uwzględniając wymagane właściwości elektryczne, mechaniczne i odporność produktu na warunki środowiskowe.",
+      "p2": "Dzięki ścisłemu powiązaniu z naszymi procesami SMT i THT zapewniamy pełną obsługę od produkcji płytek drukowanych, przez montaż komponentów, testowanie i montaż końcowy, aż po wysyłkę gotowego produktu. Klient zyskuje jednego niezawodnego partnera dla całego procesu produkcyjnego.",
+      "imageAlt": "Płytki drukowane z precyzyjnymi ścieżkami miedzianymi."
+    },
+    "second": {
+      "eyebrow": "Jakość",
+      "title": "Jakość bez kompromisów",
+      "p1": "Każda dostarczona płytka drukowana spełnia rygorystyczne wymagania dotyczące jakości i niezawodności. Produkcja odbywa się zgodnie z uznanymi międzynarodowymi standardami, a każda seria przechodzi kontrolę optyczną i elektryczną. Wieloletni, sprawdzeni partnerzy produkcyjni pozwalają nam zapewnić stałą jakość, wysoką powtarzalność i elastyczne terminy dostaw.",
+      "imageAlt": "Zbliżenie płytek drukowanych przygotowanych do montażu komponentów."
+    },
+    "statistics": {
+      "label": "Możliwości produkcji PCB",
+      "thickness": "Grubość materiału",
+      "copper": "Grubość miedzi",
+      "track": "Min. szerokość ścieżki",
+      "gap": "Min. odstęp"
+    },
+    "specifications": {
+      "title": "Standardowe możliwości produkcyjne",
+      "layers": {
+        "label": "Liczba warstw",
+        "value": "Jednostronne, dwustronne i wielowarstwowe"
+      },
+      "material": {
+        "label": "Materiał",
+        "value": "FR1, FR2, FR3, FR4, CEM1, CEM3, AL, elastyczne PCB, sztywno-elastyczne PCB"
+      },
+      "thickness": {
+        "label": "Grubość materiału",
+        "value": "{minimum, number, ::.0}–{maximum, number, ::.0} mm"
+      },
+      "copper": {
+        "label": "Grubość miedzi",
+        "value": "{minimum, number}–{maximum, number} µm"
+      },
+      "track": {
+        "label": "Min. szerokość ścieżki",
+        "value": "{value, number, ::.00} mm"
+      },
+      "gap": {
+        "label": "Min. odstęp",
+        "value": "{value, number, ::.00} mm"
+      },
+      "drilling": {
+        "label": "Wiercenie",
+        "value": "{minimum, number, ::.00}–{maximum, number, ::.0} mm / wiercenie laserowe od {laserMinimum, number, ::.0} mm"
+      },
+      "mask": {
+        "label": "Maska lutownicza",
+        "value": "UV lub sitodruk"
+      },
+      "printing": {
+        "label": "Nadruki",
+        "value": "Farba, warstwy węglowe, lakiery zrywalne"
+      },
+      "finish": {
+        "label": "Wykończenie powierzchni",
+        "value": "Nikiel, złoto, HAL, LF-HAL, OSP, cyna chemiczna, srebro"
+      },
+      "outline": {
+        "label": "Obróbka obrysu",
+        "value": "Frezowanie, rowkowanie, wykrawanie"
+      },
+      "inspection": {
+        "label": "Kontrola",
+        "value": "Optyczna, test elektryczny"
+      },
+      "quality": {
+        "label": "Standardy jakości",
+        "value": "UL, ISO 9001"
+      },
+      "stencils": {
+        "label": "Szablony",
+        "value": "Stalowe, cięte laserowo, wklejane w ramy aluminiowe"
+      }
+    },
+    "contact": {
+      "description": "Niezależnie od tego, czy chodzi o prototypy, małe serie czy duże zamówienia, Hokami zapewnia pełne wsparcie w produkcji płytek drukowanych i ich późniejszym montażu. Kompleksowe usługi EMS oferują efektywne rozwiązanie od samej płytki PCB po w pełni przetestowany i zmontowany produkt końcowy."
+    }
+  },
+  "Tht": {
+    "hero": {
+      "title": "THT",
+      "description": "Lutowanie THT jest nieodłączną częścią produkcji zespołów elektronicznych, szczególnie tam, gdzie wymagana jest wysoka wytrzymałość mechaniczna połączeń, niezawodność i długa żywotność produktów. Hokami wykorzystuje nowoczesne technologie lutowania umożliwiające efektywną produkcję od pojedynczych prototypów po duże serie."
+    },
+    "first": {
+      "eyebrow": "Technologia",
+      "title": "Dobór technologii lutowania",
+      "p1": "Dobieramy najodpowiedniejszą technologię lutowania do rodzaju produktu i wymagań klienta. W standardowej produkcji seryjnej stosujemy lutowanie na fali, natomiast dla złożonych zespołów lub płytek łączących SMT i THT idealnym rozwiązaniem jest lutowanie selektywne. Stosujemy także lutowanie ręczne przy prototypach, naprawach, uzupełnianiu specyficznych komponentów oraz produktach wymagających indywidualnego podejścia.",
+      "imageAlt": "Urządzenie do selektywnego lutowania płytek drukowanych."
+    },
+    "second": {
+      "eyebrow": "Jakość",
+      "title": "Lutowanie selektywne",
+      "p1": "Lutowanie selektywne pozwala precyzyjnie nanosić lut wyłącznie w wymaganych miejscach, ograniczając obciążenie termiczne sąsiednich komponentów i zapewniając wysoką jakość połączeń nawet w zaawansowanych zespołach elektronicznych. Nowoczesne technologie automatyczne zapewniają wysoką powtarzalność procesu i stałą jakość we wszystkich seriach.",
+      "p2": "Wszystkie procesy lutowania odbywają się w kontrolowanych warunkach produkcyjnych i podlegają ciągłej kontroli jakości, niezawodności oraz zgodności z indywidualnymi wymaganiami każdego klienta.",
+      "imageAlt": "Pracownica podczas ręcznego lutowania zespołu elektronicznego."
+    },
+    "equipment": {
+      "title": "Wyposażenie technologiczne",
+      "wave": "Lutowanie na fali",
+      "selective": "Lutowanie selektywne",
+      "manual": "Lutowanie ręczne",
+      "station": "Stacje lutownicze {model}"
+    },
+    "contact": {
+      "description": "Łącząc automatyczne i ręczne technologie lutowania, oferujemy optymalne rozwiązania dla szerokiego zakresu zastosowań elektronicznych. Zapewniamy wysoką jakość połączeń niezależnie od złożoności produktu i wielkości serii."
+    }
+  },
+  "Cleaning": {
+    "hero": {
+      "title": "Czyszczenie",
+      "description": "Czystość płytek drukowanych jest ważnym czynnikiem wpływającym na jakość produktu końcowego. Zapewniamy czystość w całym procesie produkcyjnym zgodnie ze standardem IPC-CH-65B."
+    },
+    "first": {
+      "eyebrow": "Proces",
+      "title": "Proces zgodny z IPC-CH-65B",
+      "p1": "Czystość płytek drukowanych jest jednym z kluczowych czynników wpływających na niezawodność, żywotność i długotrwałe działanie zespołów elektronicznych. W Hokami przywiązujemy szczególną wagę do czyszczenia i zarządzamy tym procesem zgodnie z wymaganiami IPC-CH-65B oraz indywidualnymi specyfikacjami klientów.",
+      "p2": "W standardowej produkcji stosujemy nowoczesne pasty lutownicze i topniki No Clean, spełniające wysokie wymagania jakości i niezawodności połączeń. Jeśli projekt wymaga wyższego poziomu czystości powierzchni, zapewniamy profesjonalne mycie zmontowanych płytek drukowanych przy użyciu automatycznych technologii czyszczenia.",
+      "imageAlt": "Zmontowane płytki drukowane w systemie czyszczącym."
+    },
+    "second": {
+      "eyebrow": "Technologia",
+      "title": "Ultradźwięki i natrysk wysokociśnieniowy",
+      "p1": "Do usuwania pozostałości topników, zanieczyszczeń jonowych i innych zabrudzeń wykorzystujemy połączenie czyszczenia ultradźwiękowego i natrysku wysokociśnieniowego. Precyzyjnie kontrolowany proces pozwala uzyskać wysoką czystość nawet zaawansowanych zespołów elektronicznych przeznaczonych między innymi do zastosowań przemysłowych, medycznych i energetycznych.",
+      "p2": "Każdy proces czyszczenia jest dostosowany do konkretnych wymagań klienta i charakterystyki produktu, aby zapewnić maksymalną niezawodność wyrobu przy zachowaniu wysokiej efektywności produkcji.",
+      "imageAlt": "Automatyczne przemysłowe urządzenie do czyszczenia zespołów elektronicznych."
+    },
+    "equipment": {
+      "title": "Wyposażenie technologiczne",
+      "description": "Do czyszczenia zespołów elektronicznych wykorzystujemy nowoczesne urządzenia przeznaczone do profesjonalnych zastosowań przemysłowych:",
+      "moduleClean": "{model} – automatyczny system myjący z modułem ultradźwiękowym i natryskowym",
+      "mdx": "{model} – przemysłowe urządzenie myjące",
+      "ultrasonic": "Myjki ultradźwiękowe z regulacją temperatury kąpieli i czasowym sterowaniem procesem"
+    },
+    "contact": {
+      "description": "Nowoczesne technologie czyszczenia i starannie kontrolowane procesy pozwalają nam zapewnić wymagany poziom czystości powierzchni zgodnie ze specyfikacjami klienta i wymaganiami poszczególnych zastosowań."
+    }
+  },
+  "Testing": {
+    "hero": {
+      "title": "Testowanie i jakość",
+      "description": "W Hokami jakość jest integralną częścią każdego procesu produkcyjnego. Kontrola obejmuje wszystkie etapy: od przyjęcia materiału, przez nanoszenie pasty lutowniczej i montaż SMT oraz THT, po montaż końcowy, testy funkcjonalne i wysyłkę. Wielopoziomowy system kontroli jakości zapewnia wysoką niezawodność, powtarzalność produkcji i najwyższą jakość każdego zespołu elektronicznego."
+    },
+    "first": {
+      "eyebrow": "Standardy",
+      "title": "Kontrola w całym procesie produkcji",
+      "p1": "Procesy produkcyjne są prowadzone zgodnie z wymaganiami IPC-A-610, a czystość płytek drukowanych zapewniamy według zaleceń IPC-CH-65B. Wszystkie procesy kontroli i testowania są dostosowane do wymagań klienta i charakterystyki wytwarzanego produktu.",
+      "p2": "Jakość jest weryfikowana już od pierwszych operacji produkcyjnych. Kontrolujemy nanoszenie pasty lutowniczej, dokładność rozmieszczenia komponentów, jakość połączeń, parametry elektryczne i działanie produktu końcowego. Każdy etap ma wykrywać odchylenia jak najwcześniej, zanim wpłyną na końcową jakość wyrobu.",
+      "imageAlt": "Optyczna kontrola płytki drukowanej na urządzeniu SAKI."
+    },
+    "checks": {
+      "title": "Nasz system jakości obejmuje",
+      "spi": "SPI (Solder Paste Inspection) – kontrola jakości naniesienia pasty lutowniczej.",
+      "aoi": "AOI (Automated Optical Inspection) – automatyczna kontrola optyczna montażu komponentów i połączeń lutowanych.",
+      "bga": "Inspekcja BGA za pomocą kamery endoskopowej.",
+      "ict": "In-Circuit Test (ICT) – elektryczna kontrola zmontowanych komponentów i połączeń.",
+      "functional": "Testy funkcjonalne (FCT) zgodnie z wymaganiami klienta.",
+      "programming": "Programowanie zespołów elektronicznych.",
+      "burnIn": "Testy burn-in potwierdzające długotrwałą niezawodność.",
+      "highVoltage": "Testy wysokonapięciowe (HV Test) dla zastosowań AC i DC.",
+      "mechanical": "Testy mechaniczne przycisków, przełączników, przełączników dźwigniowych i przekaźników kontaktronowych.",
+      "optical": "Pomiary optyczne LED i wyświetlaczy, w tym natężenia światła i długości fali.",
+      "buzzer": "Testowanie elementów dźwiękowych (Buzzer Test).",
+      "visual": "Kontrola wizualna wymiarów, wysokości i położenia komponentów."
+    },
+    "equipment": {
+      "title": "Wyposażenie testowe",
+      "aoi": {
+        "title": "Automatyczna kontrola optyczna (AOI)",
+        "description": "Automatyczna inspekcja optyczna umożliwia szybką i precyzyjną kontrolę jakości montażu płytek drukowanych. Systemy AOI sprawdzają obecność, orientację i położenie komponentów oraz jakość połączeń lutowanych, znacząco zwiększając niezawodność produkcji.",
+        "endoscope": "Kamera endoskopowa do kontroli obudów BGA"
+      },
+      "ict": {
+        "title": "In-Circuit Test (ICT)",
+        "description": "Testy elektryczne weryfikują działanie poszczególnych komponentów, połączenia i parametry elektryczne przed rozpoczęciem testów funkcjonalnych.",
+        "manual": "{model} z przyrządami {fixture}",
+        "oversized": "{fixture} do testowania ponadwymiarowych płytek PCB"
+      },
+      "functional": {
+        "title": "Testy funkcjonalne",
+        "description": "Testy funkcjonalne symulują rzeczywistą pracę produktu i sprawdzają jego prawidłowe działanie. Scenariusze testowe przygotowujemy indywidualnie według wymagań klienta i charakterystyki danego zastosowania.",
+        "listLabel": "Przykładowy zakres:",
+        "assemblies": "Kompleksowe testy funkcjonalne zespołów elektronicznych",
+        "communication": "Testy komunikacji (I²C, RS232, Bluetooth)",
+        "firmware": "Programowanie firmware",
+        "burnIn": "Testy burn-in",
+        "highVoltage": "Testy wysokonapięciowe (AC/DC)",
+        "mechanical": "Testy mechaniczne elementów sterujących",
+        "optical": "Testy optyczne LED i wyświetlaczy",
+        "sound": "Testowanie elementów dźwiękowych"
+      }
+    },
+    "cards": {
+      "title": "Zapewnienie jakości",
+      "traceability": {
+        "title": "Identyfikowalność produkcji",
+        "description": "Każdy zespół elektroniczny można w pełni prześledzić w procesie produkcyjnym. System identyfikowalności rejestruje użyte materiały, partie produkcyjne, operacje technologiczne, wyniki testów i poszczególne parametry produkcji. Zapewnia to pełną przejrzystość i spełnienie wymagań klientów z branż o wysokich standardach jakości."
+      },
+      "esd": {
+        "title": "Ochrona ESD",
+        "description": "Wszystkie procesy produkcji i testowania odbywają się w środowisku chronionym przed ESD. Przestrzeganie rygorystycznych zasad ochrony elektrostatycznej minimalizuje ryzyko uszkodzenia wrażliwych komponentów podczas produkcji, obsługi i testowania."
+      },
+      "calibration": {
+        "title": "Kalibracja aparatury pomiarowej",
+        "description": "Wszystkie urządzenia pomiarowe i testowe są regularnie kalibrowane zgodnie z wewnętrznym systemem zarządzania jakością. Zapewnia to dokładność pomiarów, powtarzalność wyników i długotrwałą niezawodność wszystkich procesów kontrolnych."
+      },
+      "fixtures": {
+        "title": "Projektowanie przyrządów testowych",
+        "description": "Dla konkretnych projektów opracowujemy i produkujemy własne przyrządy testowe oraz automatyczne stanowiska testujące. Pozwala to dostosować zakres testów do indywidualnych wymagań klienta i zapewnić maksymalny poziom kontroli każdego produktu."
+      }
+    },
+    "contact": {
+      "description": "Kompleksowy system zarządzania jakością, nowoczesne technologie kontroli i doświadczony zespół specjalistów pozwalają Hokami dostarczać zespoły elektroniczne spełniające najwyższe wymagania jakości, bezpieczeństwa i długotrwałej niezawodności eksploatacyjnej."
+    }
+  },
+  "Coating": {
+    "hero": {
+      "title": "Lakierowanie ochronne",
+      "description": "Lakierowanie zespołów elektronicznych skutecznie chroni płytki drukowane i komponenty przed niekorzystnymi wpływami środowiska. Technologia znacząco wydłuża żywotność elektroniki, zwiększa niezawodność działania i umożliwia użytkowanie produktów w wymagających warunkach."
+    },
+    "first": {
+      "eyebrow": "Ochrona",
+      "title": "Ochrona do wymagających zastosowań",
+      "p1": "Hokami zapewnia profesjonalne lakierowanie płytek drukowanych do zastosowań narażonych na podwyższoną wilgotność, kondensację, pył, substancje chemiczne, mgłę solną, wibracje i duże zmiany temperatury. Lakierowanie jest standardowym elementem produkcji elektroniki dla przemysłu, energetyki, medycyny, kolejnictwa i innych zastosowań wymagających długotrwałej niezawodności.",
+      "p2": "Stosujemy sprawdzone lakiery ochronne Peters SL1331N-LF-D/17 i Peters SL1301 ECO-FLZ-23 oraz inne materiały według specyfikacji klienta. Jakość naniesionej warstwy sprawdzamy pod światłem UV, co pozwala szybko i precyzyjnie ocenić równomierność i kompletność pokrycia.",
+      "imageAlt": "Automatyczna linia do nanoszenia lakieru ochronnego na zespoły elektroniczne."
+    },
+    "second": {
+      "eyebrow": "Aplikacja",
+      "title": "Możliwości lakierowania",
+      "p1": "W zależności od produktu i wymagań klienta oferujemy kilka sposobów nanoszenia lakieru ochronnego:",
+      "imageAlt": "Zbliżenie płytki drukowanej z zamontowanymi komponentami elektronicznymi.",
+      "items": {
+        "selective": "Selektywne lakierowanie wybranych obszarów PCB",
+        "full": "Lakierowanie całej płytki drukowanej",
+        "automatic": "Automatyczne lakierowanie selektywne",
+        "manual": "Lakierowanie ręczne",
+        "dip": "Lakierowanie zanurzeniowe",
+        "spray": "Lakierowanie natryskowe"
+      },
+      "conclusion": "Szeroki zakres technologii pozwala dobrać optymalną metodę aplikacji dla każdego projektu, zapewniając maksymalną ochronę zespołów przy zachowaniu wysokiej efektywności produkcji."
+    },
+    "equipment": {
+      "title": "Wyposażenie technologiczne",
+      "description": "Lakierowanie odbywa się na nowoczesnych automatycznych liniach Nordson ASYMTEK, które zapewniają precyzyjną, powtarzalną i w pełni kontrolowaną aplikację powłok ochronnych.",
+      "lines": {
+        "title": "Automatyczne linie lakiernicze",
+        "item": "{model} wyposażone w zamknięty podgrzewany obieg, automatyczny laserowy pomiar wysokości, korekcję szerokości nanoszenia oraz system kamer do kontroli procesu.",
+        "description": "Technologia umożliwia precyzyjne lakierowanie zespołów zmontowanych zarówno w technologii SMT, jak i THT."
+      },
+      "drying": {
+        "title": "Suszenie",
+        "item": "Piec do utwardzania w linii, zapewniający kontrolowane utwardzanie lakierów ochronnych."
+      },
+      "quality": {
+        "title": "Kontrola jakości",
+        "description": "Każdy lakierowany zespół przechodzi kontrolę jakości warstwy pod światłem UV. Sprawdzamy pokrycie wymaganych obszarów, równomierność powłoki i ewentualne wady. Kontrolowany proces aplikacji i utwardzania zapewnia wysoką powtarzalność produkcji oraz długotrwałą ochronę produktów elektronicznych."
+      }
+    },
+    "contact": {
+      "description": "Nowoczesne technologie, automatyczne procesy produkcyjne i wieloletnie doświadczenie pozwalają nam oferować niezawodną ochronę zespołów elektronicznych. Znacząco zwiększa ona ich odporność, żywotność i niezawodność działania nawet w najbardziej wymagających zastosowaniach."
+    }
+  },
+  "MechanicalAssembly": {
+    "hero": {
+      "title": "Montaż mechaniczny",
+      "description": "W Hokami produkcja nie kończy się na montażu płytki drukowanej. Naszym celem jest dostarczanie kompletnych produktów gotowych do natychmiastowego użycia, instalacji lub dystrybucji. Szeroki zakres usług montażowych i kompletacyjnych zapewnia końcowe złożenie produktów dokładnie według dokumentacji technicznej i indywidualnych wymagań klienta."
+    },
+    "first": {
+      "eyebrow": "Montaż",
+      "title": "Kompletacja gotowego produktu",
+      "p1": "Montaż mechaniczny jest ważną częścią naszych kompleksowych usług EMS. Montujemy zespoły elektroniczne w obudowach z tworzyw sztucznych i metalu, instalujemy części mechaniczne, wiązki kablowe, złącza, radiatory, wyświetlacze, elementy sterujące i inne komponenty. Każdy produkt przechodzi dokładną kontrolę montażu i działania przed końcowym pakowaniem i wysyłką.",
+      "p2": "Nasze procesy są zaprojektowane do efektywnej realizacji prototypów, małych serii i dużych zamówień. Elastyczna organizacja produkcji pozwala dopasować zakres kompletacji do wymagań klienta: od prostego montażu mechanicznego po dostawę gotowego produktu wraz z pakowaniem, oznakowaniem i usługami logistycznymi.",
+      "imageAlt": "Pracownik podczas kompletacji produktu elektronicznego na stanowisku montażowym."
+    },
+    "second": {
+      "eyebrow": "Kompleksowość",
+      "title": "Kompleksowe rozwiązanie pod jednym dachem",
+      "p1": "Łącząc produkcję SMT i THT, testowanie, lakierowanie, montaż mechaniczny i logistykę, oferujemy kompletne rozwiązanie produkcyjne z jednego miejsca. Eliminuje to konieczność współpracy z wieloma dostawcami, skraca terminy dostaw, upraszcza zarządzanie projektem oraz podnosi ogólną jakość i efektywność produkcji.",
+      "imageAlt": "Pracownica podczas montażu końcowego zespołu elektronicznego."
+    },
+    "included": {
+      "title": "Nasze usługi obejmują",
+      "harnesses": "Produkcję i kompletację wiązek kablowych",
+      "parts": "Montaż mechaniczny części z tworzyw sztucznych i metalu",
+      "enclosures": "Montaż zespołów elektronicznych w obudowach z tworzyw sztucznych i metalu",
+      "completion": "Kompletne złożenie produktu końcowego",
+      "components": "Montaż wyświetlaczy, złączy, radiatorów, wentylatorów, przycisków i innych komponentów mechanicznych",
+      "labeling": "Oznakowanie produktów etykietami klienta, numerami seryjnymi, kodami kreskowymi i QR",
+      "packaging": "Indywidualne pakowanie według wymagań klienta",
+      "dispatch": "Przygotowanie produktów do wysyłki",
+      "logistics": "Usługi logistyczne i dostawę do wskazanego miejsca na całym świecie"
+    },
+    "contact": {
+      "description": "Naszym celem jest dostarczenie klientowi produktu, który po zakończeniu produkcji jest w pełni gotowy do natychmiastowego użycia, instalacji lub bezpośredniej dystrybucji do odbiorcy końcowego."
+    }
+  },
+  "SmtStencils": {
+    "hero": {
+      "title": "Szablony SMT",
+      "description": "Wysokiej jakości szablon SMT jest jednym z kluczowych warunków precyzyjnego nanoszenia pasty lutowniczej i uzyskania wysokiej jakości montażu SMT. Hokami zapewnia produkcję bardzo precyzyjnych, laserowo ciętych szablonów stalowych do prototypowej i seryjnej produkcji zespołów elektronicznych."
+    },
+    "first": {
+      "eyebrow": "Produkcja",
+      "title": "Ekspresowa dostawa i precyzja",
+      "p1": "Wieloletni, sprawdzeni partnerzy i efektywny proces produkcyjny umożliwiają nam produkcję i ekspresową dostawę szablonów. W pilnych projektach możemy wysłać szablon już w ciągu 24 godzin od przyjęcia zamówienia.",
+      "p2": "Każdy szablon jest wykonywany z naciskiem na maksymalną precyzję otworów, wysoką stabilność wymiarową i długą żywotność. Prawidłowo zaprojektowany szablon znacząco poprawia jakość nanoszenia pasty, ogranicza wady produkcyjne i stabilizuje proces SMT.",
+      "imageAlt": "Urządzenie do precyzyjnej produkcji laserowo ciętych szablonów SMT."
+    },
+    "second": {
+      "eyebrow": "Jakość",
+      "title": "Precyzja, która decyduje",
+      "p1": "Wysoka jakość produkcji SMT zaczyna się od precyzyjnego nanoszenia pasty lutowniczej. Dlatego dbamy o prawidłowy projekt szablonu, dokładną obróbkę laserową i wysoką precyzję wykonania. Zapewnia to stabilny proces druku, wysoką powtarzalność produkcji i ograniczenie wad już od pierwszej operacji.",
+      "imageAlt": "Zbliżenie otworów stalowego szablonu do nanoszenia pasty lutowniczej."
+    },
+    "statistics": {
+      "label": "Możliwości produkcji szablonów SMT",
+      "hours": "wysyłka pilnych szablonów",
+      "hoursSuffix": " godziny",
+      "size": "mm, wymiary szablonu",
+      "minimum": "grubość materiału (minimum)",
+      "maximum": "grubość materiału do"
+    },
+    "specifications": {
+      "title": "Standardowe możliwości produkcyjne",
+      "size": {
+        "label": "Wymiary szablonów",
+        "value": "{width, number} × {firstHeight, number} mm, {width, number} × {secondHeight, number} mm"
+      },
+      "thickness": {
+        "label": "Grubość materiału",
+        "value": "{minimum, number, ::.00} mm (minimum), {standardThicknesses}, do {maximum, number, ::.00} mm",
+        "item": "{value, number, ::.00} mm"
+      },
+      "material": {
+        "label": "Materiał i wykonanie",
+        "line1": "Laserowo cięte szablony SMT ze stali nierdzewnej",
+        "line2": "Wysoka dokładność wymiarowa",
+        "line3": "Długa żywotność",
+        "line4": "Do produkcji prototypowej i seryjnej"
+      },
+      "services": {
+        "label": "Dodatkowe usługi",
+        "line1": "Produkcja szablonów według indywidualnych wymagań klienta",
+        "line2": "Niestandardowe wymiary i grubości materiału",
+        "line3": "Wklejanie szablonów w ramy aluminiowe",
+        "line4": "Ekspresowa produkcja i dostawa według uzgodnień"
+      }
+    },
+    "contact": {
+      "description": "W połączeniu z naszymi nowoczesnymi liniami SMT wysokiej jakości szablony stanowią istotną podstawę niezawodnej produkcji zespołów elektronicznych spełniających najwyższe wymagania jakościowe."
     }
   }
 }

@@ -312,6 +312,34 @@
     "smt": {
       "title": "SMT osazování",
       "description": "SMT osazování HOKAMI: čtyři automatizované linky, kapacita přes 40 milionů osazení měsíčně, desky do 810 × 480 mm a možnost zahájení expresní výroby do 24 hodin."
+    },
+    "pcb": {
+      "title": "DPS",
+      "description": "Kvalitní deska plošných spojů představuje základ každého spolehlivého elektronického výrobku."
+    },
+    "tht": {
+      "title": "THT",
+      "description": "THT pájení je nedílnou součástí výroby elektronických sestav, zejména tam, kde jsou kladeny vysoké požadavky na mechanickou pevnost spojů, spolehlivost a dlouhou životnost výrobků."
+    },
+    "cleaning": {
+      "title": "Čištění",
+      "description": "Čistota plošných spojů je důležitým faktorem ovlivňujícím kvalitu koncového produktu."
+    },
+    "testing": {
+      "title": "Testování a kvalita",
+      "description": "Ve společnosti Hokami je kvalita nedílnou součástí každého výrobního procesu."
+    },
+    "coating": {
+      "title": "Lakování",
+      "description": "Lakování elektronických sestav představuje účinnou ochranu desek plošných spojů a elektronických komponentů před vlivy prostředí."
+    },
+    "mechanicalAssembly": {
+      "title": "Mechanická montáž",
+      "description": "Ve společnosti Hokami nekončí výroba osazením desky plošných spojů."
+    },
+    "smtStencils": {
+      "title": "SMT šablony",
+      "description": "Kvalitní SMT šablona je jedním z klíčových předpokladů pro přesné nanesení pájecí pasty a dosažení vysoké kvality SMT osazování."
     }
   },
   "RequesForQuote": {
@@ -559,7 +587,15 @@
   "ServiceDetail": {
     "eyebrow": "Služby",
     "back": "Zpět na všechny služby",
-    "equipment": "Zobrazit vybavení"
+    "equipment": "Zobrazit vybavení",
+    "possibilities": "Zobrazit možnosti",
+    "checks": "Zobrazit kontroly",
+    "includedServices": "Zobrazit služby",
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Hledáte partnera pro výrobu elektroniky?",
+      "action": "Kontaktovat"
+    }
   },
   "Smt": {
     "hero": {
@@ -704,6 +740,368 @@
     "failure": {
       "title": "Přihlášku zatím nelze odeslat",
       "unavailable": "Formulář je dočasně nedostupný. Kontaktujte nás na <email>{address}</email>."
+    }
+  },
+  "Pcb": {
+    "hero": {
+      "title": "DPS",
+      "description": "Kvalitní deska plošných spojů představuje základ každého spolehlivého elektronického výrobku. Společnost Hokami zajišťuje výrobu desek plošných spojů prostřednictvím ověřené sítě dlouhodobých partnerů, se kterými spolupracujeme již řadu let. Díky tomu nabízíme široké spektrum technologií, vysokou kvalitu zpracování a krátké dodací termíny pro prototypovou i sériovou výrobu."
+    },
+    "first": {
+      "eyebrow": "Komplexnost",
+      "title": "Komplexnost",
+      "p1": "Dodáváme jednostranné, dvouvrstvé i vícevrstvé desky plošných spojů vyráběné přesně podle požadavků zákazníka. Samozřejmostí je technická podpora při výběru vhodného materiálu, povrchové úpravy i výrobní technologie s ohledem na požadované elektrické, mechanické i environmentální vlastnosti výsledného produktu.",
+      "p2": "Díky úzké návaznosti na naše SMT a THT výrobní procesy zajišťujeme kompletní servis od výroby desek plošných spojů přes jejich osazení, testování a finální montáž až po expedici hotového výrobku. Zákazník tak získává jednoho spolehlivého partnera pro celý výrobní proces.",
+      "imageAlt": "Desky plošných spojů s jemnými měděnými cestami."
+    },
+    "second": {
+      "eyebrow": "Kvalita",
+      "title": "Kvalita bez kompromisů",
+      "p1": "Každá dodaná deska plošných spojů splňuje přísné požadavky na kvalitu a spolehlivost. Výroba probíhá podle mezinárodně uznávaných standardů a jednotlivé výrobní série jsou kontrolovány optickou i elektrickou kontrolou. Díky dlouhodobě prověřeným výrobním partnerům dokážeme zajistit stabilní kvalitu, vysokou opakovatelnost výroby i flexibilní dodací termíny.",
+      "imageAlt": "Detail desek plošných spojů připravených k osazení."
+    },
+    "statistics": {
+      "label": "Výrobní možnosti DPS",
+      "thickness": "Síla materiálu",
+      "copper": "Síla mědi",
+      "track": "Min. dráha",
+      "gap": "Min. mezera"
+    },
+    "specifications": {
+      "title": "Standardní výrobní možnosti",
+      "layers": {
+        "label": "Počet vrstev",
+        "value": "jedno, dvou a vícevrstvé"
+      },
+      "material": {
+        "label": "Materiál",
+        "value": "FR1, FR2, FR3, FR4, CEM1, CEM3, AL, flexibilní PCB, rigid-flex PCB"
+      },
+      "thickness": {
+        "label": "Síla materiálu",
+        "value": "{minimum, number, ::.0} – {maximum, number, ::.0} mm"
+      },
+      "copper": {
+        "label": "Síla mědi",
+        "value": "{minimum, number} – {maximum, number} µm"
+      },
+      "track": {
+        "label": "Min. dráha",
+        "value": "{value, number, ::.00} mm"
+      },
+      "gap": {
+        "label": "Min. mezera",
+        "value": "{value, number, ::.00} mm"
+      },
+      "drilling": {
+        "label": "Vrtání",
+        "value": "{minimum, number, ::.00} mm – {maximum, number, ::.0} mm / vrtání laserem od {laserMinimum, number, ::.0} mm"
+      },
+      "mask": {
+        "label": "Maska",
+        "value": "UV nebo sítotiskem"
+      },
+      "printing": {
+        "label": "Potisky",
+        "value": "barva, karbonové vrstvy, snímatelné laky"
+      },
+      "finish": {
+        "label": "Povrchová úprava",
+        "value": "nikl, zlato, HAL, LF-HAL, OSP, chemický cín, stříbro"
+      },
+      "outline": {
+        "label": "Obrys",
+        "value": "frézování, drážkování, lisování"
+      },
+      "inspection": {
+        "label": "Kontrola",
+        "value": "optická, elektrický test"
+      },
+      "quality": {
+        "label": "Kvalita dle",
+        "value": "UL, ISO 9001"
+      },
+      "stencils": {
+        "label": "Šablony",
+        "value": "ocelové, laserem řezané, lepení do AL rámů"
+      }
+    },
+    "contact": {
+      "description": "Ať už se jedná o prototypovou výrobu, malé série nebo velkoobjemové zakázky, společnost Hokami poskytuje kompletní podporu při výrobě desek plošných spojů a jejich následném osazení. Díky komplexním EMS službám nabízíme zákazníkům efektivní řešení od výroby samotné DPS až po dodání kompletně otestovaného a finálně smontovaného výrobku."
+    }
+  },
+  "Tht": {
+    "hero": {
+      "title": "THT",
+      "description": "THT pájení je nedílnou součástí výroby elektronických sestav, zejména tam, kde jsou kladeny vysoké požadavky na mechanickou pevnost spojů, spolehlivost a dlouhou životnost výrobků. Ve společnosti Hokami využíváme moderní technologie pájení, které umožňují efektivní výrobu od jednotlivých prototypů až po velkosériovou produkci."
+    },
+    "first": {
+      "eyebrow": "Technologie",
+      "title": "Volba technologie pájení",
+      "p1": "V závislosti na typu výrobku a požadavcích zákazníka volíme nejvhodnější technologii pájení. Pro standardní sériovou výrobu využíváme pájení vlnou, zatímco pro složité elektronické sestavy nebo kombinované SMT/THT desky je ideálním řešením selektivní pájení. Samozřejmostí je také manuální pájení, které využíváme při výrobě prototypů, opravách, doplnění specifických součástek nebo u výrobků vyžadujících individuální přístup.",
+      "imageAlt": "Zařízení pro selektivní pájení desek plošných spojů."
+    },
+    "second": {
+      "eyebrow": "Kvalita",
+      "title": "Selektivní pájení",
+      "p1": "Selektivní pájení umožňuje přesnou aplikaci pájky pouze na požadovaná místa, čímž minimalizuje tepelné namáhání okolních součástek a zajišťuje vysokou kvalitu pájených spojů i u technicky náročných elektronických sestav. Díky moderním automatizovaným technologiím dosahujeme vysoké opakovatelnosti výrobního procesu a stabilní kvality napříč všemi výrobními sériemi.",
+      "p2": "Veškeré pájecí procesy probíhají v řízených výrobních podmínkách a jsou průběžně kontrolovány s důrazem na kvalitu, spolehlivost a splnění individuálních požadavků každého zákazníka.",
+      "imageAlt": "Pracovnice při manuálním pájení elektronické sestavy."
+    },
+    "equipment": {
+      "title": "Technologické vybavení",
+      "wave": "Pájení vlnou",
+      "selective": "Selektivní pájení",
+      "manual": "Manuální pájení",
+      "station": "Pájecí stanice {model}"
+    },
+    "contact": {
+      "description": "Díky kombinaci automatizovaných i manuálních pájecích technologií nabízíme optimální řešení pro široké spektrum elektronických aplikací a zajišťujeme vysokou kvalitu pájených spojů bez ohledu na složitost výrobku nebo velikost výrobní série."
+    }
+  },
+  "Cleaning": {
+    "hero": {
+      "title": "Čištění",
+      "description": "Čistota plošných spojů je důležitým faktorem ovlivňujícím kvalitu koncového produktu. Zajištění čistoty v průběhu celého výrobního procesu probíhá podle standardu IPC-CH-65B."
+    },
+    "first": {
+      "eyebrow": "Proces",
+      "title": "Řízení podle IPC-CH-65B",
+      "p1": "Čistota desek plošných spojů představuje jeden z klíčových faktorů ovlivňujících spolehlivost, životnost a dlouhodobou funkčnost elektronických sestav. Ve společnosti Hokami věnujeme procesu čištění maximální pozornost a zajišťujeme jeho řízení v souladu s požadavky normy IPC-CH-65B i individuálními specifikacemi našich zákazníků.",
+      "p2": "Ve standardní výrobě používáme moderní bezoplachové pájecí pasty a tavidla (No Clean), která splňují vysoké požadavky na kvalitu a spolehlivost pájených spojů. Pokud projekt vyžaduje dosažení vyšší úrovně povrchové čistoty, zajišťujeme profesionální mytí osazených desek plošných spojů pomocí automatizovaných čisticích technologií.",
+      "imageAlt": "Osazené desky plošných spojů v čisticím systému."
+    },
+    "second": {
+      "eyebrow": "Technologie",
+      "title": "Ultrazvuk a vysokotlaký postřik",
+      "p1": "Pro odstranění zbytků tavidel, iontových nečistot a dalších kontaminantů využíváme kombinaci ultrazvukového čištění a vysokotlakého postřiku. Díky přesně řízenému procesu dosahujeme vysoké úrovně čistoty i u technologicky náročných elektronických sestav určených například pro průmyslové, zdravotnické nebo energetické aplikace.",
+      "p2": "Každý proces čištění je přizpůsoben konkrétním požadavkům zákazníka a charakteru výrobku tak, aby byla zajištěna maximální spolehlivost finálního produktu při současném zachování vysoké efektivity výrobního procesu.",
+      "imageAlt": "Automatické průmyslové zařízení pro čištění elektronických sestav."
+    },
+    "equipment": {
+      "title": "Technologické vybavení",
+      "description": "Pro čištění elektronických sestav využíváme moderní zařízení určená pro profesionální průmyslové aplikace:",
+      "moduleClean": "{model} – automatický mycí systém s ultrazvukovým a postřikovým modulem",
+      "mdx": "{model} – průmyslové mycí zařízení",
+      "ultrasonic": "Ultrazvukové myčky s regulací teploty lázně a časovým řízením procesu"
+    },
+    "contact": {
+      "description": "Díky moderním čisticím technologiím a důsledně řízeným procesům jsme schopni zajistit požadovanou úroveň povrchové čistoty podle specifikací zákazníka a požadavků jednotlivých aplikací."
+    }
+  },
+  "Testing": {
+    "hero": {
+      "title": "Testování & Kvalita",
+      "description": "Ve společnosti Hokami je kvalita nedílnou součástí každého výrobního procesu. Kontrola probíhá ve všech fázích výroby – od příjmu materiálu přes nanášení pájecí pasty, SMT a THT osazování až po finální montáž, funkční testování a expedici hotových výrobků. Díky víceúrovňovému systému kontroly kvality dokážeme zajistit vysokou spolehlivost, opakovatelnost výroby a maximální kvalitu každé elektronické sestavy."
+    },
+    "first": {
+      "eyebrow": "Standardy",
+      "title": "Kontrola během celého výrobního procesu",
+      "p1": "Výrobní procesy jsou řízeny v souladu s požadavky standardu IPC-A-610, přičemž čistota desek plošných spojů je zajišťována podle doporučení IPC-CH-65B. Veškeré kontrolní a testovací procesy jsou přizpůsobeny konkrétním požadavkům zákazníka i charakteru vyráběného produktu.",
+      "p2": "Kvalita je ověřována již od prvních výrobních operací. Kontrolujeme správné nanesení pájecí pasty, přesnost osazení součástek, kvalitu pájených spojů, elektrické vlastnosti i funkčnost finálního výrobku. Každý krok je navržen tak, aby byly případné odchylky odhaleny co nejdříve a nemohly ovlivnit výslednou kvalitu výrobku.",
+      "imageAlt": "Optická inspekce desky plošných spojů na zařízení SAKI."
+    },
+    "checks": {
+      "title": "Součástí našeho systému kvality jsou zejména:",
+      "spi": "SPI (Solder Paste Inspection) – kontrola kvality nanesení pájecí pasty.",
+      "aoi": "AOI (Automated Optical Inspection) – automatická optická kontrola správnosti osazení a pájených spojů.",
+      "bga": "BGA inspekce pomocí endoskopické kamery.",
+      "ict": "In-Circuit Test (ICT) – elektrická kontrola osazených součástek a spojů.",
+      "functional": "Funkční testování (FCT) podle požadavků zákazníka.",
+      "programming": "Programování elektronických sestav.",
+      "burnIn": "Burn-in testy pro ověření dlouhodobé spolehlivosti.",
+      "highVoltage": "Vysokonapěťové testy (HV Test) pro AC i DC aplikace.",
+      "mechanical": "Mechanické testy tlačítek, přepínačů, páčkových spínačů a reed relé.",
+      "optical": "Optické měření LED a displejů, včetně intenzity světla a vlnové délky.",
+      "buzzer": "Testování zvukových prvků (Buzzer Test).",
+      "visual": "Vizuální kontrola rozměrů, výšky a polohy součástek."
+    },
+    "equipment": {
+      "title": "Technologické vybavení",
+      "aoi": {
+        "title": "Automatická optická kontrola (AOI)",
+        "description": "Automatická optická inspekce umožňuje rychlou a přesnou kontrolu kvality osazení desek plošných spojů. Systémy AOI ověřují správnou přítomnost, orientaci, polohu i kvalitu pájených spojů a významně přispívají ke zvýšení spolehlivosti výroby.",
+        "endoscope": "Endoskopická kamera pro kontrolu BGA pouzder"
+      },
+      "ict": {
+        "title": "In-Circuit Test (ICT)",
+        "description": "Elektrické testování ověřuje správnou funkci jednotlivých součástek, propojení a elektrických parametrů ještě před zahájením funkčních testů.",
+        "manual": "{model} s přípravky {fixture}",
+        "oversized": "{fixture} pro testování nadrozměrných DPS"
+      },
+      "functional": {
+        "title": "Funkční testování",
+        "description": "Funkční testy simulují reálný provoz výrobku a ověřují jeho správnou činnost. Testovací scénáře připravujeme individuálně podle požadavků zákazníka a charakteru konkrétní aplikace.",
+        "listLabel": "Provádíme například:",
+        "assemblies": "Komplexní funkční testování elektronických sestav",
+        "communication": "Komunikační testy (I²C, RS232, Bluetooth)",
+        "firmware": "Programování firmware",
+        "burnIn": "Burn-in testy",
+        "highVoltage": "Vysokonapěťové testy (AC/DC)",
+        "mechanical": "Mechanické testování ovládacích prvků",
+        "optical": "Optické testování LED a displejů",
+        "sound": "Testování zvukových prvků"
+      }
+    },
+    "cards": {
+      "title": "Zajištění kvality",
+      "traceability": {
+        "title": "Sledovatelnost výroby (Traceability)",
+        "description": "Každá elektronická sestava může být kompletně dohledána v rámci výrobního procesu. Systém sledovatelnosti umožňuje evidenci použitých materiálů, výrobních šarží, technologických operací, testovacích výsledků i jednotlivých výrobních parametrů. Díky tomu zajišťujeme maximální transparentnost výroby a splňujeme požadavky zákazníků z odvětví s vysokými nároky na kvalitu."
+      },
+      "esd": {
+        "title": "ESD ochrana",
+        "description": "Veškeré výrobní a testovací procesy probíhají v ESD chráněném prostředí. Dodržování přísných pravidel elektrostatické ochrany minimalizuje riziko poškození citlivých elektronických součástek během výroby, manipulace i testování."
+      },
+      "calibration": {
+        "title": "Kalibrace měřicí techniky",
+        "description": "Veškerá měřicí a testovací zařízení jsou pravidelně kalibrována v souladu s interním systémem řízení kvality. Tím jsou zajištěny přesnost měření, opakovatelnost výsledků a dlouhodobá spolehlivost všech kontrolních procesů."
+      },
+      "fixtures": {
+        "title": "Vývoj testovacích přípravků",
+        "description": "Pro specifické projekty navrhujeme a vyrábíme vlastní testovací přípravky a automatizované testovací stanice. Díky tomu dokážeme přizpůsobit rozsah testování individuálním požadavkům zákazníka a zajistit maximální úroveň kontroly každého vyráběného produktu."
+      }
+    },
+    "contact": {
+      "description": "Komplexní systém řízení kvality, moderní kontrolní technologie a zkušený tým specialistů umožňují společnosti Hokami dodávat elektronické sestavy splňující nejvyšší požadavky na kvalitu, bezpečnost a dlouhodobou provozní spolehlivost."
+    }
+  },
+  "Coating": {
+    "hero": {
+      "title": "Lakování",
+      "description": "Lakování elektronických sestav představuje účinnou ochranu desek plošných spojů a elektronických komponentů před nepříznivými vlivy okolního prostředí. Tato technologie významně prodlužuje životnost elektroniky, zvyšuje její provozní spolehlivost a umožňuje použití výrobků i v náročných provozních podmínkách."
+    },
+    "first": {
+      "eyebrow": "Ochrana",
+      "title": "Ochrana pro náročné aplikace",
+      "p1": "Ve společnosti Hokami poskytujeme profesionální lakování desek plošných spojů pro aplikace vystavené zvýšené vlhkosti, kondenzaci, prachu, chemickým látkám, solné mlze, vibracím nebo výrazným teplotním změnám. Lakování je běžnou součástí výroby elektroniky pro průmyslové, energetické, zdravotnické, železniční i další aplikace s vysokými nároky na dlouhodobou spolehlivost.",
+      "p2": "Používáme osvědčené ochranné laky Peters SL1331N-LF-D/17 a Peters SL1301 ECO-FLZ-23, případně další materiály dle specifických požadavků zákazníka. Kvalita nanesené ochranné vrstvy je ověřována kontrolou pod UV osvětlením, která umožňuje rychlé a přesné posouzení rovnoměrnosti a úplnosti aplikace laku.",
+      "imageAlt": "Automatická linka pro nanášení ochranného laku na elektronické sestavy."
+    },
+    "second": {
+      "eyebrow": "Aplikace",
+      "title": "Možnosti lakování",
+      "p1": "Podle typu výrobku a požadavků zákazníka nabízíme několik způsobů aplikace ochranného laku:",
+      "imageAlt": "Detail osazené desky plošných spojů s elektronickými součástkami.",
+      "items": {
+        "selective": "Selektivní lakování vybraných částí DPS",
+        "full": "Lakování celé desky plošných spojů",
+        "automatic": "Automatické selektivní lakování",
+        "manual": "Manuální lakování",
+        "dip": "Lakování ponorem",
+        "spray": "Lakování nástřikem"
+      },
+      "conclusion": "Díky širokému spektru technologií dokážeme zvolit optimální způsob aplikace pro každý projekt a zajistit maximální ochranu elektronických sestav při zachování vysoké výrobní efektivity."
+    },
+    "equipment": {
+      "title": "Technologické vybavení",
+      "description": "Lakování probíhá na moderních automatických linkách společnosti Nordson ASYMTEK, které zajišťují přesnou, opakovatelnou a plně řízenou aplikaci ochranných laků.",
+      "lines": {
+        "title": "Automatické lakovací linky",
+        "item": "{model} vybavené uzavřeným vyhřívaným okruhem, automatickým laserovým měřením výšky, korekcí šířky aplikační stopy a kamerovým systémem pro kontrolu procesu.",
+        "description": "Technologie umožňuje přesné lakování elektronických sestav osazených jak SMT, tak THT technologií."
+      },
+      "drying": {
+        "title": "Sušení",
+        "item": "In-line vytvrzovací pec pro řízené vytvrzení ochranných laků."
+      },
+      "quality": {
+        "title": "Kontrola kvality",
+        "description": "Každá lakovaná elektronická sestava prochází kontrolou kvality nanesené vrstvy pod UV světlem. Díky tomu ověřujeme správné pokrytí požadovaných ploch, rovnoměrnost vrstvy i případnou přítomnost nežádoucích defektů. Kontrolovaný proces aplikace a vytvrzení zajišťuje vysokou opakovatelnost výroby a dlouhodobou ochranu elektronických výrobků."
+      }
+    },
+    "contact": {
+      "description": "Díky moderním technologiím, automatizovaným výrobním procesům a dlouholetým zkušenostem nabízíme zákazníkům spolehlivé řešení ochrany elektronických sestav, které významně zvyšuje jejich odolnost, životnost a provozní spolehlivost i v nejnáročnějších aplikacích."
+    }
+  },
+  "MechanicalAssembly": {
+    "hero": {
+      "title": "Mechanická montáž",
+      "description": "Ve společnosti Hokami nekončí výroba osazením desky plošných spojů. Naším cílem je dodávat zákazníkům kompletně dokončené výrobky připravené k okamžitému použití, instalaci nebo distribuci. Díky širokému spektru montážních a kompletačních služeb zajišťujeme finální sestavení produktů přesně podle technické dokumentace i individuálních požadavků zákazníka."
+    },
+    "first": {
+      "eyebrow": "Montáž",
+      "title": "Kompletace do finálního výrobku",
+      "p1": "Mechanická montáž představuje důležitou součást našich komplexních EMS služeb. Provádíme kompletaci elektronických sestav do plastových i kovových krytů, montáž mechanických dílů, kabelových svazků, konektorů, chladičů, displejů, ovládacích prvků i dalších komponent. Každý výrobek prochází důslednou kontrolou správnosti montáže a funkčnosti před jeho finálním zabalením a expedicí.",
+      "p2": "Naše výrobní procesy jsou navrženy tak, aby umožňovaly efektivní realizaci prototypové výroby, malých i velkosériových zakázek. Díky flexibilní organizaci výroby dokážeme přizpůsobit rozsah kompletace konkrétním požadavkům zákazníka – od jednoduché mechanické montáže až po kompletní dodání finálního výrobku včetně balení, značení a logistických služeb.",
+      "imageAlt": "Pracovník při kompletaci elektronického výrobku na montážním pracovišti."
+    },
+    "second": {
+      "eyebrow": "Komplexnost",
+      "title": "Komplexní řešení pod jednou střechou",
+      "p1": "Spojením SMT a THT výroby, testování, lakování, mechanické montáže a logistických služeb nabízíme zákazníkům kompletní výrobní řešení z jednoho místa. Díky tomu odpadá nutnost spolupráce s více dodavateli, zkracují se dodací termíny, zjednodušuje se řízení projektu a současně se zvyšují celková kvalita i efektivita výroby.",
+      "imageAlt": "Pracovnice při finální montáži elektronické sestavy."
+    },
+    "included": {
+      "title": "Naše služby zahrnují",
+      "harnesses": "Výrobu a kompletaci kabelových svazků",
+      "parts": "Mechanickou montáž plastových i kovových dílů",
+      "enclosures": "Montáž elektronických sestav do plastových a kovových krytů",
+      "completion": "Kompletní sestavení finálního výrobku",
+      "components": "Montáž displejů, konektorů, chladičů, ventilátorů, tlačítek a dalších mechanických komponent",
+      "labeling": "Označování výrobků zákaznickými štítky, sériovými čísly, čárovými a QR kódy",
+      "packaging": "Individuální balení podle požadavků zákazníka",
+      "dispatch": "Přípravu výrobků pro expedici",
+      "logistics": "Logistické služby a dodání na určené místo po celém světě"
+    },
+    "contact": {
+      "description": "Naším cílem je dodat zákazníkovi produkt, který je po dokončení výroby plně připraven k okamžitému použití, instalaci nebo přímé distribuci koncovému zákazníkovi."
+    }
+  },
+  "SmtStencils": {
+    "hero": {
+      "title": "SMT Šablony",
+      "description": "Kvalitní SMT šablona je jedním z klíčových předpokladů pro přesné nanesení pájecí pasty a dosažení vysoké kvality SMT osazování. Ve společnosti Hokami zajišťujeme výrobu vysoce přesných laserem řezaných ocelových šablon pro prototypovou i sériovou výrobu elektronických sestav."
+    },
+    "first": {
+      "eyebrow": "Výroba",
+      "title": "Expresní dodání a přesnost",
+      "p1": "Díky dlouhodobě prověřeným partnerům a efektivnímu výrobnímu procesu jsme schopni zajistit výrobu i expresní dodání šablon. V případě urgentních projektů dokážeme šablonu expedovat již do 24 hodin od přijetí objednávky.",
+      "p2": "Každá šablona je vyráběna s důrazem na maximální přesnost otvorů, vysokou rozměrovou stabilitu a dlouhou životnost. Správně navržená šablona významně přispívá ke kvalitnímu nanesení pájecí pasty, minimalizaci výrobních vad a stabilnímu SMT procesu.",
+      "imageAlt": "Zařízení pro přesnou výrobu laserem řezaných SMT šablon."
+    },
+    "second": {
+      "eyebrow": "Kvalita",
+      "title": "Přesnost, která rozhoduje",
+      "p1": "Kvalita SMT výroby začíná přesným nanesením pájecí pasty. Proto klademe důraz na správný návrh šablony, precizní laserové zpracování i vysokou výrobní přesnost. Díky tomu dosahujeme stabilního tiskového procesu, vysoké opakovatelnosti výroby a minimalizace výrobních vad již od první výrobní operace.",
+      "imageAlt": "Detail otvorů v ocelové šabloně pro nanášení pájecí pasty."
+    },
+    "statistics": {
+      "label": "Výrobní možnosti SMT šablon",
+      "hours": "expedice urgentních šablon",
+      "hoursSuffix": " hodin",
+      "size": "mm, rozměry šablon",
+      "minimum": "tloušťka materiálu (minimum)",
+      "maximum": "tloušťka materiálu až"
+    },
+    "specifications": {
+      "title": "Standardní výrobní možnosti",
+      "size": {
+        "label": "Rozměry šablon",
+        "value": "{width, number} × {firstHeight, number} mm, {width, number} × {secondHeight, number} mm"
+      },
+      "thickness": {
+        "label": "Tloušťka materiálu",
+        "value": "{minimum, number, ::.00} mm (minimum), {standardThicknesses}, až {maximum, number, ::.00} mm",
+        "item": "{value, number, ::.00} mm"
+      },
+      "material": {
+        "label": "Materiál a provedení",
+        "line1": "Laserem řezané nerezové SMT šablony",
+        "line2": "Vysoká rozměrová přesnost",
+        "line3": "Dlouhá životnost",
+        "line4": "Vhodné pro prototypovou i sériovou výrobu"
+      },
+      "services": {
+        "label": "Další služby",
+        "line1": "Výroba šablon dle individuálních požadavků zákazníka",
+        "line2": "Nestandardní rozměry a tloušťky materiálu",
+        "line3": "Lepení šablon do hliníkových rámů",
+        "line4": "Expresní výroba a dodání dle dohody"
+      }
+    },
+    "contact": {
+      "description": "Ve spojení s našimi moderními SMT linkami představují kvalitní šablony důležitý základ pro spolehlivou výrobu elektronických sestav s nejvyššími nároky na kvalitu."
     }
   }
 }

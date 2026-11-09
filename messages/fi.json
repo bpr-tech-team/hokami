@@ -312,6 +312,34 @@
     "smt": {
       "title": "SMT-ladonta",
       "description": "HOKAMIn SMT-ladonta: neljä automatisoitua linjaa, kapasiteetti yli 40 miljoonaa komponenttia kuukaudessa, piirilevyt enintään 810 × 480 mm ja mahdollisuus aloittaa pikatuotanto 24 tunnissa."
+    },
+    "pcb": {
+      "title": "Piirilevyt",
+      "description": "Laadukas piirilevy on jokaisen luotettavan elektroniikkatuotteen perusta."
+    },
+    "tht": {
+      "title": "THT",
+      "description": "THT-juottaminen on olennainen osa elektroniikkakokoonpanojen valmistusta erityisesti silloin, kun liitosten mekaaniselle lujuudelle, luotettavuudelle ja tuotteiden pitkälle käyttöiälle asetetaan korkeita vaatimuksia."
+    },
+    "cleaning": {
+      "title": "Puhdistus",
+      "description": "Piirilevyjen puhtaus on tärkeä lopputuotteen laatuun vaikuttava tekijä."
+    },
+    "testing": {
+      "title": "Testaus ja laatu",
+      "description": "Hokamilla laatu on olennainen osa jokaista valmistusprosessia."
+    },
+    "coating": {
+      "title": "Suojalakkaus",
+      "description": "Elektroniikkakokoonpanojen suojalakkaus suojaa piirilevyjä ja elektronisia komponentteja tehokkaasti ympäristön vaikutuksilta."
+    },
+    "mechanicalAssembly": {
+      "title": "Mekaaninen kokoonpano",
+      "description": "Hokamilla valmistus ei pääty piirilevyn komponenttien ladontaan."
+    },
+    "smtStencils": {
+      "title": "SMT-stensiilit",
+      "description": "Laadukas SMT-stensiili on yksi keskeisistä edellytyksistä juotospastan tarkalle levitykselle ja laadukkaalle SMT-ladonnalle."
     }
   },
   "RequesForQuote": {
@@ -559,7 +587,15 @@
   "ServiceDetail": {
     "eyebrow": "Palvelut",
     "back": "Takaisin kaikkiin palveluihin",
-    "equipment": "Tutustu laitteistoon"
+    "equipment": "Tutustu laitteistoon",
+    "possibilities": "Katso vaihtoehdot",
+    "checks": "Katso tarkastukset",
+    "includedServices": "Katso palvelut",
+    "contact": {
+      "eyebrow": "Yhteystiedot",
+      "title": "Etsitkö kumppania elektroniikan valmistukseen?",
+      "action": "Ota yhteyttä"
+    }
   },
   "Smt": {
     "hero": {
@@ -704,6 +740,368 @@
     "failure": {
       "title": "Hakemusta ei voitu lähettää",
       "unavailable": "Lomake ei ole tilapäisesti käytettävissä. Ota yhteyttä osoitteeseen <email>{address}</email>."
+    }
+  },
+  "Pcb": {
+    "hero": {
+      "title": "Piirilevyt",
+      "description": "Laadukas piirilevy on jokaisen luotettavan elektroniikkatuotteen perusta. Hokami järjestää piirilevyjen valmistuksen luotettavan, pitkäaikaisen kumppaniverkostonsa kautta. Vuosien yhteistyön ansiosta voimme tarjota laajan teknologiavalikoiman, korkean valmistuslaadun ja lyhyet toimitusajat sekä prototyyppi- että sarjatuotantoon."
+    },
+    "first": {
+      "eyebrow": "Kokonaispalvelu",
+      "title": "Kattava kokonaisuus",
+      "p1": "Toimitamme yksi- ja kaksipuolisia sekä monikerroksisia piirilevyjä täsmälleen asiakkaan vaatimusten mukaan. Palveluun kuuluu tekninen tuki sopivan materiaalin, pintakäsittelyn ja valmistusteknologian valintaan. Otamme huomioon lopputuotteen sähköiset ja mekaaniset vaatimukset sekä sen käyttöympäristön.",
+      "p2": "SMT- ja THT-tuotantoomme liittyvä kokonaispalvelu kattaa piirilevyjen valmistuksen, kalustuksen, testauksen ja loppukokoonpanon aina valmiin tuotteen lähetykseen asti. Asiakas saa yhden luotettavan kumppanin koko valmistusprosessiin.",
+      "imageAlt": "Piirilevyjä, joissa on ohuita kuparijohtimia."
+    },
+    "second": {
+      "eyebrow": "Laatu",
+      "title": "Laatua ilman kompromisseja",
+      "p1": "Jokainen toimittamamme piirilevy täyttää tiukat laatu- ja luotettavuusvaatimukset. Valmistus noudattaa kansainvälisesti tunnustettuja standardeja, ja tuotantoerät tarkastetaan optisesti ja sähköisesti. Pitkäaikaiset, luotettavat valmistuskumppanimme mahdollistavat tasaisen laadun, hyvän toistettavuuden ja joustavat toimitusajat.",
+      "imageAlt": "Lähikuva piirilevyistä ennen komponenttien asennusta."
+    },
+    "statistics": {
+      "label": "Piirilevyjen valmistusmahdollisuudet",
+      "thickness": "Materiaalin paksuus",
+      "copper": "Kuparin paksuus",
+      "track": "Johtimen vähimmäisleveys",
+      "gap": "Vähimmäisväli"
+    },
+    "specifications": {
+      "title": "Vakiovalmistuksen mahdollisuudet",
+      "layers": {
+        "label": "Kerrosten määrä",
+        "value": "Yksi- ja kaksipuoliset sekä monikerroksiset"
+      },
+      "material": {
+        "label": "Materiaali",
+        "value": "FR1, FR2, FR3, FR4, CEM1, CEM3, AL, joustavat piirilevyt, jäykkä-joustavat piirilevyt"
+      },
+      "thickness": {
+        "label": "Materiaalin paksuus",
+        "value": "{minimum, number, ::.0}–{maximum, number, ::.0} mm"
+      },
+      "copper": {
+        "label": "Kuparin paksuus",
+        "value": "{minimum, number}–{maximum, number} µm"
+      },
+      "track": {
+        "label": "Johtimen vähimmäisleveys",
+        "value": "{value, number, ::.00} mm"
+      },
+      "gap": {
+        "label": "Vähimmäisväli",
+        "value": "{value, number, ::.00} mm"
+      },
+      "drilling": {
+        "label": "Poraus",
+        "value": "{minimum, number, ::.00}–{maximum, number, ::.0} mm / laserporaus alkaen {laserMinimum, number, ::.0} mm"
+      },
+      "mask": {
+        "label": "Juotosmaski",
+        "value": "UV tai silkkipaino"
+      },
+      "printing": {
+        "label": "Painatukset",
+        "value": "Väri, hiilikerrokset, irrotettavat suojalakat"
+      },
+      "finish": {
+        "label": "Pintakäsittely",
+        "value": "Nikkeli, kulta, HAL, LF-HAL, OSP, kemiallinen tina, hopea"
+      },
+      "outline": {
+        "label": "Muotoilu",
+        "value": "Jyrsintä, V-uritus, lävistys"
+      },
+      "inspection": {
+        "label": "Tarkastus",
+        "value": "Optinen tarkastus, sähköinen testaus"
+      },
+      "quality": {
+        "label": "Laatustandardit",
+        "value": "UL, ISO 9001"
+      },
+      "stencils": {
+        "label": "Pastamaskit",
+        "value": "Teräksiset, laserleikatut, alumiinikehyksiin liimatut"
+      }
+    },
+    "contact": {
+      "description": "Hokami tarjoaa kattavan tuen piirilevyjen valmistukseen ja kalustukseen niin prototyypeille, pienille sarjoille kuin suurille tilauksille. Kattavat EMS-palvelumme tarjoavat tehokkaan ratkaisun paljaasta piirilevystä täysin testattuun ja loppukokoonpantuun tuotteeseen."
+    }
+  },
+  "Tht": {
+    "hero": {
+      "title": "THT",
+      "description": "THT-juottaminen on olennainen osa elektroniikkakokoonpanojen valmistusta erityisesti silloin, kun liitoksilta vaaditaan suurta mekaanista lujuutta, luotettavuutta ja pitkää käyttöikää. Hokamin nykyaikaiset juotosteknologiat mahdollistavat tehokkaan valmistuksen yksittäisistä prototyypeistä suuriin tuotantosarjoihin."
+    },
+    "first": {
+      "eyebrow": "Teknologia",
+      "title": "Juotosteknologian valinta",
+      "p1": "Valitsemme sopivimman juotosteknologian tuotteen ja asiakkaan vaatimusten mukaan. Tavanomaisessa sarjatuotannossa käytämme aaltojuottamista, kun taas monimutkaisiin kokoonpanoihin ja yhdistettyihin SMT/THT-piirilevyihin selektiivijuottaminen on ihanteellinen ratkaisu. Käytämme myös käsinjuottamista prototyyppien valmistukseen, korjauksiin, erikoiskomponenttien lisäämiseen ja yksilöllistä käsittelyä vaativiin tuotteisiin.",
+      "imageAlt": "Piirilevyjen selektiivijuotoslaite."
+    },
+    "second": {
+      "eyebrow": "Laatu",
+      "title": "Selektiivijuottaminen",
+      "p1": "Selektiivijuottamisessa juote levitetään tarkasti vain tarvittaviin kohtiin. Tämä vähentää ympäröivien komponenttien lämpörasitusta ja varmistaa laadukkaat juotosliitokset myös teknisesti vaativissa elektroniikkakokoonpanoissa. Nykyaikainen automaatio mahdollistaa hyvin toistettavan valmistusprosessin ja tasaisen laadun kaikissa tuotantoerissä.",
+      "p2": "Kaikki juotosprosessit tapahtuvat hallituissa tuotanto-olosuhteissa. Niitä tarkastetaan jatkuvasti laadun, luotettavuuden ja asiakkaan yksilöllisten vaatimusten täyttymisen varmistamiseksi.",
+      "imageAlt": "Työntekijä juottaa elektroniikkakokoonpanoa käsin."
+    },
+    "equipment": {
+      "title": "Tuotantolaitteisto",
+      "wave": "Aaltojuottaminen",
+      "selective": "Selektiivijuottaminen",
+      "manual": "Käsinjuottaminen",
+      "station": "{model}-juotosasemat"
+    },
+    "contact": {
+      "description": "Automaattisten ja manuaalisten juotosteknologioiden yhdistelmä tarjoaa optimaalisen ratkaisun monenlaisiin elektroniikkasovelluksiin. Varmistamme laadukkaat juotosliitokset tuotteen monimutkaisuudesta tai tuotantosarjan koosta riippumatta."
+    }
+  },
+  "Cleaning": {
+    "hero": {
+      "title": "Puhdistus",
+      "description": "Piirilevyjen puhtaus on tärkeä lopputuotteen laatuun vaikuttava tekijä. Puhtaus varmistetaan koko valmistusprosessissa IPC-CH-65B-standardin mukaisesti."
+    },
+    "first": {
+      "eyebrow": "Prosessi",
+      "title": "IPC-CH-65B:n mukainen prosessinhallinta",
+      "p1": "Piirilevyjen puhtaus vaikuttaa olennaisesti elektroniikkakokoonpanojen luotettavuuteen, käyttöikään ja pitkäaikaiseen toimintaan. Hokami kiinnittää puhdistusprosessiin erityistä huomiota ja hallitsee sitä IPC-CH-65B:n vaatimusten sekä asiakkaiden yksilöllisten määritysten mukaisesti.",
+      "p2": "Tavanomaisessa tuotannossa käytämme nykyaikaisia No Clean -juotospastoja ja juoksutteita, jotka täyttävät tiukat juotosliitosten laatu- ja luotettavuusvaatimukset. Kun hanke edellyttää parempaa pintapuhtautta, pesemme kalustetut piirilevyt ammattimaisesti automatisoiduilla puhdistusteknologioilla.",
+      "imageAlt": "Kalustettuja piirilevyjä puhdistusjärjestelmässä."
+    },
+    "second": {
+      "eyebrow": "Teknologia",
+      "title": "Ultraääni ja korkeapainesuihkutus",
+      "p1": "Poistamme juoksutejäämät, ioniset epäpuhtaudet ja muut kontaminaatiot yhdistämällä ultraäänipuhdistuksen ja korkeapainesuihkutuksen. Tarkasti hallittu prosessi takaa korkean puhtaustason myös teknisesti vaativissa kokoonpanoissa, joita käytetään esimerkiksi teollisuus-, terveydenhuolto- ja energiasovelluksissa.",
+      "p2": "Jokainen puhdistusprosessi mukautetaan asiakkaan vaatimuksiin ja tuotteen ominaisuuksiin. Näin varmistamme lopputuotteen mahdollisimman hyvän luotettavuuden ja samalla tehokkaan valmistuksen.",
+      "imageAlt": "Automatisoitu teollinen pesulaite elektroniikkakokoonpanojen puhdistukseen."
+    },
+    "equipment": {
+      "title": "Tuotantolaitteisto",
+      "description": "Puhdistamme elektroniikkakokoonpanoja nykyaikaisilla, ammattimaiseen teollisuuskäyttöön suunnitelluilla laitteilla:",
+      "moduleClean": "{model} – automaattinen pesujärjestelmä, jossa on ultraääni- ja suihkutusmoduuli",
+      "mdx": "{model} – teollinen pesulaite",
+      "ultrasonic": "Ultraäänipesurit, joissa on pesunesteen lämpötilansäätö ja ajastettu prosessinohjaus"
+    },
+    "contact": {
+      "description": "Nykyaikaiset puhdistusteknologiat ja tarkasti hallitut prosessit mahdollistavat asiakkaan määritysten ja kunkin sovelluksen vaatimusten mukaisen pintapuhtauden."
+    }
+  },
+  "Testing": {
+    "hero": {
+      "title": "Testaus ja laatu",
+      "description": "Hokamilla laatu kuuluu jokaiseen valmistusprosessiin. Tarkastukset kattavat kaikki vaiheet materiaalien vastaanotosta juotospastan levitykseen, SMT- ja THT-kalustukseen, loppukokoonpanoon, toiminnalliseen testaukseen ja valmiiden tuotteiden lähetykseen. Monitasoinen laadunvalvontajärjestelmämme varmistaa jokaisen kokoonpanon luotettavuuden, valmistuksen toistettavuuden ja korkean laadun."
+    },
+    "first": {
+      "eyebrow": "Standardit",
+      "title": "Tarkastukset koko valmistusprosessissa",
+      "p1": "Valmistusprosesseja hallitaan IPC-A-610:n vaatimusten mukaisesti, ja piirilevyjen puhtaus varmistetaan IPC-CH-65B:n suositusten mukaan. Kaikki tarkastus- ja testausprosessit mukautetaan asiakkaan vaatimuksiin ja valmistettavan tuotteen ominaisuuksiin.",
+      "p2": "Laatu tarkastetaan jo ensimmäisistä valmistusvaiheista alkaen. Tarkastamme juotospastan levityksen, komponenttien sijoitustarkkuuden, juotosliitosten laadun, sähköiset ominaisuudet ja lopputuotteen toiminnan. Jokaisen vaiheen tarkoitus on havaita poikkeamat mahdollisimman varhain, jotta ne eivät vaikuta lopputuotteen laatuun.",
+      "imageAlt": "Piirilevyn optinen tarkastus SAKI-laitteistolla."
+    },
+    "checks": {
+      "title": "Laadunvarmistukseemme kuuluvat",
+      "spi": "SPI (Solder Paste Inspection) – juotospastan levityslaadun tarkastus.",
+      "aoi": "AOI (Automated Optical Inspection) – komponenttien sijoituksen ja juotosliitosten automaattinen optinen tarkastus.",
+      "bga": "BGA-tarkastus endoskooppikameralla.",
+      "ict": "In-Circuit Test (ICT) – kalustettujen komponenttien ja liitosten sähköinen testaus.",
+      "functional": "Toiminnallinen testaus (FCT) asiakkaan vaatimusten mukaan.",
+      "programming": "Elektroniikkakokoonpanojen ohjelmointi.",
+      "burnIn": "Burn-in-testit pitkäaikaisen luotettavuuden varmistamiseksi.",
+      "highVoltage": "Suurjännitetestit (HV Test) AC- ja DC-sovelluksille.",
+      "mechanical": "Painikkeiden, kytkimien, vipukytkimien ja reed-releiden mekaaniset testit.",
+      "optical": "LEDien ja näyttöjen optiset mittaukset, mukaan lukien valon voimakkuus ja aallonpituus.",
+      "buzzer": "Äänikomponenttien testaus (Buzzer Test).",
+      "visual": "Komponenttien mittojen, korkeuden ja sijainnin silmämääräinen tarkastus."
+    },
+    "equipment": {
+      "title": "Testauslaitteisto",
+      "aoi": {
+        "title": "Automaattinen optinen tarkastus (AOI)",
+        "description": "Automaattinen optinen tarkastus mahdollistaa piirilevyjen kalustuslaadun nopean ja tarkan tarkastamisen. AOI-järjestelmät tarkastavat komponenttien olemassaolon, suunnan, sijainnin ja juotosliitosten laadun sekä parantavat merkittävästi valmistuksen luotettavuutta.",
+        "endoscope": "Endoskooppikamera BGA-koteloiden tarkastukseen"
+      },
+      "ict": {
+        "title": "In-Circuit Test (ICT)",
+        "description": "Sähköinen testaus tarkastaa yksittäisten komponenttien toiminnan, liitokset ja sähköiset parametrit ennen toiminnallisen testauksen aloittamista.",
+        "manual": "{model}, testauskiinnikkeenä {fixture}",
+        "oversized": "{fixture} ylisuurten piirilevyjen testaukseen"
+      },
+      "functional": {
+        "title": "Toiminnallinen testaus",
+        "description": "Toiminnalliset testit simuloivat tuotteen todellista käyttöä ja varmistavat sen oikean toiminnan. Laadimme testausskenaariot yksilöllisesti asiakkaan vaatimusten ja kyseisen sovelluksen mukaan.",
+        "listLabel": "Esimerkkejä:",
+        "assemblies": "Elektroniikkakokoonpanojen kattava toiminnallinen testaus",
+        "communication": "Tiedonsiirtotestit (I²C, RS232, Bluetooth)",
+        "firmware": "Laiteohjelmiston ohjelmointi",
+        "burnIn": "Burn-in-testit",
+        "highVoltage": "Suurjännitetestit (AC/DC)",
+        "mechanical": "Hallintalaitteiden mekaaninen testaus",
+        "optical": "LEDien ja näyttöjen optinen testaus",
+        "sound": "Äänikomponenttien testaus"
+      }
+    },
+    "cards": {
+      "title": "Laadunvarmistus",
+      "traceability": {
+        "title": "Tuotannon jäljitettävyys",
+        "description": "Jokainen elektroniikkakokoonpano voidaan jäljittää koko valmistusprosessin läpi. Jäljitettävyysjärjestelmä tallentaa käytetyt materiaalit, tuotantoerät, työvaiheet, testitulokset ja yksittäiset valmistusparametrit. Näin varmistamme tuotannon läpinäkyvyyden ja täytämme korkean laadun toimialojen asiakkaiden vaatimukset."
+      },
+      "esd": {
+        "title": "ESD-suojaus",
+        "description": "Kaikki valmistus- ja testausprosessit tapahtuvat ESD-suojatussa ympäristössä. Tiukat sähköstaattisen suojauksen säännöt minimoivat herkkien elektroniikkakomponenttien vaurioitumisriskin valmistuksen, käsittelyn ja testauksen aikana."
+      },
+      "calibration": {
+        "title": "Mittalaitteiden kalibrointi",
+        "description": "Kaikki mittaus- ja testauslaitteet kalibroidaan säännöllisesti sisäisen laadunhallintajärjestelmämme mukaisesti. Tämä varmistaa mittaustarkkuuden, tulosten toistettavuuden ja kaikkien tarkastusprosessien pitkäaikaisen luotettavuuden."
+      },
+      "fixtures": {
+        "title": "Testauskiinnikkeiden kehitys",
+        "description": "Suunnittelemme ja valmistamme projektikohtaisia testauskiinnikkeitä ja automatisoituja testausasemia. Näin voimme mukauttaa testauksen laajuuden asiakkaan yksilöllisiin vaatimuksiin ja varmistaa jokaisen tuotteen mahdollisimman kattavan tarkastuksen."
+      }
+    },
+    "contact": {
+      "description": "Kattava laadunhallintajärjestelmä, nykyaikaiset tarkastusteknologiat ja kokenut asiantuntijatiimi mahdollistavat sen, että Hokamin elektroniikkakokoonpanot täyttävät korkeimmat laatu-, turvallisuus- ja pitkäaikaisen käyttöluotettavuuden vaatimukset."
+    }
+  },
+  "Coating": {
+    "hero": {
+      "title": "Suojalakkaus",
+      "description": "Elektroniikkakokoonpanojen suojalakkaus suojaa piirilevyjä ja komponentteja tehokkaasti ympäristön haittavaikutuksilta. Teknologia pidentää merkittävästi elektroniikan käyttöikää, parantaa käyttöluotettavuutta ja mahdollistaa tuotteiden käytön vaativissa olosuhteissa."
+    },
+    "first": {
+      "eyebrow": "Suojaus",
+      "title": "Suojausta vaativiin sovelluksiin",
+      "p1": "Hokami tarjoaa ammattimaista piirilevyjen suojalakkausta kohteisiin, joissa esiintyy kosteutta, kondensaatiota, pölyä, kemikaaleja, suolasumua, tärinää tai suuria lämpötilavaihteluita. Lakkaus on tavanomainen osa elektroniikan valmistusta teollisuus-, energia-, terveydenhuolto-, rautatie- ja muihin sovelluksiin, joissa vaaditaan hyvää pitkäaikaista luotettavuutta.",
+      "p2": "Käytämme hyväksi todettuja Peters SL1331N-LF-D/17- ja Peters SL1301 ECO-FLZ-23-suojalakkoja sekä muita materiaaleja asiakkaan määritysten mukaan. Levitetyn suojakerroksen laatu tarkastetaan UV-valossa, mikä mahdollistaa lakkauksen tasaisuuden ja kattavuuden nopean ja tarkan arvioinnin.",
+      "imageAlt": "Automaattinen linja levittää suojalakkaa elektroniikkakokoonpanoille."
+    },
+    "second": {
+      "eyebrow": "Levitys",
+      "title": "Lakkausvaihtoehdot",
+      "p1": "Tarjoamme tuotteen ja asiakkaan vaatimusten mukaan useita suojalakan levitysmenetelmiä:",
+      "imageAlt": "Lähikuva elektroniikkakomponenteilla kalustetusta piirilevystä.",
+      "items": {
+        "selective": "Piirilevyn valittujen alueiden selektiivinen lakkaus",
+        "full": "Koko piirilevyn lakkaus",
+        "automatic": "Automaattinen selektiivinen lakkaus",
+        "manual": "Manuaalinen lakkaus",
+        "dip": "Upotuslakkaus",
+        "spray": "Ruiskulakkaus"
+      },
+      "conclusion": "Laajan teknologiavalikoiman ansiosta voimme valita jokaiseen projektiin optimaalisen levitysmenetelmän ja tarjota elektroniikkakokoonpanoille parhaan suojan tehokkaasta valmistuksesta tinkimättä."
+    },
+    "equipment": {
+      "title": "Tuotantolaitteisto",
+      "description": "Lakkaus tehdään nykyaikaisilla Nordson ASYMTEK -automaattilinjoilla, jotka takaavat suojalakan tarkan, toistettavan ja täysin hallitun levityksen.",
+      "lines": {
+        "title": "Automaattiset lakkauslinjat",
+        "item": "{model}, jossa on suljettu lämmitetty kierto, automaattinen laserkorkeuden mittaus, levitysleveyden korjaus ja kamerajärjestelmä prosessin valvontaan.",
+        "description": "Teknologia mahdollistaa sekä SMT- että THT-kalustettujen elektroniikkakokoonpanojen tarkan lakkauksen."
+      },
+      "drying": {
+        "title": "Kuivaus",
+        "item": "Linjassa toimiva kovetusuuni suojalakkojen hallittuun kovettamiseen."
+      },
+      "quality": {
+        "title": "Laadunvalvonta",
+        "description": "Jokaisen lakatun elektroniikkakokoonpanon suojakerros tarkastetaan UV-valossa. Varmistamme tarvittavien alueiden peittävyyden, kerroksen tasaisuuden ja mahdolliset virheet. Hallittu levitys- ja kovetusprosessi takaa hyvän toistettavuuden ja elektroniikkatuotteiden pitkäaikaisen suojan."
+      }
+    },
+    "contact": {
+      "description": "Nykyaikaiset teknologiat, automatisoidut valmistusprosessit ja pitkä kokemus mahdollistavat luotettavan suojauksen, joka parantaa merkittävästi elektroniikkakokoonpanojen kestävyyttä, käyttöikää ja käyttöluotettavuutta vaativimmissakin sovelluksissa."
+    }
+  },
+  "MechanicalAssembly": {
+    "hero": {
+      "title": "Mekaaninen kokoonpano",
+      "description": "Hokamilla valmistus ei pääty piirilevyn kalustukseen. Tavoitteemme on toimittaa täysin valmiita tuotteita välittömään käyttöön, asennukseen tai jakeluun. Laajat kokoonpano- ja viimeistelypalvelumme varmistavat tuotteen loppukokoonpanon täsmälleen teknisten asiakirjojen ja asiakkaan yksilöllisten vaatimusten mukaisesti."
+    },
+    "first": {
+      "eyebrow": "Kokoonpano",
+      "title": "Kokoonpanosta valmiiksi tuotteeksi",
+      "p1": "Mekaaninen kokoonpano on tärkeä osa kattavia EMS-palvelujamme. Asennamme elektroniikkakokoonpanot muovi- ja metallikoteloihin sekä kokoamme mekaaniset osat, johdinsarjat, liittimet, jäähdytyselementit, näytöt, hallintalaitteet ja muut komponentit. Jokaisen tuotteen kokoonpano ja toiminta tarkastetaan huolellisesti ennen lopullista pakkausta ja lähetystä.",
+      "p2": "Valmistusprosessimme mahdollistavat tehokkaan prototyyppien, pienten sarjojen ja suurten tilausten toteutuksen. Joustavan tuotannon avulla mukautamme kokoonpanon laajuuden asiakkaan vaatimuksiin yksinkertaisesta mekaanisesta kokoonpanosta valmiin tuotteen toimitukseen pakkauksineen, merkintöineen ja logistiikkapalveluineen.",
+      "imageAlt": "Työntekijä viimeistelee elektroniikkatuotetta kokoonpanopisteessä."
+    },
+    "second": {
+      "eyebrow": "Kokonaispalvelu",
+      "title": "Kokonaisratkaisu saman katon alta",
+      "p1": "Yhdistämällä SMT- ja THT-tuotannon, testauksen, lakkauksen, mekaanisen kokoonpanon ja logistiikkapalvelut tarjoamme täydellisen valmistusratkaisun yhdestä paikasta. Useiden toimittajien koordinointia ei tarvita, toimitusajat lyhenevät, projektinhallinta helpottuu ja samalla kokonaislaatu sekä valmistustehokkuus paranevat.",
+      "imageAlt": "Työntekijä tekee elektroniikkakokoonpanon loppuasennusta."
+    },
+    "included": {
+      "title": "Palveluihimme kuuluvat",
+      "harnesses": "Johdinsarjojen valmistus ja kokoonpano",
+      "parts": "Muovi- ja metalliosien mekaaninen kokoonpano",
+      "enclosures": "Elektroniikkakokoonpanojen asennus muovi- ja metallikoteloihin",
+      "completion": "Lopputuotteen täydellinen kokoonpano",
+      "components": "Näyttöjen, liittimien, jäähdytyselementtien, puhaltimien, painikkeiden ja muiden mekaanisten komponenttien asennus",
+      "labeling": "Tuotteiden merkintä asiakaskohtaisilla etiketeillä, sarjanumeroilla, viivakoodeilla ja QR-koodeilla",
+      "packaging": "Yksilöllinen pakkaus asiakkaan vaatimusten mukaan",
+      "dispatch": "Tuotteiden valmistelu lähetystä varten",
+      "logistics": "Logistiikkapalvelut ja toimitus määritettyyn kohteeseen kaikkialla maailmassa"
+    },
+    "contact": {
+      "description": "Tavoitteemme on toimittaa asiakkaalle tuote, joka on valmistuksen jälkeen täysin valmis välittömään käyttöön, asennukseen tai suoraan jakeluun loppuasiakkaalle."
+    }
+  },
+  "SmtStencils": {
+    "hero": {
+      "title": "SMT-pastamaskit",
+      "description": "Laadukas SMT-pastamaski on välttämätön juotospastan tarkalle levitykselle ja laadukkaalle SMT-kalustukselle. Hokami järjestää erittäin tarkkojen laserleikattujen teräsmaskien valmistuksen elektroniikkakokoonpanojen prototyyppi- ja sarjatuotantoon."
+    },
+    "first": {
+      "eyebrow": "Valmistus",
+      "title": "Pikatoimitus ja tarkkuus",
+      "p1": "Pitkäaikaiset, luotettavat kumppanit ja tehokas valmistusprosessi mahdollistavat pastamaskien valmistuksen ja pikatoimitukset. Kiireellisissä projekteissa voimme lähettää pastamaskin jo 24 tunnin kuluessa tilauksen vastaanottamisesta.",
+      "p2": "Jokainen pastamaski valmistetaan siten, että aukot ovat erittäin tarkkoja, mittapysyvyys on hyvä ja käyttöikä pitkä. Oikein suunniteltu pastamaski edistää merkittävästi laadukasta juotospastan levitystä, vähentää valmistusvirheitä ja vakauttaa SMT-prosessia.",
+      "imageAlt": "Laite laserleikattujen SMT-pastamaskien tarkkaan valmistukseen."
+    },
+    "second": {
+      "eyebrow": "Laatu",
+      "title": "Ratkaisevaa tarkkuutta",
+      "p1": "Laadukas SMT-valmistus alkaa juotospastan tarkasta levityksestä. Siksi panostamme pastamaskin oikeaan suunnitteluun, tarkkaan lasertyöstöön ja korkeaan valmistustarkkuuteen. Näin saavutamme vakaan painoprosessin, hyvin toistettavan valmistuksen ja vähemmän virheitä jo ensimmäisestä työvaiheesta alkaen.",
+      "imageAlt": "Lähikuva juotospastan levitykseen käytettävän teräsmaskin aukoista."
+    },
+    "statistics": {
+      "label": "SMT-pastamaskien valmistusmahdollisuudet",
+      "hours": "kiireellisten pastamaskien lähetys",
+      "hoursSuffix": " tuntia",
+      "size": "mm, pastamaskin mitat",
+      "minimum": "materiaalin paksuus (vähintään)",
+      "maximum": "materiaalin paksuus enintään"
+    },
+    "specifications": {
+      "title": "Vakiovalmistuksen mahdollisuudet",
+      "size": {
+        "label": "Pastamaskin mitat",
+        "value": "{width, number} × {firstHeight, number} mm, {width, number} × {secondHeight, number} mm"
+      },
+      "thickness": {
+        "label": "Materiaalin paksuus",
+        "value": "{minimum, number, ::.00} mm (vähintään), {standardThicknesses}, enintään {maximum, number, ::.00} mm",
+        "item": "{value, number, ::.00} mm"
+      },
+      "material": {
+        "label": "Materiaali ja rakenne",
+        "line1": "Laserleikatut ruostumattomasta teräksestä valmistetut SMT-pastamaskit",
+        "line2": "Korkea mittatarkkuus",
+        "line3": "Pitkä käyttöikä",
+        "line4": "Sopivat prototyyppi- ja sarjatuotantoon"
+      },
+      "services": {
+        "label": "Lisäpalvelut",
+        "line1": "Pastamaskien valmistus asiakkaan yksilöllisten vaatimusten mukaan",
+        "line2": "Poikkeavat mitat ja materiaalipaksuudet",
+        "line3": "Pastamaskien liimaus alumiinikehyksiin",
+        "line4": "Pikavalmistus ja toimitus sopimuksen mukaan"
+      }
+    },
+    "contact": {
+      "description": "Yhdessä nykyaikaisten SMT-linjojemme kanssa laadukkaat pastamaskit muodostavat perustan luotettavalle elektroniikkakokoonpanojen valmistukselle, joka täyttää korkeimmat laatuvaatimukset."
     }
   }
 }

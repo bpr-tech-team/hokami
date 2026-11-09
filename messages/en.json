@@ -312,6 +312,34 @@
     "smt": {
       "title": "SMT assembly",
       "description": "HOKAMI SMT assembly: four automated lines, capacity for over 40 million placements per month, boards up to 810 × 480 mm and express production can start within 24 hours."
+    },
+    "pcb": {
+      "title": "Printed circuit boards",
+      "description": "A high-quality printed circuit board is the foundation of every reliable electronic product."
+    },
+    "tht": {
+      "title": "THT",
+      "description": "THT soldering is an integral part of electronics assembly, especially where high mechanical joint strength, reliability and a long product service life are required."
+    },
+    "cleaning": {
+      "title": "Cleaning",
+      "description": "Printed circuit board cleanliness is an important factor in the quality of the finished product."
+    },
+    "testing": {
+      "title": "Testing and quality",
+      "description": "At Hokami, quality is an integral part of every manufacturing process."
+    },
+    "coating": {
+      "title": "Conformal coating",
+      "description": "Conformal coating effectively protects printed circuit boards and electronic components against environmental influences."
+    },
+    "mechanicalAssembly": {
+      "title": "Mechanical assembly",
+      "description": "At Hokami, manufacturing goes beyond assembling the printed circuit board."
+    },
+    "smtStencils": {
+      "title": "SMT stencils",
+      "description": "A high-quality SMT stencil is essential for precise solder paste application and high-quality SMT assembly."
     }
   },
   "RequesForQuote": {
@@ -559,7 +587,15 @@
   "ServiceDetail": {
     "eyebrow": "Services",
     "back": "Back to all services",
-    "equipment": "View equipment"
+    "equipment": "View equipment",
+    "possibilities": "View capabilities",
+    "checks": "View inspections",
+    "includedServices": "View services",
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Looking for an electronics manufacturing partner?",
+      "action": "Contact us"
+    }
   },
   "Smt": {
     "hero": {
@@ -704,6 +740,368 @@
     "failure": {
       "title": "Your application could not be sent",
       "unavailable": "The form is temporarily unavailable. Please contact us at <email>{address}</email>."
+    }
+  },
+  "Pcb": {
+    "hero": {
+      "title": "Printed circuit boards",
+      "description": "A high-quality printed circuit board is the foundation of every reliable electronic product. Hokami arranges PCB manufacturing through a proven network of long-standing partners with whom we have worked for many years. This allows us to offer a broad range of technologies, high manufacturing quality and short lead times for both prototype and series production."
+    },
+    "first": {
+      "eyebrow": "Comprehensive support",
+      "title": "A comprehensive service",
+      "p1": "We supply single-sided, double-sided and multilayer printed circuit boards manufactured precisely to customer requirements. Technical support in selecting suitable materials, surface finishes and manufacturing technologies is an integral part of our service, taking into account the required electrical, mechanical and environmental properties of the finished product.",
+      "p2": "Through close integration with our SMT and THT production processes, we provide a complete service from PCB manufacturing through assembly, testing and final product assembly to dispatch. Customers gain a single reliable partner for the entire manufacturing process.",
+      "imageAlt": "Printed circuit boards with fine copper tracks."
+    },
+    "second": {
+      "eyebrow": "Quality",
+      "title": "Quality without compromise",
+      "p1": "Every PCB we supply meets strict quality and reliability requirements. Manufacturing follows internationally recognised standards, and each production batch undergoes optical and electrical inspection. Our long-standing, proven manufacturing partners enable us to ensure consistent quality, highly repeatable production and flexible delivery schedules.",
+      "imageAlt": "Close-up of printed circuit boards ready for component assembly."
+    },
+    "statistics": {
+      "label": "PCB manufacturing capabilities",
+      "thickness": "Material thickness",
+      "copper": "Copper thickness",
+      "track": "Min. track width",
+      "gap": "Min. clearance"
+    },
+    "specifications": {
+      "title": "Standard manufacturing capabilities",
+      "layers": {
+        "label": "Number of layers",
+        "value": "Single-sided, double-sided and multilayer"
+      },
+      "material": {
+        "label": "Material",
+        "value": "FR1, FR2, FR3, FR4, CEM1, CEM3, AL, flexible PCB, rigid-flex PCB"
+      },
+      "thickness": {
+        "label": "Material thickness",
+        "value": "{minimum, number, ::.0}–{maximum, number, ::.0} mm"
+      },
+      "copper": {
+        "label": "Copper thickness",
+        "value": "{minimum, number}–{maximum, number} µm"
+      },
+      "track": {
+        "label": "Min. track width",
+        "value": "{value, number, ::.00} mm"
+      },
+      "gap": {
+        "label": "Min. clearance",
+        "value": "{value, number, ::.00} mm"
+      },
+      "drilling": {
+        "label": "Drilling",
+        "value": "{minimum, number, ::.00}–{maximum, number, ::.0} mm / laser drilling from {laserMinimum, number, ::.0} mm"
+      },
+      "mask": {
+        "label": "Solder mask",
+        "value": "UV or screen-printed"
+      },
+      "printing": {
+        "label": "Printing",
+        "value": "Ink, carbon layers, peelable coatings"
+      },
+      "finish": {
+        "label": "Surface finish",
+        "value": "Nickel, gold, HAL, LF-HAL, OSP, immersion tin, silver"
+      },
+      "outline": {
+        "label": "Profiling",
+        "value": "Routing, scoring, punching"
+      },
+      "inspection": {
+        "label": "Inspection",
+        "value": "Optical inspection, electrical testing"
+      },
+      "quality": {
+        "label": "Quality standards",
+        "value": "UL, ISO 9001"
+      },
+      "stencils": {
+        "label": "Stencils",
+        "value": "Steel, laser-cut, bonded into aluminium frames"
+      }
+    },
+    "contact": {
+      "description": "Whether you need prototypes, small batches or high-volume orders, Hokami provides complete support for PCB manufacturing and subsequent component assembly. Our comprehensive EMS services offer an efficient solution from the bare PCB to a fully tested and assembled finished product."
+    }
+  },
+  "Tht": {
+    "hero": {
+      "title": "THT",
+      "description": "THT soldering is an integral part of electronics assembly, particularly where high mechanical joint strength, reliability and a long product service life are required. At Hokami, we use modern soldering technologies that enable efficient manufacturing from individual prototypes to high-volume production."
+    },
+    "first": {
+      "eyebrow": "Technology",
+      "title": "Choosing the soldering technology",
+      "p1": "We select the most suitable soldering technology according to the product and customer requirements. We use wave soldering for standard series production, while selective soldering is ideal for complex electronic assemblies or combined SMT/THT boards. We also provide manual soldering for prototypes, repairs, adding specific components and products requiring an individual approach.",
+      "imageAlt": "Selective soldering equipment for printed circuit boards."
+    },
+    "second": {
+      "eyebrow": "Quality",
+      "title": "Selective soldering",
+      "p1": "Selective soldering applies solder precisely where it is needed, minimising thermal stress on nearby components and ensuring high-quality solder joints even on technically demanding electronic assemblies. Modern automated technologies provide highly repeatable manufacturing processes and consistent quality across all production batches.",
+      "p2": "All soldering takes place under controlled manufacturing conditions and is continuously inspected with an emphasis on quality, reliability and meeting each customer’s individual requirements.",
+      "imageAlt": "An operator manually soldering an electronic assembly."
+    },
+    "equipment": {
+      "title": "Manufacturing equipment",
+      "wave": "Wave soldering",
+      "selective": "Selective soldering",
+      "manual": "Manual soldering",
+      "station": "{model} soldering stations"
+    },
+    "contact": {
+      "description": "By combining automated and manual soldering technologies, we offer an optimal solution for a wide range of electronic applications, ensuring high-quality solder joints regardless of product complexity or production volume."
+    }
+  },
+  "Cleaning": {
+    "hero": {
+      "title": "Cleaning",
+      "description": "PCB cleanliness is an important factor in the quality of the finished product. Cleanliness throughout the manufacturing process is managed in accordance with IPC-CH-65B."
+    },
+    "first": {
+      "eyebrow": "Process",
+      "title": "Managed to IPC-CH-65B",
+      "p1": "PCB cleanliness is one of the key factors affecting the reliability, service life and long-term functionality of electronic assemblies. At Hokami, we pay close attention to cleaning and manage the process in accordance with IPC-CH-65B and our customers’ individual specifications.",
+      "p2": "In standard production we use modern no-clean solder pastes and fluxes that meet demanding requirements for solder joint quality and reliability. Where a project requires a higher level of surface cleanliness, we provide professional washing of assembled PCBs using automated cleaning technologies.",
+      "imageAlt": "Assembled printed circuit boards inside a cleaning system."
+    },
+    "second": {
+      "eyebrow": "Technology",
+      "title": "Ultrasonic cleaning and high-pressure spray",
+      "p1": "We combine ultrasonic cleaning and high-pressure spray to remove flux residues, ionic contamination and other contaminants. Precisely controlled processes deliver high levels of cleanliness even for technologically demanding electronic assemblies intended for industrial, medical or energy applications.",
+      "p2": "Each cleaning process is tailored to the customer’s requirements and the product’s characteristics, ensuring maximum reliability of the finished product while maintaining high manufacturing efficiency.",
+      "imageAlt": "An automated industrial cleaning system for electronic assemblies."
+    },
+    "equipment": {
+      "title": "Manufacturing equipment",
+      "description": "We clean electronic assemblies using modern equipment designed for professional industrial applications:",
+      "moduleClean": "{model} – automated washing system with ultrasonic and spray modules",
+      "mdx": "{model} – industrial washing equipment",
+      "ultrasonic": "Ultrasonic cleaners with bath temperature control and timed process control"
+    },
+    "contact": {
+      "description": "Modern cleaning technologies and carefully controlled processes enable us to deliver the required level of surface cleanliness in accordance with customer specifications and the needs of each application."
+    }
+  },
+  "Testing": {
+    "hero": {
+      "title": "Testing and quality",
+      "description": "At Hokami, quality is an integral part of every manufacturing process. Inspection takes place at every stage, from incoming materials through solder paste application and SMT and THT assembly to final assembly, functional testing and dispatch. Our multilayer quality control system ensures high reliability, repeatable production and the highest quality for every electronic assembly."
+    },
+    "first": {
+      "eyebrow": "Standards",
+      "title": "Inspection throughout manufacturing",
+      "p1": "Manufacturing processes are managed in accordance with IPC-A-610, while PCB cleanliness follows IPC-CH-65B recommendations. All inspection and testing processes are tailored to the customer’s specific requirements and the characteristics of the product.",
+      "p2": "Quality is verified from the first manufacturing operations. We check solder paste application, component placement accuracy, solder joint quality, electrical properties and the functionality of the finished product. Every step is designed to detect deviations as early as possible and prevent them from affecting the final product’s quality.",
+      "imageAlt": "Optical inspection of a printed circuit board on SAKI equipment."
+    },
+    "checks": {
+      "title": "Our quality system includes",
+      "spi": "SPI (Solder Paste Inspection) – checking solder paste application quality.",
+      "aoi": "AOI (Automated Optical Inspection) – automated inspection of component placement and solder joints.",
+      "bga": "BGA inspection using an endoscopic camera.",
+      "ict": "In-Circuit Test (ICT) – electrical testing of assembled components and connections.",
+      "functional": "Functional testing (FCT) to customer requirements.",
+      "programming": "Programming electronic assemblies.",
+      "burnIn": "Burn-in testing to verify long-term reliability.",
+      "highVoltage": "High-voltage testing (HV Test) for AC and DC applications.",
+      "mechanical": "Mechanical testing of buttons, switches, toggle switches and reed relays.",
+      "optical": "Optical measurement of LEDs and displays, including light intensity and wavelength.",
+      "buzzer": "Testing sound-producing components (Buzzer Test).",
+      "visual": "Visual inspection of component dimensions, height and position."
+    },
+    "equipment": {
+      "title": "Testing equipment",
+      "aoi": {
+        "title": "Automated optical inspection (AOI)",
+        "description": "Automated optical inspection provides fast, precise checks of PCB assembly quality. AOI systems verify component presence, orientation and position as well as solder joint quality, significantly improving manufacturing reliability.",
+        "endoscope": "Endoscopic camera for BGA package inspection"
+      },
+      "ict": {
+        "title": "In-Circuit Test (ICT)",
+        "description": "Electrical testing checks individual components, connections and electrical parameters before functional testing begins.",
+        "manual": "{model} with {fixture}",
+        "oversized": "{fixture} for testing oversized PCBs"
+      },
+      "functional": {
+        "title": "Functional testing",
+        "description": "Functional tests simulate real operating conditions and verify that the product works correctly. We prepare individual test scenarios according to customer requirements and the specific application.",
+        "listLabel": "Examples include:",
+        "assemblies": "Comprehensive functional testing of electronic assemblies",
+        "communication": "Communication tests (I²C, RS232, Bluetooth)",
+        "firmware": "Firmware programming",
+        "burnIn": "Burn-in testing",
+        "highVoltage": "High-voltage testing (AC/DC)",
+        "mechanical": "Mechanical testing of controls",
+        "optical": "Optical testing of LEDs and displays",
+        "sound": "Testing sound-producing components"
+      }
+    },
+    "cards": {
+      "title": "Quality assurance",
+      "traceability": {
+        "title": "Production traceability",
+        "description": "Every electronic assembly can be traced throughout manufacturing. Our traceability system records materials, production batches, process operations, test results and individual manufacturing parameters. This ensures maximum manufacturing transparency and meets the requirements of customers in industries with demanding quality standards."
+      },
+      "esd": {
+        "title": "ESD protection",
+        "description": "All manufacturing and testing takes place in an ESD-protected environment. Strict electrostatic protection rules minimise the risk of damage to sensitive electronic components during manufacturing, handling and testing."
+      },
+      "calibration": {
+        "title": "Calibration of measuring equipment",
+        "description": "All measuring and testing equipment is regularly calibrated in accordance with our internal quality management system. This ensures measurement accuracy, repeatable results and the long-term reliability of all inspection processes."
+      },
+      "fixtures": {
+        "title": "Test fixture development",
+        "description": "For specific projects, we design and manufacture our own test fixtures and automated test stations. This allows us to tailor testing to individual customer requirements and provide the highest level of inspection for every product."
+      }
+    },
+    "contact": {
+      "description": "A comprehensive quality management system, modern inspection technologies and an experienced team of specialists enable Hokami to deliver electronic assemblies that meet the highest requirements for quality, safety and long-term operational reliability."
+    }
+  },
+  "Coating": {
+    "hero": {
+      "title": "Conformal coating",
+      "description": "Conformal coating effectively protects printed circuit boards and electronic components against adverse environmental influences. It significantly extends the service life of electronics, improves operational reliability and enables products to be used in demanding operating conditions."
+    },
+    "first": {
+      "eyebrow": "Protection",
+      "title": "Protection for demanding applications",
+      "p1": "At Hokami, we provide professional PCB coating for applications exposed to increased humidity, condensation, dust, chemicals, salt spray, vibration or significant temperature changes. Coating is a standard part of electronics manufacturing for industrial, energy, medical, railway and other applications requiring high long-term reliability.",
+      "p2": "We use proven Peters SL1331N-LF-D/17 and Peters SL1301 ECO-FLZ-23 protective coatings, or other materials to customer specifications. We inspect the applied protective layer under UV light for fast, precise assessment of coating uniformity and coverage.",
+      "imageAlt": "An automated line applying protective coating to electronic assemblies."
+    },
+    "second": {
+      "eyebrow": "Application",
+      "title": "Coating options",
+      "p1": "We offer several methods of applying protective coating according to the product and customer requirements:",
+      "imageAlt": "Close-up of a printed circuit board populated with electronic components.",
+      "items": {
+        "selective": "Selective coating of specific PCB areas",
+        "full": "Coating of the entire PCB",
+        "automatic": "Automated selective coating",
+        "manual": "Manual coating",
+        "dip": "Dip coating",
+        "spray": "Spray coating"
+      },
+      "conclusion": "Our wide range of technologies allows us to choose the optimal application method for each project, providing maximum protection for electronic assemblies while maintaining high manufacturing efficiency."
+    },
+    "equipment": {
+      "title": "Manufacturing equipment",
+      "description": "Coating is applied on modern Nordson ASYMTEK automated lines, ensuring precise, repeatable and fully controlled application of protective coatings.",
+      "lines": {
+        "title": "Automated coating lines",
+        "item": "{model} equipped with a closed heated circuit, automatic laser height measurement, application width correction and a camera-based process inspection system.",
+        "description": "The technology enables precise coating of electronic assemblies populated using both SMT and THT technologies."
+      },
+      "drying": {
+        "title": "Drying",
+        "item": "In-line curing oven for controlled curing of protective coatings."
+      },
+      "quality": {
+        "title": "Quality inspection",
+        "description": "Every coated electronic assembly undergoes UV inspection of the applied layer. We check coverage of the required areas, layer uniformity and any unwanted defects. Controlled application and curing ensure highly repeatable production and long-term protection of electronic products."
+      }
+    },
+    "contact": {
+      "description": "Modern technologies, automated manufacturing processes and many years of experience enable us to offer reliable protection for electronic assemblies, significantly improving their durability, service life and operational reliability even in the most demanding applications."
+    }
+  },
+  "MechanicalAssembly": {
+    "hero": {
+      "title": "Mechanical assembly",
+      "description": "At Hokami, manufacturing goes beyond PCB assembly. Our aim is to deliver fully finished products ready for immediate use, installation or distribution. Our wide range of assembly and completion services ensures that final products are assembled precisely to technical documentation and individual customer requirements."
+    },
+    "first": {
+      "eyebrow": "Assembly",
+      "title": "Completing the finished product",
+      "p1": "Mechanical assembly is an important part of our comprehensive EMS services. We assemble electronic units into plastic and metal enclosures and install mechanical parts, cable harnesses, connectors, heatsinks, displays, controls and other components. Every product undergoes thorough assembly and functional inspection before final packaging and dispatch.",
+      "p2": "Our manufacturing processes are designed to handle prototypes, small batches and high-volume orders efficiently. Flexible production organisation allows us to tailor the scope of completion to customer requirements, from simple mechanical assembly to delivery of a complete finished product including packaging, labelling and logistics services.",
+      "imageAlt": "An operator completing an electronic product at an assembly workstation."
+    },
+    "second": {
+      "eyebrow": "Comprehensive support",
+      "title": "A complete solution under one roof",
+      "p1": "By combining SMT and THT production, testing, coating, mechanical assembly and logistics services, we offer a complete manufacturing solution from a single location. This removes the need to coordinate multiple suppliers, shortens delivery times, simplifies project management and improves overall quality and manufacturing efficiency.",
+      "imageAlt": "An operator performing the final assembly of an electronic unit."
+    },
+    "included": {
+      "title": "Our services include",
+      "harnesses": "Manufacturing and assembling cable harnesses",
+      "parts": "Mechanical assembly of plastic and metal parts",
+      "enclosures": "Installing electronic assemblies in plastic and metal enclosures",
+      "completion": "Complete assembly of the finished product",
+      "components": "Installing displays, connectors, heatsinks, fans, buttons and other mechanical components",
+      "labeling": "Labelling products with customer labels, serial numbers, barcodes and QR codes",
+      "packaging": "Individual packaging to customer requirements",
+      "dispatch": "Preparing products for dispatch",
+      "logistics": "Logistics services and delivery to a specified location worldwide"
+    },
+    "contact": {
+      "description": "Our aim is to deliver a product that is fully ready for immediate use, installation or direct distribution to the end customer when manufacturing is complete."
+    }
+  },
+  "SmtStencils": {
+    "hero": {
+      "title": "SMT stencils",
+      "description": "A high-quality SMT stencil is essential for precise solder paste application and high-quality SMT assembly. At Hokami, we arrange the manufacture of highly precise laser-cut steel stencils for prototype and series production of electronic assemblies."
+    },
+    "first": {
+      "eyebrow": "Manufacturing",
+      "title": "Express delivery and precision",
+      "p1": "Long-standing, proven partners and an efficient manufacturing process enable us to provide both stencil manufacturing and express delivery. For urgent projects, we can dispatch a stencil within 24 hours of receiving the order.",
+      "p2": "Every stencil is manufactured with maximum aperture precision, high dimensional stability and a long service life. A correctly designed stencil contributes significantly to high-quality solder paste application, fewer manufacturing defects and a stable SMT process.",
+      "imageAlt": "Equipment for the precise manufacture of laser-cut SMT stencils."
+    },
+    "second": {
+      "eyebrow": "Quality",
+      "title": "Precision that makes the difference",
+      "p1": "High-quality SMT manufacturing starts with precise solder paste application. We therefore focus on correct stencil design, precise laser processing and high manufacturing accuracy. This delivers a stable printing process, highly repeatable production and fewer manufacturing defects from the very first operation.",
+      "imageAlt": "Close-up of apertures in a steel solder paste stencil."
+    },
+    "statistics": {
+      "label": "SMT stencil manufacturing capabilities",
+      "hours": "dispatch of urgent stencils",
+      "hoursSuffix": " hours",
+      "size": "mm, stencil dimensions",
+      "minimum": "material thickness (minimum)",
+      "maximum": "material thickness up to"
+    },
+    "specifications": {
+      "title": "Standard manufacturing capabilities",
+      "size": {
+        "label": "Stencil dimensions",
+        "value": "{width, number} × {firstHeight, number} mm, {width, number} × {secondHeight, number} mm"
+      },
+      "thickness": {
+        "label": "Material thickness",
+        "value": "{minimum, number, ::.00} mm (minimum), {standardThicknesses}, up to {maximum, number, ::.00} mm",
+        "item": "{value, number, ::.00} mm"
+      },
+      "material": {
+        "label": "Material and construction",
+        "line1": "Laser-cut stainless steel SMT stencils",
+        "line2": "High dimensional accuracy",
+        "line3": "Long service life",
+        "line4": "Suitable for prototype and series production"
+      },
+      "services": {
+        "label": "Additional services",
+        "line1": "Stencil manufacturing to individual customer requirements",
+        "line2": "Non-standard dimensions and material thicknesses",
+        "line3": "Bonding stencils into aluminium frames",
+        "line4": "Express manufacturing and delivery by agreement"
+      }
+    },
+    "contact": {
+      "description": "Together with our modern SMT lines, high-quality stencils provide an essential foundation for reliable electronic assembly manufacturing with the highest quality requirements."
     }
   }
 }

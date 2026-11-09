@@ -1,18 +1,22 @@
 import { Text } from "@/components/typography/text";
-import { FactList } from "@/components/sections/fact-list/fact-list";
+import { FactListGrid } from "@/components/sections/fact-list/fact-list-grid";
 
 export type EquipmentItem = { id: string; text: string };
 
-export function EquipmentList({ items }: { items: readonly EquipmentItem[] }) {
+export function EquipmentList({
+  items,
+  columns = 1,
+}: {
+  items: readonly EquipmentItem[];
+  columns?: 1 | 2;
+}) {
   return (
-    <FactList>
-      <ul>
-        {items.map(({ id, text }) => (
-          <li key={id}>
-            <Text className="min-w-0 flex-1">{text}</Text>
-          </li>
-        ))}
-      </ul>
-    </FactList>
+    <FactListGrid
+      columns={columns}
+      items={items.map(({ id, text }) => ({
+        id,
+        content: <Text>{text}</Text>,
+      }))}
+    />
   );
 }

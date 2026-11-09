@@ -10,7 +10,10 @@ import { Container } from "@/components/layout/container";
 import { sectionVariants } from "@/components/layout/section-variants";
 import { deserializeJobContent } from "@/lib/jobs/content";
 import { isJobImagePath } from "@/lib/jobs/content-layout";
-import { FactList } from "@/components/sections/fact-list/fact-list";
+import {
+  FactListGrid,
+  type FactListGridGroup,
+} from "@/components/sections/fact-list/fact-list-grid";
 import { JobColumn, jobColumnsVariants } from "./content-layout";
 import { JobPhoto } from "./job-photo";
 import { ContentEmbed } from "./content-embed";
@@ -119,6 +122,70 @@ function ContentPhoto({ src, alt }: { src: string; alt: string }) {
   return <JobPhoto src={src} alt={alt} />;
 }
 
+function ContentFactSection({
+  id,
+  tone = "default",
+  groups,
+}: {
+  id?: string;
+  tone?: "default" | "subtle";
+  groups: readonly FactListGridGroup[];
+}) {
+  return (
+    <section id={id} className={sectionVariants({ tone })}>
+      <Container>
+        <RichText className="leading-body">
+          <FactListGrid groups={groups} columns={2} />
+        </RichText>
+      </Container>
+    </section>
+  );
+}
+
+function checklistItems(checklist: Node, config: Config) {
+  return checklist.children.flatMap((list, listIndex) =>
+    list.children.map((item, index) => ({
+      id: `${listIndex}-${index}`,
+      content: new Markdoc.Tag(
+        "ContentFragment",
+        {},
+        item.transformChildren(config),
+      ),
+    })),
+  );
+}
+
+function checklistColumn(column: Node, index: number, config: Config) {
+  const position = column.children.findIndex(
+    (node) => node.tag === "JobChecklist",
+  );
+  if (
+    position < 0 ||
+    column.children.some(
+      (node, childIndex) =>
+        childIndex !== position &&
+        !["heading", "paragraph"].includes(node.type),
+    )
+  )
+    return null;
+
+  const after = column.children.slice(position + 1);
+  return {
+    id: `column-${index + 1}`,
+    header: column.children
+      .slice(0, position)
+      .map((node) => node.transform(config)),
+    items: checklistItems(column.children[position], config),
+    after: after.length
+      ? new Markdoc.Tag(
+          "ContentFragment",
+          {},
+          new Markdoc.Ast.Node("document", {}, after).transformChildren(config),
+        )
+      : undefined,
+  };
+}
+
 const config: Config = {
   tags: {
     JobEmbed: {
@@ -139,9 +206,28 @@ const config: Config = {
           matches: ["default", "subtle"],
         },
       },
+      transform(node: Node, config: Config) {
+        const groups = node.children.map((column, index) =>
+          checklistColumn(column, index, config),
+        );
+        const attributes = node.transformAttributes(config);
+        return groups.length && groups.every((group) => group !== null)
+          ? new Markdoc.Tag("ContentFactSection", { ...attributes, groups })
+          : new Markdoc.Tag(
+              "ContentSection",
+              attributes,
+              node.transformChildren(config),
+            );
+      },
     },
     JobColumn: { render: "JobColumn" },
-    JobChecklist: { render: "FactList" },
+    JobChecklist: {
+      transform(node: Node, config: Config) {
+        return new Markdoc.Tag("FactListGrid", {
+          items: checklistItems(node, config),
+        });
+      },
+    },
     JobPhoto: {
       render: "ContentPhoto",
       selfClosing: true,
@@ -218,8 +304,9 @@ function renderDocument(document: Node) {
       ContentTable,
       ContentImage,
       ContentSection,
+      ContentFactSection,
       JobColumn,
-      FactList,
+      FactListGrid,
       ContentPhoto,
       ContentEmbed,
     },

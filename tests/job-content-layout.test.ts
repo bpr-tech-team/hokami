@@ -10,6 +10,7 @@ import { JobContent } from "../src/components/sections/jobs/detail/job-content";
 import { jobContentField } from "../src/lib/jobs/content-field";
 import { readJobDetailRecord } from "../src/lib/jobs/read-jobs";
 import { resolveJobDetail } from "../src/lib/jobs/resolve-detail";
+import { Window } from "happy-dom";
 
 const layout = `{% JobSection id="first" tone="default" %}
 {% JobColumn %}
@@ -94,6 +95,61 @@ test("legacy content and structured sections coexist without extra section paddi
   );
   assert.equal((legacy.match(/<section /g) ?? []).length, 1);
   assert.match(legacy, /<ol>/);
+});
+
+test("adjacent job checklists share the fact grid without losing rich text, links or trailing content", () => {
+  const body = `{% JobSection id="requirements-and-offer" tone="subtle" %}
+{% JobColumn %}
+## Requirements
+{% JobChecklist %}
+- First **approved** requirement
+- Contact [our team](mailto:prace@hokami.cz)
+{% /JobChecklist %}
+Additional information after the list.
+{% /JobColumn %}
+{% JobColumn %}
+## What we offer
+{% JobChecklist %}
+- One benefit
+- Second benefit
+- Third benefit
+{% /JobChecklist %}
+{% /JobColumn %}
+{% /JobSection %}`;
+  const window = new Window();
+  window.document.body.innerHTML = renderToStaticMarkup(
+    createElement(JobContent, {
+      body: serializeJobContent(Markdoc.parse(body)),
+      locale: "en",
+    }),
+  );
+  const section = window.document.querySelector("#requirements-and-offer");
+  assert.ok(section);
+  assert.equal(section.querySelectorAll("[data-fact-list-grid]").length, 1);
+  assert.deepEqual(
+    [...section.querySelectorAll("li")].map((item) => item.textContent),
+    [
+      "First approved requirement",
+      "Contact our team",
+      "One benefit",
+      "Second benefit",
+      "Third benefit",
+    ],
+  );
+  assert.equal(section.querySelector("strong")?.textContent, "approved");
+  assert.equal(
+    section.querySelector("a")?.getAttribute("href"),
+    "mailto:prace@hokami.cz",
+  );
+  assert.ok(
+    section.textContent.includes("Additional information after the list."),
+  );
+  assert.ok(
+    [...section.querySelectorAll("li")].every((item) =>
+      item.textContent.trim(),
+    ),
+  );
+  window.happyDOM.cancelAsync();
 });
 
 test("invalid column structure, nested sections, backgrounds and incomplete photos fail save and reader validation", () => {

@@ -312,6 +312,34 @@
     "smt": {
       "title": "SMT-Bestückung",
       "description": "SMT-Bestückung bei HOKAMI: vier automatisierte Linien, Kapazität für über 40 Mio. Bauteilplatzierungen pro Monat, Leiterplatten bis 810 × 480 mm und möglicher Expressstart innerhalb von 24 Stunden."
+    },
+    "pcb": {
+      "title": "Leiterplatten",
+      "description": "Eine hochwertige Leiterplatte ist die Grundlage jedes zuverlässigen elektronischen Produkts."
+    },
+    "tht": {
+      "title": "THT",
+      "description": "Das THT-Löten ist ein fester Bestandteil der Fertigung elektronischer Baugruppen, insbesondere bei hohen Anforderungen an die mechanische Festigkeit der Verbindungen, Zuverlässigkeit und lange Produktlebensdauer."
+    },
+    "cleaning": {
+      "title": "Reinigung",
+      "description": "Die Sauberkeit von Leiterplatten ist ein wichtiger Faktor für die Qualität des Endprodukts."
+    },
+    "testing": {
+      "title": "Prüfung und Qualität",
+      "description": "Bei Hokami ist Qualität ein fester Bestandteil jedes Fertigungsprozesses."
+    },
+    "coating": {
+      "title": "Schutzlackierung",
+      "description": "Die Schutzlackierung elektronischer Baugruppen schützt Leiterplatten und elektronische Bauteile wirksam vor Umwelteinflüssen."
+    },
+    "mechanicalAssembly": {
+      "title": "Mechanische Montage",
+      "description": "Bei Hokami endet die Fertigung nicht mit der Bestückung der Leiterplatte."
+    },
+    "smtStencils": {
+      "title": "SMT-Schablonen",
+      "description": "Eine hochwertige SMT-Schablone ist eine wesentliche Voraussetzung für den präzisen Auftrag von Lötpaste und eine hohe Qualität der SMT-Bestückung."
     }
   },
   "RequesForQuote": {
@@ -559,7 +587,15 @@
   "ServiceDetail": {
     "eyebrow": "Leistungen",
     "back": "Zurück zu allen Leistungen",
-    "equipment": "Ausstattung ansehen"
+    "equipment": "Ausstattung ansehen",
+    "possibilities": "Optionen ansehen",
+    "checks": "Prüfungen ansehen",
+    "includedServices": "Leistungen ansehen",
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Suchen Sie einen Partner für die Elektronikfertigung?",
+      "action": "Kontakt aufnehmen"
+    }
   },
   "Smt": {
     "hero": {
@@ -704,6 +740,368 @@
     "failure": {
       "title": "Die Bewerbung konnte nicht gesendet werden",
       "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie uns unter <email>{address}</email>."
+    }
+  },
+  "Pcb": {
+    "hero": {
+      "title": "Leiterplatten",
+      "description": "Eine hochwertige Leiterplatte bildet die Grundlage jedes zuverlässigen elektronischen Produkts. Hokami organisiert die Leiterplattenfertigung über ein bewährtes Netzwerk langjähriger Partner, mit denen wir seit vielen Jahren zusammenarbeiten. Dadurch bieten wir ein breites Technologiespektrum, hohe Fertigungsqualität und kurze Lieferzeiten für Prototypen und Serien."
+    },
+    "first": {
+      "eyebrow": "Komplettservice",
+      "title": "Umfassende Leistungen",
+      "p1": "Wir liefern einseitige, doppelseitige und mehrlagige Leiterplatten exakt nach Kundenvorgaben. Technische Unterstützung bei der Auswahl geeigneter Materialien, Oberflächen und Fertigungstechnologien gehört selbstverständlich dazu. Dabei berücksichtigen wir die geforderten elektrischen, mechanischen und umweltbezogenen Eigenschaften des Endprodukts.",
+      "p2": "Durch die enge Anbindung an unsere SMT- und THT-Fertigung bieten wir einen Komplettservice von der Leiterplattenherstellung über Bestückung, Prüfung und Endmontage bis zum Versand des fertigen Produkts. Kunden erhalten damit einen zuverlässigen Partner für den gesamten Fertigungsprozess.",
+      "imageAlt": "Leiterplatten mit feinen Kupferleiterbahnen."
+    },
+    "second": {
+      "eyebrow": "Qualität",
+      "title": "Qualität ohne Kompromisse",
+      "p1": "Jede gelieferte Leiterplatte erfüllt strenge Anforderungen an Qualität und Zuverlässigkeit. Die Fertigung erfolgt nach international anerkannten Standards; jede Produktionsserie wird optisch und elektrisch geprüft. Langjährig bewährte Fertigungspartner ermöglichen gleichbleibende Qualität, hohe Wiederholgenauigkeit und flexible Liefertermine.",
+      "imageAlt": "Detailaufnahme von Leiterplatten vor der Bestückung."
+    },
+    "statistics": {
+      "label": "Fertigungsmöglichkeiten für Leiterplatten",
+      "thickness": "Materialstärke",
+      "copper": "Kupferstärke",
+      "track": "Min. Leiterbahnbreite",
+      "gap": "Min. Abstand"
+    },
+    "specifications": {
+      "title": "Standardfertigungsmöglichkeiten",
+      "layers": {
+        "label": "Lagenzahl",
+        "value": "Einseitig, doppelseitig und mehrlagig"
+      },
+      "material": {
+        "label": "Material",
+        "value": "FR1, FR2, FR3, FR4, CEM1, CEM3, AL, flexible Leiterplatten, Starrflex-Leiterplatten"
+      },
+      "thickness": {
+        "label": "Materialstärke",
+        "value": "{minimum, number, ::.0}–{maximum, number, ::.0} mm"
+      },
+      "copper": {
+        "label": "Kupferstärke",
+        "value": "{minimum, number}–{maximum, number} µm"
+      },
+      "track": {
+        "label": "Min. Leiterbahnbreite",
+        "value": "{value, number, ::.00} mm"
+      },
+      "gap": {
+        "label": "Min. Abstand",
+        "value": "{value, number, ::.00} mm"
+      },
+      "drilling": {
+        "label": "Bohrungen",
+        "value": "{minimum, number, ::.00}–{maximum, number, ::.0} mm / Laserbohrungen ab {laserMinimum, number, ::.0} mm"
+      },
+      "mask": {
+        "label": "Lötstoppmaske",
+        "value": "UV oder Siebdruck"
+      },
+      "printing": {
+        "label": "Aufdrucke",
+        "value": "Farbe, Kohlenstoffschichten, abziehbare Schutzlacke"
+      },
+      "finish": {
+        "label": "Oberflächenbehandlung",
+        "value": "Nickel, Gold, HAL, LF-HAL, OSP, chemisch Zinn, Silber"
+      },
+      "outline": {
+        "label": "Konturbearbeitung",
+        "value": "Fräsen, Ritzen, Stanzen"
+      },
+      "inspection": {
+        "label": "Prüfung",
+        "value": "Optische Prüfung, elektrischer Test"
+      },
+      "quality": {
+        "label": "Qualitätsstandards",
+        "value": "UL, ISO 9001"
+      },
+      "stencils": {
+        "label": "Schablonen",
+        "value": "Stahl, lasergeschnitten, in Aluminiumrahmen eingeklebt"
+      }
+    },
+    "contact": {
+      "description": "Ob Prototypen, Kleinserien oder Großaufträge: Hokami unterstützt die Leiterplattenfertigung und anschließende Bestückung umfassend. Unsere kompletten EMS-Leistungen bieten eine effiziente Lösung von der unbestückten Leiterplatte bis zum vollständig geprüften und endmontierten Produkt."
+    }
+  },
+  "Tht": {
+    "hero": {
+      "title": "THT",
+      "description": "THT-Löten ist ein fester Bestandteil der Elektronikfertigung, insbesondere bei hohen Anforderungen an mechanische Verbindungsfestigkeit, Zuverlässigkeit und eine lange Produktlebensdauer. Hokami nutzt moderne Löttechnologien für eine effiziente Fertigung vom einzelnen Prototyp bis zur Großserie."
+    },
+    "first": {
+      "eyebrow": "Technologie",
+      "title": "Auswahl der Löttechnologie",
+      "p1": "Je nach Produkt und Kundenanforderungen wählen wir die am besten geeignete Löttechnologie. In der Standardserienfertigung setzen wir Wellenlöten ein; bei komplexen Baugruppen oder kombinierten SMT/THT-Leiterplatten ist Selektivlöten die ideale Lösung. Manuelles Löten nutzen wir für Prototypen, Reparaturen, die Ergänzung spezieller Bauteile und Produkte, die eine individuelle Bearbeitung erfordern.",
+      "imageAlt": "Anlage zum Selektivlöten von Leiterplatten."
+    },
+    "second": {
+      "eyebrow": "Qualität",
+      "title": "Selektivlöten",
+      "p1": "Selektivlöten ermöglicht einen präzisen Lotauftrag ausschließlich an den benötigten Stellen. Das minimiert die thermische Belastung benachbarter Bauteile und sorgt auch bei technisch anspruchsvollen Baugruppen für hochwertige Lötstellen. Moderne automatisierte Technologien gewährleisten eine hohe Wiederholgenauigkeit und gleichbleibende Qualität über alle Fertigungsserien hinweg.",
+      "p2": "Alle Lötprozesse erfolgen unter kontrollierten Fertigungsbedingungen und werden laufend auf Qualität, Zuverlässigkeit und die Erfüllung individueller Kundenanforderungen geprüft.",
+      "imageAlt": "Mitarbeiterin beim manuellen Löten einer elektronischen Baugruppe."
+    },
+    "equipment": {
+      "title": "Technische Ausstattung",
+      "wave": "Wellenlöten",
+      "selective": "Selektivlöten",
+      "manual": "Manuelles Löten",
+      "station": "Lötstationen von {model}"
+    },
+    "contact": {
+      "description": "Die Kombination automatisierter und manueller Löttechnologien ermöglicht optimale Lösungen für ein breites Spektrum elektronischer Anwendungen. Wir gewährleisten hochwertige Lötstellen unabhängig von der Produktkomplexität oder der Größe der Fertigungsserie."
+    }
+  },
+  "Cleaning": {
+    "hero": {
+      "title": "Reinigung",
+      "description": "Die Sauberkeit von Leiterplatten ist ein wichtiger Faktor für die Qualität des Endprodukts. Die Sicherstellung der Sauberkeit im gesamten Fertigungsprozess erfolgt gemäß IPC-CH-65B."
+    },
+    "first": {
+      "eyebrow": "Prozess",
+      "title": "Prozessführung nach IPC-CH-65B",
+      "p1": "Die Sauberkeit von Leiterplatten beeinflusst maßgeblich die Zuverlässigkeit, Lebensdauer und langfristige Funktion elektronischer Baugruppen. Hokami widmet dem Reinigungsprozess besondere Aufmerksamkeit und steuert ihn nach den Anforderungen von IPC-CH-65B sowie den individuellen Spezifikationen unserer Kunden.",
+      "p2": "In der Standardfertigung verwenden wir moderne No-Clean-Lötpasten und Flussmittel, die hohe Anforderungen an Qualität und Zuverlässigkeit der Lötstellen erfüllen. Wenn ein Projekt eine höhere Oberflächenreinheit erfordert, bieten wir die professionelle Reinigung bestückter Leiterplatten mit automatisierten Reinigungstechnologien an.",
+      "imageAlt": "Bestückte Leiterplatten in einem Reinigungssystem."
+    },
+    "second": {
+      "eyebrow": "Technologie",
+      "title": "Ultraschall und Hochdrucksprühen",
+      "p1": "Zur Entfernung von Flussmittelrückständen, ionischen Verunreinigungen und anderen Kontaminationen kombinieren wir Ultraschallreinigung und Hochdrucksprühen. Präzise gesteuerte Prozesse ermöglichen eine hohe Reinheit auch bei technologisch anspruchsvollen Baugruppen, etwa für Industrie-, Medizin- oder Energieanwendungen.",
+      "p2": "Jeder Reinigungsprozess wird auf die Kundenanforderungen und die Eigenschaften des Produkts abgestimmt. So verbinden wir höchste Zuverlässigkeit des Endprodukts mit hoher Fertigungseffizienz.",
+      "imageAlt": "Automatisierte industrielle Reinigungsanlage für elektronische Baugruppen."
+    },
+    "equipment": {
+      "title": "Technische Ausstattung",
+      "description": "Für die Reinigung elektronischer Baugruppen verwenden wir moderne Anlagen für professionelle Industrieanwendungen:",
+      "moduleClean": "{model} – automatisches Reinigungssystem mit Ultraschall- und Sprühmodul",
+      "mdx": "{model} – industrielle Reinigungsanlage",
+      "ultrasonic": "Ultraschallreinigungsgeräte mit Badtemperaturregelung und zeitgesteuertem Prozess"
+    },
+    "contact": {
+      "description": "Moderne Reinigungstechnologien und konsequent gesteuerte Prozesse ermöglichen die geforderte Oberflächenreinheit gemäß Kundenspezifikationen und den Anforderungen der jeweiligen Anwendung."
+    }
+  },
+  "Testing": {
+    "hero": {
+      "title": "Prüfung und Qualität",
+      "description": "Bei Hokami ist Qualität Bestandteil jedes Fertigungsprozesses. Kontrollen begleiten alle Schritte vom Materialeingang über Lotpastenauftrag und SMT- und THT-Bestückung bis zur Endmontage, Funktionsprüfung und Auslieferung. Unser mehrstufiges Qualitätskontrollsystem gewährleistet hohe Zuverlässigkeit, wiederholgenaue Fertigung und höchste Qualität jeder elektronischen Baugruppe."
+    },
+    "first": {
+      "eyebrow": "Standards",
+      "title": "Kontrolle im gesamten Fertigungsprozess",
+      "p1": "Die Fertigungsprozesse werden nach IPC-A-610 gesteuert; die Sauberkeit der Leiterplatten wird gemäß den Empfehlungen von IPC-CH-65B sichergestellt. Alle Prüf- und Testverfahren werden auf die konkreten Kundenanforderungen und die Eigenschaften des Produkts abgestimmt.",
+      "p2": "Qualität wird bereits ab den ersten Fertigungsschritten überprüft. Wir kontrollieren Lotpastenauftrag, Bestückungsgenauigkeit, Lötstellenqualität, elektrische Eigenschaften und die Funktion des Endprodukts. Jeder Schritt dient dazu, Abweichungen frühzeitig zu erkennen, bevor sie die Qualität des fertigen Produkts beeinträchtigen können.",
+      "imageAlt": "Optische Prüfung einer Leiterplatte auf einer SAKI-Anlage."
+    },
+    "checks": {
+      "title": "Unser Qualitätssystem umfasst insbesondere",
+      "spi": "SPI (Solder Paste Inspection) – Prüfung der Qualität des Lotpastenauftrags.",
+      "aoi": "AOI (Automated Optical Inspection) – automatische optische Prüfung von Bestückung und Lötstellen.",
+      "bga": "BGA-Inspektion mit einer Endoskopkamera.",
+      "ict": "In-Circuit Test (ICT) – elektrische Prüfung bestückter Bauteile und Verbindungen.",
+      "functional": "Funktionsprüfung (FCT) nach Kundenvorgaben.",
+      "programming": "Programmierung elektronischer Baugruppen.",
+      "burnIn": "Burn-in-Tests zur Prüfung der Langzeitzuverlässigkeit.",
+      "highVoltage": "Hochspannungsprüfungen (HV Test) für AC- und DC-Anwendungen.",
+      "mechanical": "Mechanische Prüfung von Tastern, Schaltern, Kippschaltern und Reed-Relais.",
+      "optical": "Optische Messung von LEDs und Displays einschließlich Lichtintensität und Wellenlänge.",
+      "buzzer": "Prüfung akustischer Bauteile (Buzzer Test).",
+      "visual": "Sichtprüfung von Abmessungen, Höhe und Position der Bauteile."
+    },
+    "equipment": {
+      "title": "Prüfausstattung",
+      "aoi": {
+        "title": "Automatische optische Inspektion (AOI)",
+        "description": "Die automatische optische Inspektion ermöglicht eine schnelle und präzise Kontrolle der Bestückungsqualität. AOI-Systeme prüfen Vorhandensein, Orientierung und Position der Bauteile sowie die Qualität der Lötstellen und tragen wesentlich zur Fertigungszuverlässigkeit bei.",
+        "endoscope": "Endoskopkamera zur Prüfung von BGA-Gehäusen"
+      },
+      "ict": {
+        "title": "In-Circuit Test (ICT)",
+        "description": "Die elektrische Prüfung kontrolliert einzelne Bauteile, Verbindungen und elektrische Parameter vor Beginn der Funktionsprüfung.",
+        "manual": "{model} mit {fixture}",
+        "oversized": "{fixture} zur Prüfung übergroßer Leiterplatten"
+      },
+      "functional": {
+        "title": "Funktionsprüfung",
+        "description": "Funktionstests simulieren den realen Produktbetrieb und überprüfen die korrekte Funktion. Die Testszenarien entwickeln wir individuell nach Kundenvorgaben und den Anforderungen der jeweiligen Anwendung.",
+        "listLabel": "Beispiele:",
+        "assemblies": "Umfassende Funktionsprüfung elektronischer Baugruppen",
+        "communication": "Kommunikationstests (I²C, RS232, Bluetooth)",
+        "firmware": "Firmware-Programmierung",
+        "burnIn": "Burn-in-Tests",
+        "highVoltage": "Hochspannungsprüfungen (AC/DC)",
+        "mechanical": "Mechanische Prüfung von Bedienelementen",
+        "optical": "Optische Prüfung von LEDs und Displays",
+        "sound": "Prüfung akustischer Bauteile"
+      }
+    },
+    "cards": {
+      "title": "Qualitätssicherung",
+      "traceability": {
+        "title": "Rückverfolgbarkeit der Fertigung",
+        "description": "Jede elektronische Baugruppe kann im Fertigungsprozess vollständig zurückverfolgt werden. Das System erfasst eingesetzte Materialien, Fertigungslose, Prozessschritte, Testergebnisse und einzelne Fertigungsparameter. So gewährleisten wir maximale Transparenz und erfüllen Kundenanforderungen aus Branchen mit höchsten Qualitätsansprüchen."
+      },
+      "esd": {
+        "title": "ESD-Schutz",
+        "description": "Alle Fertigungs- und Prüfprozesse erfolgen in einer ESD-geschützten Umgebung. Strenge Regeln zum Schutz vor elektrostatischer Entladung minimieren das Risiko, empfindliche elektronische Bauteile bei Fertigung, Handhabung und Prüfung zu beschädigen."
+      },
+      "calibration": {
+        "title": "Kalibrierung der Messtechnik",
+        "description": "Alle Mess- und Prüfgeräte werden regelmäßig gemäß unserem internen Qualitätsmanagementsystem kalibriert. Dies gewährleistet präzise Messungen, wiederholbare Ergebnisse und die langfristige Zuverlässigkeit sämtlicher Prüfprozesse."
+      },
+      "fixtures": {
+        "title": "Entwicklung von Prüfadaptern",
+        "description": "Für spezielle Projekte entwickeln und fertigen wir eigene Prüfadapter und automatisierte Prüfstationen. Damit passen wir den Prüfumfang an individuelle Kundenanforderungen an und gewährleisten die höchstmögliche Kontrolle jedes gefertigten Produkts."
+      }
+    },
+    "contact": {
+      "description": "Ein umfassendes Qualitätsmanagementsystem, moderne Prüftechnologien und ein erfahrenes Spezialistenteam ermöglichen Hokami die Lieferung elektronischer Baugruppen, die höchste Anforderungen an Qualität, Sicherheit und langfristige Betriebszuverlässigkeit erfüllen."
+    }
+  },
+  "Coating": {
+    "hero": {
+      "title": "Schutzlackierung",
+      "description": "Die Schutzlackierung elektronischer Baugruppen schützt Leiterplatten und Bauteile wirksam vor ungünstigen Umwelteinflüssen. Sie verlängert die Lebensdauer der Elektronik erheblich, erhöht die Betriebszuverlässigkeit und ermöglicht den Einsatz unter anspruchsvollen Betriebsbedingungen."
+    },
+    "first": {
+      "eyebrow": "Schutz",
+      "title": "Schutz für anspruchsvolle Anwendungen",
+      "p1": "Hokami bietet professionelle Leiterplattenlackierung für Anwendungen mit erhöhter Feuchtigkeit, Kondensation, Staub, Chemikalien, Salznebel, Vibrationen oder starken Temperaturschwankungen. Die Lackierung ist ein üblicher Bestandteil der Elektronikfertigung für Industrie, Energie, Medizintechnik, Bahn und weitere Bereiche mit hohen Anforderungen an die Langzeitzuverlässigkeit.",
+      "p2": "Wir verwenden bewährte Schutzlacke Peters SL1331N-LF-D/17 und Peters SL1301 ECO-FLZ-23 sowie weitere Materialien nach Kundenspezifikation. Die aufgetragene Schutzschicht wird unter UV-Licht geprüft, um Gleichmäßigkeit und Vollständigkeit des Lackauftrags schnell und präzise zu beurteilen.",
+      "imageAlt": "Automatische Anlage zum Auftrag von Schutzlack auf elektronische Baugruppen."
+    },
+    "second": {
+      "eyebrow": "Auftrag",
+      "title": "Möglichkeiten der Schutzlackierung",
+      "p1": "Je nach Produkt und Kundenanforderungen bieten wir mehrere Verfahren zum Auftrag von Schutzlack an:",
+      "imageAlt": "Detailaufnahme einer mit elektronischen Bauteilen bestückten Leiterplatte.",
+      "items": {
+        "selective": "Selektive Lackierung ausgewählter Leiterplattenbereiche",
+        "full": "Lackierung der gesamten Leiterplatte",
+        "automatic": "Automatische Selektivlackierung",
+        "manual": "Manuelle Lackierung",
+        "dip": "Tauchlackierung",
+        "spray": "Sprühlackierung"
+      },
+      "conclusion": "Unser breites Technologiespektrum ermöglicht das optimale Auftragsverfahren für jedes Projekt und verbindet maximalen Schutz der Baugruppen mit hoher Fertigungseffizienz."
+    },
+    "equipment": {
+      "title": "Technische Ausstattung",
+      "description": "Die Lackierung erfolgt auf modernen automatischen Anlagen von Nordson ASYMTEK. Sie gewährleisten einen präzisen, wiederholbaren und vollständig kontrollierten Schutzlackauftrag.",
+      "lines": {
+        "title": "Automatische Lackieranlagen",
+        "item": "{model} mit geschlossenem beheiztem Kreislauf, automatischer Laser-Höhenmessung, Korrektur der Auftragsbreite und kameragestützter Prozesskontrolle.",
+        "description": "Die Technologie ermöglicht die präzise Lackierung sowohl SMT- als auch THT-bestückter Baugruppen."
+      },
+      "drying": {
+        "title": "Trocknung",
+        "item": "Inline-Aushärteofen zur kontrollierten Aushärtung von Schutzlacken."
+      },
+      "quality": {
+        "title": "Qualitätskontrolle",
+        "description": "Jede lackierte Baugruppe wird unter UV-Licht auf die Qualität der aufgetragenen Schicht geprüft. Wir kontrollieren die Abdeckung der vorgesehenen Flächen, die Gleichmäßigkeit der Schicht und mögliche Fehler. Der kontrollierte Auftrag und die Aushärtung gewährleisten hohe Wiederholgenauigkeit und langfristigen Schutz elektronischer Produkte."
+      }
+    },
+    "contact": {
+      "description": "Mit modernen Technologien, automatisierten Fertigungsprozessen und langjähriger Erfahrung bieten wir zuverlässigen Schutz für elektronische Baugruppen. Dadurch erhöhen wir ihre Widerstandsfähigkeit, Lebensdauer und Betriebszuverlässigkeit auch in anspruchsvollsten Anwendungen erheblich."
+    }
+  },
+  "MechanicalAssembly": {
+    "hero": {
+      "title": "Mechanische Montage",
+      "description": "Bei Hokami endet die Fertigung nicht mit der Leiterplattenbestückung. Unser Ziel sind vollständig fertiggestellte Produkte, die sofort eingesetzt, installiert oder vertrieben werden können. Mit umfangreichen Montage- und Komplettierungsleistungen stellen wir die Endmontage exakt nach technischen Unterlagen und individuellen Kundenvorgaben sicher."
+    },
+    "first": {
+      "eyebrow": "Montage",
+      "title": "Komplettierung zum fertigen Produkt",
+      "p1": "Die mechanische Montage ist ein wichtiger Bestandteil unserer umfassenden EMS-Leistungen. Wir montieren elektronische Baugruppen in Kunststoff- und Metallgehäuse und installieren mechanische Teile, Kabelbäume, Steckverbinder, Kühlkörper, Displays, Bedienelemente und weitere Komponenten. Jedes Produkt wird vor Verpackung und Versand gründlich auf korrekte Montage und Funktion geprüft.",
+      "p2": "Unsere Fertigungsprozesse ermöglichen die effiziente Herstellung von Prototypen, Klein- und Großserien. Durch eine flexible Fertigungsorganisation passen wir den Komplettierungsumfang an Kundenvorgaben an: von einfacher mechanischer Montage bis zur Lieferung des fertigen Produkts einschließlich Verpackung, Kennzeichnung und Logistik.",
+      "imageAlt": "Mitarbeiter bei der Komplettierung eines elektronischen Produkts am Montageplatz."
+    },
+    "second": {
+      "eyebrow": "Komplettservice",
+      "title": "Komplettlösung unter einem Dach",
+      "p1": "Durch die Kombination von SMT- und THT-Fertigung, Prüfung, Lackierung, mechanischer Montage und Logistik bieten wir komplette Fertigungslösungen aus einer Hand. Die Zusammenarbeit mit mehreren Lieferanten entfällt, Lieferzeiten verkürzen sich, die Projektsteuerung wird einfacher und Gesamtqualität sowie Fertigungseffizienz steigen.",
+      "imageAlt": "Mitarbeiterin bei der Endmontage einer elektronischen Baugruppe."
+    },
+    "included": {
+      "title": "Unsere Leistungen umfassen",
+      "harnesses": "Herstellung und Konfektionierung von Kabelbäumen",
+      "parts": "Mechanische Montage von Kunststoff- und Metallteilen",
+      "enclosures": "Einbau elektronischer Baugruppen in Kunststoff- und Metallgehäuse",
+      "completion": "Vollständige Montage des Endprodukts",
+      "components": "Montage von Displays, Steckverbindern, Kühlkörpern, Lüftern, Tastern und weiteren mechanischen Komponenten",
+      "labeling": "Kennzeichnung mit Kundenetiketten, Seriennummern, Barcodes und QR-Codes",
+      "packaging": "Individuelle Verpackung nach Kundenvorgaben",
+      "dispatch": "Vorbereitung der Produkte für den Versand",
+      "logistics": "Logistikleistungen und Lieferung an einen festgelegten Ort weltweit"
+    },
+    "contact": {
+      "description": "Unser Ziel ist die Lieferung eines Produkts, das nach Abschluss der Fertigung vollständig für den sofortigen Einsatz, die Installation oder den direkten Vertrieb an Endkunden bereitsteht."
+    }
+  },
+  "SmtStencils": {
+    "hero": {
+      "title": "SMT-Schablonen",
+      "description": "Eine hochwertige SMT-Schablone ist eine zentrale Voraussetzung für präzisen Lotpastenauftrag und hochwertige SMT-Bestückung. Hokami organisiert die Herstellung hochpräziser lasergeschnittener Stahlschablonen für die Prototypen- und Serienfertigung elektronischer Baugruppen."
+    },
+    "first": {
+      "eyebrow": "Fertigung",
+      "title": "Expresslieferung und Präzision",
+      "p1": "Langjährig bewährte Partner und effiziente Fertigungsprozesse ermöglichen die Herstellung und Expresslieferung von Schablonen. Bei dringenden Projekten können wir die Schablone bereits innerhalb von 24 Stunden nach Auftragseingang versenden.",
+      "p2": "Jede Schablone wird mit höchster Öffnungspräzision, hoher Maßstabilität und langer Lebensdauer gefertigt. Eine korrekt ausgelegte Schablone trägt wesentlich zu einem hochwertigen Lotpastenauftrag, weniger Fertigungsfehlern und einem stabilen SMT-Prozess bei.",
+      "imageAlt": "Anlage zur präzisen Herstellung lasergeschnittener SMT-Schablonen."
+    },
+    "second": {
+      "eyebrow": "Qualität",
+      "title": "Präzision, die entscheidet",
+      "p1": "Hochwertige SMT-Fertigung beginnt mit präzisem Lotpastenauftrag. Deshalb legen wir Wert auf die richtige Schablonenauslegung, präzise Laserbearbeitung und hohe Fertigungsgenauigkeit. So erreichen wir einen stabilen Druckprozess, hohe Wiederholgenauigkeit und weniger Fertigungsfehler bereits ab dem ersten Arbeitsschritt.",
+      "imageAlt": "Detailaufnahme der Öffnungen einer Stahlschablone für den Lotpastenauftrag."
+    },
+    "statistics": {
+      "label": "Fertigungsmöglichkeiten für SMT-Schablonen",
+      "hours": "Versand dringender Schablonen",
+      "hoursSuffix": " Stunden",
+      "size": "mm, Schablonenabmessungen",
+      "minimum": "Materialstärke (Minimum)",
+      "maximum": "Materialstärke bis"
+    },
+    "specifications": {
+      "title": "Standardfertigungsmöglichkeiten",
+      "size": {
+        "label": "Schablonenabmessungen",
+        "value": "{width, number} × {firstHeight, number} mm, {width, number} × {secondHeight, number} mm"
+      },
+      "thickness": {
+        "label": "Materialstärke",
+        "value": "{minimum, number, ::.00} mm (Minimum), {standardThicknesses}, bis {maximum, number, ::.00} mm",
+        "item": "{value, number, ::.00} mm"
+      },
+      "material": {
+        "label": "Material und Ausführung",
+        "line1": "Lasergeschnittene SMT-Schablonen aus Edelstahl",
+        "line2": "Hohe Maßgenauigkeit",
+        "line3": "Lange Lebensdauer",
+        "line4": "Für Prototypen- und Serienfertigung geeignet"
+      },
+      "services": {
+        "label": "Weitere Leistungen",
+        "line1": "Schablonenfertigung nach individuellen Kundenvorgaben",
+        "line2": "Sonderabmessungen und Materialstärken",
+        "line3": "Einkleben der Schablonen in Aluminiumrahmen",
+        "line4": "Expressfertigung und Lieferung nach Vereinbarung"
+      }
+    },
+    "contact": {
+      "description": "Zusammen mit unseren modernen SMT-Linien bilden hochwertige Schablonen eine wichtige Grundlage für die zuverlässige Fertigung elektronischer Baugruppen mit höchsten Qualitätsanforderungen."
     }
   }
 }
