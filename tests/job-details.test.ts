@@ -43,15 +43,15 @@ test("the mandatory English body rejects empty documents through shared validati
   );
 });
 
-test("details preserve the localized hero and independently fall back to the English body", async () => {
+test("details use localized content and independently fall back to the English body when missing", async () => {
   const record = await readJobDetailRecord("buyer");
   assert.ok(record);
   const czech = resolveJobDetail(record, "cs");
   assert.ok(czech);
   assert.equal(czech.title, "Nákupčí");
   assert.equal(czech.contentLocale, "cs");
-  assert.equal(czech.bodyLocale, "en");
-  assert.equal(czech.body, record.content);
+  assert.equal(czech.bodyLocale, "cs");
+  assert.equal(czech.body, record.translatedContent.cs);
   assert.ok(deserializeJobContent(czech.body).children.length);
   for (const text of ["", "  \n", "---", "## \n"]) {
     record.translatedContent.cs = serializeJobContent(Markdoc.parse(text));
