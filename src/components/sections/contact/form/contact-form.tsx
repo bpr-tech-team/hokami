@@ -2,9 +2,11 @@
 
 import { useState, type FormEvent } from "react";
 import { useHydrated } from "@/hooks/use-hydrated";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { TextFormField } from "@/components/forms/text-form-field";
-import { FormError } from "@/components/forms/form-error";
+import { FormSubmissionStatus } from "@/components/forms/form-submission-status";
+import { useFormSubmission } from "@/hooks/use-form-submission";
+import { recaptchaActions } from "@/lib/recaptcha/actions";
 import { Button } from "@/components/ui/button";
 import { FieldGroup, FieldLegend, FieldSet } from "@/components/ui/field";
 import { Text } from "@/components/typography/text";
@@ -21,11 +23,11 @@ import {
 
 export function ContactForm() {
   const t = useTranslations("ContactForm");
-  // Without JS, only the contact links are usable; never submit personal data
-  // through the browser's native POST while delivery is unconnected.
+  const status = useTranslations("FormSubmission");
+  const locale = useLocale();
+  const submission = useFormSubmission();
   const interactive = useHydrated();
   const [errors, setErrors] = useState<ContactFieldErrors>({});
-  const [unavailable, setUnavailable] = useState(false);
   const email = companyContacts[1];
 
   function validateField(
@@ -50,13 +52,13 @@ export function ContactForm() {
     }));
   }
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     const result = contactSchema.safeParse(
       Object.fromEntries(new FormData(form)),
     );
-    setUnavailable(false);
+    submission.clearStatus();
     if (!result.success) {
       const nextErrors = getContactFieldErrors(result.error);
       setErrors(nextErrors);
@@ -65,8 +67,19 @@ export function ContactForm() {
       return;
     }
     setErrors({});
-    // Delivery is intentionally unconnected. Keep all input and never claim success.
-    setUnavailable(true);
+    const outcome = await submission.submit({
+      endpoint: "/api/contact",
+      values: result.data,
+      locale,
+      action: recaptchaActions.contact,
+    });
+    if (outcome?.success) form.reset();
+    else if (outcome) {
+      const fields = outcome.error.fields as ContactFieldErrors;
+      setErrors(fields);
+      const first = contactFieldNames.find((name) => fields[name]);
+      if (first) form.querySelector<HTMLElement>(`#contact-${first}`)?.focus();
+    }
   }
 
   function field(name: ContactFieldName) {
@@ -82,14 +95,23 @@ export function ContactForm() {
   return (
     <form
       method="post"
+      action="/api/contact"
       noValidate
       aria-labelledby="contact-form-heading"
       onSubmit={submit}
       onBlur={validateField}
-      onChange={(event) => validateField(event, true)}
+      aria-busy={submission.sending}
+      onFocusCapture={submission.preload}
+      onChange={(event) => {
+        submission.clearStatus();
+        validateField(event, true);
+      }}
       className="flex min-w-0 flex-col gap-6 border border-border-subtle bg-surface-default p-5 tablet:p-8"
     >
-      <FieldSet disabled={!interactive} className="flex min-w-0 flex-col gap-6">
+      <FieldSet
+        disabled={!interactive || submission.sending}
+        className="flex min-w-0 flex-col gap-6"
+      >
         <FieldLegend className="sr-only mb-0">{t("title")}</FieldLegend>
         <TextFormField
           {...field("name")}
@@ -136,20 +158,19 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={!interactive}
+          loading={submission.sending}
+          loadingLabel={status("sending")}
           size="lg"
           className="h-auto min-h-14 w-full py-4 whitespace-normal"
         >
-          {t("submit")}
+          {submission.error ? status("retry") : t("submit")}
         </Button>
       </FieldSet>
-      {unavailable && (
-        <FormError title={t("failure.title")}>
-          {t.rich("failure.unavailable", {
-            address: email.label,
-            email: (chunks) => <a href={email.href}>{chunks}</a>,
-          })}
-        </FormError>
-      )}
+      <FormSubmissionStatus
+        error={submission.error?.reason}
+        success={submission.success}
+        email={email}
+      />
       <noscript>
         <Text variant="small" tone="secondary">
           {t.rich("noScript", {

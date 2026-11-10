@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { submissionMetadataSchema } from "@/lib/forms/validation";
 
 export const contactSchema = z.object({
   name: z.string().trim().min(1, "nameRequired").max(120, "tooLong"),
@@ -10,6 +11,10 @@ export const contactSchema = z.object({
     .pipe(z.email({ error: "emailInvalid" })),
   phone: z.string().trim().max(50, "tooLong"),
   message: z.string().trim().min(1, "messageRequired").max(5000, "tooLong"),
+});
+
+export const submitContactSchema = submissionMetadataSchema.extend({
+  values: contactSchema,
 });
 
 export type ContactValues = z.infer<typeof contactSchema>;

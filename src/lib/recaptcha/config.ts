@@ -1,13 +1,13 @@
 import { z } from "zod";
 
 const configSchema = z.object({
-  recaptchaSecret: z.string().min(1),
+  secret: z.string().min(1),
   minimumScore: z.coerce.number().min(0).max(1),
 });
 
-export function getRequesForQuoteConfig() {
+export function getRecaptchaConfig() {
   const result = configSchema.safeParse({
-    recaptchaSecret: process.env.RECAPTCHA_SECRET_KEY,
+    secret: process.env.RECAPTCHA_SECRET_KEY,
     minimumScore: process.env.RECAPTCHA_MIN_SCORE || "0.5",
   });
   if (!result.success) return null;

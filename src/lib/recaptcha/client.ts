@@ -1,10 +1,13 @@
 "use client";
 
-import { RECAPTCHA_ACTION } from "@/lib/reques-for-quote/validation";
+import type { RecaptchaAction } from "./actions";
 
 type Recaptcha = {
   ready: (callback: () => void) => void;
-  execute: (siteKey: string, options: { action: string }) => Promise<string>;
+  execute: (
+    siteKey: string,
+    options: { action: string },
+  ) => PromiseLike<string>;
 };
 
 declare global {
@@ -42,15 +45,18 @@ export function loadRecaptcha(siteKey: string): Promise<Recaptcha> {
   return loading;
 }
 
-export async function getRecaptchaToken(siteKey: string) {
+export async function getRecaptchaToken(
+  siteKey: string,
+  action: RecaptchaAction,
+) {
   const recaptcha = await loadRecaptcha(siteKey);
   return new Promise<string>((resolve, reject) => {
     const timeout = window.setTimeout(
       () => reject(new Error("reCAPTCHA timed out")),
       15000,
     );
-    recaptcha
-      .execute(siteKey, { action: RECAPTCHA_ACTION })
+    Promise.resolve()
+      .then(() => recaptcha.execute(siteKey, { action }))
       .then(resolve, reject)
       .finally(() => window.clearTimeout(timeout));
   });

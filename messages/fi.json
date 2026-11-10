@@ -165,7 +165,7 @@
   "Industries": {
     "eyebrow": "Toimialat",
     "title": "Kuusi maailmaa, yksi standardi",
-    "description": "Jokainen toimiala määrittelee virheet omalla tavallaan. Valitse omasi ja tutustu sitä koskeviin sertifiointeihin, dokumentaatioon ja prosesseihin.",
+    "description": "Valitse omasi ja tutustu sitä koskeviin sertifiointeihin, dokumentaatioon ja prosesseihin.",
     "imageAlt": "Elektroniikkaesimerkki: {industry}",
     "items": {
       "ind": {
@@ -388,12 +388,13 @@
     },
     "upload": {
       "label": "Liitä tiedostoja",
-      "hint": "Osaluettelo (BOM), Gerber-tiedostot ja ladontatiedot. Yhteensä enintään 50 Mt ja 10 tiedostoa.",
+      "hint": "Osaluettelo (BOM), Gerber-tiedostot ja ladontatiedot. Yhteensä enintään 4 Mt ja 10 tiedostoa.",
       "choose": "Valitse tiedostot",
       "selected": "Liitetyt tiedostot",
       "remove": "Poista tiedosto {name}",
       "uploaded": "Ladattu",
-      "uploading": "Ladataan {progress} %"
+      "uploading": "Ladataan {progress} %",
+      "ready": "Valittu"
     },
     "submit": "Lähetä tarjouspyyntö",
     "sending": "Lähetetään…",
@@ -405,7 +406,7 @@
       "emailInvalid": "Kirjoita kelvollinen sähköpostiosoite, esimerkiksi nimi@yritys.fi.",
       "tooLong": "Lyhennä tämän kentän tekstiä.",
       "invalidOption": "Valitse jokin annetuista vaihtoehdoista.",
-      "filesSize": "Tiedostojen yhteiskoko saa olla enintään 50 Mt.",
+      "filesSize": "Tiedostojen yhteiskoko saa olla enintään 4 Mt.",
       "filesCount": "Liitä enintään 10 tiedostoa.",
       "filesEmpty": "Tyhjää tiedostoa ei voi liittää. Valitse tiedosto, jossa on sisältöä.",
       "fileName": "Lyhennä tiedostonimeä ja poista vinoviivat."
@@ -525,10 +526,6 @@
       "emailInvalid": "Kirjoita kelvollinen sähköpostiosoite.",
       "messageRequired": "Kirjoita viestisi.",
       "tooLong": "Teksti on liian pitkä. Lyhennä sitä."
-    },
-    "failure": {
-      "title": "Viestiä ei voitu lähettää",
-      "unavailable": "Lomake ei ole tilapäisesti käytettävissä. Ota yhteyttä osoitteeseen <email>{address}</email>."
     }
   },
   "CompanyDetails": {
@@ -727,19 +724,16 @@
       "jobInvalid": "Valitse avoin tehtävä.",
       "fileFormat": "Valitse PDF- tai DOCX-tiedostoja.",
       "fileEmpty": "Tiedosto on tyhjä. Valitse toinen tiedosto.",
-      "filesTooLarge": "Tiedostojen yhteiskoko saa olla enintään 4,5 Mt."
+      "filesTooLarge": "Tiedostojen yhteiskoko saa olla enintään 4 Mt.",
+      "fileName": "Lyhennä tiedostonimeä ja poista vinoviivat."
     },
     "upload": {
       "label": "Liitä ansioluettelo",
-      "hint": "PDF tai DOCX. Yhteensä enintään 4,5 Mt.",
+      "hint": "PDF tai DOCX. Yhteensä enintään 4 Mt.",
       "choose": "Valitse tiedostot",
       "selected": "Valitut tiedostot",
       "ready": "Valittu",
       "remove": "Poista tiedosto {name}"
-    },
-    "failure": {
-      "title": "Hakemusta ei voitu lähettää",
-      "unavailable": "Lomake ei ole tilapäisesti käytettävissä. Ota yhteyttä osoitteeseen <email>{address}</email>."
     }
   },
   "Pcb": {
@@ -1102,6 +1096,20 @@
     },
     "contact": {
       "description": "Yhdessä nykyaikaisten SMT-linjojemme kanssa laadukkaat pastamaskit muodostavat perustan luotettavalle elektroniikkakokoonpanojen valmistukselle, joka täyttää korkeimmat laatuvaatimukset."
+    }
+  },
+  "FormSubmission": {
+    "sending": "Lähetetään…",
+    "retry": "Yritä uudelleen",
+    "success": {
+      "title": "Lähetetty",
+      "description": "Kiitos. Otamme sinuun yhteyttä."
+    },
+    "failure": {
+      "title": "Lomakkeen lähettäminen epäonnistui",
+      "send": "Tietosi ja tiedostosi on säilytetty. Yritä lähettää uudelleen.",
+      "captcha": "Roskapostitarkistus epäonnistui. Tarkista yhteys ja yritä uudelleen.",
+      "unavailable": "Lomake ei ole tilapäisesti käytettävissä. Ota yhteyttä osoitteeseen <email>{address}</email>."
     }
   }
 }

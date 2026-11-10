@@ -77,5 +77,17 @@ See [dependency patches](docs/dependency-patches.md) before upgrading Keystatic.
 
 ## Forms
 
-Contact, enquiry and job application forms validate input, but delivery is not
-connected yet.
+Enquiries, contact messages and job applications use server-side validation,
+reCAPTCHA v3 and the Mailtrap Transactional API. They send to `info@hokami.cz`
+by default, with the visitor's email in Reply-To. Job applications also check
+the vacancy's current publication status and visible languages.
+
+Configure the variables in [.env.example](.env.example), following the
+[Mailtrap setup guide](docs/mailtrap-setup.md). Unconfigured services return an
+unavailable message; errors preserve input and files. Success is shown only
+after Mailtrap accepts the message.
+
+All form attachments have a total limit of 4,000,000 bytes (4 MB). Enquiries
+accept up to 10 nonempty files; job applications accept optional PDF/DOCX files.
+The attachment hints show the total limits in all five languages and stay visible
+alongside file errors.

@@ -7,6 +7,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { FieldGroup, FieldLegend, FieldSet } from "@/components/ui/field";
 import { loadRecaptcha } from "@/lib/recaptcha/client";
+import { useHydrated } from "@/hooks/use-hydrated";
 import {
   getFieldErrors,
   industryOptions,
@@ -38,6 +39,7 @@ export function RequesForQuoteForm({
   const t = useTranslations("RequesForQuote");
   const industries = useTranslations("Industries.items");
   const locale = useLocale();
+  const interactive = useHydrated();
   const busy = useRef(false);
   const [errors, setErrors] = useState<RequesForQuoteFieldErrors>({});
   const [files, setFiles] = useState<File[]>([]);
@@ -136,6 +138,18 @@ export function RequesForQuoteForm({
       setFiles([]);
       setSuccess(true);
     } catch (error) {
+      if (error instanceof RequesForQuoteSubmitError) {
+        const fields = error.fields as RequesForQuoteFieldErrors;
+        setErrors(fields);
+        setFileError(error.fileError as RequesForQuoteErrorKey | undefined);
+        const first = requesForQuoteFieldNames.find((name) => fields[name]);
+        if (first)
+          element
+            .querySelector<HTMLElement>(`#reques-for-quote-${first}`)
+            ?.focus();
+        else if (error.fileError)
+          element.querySelector<HTMLElement>("[data-upload-button]")?.focus();
+      }
       setSubmitError(
         error instanceof RequesForQuoteSubmitError ? error.reason : "send",
       );
@@ -162,7 +176,7 @@ export function RequesForQuoteForm({
     >
       <FieldSet
         key={formVersion}
-        disabled={sending}
+        disabled={!interactive || sending}
         className="flex min-w-0 flex-col gap-6"
       >
         <FieldLegend className="sr-only mb-0">{t("title")}</FieldLegend>
@@ -243,7 +257,7 @@ export function RequesForQuoteForm({
           files={files}
           previewUploads={previewUploads}
           error={fileError}
-          disabled={sending}
+          disabled={!interactive || sending}
           onAdd={addFiles}
           onRemove={(index) => {
             setFiles((current) =>

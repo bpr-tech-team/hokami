@@ -97,7 +97,9 @@ export function RequesForQuoteFile({
             <span className="whitespace-nowrap">
               {uploading
                 ? t("uploading", { progress: current.percentage })
-                : t("uploaded")}
+                : current
+                  ? t("uploaded")
+                  : t("ready")}
             </span>
           </AttachmentDescription>
           <Progress

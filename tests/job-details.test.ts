@@ -231,14 +231,14 @@ test("application requires name, email, phone and an available job; message and 
   );
 });
 
-test("optional PDF and DOCX attachments use a total decimal 4.5 MB limit", () => {
+test("optional PDF and DOCX attachments use a total decimal 4 MB limit", () => {
   const pdf = { name: "CV.PDF", size: 2_000_000, type: "application/pdf" };
   const docx = {
     name: "cover.docx",
-    size: 2_500_000,
+    size: 2_000_000,
     type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
   };
-  assert.equal(JOB_FILES_MAX_BYTES, 4_500_000);
+  assert.equal(JOB_FILES_MAX_BYTES, 4_000_000);
   assert.equal(validateJobFiles([]), undefined);
   assert.equal(validateJobFiles([pdf, docx]), undefined);
   assert.equal(

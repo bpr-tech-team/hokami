@@ -165,7 +165,7 @@
   "Industries": {
     "eyebrow": "Branże",
     "title": "Sześć światów, jeden standard",
-    "description": "Każda branża inaczej definiuje wady. Wybierz swoją, aby poznać odpowiednie certyfikacje, dokumentację i procesy.",
+    "description": "Wybierz swoją, aby poznać odpowiednie certyfikacje, dokumentację i procesy.",
     "imageAlt": "Przykład elektroniki: {industry}",
     "items": {
       "ind": {
@@ -388,12 +388,13 @@
     },
     "upload": {
       "label": "Załącz pliki",
-      "hint": "Zestawienie materiałowe (BOM), pliki Gerber i dane montażowe. Łącznie maks. 50 MB i 10 plików.",
+      "hint": "Zestawienie materiałowe (BOM), pliki Gerber i dane montażowe. Łącznie maks. 4 MB i 10 plików.",
       "choose": "Wybierz pliki",
       "selected": "Załączone pliki",
       "remove": "Usuń plik {name}",
       "uploaded": "Przesłano",
-      "uploading": "Przesyłanie {progress}%"
+      "uploading": "Przesyłanie {progress}%",
+      "ready": "Wybrano"
     },
     "submit": "Wyślij zapytanie",
     "sending": "Wysyłanie…",
@@ -405,7 +406,7 @@
       "emailInvalid": "Podaj poprawny adres e-mail, np. imie@firma.pl.",
       "tooLong": "Skróć tekst w tym polu.",
       "invalidOption": "Wybierz jedną z dostępnych opcji.",
-      "filesSize": "Łączny rozmiar plików nie może przekraczać 50 MB.",
+      "filesSize": "Łączny rozmiar plików nie może przekraczać 4 MB.",
       "filesCount": "Załącz maksymalnie 10 plików.",
       "filesEmpty": "Nie można załączyć pustego pliku. Wybierz plik z zawartością.",
       "fileName": "Skróć nazwę pliku i usuń ukośniki."
@@ -525,10 +526,6 @@
       "emailInvalid": "Podaj prawidłowy adres e-mail.",
       "messageRequired": "Wpisz swoją wiadomość.",
       "tooLong": "Tekst jest zbyt długi. Skróć go."
-    },
-    "failure": {
-      "title": "Nie udało się wysłać wiadomości",
-      "unavailable": "Formularz jest chwilowo niedostępny. Skontaktuj się z nami pod adresem <email>{address}</email>."
     }
   },
   "CompanyDetails": {
@@ -727,19 +724,16 @@
       "jobInvalid": "Wybierz dostępne stanowisko.",
       "fileFormat": "Wybierz pliki PDF lub DOCX.",
       "fileEmpty": "Plik jest pusty. Wybierz inny plik.",
-      "filesTooLarge": "Łączny rozmiar plików nie może przekroczyć 4,5 MB."
+      "filesTooLarge": "Łączny rozmiar plików nie może przekroczyć 4 MB.",
+      "fileName": "Skróć nazwę pliku i usuń ukośniki."
     },
     "upload": {
       "label": "Dołącz CV",
-      "hint": "PDF lub DOCX. Łącznie maks. 4,5 MB.",
+      "hint": "PDF lub DOCX. Łącznie maks. 4 MB.",
       "choose": "Wybierz pliki",
       "selected": "Wybrane pliki",
       "ready": "Wybrano",
       "remove": "Usuń plik {name}"
-    },
-    "failure": {
-      "title": "Nie udało się wysłać zgłoszenia",
-      "unavailable": "Formularz jest chwilowo niedostępny. Skontaktuj się z nami pod adresem <email>{address}</email>."
     }
   },
   "Pcb": {
@@ -1102,6 +1096,20 @@
     },
     "contact": {
       "description": "W połączeniu z naszymi nowoczesnymi liniami SMT wysokiej jakości szablony stanowią istotną podstawę niezawodnej produkcji zespołów elektronicznych spełniających najwyższe wymagania jakościowe."
+    }
+  },
+  "FormSubmission": {
+    "sending": "Wysyłanie…",
+    "retry": "Spróbuj ponownie",
+    "success": {
+      "title": "Wysłano",
+      "description": "Dziękujemy. Skontaktujemy się z Tobą."
+    },
+    "failure": {
+      "title": "Nie udało się wysłać formularza",
+      "send": "Twoje dane i pliki zostały zachowane. Spróbuj wysłać ponownie.",
+      "captcha": "Weryfikacja antyspamowa nie powiodła się. Sprawdź połączenie i spróbuj ponownie.",
+      "unavailable": "Formularz jest chwilowo niedostępny. Skontaktuj się z nami pod adresem <email>{address}</email>."
     }
   }
 }

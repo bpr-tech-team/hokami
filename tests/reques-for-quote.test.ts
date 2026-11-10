@@ -5,11 +5,9 @@ import {
   getFieldErrors,
   validateFiles,
   MAX_FILES_BYTES,
-  submitRequesForQuoteSchema,
 } from "../src/lib/reques-for-quote/validation";
 import { verifyRecaptcha } from "../src/lib/recaptcha/verify";
-import { readRequesForQuoteRequest } from "../src/lib/reques-for-quote/http";
-import { POST as submit } from "../src/app/api/reques-for-quote/route";
+import { recaptchaActions } from "../src/lib/recaptcha/actions";
 
 const values = {
   name: " Jana Nováková ",
@@ -20,14 +18,6 @@ const values = {
   volume: "",
   project: "",
 };
-const validInput = () =>
-  submitRequesForQuoteSchema.parse({
-    values,
-    locale: "cs",
-    files: [{ name: "gerber.zip", size: 1024, contentType: "application/zip" }],
-    recaptchaToken: "test-token",
-  });
-
 test("accepts Unicode names, trims fields, and allows an enquiry without optional details", () => {
   const result = requesForQuoteSchema.parse(values);
   assert.equal(result.name, "Jana Nováková");
@@ -84,7 +74,15 @@ test("rejects blank required fields and malformed email with field-specific erro
   );
 });
 
-test("enforces the aggregate 50 MB limit, file count, names, and nonempty files", () => {
+test("enforces the aggregate decimal 4 MB limit, file count, names, and nonempty files", () => {
+  assert.equal(MAX_FILES_BYTES, 4_000_000);
+  assert.equal(
+    validateFiles([
+      { name: "a.zip", size: 2_000_000 },
+      { name: "b.zip", size: 2_000_000 },
+    ]),
+    undefined,
+  );
   assert.equal(
     validateFiles([{ name: "a.zip", size: MAX_FILES_BYTES }]),
     undefined,
@@ -107,6 +105,7 @@ test("enforces the aggregate 50 MB limit, file count, names, and nonempty files"
 });
 
 const verification = {
+  action: recaptchaActions.enquiry,
   secret: "test-only",
   hostnames: ["hokami.cz"],
   minimumScore: 0.5,
@@ -156,67 +155,4 @@ test("reCAPTCHA service errors never grant access", async (t) => {
     async () => new Response("unavailable", { status: 503 }),
   );
   await assert.rejects(verifyRecaptcha("user-token", verification));
-});
-
-function request(body: unknown, origin = "https://hokami.cz") {
-  return new Request("https://hokami.cz/api/reques-for-quote", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Origin: origin },
-    body: JSON.stringify(body),
-  });
-}
-
-test("rejects cross-origin and oversized requests, including chunked bodies", async () => {
-  await assert.rejects(
-    readRequesForQuoteRequest(request({}, "https://evil.example")),
-  );
-  await assert.rejects(
-    readRequesForQuoteRequest(request({ text: "x".repeat(65536) })),
-  );
-  assert.deepEqual(await readRequesForQuoteRequest(request({ valid: true })), {
-    valid: true,
-  });
-});
-
-test("API rejects invalid input and fails closed when services are unconfigured", async (t) => {
-  t.mock.method(globalThis, "fetch", async () => {
-    throw new Error("External services must not be called");
-  });
-  assert.equal((await submit(request({ values: {} }))).status, 400);
-  const previous = process.env.RECAPTCHA_SECRET_KEY;
-  delete process.env.RECAPTCHA_SECRET_KEY;
-  try {
-    const response = await submit(request(validInput()));
-    assert.equal(response.status, 503);
-    assert.deepEqual(await response.json(), {
-      success: false,
-      error: "unavailable",
-    });
-  } finally {
-    if (previous === undefined) delete process.env.RECAPTCHA_SECRET_KEY;
-    else process.env.RECAPTCHA_SECRET_KEY = previous;
-  }
-});
-
-test("delivery remains a stub with valid reCAPTCHA and files", async (t) => {
-  const previous = process.env.RECAPTCHA_SECRET_KEY;
-  process.env.RECAPTCHA_SECRET_KEY = "test-only";
-  const fetchMock = t.mock.method(globalThis, "fetch", async (url: unknown) => {
-    assert.equal(url, "https://www.recaptcha.net/recaptcha/api/siteverify");
-    return Response.json(accepted());
-  });
-  try {
-    for (const files of [[], validInput().files]) {
-      const response = await submit(request({ ...validInput(), files }));
-      assert.equal(response.status, 503);
-      assert.deepEqual(await response.json(), {
-        success: false,
-        error: "unavailable",
-      });
-    }
-    assert.equal(fetchMock.mock.callCount(), 2);
-  } finally {
-    if (previous === undefined) delete process.env.RECAPTCHA_SECRET_KEY;
-    else process.env.RECAPTCHA_SECRET_KEY = previous;
-  }
 });

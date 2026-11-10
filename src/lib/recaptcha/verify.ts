@@ -1,15 +1,16 @@
 import { z } from "zod";
-import { RECAPTCHA_ACTION } from "@/lib/reques-for-quote/validation";
+import type { RecaptchaAction } from "./actions";
 
 const responseSchema = z.object({
   success: z.literal(true),
   score: z.number().min(0).max(1),
-  action: z.literal(RECAPTCHA_ACTION),
+  action: z.string(),
   hostname: z.string(),
   challenge_ts: z.iso.datetime(),
 });
 
 type VerificationOptions = {
+  action: RecaptchaAction;
   secret: string;
   hostnames: string[];
   minimumScore: number;
@@ -35,6 +36,7 @@ export async function verifyRecaptcha(
   if (!result.success) return false;
   const age = Date.now() - Date.parse(result.data.challenge_ts);
   return (
+    result.data.action === options.action &&
     result.data.score >= options.minimumScore &&
     options.hostnames.includes(result.data.hostname) &&
     age >= -10000 &&

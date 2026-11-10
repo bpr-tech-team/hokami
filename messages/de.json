@@ -165,7 +165,7 @@
   "Industries": {
     "eyebrow": "Branchen",
     "title": "Sechs Welten, ein Standard",
-    "description": "Jede Branche definiert Fehler anders. Wählen Sie Ihre Branche und erfahren Sie, welche Zertifizierungen, Dokumentation und Prozesse dafür gelten.",
+    "description": "Wählen Sie Ihre Branche und erfahren Sie, welche Zertifizierungen, Dokumentation und Prozesse dafür gelten.",
     "imageAlt": "Elektronikbeispiel: {industry}",
     "items": {
       "ind": {
@@ -388,12 +388,13 @@
     },
     "upload": {
       "label": "Dateien anhängen",
-      "hint": "Stückliste (BOM), Gerber- und Bestückungsdaten. Insgesamt max. 50 MB und 10 Dateien.",
+      "hint": "Stückliste (BOM), Gerber- und Bestückungsdaten. Insgesamt max. 4 MB und 10 Dateien.",
       "choose": "Dateien wählen",
       "selected": "Angehängte Dateien",
       "remove": "Datei {name} entfernen",
       "uploaded": "Hochgeladen",
-      "uploading": "Hochladen {progress} %"
+      "uploading": "Hochladen {progress} %",
+      "ready": "Ausgewählt"
     },
     "submit": "Anfrage senden",
     "sending": "Wird gesendet…",
@@ -405,7 +406,7 @@
       "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein, z. B. name@firma.de.",
       "tooLong": "Bitte kürzen Sie den Text in diesem Feld.",
       "invalidOption": "Bitte wählen Sie eine der verfügbaren Optionen.",
-      "filesSize": "Die Gesamtgröße der Dateien darf 50 MB nicht überschreiten.",
+      "filesSize": "Die Gesamtgröße der Dateien darf 4 MB nicht überschreiten.",
       "filesCount": "Hängen Sie höchstens 10 Dateien an.",
       "filesEmpty": "Leere Dateien können nicht angehängt werden. Wählen Sie eine Datei mit Inhalt.",
       "fileName": "Kürzen Sie den Dateinamen und entfernen Sie Schrägstriche."
@@ -525,10 +526,6 @@
       "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
       "messageRequired": "Geben Sie Ihre Nachricht ein.",
       "tooLong": "Der Text ist zu lang. Bitte kürzen Sie ihn."
-    },
-    "failure": {
-      "title": "Die Nachricht konnte nicht gesendet werden",
-      "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie uns unter <email>{address}</email>."
     }
   },
   "CompanyDetails": {
@@ -727,19 +724,16 @@
       "jobInvalid": "Wählen Sie eine verfügbare Stelle.",
       "fileFormat": "Wählen Sie PDF- oder DOCX-Dateien.",
       "fileEmpty": "Die Datei ist leer. Wählen Sie eine andere Datei.",
-      "filesTooLarge": "Die Gesamtgröße der Dateien darf 4,5 MB nicht überschreiten."
+      "filesTooLarge": "Die Gesamtgröße der Dateien darf 4 MB nicht überschreiten.",
+      "fileName": "Kürzen Sie den Dateinamen und entfernen Sie Schrägstriche."
     },
     "upload": {
       "label": "Lebenslauf anhängen",
-      "hint": "PDF oder DOCX. Insgesamt max. 4,5 MB.",
+      "hint": "PDF oder DOCX. Insgesamt max. 4 MB.",
       "choose": "Dateien auswählen",
       "selected": "Ausgewählte Dateien",
       "ready": "Ausgewählt",
       "remove": "Datei {name} entfernen"
-    },
-    "failure": {
-      "title": "Die Bewerbung konnte nicht gesendet werden",
-      "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie uns unter <email>{address}</email>."
     }
   },
   "Pcb": {
@@ -1102,6 +1096,20 @@
     },
     "contact": {
       "description": "Zusammen mit unseren modernen SMT-Linien bilden hochwertige Schablonen eine wichtige Grundlage für die zuverlässige Fertigung elektronischer Baugruppen mit höchsten Qualitätsanforderungen."
+    }
+  },
+  "FormSubmission": {
+    "sending": "Wird gesendet…",
+    "retry": "Erneut versuchen",
+    "success": {
+      "title": "Gesendet",
+      "description": "Vielen Dank. Wir melden uns bei Ihnen."
+    },
+    "failure": {
+      "title": "Das Formular konnte nicht gesendet werden",
+      "send": "Ihre Angaben und Dateien wurden beibehalten. Bitte versuchen Sie es erneut.",
+      "captcha": "Die Spamprüfung ist fehlgeschlagen. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+      "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie uns unter <email>{address}</email>."
     }
   }
 }

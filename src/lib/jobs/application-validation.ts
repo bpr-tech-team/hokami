@@ -1,6 +1,11 @@
 import { z } from "zod";
+import {
+  MAX_ATTACHMENT_BYTES,
+  isValidAttachmentName,
+  submissionMetadataSchema,
+} from "@/lib/forms/validation";
 
-export const JOB_FILES_MAX_BYTES = 4_500_000;
+export const JOB_FILES_MAX_BYTES = MAX_ATTACHMENT_BYTES;
 export const jobApplicationFieldNames = [
   "name",
   "email",
@@ -22,7 +27,7 @@ export type JobApplicationErrors = Partial<
   Record<JobApplicationField, JobApplicationError>
 >;
 
-export function jobApplicationSchema(jobIds: readonly string[]) {
+export function jobApplicationSchema(jobIds?: readonly string[]) {
   return z.object({
     name: z.string().trim().min(1, "nameRequired").max(120, "tooLong"),
     email: z
@@ -41,11 +46,18 @@ export function jobApplicationSchema(jobIds: readonly string[]) {
           !value || (/^\+?[\d\s().-]+$/.test(value) && /\d/.test(value)),
         "phoneInvalid",
       ),
-    job: z.string().refine((value) => jobIds.includes(value), "jobInvalid"),
+    job: z
+      .string()
+      .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "jobInvalid")
+      .refine((value) => !jobIds || jobIds.includes(value), "jobInvalid"),
     start: z.string().trim().max(120, "tooLong"),
     message: z.string().trim().max(5000, "tooLong"),
   });
 }
+
+export const submitJobApplicationSchema = submissionMetadataSchema.extend({
+  values: jobApplicationSchema(),
+});
 
 export function getJobApplicationErrors(
   error: Pick<z.ZodError, "issues">,
@@ -59,7 +71,8 @@ export function getJobApplicationErrors(
   return errors;
 }
 
-export type JobFileError = "fileFormat" | "fileEmpty" | "filesTooLarge";
+export type JobFileError =
+  "fileFormat" | "fileEmpty" | "filesTooLarge" | "fileName";
 type FileMetadata = Pick<File, "name" | "size" | "type">;
 const mimeTypes: Record<string, string> = {
   pdf: "application/pdf",
@@ -70,6 +83,7 @@ export function validateJobFiles(
   files: readonly FileMetadata[],
 ): JobFileError | undefined {
   for (const file of files) {
+    if (!isValidAttachmentName(file.name)) return "fileName";
     const extension = file.name.split(".").at(-1)?.toLowerCase() ?? "";
     const mime = file.type.toLowerCase();
     if (

@@ -165,7 +165,7 @@
   "Industries": {
     "eyebrow": "Obory",
     "title": "Šest světů, jeden standard",
-    "description": "Každý obor má vlastní definici vady. Vyberte ten svůj a uvidíte certifikace, dokumentaci i proces, které k němu patří.",
+    "description": "Vyberte ten svůj a uvidíte certifikace, dokumentaci i proces, které k němu patří.",
     "imageAlt": "Ukázka elektroniky: {industry}",
     "items": {
       "ind": {
@@ -388,12 +388,13 @@
     },
     "upload": {
       "label": "Přiložit soubory",
-      "hint": "Kusovník (BOM), Gerber data a osazovací data. Celkem max. 50 MB a 10 souborů.",
+      "hint": "Kusovník (BOM), Gerber data a osazovací data. Celkem max. 4 MB a 10 souborů.",
       "choose": "Vybrat soubory",
       "selected": "Přiložené soubory",
       "remove": "Odebrat soubor {name}",
       "uploaded": "Nahráno",
-      "uploading": "Nahrávám {progress} %"
+      "uploading": "Nahrávám {progress} %",
+      "ready": "Vybráno"
     },
     "submit": "Odeslat poptávku",
     "sending": "Odesílám…",
@@ -405,7 +406,7 @@
       "emailInvalid": "Zadejte platnou e-mailovou adresu, například jmeno@firma.cz.",
       "tooLong": "Zkraťte prosím text v tomto poli.",
       "invalidOption": "Vyberte prosím jednu z nabízených možností.",
-      "filesSize": "Celková velikost souborů nesmí překročit 50 MB.",
+      "filesSize": "Celková velikost souborů nesmí překročit 4 MB.",
       "filesCount": "Přiložte nejvýše 10 souborů.",
       "filesEmpty": "Prázdný soubor nelze přiložit. Vyberte soubor s obsahem.",
       "fileName": "Zkraťte název souboru a odstraňte lomítka."
@@ -525,10 +526,6 @@
       "emailInvalid": "Zadejte platnou e-mailovou adresu.",
       "messageRequired": "Napište nám svou zprávu.",
       "tooLong": "Text je příliš dlouhý. Zkraťte jej prosím."
-    },
-    "failure": {
-      "title": "Zprávu se nepodařilo odeslat",
-      "unavailable": "Formulář je dočasně nedostupný. Kontaktujte nás na <email>{address}</email>."
     }
   },
   "CompanyDetails": {
@@ -727,19 +724,16 @@
       "jobInvalid": "Vyberte dostupnou pozici.",
       "fileFormat": "Vyberte soubory PDF nebo DOCX.",
       "fileEmpty": "Soubor je prázdný. Vyberte jiný soubor.",
-      "filesTooLarge": "Celková velikost souborů nesmí překročit 4,5 MB."
+      "filesTooLarge": "Celková velikost souborů nesmí překročit 4 MB.",
+      "fileName": "Zkraťte název souboru a odstraňte lomítka."
     },
     "upload": {
       "label": "Přiložit životopis",
-      "hint": "PDF nebo DOCX. Celkem max. 4,5 MB.",
+      "hint": "PDF nebo DOCX. Celkem max. 4 MB.",
       "choose": "Vybrat soubory",
       "selected": "Vybrané soubory",
       "ready": "Vybráno",
       "remove": "Odebrat soubor {name}"
-    },
-    "failure": {
-      "title": "Přihlášku zatím nelze odeslat",
-      "unavailable": "Formulář je dočasně nedostupný. Kontaktujte nás na <email>{address}</email>."
     }
   },
   "Pcb": {
@@ -1102,6 +1096,20 @@
     },
     "contact": {
       "description": "Ve spojení s našimi moderními SMT linkami představují kvalitní šablony důležitý základ pro spolehlivou výrobu elektronických sestav s nejvyššími nároky na kvalitu."
+    }
+  },
+  "FormSubmission": {
+    "sending": "Odesílám…",
+    "retry": "Zkusit znovu",
+    "success": {
+      "title": "Odesláno",
+      "description": "Děkujeme. Ozveme se vám."
+    },
+    "failure": {
+      "title": "Formulář se nepodařilo odeslat",
+      "send": "Údaje i soubory zůstaly zachovány. Zkuste odeslání znovu.",
+      "captcha": "Ověření proti spamu se nezdařilo. Zkontrolujte připojení a zkuste to znovu.",
+      "unavailable": "Formulář je dočasně nedostupný. Kontaktujte nás na <email>{address}</email>."
     }
   }
 }

@@ -1,5 +1,10 @@
 import { z } from "zod";
 import { industries } from "@/content/industries";
+import {
+  MAX_ATTACHMENT_BYTES,
+  isValidAttachmentName,
+  submissionMetadataSchema,
+} from "@/lib/forms/validation";
 
 export const industryOptions = [
   ...industries.map(({ id }) => id),
@@ -50,20 +55,10 @@ export const requesForQuoteFieldNames = Object.keys(
   requesForQuoteSchema.shape,
 ) as RequesForQuoteFieldName[];
 export const MAX_FILES = 10;
-export const MAX_FILES_BYTES = 50 * 1024 * 1024;
-export const RECAPTCHA_ACTION = "reques_for_quote_submit";
+export const MAX_FILES_BYTES = MAX_ATTACHMENT_BYTES;
 
-export const fileDescriptorSchema = z.object({
-  name: z.string().min(1).max(255),
-  size: z.number().int().positive().max(MAX_FILES_BYTES),
-  contentType: z.string().min(1).max(255),
-});
-
-export const submitRequesForQuoteSchema = z.object({
+export const submitRequesForQuoteSchema = submissionMetadataSchema.extend({
   values: requesForQuoteSchema,
-  locale: z.enum(["cs", "en", "de", "fi", "pl"]),
-  files: z.array(fileDescriptorSchema).max(MAX_FILES),
-  recaptchaToken: z.string().min(1).max(8192),
 });
 
 export function getFieldErrors(
@@ -83,14 +78,7 @@ export function validateFiles(
 ): RequesForQuoteErrorKey | undefined {
   if (files.length > MAX_FILES) return "filesCount";
   if (files.some((file) => file.size <= 0)) return "filesEmpty";
-  if (
-    files.some(
-      (file) =>
-        !file.name.trim() ||
-        file.name.length > 255 ||
-        /[\r\n/\\]/.test(file.name),
-    )
-  )
+  if (files.some((file) => !isValidAttachmentName(file.name)))
     return "fileName";
   if (files.reduce((total, file) => total + file.size, 0) > MAX_FILES_BYTES)
     return "filesSize";

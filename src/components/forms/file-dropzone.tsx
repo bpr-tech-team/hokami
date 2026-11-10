@@ -77,17 +77,19 @@ export function FileDropzone({
         >
           {label}
         </MonoText>
-        <Text
-          id={`${id}-hint`}
-          variant="small"
-          className={cn(
-            "text-text-tertiary",
-            error && "text-feedback-error-text",
-          )}
-          role={error ? "alert" : undefined}
-        >
-          {error ?? hint}
+        <Text id={`${id}-hint`} variant="small" className="text-text-tertiary">
+          {hint}
         </Text>
+        {error && (
+          <Text
+            id={`${id}-error`}
+            variant="small"
+            className="text-feedback-error-text"
+            role="alert"
+          >
+            {error}
+          </Text>
+        )}
       </div>
       <input
         ref={input}
@@ -97,7 +99,7 @@ export function FileDropzone({
         accept={accept}
         disabled={disabled}
         aria-labelledby={`${id}-label`}
-        aria-describedby={`${id}-hint`}
+        aria-describedby={error ? `${id}-hint ${id}-error` : `${id}-hint`}
         aria-invalid={Boolean(error)}
         className="sr-only"
         tabIndex={-1}
@@ -114,7 +116,7 @@ export function FileDropzone({
         showTraceDots={false}
         disabled={disabled}
         className="h-auto min-h-12 max-w-full py-3 whitespace-normal"
-        aria-describedby={`${id}-hint`}
+        aria-describedby={error ? `${id}-hint ${id}-error` : `${id}-hint`}
         onClick={() => input.current?.click()}
         icon={
           <Image

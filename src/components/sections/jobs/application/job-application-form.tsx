@@ -2,11 +2,13 @@
 
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
-import { useFormatter, useTranslations } from "next-intl";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { useHydrated } from "@/hooks/use-hydrated";
 import { TextFormField, FormField } from "@/components/forms/text-form-field";
 import { FileDropzone } from "@/components/forms/file-dropzone";
-import { FormError } from "@/components/forms/form-error";
+import { FormSubmissionStatus } from "@/components/forms/form-submission-status";
+import { useFormSubmission } from "@/hooks/use-form-submission";
+import { recaptchaActions } from "@/lib/recaptcha/actions";
 import { Button } from "@/components/ui/button";
 import {
   NativeSelect,
@@ -49,12 +51,14 @@ export function JobApplicationForm({
   jobs: JobOption[];
 }) {
   const t = useTranslations("JobApplication");
+  const status = useTranslations("FormSubmission");
+  const locale = useLocale();
+  const submission = useFormSubmission();
   const formatter = useFormatter();
   const interactive = useHydrated();
   const [errors, setErrors] = useState<JobApplicationErrors>({});
   const [files, setFiles] = useState<File[]>([]);
   const [fileError, setFileError] = useState<JobFileError>();
-  const [unavailable, setUnavailable] = useState(false);
   const schema = jobApplicationSchema(jobs.map(({ id }) => id));
 
   function validateField(
@@ -93,13 +97,13 @@ export function JobApplicationForm({
       }
     const error = validateJobFiles(next);
     setFileError(error);
-    setUnavailable(false);
+    submission.clearStatus();
     if (!error) setFiles(next);
   }
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setUnavailable(false);
+    submission.clearStatus();
     const form = event.currentTarget;
     const result = schema.safeParse(Object.fromEntries(new FormData(form)));
     const nextErrors = result.success
@@ -119,7 +123,29 @@ export function JobApplicationForm({
         ?.focus();
       return;
     }
-    setUnavailable(true);
+    if (!result.success) return;
+    const outcome = await submission.submit({
+      endpoint: "/api/job-application",
+      values: result.data,
+      files,
+      locale,
+      action: recaptchaActions.jobApplication,
+    });
+    if (outcome?.success) {
+      form.reset();
+      setFiles([]);
+    } else if (outcome) {
+      const fields = outcome.error.fields as JobApplicationErrors;
+      setErrors(fields);
+      setFileError(outcome.error.fileError as JobFileError | undefined);
+      const first = jobApplicationFieldNames.find((name) => fields[name]);
+      if (first)
+        form.querySelector<HTMLElement>(`#job-application-${first}`)?.focus();
+      else if (outcome.error.fileError)
+        form
+          .querySelector<HTMLElement>("#job-application-files-trigger")
+          ?.focus();
+    }
   }
 
   function field(name: JobApplicationField) {
@@ -135,17 +161,23 @@ export function JobApplicationForm({
   return (
     <form
       method="post"
+      action="/api/job-application"
       noValidate
       aria-labelledby="job-application-heading"
       onSubmit={submit}
+      aria-busy={submission.sending}
+      onFocusCapture={submission.preload}
       onBlur={validateField}
       onChange={(event) => {
-        setUnavailable(false);
+        submission.clearStatus();
         validateField(event, true);
       }}
       className="flex min-w-0 flex-col gap-6 border border-border-subtle bg-surface-default p-5 tablet:p-8"
     >
-      <FieldSet disabled={!interactive} className="flex min-w-0 flex-col gap-6">
+      <FieldSet
+        disabled={!interactive || submission.sending}
+        className="flex min-w-0 flex-col gap-6"
+      >
         <FieldLegend className="sr-only mb-0">{t("title")}</FieldLegend>
         <TextFormField
           {...field("name")}
@@ -207,7 +239,7 @@ export function JobApplicationForm({
           choose={t("upload.choose")}
           accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           error={fileError ? t(`errors.${fileError}`) : undefined}
-          disabled={!interactive}
+          disabled={!interactive || submission.sending}
           onAdd={addFiles}
         />
         {files.length > 0 && (
@@ -246,7 +278,7 @@ export function JobApplicationForm({
                           current.filter((_, i) => i !== index),
                         );
                         setFileError(undefined);
-                        setUnavailable(false);
+                        submission.clearStatus();
                       }}
                     >
                       <CloseIcon />
@@ -275,20 +307,19 @@ export function JobApplicationForm({
         <Button
           type="submit"
           size="lg"
-          disabled={!interactive}
+          disabled={!interactive || submission.sending}
           className="h-auto min-h-14 w-full py-4 whitespace-normal"
+          loading={submission.sending}
+          loadingLabel={status("sending")}
         >
-          {t("submit")}
+          {submission.error ? status("retry") : t("submit")}
         </Button>
       </FieldSet>
-      {unavailable && (
-        <FormError title={t("failure.title")}>
-          {t.rich("failure.unavailable", {
-            address: recruitmentContact.label,
-            email: (chunks) => <a href={recruitmentContact.href}>{chunks}</a>,
-          })}
-        </FormError>
-      )}
+      <FormSubmissionStatus
+        error={submission.error?.reason}
+        success={submission.success}
+        email={recruitmentContact}
+      />
       <noscript>
         <Text variant="small" tone="secondary">
           {t.rich("noScript", {
