@@ -438,49 +438,49 @@
         "name": "SMT",
         "description": "SMT-ladonta on yksi Hokamin keskeisistä teknologioista ja nykyaikaisen elektroniikkavalmistuksen perusta.",
         "link": "Tutustu SMT-ladontaan",
-        "imageAlt": "SMT-ladontalaitteisto HOKAMIn tuotannossa."
+        "imageAlt": "Elektroniikkakomponenttien nauhasyöttimet SMT-ladontalaitteessa."
       },
       "tht": {
         "name": "THT",
         "description": "THT-juottaminen on olennainen osa elektroniikkakokoonpanojen valmistusta erityisesti silloin, kun liitosten mekaaniselle lujuudelle, luotettavuudelle ja tuotteiden pitkälle käyttöiälle asetetaan korkeita vaatimuksia.",
         "link": "Tutustu THT-ladontaan",
-        "imageAlt": "THT-komponenttien juottaminen HOKAMIlla."
+        "imageAlt": "Komponentin automaattinen juottaminen piirilevylle."
       },
       "cleaning": {
         "name": "Puhdistus",
         "description": "Piirilevyjen puhtaus on tärkeä lopputuotteen laatuun vaikuttava tekijä.",
         "link": "Tutustu piirilevyjen puhdistukseen",
-        "imageAlt": "Piirilevyjen puhdistus HOKAMIlla."
+        "imageAlt": "Lähikuva puhtaasta kalustetusta piirilevystä."
       },
       "testing": {
         "name": "Testaus ja laatu",
         "description": "Hokamilla laatu on olennainen osa jokaista valmistusprosessia.",
         "link": "Tutustu testaukseen ja laatuun",
-        "imageAlt": "Automaattisen optisen tarkastuksen laitteisto HOKAMIlla."
+        "imageAlt": "Piirilevyn testaaminen mittapäillä mikroskoopin vieressä."
       },
       "coating": {
         "name": "Suojalakkaus",
         "description": "Elektroniikkakokoonpanojen suojalakkaus suojaa piirilevyjä ja elektronisia komponentteja tehokkaasti ympäristön vaikutuksilta.",
         "link": "Tutustu suojalakkaukseen",
-        "imageAlt": "Elektroniikkakokoonpanojen suojalakkaus HOKAMIlla."
+        "imageAlt": "Lähikuva piirilevyn komponenteista ja juotosliitoksista."
       },
       "assembly": {
         "name": "Mekaaninen kokoonpano",
         "description": "Hokamilla valmistus ei pääty piirilevyn komponenttien ladontaan.",
         "link": "Tutustu mekaaniseen kokoonpanoon",
-        "imageAlt": "Elektroniikkatuotteiden loppukokoonpano HOKAMIlla."
+        "imageAlt": "Piirilevyn kiinnittäminen ruuvilla laitteen koteloon."
       },
       "pcb": {
         "name": "Piirilevyt",
         "description": "Laadukas piirilevy on jokaisen luotettavan elektroniikkatuotteen perusta.",
         "link": "Tutustu piirilevyihin",
-        "imageAlt": "Piirilevyjä HOKAMIlla."
+        "imageAlt": "Lähikuva piirilevystä ja sen integroiduista piireistä."
       },
       "stencils": {
         "name": "SMT-stensiilit",
         "description": "Laadukas SMT-stensiili on yksi keskeisistä edellytyksistä juotospastan tarkalle levitykselle ja laadukkaalle SMT-ladonnalle.",
         "link": "Tutustu SMT-stensiileihin",
-        "imageAlt": "Juotospastastensiilien valmistus HOKAMIlla."
+        "imageAlt": "Pastan automaattinen levitys piirilevypaneelille."
       }
     }
   },

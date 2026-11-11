@@ -20,7 +20,7 @@ export function HeaderLogo({
       aria-label={label}
       onClick={onNavigate}
     >
-      <HokamiWordmark className="h-[18.304px] w-[103.615px]" />
+      <HokamiWordmark />
     </Link>
   );
 }

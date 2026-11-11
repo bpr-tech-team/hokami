@@ -1,18 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { MonoText } from "@/components/typography/mono-text";
-import type { ImageAccordionEntry, ImageCrop } from "./types";
-
-function cropStyle(crop: ImageCrop) {
-  // Scale the complete Figma crop uniformly to cover either responsive frame.
-  const scale = `max(100cqw / ${crop.frameWidth}, 100cqh / ${crop.frameHeight})`;
-  return {
-    left: `calc(${crop.x} * ${scale})`,
-    top: `calc(${crop.y} * ${scale})`,
-    width: `calc(${crop.width} * ${scale})`,
-    height: `calc(${crop.height} * ${scale})`,
-  };
-}
+import type { ImageAccordionEntry } from "./types";
 
 export function ImageAccordionImage({
   item,
@@ -21,7 +10,7 @@ export function ImageAccordionImage({
   item: ImageAccordionEntry;
   showCode?: boolean;
 }) {
-  const crop = showCode ? item.imageCrop?.desktop : item.imageCrop?.compact;
+  const layout = showCode ? "desktop" : "compact";
   return (
     <div
       className={cn(
@@ -29,26 +18,20 @@ export function ImageAccordionImage({
         showCode ? "h-full" : "h-[200px] shrink-0 tablet:h-80 desktop:hidden",
       )}
     >
-      <div className="[container-type:size] absolute inset-0">
-        <div
-          className="absolute inset-0"
-          style={crop ? cropStyle(crop) : undefined}
-        >
-          <Image
-            src={item.image}
-            alt={item.imageAlt}
-            fill
-            sizes={
-              crop
-                ? "(min-width: 760px) 1800px, 1501px"
-                : showCode
-                  ? "(min-width: 1360px) 700px, 54vw"
-                  : "(min-width: 1080px) 1px, (min-width: 760px) calc(100vw - 120px), calc(100vw - 80px)"
-            }
-            className="object-cover"
-          />
-        </div>
-      </div>
+      <Image
+        src={item.image}
+        alt={item.imageAlt}
+        fill
+        quality={item.imageQuality}
+        sizes={
+          item.imageSizes?.[layout] ??
+          (showCode
+            ? "(min-width: 1360px) 700px, 54vw"
+            : "(min-width: 1080px) 1px, (min-width: 760px) calc(100vw - 120px), calc(100vw - 80px)")
+        }
+        className="object-cover"
+        style={{ objectPosition: item.imagePosition?.[layout] }}
+      />
       {showCode && (
         <MonoText
           as="span"

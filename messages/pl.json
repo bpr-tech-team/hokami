@@ -438,49 +438,49 @@
         "name": "SMT",
         "description": "Montaż SMT jest jedną z kluczowych technologii firmy Hokami i stanowi podstawę nowoczesnej produkcji elektroniki.",
         "link": "Poznaj montaż SMT",
-        "imageAlt": "Urządzenie do montażu SMT w HOKAMI."
+        "imageAlt": "Podajniki taśm z komponentami elektronicznymi w urządzeniu do montażu SMT."
       },
       "tht": {
         "name": "THT",
         "description": "Lutowanie THT jest nieodłączną częścią produkcji zespołów elektronicznych, zwłaszcza tam, gdzie wymagana jest wysoka wytrzymałość mechaniczna połączeń, niezawodność i długa żywotność produktów.",
         "link": "Poznaj montaż THT",
-        "imageAlt": "Lutowanie komponentów THT w HOKAMI."
+        "imageAlt": "Automatyczne lutowanie komponentu na płytce drukowanej."
       },
       "cleaning": {
         "name": "Czyszczenie",
         "description": "Czystość płytek drukowanych jest ważnym czynnikiem wpływającym na jakość produktu końcowego.",
         "link": "Poznaj czyszczenie płytek",
-        "imageAlt": "Czyszczenie płytek drukowanych w HOKAMI."
+        "imageAlt": "Zbliżenie czystej płytki drukowanej z zamontowanymi komponentami."
       },
       "testing": {
         "name": "Testowanie i jakość",
         "description": "W firmie Hokami jakość jest nieodłącznym elementem każdego procesu produkcyjnego.",
         "link": "Poznaj testowanie i jakość",
-        "imageAlt": "Urządzenie do automatycznej inspekcji optycznej w HOKAMI."
+        "imageAlt": "Testowanie płytki drukowanej sondami pomiarowymi obok mikroskopu."
       },
       "coating": {
         "name": "Lakierowanie ochronne",
         "description": "Lakierowanie zespołów elektronicznych skutecznie chroni płytki drukowane i komponenty elektroniczne przed wpływem środowiska.",
         "link": "Poznaj lakierowanie ochronne",
-        "imageAlt": "Lakierowanie ochronne zespołów elektronicznych w HOKAMI."
+        "imageAlt": "Zbliżenie komponentów i połączeń lutowanych na płytce drukowanej."
       },
       "assembly": {
         "name": "Montaż mechaniczny",
         "description": "W firmie Hokami produkcja nie kończy się na montażu komponentów na płytce drukowanej.",
         "link": "Poznaj montaż mechaniczny",
-        "imageAlt": "Końcowy montaż zespołów elektronicznych w HOKAMI."
+        "imageAlt": "Mocowanie płytki drukowanej śrubą wewnątrz obudowy urządzenia."
       },
       "pcb": {
         "name": "Płytki drukowane",
         "description": "Wysokiej jakości płytka drukowana stanowi podstawę każdego niezawodnego produktu elektronicznego.",
         "link": "Poznaj płytki drukowane",
-        "imageAlt": "Płytki drukowane w HOKAMI."
+        "imageAlt": "Zbliżenie płytki drukowanej z układami scalonymi."
       },
       "stencils": {
         "name": "Szablony SMT",
         "description": "Wysokiej jakości szablon SMT jest jednym z kluczowych warunków precyzyjnego nakładania pasty lutowniczej i uzyskania wysokiej jakości montażu SMT.",
         "link": "Poznaj szablony SMT",
-        "imageAlt": "Produkcja szablonów do nakładania pasty lutowniczej w HOKAMI."
+        "imageAlt": "Automatyczne nakładanie pasty na panel płytek drukowanych."
       }
     }
   },

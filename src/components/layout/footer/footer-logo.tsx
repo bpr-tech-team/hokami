@@ -12,13 +12,14 @@ export function FooterLogo({ label }: { label: string }) {
     <Link
       href="/"
       aria-label={label}
-      className="flex w-[165.785px] flex-col items-center gap-[9.6px]"
+      className="flex w-56 flex-col items-center gap-[9.6px]"
     >
       <Image
         src="/images/footer/wordmark.svg"
         alt="HOKAMI"
-        width={165.785}
-        height={29.2864}
+        width={751}
+        height={98}
+        className="h-auto w-full"
         unoptimized
       />
       <span className="flex h-[12.8px] w-full items-center gap-[9.6px]">

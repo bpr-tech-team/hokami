@@ -438,49 +438,49 @@
         "name": "SMT",
         "description": "Die SMT-Bestückung gehört zu den Schlüsseltechnologien von Hokami und bildet die Grundlage der modernen Elektronikfertigung.",
         "link": "SMT-Bestückung entdecken",
-        "imageAlt": "SMT-Bestückungsanlage bei HOKAMI."
+        "imageAlt": "Gurtförderer mit elektronischen Bauteilen in einer SMT-Bestückungsanlage."
       },
       "tht": {
         "name": "THT",
         "description": "Das THT-Löten ist ein fester Bestandteil der Fertigung elektronischer Baugruppen, insbesondere bei hohen Anforderungen an die mechanische Festigkeit der Verbindungen, Zuverlässigkeit und lange Produktlebensdauer.",
         "link": "THT-Bestückung entdecken",
-        "imageAlt": "Löten von THT-Bauteilen bei HOKAMI."
+        "imageAlt": "Automatisiertes Löten eines Bauteils auf einer Leiterplatte."
       },
       "cleaning": {
         "name": "Reinigung",
         "description": "Die Sauberkeit von Leiterplatten ist ein wichtiger Faktor für die Qualität des Endprodukts.",
         "link": "Leiterplattenreinigung entdecken",
-        "imageAlt": "Reinigung von Leiterplatten bei HOKAMI."
+        "imageAlt": "Nahaufnahme einer sauberen bestückten Leiterplatte."
       },
       "testing": {
         "name": "Prüfung und Qualität",
         "description": "Bei Hokami ist Qualität ein fester Bestandteil jedes Fertigungsprozesses.",
         "link": "Prüfung und Qualität entdecken",
-        "imageAlt": "Anlage zur automatischen optischen Inspektion bei HOKAMI."
+        "imageAlt": "Prüfung einer Leiterplatte mit Messsonden neben einem Mikroskop."
       },
       "coating": {
         "name": "Schutzlackierung",
         "description": "Die Schutzlackierung elektronischer Baugruppen schützt Leiterplatten und elektronische Bauteile wirksam vor Umwelteinflüssen.",
         "link": "Schutzlackierung entdecken",
-        "imageAlt": "Schutzlackierung elektronischer Baugruppen bei HOKAMI."
+        "imageAlt": "Nahaufnahme von Bauteilen und Lötstellen auf einer Leiterplatte."
       },
       "assembly": {
         "name": "Mechanische Montage",
         "description": "Bei Hokami endet die Fertigung nicht mit der Bestückung der Leiterplatte.",
         "link": "Mechanische Montage entdecken",
-        "imageAlt": "Endmontage elektronischer Baugruppen bei HOKAMI."
+        "imageAlt": "Befestigung einer Leiterplatte mit einer Schraube im Gerätegehäuse."
       },
       "pcb": {
         "name": "Leiterplatten",
         "description": "Eine hochwertige Leiterplatte ist die Grundlage jedes zuverlässigen elektronischen Produkts.",
         "link": "Leiterplatten entdecken",
-        "imageAlt": "Leiterplatten bei HOKAMI."
+        "imageAlt": "Nahaufnahme einer Leiterplatte mit integrierten Schaltkreisen."
       },
       "stencils": {
         "name": "SMT-Schablonen",
         "description": "Eine hochwertige SMT-Schablone ist eine wesentliche Voraussetzung für den präzisen Auftrag von Lötpaste und eine hohe Qualität der SMT-Bestückung.",
         "link": "SMT-Schablonen entdecken",
-        "imageAlt": "Fertigung von Lötpastenschablonen bei HOKAMI."
+        "imageAlt": "Automatischer Pastenauftrag auf einen Leiterplattennutzen."
       }
     }
   },

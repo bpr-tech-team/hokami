@@ -26,7 +26,7 @@ export function ErrorDocument({
               aria-label={`HOKAMI — ${errorMessages[locale].home}`}
               className="inline-flex min-h-11 items-center"
             >
-              <HokamiWordmark className="h-[18.304px] w-[103.615px]" />
+              <HokamiWordmark />
             </a>
           </Container>
         </header>

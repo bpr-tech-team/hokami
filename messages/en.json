@@ -438,49 +438,49 @@
         "name": "SMT",
         "description": "SMT assembly is one of Hokami’s key technologies and forms the foundation of modern electronics manufacturing.",
         "link": "Explore SMT assembly",
-        "imageAlt": "SMT assembly equipment at HOKAMI."
+        "imageAlt": "Tape feeders with electronic components in SMT assembly equipment."
       },
       "tht": {
         "name": "THT",
         "description": "THT soldering is an integral part of electronics assembly, especially where high mechanical joint strength, reliability and a long product service life are required.",
         "link": "Explore THT assembly",
-        "imageAlt": "THT component soldering at HOKAMI."
+        "imageAlt": "Automated soldering of a component on a printed circuit board."
       },
       "cleaning": {
         "name": "Cleaning",
         "description": "Printed circuit board cleanliness is an important factor in the quality of the finished product.",
         "link": "Explore PCB cleaning",
-        "imageAlt": "Printed circuit board cleaning at HOKAMI."
+        "imageAlt": "Close-up of a clean assembled printed circuit board."
       },
       "testing": {
         "name": "Testing and quality",
         "description": "At Hokami, quality is an integral part of every manufacturing process.",
         "link": "Explore testing and quality",
-        "imageAlt": "Automated optical inspection equipment at HOKAMI."
+        "imageAlt": "Testing a circuit board with measurement probes beside a microscope."
       },
       "coating": {
         "name": "Conformal coating",
         "description": "Conformal coating effectively protects printed circuit boards and electronic components against environmental influences.",
         "link": "Explore conformal coating",
-        "imageAlt": "Conformal coating of electronic assemblies at HOKAMI."
+        "imageAlt": "Close-up of components and solder joints on a printed circuit board."
       },
       "assembly": {
         "name": "Mechanical assembly",
         "description": "At Hokami, manufacturing goes beyond assembling the printed circuit board.",
         "link": "Explore mechanical assembly",
-        "imageAlt": "Final assembly of electronic products at HOKAMI."
+        "imageAlt": "Securing a printed circuit board inside a device enclosure with a screw."
       },
       "pcb": {
         "name": "Printed circuit boards",
         "description": "A high-quality printed circuit board is the foundation of every reliable electronic product.",
         "link": "Explore printed circuit boards",
-        "imageAlt": "Printed circuit boards at HOKAMI."
+        "imageAlt": "Close-up of a printed circuit board with integrated circuits."
       },
       "stencils": {
         "name": "SMT stencils",
         "description": "A high-quality SMT stencil is essential for precise solder paste application and high-quality SMT assembly.",
         "link": "Explore SMT stencils",
-        "imageAlt": "Production of solder paste stencils at HOKAMI."
+        "imageAlt": "Automated paste application on a printed circuit board panel."
       }
     }
   },

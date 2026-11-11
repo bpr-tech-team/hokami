@@ -19,6 +19,9 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    qualities: [75, 85],
+  },
   // Run the locale supplement consistently in browser and server bundles.
   transpilePackages: ["@keystatic/core"],
   // Keystatic uses the OAuth loopback host in development.

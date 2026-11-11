@@ -9,22 +9,27 @@ export async function ServicesOverview() {
     getLocale(),
     getTranslations("Services"),
   ]);
-  const items = services.map(({ id, code, slug, crop }) => ({
-    id,
-    code,
-    image: `/images/services/${slug}.png`,
-    imageAlt: t(`items.${id}.imageAlt`),
-    name: t(`items.${id}.name`),
-    description: t(`items.${id}.description`),
-    action: {
-      href: getPathname({ locale, href: `/services/${slug}` }),
-      label: t(`items.${id}.link`),
-    },
-    imageCrop: {
-      desktop: { ...crop, frameWidth: 700, frameHeight: 720 },
-      compact: { ...crop, frameWidth: 310, frameHeight: 200 },
-    },
-  }));
+  const items = services.map(
+    ({ id, code, slug, aspectRatio, imagePosition }) => ({
+      id,
+      code,
+      image: `/images/services/${slug}.webp`,
+      imagePosition,
+      imageQuality: 85,
+      imageAlt: t(`items.${id}.imageAlt`),
+      name: t(`items.${id}.name`),
+      description: t(`items.${id}.description`),
+      action: {
+        href: getPathname({ locale, href: `/services/${slug}` }),
+        label: t(`items.${id}.link`),
+      },
+      // Account for object-cover's source width in the tall desktop frame.
+      imageSizes: {
+        desktop: `${Math.ceil(720 * aspectRatio)}px`,
+        compact: `(min-width: 1080px) 1px, (min-width: 760px) max(calc(100vw - 120px), ${Math.ceil(320 * aspectRatio)}px), max(calc(100vw - 80px), ${Math.ceil(200 * aspectRatio)}px)`,
+      },
+    }),
+  );
 
   return (
     <Section
