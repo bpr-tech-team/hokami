@@ -5,6 +5,7 @@ import { resolve } from "node:path";
 import { keystaticUiLocale } from "./src/i18n/keystatic-ui";
 import createNextIntlPlugin from "next-intl/plugin";
 import { routing } from "./src/i18n/routing";
+import { createLegacyRedirects } from "./src/lib/legacy-redirects";
 
 const withNextIntl = createNextIntlPlugin();
 // Include both custom loader inputs in Turbopack's persistent cache key.
@@ -26,18 +27,21 @@ const nextConfig: NextConfig = {
     "/*": ["./src/content/jobs/**/*", "./public/images/jobs/**/*"],
   },
   redirects() {
-    return ["career", "careers"].flatMap((path) => [
-      {
-        source: `/:locale(${routing.locales.join("|")})/${path}`,
-        destination: "/:locale/jobs",
-        permanent: true,
-      },
-      {
-        source: `/${path}`,
-        destination: `/${routing.defaultLocale}/jobs`,
-        permanent: true,
-      },
-    ]);
+    return [
+      ...createLegacyRedirects(routing.locales, routing.defaultLocale),
+      ...["career", "careers"].flatMap((path) => [
+        {
+          source: `/:locale(${routing.locales.join("|")})/${path}`,
+          destination: "/:locale/jobs",
+          permanent: true,
+        },
+        {
+          source: `/${path}`,
+          destination: `/${routing.defaultLocale}/jobs`,
+          permanent: true,
+        },
+      ]),
+    ];
   },
   turbopack: {
     rules: {
