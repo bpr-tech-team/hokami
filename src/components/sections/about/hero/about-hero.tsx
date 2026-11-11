@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { HeroSection } from "@/components/sections/hero/hero-section";
-import { getPathname } from "@/i18n/navigation";
+import { getPublicFormHref } from "@/lib/forms/navigation";
 
 export async function AboutHero() {
   const [locale, t] = await Promise.all([
@@ -23,7 +23,7 @@ export async function AboutHero() {
       actions={[
         {
           label: t("contact"),
-          href: getPathname({ locale, href: "/#reques-for-quote" }),
+          href: getPublicFormHref(locale, "/#reques-for-quote"),
           size: "lg",
         },
         { label: t("history"), href: "#history", size: "lg", showIcon: false },

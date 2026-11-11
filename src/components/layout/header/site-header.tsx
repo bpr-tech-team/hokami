@@ -2,9 +2,13 @@ import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { SiteHeaderClient } from "./site-header-client";
 import { headerNavigation } from "./navigation";
+import { publicFormsEnabled } from "@/lib/forms/availability";
 
 export async function SiteHeader({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "Header" });
+  const [t, contact] = await Promise.all([
+    getTranslations({ locale, namespace: "Header" }),
+    getTranslations({ locale, namespace: "ContactHero" }),
+  ]);
 
   return (
     <SiteHeaderClient
@@ -16,8 +20,10 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
         openMenu: t("openMenu"),
         closeMenu: t("closeMenu"),
         language: t("language"),
-        request: t("request"),
-        requestShort: t("requestShort"),
+        request: publicFormsEnabled ? t("request") : contact("contact"),
+        requestShort: publicFormsEnabled
+          ? t("requestShort")
+          : t("items.contact"),
       }}
       items={headerNavigation.map((item) => ({
         ...item,

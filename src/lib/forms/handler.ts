@@ -8,6 +8,7 @@ import {
   type FormEmail,
 } from "@/lib/mailtrap/send";
 import { formResponse, readFormRequest } from "./http";
+import { publicFormsEnabled } from "./availability";
 
 type Submission = {
   locale: string;
@@ -26,6 +27,9 @@ export function createFormHandler<T extends Submission>(options: {
   message: (data: T) => FormEmail;
 }) {
   return async function POST(request: Request) {
+    if (!publicFormsEnabled)
+      return formResponse({ success: false, error: "unavailable" }, 503);
+
     let parsed: Awaited<ReturnType<typeof readFormRequest>>;
     try {
       parsed = await readFormRequest(request);
