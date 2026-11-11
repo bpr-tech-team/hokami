@@ -1,15 +1,11 @@
 import Image from "next/image";
-import { getLocale, getTranslations } from "next-intl/server";
-import { getPublicFormHref } from "@/lib/forms/navigation";
+import { getTranslations } from "next-intl/server";
 import { HeroSection } from "@/components/sections/hero/hero-section";
 import { ButtonLink } from "@/components/ui/button/button-link";
 import { company } from "@/content/company";
 
 export async function ContactHero() {
-  const [locale, t] = await Promise.all([
-    getLocale(),
-    getTranslations("ContactHero"),
-  ]);
+  const t = await getTranslations("ContactHero");
 
   return (
     <HeroSection
@@ -20,7 +16,7 @@ export async function ContactHero() {
       className="overflow-clip tablet:bg-surface-default"
     >
       <ButtonLink
-        href={getPublicFormHref(locale, "/contact#contact-form", "/contact")}
+        href="#contact-form"
         size="lg"
         className="min-h-14 w-[215px] max-w-full py-4 whitespace-normal desktop:w-auto"
         icon={

@@ -1,10 +1,9 @@
-import { getLocale, getTranslations } from "next-intl/server";
-import { getPublicFormHref } from "@/lib/forms/navigation";
+import { getTranslations } from "next-intl/server";
 import { HeroSection } from "@/components/sections/hero/hero-section";
 import { CompanyVideo } from "@/components/sections/video/company-video";
 
 export async function HomeHero() {
-  const [locale, t] = await Promise.all([getLocale(), getTranslations("Hero")]);
+  const t = await getTranslations("Hero");
 
   return (
     <HeroSection
@@ -17,10 +16,7 @@ export async function HomeHero() {
       })}
       description={t("description")}
       actions={[
-        {
-          label: t("contact"),
-          href: getPublicFormHref(locale, "/#reques-for-quote", "/"),
-        },
+        { label: t("contact"), href: "#reques-for-quote" },
         { label: t("production"), href: "#industries" },
       ]}
       media={<CompanyVideo />}

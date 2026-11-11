@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import Image from "next/image";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { useHydrated } from "@/hooks/use-hydrated";
+import { readFormValues } from "@/lib/forms/values";
 import { TextFormField, FormField } from "@/components/forms/text-form-field";
 import { FileDropzone } from "@/components/forms/file-dropzone";
 import { FormSubmissionStatus } from "@/components/forms/form-submission-status";
@@ -59,6 +60,7 @@ export function JobApplicationForm({
   const [errors, setErrors] = useState<JobApplicationErrors>({});
   const [files, setFiles] = useState<File[]>([]);
   const [fileError, setFileError] = useState<JobFileError>();
+  const [selectedJob, setSelectedJob] = useState(jobId);
   const schema = jobApplicationSchema(jobs.map(({ id }) => id));
 
   function validateField(
@@ -105,7 +107,9 @@ export function JobApplicationForm({
     event.preventDefault();
     submission.clearStatus();
     const form = event.currentTarget;
-    const result = schema.safeParse(Object.fromEntries(new FormData(form)));
+    const result = schema.safeParse(
+      readFormValues(new FormData(form), { job: selectedJob }),
+    );
     const nextErrors = result.success
       ? {}
       : getJobApplicationErrors(result.error);
@@ -165,6 +169,7 @@ export function JobApplicationForm({
       noValidate
       aria-labelledby="job-application-heading"
       onSubmit={submit}
+      onReset={() => setSelectedJob(jobId)}
       aria-busy={submission.sending}
       onFocusCapture={submission.preload}
       onBlur={validateField}
@@ -212,7 +217,9 @@ export function JobApplicationForm({
               id="job-application-job"
               name="job"
               required
-              defaultValue={jobId}
+              value={selectedJob}
+              onChange={(event) => setSelectedJob(event.currentTarget.value)}
+              autoComplete="off"
               aria-invalid={Boolean(errors.job)}
               aria-describedby={
                 errors.job ? "job-application-job-error" : undefined

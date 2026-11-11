@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { getPublicFormHref } from "@/lib/forms/navigation";
+import { getPathname } from "@/i18n/navigation";
 import { ContactCta } from "@/components/sections/contact-cta/contact-cta";
 
 export async function SmtContact() {
@@ -15,7 +15,7 @@ export async function SmtContact() {
       description={t("description")}
       action={{
         label: t("action"),
-        href: getPublicFormHref(locale, "/contact#contact-form"),
+        href: getPathname({ locale, href: "/contact#contact-form" }),
       }}
     />
   );

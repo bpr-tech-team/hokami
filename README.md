@@ -77,19 +77,6 @@ See [dependency patches](docs/dependency-patches.md) before upgrading Keystatic.
 
 ## Forms
 
-Public forms are temporarily paused. The single `publicFormsEnabled` flag in
-`src/lib/forms/availability.ts` controls all three form sections, their CTA
-destinations and labels, legacy form anchors, and API submissions. With the flag
-set to `false`, form CTAs open the current language's Contact page (or `#locations`
-on Contact), and all three submission APIs return JSON with HTTP 503 before
-reading the request body or calling external services. Direct email and phone
-links and Keystatic remain available.
-
-To restore forms, set the flag to `true`, run checks and tests, and rebuild and
-redeploy the whole application. This restores the original anchors and labels
-and disables temporary legacy-anchor redirects. Mailtrap and reCAPTCHA still
-need valid configuration for delivery.
-
 Enquiries, contact messages and job applications use server-side validation,
 reCAPTCHA v3 and the Mailtrap Transactional API. They send to `info@hokami.cz`
 by default, with the visitor's email in Reply-To. Job applications also check

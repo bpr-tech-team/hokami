@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { ContactCta } from "@/components/sections/contact-cta/contact-cta";
-import { getPublicFormHref } from "@/lib/forms/navigation";
+import { getPathname } from "@/i18n/navigation";
 
 export async function AboutContact() {
   const [locale, t] = await Promise.all([
@@ -16,7 +16,7 @@ export async function AboutContact() {
       description={t("description")}
       action={{
         label: t("contact"),
-        href: getPublicFormHref(locale, "/#reques-for-quote"),
+        href: getPathname({ locale, href: "/#reques-for-quote" }),
       }}
     />
   );

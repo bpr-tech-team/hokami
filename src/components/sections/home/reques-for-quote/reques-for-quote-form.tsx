@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { FieldGroup, FieldLegend, FieldSet } from "@/components/ui/field";
 import { loadRecaptcha } from "@/lib/recaptcha/client";
 import { useHydrated } from "@/hooks/use-hydrated";
+import { readFormValues } from "@/lib/forms/values";
 import {
   getFieldErrors,
   industryOptions,
@@ -48,6 +49,7 @@ export function RequesForQuoteForm({
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [formVersion, setFormVersion] = useState(0);
+  const [selections, setSelections] = useState({ industry: "", volume: "" });
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   function validateField(event: FocusEvent<HTMLFormElement>) {
@@ -67,6 +69,7 @@ export function RequesForQuoteForm({
       value = target.value;
     } else return;
     if (!requesForQuoteFieldNames.includes(name)) return;
+    if (name === "industry" || name === "volume") value = selections[name];
     const result = requesForQuoteSchema.shape[name].safeParse(value);
     setErrors((current) => ({
       ...current,
@@ -99,7 +102,9 @@ export function RequesForQuoteForm({
     if (busy.current) return;
     const element = event.currentTarget;
     const data = new FormData(element);
-    const result = requesForQuoteSchema.safeParse(Object.fromEntries(data));
+    const result = requesForQuoteSchema.safeParse(
+      readFormValues(data, selections),
+    );
     const nextErrors = result.success ? {} : getFieldErrors(result.error);
     const nextFileError = validateFiles(files);
     setErrors(nextErrors);
@@ -168,7 +173,10 @@ export function RequesForQuoteForm({
       aria-labelledby="reques-for-quote-heading"
       aria-busy={sending}
       onSubmit={submit}
-      onReset={() => setFormVersion((current) => current + 1)}
+      onReset={() => {
+        setSelections({ industry: "", volume: "" });
+        setFormVersion((current) => current + 1);
+      }}
       onBlur={validateField}
       onFocusCapture={() => {
         if (siteKey) void loadRecaptcha(siteKey).catch(() => {});
@@ -222,6 +230,13 @@ export function RequesForQuoteForm({
             label={t("fields.industry.label")}
             placeholder={t("fields.industry.placeholder")}
             type="select"
+            value={selections.industry || null}
+            onValueChange={(value) =>
+              setSelections((current) => ({
+                ...current,
+                industry: value ?? "",
+              }))
+            }
             disabled={sending}
             error={errors.industry}
             options={industryOptions.map((value) => ({
@@ -237,6 +252,10 @@ export function RequesForQuoteForm({
             label={t("fields.volume.label")}
             placeholder={t("fields.volume.placeholder")}
             type="select"
+            value={selections.volume || null}
+            onValueChange={(value) =>
+              setSelections((current) => ({ ...current, volume: value ?? "" }))
+            }
             disabled={sending}
             error={errors.volume}
             options={volumeOptions.map((value) => ({

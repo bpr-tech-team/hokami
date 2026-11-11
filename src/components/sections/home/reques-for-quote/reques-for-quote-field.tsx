@@ -20,12 +20,23 @@ type RequesForQuoteFieldProps = {
   placeholder?: string;
   required?: boolean;
   error?: RequesForQuoteErrorKey;
-  type?: "text" | "email" | "select" | "textarea";
   autoComplete?: string;
   maxLength?: number;
   disabled?: boolean;
-  options?: readonly { value: string; label: string }[];
-};
+} & (
+  | {
+      type: "select";
+      options: readonly { value: string; label: string }[];
+      value: string | null;
+      onValueChange: (value: string | null) => void;
+    }
+  | {
+      type?: "text" | "email" | "textarea";
+      options?: never;
+      value?: never;
+      onValueChange?: never;
+    }
+);
 
 export function RequesForQuoteField({
   name,
@@ -38,6 +49,8 @@ export function RequesForQuoteField({
   maxLength,
   disabled,
   options,
+  value,
+  onValueChange,
 }: RequesForQuoteFieldProps) {
   const t = useTranslations("RequesForQuote.errors");
   const id = `reques-for-quote-${name}`;
@@ -69,7 +82,9 @@ export function RequesForQuoteField({
         name={name}
         required={required}
         disabled={disabled}
-        defaultValue={null}
+        value={value}
+        onValueChange={onValueChange}
+        autoComplete="off"
         items={selectOptions}
       >
         <SelectTrigger

@@ -5,7 +5,7 @@ import {
   type ButtonLinkProps,
 } from "@/components/ui/button/button-link";
 import type { SiteLocation } from "@/hooks/use-site-location";
-import { getPublicFormHref } from "@/lib/forms/navigation";
+import { getHeaderAnchorHref } from "./header-links";
 
 type HeaderRequestLinkProps = Omit<ButtonLinkProps, "href"> & {
   locale: Locale;
@@ -23,9 +23,9 @@ export function HeaderRequestLink({
   return (
     <ButtonLink
       {...props}
-      href={getPublicFormHref(
-        locale,
+      href={getHeaderAnchorHref(
         "/contact#contact-form",
+        locale,
         location.pathname,
       )}
       className={cn(

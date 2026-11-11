@@ -8,7 +8,6 @@ import {
   type FormEmail,
 } from "@/lib/mailtrap/send";
 import { formResponse, readFormRequest } from "./http";
-import { publicFormsEnabled } from "./availability";
 
 type Submission = {
   locale: string;
@@ -24,12 +23,9 @@ export function createFormHandler<T extends Submission>(options: {
     data: T,
     files: File[],
   ) => Promise<object | undefined> | object | undefined;
-  message: (data: T) => FormEmail;
+  message: (data: T) => FormEmail | Promise<FormEmail>;
 }) {
   return async function POST(request: Request) {
-    if (!publicFormsEnabled)
-      return formResponse({ success: false, error: "unavailable" }, 503);
-
     let parsed: Awaited<ReturnType<typeof readFormRequest>>;
     try {
       parsed = await readFormRequest(request);
@@ -78,7 +74,7 @@ export function createFormHandler<T extends Submission>(options: {
         return formResponse({ success: false, error: "captcha" }, 403);
       await sendFormEmail(
         mailtrap,
-        options.message(result.data),
+        await options.message(result.data),
         {
           email: result.data.values.email,
           name: result.data.values.name,

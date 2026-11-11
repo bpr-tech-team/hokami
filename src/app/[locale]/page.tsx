@@ -1,7 +1,4 @@
 import { PageMain } from "@/components/layout/page-main";
-import { getLocale } from "next-intl/server";
-import { LegacyFormRedirect } from "@/components/navigation/legacy-form-redirect";
-import { publicFormsEnabled } from "@/lib/forms/availability";
 import { Capabilities } from "@/components/sections/home/capabilities/capabilities";
 import { Industries } from "@/components/sections/home/industries/industries";
 import { HomeLocations } from "@/components/sections/home/locations/home-locations";
@@ -39,8 +36,7 @@ const structuredData = {
   ],
 };
 
-export default async function Home() {
-  const locale = await getLocale();
+export default function Home() {
   return (
     <PageMain>
       <script
@@ -55,11 +51,7 @@ export default async function Home() {
       <Industries />
       <HomeProcess motion="scroll" />
       <HomeLocations />
-      {publicFormsEnabled ? (
-        <RequesForQuote />
-      ) : (
-        <LegacyFormRedirect locale={locale} formHref="/#reques-for-quote" />
-      )}
+      <RequesForQuote />
     </PageMain>
   );
 }
