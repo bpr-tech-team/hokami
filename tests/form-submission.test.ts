@@ -315,6 +315,76 @@ test("tokens from another form never authorize delivery", async (t) => {
   assert.equal(fetchMock.mock.callCount(), 2);
 });
 
+test("all forms log captcha rejection reasons without form data, files, tokens or provider output", async (t) => {
+  environment(t);
+  const warnings = t.mock.method(console, "warn", () => {});
+  const errors = t.mock.method(console, "error", () => {});
+  const fetchMock = t.mock.method(globalThis, "fetch", async (url: unknown) => {
+    assert.ok(String(url).includes("siteverify"));
+    return Response.json({
+      success: false,
+      "error-codes": ["timeout-or-duplicate"],
+      details: "private-provider-output",
+      token: "test-token",
+    });
+  });
+  for (const [handler, values, action] of [
+    [contact, contactValues, recaptchaActions.contact],
+    [application, jobValues, recaptchaActions.jobApplication],
+    [enquiry, enquiryValues, recaptchaActions.enquiry],
+  ] as const) {
+    const files =
+      handler === contact
+        ? []
+        : [
+            new File(["private-file-content"], "private-filename.pdf", {
+              type: "application/pdf",
+            }),
+          ];
+    const response = await handler(formRequest(values, files));
+    assert.equal(response.status, 403);
+    assert.deepEqual(await response.json(), {
+      success: false,
+      error: "captcha",
+    });
+    assert.deepEqual(warnings.mock.calls.at(-1)!.arguments, [
+      "reCAPTCHA verification rejected",
+      {
+        action,
+        reasons: ["provider_rejected"],
+        errorCodes: ["timeout-or-duplicate"],
+      },
+    ]);
+  }
+  assert.equal(fetchMock.mock.callCount(), 3);
+  assert.equal(warnings.mock.callCount(), 3);
+  assert.equal(errors.mock.callCount(), 0);
+  assert.doesNotMatch(
+    JSON.stringify(warnings.mock.calls),
+    /Nováková|jana@example|Dotaz|Example s\.r\.o\.|private-|test-token|test-only-secret/,
+  );
+});
+
+test("invalid captcha configuration produces one safe diagnostic and no external calls", async (t) => {
+  environment(t, { RECAPTCHA_SECRET_KEY: undefined });
+  const errors = t.mock.method(console, "error", () => {});
+  const fetchMock = t.mock.method(globalThis, "fetch", async () => {
+    throw new Error("Unexpected external request");
+  });
+  const response = await contact(formRequest(contactValues));
+  assert.equal(response.status, 503);
+  assert.deepEqual(
+    errors.mock.calls.map((call) => call.arguments),
+    [
+      [
+        "reCAPTCHA verification unavailable",
+        { action: recaptchaActions.contact, reason: "invalid_configuration" },
+      ],
+    ],
+  );
+  assert.equal(fetchMock.mock.callCount(), 0);
+});
+
 test("missing configuration never sends mail, and provider failures never claim success", async (t) => {
   environment(t, { MAILTRAP_API_TOKEN: undefined });
   const fetchMock = t.mock.method(globalThis, "fetch", async () => {

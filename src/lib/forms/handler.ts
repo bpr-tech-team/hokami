@@ -56,6 +56,11 @@ export function createFormHandler<T extends Submission>(options: {
         );
       const captcha = getRecaptchaConfig();
       const mailtrap = getMailtrapConfig();
+      if (!captcha)
+        console.error("reCAPTCHA verification unavailable", {
+          action: options.action,
+          reason: "invalid_configuration",
+        });
       if (!captcha || !mailtrap)
         return formResponse({ success: false, error: "unavailable" }, 503);
       let verified: boolean;
@@ -65,9 +70,6 @@ export function createFormHandler<T extends Submission>(options: {
           action: options.action,
         });
       } catch {
-        console.error("reCAPTCHA verification unavailable", {
-          action: options.action,
-        });
         return formResponse({ success: false, error: "unavailable" }, 503);
       }
       if (!verified)
