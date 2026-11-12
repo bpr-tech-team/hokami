@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { site } from "@/lib/site";
 
 const configSchema = z.object({
   secret: z.string().min(1),
@@ -14,7 +15,7 @@ export function getRecaptchaConfig() {
   return {
     ...result.data,
     hostnames: (
-      process.env.RECAPTCHA_ALLOWED_HOSTNAMES || "hokami.cz,www.hokami.cz"
+      process.env.RECAPTCHA_ALLOWED_HOSTNAMES || site.hostnames.join(",")
     )
       .split(",")
       .map((hostname) => hostname.trim())

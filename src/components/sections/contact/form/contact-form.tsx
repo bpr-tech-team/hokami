@@ -72,6 +72,7 @@ export function ContactForm() {
       values: result.data,
       locale,
       action: recaptchaActions.contact,
+      analytics: { formType: "contact" },
     });
     if (outcome?.success) form.reset();
     else if (outcome) {

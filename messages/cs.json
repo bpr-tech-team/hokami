@@ -262,7 +262,7 @@
     "necessaryTitle": "Nezbytné cookies",
     "necessaryDescription": "Pamatují si vaši volbu při dalších návštěvách i při změně jazyka. Pro uložení nastavení jsou nezbytné, a proto zůstávají vždy aktivní.",
     "analyticsTitle": "Statistiky a výkon webu",
-    "analyticsDescription": "Ukazují nám návštěvnost webu a rychlost jeho načítání. Pomáhají nám tak zlepšovat jeho obsah i fungování. Jednotlivé služby můžete povolit samostatně.",
+    "analyticsDescription": "Google Analytics měří návštěvnost, zdroje návštěv a odeslané formuláře. Služby Vercel měří používání a rychlost webu. Každou službu můžete povolit samostatně. Po vypnutí Google Analytics se stránka znovu načte.",
     "cookieTableCaption": "vaše nastavení cookies",
     "cookieName": "Název",
     "cookieDuration": "Doba uložení",

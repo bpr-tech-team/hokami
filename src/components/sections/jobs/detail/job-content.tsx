@@ -18,11 +18,12 @@ import { JobColumn, jobColumnsVariants } from "./content-layout";
 import { JobPhoto } from "./job-photo";
 import { ContentEmbed } from "./content-embed";
 import { readIframeEmbed } from "@/lib/jobs/embed";
+import { site } from "@/lib/site";
 
 export function safeContentHref(href: string) {
   try {
     return ["https:", "http:", "mailto:", "tel:"].includes(
-      new URL(href, "https://hokami.cz").protocol,
+      new URL(href, site.url).protocol,
     )
       ? href
       : undefined;

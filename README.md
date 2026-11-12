@@ -21,6 +21,11 @@ Open [localhost:3000](http://localhost:3000). Use npm for dependency changes and
 commit `package-lock.json` with them. Environment variables are listed in
 [.env.example](.env.example).
 
+Set `NEXT_PUBLIC_SITE_DOMAIN` to the production domain without a protocol or
+path. SEO, generated links, analytics host checks, cookie cleanup and default
+reCAPTCHA hostnames use this value.
+Tests load public configuration from `.env.test` without loading local secrets.
+
 ## Checks
 
 | Command                 | Purpose                                        |
@@ -91,3 +96,10 @@ All form attachments have a total limit of 4,000,000 bytes (4 MB). Enquiries
 accept up to 10 nonempty files; job applications accept optional PDF/DOCX files.
 The attachment hints show the total limits in all five languages and stay visible
 alongside file errors.
+
+## Analytics
+
+Set `NEXT_PUBLIC_GTM_ID` and `NEXT_PUBLIC_GA4_ID` in `.env.local` and Vercel, then
+rebuild. GTM loads only on the configured site domain after consent. Successful
+forms send `generate_lead` or `job_application_submit` to `dataLayer` without
+personal data. Configure GA4 tags and triggers in GTM.

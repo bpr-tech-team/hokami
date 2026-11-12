@@ -1,9 +1,14 @@
 import type { Locale } from "next-intl";
 import { routing } from "@/i18n/routing";
 
+const domain = process.env.NEXT_PUBLIC_SITE_DOMAIN;
+if (!domain) throw new Error("NEXT_PUBLIC_SITE_DOMAIN is required.");
+
 export const site = {
   name: "HOKAMI",
-  url: "https://hokami.cz",
+  url: `https://${domain}`,
+  domain,
+  hostnames: [domain, `www.${domain}`],
 };
 
 export const sitePages = {

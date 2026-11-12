@@ -1,5 +1,9 @@
 import { getRecaptchaToken } from "@/lib/recaptcha/client";
 import type { RecaptchaAction } from "@/lib/recaptcha/actions";
+import {
+  trackSuccessfulForm,
+  type FormSubmissionAnalytics,
+} from "@/lib/analytics/form-events";
 
 export type SubmissionFailure = "send" | "captcha" | "unavailable";
 
@@ -19,6 +23,7 @@ export async function submitForm({
   locale,
   siteKey,
   action,
+  analytics,
   files = [],
 }: {
   endpoint: string;
@@ -26,6 +31,7 @@ export async function submitForm({
   locale: string;
   siteKey: string;
   action: RecaptchaAction;
+  analytics?: FormSubmissionAnalytics;
   files?: File[];
 }) {
   let token: string;
@@ -56,4 +62,5 @@ export async function submitForm({
       result.fileError,
     );
   }
+  if (analytics) trackSuccessfulForm(analytics, locale);
 }

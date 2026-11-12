@@ -134,6 +134,7 @@ export function JobApplicationForm({
       files,
       locale,
       action: recaptchaActions.jobApplication,
+      analytics: { formType: "job_application", jobId: result.data.job },
     });
     if (outcome?.success) {
       form.reset();

@@ -262,7 +262,7 @@
     "necessaryTitle": "Välttämättömät evästeet",
     "necessaryDescription": "Nämä muistavat valintasi seuraavilla vierailuilla ja kieltä vaihtaessasi. Niitä tarvitaan asetustesi tallentamiseen, joten ne ovat aina käytössä.",
     "analyticsTitle": "Sivuston tilastot ja suorituskyky",
-    "analyticsDescription": "Nämä kertovat meille sivuston kävijämääristä ja latausnopeudesta. Niiden avulla voimme parantaa sivuston sisältöä ja toimintaa. Voit sallia kunkin palvelun erikseen.",
+    "analyticsDescription": "Google Analytics mittaa käyntejä, liikenteen lähteitä ja lähetettyjä lomakkeita. Vercelin palvelut mittaavat sivuston käyttöä ja latausnopeutta. Voit sallia kunkin palvelun erikseen. Google Analyticsin poistaminen käytöstä lataa sivun uudelleen.",
     "cookieTableCaption": "Evästeasetuksesi",
     "cookieName": "Nimi",
     "cookieDuration": "Säilytysaika",

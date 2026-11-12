@@ -1,6 +1,7 @@
 import type { Locale } from "next-intl";
 import type { CookieConsentConfig, Translation } from "vanilla-cookieconsent";
 import { getPathname } from "@/i18n/navigation";
+import { site } from "@/lib/site";
 
 type CookieMessages =
   (typeof import("../../../../messages/cs.json"))["Cookies"];
@@ -75,7 +76,7 @@ export function createConsentConfig(locale: Locale): CookieConsentConfig {
     mode: "opt-in",
     disablePageInteraction: true,
     // Increase when changes to purposes/services require renewed consent.
-    revision: 1,
+    revision: 2,
     cookie: {
       name: "hokami_consent",
       path: "/",
@@ -99,6 +100,13 @@ export function createConsentConfig(locale: Locale): CookieConsentConfig {
         services: {
           vercelAnalytics: { label: "Vercel Web Analytics" },
           speedInsights: { label: "Vercel Speed Insights" },
+          googleAnalytics: {
+            label: "Google Analytics 4",
+            cookies: [
+              { name: /^_ga(?:_|$)/, path: "/" },
+              { name: /^_ga(?:_|$)/, path: "/", domain: site.domain },
+            ],
+          },
         },
       },
     },

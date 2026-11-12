@@ -9,6 +9,7 @@ import {
   readJobApplicationOption,
 } from "@/lib/jobs/availability";
 import { recaptchaActions } from "@/lib/recaptcha/actions";
+import { getJobUrl } from "@/lib/jobs/urls";
 
 export const POST = createFormHandler({
   action: recaptchaActions.jobApplication,
@@ -35,7 +36,7 @@ export const POST = createFormHandler({
         "Přihláška na pracovní pozici HOKAMI",
         `Jazyk: ${locale}`,
         `Pozice: ${job.title}`,
-        `Odkaz: https://hokami.cz/${locale}/jobs/${values.job}`,
+        `Odkaz: ${getJobUrl(values.job, locale)}`,
         `Jméno: ${values.name}`,
         `E-mail: ${values.email}`,
         `Telefon: ${values.phone}`,

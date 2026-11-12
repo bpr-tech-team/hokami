@@ -262,7 +262,7 @@
     "necessaryTitle": "Niezbędne pliki cookies",
     "necessaryDescription": "Zapamiętują twój wybór podczas kolejnych wizyt i przy zmianie języka. Są potrzebne do zapisania ustawień, dlatego pozostają zawsze aktywne.",
     "analyticsTitle": "Statystyki i wydajność strony",
-    "analyticsDescription": "Pokazują nam liczbę odwiedzin i szybkość ładowania strony. Pomagają nam ulepszać jej treści i działanie. Na każdą usługę można zezwolić osobno.",
+    "analyticsDescription": "Google Analytics mierzy odwiedziny, źródła ruchu i wysłane formularze. Usługi Vercel mierzą korzystanie ze strony i szybkość jej ładowania. Na każdą usługę można zezwolić osobno. Wyłączenie Google Analytics powoduje ponowne załadowanie strony.",
     "cookieTableCaption": "Twoje ustawienia cookies",
     "cookieName": "Nazwa",
     "cookieDuration": "Okres przechowywania",

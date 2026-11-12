@@ -262,7 +262,7 @@
     "necessaryTitle": "Necessary cookies",
     "necessaryDescription": "These remember your choices on future visits and when you switch languages. They are needed to save your settings, so they always stay active.",
     "analyticsTitle": "Website statistics and performance",
-    "analyticsDescription": "These show us how much our website is used and how quickly it loads. They help us improve its content and how it works. You can allow each service separately.",
+    "analyticsDescription": "Google Analytics measures visits, traffic sources and submitted forms. Vercel services measure website usage and loading performance. You can allow each service separately. Turning off Google Analytics reloads the page.",
     "cookieTableCaption": "Your cookie preferences",
     "cookieName": "Name",
     "cookieDuration": "Storage period",

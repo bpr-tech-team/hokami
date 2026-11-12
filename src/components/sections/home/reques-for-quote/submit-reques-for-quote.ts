@@ -14,5 +14,6 @@ export function submitRequesForQuote(input: {
     ...input,
     endpoint: "/api/reques-for-quote",
     action: recaptchaActions.enquiry,
+    analytics: { formType: "request_for_quote" },
   });
 }
