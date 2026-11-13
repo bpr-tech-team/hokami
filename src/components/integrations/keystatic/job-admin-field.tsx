@@ -22,6 +22,7 @@ const publishingLayout = cn(
   "tablet:[div:has(>&,>[data-ks-path]>&)~div:has(>[data-job-field=order],>[data-ks-path]>[data-job-field=order])]:[grid-area:2/7/3/13]!",
   "xl:[div:has(>&,>[data-ks-path]>&)]:[grid-area:status]!",
   "[div:has(>div>div>&,>div>div>[data-ks-path]>&)]:max-w-content!",
+  "[div:has(>div>&,>div>[data-ks-path]>&)]:gap-y-3!",
   "xl:[div:has(>div>&,>div>[data-ks-path]>&)]:gap-x-4!",
   "xl:[div:has(>div>&,>div>[data-ks-path]>&)]:grid-cols-[repeat(2,minmax(0,1fr))_--spacing(4)_--spacing(64)]!",
   "xl:[div:has(>div>&,>div>[data-ks-path]>&)]:[grid-template-areas:'identifier_identifier_._languages'_'status_order_._languages'_'title_title_._languages'_'department_department_._languages'_'description_description_._languages'_'content_content_._languages'_'translations_translations_._languages']!",
@@ -46,7 +47,7 @@ const titleLayout = cn(
   "[div[data-ks-path]:has(>&)]:[grid-area:1/1/-1/-1]!",
   "[div[data-ks-path]:has(>&)>div:not([data-job-field])]:[grid-area:1/1/2/2]!",
   "[&>div]:col-start-1! [&>div]:[grid-row:1/-1]! [&>div]:grid! [&>div]:grid-cols-1! [&>div]:grid-rows-subgrid! [&>div]:gap-[normal]!",
-  "[&>div>div:first-child]:[grid-row:-2/-1]! [&>div>div:first-child]:-mt-3! [&>div>div:last-child]:row-start-1!",
+  "[&>div>div:first-child]:[grid-row:-2/-1]! [&>div>div:last-child]:row-start-1!",
   "[&_button]:h-12! [&_input]:h-12! [&_label]:font-mono! [&_label]:text-xs! [&_label]:leading-body! [&_label]:font-normal! [&_label]:tracking-label! [&_label]:text-text-secondary! [&_label]:uppercase",
 );
 
@@ -73,7 +74,7 @@ export function JobAdminField({
         <span
           id="job-language-en"
           tabIndex={-1}
-          className="col-start-1 [grid-row:-2/-1] -mt-3 h-0 scroll-mt-24"
+          className="col-start-1 [grid-row:-2/-1] h-0 scroll-mt-24"
         />
       )}
       {children}

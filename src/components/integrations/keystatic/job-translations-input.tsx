@@ -36,7 +36,7 @@ function TranslationInput({
       id={`job-language-${locale}`}
       tabIndex={-1}
       hidden={!selected.includes(locale)}
-      className="min-w-0 scroll-mt-24 space-y-6"
+      className="min-w-0 scroll-mt-24 space-y-3"
     >
       <div className="space-y-3">
         <Heading as="h2" variant="item">
@@ -77,7 +77,7 @@ export function JobTranslationsInput({
 }: JobTranslationsInputProps) {
   return (
     <JobAdminField area="translations">
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-3">
         {languages
           .filter(({ locale }) => locale !== "en")
           .map(({ locale }) => {
