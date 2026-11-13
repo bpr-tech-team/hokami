@@ -76,6 +76,26 @@ const visibleLocalesField = fields.multiselect({
 });
 
 const jobSchema = {
+  title: withJobFieldLayout(
+    fields.slug({
+      name: {
+        label: keystaticUiText("Job title (English)"),
+        validation: { ...requiredText, length: { max: 200 } },
+      },
+      slug: {
+        label: keystaticUiText("Identifier"),
+        validation: {
+          pattern: {
+            regex: /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
+            message: keystaticUiText(
+              "Use lowercase letters without accents, numbers and hyphens.",
+            ),
+          },
+        },
+      },
+    }),
+    "title",
+  ),
   status: withJobFieldLayout(
     jobSelectField({
       label: keystaticUiText("Status"),
@@ -105,26 +125,6 @@ const jobSchema = {
       });
     },
   },
-  title: withJobFieldLayout(
-    fields.slug({
-      name: {
-        label: keystaticUiText("Job title (English)"),
-        validation: { ...requiredText, length: { max: 200 } },
-      },
-      slug: {
-        label: keystaticUiText("Identifier"),
-        validation: {
-          pattern: {
-            regex: /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
-            message: keystaticUiText(
-              "Use lowercase letters without accents, numbers and hyphens.",
-            ),
-          },
-        },
-      },
-    }),
-    "title",
-  ),
   department: withJobFieldLayout(
     jobTextField({
       label: keystaticUiText("Department (English)"),

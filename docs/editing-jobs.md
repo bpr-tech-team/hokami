@@ -20,11 +20,6 @@ seznamy, tučné písmo, odkazy, tabulky a obrázky. Hlavní popis se zobrazí n
 nadpisy nelze uložit. Původní tři pozice začínají existujícím anglickým krátkým
 popisem; můžete ho rozšířit o schválený podrobný obsah.
 
-Na začátku formuláře jsou **Stav** a **Pořadí**; na širší obrazovce vedle sebe.
-**Pořadí** určuje umístění na webu: nižší číslo je dříve. Nová pozice má stav
-**Skrytá**. Pro zveřejnění vyberte **Zveřejněná** a uložte. Změny zveřejněné
-pozice se po uložení také publikují.
-
 ## Sekce a sloupce
 
 V hlavním popisu otevřete nabídku **+** a vyberte **Jeden sloupec** nebo **Dva sloupce**. Nová sekce se vloží

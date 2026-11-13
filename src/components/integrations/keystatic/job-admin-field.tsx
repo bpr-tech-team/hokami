@@ -22,7 +22,7 @@ const publishingLayout = cn(
   "[div:has(>div>div>&,>div>div>[data-ks-path]>&)]:max-w-content!",
   "xl:[div:has(>div>&,>div>[data-ks-path]>&)]:gap-x-4!",
   "xl:[div:has(>div>&,>div>[data-ks-path]>&)]:grid-cols-[repeat(2,minmax(0,1fr))_--spacing(4)_--spacing(64)]!",
-  "xl:[div:has(>div>&,>div>[data-ks-path]>&)]:[grid-template-areas:'status_order_._languages'_'title_title_._languages'_'department_department_._languages'_'description_description_._languages'_'content_content_._languages'_'translations_translations_._languages']!",
+  "xl:[div:has(>div>&,>div>[data-ks-path]>&)]:[grid-template-areas:'title_title_._languages'_'status_order_._languages'_'department_department_._languages'_'description_description_._languages'_'content_content_._languages'_'translations_translations_._languages']!",
   "xl:[div:has(>div>&,>div>[data-ks-path]>&)>div:has(>[data-job-field=order],>[data-ks-path]>[data-job-field=order])]:[grid-area:order]!",
   "xl:[div:has(>div>&,>div>[data-ks-path]>&)>div:has(>[data-job-field=title],>[data-ks-path]>[data-job-field=title])]:[grid-area:title]!",
   "xl:[div:has(>div>&,>div>[data-ks-path]>&)>div:has(>[data-job-field=department],>[data-ks-path]>[data-job-field=department])]:[grid-area:department]!",
@@ -47,8 +47,11 @@ export function JobAdminField({
       className={cn(
         "min-w-0 scroll-mt-24",
         area === "status" && publishingLayout,
+        area === "status" &&
+          "[&_[data-slot=native-select-icon]]:text-text-accent [&_select]:border-2 [&_select]:border-action-primary [&_select]:font-bold [&_select:focus-visible]:outline-2 [&_select:focus-visible]:outline-offset-2 [&_select:focus-visible]:outline-focus-ring [&_select:hover]:border-action-primary-hover",
+        // Keep Keystatic's slug generation and validation; show its URL input first.
         area === "title" &&
-          "[&_button]:h-12! [&_input]:h-12! [&_label]:font-mono! [&_label]:text-xs! [&_label]:leading-body! [&_label]:font-normal! [&_label]:tracking-label! [&_label]:text-text-secondary! [&_label]:uppercase",
+          "[&_button]:h-12! [&_input]:h-12! [&_label]:font-mono! [&_label]:text-xs! [&_label]:leading-body! [&_label]:font-normal! [&_label]:tracking-label! [&_label]:text-text-secondary! [&_label]:uppercase [&>div]:flex-col-reverse!",
         area === "languages" && "h-full [div[data-ks-path]:has(>&)]:h-full",
       )}
     >
