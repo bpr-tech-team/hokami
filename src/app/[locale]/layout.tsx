@@ -8,6 +8,7 @@ import { SiteHeader } from "@/components/layout/header/site-header";
 import { SiteFooter } from "@/components/layout/footer/site-footer";
 import { SiteMeasurement } from "@/components/integrations/analytics/site-measurement";
 import { SiteCookieConsent } from "@/components/integrations/cookie-consent/cookie-consent";
+import { SiteAnnouncement } from "@/components/integrations/site-announcement/site-announcement";
 import { site } from "@/lib/site";
 import { ibmPlexMono, ibmPlexSans, saira } from "../fonts";
 import { getJobLanguages } from "@/lib/jobs/reader";
@@ -42,6 +43,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <JobLanguageProvider jobs={jobs}>
             <SiteCookieConsent />
+            <SiteAnnouncement />
             <SiteHeader locale={locale} />
             <div className="flex-1">{children}</div>
             <SiteFooter locale={locale} />

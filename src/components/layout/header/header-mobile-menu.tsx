@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type RefObject } from "react";
+import { setSiteModalOpen } from "@/lib/site-modal-state";
 import { TraceDot } from "@/components/ui/button/trace-dot";
 import { Button } from "@/components/ui/button";
 import { MonoText } from "@/components/typography/mono-text";
@@ -51,6 +52,8 @@ export function HeaderMobileMenu({
   const [open, setOpen] = useState(false);
   const firstLink = useRef<HTMLAnchorElement>(null);
 
+  useEffect(() => () => setSiteModalOpen("navigation", false), []);
+
   useEffect(() => {
     const media = window.matchMedia(HEADER_DESKTOP_QUERY);
     const closeOnDesktop = () => {
@@ -74,7 +77,16 @@ export function HeaderMobileMenu({
       >
         {labels.requestShort}
       </HeaderRequestLink>
-      <Sheet open={open} onOpenChange={setOpen}>
+      <Sheet
+        open={open}
+        onOpenChange={(nextOpen) => {
+          if (nextOpen) setSiteModalOpen("navigation", true);
+          setOpen(nextOpen);
+        }}
+        onOpenChangeComplete={(nextOpen) =>
+          setSiteModalOpen("navigation", nextOpen)
+        }
+      >
         <SheetTrigger
           render={
             <Button variant="ghost" size="icon-sm" className={menuButton} />

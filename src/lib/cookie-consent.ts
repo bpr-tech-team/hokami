@@ -5,6 +5,7 @@ import type { Locale } from "next-intl";
 import * as CookieConsent from "vanilla-cookieconsent";
 import { createConsentConfig } from "@/components/integrations/cookie-consent/config";
 import { synchronizeGoogleConsent } from "@/lib/analytics/google-tag-manager";
+import { setSiteModalOpen } from "@/lib/site-modal-state";
 
 export type MeasurementService =
   "vercelAnalytics" | "speedInsights" | "googleAnalytics";
@@ -22,6 +23,8 @@ export function initializeConsent(locale: Locale) {
       ...createConsentConfig(locale),
       onConsent: syncGoogle,
       onChange: syncGoogle,
+      onModalShow: ({ modalName }) => setSiteModalOpen(modalName, true),
+      onModalHide: ({ modalName }) => setSiteModalOpen(modalName, false),
     });
   }
   return initialization;

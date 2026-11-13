@@ -1,4 +1,11 @@
 {
+  "Announcement": {
+    "eyebrow": "Electronica 2026 · Munich",
+    "title": "Thank you for visiting us at Electronica Munich!",
+    "continue": "Continue to the website",
+    "close": "Close announcement",
+    "photoAlt": "The HOKAMI stand at the Electronica trade fair in Munich"
+  },
   "Header": {
     "navigation": "Main navigation",
     "home": "HOKAMI — home",

@@ -1,4 +1,11 @@
 {
+  "Announcement": {
+    "eyebrow": "Electronica 2026 · München",
+    "title": "Kiitos vierailustanne osastollamme Münchenin Electronica-messuilla!",
+    "continue": "Jatka verkkosivustolle",
+    "close": "Sulje ilmoitus",
+    "photoAlt": "HOKAMIn osasto Münchenin Electronica-messuilla"
+  },
   "Header": {
     "navigation": "Päänavigaatio",
     "home": "HOKAMI — etusivu",

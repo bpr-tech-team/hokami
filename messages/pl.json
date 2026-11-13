@@ -1,4 +1,11 @@
 {
+  "Announcement": {
+    "eyebrow": "Electronica 2026 · Monachium",
+    "title": "Dziękujemy za odwiedzenie nas na targach Electronica w Monachium!",
+    "continue": "Przejdź do witryny",
+    "close": "Zamknij komunikat",
+    "photoAlt": "Stoisko HOKAMI na targach Electronica w Monachium"
+  },
   "Header": {
     "navigation": "Nawigacja główna",
     "home": "HOKAMI — strona główna",

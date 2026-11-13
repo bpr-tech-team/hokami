@@ -1,4 +1,11 @@
 {
+  "Announcement": {
+    "eyebrow": "Electronica 2026 · München",
+    "title": "Vielen Dank für Ihren Besuch auf der Electronica in München!",
+    "continue": "Weiter zur Website",
+    "close": "Mitteilung schließen",
+    "photoAlt": "Der HOKAMI-Messestand auf der Electronica in München"
+  },
   "Header": {
     "navigation": "Hauptnavigation",
     "home": "HOKAMI — Startseite",

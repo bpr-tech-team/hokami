@@ -1,0 +1,66 @@
+/* Reveal the original Figma vectors, then sweep a light along their outlines. */
+@keyframes announcement-trace-x {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes announcement-trace-y {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes announcement-pulse-x {
+  0%,
+  33.333%,
+  60.167%,
+  70%,
+  96.833%,
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+  38.333%,
+  75% {
+    clip-path: inset(0 80% 0 0);
+    animation-timing-function: cubic-bezier(0.287, 0.64, 0.617, 1);
+  }
+  55%,
+  91.667% {
+    clip-path: inset(0 0 0 96.6%);
+  }
+  60%,
+  96.667% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+@keyframes announcement-pulse-y {
+  0%,
+  33.333%,
+  60.167%,
+  70%,
+  96.833%,
+  100% {
+    clip-path: inset(0 0 100% 0);
+  }
+  38.333%,
+  75% {
+    clip-path: inset(0 0 80% 0);
+    animation-timing-function: cubic-bezier(0.287, 0.64, 0.617, 1);
+  }
+  55%,
+  91.667% {
+    clip-path: inset(96.6% 0 0 0);
+  }
+  60%,
+  96.667% {
+    clip-path: inset(100% 0 0 0);
+  }
+}

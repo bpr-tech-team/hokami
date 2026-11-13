@@ -1,4 +1,11 @@
 {
+  "Announcement": {
+    "eyebrow": "Electronica 2026 · Mnichov",
+    "title": "Děkujeme, že jste nás navštívili na veletrhu Electronica Mnichov!",
+    "continue": "Pokračovat na web",
+    "close": "Zavřít oznámení",
+    "photoAlt": "Stánek HOKAMI na veletrhu Electronica v Mnichově"
+  },
   "Header": {
     "navigation": "Hlavní navigace",
     "home": "HOKAMI — úvodní stránka",
