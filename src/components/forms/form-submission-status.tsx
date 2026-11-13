@@ -9,12 +9,14 @@ export function FormSubmissionStatus({
   error,
   success,
   email,
+  translationNamespace = "FormSubmission",
 }: {
   error?: SubmissionFailure;
   success: boolean;
   email: { label: string; href: string };
+  translationNamespace?: "FormSubmission" | "WhistleblowingForm.status";
 }) {
-  const t = useTranslations("FormSubmission");
+  const t = useTranslations(translationNamespace);
   if (error)
     return (
       <FormError title={t("failure.title")}>

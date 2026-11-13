@@ -6,19 +6,21 @@ import {
   getMailtrapConfig,
   sendFormEmail,
   type FormEmail,
+  type FormReplyTo,
 } from "@/lib/mailtrap/send";
 import { formResponse, readFormRequest } from "./http";
 
 type Submission = {
   locale: string;
   recaptchaToken: string;
-  values: { name: string; email: string };
 };
 
 export function createFormHandler<T extends Submission>(options: {
   action: RecaptchaAction;
   schema: z.ZodType<T>;
   fieldErrors: (error: Pick<z.ZodError, "issues">) => object;
+  recipient?: () => string | undefined;
+  replyTo?: (data: T) => FormReplyTo;
   validate: (
     data: T,
     files: File[],
@@ -55,7 +57,9 @@ export function createFormHandler<T extends Submission>(options: {
           400,
         );
       const captcha = getRecaptchaConfig();
-      const mailtrap = getMailtrapConfig();
+      const mailtrap = getMailtrapConfig(
+        options.recipient ? { to: options.recipient() } : undefined,
+      );
       if (!captcha)
         console.error("reCAPTCHA verification unavailable", {
           action: options.action,
@@ -77,10 +81,7 @@ export function createFormHandler<T extends Submission>(options: {
       await sendFormEmail(
         mailtrap,
         await options.message(result.data),
-        {
-          email: result.data.values.email,
-          name: result.data.values.name,
-        },
+        options.replyTo?.(result.data),
         parsed.files,
       );
       return formResponse({ success: true });

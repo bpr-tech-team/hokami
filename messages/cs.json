@@ -1118,5 +1118,33 @@
       "captcha": "Ověření proti spamu se nezdařilo. Zkontrolujte připojení a zkuste to znovu.",
       "unavailable": "Formulář je dočasně nedostupný. Kontaktujte nás na <email>{address}</email>."
     }
+  },
+  "WhistleblowingForm": {
+    "title": "Podat oznámení",
+    "message": "Vaše oznámení",
+    "consent": "Souhlasím s podmínkami <privacy>GDPR</privacy>",
+    "submit": "Odeslat",
+    "required": "* Povinná pole",
+    "hint": "Oznámení můžete podat anonymně. Pokud si přejete obdržet odpověď, uveďte v oznámení kontaktní údaj.",
+    "noScript": "Pro odeslání formuláře povolte JavaScript, nebo oznámení zašlete na <email>{address}</email>.",
+    "errors": {
+      "messageRequired": "Vyplňte prosím své oznámení.",
+      "tooLong": "Oznámení může obsahovat nejvýše 2000 znaků.",
+      "consentRequired": "Pro odeslání potvrďte souhlas s podmínkami GDPR."
+    },
+    "status": {
+      "sending": "Odesílám…",
+      "retry": "Zkusit znovu",
+      "success": {
+        "title": "Odesláno",
+        "description": "Vaše oznámení bylo odesláno."
+      },
+      "failure": {
+        "title": "Oznámení se nepodařilo odeslat",
+        "send": "Oznámení se nepodařilo odeslat. Text zůstal zachován. Zkuste to znovu. Oznámení můžete zaslat na <email>{address}</email>.",
+        "captcha": "Ověření proti spamu se nezdařilo. Zkuste to znovu. Oznámení můžete zaslat na <email>{address}</email>.",
+        "unavailable": "Formulář je dočasně nedostupný. Oznámení můžete zaslat na <email>{address}</email>."
+      }
+    }
   }
 }

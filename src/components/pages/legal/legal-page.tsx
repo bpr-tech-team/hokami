@@ -6,9 +6,11 @@ import { RichText } from "@/components/typography/rich-text";
 export function LegalPage({
   title,
   children,
+  afterContent,
 }: {
   title: string;
   children: ReactNode;
+  afterContent?: ReactNode;
 }) {
   return (
     <PageMain variant="contained" spacing="medium">
@@ -18,6 +20,7 @@ export function LegalPage({
         </Heading>
         <RichText className="[&_table]:table-fixed">{children}</RichText>
       </article>
+      {afterContent && <div className="mx-auto max-w-copy">{afterContent}</div>}
     </PageMain>
   );
 }

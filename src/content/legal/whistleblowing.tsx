@@ -164,7 +164,8 @@ export function WhistleblowingContent() {
             <a href="mailto:vpavlu@hokami.cz">vpavlu@hokami.cz</a>
           </strong>
         </strong>{" "}
-        nebo využít kontaktního formuláře níže.
+        nebo využít{" "}
+        <a href="#whistleblowing-form">kontaktního formuláře níže</a>.
       </LegalParagraph>
 
       <LegalHeading level={3}>Telefonicky</LegalHeading>

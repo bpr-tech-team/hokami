@@ -44,6 +44,10 @@ export async function readFormRequest(request: Request) {
   const form = await new Response(body, {
     headers: { "Content-Type": contentType },
   }).formData();
+  for (const key of form.keys()) {
+    if (!["values", "locale", "recaptchaToken", "files"].includes(key))
+      throw new Error("Unexpected form field");
+  }
   const metadata: Record<string, string> = {};
   for (const key of ["values", "locale", "recaptchaToken"]) {
     const entries = form.getAll(key);

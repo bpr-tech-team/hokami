@@ -9,6 +9,7 @@ export const POST = createFormHandler({
   action: recaptchaActions.contact,
   schema: submitContactSchema,
   fieldErrors: getContactFieldErrors,
+  replyTo: ({ values }) => ({ name: values.name, email: values.email }),
   validate: (_data, files) => (files.length ? {} : undefined),
   message: ({ values, locale }) => ({
     subject: "HOKAMI — Kontaktní formulář",

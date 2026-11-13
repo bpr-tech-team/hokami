@@ -2,6 +2,7 @@ export const recaptchaActions = {
   enquiry: "reques_for_quote_submit",
   contact: "contact_submit",
   jobApplication: "job_application_submit",
+  whistleblowing: "whistleblowing_submit",
 } as const;
 
 export type RecaptchaAction =

@@ -1118,5 +1118,33 @@
       "captcha": "Spam verification failed. Check your connection and try again.",
       "unavailable": "The form is temporarily unavailable. Please contact us at <email>{address}</email>."
     }
+  },
+  "WhistleblowingForm": {
+    "title": "Submit a report",
+    "message": "Your report",
+    "consent": "I agree to the <privacy>GDPR terms</privacy>",
+    "submit": "Send",
+    "required": "* Required fields",
+    "hint": "You can submit your report anonymously. If you would like a reply, include your contact details in the report.",
+    "noScript": "Enable JavaScript to submit the form, or send your report to <email>{address}</email>.",
+    "errors": {
+      "messageRequired": "Please enter your report.",
+      "tooLong": "Your report must not exceed 2000 characters.",
+      "consentRequired": "Please agree to the GDPR terms before sending your report."
+    },
+    "status": {
+      "sending": "Sending…",
+      "retry": "Try again",
+      "success": {
+        "title": "Sent",
+        "description": "Your report has been sent."
+      },
+      "failure": {
+        "title": "Your report could not be sent",
+        "send": "Your report could not be sent. Your text has been preserved. Please try again. You can send your report to <email>{address}</email>.",
+        "captcha": "Spam verification failed. Please try again. You can send your report to <email>{address}</email>.",
+        "unavailable": "The form is temporarily unavailable. You can send your report to <email>{address}</email>."
+      }
+    }
   }
 }

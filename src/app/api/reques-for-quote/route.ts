@@ -11,6 +11,7 @@ export const POST = createFormHandler({
   action: recaptchaActions.enquiry,
   schema: submitRequesForQuoteSchema,
   fieldErrors: getFieldErrors,
+  replyTo: ({ values }) => ({ name: values.name, email: values.email }),
   validate: (_data, files) => {
     const fileError = validateFiles(files);
     return fileError ? { fileError } : undefined;

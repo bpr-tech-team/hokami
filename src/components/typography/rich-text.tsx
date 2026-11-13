@@ -1,12 +1,28 @@
 import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
+// Descendant typography stops at self-styled blocks, including their root.
+// :where keeps local component utilities able to override these defaults.
 export function RichText({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       {...props}
       className={cn(
-        "text-base leading-relaxed wrap-anywhere [&_a]:text-text-accent [&_a]:underline [&_a]:underline-offset-2 [&_a:hover]:text-text-accent-hover [&_blockquote]:my-8 [&_blockquote]:border-l-2 [&_blockquote]:border-action-primary [&_blockquote]:pl-6 [&_code]:font-mono [&_code]:text-sm [&_figure]:my-8 [&_hr]:my-8 [&_hr]:border-border-subtle [&_img]:my-8 [&_li]:my-2 [&_ol]:my-5 [&_ol]:list-decimal [&_ol]:pl-6 [&_pre]:my-6 [&_pre]:overflow-x-auto [&_pre]:bg-surface-subtle [&_pre]:p-4 [&_strong]:font-semibold [&_table]:w-full [&_table]:border-collapse [&_table]:text-sm [&_td]:border [&_td]:border-border-subtle [&_td]:p-3 [&_td]:align-top tablet:[&_td]:p-4 [&_th]:border [&_th]:border-border-subtle [&_th]:p-3 [&_th]:text-left [&_th]:align-top tablet:[&_th]:p-4 [&_ul]:my-5 [&_ul]:list-disc [&_ul]:pl-6",
+        "text-base leading-relaxed wrap-anywhere",
+        "[&_:where(a):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:text-text-accent [&_:where(a):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:underline [&_:where(a):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:underline-offset-2 [&_:where(a):not(:where([data-rich-text-island],[data-rich-text-island]_*)):hover]:text-text-accent-hover",
+        "[&_:where(blockquote):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:my-8 [&_:where(blockquote):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:border-l-2 [&_:where(blockquote):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:border-action-primary [&_:where(blockquote):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:pl-6",
+        "[&_:where(code):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:font-mono [&_:where(code):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:text-sm",
+        "[&_:where(figure):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:my-8",
+        "[&_:where(hr):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:my-8 [&_:where(hr):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:border-border-subtle",
+        "[&_:where(img):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:my-8",
+        "[&_:where(li):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:my-2",
+        "[&_:where(ol):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:my-5 [&_:where(ol):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:list-decimal [&_:where(ol):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:pl-6",
+        "[&_:where(pre):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:my-6 [&_:where(pre):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:overflow-x-auto [&_:where(pre):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:bg-surface-subtle [&_:where(pre):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:p-4",
+        "[&_:where(strong):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:font-semibold",
+        "[&_:where(table):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:w-full [&_:where(table):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:border-collapse [&_:where(table):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:text-sm",
+        "[&_:where(td):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:border [&_:where(td):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:border-border-subtle [&_:where(td):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:p-3 [&_:where(td):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:align-top tablet:[&_:where(td):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:p-4",
+        "[&_:where(th):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:border [&_:where(th):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:border-border-subtle [&_:where(th):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:p-3 [&_:where(th):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:text-left [&_:where(th):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:align-top tablet:[&_:where(th):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:p-4",
+        "[&_:where(ul):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:my-5 [&_:where(ul):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:list-disc [&_:where(ul):not(:where([data-rich-text-island],[data-rich-text-island]_*))]:pl-6",
         className,
       )}
     />

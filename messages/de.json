@@ -1118,5 +1118,33 @@
       "captcha": "Die Spamprüfung ist fehlgeschlagen. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
       "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Kontaktieren Sie uns unter <email>{address}</email>."
     }
+  },
+  "WhistleblowingForm": {
+    "title": "Hinweis einreichen",
+    "message": "Ihr Hinweis",
+    "consent": "Ich stimme den <privacy>DSGVO-Bedingungen</privacy> zu",
+    "submit": "Senden",
+    "required": "* Pflichtfelder",
+    "hint": "Sie können Ihren Hinweis anonym einreichen. Wenn Sie eine Antwort wünschen, geben Sie Ihre Kontaktdaten im Hinweis an.",
+    "noScript": "Aktivieren Sie JavaScript, um das Formular abzusenden, oder senden Sie Ihren Hinweis an <email>{address}</email>.",
+    "errors": {
+      "messageRequired": "Bitte geben Sie Ihren Hinweis ein.",
+      "tooLong": "Ihr Hinweis darf höchstens 2000 Zeichen enthalten.",
+      "consentRequired": "Bitte stimmen Sie vor dem Absenden den DSGVO-Bedingungen zu."
+    },
+    "status": {
+      "sending": "Wird gesendet…",
+      "retry": "Erneut versuchen",
+      "success": {
+        "title": "Gesendet",
+        "description": "Ihr Hinweis wurde gesendet."
+      },
+      "failure": {
+        "title": "Ihr Hinweis konnte nicht gesendet werden",
+        "send": "Ihr Hinweis konnte nicht gesendet werden. Ihr Text bleibt erhalten. Bitte versuchen Sie es erneut. Sie können Ihren Hinweis an <email>{address}</email> senden.",
+        "captcha": "Die Spamprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut. Sie können Ihren Hinweis an <email>{address}</email> senden.",
+        "unavailable": "Das Formular ist vorübergehend nicht verfügbar. Sie können Ihren Hinweis an <email>{address}</email> senden."
+      }
+    }
   }
 }

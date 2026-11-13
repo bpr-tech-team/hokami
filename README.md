@@ -49,6 +49,16 @@ lints staged files, then checks TypeScript.
 - `src/content/jobs/` — vacancy records; `src/lib/jobs/` — schema and content logic.
 - `public/` — static assets.
 
+Use `PhotoFrame` for the shared 3:2 photograph and corner decoration. Its
+`className` controls outer placement; the module owns the image and overlay
+coordinates. `JobPhoto` keeps the vacancy-specific image settings.
+
+`RichText` applies descendant typography only outside `data-rich-text-island`
+subtrees. Self-styled embedded modules set this marker on their own root, so
+callers do not need typography resets. The marker excludes both the root and
+its descendants; inherited fonts and colors remain available. Keep prose that
+needs `RichText` outside these subtrees.
+
 ## Vacancy administration
 
 The admin is at `/keystatic`. See the [editor guide](docs/editing-jobs.md) for
@@ -92,7 +102,15 @@ Configure the variables in [.env.example](.env.example), following the
 unavailable message; errors preserve input and files. Success is shown only
 after Mailtrap accepts the message.
 
-All form attachments have a total limit of 4,000,000 bytes (4 MB). Enquiries
+Whistleblowing at `/[locale]/whistleblowing#whistleblowing-form` accepts an
+anonymous report of up to 2000 characters and requires explicit GDPR consent.
+It uses the same reCAPTCHA/Mailtrap infrastructure, with a separate required
+server variable `WHISTLEBLOWING_TO_EMAIL=vpavlu@hokami.cz`. Missing or invalid
+configuration disables sending; it never falls back to the general forms inbox.
+These messages have no Reply-To, attachments or lead analytics events. Verify
+actual inbox delivery with an agreed test message before publishing.
+
+All form attachments have a total limit of 4 MB. Enquiries
 accept up to 10 nonempty files; job applications accept optional PDF/DOCX files.
 The attachment hints show the total limits in all five languages and stay visible
 alongside file errors.

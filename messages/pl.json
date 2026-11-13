@@ -1118,5 +1118,33 @@
       "captcha": "Weryfikacja antyspamowa nie powiodła się. Sprawdź połączenie i spróbuj ponownie.",
       "unavailable": "Formularz jest chwilowo niedostępny. Skontaktuj się z nami pod adresem <email>{address}</email>."
     }
+  },
+  "WhistleblowingForm": {
+    "title": "Zgłoś naruszenie",
+    "message": "Treść zgłoszenia",
+    "consent": "Zgadzam się z warunkami <privacy>RODO</privacy>",
+    "submit": "Wyślij",
+    "required": "* Pola wymagane",
+    "hint": "Możesz dokonać zgłoszenia anonimowo. Jeśli chcesz otrzymać odpowiedź, podaj w zgłoszeniu dane kontaktowe.",
+    "noScript": "Włącz JavaScript, aby wysłać formularz, lub wyślij zgłoszenie na adres <email>{address}</email>.",
+    "errors": {
+      "messageRequired": "Wpisz treść zgłoszenia.",
+      "tooLong": "Zgłoszenie może zawierać maksymalnie 2000 znaków.",
+      "consentRequired": "Przed wysłaniem zgłoszenia potwierdź zgodę na warunki RODO."
+    },
+    "status": {
+      "sending": "Wysyłanie…",
+      "retry": "Spróbuj ponownie",
+      "success": {
+        "title": "Wysłano",
+        "description": "Twoje zgłoszenie zostało wysłane."
+      },
+      "failure": {
+        "title": "Nie udało się wysłać zgłoszenia",
+        "send": "Nie udało się wysłać zgłoszenia. Treść została zachowana. Spróbuj ponownie. Możesz wysłać zgłoszenie na adres <email>{address}</email>.",
+        "captcha": "Weryfikacja antyspamowa nie powiodła się. Spróbuj ponownie. Możesz wysłać zgłoszenie na adres <email>{address}</email>.",
+        "unavailable": "Formularz jest chwilowo niedostępny. Możesz wysłać zgłoszenie na adres <email>{address}</email>."
+      }
+    }
   }
 }

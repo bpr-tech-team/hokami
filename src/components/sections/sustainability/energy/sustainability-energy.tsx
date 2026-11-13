@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Section } from "@/components/layout/section";
-import { PhotoTrace } from "@/components/ui/photo-trace";
+import { PhotoFrame } from "@/components/ui/photo-frame";
 import { SustainabilityCopy } from "../sustainability-copy";
 
 export async function SustainabilityEnergy() {
@@ -22,16 +21,11 @@ export async function SustainabilityEnergy() {
         />
       }
     >
-      <div className="relative aspect-3/2 min-w-0">
-        <Image
-          src="/images/sustainability/forest.png"
-          alt=""
-          fill
-          sizes="(min-width: 1360px) 588px, (min-width: 1080px) calc((100vw - 184px) / 2), (min-width: 760px) calc(100vw - 80px), calc(100vw - 40px)"
-          className="object-cover"
-        />
-        <PhotoTrace />
-      </div>
+      <PhotoFrame
+        src="/images/sustainability/forest.png"
+        alt=""
+        sizes="(min-width: 1360px) 588px, (min-width: 1080px) calc((100vw - 184px) / 2), (min-width: 760px) calc(100vw - 80px), calc(100vw - 40px)"
+      />
     </Section>
   );
 }

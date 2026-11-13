@@ -6,11 +6,13 @@ const configSchema = z.object({
   to: z.email(),
 });
 
-export function getMailtrapConfig() {
+export function getMailtrapConfig(destination?: { to: string | undefined }) {
   const result = configSchema.safeParse({
     token: process.env.MAILTRAP_API_TOKEN,
     from: process.env.MAILTRAP_FROM_EMAIL,
-    to: process.env.FORMS_TO_EMAIL || "info@hokami.cz",
+    to: destination
+      ? destination.to
+      : process.env.FORMS_TO_EMAIL || "info@hokami.cz",
   });
   return result.success ? result.data : null;
 }
@@ -21,10 +23,12 @@ export type FormEmail = {
   category: string;
 };
 
+export type FormReplyTo = { email: string; name: string };
+
 export async function sendFormEmail(
   config: NonNullable<ReturnType<typeof getMailtrapConfig>>,
   message: FormEmail,
-  replyTo: { email: string; name: string },
+  replyTo: FormReplyTo | undefined,
   files: readonly File[],
 ) {
   const attachments = await Promise.all(
@@ -45,7 +49,9 @@ export async function sendFormEmail(
     body: JSON.stringify({
       from: { email: config.from, name: "HOKAMI" },
       to: [{ email: config.to }],
-      reply_to: { ...replyTo, name: replyTo.name.replace(/[\r\n]+/g, " ") },
+      reply_to: replyTo
+        ? { ...replyTo, name: replyTo.name.replace(/[\r\n]+/g, " ") }
+        : undefined,
       ...message,
       attachments,
     }),

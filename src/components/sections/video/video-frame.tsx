@@ -1,10 +1,11 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
+import { TraceDot } from "@/components/ui/button/trace-dot";
 
 export function VideoFrame({ children }: { children: ReactNode }) {
   return (
     <div
       data-video-decoration
+      data-rich-text-island
       className="pointer-events-none absolute top-0 left-0 size-full"
     >
       <div
@@ -28,19 +29,13 @@ export function VideoFrame({ children }: { children: ReactNode }) {
           data-video-trace="vertical"
           className="absolute -right-px bottom-0 h-full w-0.5 origin-bottom bg-current"
         />
-        <Image
-          src="/images/video/dot-top-left.svg"
-          width={9}
-          height={9}
-          alt=""
-          className="absolute -top-[4.5px] -left-[4.5px]"
+        <TraceDot
+          data-video-corner="top-left"
+          className="top-0 left-0 -translate-x-1/2 -translate-y-1/2 text-current"
         />
-        <Image
-          src="/images/video/dot-bottom-right.svg"
-          width={9}
-          height={9}
-          alt=""
-          className="absolute -right-[4.5px] -bottom-[4.5px]"
+        <TraceDot
+          data-video-corner="bottom-right"
+          className="right-0 bottom-0 translate-x-1/2 translate-y-1/2 text-current"
         />
       </div>
       {children}

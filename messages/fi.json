@@ -1118,5 +1118,33 @@
       "captcha": "Roskapostitarkistus epäonnistui. Tarkista yhteys ja yritä uudelleen.",
       "unavailable": "Lomake ei ole tilapäisesti käytettävissä. Ota yhteyttä osoitteeseen <email>{address}</email>."
     }
+  },
+  "WhistleblowingForm": {
+    "title": "Ilmoita väärinkäytöksestä",
+    "message": "Ilmoituksesi",
+    "consent": "Hyväksyn <privacy>GDPR-ehdot</privacy>",
+    "submit": "Lähetä",
+    "required": "* Pakolliset kentät",
+    "hint": "Voit tehdä ilmoituksen nimettömänä. Jos haluat vastauksen, lisää yhteystietosi ilmoitukseen.",
+    "noScript": "Ota JavaScript käyttöön lähettääksesi lomakkeen tai lähetä ilmoituksesi osoitteeseen <email>{address}</email>.",
+    "errors": {
+      "messageRequired": "Kirjoita ilmoituksesi.",
+      "tooLong": "Ilmoitus saa sisältää enintään 2000 merkkiä.",
+      "consentRequired": "Hyväksy GDPR-ehdot ennen ilmoituksen lähettämistä."
+    },
+    "status": {
+      "sending": "Lähetetään…",
+      "retry": "Yritä uudelleen",
+      "success": {
+        "title": "Lähetetty",
+        "description": "Ilmoituksesi on lähetetty."
+      },
+      "failure": {
+        "title": "Ilmoituksen lähettäminen epäonnistui",
+        "send": "Ilmoituksen lähettäminen epäonnistui. Tekstisi on säilytetty. Yritä uudelleen. Voit lähettää ilmoituksesi osoitteeseen <email>{address}</email>.",
+        "captcha": "Roskapostitarkistus epäonnistui. Yritä uudelleen. Voit lähettää ilmoituksesi osoitteeseen <email>{address}</email>.",
+        "unavailable": "Lomake ei ole tällä hetkellä käytettävissä. Voit lähettää ilmoituksesi osoitteeseen <email>{address}</email>."
+      }
+    }
   }
 }

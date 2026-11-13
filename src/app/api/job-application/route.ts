@@ -15,6 +15,7 @@ export const POST = createFormHandler({
   action: recaptchaActions.jobApplication,
   schema: submitJobApplicationSchema,
   fieldErrors: getJobApplicationErrors,
+  replyTo: ({ values }) => ({ name: values.name, email: values.email }),
   validate: async ({ values, locale }, files) => {
     const fileError = validateJobFiles(files);
     if (fileError) return { fileError };
