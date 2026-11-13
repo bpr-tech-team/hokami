@@ -28,6 +28,10 @@ export const documentGroups = [
         href: "/documents/about/employment-programme.pdf",
       },
       { id: "photovoltaic", href: "/documents/about/fve-doubi.pdf" },
+      {
+        id: "photovoltaicAmperova",
+        href: "/documents/about/fve-amperova-99-9-kwp.pdf",
+      },
     ],
   },
 ] as const;
