@@ -101,7 +101,7 @@
       "certificates": "Sertifikaatit",
       "grants": "Avustukset"
     },
-    "download": "Lataa {document} (PDF)",
+    "open": "{document} (PDF, avautuu uuteen välilehteen)",
     "items": {
       "bisnodeAaa": "BISNODE-sertifikaatti AAA-luokituksella",
       "ezuIso9001": "ČSN EN ISO 9001:2016 -standardin mukainen laadunhallintajärjestelmä",

@@ -28,7 +28,7 @@ test("a split fact list preserves reading order and never invents an item to fil
   window.happyDOM.cancelAsync();
 });
 
-test("plain grouped rows preserve document download links without checklist decoration", () => {
+test("plain grouped rows open documents in a new tab without checklist decoration", () => {
   const html = renderToStaticMarkup(
     createElement(FactListGrid, {
       columns: 2,
@@ -43,7 +43,7 @@ test("plain grouped rows preserve document download links without checklist deco
               content: createElement(DocumentLink, {
                 href: "/documents/about/iqnet.pdf",
                 label: "ISO certificate",
-                downloadLabel: "Download ISO certificate",
+                openLabel: "ISO certificate (PDF, opens in a new tab)",
               }),
             },
           ],
@@ -60,8 +60,13 @@ test("plain grouped rows preserve document download links without checklist deco
   window.document.body.innerHTML = html;
   const link = window.document.querySelector("a");
   assert.equal(link?.getAttribute("href"), "/documents/about/iqnet.pdf");
-  assert.ok(link?.hasAttribute("download"));
-  assert.equal(link?.getAttribute("aria-label"), "Download ISO certificate");
+  assert.equal(link?.hasAttribute("download"), false);
+  assert.equal(link?.getAttribute("target"), "_blank");
+  assert.equal(link?.getAttribute("rel"), "noopener noreferrer");
+  assert.equal(
+    link?.getAttribute("aria-label"),
+    "ISO certificate (PDF, opens in a new tab)",
+  );
   assert.equal(window.document.querySelectorAll("li").length, 1);
   assert.ok(window.document.body.textContent.includes("No current documents."));
   assert.doesNotMatch(html, /services\/check\.svg/);

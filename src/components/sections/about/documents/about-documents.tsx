@@ -33,7 +33,7 @@ export async function AboutDocuments() {
                 <DocumentLink
                   href={href}
                   label={label}
-                  downloadLabel={t("download", { document: label })}
+                  openLabel={t("open", { document: label })}
                 />
               ),
             };

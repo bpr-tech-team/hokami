@@ -101,7 +101,7 @@
       "certificates": "Zertifikate",
       "grants": "Förderungen"
     },
-    "download": "{document} herunterladen (PDF)",
+    "open": "{document} (PDF, öffnet sich in einem neuen Tab)",
     "items": {
       "bisnodeAaa": "BISNODE-Zertifikat mit der Bewertung AAA",
       "ezuIso9001": "Qualitätsmanagementsystem nach ČSN EN ISO 9001:2016",

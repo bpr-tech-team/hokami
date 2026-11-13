@@ -101,7 +101,7 @@
       "certificates": "Certifikáty",
       "grants": "Granty"
     },
-    "download": "Stáhnout {document} (PDF)",
+    "open": "{document} (PDF, otevře se v nové kartě)",
     "items": {
       "bisnodeAaa": "Certifikát BISNODE se stupněm hodnocení AAA",
       "ezuIso9001": "Systém managementu kvality podle ČSN EN ISO 9001:2016",

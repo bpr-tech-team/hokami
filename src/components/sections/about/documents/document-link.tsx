@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { MonoText } from "@/components/typography/mono-text";
 import { Text } from "@/components/typography/text";
 
-function DocumentIcon({ name }: { name: "file-text" | "download" }) {
+function DocumentIcon({ name }: { name: "file-text" }) {
   return (
     <span aria-hidden="true" className="relative size-5 shrink-0">
       <Image
@@ -28,19 +29,16 @@ function DocumentIcon({ name }: { name: "file-text" | "download" }) {
 type DocumentLinkProps = {
   href: string;
   label: string;
-  downloadLabel: string;
+  openLabel: string;
 };
 
-export function DocumentLink({
-  href,
-  label,
-  downloadLabel,
-}: DocumentLinkProps) {
+export function DocumentLink({ href, label, openLabel }: DocumentLinkProps) {
   return (
     <a
       href={href}
-      download
-      aria-label={downloadLabel}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={openLabel}
       className="group/document flex h-full min-h-14 w-full min-w-0 items-center gap-3 border-b border-border-subtle px-2 py-4 transition-colors hover:border-brand-identity hover:bg-surface-raised focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-focus-ring"
     >
       <DocumentIcon name="file-text" />
@@ -50,7 +48,7 @@ export function DocumentLink({
       <MonoText as="span" variant="meta" tone="tertiary" className="shrink-0">
         PDF
       </MonoText>
-      <DocumentIcon name="download" />
+      <ArrowUpRight aria-hidden="true" className="size-5 shrink-0" />
     </a>
   );
 }
