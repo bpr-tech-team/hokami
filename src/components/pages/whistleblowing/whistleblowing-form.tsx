@@ -188,7 +188,7 @@ export function WhistleblowingForm() {
               />
               <FieldLabel
                 htmlFor="whistleblowing-consent"
-                className="block font-sans text-sm tracking-normal normal-case"
+                className="block font-sans text-sm leading-6 tracking-normal normal-case"
               >
                 {t.rich("consent", {
                   privacy: (chunks) => (
