@@ -203,8 +203,7 @@
       },
       "auto": {
         "name": "Autoteollisuus",
-        "description": "Sarjatuotantoa täydellä jäljitettävyydellä ja PPAP-tason dokumentaatiolla.",
-        "focus": "IATF 16949"
+        "description": "Sarjatuotantoa täydellä jäljitettävyydellä ja PPAP-tason dokumentaatiolla."
       }
     }
   },

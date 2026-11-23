@@ -203,8 +203,7 @@
       },
       "auto": {
         "name": "Automotive",
-        "description": "Series production with full traceability and PPAP-level documentation.",
-        "focus": "IATF 16949"
+        "description": "Series production with full traceability and PPAP-level documentation."
       }
     }
   },

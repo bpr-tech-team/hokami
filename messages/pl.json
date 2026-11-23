@@ -203,8 +203,7 @@
       },
       "auto": {
         "name": "Motoryzacja",
-        "description": "Produkcja seryjna z pełną identyfikowalnością i dokumentacją na poziomie PPAP.",
-        "focus": "IATF 16949"
+        "description": "Produkcja seryjna z pełną identyfikowalnością i dokumentacją na poziomie PPAP."
       }
     }
   },
