@@ -11,7 +11,7 @@ export async function Industries() {
     image,
     name: t(`items.${id}.name`),
     description: t(`items.${id}.description`),
-    focus: t(`items.${id}.focus`),
+    focus: id === "auto" ? undefined : t(`items.${id}.focus`),
     imageAlt: t("imageAlt", { industry: t(`items.${id}.name`) }),
   }));
 

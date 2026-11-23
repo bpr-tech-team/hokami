@@ -203,8 +203,7 @@
       },
       "auto": {
         "name": "Automobilindustrie",
-        "description": "Serienfertigung mit vollständiger Rückverfolgbarkeit und Dokumentation auf PPAP-Niveau.",
-        "focus": "IATF 16949"
+        "description": "Serienfertigung mit vollständiger Rückverfolgbarkeit und Dokumentation auf PPAP-Niveau."
       }
     }
   },
