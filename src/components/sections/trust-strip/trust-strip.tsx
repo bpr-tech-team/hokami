@@ -14,12 +14,14 @@ type TrustStripProps = Omit<
   "aria-label": string;
   items: readonly TrustStatistic[];
   locale: string;
+  singleRowAtLg?: boolean;
 };
 
 export function TrustStrip({
   items,
   locale,
   className,
+  singleRowAtLg,
   ...props
 }: TrustStripProps) {
   if (items.length === 0) return null;
@@ -39,13 +41,14 @@ export function TrustStrip({
     >
       <div className="px-5 @min-[760px]/trust-strip:px-10 @min-[1080px]/trust-strip:px-20">
         <Container className="@container/trust-grid">
-          <StatGrid>
+          <StatGrid singleRowAtLg={singleRowAtLg}>
             {items.map((item, index) => (
               <StatItem
                 key={item.id}
                 statistic={prepareStatistic(item, locale)}
                 locale={locale}
                 layouts={layouts.map((layout) => layout[index])}
+                singleRowAtLg={singleRowAtLg}
               />
             ))}
           </StatGrid>

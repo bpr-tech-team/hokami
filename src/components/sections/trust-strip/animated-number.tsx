@@ -22,6 +22,7 @@ type AnimatedNumberProps = Pick<
   | "additionalValues"
 > & {
   locale: string;
+  singleRowAtLg?: boolean;
 };
 
 const spinTiming = {
@@ -91,6 +92,7 @@ export function AnimatedNumber({
   supportsAnimation,
   additionalValues,
   locale,
+  singleRowAtLg,
 }: AnimatedNumberProps) {
   const rootRef = useRef<HTMLSpanElement>(null);
   const [started, setStarted] = useState(false);
@@ -158,6 +160,7 @@ export function AnimatedNumber({
         aria-hidden="true"
         className={cn(
           "wrap-anywhere whitespace-pre-wrap",
+          singleRowAtLg && "lg:whitespace-pre",
           started && canAnimate && "invisible",
         )}
       >

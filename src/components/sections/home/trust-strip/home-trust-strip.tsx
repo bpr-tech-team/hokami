@@ -46,6 +46,7 @@ export async function HomeTrustStrip() {
       aria-label={t("label")}
       items={items}
       locale={locale}
+      singleRowAtLg
     />
   );
 }

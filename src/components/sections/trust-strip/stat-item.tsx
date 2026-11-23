@@ -10,9 +10,15 @@ type StatItemProps = {
   statistic: PreparedStatistic;
   locale: string;
   layouts: StatLayout[];
+  singleRowAtLg?: boolean;
 };
 
-export function StatItem({ statistic, locale, layouts }: StatItemProps) {
+export function StatItem({
+  statistic,
+  locale,
+  layouts,
+  singleRowAtLg,
+}: StatItemProps) {
   const style: CSSProperties & Record<`--${string}`, number> = {};
 
   layouts.forEach((layout, index) => {
@@ -36,6 +42,8 @@ export function StatItem({ statistic, locale, layouts }: StatItemProps) {
         "group-data-[columns=2]/stat-grid:[--stat-bottom:var(--stat-bottom-2)] group-data-[columns=2]/stat-grid:[--stat-right:var(--stat-right-2)] group-data-[columns=2]/stat-grid:[--stat-span:var(--stat-span-2)]",
         "group-data-[columns=3]/stat-grid:[--stat-bottom:var(--stat-bottom-3)] group-data-[columns=3]/stat-grid:[--stat-right:var(--stat-right-3)] group-data-[columns=3]/stat-grid:[--stat-span:var(--stat-span-3)]",
         "group-data-[columns=4]/stat-grid:[--stat-bottom:var(--stat-bottom-4)] group-data-[columns=4]/stat-grid:[--stat-right:var(--stat-right-4)] group-data-[columns=4]/stat-grid:[--stat-span:var(--stat-span-4)]",
+        singleRowAtLg &&
+          "lg:col-span-1 lg:border-r lg:border-b-0 lg:last:border-r-0",
       )}
     >
       <dt className="order-2 w-full wrap-anywhere">
@@ -71,14 +79,23 @@ export function StatItem({ statistic, locale, layouts }: StatItemProps) {
                     statistic.accessibleValue ?? statistic.formattedValue
                   }
                   locale={locale}
+                  singleRowAtLg={singleRowAtLg}
                 />
               </span>
               <span className="hidden @min-[672px]/trust-grid:inline">
-                <AnimatedNumber {...statistic} locale={locale} />
+                <AnimatedNumber
+                  {...statistic}
+                  locale={locale}
+                  singleRowAtLg={singleRowAtLg}
+                />
               </span>
             </>
           ) : (
-            <AnimatedNumber {...statistic} locale={locale} />
+            <AnimatedNumber
+              {...statistic}
+              locale={locale}
+              singleRowAtLg={singleRowAtLg}
+            />
           )}
         </Text>
       </dd>

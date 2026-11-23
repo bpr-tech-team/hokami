@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 type StatGridProps = {
   children: ReactNode;
+  singleRowAtLg?: boolean;
 };
 
-export function StatGrid({ children }: StatGridProps) {
+export function StatGrid({ children, singleRowAtLg }: StatGridProps) {
   const gridRef = useRef<HTMLDListElement>(null);
 
   useEffect(() => {
@@ -18,9 +20,10 @@ export function StatGrid({ children }: StatGridProps) {
     );
 
     const fit = () => {
-      const capacity = Number(
-        getComputedStyle(grid).getPropertyValue("--stat-capacity"),
-      );
+      const styles = getComputedStyle(grid);
+      if (styles.getPropertyValue("--stat-single-row") === "1") return;
+
+      const capacity = Number(styles.getPropertyValue("--stat-capacity"));
       let minimumWidth = 0;
 
       for (const measurement of measurements) {
@@ -56,7 +59,11 @@ export function StatGrid({ children }: StatGridProps) {
   return (
     <dl
       ref={gridRef}
-      className="group/stat-grid grid grid-cols-12 [--stat-capacity:1] [--stat-vertical:0] @min-[320px]/trust-grid:[--stat-capacity:2] @min-[672px]/trust-grid:[--stat-capacity:3] @min-[672px]/trust-grid:[--stat-vertical:1] @min-[896px]/trust-grid:[--stat-capacity:4]"
+      className={cn(
+        "group/stat-grid grid grid-cols-12 [--stat-capacity:1] [--stat-vertical:0] @min-[320px]/trust-grid:[--stat-capacity:2] @min-[672px]/trust-grid:[--stat-capacity:3] @min-[672px]/trust-grid:[--stat-vertical:1] @min-[896px]/trust-grid:[--stat-capacity:4]",
+        singleRowAtLg &&
+          "lg:auto-cols-[minmax(min-content,1fr)] lg:grid-flow-col lg:grid-cols-none lg:[--stat-single-row:1]",
+      )}
     >
       {children}
     </dl>
