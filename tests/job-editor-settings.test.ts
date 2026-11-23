@@ -7,8 +7,9 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { Window as TestWindow } from "happy-dom";
 import { scrollToJobDescription } from "../src/lib/jobs/editor-navigation";
 
-test("publishing controls lead the schema and obsolete link-label fields are removed", () => {
-  assert.deepEqual(Object.keys(jobsCollection.schema).slice(0, 2), [
+test("the job schema starts with title, status, and order and omits obsolete link labels", () => {
+  assert.deepEqual(Object.keys(jobsCollection.schema).slice(0, 3), [
+    "title",
     "status",
     "order",
   ]);
