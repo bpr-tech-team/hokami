@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import { test } from "node:test";
 
-test("Keystatic saves shared images copied between job languages without duplicate paths or lost assets", () => {
+test("Keystatic saves shared job images and reports invalid fields without tracking missing files", () => {
   const result = spawnSync(
     process.execPath,
     ["--import", "tsx", "tests/fixtures/keystatic-saving.mts"],

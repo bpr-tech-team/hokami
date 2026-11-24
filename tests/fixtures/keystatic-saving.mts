@@ -1,9 +1,11 @@
 import assert from "node:assert/strict";
 import { createRequire, registerHooks } from "node:module";
+import { mock } from "node:test";
 import type {
   ComponentSchema,
   ParsedValueForComponentSchema,
 } from "@keystatic/core";
+import { renderToStaticMarkup } from "react-dom/server";
 import "./keystatic-browser.mts";
 
 // Expose the installed save implementation only in this child process. Testing
@@ -20,7 +22,7 @@ registerHooks({
       ...result,
       source:
         String(result.source) +
-        "\nexport { serializeEntryToFiles, getInitialPropsValue, getCollectionFormat };",
+        "\nexport { serializeEntryToFiles, getInitialPropsValue, getCollectionFormat, parseEntry, clientSideValidateProp };",
     };
   },
 });
@@ -30,6 +32,7 @@ const { jobsCollection, jobsReaderConfig } =
   await import("../../src/lib/jobs/collection");
 const { serializeJobClipboard } = await import("../../src/lib/jobs/clipboard");
 const { Window } = await import("happy-dom");
+const { toastQueue } = await import("@keystar/ui/toast");
 // Use the same ProseMirror instance as the application's TSX imports.
 const { DOMParser } = createRequire(import.meta.url)(
   "prosemirror-model",
@@ -43,6 +46,16 @@ type SaveInternals = {
     schema: Schema,
   ): ParsedValueForComponentSchema<Schema>;
   getCollectionFormat(config: typeof jobsReaderConfig, key: "jobs"): unknown;
+  parseEntry(
+    args: {
+      dirpath: string;
+      schema: typeof jobsCollection.schema;
+      format: unknown;
+      slug: { field: string; slug: string };
+    },
+    files: Map<string, Uint8Array>,
+  ): { initialState: JobState; initialFiles: string[] };
+  clientSideValidateProp(schema: typeof rootSchema, value: JobState): boolean;
   serializeEntryToFiles(args: {
     basePath: string;
     schema: typeof jobsCollection.schema;
@@ -55,6 +68,8 @@ const {
   serializeEntryToFiles,
   getInitialPropsValue,
   getCollectionFormat,
+  parseEntry,
+  clientSideValidateProp,
 }: SaveInternals = await import(uiUrl);
 
 const format = getCollectionFormat(jobsReaderConfig, "jobs");
@@ -106,6 +121,57 @@ const assertUnique = (files: FileAddition[]) => {
     "Paths must be unique across additions and deletions. At least one path was included more than once.",
   );
 };
+
+// The previous buyer record pointed at a shared photo outside its asset
+// directory. Keep a valid photo in the directory so the parser also looks
+// there for the missing translated photo.
+const dirpath = "src/content/jobs/buyer";
+const entryPath = `${dirpath}/index.json`;
+const entryFiles = new Map([
+  [
+    entryPath,
+    new TextEncoder().encode(
+      JSON.stringify({
+        title: "Buyer",
+        department: "Commercial team",
+        description: "Help with purchasing.",
+        status: "published",
+        order: 10,
+        visibleLocales: ["en"],
+        content: `![Production](${imageUrl})`,
+        translations: {
+          cs: {
+            content:
+              '{% JobPhoto src="/images/jobs/production.jpg" alt="Production" /%}',
+          },
+        },
+      }),
+    ),
+  ],
+  [imagePath, image],
+]);
+const { initialState, initialFiles } = parseEntry(
+  { dirpath, schema, format, slug: { field: "title", slug: "buyer" } },
+  entryFiles,
+);
+const warn = mock.method(console, "warn", () => {});
+const notify = mock.method(toastQueue, "critical", () => () => {});
+try {
+  assert.deepEqual(
+    {
+      valid: clientSideValidateProp(rootSchema, initialState),
+      missingFiles: initialFiles.filter((path) => !entryFiles.has(path)),
+      warnings: warn.mock.callCount(),
+      toasts: notify.mock.callCount(),
+    },
+    { valid: false, missingFiles: [], warnings: 0, toasts: 1 },
+  );
+  assert.deepEqual(initialFiles, [entryPath, imagePath]);
+  const message = renderToStaticMarkup(notify.mock.calls[0].arguments[0]);
+  assert.match(message, /Čeština.*Hlavní popis.*Vyberte fotografii/);
+} finally {
+  mock.restoreAll();
+}
 
 const window = new Window();
 const previousDocument = Object.getOwnPropertyDescriptor(

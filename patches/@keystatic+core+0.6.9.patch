@@ -1,8 +1,84 @@
+diff --git a/node_modules/@keystatic/core/dist/index-3c244051.js b/node_modules/@keystatic/core/dist/index-3c244051.js
+index 233c8ca..b2e4dfd 100644
+--- a/node_modules/@keystatic/core/dist/index-3c244051.js
++++ b/node_modules/@keystatic/core/dist/index-3c244051.js
+@@ -1,6 +1,7 @@
+ import { Ast, format, parse, nodes } from '@markdoc/markdoc/dist/index.mjs';
+ import { c } from './react-compiler-runtime-0011f46e.js';
+ import { FieldLabel, FieldDescription, FieldMessage, Field } from '@keystar/ui/field';
++import { toastQueue } from '@keystar/ui/toast';
+ import React, { useState, useMemo, createContext, useContext, forwardRef, useReducer, useRef, useId, useEffect, useCallback, Fragment as Fragment$1, createElement, memo, useImperativeHandle, useLayoutEffect } from 'react';
+ import { Box, Flex, Grid, Divider, VStack, HStack, ScrollView as ScrollView$1 } from '@keystar/ui/layout';
+ import { Text, Heading, Kbd, Prose, useProseStyleProps } from '@keystar/ui/typography';
+@@ -3802,12 +3803,37 @@ function toFormattedFormDataError(error) {
+   return new Error(`Field validation failed:\n` + formatted);
+ }
+
++function getClientValidationIssue(error, schema) {
++  if (!(error instanceof PropValidationError) || !(error.cause instanceof Error)) {
++    return null;
++  }
++  // Include the nearest named group to distinguish fields in translations.
++  let groupLabel;
++  for (const key of error.path.slice(0, -1)) {
++    if (schema.kind !== 'object' || !Object.hasOwn(schema.fields, key)) break;
++    schema = schema.fields[key];
++    groupLabel = schema.label || groupLabel;
++  }
++  const label = [groupLabel, error.schema.label].filter(Boolean).join(' › ');
++  return label ? `${label}: ${error.cause.message}` : error.cause.message;
++}
++
++let dismissValidationToast;
+ function clientSideValidateProp(schema, value, slugField) {
++  dismissValidationToast?.();
++  dismissValidationToast = undefined;
+   try {
+     validateValueWithSchema(schema, value, slugField);
+     return true;
+   } catch (error) {
+-    console.warn(toFormattedFormDataError(error));
++    const issues = flattenErrors(error).map(issue => getClientValidationIssue(issue, schema)).filter(Boolean);
++    dismissValidationToast = toastQueue.critical(jsxs(Fragment, {
++      children: [jsx('strong', {
++        children: 'Could not save. Check the form.'
++      }), issues.length > 0 && jsx('ul', {
++        children: issues.map((issue, index) => jsx('li', { children: issue }, index))
++      })]
++    }), { timeout: 15000 });
+     return false;
+   }
+ }
 diff --git a/node_modules/@keystatic/core/dist/keystatic-core-ui.js b/node_modules/@keystatic/core/dist/keystatic-core-ui.js
-index 2f8809b..98c81a0 100644
+index 2f8809b..1d30265 100644
 --- a/node_modules/@keystatic/core/dist/keystatic-core-ui.js
 +++ b/node_modules/@keystatic/core/dist/keystatic-core-ui.js
-@@ -1856,13 +1856,25 @@ function serializeEntryToFiles(args) {
+@@ -347,8 +347,10 @@ class TrackedMap extends Map {
+     this.#onGet = onGet;
+   }
+   get(key) {
+-    this.#onGet(key);
+-    return super.get(key);
++    const value = super.get(key);
++    // Only files present in the repository can become deletions.
++    if (value !== undefined) this.#onGet(key);
++    return value;
+   }
+ }
+ function parseEntry(args, files) {
+@@ -369,8 +371,9 @@ function parseEntry(args, files) {
+   const rootSchema = object(args.schema);
+   let initialState;
+   const getFile = filepath => {
+-    usedFiles.add(filepath);
+-    return filesWithFakeFile.get(filepath);
++    const file = filesWithFakeFile.get(filepath);
++    if (file !== undefined) usedFiles.add(filepath);
++    return file;
+   };
+   const getFilesForAssetsOrContentField = (rootPath, schema) => {
+     const otherFiles = new TrackedMap(key => {
+@@ -1856,13 +1859,25 @@ function serializeEntryToFiles(args) {
      assert(contents !== undefined, 'Expected content field to be present');
      dataContent = combineFrontmatterAndContents(dataContent, contents);
    }

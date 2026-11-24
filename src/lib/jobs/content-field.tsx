@@ -10,8 +10,9 @@ import { keystaticUiText } from "@/i18n/keystatic-ui";
 export function jobContentField({
   required = false,
 }: { required?: boolean } = {}) {
+  const label = `${keystaticUiText("Main description")}${required ? " *" : ""}`;
   const field = fields.markdoc.inline({
-    label: `${keystaticUiText("Main description")}${required ? " *" : ""}`,
+    label,
     description: `${keystaticUiText("Detailed description on the job page.")} ${keystaticUiText(required ? "The English description is required." : "An empty translation falls back to the English description.")} ${JOB_IMAGE_HELP}`,
     options: {
       heading: [2, 3, 4],
@@ -34,6 +35,7 @@ export function jobContentField({
 
   return {
     ...field,
+    label,
     Input(props: Parameters<typeof field.Input>[0]) {
       return <JobContentInput {...props} field={field} required={required} />;
     },
